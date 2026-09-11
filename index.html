@@ -1,224 +1,319 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>MU 检查清单</title>
-<style>
-  :root {
-    --bg: #0f1419;
-    --card: #1a2332;
-    --line: #2d3a4d;
-    --text: #e8eef6;
-    --muted: #8b9bb4;
-    --green: #3dd68c;
-    --amber: #f5a524;
-    --blue: #5b9fd4;
-    --cycle: #4a9eff;
-    --co: #c084fc;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    font-family: "SF Pro Text", "PingFang SC", "Noto Sans SC", system-ui, sans-serif;
-    background: radial-gradient(1200px 600px at 10% -10%, #1a2a44 0%, var(--bg) 55%);
-    color: var(--text);
-    line-height: 1.55;
-    min-height: 100vh;
-  }
-  .wrap { max-width: 880px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
-  header { margin-bottom: 2rem; }
-  h1 {
-    font-size: 1.75rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    margin: 0 0 0.5rem;
-  }
-  .rule {
-    display: inline-flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    align-items: center;
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    padding: 0.55rem 1rem;
-    font-size: 0.95rem;
-  }
-  .pill {
-    display: inline-block;
-    padding: 0.15rem 0.55rem;
-    border-radius: 999px;
-    font-size: 0.8rem;
-    font-weight: 600;
-  }
-  .pill.hold { background: rgba(61,214,140,0.15); color: var(--green); }
-  .pill.review { background: rgba(245,165,36,0.15); color: var(--amber); }
-  section {
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 16px;
-    padding: 1.25rem 1.35rem 1.4rem;
-    margin-bottom: 1.25rem;
-  }
-  section h2 {
-    margin: 0 0 1rem;
-    font-size: 1.05rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  .dot {
-    width: 10px; height: 10px; border-radius: 50%;
-    display: inline-block;
-  }
-  .dot.cycle { background: var(--cycle); }
-  .dot.co { background: var(--co); }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.88rem;
-  }
-  th, td {
-    text-align: left;
-    vertical-align: top;
-    padding: 0.75rem 0.65rem;
-    border-top: 1px solid var(--line);
-  }
-  th {
-    color: var(--muted);
-    font-weight: 600;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    border-top: none;
-    padding-top: 0;
-  }
-  td:first-child { color: var(--muted); width: 2rem; font-variant-numeric: tabular-nums; }
-  td strong { color: var(--text); font-weight: 600; }
-  .src { color: var(--blue); }
-  .note {
-    margin-top: 0.85rem;
-    font-size: 0.82rem;
-    color: var(--muted);
-  }
-  footer {
-    margin-top: 1.5rem;
-    font-size: 0.8rem;
-    color: var(--muted);
-    text-align: center;
-  }
-  @media (max-width: 640px) {
-    table, thead, tbody, th, td, tr { display: block; }
-    thead { display: none; }
-    tr {
-      border-top: 1px solid var(--line);
-      padding: 0.85rem 0;
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>MU 检查清单</title>
+  <style>
+    :root {
+      --bg: #f5f5f7;
+      --surface: rgba(255,255,255,0.72);
+      --surface-solid: #ffffff;
+      --text: #1d1d1f;
+      --secondary: #6e6e73;
+      --tertiary: #86868b;
+      --line: rgba(0,0,0,0.08);
+      --blue: #0071e3;
+      --green: #34c759;
+      --orange: #ff9f0a;
+      --shadow: 0 2px 16px rgba(0,0,0,0.06), 0 0 1px rgba(0,0,0,0.08);
+      --radius: 18px;
     }
-    tr:first-child { border-top: none; }
-    td { border: none; padding: 0.2rem 0; }
-    td:first-child { margin-bottom: 0.25rem; }
-    td::before {
-      content: attr(data-label);
-      display: block;
-      color: var(--muted);
-      font-size: 0.7rem;
+    * { box-sizing: border-box; }
+    html { -webkit-font-smoothing: antialiased; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+        "PingFang SC", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.47059;
+      letter-spacing: -0.022em;
+      min-height: 100vh;
+    }
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 56px 22px 80px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      letter-spacing: 0.04em;
-      margin-bottom: 0.15rem;
+      color: var(--blue);
+      margin-bottom: 10px;
     }
-  }
-</style>
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.05;
+    }
+    .subtitle {
+      margin: 0 auto;
+      max-width: 34em;
+      color: var(--secondary);
+      font-size: 19px;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+    }
+    .pills {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 980px;
+      background: var(--surface-solid);
+      box-shadow: var(--shadow);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+    .dot.g { background: var(--green); }
+    .dot.o { background: var(--orange); }
+
+    .card {
+      background: var(--surface-solid);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 8px 0 4px;
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+    .card-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 18px 24px 12px;
+    }
+    .card-head h2 {
+      margin: 0;
+      font-size: 21px;
+      font-weight: 650;
+      letter-spacing: -0.02em;
+    }
+    .badge {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--secondary);
+      background: #f5f5f7;
+      border-radius: 980px;
+      padding: 5px 10px;
+      white-space: nowrap;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th {
+      text-align: left;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--tertiary);
+      padding: 8px 24px 10px;
+      border-bottom: 1px solid var(--line);
+    }
+    td {
+      vertical-align: top;
+      padding: 16px 24px;
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+      color: var(--secondary);
+    }
+    tr:last-child td { border-bottom: none; }
+    td.num {
+      width: 36px;
+      color: var(--tertiary);
+      font-variant-numeric: tabular-nums;
+      font-weight: 500;
+      padding-right: 0;
+    }
+    td.metric {
+      color: var(--text);
+      font-weight: 600;
+      width: 22%;
+    }
+    .note {
+      margin: 0;
+      padding: 4px 24px 18px;
+      font-size: 13px;
+      color: var(--tertiary);
+    }
+    footer {
+      text-align: center;
+      margin-top: 28px;
+      color: var(--tertiary);
+      font-size: 13px;
+    }
+
+    @media (max-width: 720px) {
+      .page { padding: 36px 16px 64px; }
+      .subtitle { font-size: 17px; }
+      .card-head { padding: 16px 18px 10px; }
+      th { display: none; }
+      table, tbody, tr, td { display: block; width: 100%; }
+      tr { padding: 14px 18px; border-bottom: 1px solid var(--line); }
+      tr:last-child { border-bottom: none; }
+      td {
+        border: none;
+        padding: 2px 0;
+        width: auto !important;
+      }
+      td.num { font-size: 12px; margin-bottom: 4px; }
+      td.metric { font-size: 16px; margin-bottom: 8px; }
+      td.source::before,
+      td.rule::before {
+        content: attr(data-label);
+        display: block;
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--tertiary);
+        margin-bottom: 2px;
+      }
+      .note { padding: 0 18px 16px; }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #000000;
+        --surface-solid: #1c1c1e;
+        --text: #f5f5f7;
+        --secondary: #a1a1a6;
+        --tertiary: #6e6e73;
+        --line: rgba(255,255,255,0.1);
+        --shadow: 0 2px 20px rgba(0,0,0,0.45);
+        --blue: #0a84ff;
+      }
+      .badge { background: #2c2c2e; }
+    }
+  </style>
 </head>
 <body>
-  <div class="wrap">
+  <div class="page">
     <header>
+      <div class="eyebrow">Micron</div>
       <h1>MU 检查清单</h1>
-      <div class="rule">
-        <span class="pill hold">全绿 → 持有</span>
-        <span style="color:var(--muted)">｜</span>
-        <span class="pill review">周期 ≥2 或公司面任一 → 复核持仓</span>
+      <p class="subtitle">用可核验的数据看周期与公司面。全绿持有；信号出现再复核。</p>
+      <div class="pills">
+        <div class="pill"><span class="dot g"></span>全绿 → 持有</div>
+        <div class="pill"><span class="dot o"></span>周期 ≥2 或公司面任一 → 复核</div>
       </div>
     </header>
 
-    <section>
-      <h2><span class="dot cycle"></span> 周期信号（需 ≥2）</h2>
+    <section class="card">
+      <div class="card-head">
+        <h2>周期</h2>
+        <span class="badge">≥2 才算转弱</span>
+      </div>
       <table>
         <thead>
-          <tr><th>#</th><th>指标</th><th>数据源</th><th>亮灯规则</th></tr>
+          <tr>
+            <th></th>
+            <th>指标</th>
+            <th>数据源</th>
+            <th>亮灯规则</th>
+          </tr>
         </thead>
         <tbody>
           <tr>
-            <td data-label="#">1</td>
-            <td data-label="指标"><strong>合同价 / ASP</strong></td>
-            <td data-label="数据源" class="src">10-Q / 业绩 ASP%；TrendForce 合同价 QoQ</td>
-            <td data-label="亮灯规则">见顶后连续走平或下跌（涨幅变慢一季不算）</td>
+            <td class="num">1</td>
+            <td class="metric">合同价 / ASP</td>
+            <td class="source" data-label="数据源">公司 10-Q / 业绩：DRAM·NAND·HBM ASP%；TrendForce / DRAMeXchange 合同价 QoQ</td>
+            <td class="rule" data-label="亮灯规则">见顶后连续走平或下跌（涨幅变慢一季不算）。注明 as_of 与 period</td>
           </tr>
           <tr>
-            <td data-label="#">2</td>
-            <td data-label="指标"><strong>出货 vs 价格</strong></td>
-            <td data-label="数据源" class="src">量：bit shipments；价：同期 ASP / 合同价</td>
-            <td data-label="亮灯规则">出货升且价格跌或走平转跌；仅营收涨不算</td>
+            <td class="num">2</td>
+            <td class="metric">出货 vs 价格</td>
+            <td class="source" data-label="数据源">量：公司 bit shipments（bits QoQ/YoY）；缺位用行业 bits 旁证。价：同期 ASP 或合同价</td>
+            <td class="rule" data-label="亮灯规则">bits 升且价跌/走平转跌。只有营收、无量价拆分 → 不算</td>
           </tr>
           <tr>
-            <td data-label="#">3</td>
-            <td data-label="指标"><strong>成品库存 FG</strong></td>
-            <td data-label="数据源" class="src">10-Q Inventories · Finished goods</td>
-            <td data-label="亮灯规则">FG 连续 ≥2 季回升；总库存 / WIP 不算</td>
+            <td class="num">3</td>
+            <td class="metric">成品库存 FG</td>
+            <td class="source" data-label="数据源">10-Q Note Inventories：Finished goods（$），对比上季 QoQ</td>
+            <td class="rule" data-label="亮灯规则">FG 连续回升（≥2 季）。总库存或 WIP → 不算</td>
           </tr>
           <tr>
-            <td data-label="#">4</td>
-            <td data-label="指标"><strong>终端谁拿到货</strong></td>
-            <td data-label="数据源" class="src">10-Q 分部 MCBU / CMBU bits 表述</td>
-            <td data-label="亮灯规则">手机/PC 回升来自多余库存，非需求好转</td>
+            <td class="num">4</td>
+            <td class="metric">终端谁拿到货</td>
+            <td class="source" data-label="数据源">10-Q 分部：MCBU / 手机·PC bits 与 CMBU / 数据中心表述</td>
+            <td class="rule" data-label="亮灯规则">手机/PC bits 回升，且上下文为供给宽松/余货，非需求强劲。引用原句</td>
           </tr>
         </tbody>
       </table>
-      <p class="note">旁证：韩国出口 kg 升且 $/kg 掉（不单独计一灯）。数字须带 as_of；核验失败标 ND。</p>
+      <p class="note">旁证（不单独计灯）：韩国内存出口 kg 升且 $/kg 掉，与合同价同向时加强。</p>
     </section>
 
-    <section>
-      <h2><span class="dot co"></span> 公司面信号（≥1 即复核）</h2>
+    <section class="card">
+      <div class="card-head">
+        <h2>公司面</h2>
+        <span class="badge">≥1 即复核</span>
+      </div>
       <table>
         <thead>
-          <tr><th>#</th><th>指标</th><th>数据源</th><th>亮灯规则</th></tr>
+          <tr>
+            <th></th>
+            <th>指标</th>
+            <th>数据源</th>
+            <th>亮灯规则</th>
+          </tr>
         </thead>
         <tbody>
           <tr>
-            <td data-label="#">1</td>
-            <td data-label="指标"><strong>HBM / 大客户份额</strong></td>
-            <td data-label="数据源" class="src">TrendForce / Counterpoint 份额</td>
-            <td data-label="亮灯规则">连续 ≥2 季下滑；单季不算</td>
+            <td class="num">1</td>
+            <td class="metric">HBM / 大客户份额</td>
+            <td class="source" data-label="数据源">TrendForce / Counterpoint 等 HBM 份额（MU vs 海力士 vs 三星）</td>
+            <td class="rule" data-label="亮灯规则">连续 ≥2 季份额下滑。单季不算</td>
           </tr>
           <tr>
-            <td data-label="#">2</td>
-            <td data-label="指标"><strong>毛利率</strong></td>
-            <td data-label="数据源" class="src">10-Q / 业绩毛利率</td>
-            <td data-label="亮灯规则">相对本轮高点明显回落，且非一次性</td>
+            <td class="num">2</td>
+            <td class="metric">毛利率</td>
+            <td class="source" data-label="数据源">10-Q / 业绩：GAAP 或公司常用非 GAAP 毛利率</td>
+            <td class="rule" data-label="亮灯规则">相对本轮高点明显回落，且非一次性因素</td>
           </tr>
           <tr>
-            <td data-label="#">3</td>
-            <td data-label="指标"><strong>高 CapEx + FCF</strong></td>
-            <td data-label="数据源" class="src">经营现金流 − CapEx</td>
-            <td data-label="亮灯规则">连续 ≥2 季：CapEx 仍高且 FCF 变薄或转负</td>
+            <td class="num">3</td>
+            <td class="metric">高 CapEx + FCF</td>
+            <td class="source" data-label="数据源">现金流量表：经营现金流 − CapEx</td>
+            <td class="rule" data-label="亮灯规则">连续 ≥2 季 CapEx 仍高且该差额变薄或转负。不用 EBITDA</td>
           </tr>
           <tr>
-            <td data-label="#">4</td>
-            <td data-label="指标"><strong>管理层坦诚度</strong></td>
-            <td data-label="数据源" class="src">电话会 / 10-Q MD&A</td>
-            <td data-label="亮灯规则">麻烦期回避量价库存；须引用原话</td>
+            <td class="num">4</td>
+            <td class="metric">管理层坦诚度</td>
+            <td class="source" data-label="数据源">电话会实录 / 10-Q MD&A·风险段</td>
+            <td class="rule" data-label="亮灯规则">麻烦期回避量价、库存、客户进展。引用场次与原话</td>
           </tr>
           <tr>
-            <td data-label="#">5</td>
-            <td data-label="指标"><strong>扩产 / 并购</strong></td>
-            <td data-label="数据源" class="src">CapEx 指引 · 8-K</td>
-            <td data-label="亮灯规则">相对收入/FCF 失控，或无股东回报路径</td>
+            <td class="num">5</td>
+            <td class="metric">损害股东的扩产/并购</td>
+            <td class="source" data-label="数据源">CapEx 指引、并购 8-K / 新闻稿</td>
+            <td class="rule" data-label="亮灯规则">CapEx 相对收入/FCF 失控，或并购无清晰股东回报路径</td>
           </tr>
         </tbody>
       </table>
     </section>
 
-    <footer>每月 2 号核对周期信号 · 新 10-Q 加跑 · 用证据做决定</footer>
+    <footer>每月 2 号跑周期 · 新 10-Q 加跑 · 数字带 as_of · 核验失败标 ND</footer>
   </div>
 </body>
 </html>
