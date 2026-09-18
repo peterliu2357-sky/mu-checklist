@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="color-scheme" content="light dark" />
-  <title>MU Monitoring Scorecard</title>
+  <title>MU 监测记分卡</title>
   <style>
     :root {
       --bg: #f2f2f7;
@@ -147,42 +147,32 @@
       padding-right: 10px;
     }
     td.val {
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 500;
       font-variant-numeric: tabular-nums;
-      letter-spacing: -0.02em;
-      line-height: 1.4;
+      letter-spacing: -0.01em;
+      line-height: 1.45;
     }
-    td.val .asof {
+    td.val .src {
       display: block;
-      margin-top: 5px;
-      font-size: 13px;
-      font-weight: 400;
-      color: var(--mute);
-      letter-spacing: 0;
-    }
-    td.src {
-      width: 22%;
-      font-size: 14px;
-      font-weight: 600;
+      margin-top: 6px;
+      font-size: 17px;
+      font-weight: 500;
       color: var(--ink);
-      line-height: 1.35;
-      font-variant-numeric: tabular-nums;
+      letter-spacing: -0.01em;
     }
-    td.st { width: 100px; }
+    td.st { width: 88px; }
     .pill {
       display: inline-block;
-      min-width: 64px;
+      min-width: 52px;
       text-align: center;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 700;
-      letter-spacing: .02em;
       padding: 5px 10px;
       border-radius: 6px;
     }
     .pill.clear { background: var(--neutral-bg); color: var(--mute); }
     .pill.watch { background: var(--amber-bg); color: var(--amber); }
-    .pill.nd { background: var(--neutral-bg); color: var(--mute); }
 
     footer {
       margin-top: 18px;
@@ -207,82 +197,76 @@
         text-align: left !important;
       }
       td.ind { margin-bottom: 8px; }
-      td.val { font-size: 19px; }
-      td.src { margin-top: 8px; text-align: left !important; }
+      td.val { font-size: 18px; }
+      td.val .src { font-size: 18px; }
       td.st { margin-top: 10px; text-align: left !important; }
     }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <p class="kicker">Position Monitor</p>
-    <h1>MU Monitoring Scorecard</h1>
-    <p class="meta">As of 2026-09-11 (PT) · Company print FQ3-26 (ended 2026-05-28)</p>
-    <p class="rule">Cycle ≥2 or any company signal → review</p>
+    <p class="kicker">持仓监测</p>
+    <h1>MU 监测记分卡</h1>
+    <p class="meta">数据截止：2026-09-11（太平洋时间） · 公司财报：FQ3-26（截至 2026-05-28）</p>
+    <p class="rule">周期信号 ≥2 项，或公司面任一信号出现 → 启动复核</p>
 
     <section class="summary">
       <div class="kpi">
-        <div class="l">Decision</div>
-        <div class="v ok">HOLD</div>
+        <div class="l">结论</div>
+        <div class="v ok">持有</div>
       </div>
       <div class="kpi">
-        <div class="l">Cycle lit</div>
+        <div class="l">周期亮灯</div>
         <div class="v">0 / 5</div>
       </div>
       <div class="kpi">
-        <div class="l">Company lit</div>
+        <div class="l">公司亮灯</div>
         <div class="v">0 / 5</div>
       </div>
       <div class="kpi">
-        <div class="l">Watch</div>
+        <div class="l">观察项</div>
         <div class="v warn">1</div>
       </div>
     </section>
 
     <section class="panel">
       <div class="panel-h">
-        <h2>Cycle</h2>
-        <span>Trigger ≥2</span>
+        <h2>周期</h2>
+        <span>触发：≥2 项</span>
       </div>
       <table>
         <thead>
           <tr>
-            <th>Indicator</th>
-            <th>Latest reading</th>
-            <th>Source</th>
-            <th>Status</th>
+            <th>指标</th>
+            <th>最新读数</th>
+            <th>状态</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td class="ind">Micron ASP (realized)</td>
-            <td class="val">DRAM +low-60s% QoQ · NAND +mid-80s% QoQ</td>
-            <td class="src">Micron IR · FQ3-26</td>
-            <td class="st"><span class="pill clear">CLEAR</span></td>
+            <td class="ind">Micron ASP（已实现）</td>
+            <td class="val">DRAM ASP 环比增幅处于 low-60s% 区间；NAND 处于 mid-80s% 区间<span class="src">数据源：Micron IR · FQ3-26</span></td>
+            <td class="st"><span class="pill clear">正常</span></td>
           </tr>
           <tr>
-            <td class="ind">TF contract (outlook)</td>
-            <td class="val">DRAM +13–18% · NAND +10–15%</td>
-            <td class="src">TrendForce · 2026-07-03</td>
-            <td class="st"><span class="pill clear">CLEAR</span></td>
+            <td class="ind">TrendForce 合同价（展望）</td>
+            <td class="val">3Q26 合同价：DRAM 环比 +13%–18%；NAND 环比 +10%–15%<span class="src">数据源：TrendForce · 2026-07-03</span></td>
+            <td class="st"><span class="pill clear">正常</span></td>
           </tr>
           <tr>
-            <td class="ind">Shipments vs price</td>
-            <td class="val">Bits ↑ (DRAM LSD · NAND MSD) · ASP ↑</td>
-            <td class="src">Micron IR · FQ3-26</td>
-            <td class="st"><span class="pill clear">CLEAR</span></td>
+            <td class="ind">出货量 vs 价格</td>
+            <td class="val">出货量上升（DRAM 低个位数；NAND 中个位数），ASP 同步上升<span class="src">数据源：Micron IR · FQ3-26</span></td>
+            <td class="st"><span class="pill clear">正常</span></td>
           </tr>
           <tr>
-            <td class="ind">Finished goods</td>
-            <td class="val">$1,094M → $812M → $621M</td>
-            <td class="src">SEC 10-Q · 2026-05-28</td>
-            <td class="st"><span class="pill clear">CLEAR</span></td>
+            <td class="ind">产成品库存</td>
+            <td class="val">$1,094M → $812M → $621M<span class="src">数据源：SEC 10-Q · 2026-05-28</span></td>
+            <td class="st"><span class="pill clear">正常</span></td>
           </tr>
           <tr>
-            <td class="ind">End-demand quality</td>
-            <td class="val">Revenue growth ASP-led · ND</td>
-            <td class="src">Micron IR · FQ3-26</td>
-            <td class="st"><span class="pill clear">CLEAR</span></td>
+            <td class="ind">终端需求质量</td>
+            <td class="val">收入增长主要由 ASP 驱动；未见确认性去库存表述（ND）<span class="src">数据源：Micron IR · FQ3-26</span></td>
+            <td class="st"><span class="pill clear">正常</span></td>
           </tr>
         </tbody>
       </table>
@@ -290,56 +274,50 @@
 
     <section class="panel">
       <div class="panel-h">
-        <h2>Company</h2>
-        <span>Trigger ≥1</span>
+        <h2>公司面</h2>
+        <span>触发：≥1 项</span>
       </div>
       <table>
         <thead>
           <tr>
-            <th>Indicator</th>
-            <th>Latest reading</th>
-            <th>Source</th>
-            <th>Status</th>
+            <th>指标</th>
+            <th>最新读数</th>
+            <th>状态</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td class="ind">HBM revenue share</td>
-            <td class="val">21% → 18% (Q1’26 → Q2’26)</td>
-            <td class="src">Counterpoint · 2026-09-01</td>
-            <td class="st"><span class="pill watch">WATCH</span></td>
+            <td class="ind">HBM 收入份额</td>
+            <td class="val">21% → 18%（Q1’26 → Q2’26）<span class="src">数据源：Counterpoint · 2026-09-01</span></td>
+            <td class="st"><span class="pill watch">观察</span></td>
           </tr>
           <tr>
-            <td class="ind">Gross margin</td>
-            <td class="val">Non-GAAP 74.9% → 84.9%</td>
-            <td class="src">Micron IR · FQ3-26</td>
-            <td class="st"><span class="pill clear">CLEAR</span></td>
+            <td class="ind">毛利率</td>
+            <td class="val">Non-GAAP 74.9% → 84.9%<span class="src">数据源：Micron IR · FQ3-26</span></td>
+            <td class="st"><span class="pill clear">正常</span></td>
           </tr>
           <tr>
-            <td class="ind">CapEx &amp; FCF</td>
-            <td class="val">Adj. FCF $6.9B → $18.3B</td>
-            <td class="src">Micron IR / 10-Q · FQ3-26</td>
-            <td class="st"><span class="pill clear">CLEAR</span></td>
+            <td class="ind">资本开支与自由现金流</td>
+            <td class="val">调整后自由现金流 $6.9B → $18.3B<span class="src">数据源：Micron IR / 10-Q · FQ3-26</span></td>
+            <td class="st"><span class="pill clear">正常</span></td>
           </tr>
           <tr>
-            <td class="ind">Disclosure quality</td>
-            <td class="val">Volume, pricing, HBM, guidance disclosed</td>
-            <td class="src">Micron IR · FQ3-26</td>
-            <td class="st"><span class="pill clear">CLEAR</span></td>
+            <td class="ind">披露质量</td>
+            <td class="val">对出货、定价、HBM 与指引均有具体披露<span class="src">数据源：Micron IR · FQ3-26</span></td>
+            <td class="st"><span class="pill clear">正常</span></td>
           </tr>
           <tr>
-            <td class="ind">CapEx / M&amp;A discipline</td>
-            <td class="val">Higher CapEx with record FCF</td>
-            <td class="src">Micron IR · FQ3-26</td>
-            <td class="st"><span class="pill clear">CLEAR</span></td>
+            <td class="ind">资本开支 / 并购纪律</td>
+            <td class="val">资本开支上升，伴随创纪录自由现金流<span class="src">数据源：Micron IR · FQ3-26</span></td>
+            <td class="st"><span class="pill clear">正常</span></td>
           </tr>
         </tbody>
       </table>
     </section>
 
     <footer>
-      HOLD while all CLEAR. Review on ≥2 cycle signals or any company signal.
-      Next update: 2nd of month or post-FQ4. Thresholds and sources live in the repository.
+      规则：信号均为「正常」则维持持有；周期 ≥2 项或公司面任一亮灯则启动复核。
+      下次更新：每月 2 日或 FQ4 披露后。细则与阈值规则见仓库文件。
     </footer>
   </div>
 </body>
