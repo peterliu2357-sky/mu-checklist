@@ -15,6 +15,7 @@
       --blue: #007aff;
       --green: #34c759;
       --orange: #ff9500;
+      --red: #ff3b30;
       --fill: rgba(120,120,128,0.12);
     }
     @media (prefers-color-scheme: dark) {
@@ -43,11 +44,11 @@
       -webkit-font-smoothing: antialiased;
     }
     main {
-      width: min(680px, 100%);
+      width: min(720px, 100%);
       margin: 0 auto;
       padding: 64px 20px 96px;
     }
-    .hero { margin-bottom: 36px; }
+    .hero { margin-bottom: 28px; }
     .hero h1 {
       margin: 0 0 8px;
       font-size: 34px;
@@ -59,23 +60,19 @@
       margin: 0;
       color: var(--secondary);
       font-size: 17px;
-      font-weight: 400;
-      max-width: 28em;
+      max-width: 34em;
     }
-    .status {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin: 28px 0 8px;
-    }
-    @media (max-width: 520px) {
-      .status { grid-template-columns: 1fr; }
-    }
-    .status-item {
+    .verdict {
       display: flex;
-      align-items: center;
+      flex-wrap: wrap;
       gap: 10px;
-      padding: 14px 16px;
+      margin: 24px 0 8px;
+    }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
       background: var(--group);
       border-radius: 12px;
       font-size: 15px;
@@ -87,8 +84,10 @@
       border-radius: 50%;
       flex: none;
     }
-    .led.on { background: var(--green); }
-    .led.warn { background: var(--orange); }
+    .led.g { background: var(--green); }
+    .led.o { background: var(--orange); }
+    .led.r { background: var(--red); }
+    .led.off { background: var(--fill); box-shadow: inset 0 0 0 1px var(--separator); }
 
     .section-label {
       margin: 28px 0 8px 16px;
@@ -103,36 +102,55 @@
       border-radius: 12px;
       overflow: hidden;
     }
+    .run-meta {
+      padding: 14px 16px;
+      border-bottom: 0.5px solid var(--separator);
+      font-size: 13px;
+      color: var(--secondary);
+      display: grid;
+      gap: 4px;
+    }
+    .run-meta strong { color: var(--label); font-weight: 600; }
     .row {
       display: grid;
-      grid-template-columns: 28px 1fr;
+      grid-template-columns: 28px 1fr auto;
       gap: 4px 12px;
       padding: 14px 16px;
       border-bottom: 0.5px solid var(--separator);
+      align-items: start;
     }
     .row:last-child { border-bottom: none; }
     .idx {
-      grid-row: 1 / span 3;
       color: var(--secondary);
       font-variant-numeric: tabular-nums;
       font-size: 15px;
-      padding-top: 1px;
+      padding-top: 2px;
     }
     .title {
       font-size: 17px;
       font-weight: 600;
       letter-spacing: -0.022em;
-      color: var(--label);
     }
     .meta {
+      grid-column: 2;
       font-size: 13px;
       color: var(--secondary);
-      line-height: 1.4;
+      line-height: 1.45;
     }
-    .meta strong {
-      font-weight: 500;
+    .meta .k { font-weight: 500; color: var(--secondary); }
+    .badge {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 8px;
+      border-radius: 980px;
+      background: var(--fill);
       color: var(--secondary);
+      white-space: nowrap;
+      margin-top: 2px;
     }
+    .badge.g { background: rgba(52,199,89,0.15); color: var(--green); }
+    .badge.o { background: rgba(255,149,0,0.18); color: var(--orange); }
+    .badge.off { background: var(--fill); color: var(--secondary); }
     .aside {
       margin: 10px 16px 0;
       font-size: 13px;
@@ -144,83 +162,147 @@
       font-size: 13px;
       color: var(--secondary);
     }
+    @media (max-width: 560px) {
+      .row { grid-template-columns: 24px 1fr; }
+      .badge { grid-column: 2; justify-self: start; }
+    }
   </style>
 </head>
 <body>
   <main>
     <header class="hero">
       <h1>MU 检查清单</h1>
-      <p>用可核验的数据看周期与公司面。全绿持有；信号出现再复核。</p>
-      <div class="status">
-        <div class="status-item"><span class="led on"></span>全绿 → 持有</div>
-        <div class="status-item"><span class="led warn"></span>周期 ≥2 或公司面任一 → 复核</div>
+      <p>用可核验的数据看周期与公司面。全绿持有；信号出现再复核。每次实测写入下方，带时间戳便于审核。</p>
+      <div class="verdict">
+        <div class="chip"><span class="led g"></span>最新结论：全绿 · 继续持有</div>
+        <div class="chip"><span class="led o"></span>黄旗：HBM 份额观察</div>
       </div>
     </header>
 
-    <div class="section-label">周期 · 至少 2 项才算转弱</div>
+    <div class="section-label">最新实测</div>
     <section class="group">
-      <div class="row">
-        <div class="idx">1</div>
-        <div class="title">合同价 / ASP</div>
-        <div class="meta"><strong>数据</strong> · 10-Q / 业绩 ASP%；TrendForce · DRAMeXchange 合同价 QoQ</div>
-        <div class="meta"><strong>亮灯</strong> · 见顶后连续走平或下跌；涨幅变慢一季不算；注明 as_of</div>
+      <div class="run-meta">
+        <div><strong>跑数时间</strong> · 2026-09-11 PT</div>
+        <div><strong>公司数据 vintage</strong> · FQ3-26（截止 2026-05-28）10-Q / 业绩稿</div>
+        <div><strong>行业价 vintage</strong> · TrendForce 2026-07-03 / 2026-09-07 稿</div>
+        <div><strong>HBM 份额 vintage</strong> · Counterpoint 2026-09-01 表（Q2’26 = 2026-04–06）</div>
+        <div><strong>计分</strong> · 周期亮灯 0 · 公司面亮灯 0</div>
       </div>
+
       <div class="row">
-        <div class="idx">2</div>
-        <div class="title">出货 vs 价格</div>
-        <div class="meta"><strong>数据</strong> · bit shipments（QoQ/YoY）+ 同期 ASP / 合同价</div>
-        <div class="meta"><strong>亮灯</strong> · bits 升且价跌或走平转跌；只有营收不算</div>
+        <div class="idx">C1</div>
+        <div>
+          <div class="title">合同价 / ASP</div>
+          <div class="meta"><span class="k">读数</span> · DRAM ASP Q/Q 低 60% 区间升；NAND 中 80% 区间升。TrendForce：3Q26 合同价仍升（DRAM +13–18%、NAND +10–15%）</div>
+          <div class="meta"><span class="k">源</span> · MU FQ3-26 10-Q / 业绩；TrendForce 2026-07-03</div>
+          <div class="meta"><span class="k">as_of</span> · 公司 2026-05-28 · 行业稿 2026-07-03</div>
+        </div>
+        <span class="badge off">灭</span>
       </div>
+
       <div class="row">
-        <div class="idx">3</div>
-        <div class="title">成品库存 FG</div>
-        <div class="meta"><strong>数据</strong> · 10-Q Inventories · Finished goods，对比上季</div>
-        <div class="meta"><strong>亮灯</strong> · FG 连续回升（≥2 季）；总库存 / WIP 不算</div>
+        <div class="idx">C2</div>
+        <div>
+          <div class="title">出货 vs 价格</div>
+          <div class="meta"><span class="k">读数</span> · bits：DRAM 低个位数升、NAND 中个位数升 Q/Q；价同步大涨 → 不满足「量升且价跌」</div>
+          <div class="meta"><span class="k">源</span> · MU FQ3-26 10-Q / earnings deck</div>
+          <div class="meta"><span class="k">as_of</span> · 2026-05-28</div>
+        </div>
+        <span class="badge off">灭</span>
       </div>
+
       <div class="row">
-        <div class="idx">4</div>
-        <div class="title">终端谁拿到货</div>
-        <div class="meta"><strong>数据</strong> · 10-Q 分部：手机·PC bits vs 数据中心表述</div>
-        <div class="meta"><strong>亮灯</strong> · 手机/PC bits 回升且为余货/供给宽松；引用原句</div>
+        <div class="idx">C3</div>
+        <div>
+          <div class="title">成品库存 FG</div>
+          <div class="meta"><span class="k">读数</span> · Finished goods $1,094M（FY25 末）→ $812M（2026-02-26）→ $621M（2026-05-28）连续下降</div>
+          <div class="meta"><span class="k">源</span> · MU 10-Q Note Inventories（两期）</div>
+          <div class="meta"><span class="k">as_of</span> · 2026-05-28</div>
+        </div>
+        <span class="badge off">灭</span>
+      </div>
+
+      <div class="row">
+        <div class="idx">C4</div>
+        <div>
+          <div class="title">终端谁拿到货</div>
+          <div class="meta"><span class="k">读数</span> · CMBU 等收入大增主因 ASP；未见「手机/PC bits 因厂内余货回升」清晰原句</div>
+          <div class="meta"><span class="k">源</span> · MU FQ3-26 分部表述</div>
+          <div class="meta"><span class="k">as_of</span> · 2026-05-28 · 判定 ND/偏灭</div>
+        </div>
+        <span class="badge off">ND</span>
+      </div>
+
+      <div class="row">
+        <div class="idx">F1</div>
+        <div>
+          <div class="title">HBM / 大客户份额</div>
+          <div class="meta"><span class="k">读数</span> · 收入份额 MU Q1’26 21% → Q2’26 18%（SK 50%、三星 33%）。同页 DRAM 总份额 MU 22%→24% 仍升</div>
+          <div class="meta"><span class="k">源</span> · Counterpoint Global DRAM and HBM Market Share（2026-09-01）；Yonhap/MK 交叉引用</div>
+          <div class="meta"><span class="k">as_of</span> · 表 2026-09-01 · 季 2026-04–06 · 单季未满连续 2 季</div>
+        </div>
+        <span class="badge o">观察</span>
+      </div>
+
+      <div class="row">
+        <div class="idx">F2</div>
+        <div>
+          <div class="title">毛利率</div>
+          <div class="meta"><span class="k">读数</span> · Non-GAAP GM 74.9%（Q2）→ 84.9%（Q3）；指引 Q4 ~86%</div>
+          <div class="meta"><span class="k">源</span> · MU FQ3-26 earnings release</div>
+          <div class="meta"><span class="k">as_of</span> · 2026-05-28 / 指引 2026-06-24</div>
+        </div>
+        <span class="badge off">灭</span>
+      </div>
+
+      <div class="row">
+        <div class="idx">F3</div>
+        <div>
+          <div class="title">高 CapEx + FCF</div>
+          <div class="meta"><span class="k">读数</span> · Adj FCF Q2 $6.9B → Q3 $18.3B（OpCF − CapEx）；CapEx 升但 FCF 更厚</div>
+          <div class="meta"><span class="k">源</span> · MU FQ3-26 cash flow / press release</div>
+          <div class="meta"><span class="k">as_of</span> · 2026-05-28</div>
+        </div>
+        <span class="badge off">灭</span>
+      </div>
+
+      <div class="row">
+        <div class="idx">F4</div>
+        <div>
+          <div class="title">管理层坦诚度</div>
+          <div class="meta"><span class="k">读数</span> · Q3 材料仍给具体量价、HBM、指引；未见麻烦期「闭嘴」</div>
+          <div class="meta"><span class="k">源</span> · MU Q3 call / MD&A</div>
+          <div class="meta"><span class="k">as_of</span> · 2026-06</div>
+        </div>
+        <span class="badge off">灭</span>
+      </div>
+
+      <div class="row">
+        <div class="idx">F5</div>
+        <div>
+          <div class="title">损害股东的扩产 / 并购</div>
+          <div class="meta"><span class="k">读数</span> · CapEx 升但伴随创纪录 FCF 与 SCA；无「失控且无回报路径」硬证据</div>
+          <div class="meta"><span class="k">源</span> · MU CapEx 指引 / SCA 表述</div>
+          <div class="meta"><span class="k">as_of</span> · FQ3-26</div>
+        </div>
+        <span class="badge off">灭</span>
       </div>
     </section>
-    <p class="aside">旁证不单独计灯：韩国内存出口 kg 升且 $/kg 掉，与合同价同向时加强。</p>
+    <p class="aside">规则提醒：周期需 ≥2 盏才算转弱；公司面任一可复核。HBM 收入份额 ≠ bit 份额；单季只观察。</p>
 
-    <div class="section-label">公司面 · 任一即可复核</div>
+    <div class="section-label">规则（不变）</div>
     <section class="group">
       <div class="row">
-        <div class="idx">1</div>
-        <div class="title">HBM / 大客户份额</div>
-        <div class="meta"><strong>数据</strong> · TrendForce / Counterpoint 份额（MU vs 海力士 vs 三星）</div>
-        <div class="meta"><strong>亮灯</strong> · 连续 ≥2 季下滑；单季不算</div>
-      </div>
-      <div class="row">
-        <div class="idx">2</div>
-        <div class="title">毛利率</div>
-        <div class="meta"><strong>数据</strong> · 10-Q / 业绩 GAAP 或常用非 GAAP 毛利率</div>
-        <div class="meta"><strong>亮灯</strong> · 相对本轮高点明显回落，且非一次性</div>
-      </div>
-      <div class="row">
-        <div class="idx">3</div>
-        <div class="title">高 CapEx + FCF</div>
-        <div class="meta"><strong>数据</strong> · 经营现金流 − CapEx</div>
-        <div class="meta"><strong>亮灯</strong> · 连续 ≥2 季 CapEx 仍高且差额变薄或转负；不用 EBITDA</div>
-      </div>
-      <div class="row">
-        <div class="idx">4</div>
-        <div class="title">管理层坦诚度</div>
-        <div class="meta"><strong>数据</strong> · 电话会 / 10-Q MD&A · 风险段</div>
-        <div class="meta"><strong>亮灯</strong> · 麻烦期回避量价、库存、客户进展；引用场次与原话</div>
-      </div>
-      <div class="row">
-        <div class="idx">5</div>
-        <div class="title">损害股东的扩产 / 并购</div>
-        <div class="meta"><strong>数据</strong> · CapEx 指引、并购 8-K / 新闻稿</div>
-        <div class="meta"><strong>亮灯</strong> · CapEx 相对收入/FCF 失控，或并购无清晰股东回报路径</div>
+        <div class="idx">·</div>
+        <div>
+          <div class="title">怎么用</div>
+          <div class="meta">全绿 → 持有｜周期 ≥2 或公司面任一 → 复核持仓｜每条须能指出指标 · 数据源 · 日期 · 怎样算亮</div>
+        </div>
+        <span class="badge">规则</span>
       </div>
     </section>
 
-    <footer>每月 2 号跑周期 · 新 10-Q 加跑 · 数字带 as_of · 失败标 ND</footer>
+    <footer>页面随每次实测更新 · 下次计划：月度 2 号或 FQ4 后</footer>
   </main>
 </body>
 </html>

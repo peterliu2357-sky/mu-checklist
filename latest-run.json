@@ -1,0 +1,10 @@
+{
+  "run_at": "2026-09-11T00:00:00-07:00",
+  "verdict": "all_green_hold",
+  "cycle_lights": 0,
+  "company_lights": 0,
+  "company_data_as_of": "2026-05-28",
+  "industry_price_as_of": "2026-07-03",
+  "hbm_share_as_of": "2026-09-01",
+  "flags": ["hbm_share_watch_q1_21_to_q2_18_counterpoint_revenue"]
+}
