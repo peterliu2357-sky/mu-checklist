@@ -72,7 +72,7 @@
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 10px;
-      margin: 28px 0 24px;
+      margin: 28px 0 32px;
     }
     .kpi {
       background: var(--card);
@@ -98,27 +98,44 @@
     .panel {
       background: var(--card);
       border: 1px solid var(--line);
-      border-radius: 12px;
+      border-radius: 16px;
       overflow: hidden;
-      margin-bottom: 14px;
+      margin-bottom: 28px;
     }
     .panel-h {
       display: flex;
       justify-content: space-between;
-      align-items: baseline;
+      align-items: center;
       gap: 12px;
-      padding: 14px 18px;
+      padding: 18px 20px;
+      background: linear-gradient(180deg, #fafafa 0%, #f3f3f5 100%);
       border-bottom: 1px solid var(--line);
+      border-left: 4px solid #0071e3;
     }
     .panel-h h2 {
       margin: 0;
-      font-size: 15px;
-      font-weight: 650;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #0071e3;
+      line-height: 1.2;
     }
     .panel-h span {
       font-size: 12px;
+      font-weight: 600;
       color: var(--mute);
       white-space: nowrap;
+      background: rgba(0,0,0,.04);
+      padding: 5px 10px;
+      border-radius: 999px;
+    }
+    @media (prefers-color-scheme: dark) {
+      .panel-h {
+        background: linear-gradient(180deg, #242426 0%, #1c1c1e 100%);
+        border-left-color: #0a84ff;
+      }
+      .panel-h h2 { color: #0a84ff; }
+      .panel-h span { background: rgba(255,255,255,.08); }
     }
     table {
       width: 100%;
@@ -142,8 +159,9 @@
     tr:last-child td { border-bottom: none; }
     td.ind {
       width: 26%;
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 600;
+      color: var(--mute);
       padding-right: 10px;
     }
     td.val {
@@ -152,14 +170,17 @@
       font-variant-numeric: tabular-nums;
       letter-spacing: -0.01em;
       line-height: 1.45;
+      color: var(--ink);
     }
     td.val .src {
       display: block;
-      margin-top: 6px;
-      font-size: 17px;
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px solid var(--line);
+      font-size: 14px;
       font-weight: 500;
-      color: var(--ink);
-      letter-spacing: -0.01em;
+      color: var(--mute);
+      letter-spacing: 0;
     }
     td.st { width: 88px; }
     .pill {
