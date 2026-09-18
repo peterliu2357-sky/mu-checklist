@@ -151,7 +151,13 @@
       font-size: 16px;
       font-weight: 600;
       color: var(--ink);
-      padding-right: 10px;
+      background: #f5f5f7;
+      border-right: 1px solid var(--line);
+      padding: 18px 16px;
+      vertical-align: middle;
+    }
+    @media (prefers-color-scheme: dark) {
+      td.ind { background: #2c2c2e; }
     }
     td.val {
       font-size: 17px;
@@ -206,7 +212,14 @@
         width: auto !important;
         text-align: left !important;
       }
-      td.ind { margin-bottom: 8px; }
+      td.ind {
+        margin-bottom: 8px;
+        border-right: none;
+        border-radius: 8px;
+        padding: 10px 12px !important;
+        display: inline-block;
+        width: auto !important;
+      }
       td.val { font-size: 18px; }
       td.val .src { font-size: 18px; }
       td.st { margin-top: 10px; text-align: left !important; }
