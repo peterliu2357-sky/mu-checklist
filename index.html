@@ -4,157 +4,257 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="color-scheme" content="light dark" />
-  <title>MU 检查清单</title>
+  <title>MU Monitoring Scorecard</title>
   <style>
     :root {
-      --bg: #f5f5f7;
-      --group: #ffffff;
-      --label: #1d1d1f;
-      --secondary: #86868b;
-      --separator: rgba(60,60,67,0.12);
-      --green: #34c759;
-      --orange: #ff9500;
-      --fill: rgba(120,120,128,0.12);
+      --bg: #f2f2f7;
+      --card: #fff;
+      --ink: #111;
+      --mute: #6b6b6b;
+      --line: #e5e5ea;
+      --green: #1f8f4e;
+      --amber: #b Pref: #b57900;
+      --amber: #b57900;
+      --green-bg: #eaf7ef;
+      --amber-bg: #fff6e5;
+      --neutral-bg: #f4f4f5;
     }
     @media (prefers-color-scheme: dark) {
       :root {
         --bg: #000;
-        --group: #1c1c1e;
-        --label: #f5f5f7;
-        --secondary: #98989d;
-        --separator: rgba(84,84,88,0.65);
-        --fill: rgba(120,120,128,0.24);
+        --card: #1c1c1e;
+        --ink: #f5f5f7;
+        --mute: #8e8e93;
+        --line: #2c2c2e;
+        --green: #30d158;
+        --amber: #ffd60a;
+        --green-bg: rgba(48,209,88,.12);
+        --amber-bg: rgba(255,214,10,.12);
+        --neutral-bg: #2c2c2e;
       }
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      min-height: 100vh;
       background: var(--bg);
-      color: var(--label);
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Helvetica Neue", sans-serif;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
       -webkit-font-smoothing: antialiased;
-      letter-spacing: -0.022em;
     }
-    main { width: min(640px, 100%); margin: 0 auto; padding: 56px 20px 80px; }
-    h1 { margin: 0 0 6px; font-size: 34px; font-weight: 700; letter-spacing: -0.03em; }
-    .sub { margin: 0 0 22px; color: var(--secondary); font-size: 15px; }
-    .banner {
-      display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px;
+    .wrap { max-width: 860px; margin: 0 auto; padding: 48px 20px 72px; }
+    header { margin-bottom: 28px; }
+    .kicker {
+      font-size: 12px; font-weight: 600; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--mute); margin: 0 0 8px;
     }
-    .chip {
-      font-size: 14px; font-weight: 500;
-      padding: 8px 12px; border-radius: 980px; background: var(--group);
+    h1 {
+      margin: 0 0 6px;
+      font-size: 28px; font-weight: 700; letter-spacing: -0.03em;
     }
-    .chip b { font-weight: 600; }
-    .label {
-      margin: 0 0 8px 12px;
-      font-size: 13px; color: var(--secondary); text-transform: uppercase;
-    }
-    .group { background: var(--group); border-radius: 12px; overflow: hidden; margin-bottom: 22px; }
-    .meta {
-      padding: 12px 16px; font-size: 13px; color: var(--secondary);
-      border-bottom: 0.5px solid var(--separator);
-    }
-    .row {
+    .asof { margin: 0; color: var(--mute); font-size: 14px; }
+
+    .summary {
       display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 8px 16px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin: 22px 0 28px;
+    }
+    .kpi {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
       padding: 14px 16px;
-      border-bottom: 0.5px solid var(--separator);
-      align-items: baseline;
     }
-    .row:last-child { border-bottom: none; }
-    .title { font-size: 17px; font-weight: 600; }
-    .data { font-size: 15px; color: var(--secondary); line-height: 1.35; text-align: right; max-width: 58%; }
-    .tag {
-      font-size: 12px; font-weight: 600; padding: 3px 8px; border-radius: 980px;
-      background: var(--fill); color: var(--secondary); white-space: nowrap;
+    .kpi .l { font-size: 12px; color: var(--mute); margin-bottom: 6px; }
+    .kpi .v {
+      font-size: 22px; font-weight: 700; letter-spacing: -0.03em;
+      font-variant-numeric: tabular-nums;
     }
-    .tag.g { background: rgba(52,199,89,.16); color: var(--green); }
-    .tag.o { background: rgba(255,149,0,.18); color: var(--orange); }
-    .head { display: flex; align-items: center; gap: 8px; }
-    footer { text-align: center; font-size: 13px; color: var(--secondary); }
-    @media (max-width: 520px) {
-      .row { grid-template-columns: 1fr; }
-      .data { text-align: left; max-width: 100%; }
+    .kpi .v.ok { color: var(--green); }
+    .kpi .v.warn { color: var(--amber); }
+
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+    .panel-h {
+      display: flex; justify-content: space-between; align-items: baseline;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+    }
+    .panel-h h2 { margin: 0; font-size: 15px; font-weight: 650; }
+    .panel-h span { font-size: 12px; color: var(--mute); }
+
+    table { width: 100%; border-collapse: collapse; }
+    th {
+      text-align: left; font-size: 11px; font-weight: 600;
+      letter-spacing: .04em; text-transform: uppercase;
+      color: var(--mute); padding: 10px 16px; background: transparent;
+      border-bottom: 1px solid var(--line);
+    }
+    td {
+      padding: 16px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: middle;
+    }
+    tr:last-child td { border-bottom: none; }
+    td.ind { width: 28%; font-size: 16px; font-weight: 600; }
+    td.val {
+      font-size: 17px; font-weight: 500;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: -0.02em;
+      line-height: 1.35;
+    }
+    td.val small {
+      display: block; margin-top: 4px;
+      font-size: 12px; font-weight: 400; color: var(--mute);
+    }
+    td.st { width: 88px; text-align: right; }
+    .pill {
+      display: inline-block;
+      min-width: 52px;
+      text-align: center;
+      font-size: 12px; font-weight: 700;
+      padding: 5px 10px; border-radius: 6px;
+    }
+    .pill.clear { background: var(--neutral-bg); color: var(--mute); }
+    .pill.watch { background: var(--amber-bg); color: var(--amber); }
+    .pill.hold { background: var(--green-bg); color: var(--green); }
+
+    footer {
+      margin-top: 20px;
+      font-size: 12px; color: var(--mute); line-height: 1.5;
+    }
+
+    @media (max-width: 720px) {
+      .summary { grid-template-columns: 1fr 1fr; }
+      th.valh, td.st { /* keep */ }
+      table, thead, tbody, th, td, tr { display: block; }
+      thead { display: none; }
+      tr { padding: 14px 16px; border-bottom: 1px solid var(--line); }
+      tr:last-child { border-bottom: none; }
+      td { border: none; padding: 2px 0; width: auto !important; text-align: left !important; }
+      td.ind { font-size: 15px; margin-bottom: 6px; }
+      td.val { font-size: 18px; }
+      td.st { margin-top: 8px; }
     }
   </style>
 </head>
 <body>
-  <main>
-    <h1>MU 检查清单</h1>
-    <p class="sub">全绿持有 · 周期 ≥2 或公司面任一 → 复核</p>
-    <div class="banner">
-      <span class="chip"><b>结论</b> · 全绿 · 继续持有</span>
-      <span class="chip"><b>跑数</b> · 2026-09-11 PT</span>
-    </div>
+  <div class="wrap">
+    <header>
+      <p class="kicker">Position Monitor</p>
+      <h1>MU Monitoring Scorecard</h1>
+      <p class="asof">As of 11 Sep 2026 (PT) · Company print FQ3-26 (period ended 28 May 2026)</p>
+    </header>
 
-    <div class="label">周期</div>
-    <section class="group">
-      <div class="meta">公司数据 as_of 2026-05-28（FQ3-26）· 行业价 as_of 2026-07-03</div>
-      <div class="row">
-        <div>
-          <div class="head"><span class="title">合同价 / ASP</span> <span class="tag">灭</span></div>
-        </div>
-        <div class="data">DRAM ASP Q/Q +低60%；NAND +中80%<br>TrendForce 3Q26 仍升 +13–18% / +10–15%</div>
+    <section class="summary">
+      <div class="kpi">
+        <div class="l">Decision</div>
+        <div class="v ok">HOLD</div>
       </div>
-      <div class="row">
-        <div>
-          <div class="head"><span class="title">出货 vs 价格</span> <span class="tag">灭</span></div>
-        </div>
-        <div class="data">bits 升（DRAM 低个位数 / NAND 中个位数）<br>价同步大涨 · 非量升价跌</div>
+      <div class="kpi">
+        <div class="l">Cycle signals lit</div>
+        <div class="v">0 / 4</div>
       </div>
-      <div class="row">
-        <div>
-          <div class="head"><span class="title">成品库存 FG</span> <span class="tag">灭</span></div>
-        </div>
-        <div class="data">$1,094M → $812M → $621M<br>连续下降</div>
+      <div class="kpi">
+        <div class="l">Firm signals lit</div>
+        <div class="v">0 / 5</div>
       </div>
-      <div class="row">
-        <div>
-          <div class="head"><span class="title">终端谁拿到货</span> <span class="tag">ND</span></div>
-        </div>
-        <div class="data">收入增主因 ASP<br>未见余货驱动原句</div>
+      <div class="kpi">
+        <div class="l">Watch items</div>
+        <div class="v warn">1</div>
       </div>
     </section>
 
-    <div class="label">公司面</div>
-    <section class="group">
-      <div class="meta">HBM 份额 as_of 2026-09-01（Counterpoint · Q2’26）</div>
-      <div class="row">
-        <div>
-          <div class="head"><span class="title">HBM 份额</span> <span class="tag o">观察</span></div>
-        </div>
-        <div class="data">收入份额 21% → 18%<br>同页 DRAM 总份额 22% → 24%</div>
+    <section class="panel">
+      <div class="panel-h">
+        <h2>Cycle</h2>
+        <span>Trigger: ≥2 lit</span>
       </div>
-      <div class="row">
-        <div>
-          <div class="head"><span class="title">毛利率</span> <span class="tag">灭</span></div>
-        </div>
-        <div class="data">Non-GAAP GM 74.9% → 84.9%<br>指引 Q4 ~86%</div>
-      </div>
-      <div class="row">
-        <div>
-          <div class="head"><span class="title">CapEx + FCF</span> <span class="tag">灭</span></div>
-        </div>
-        <div class="data">Adj FCF $6.9B → $18.3B<br>FCF 更厚</div>
-      </div>
-      <div class="row">
-        <div>
-          <div class="head"><span class="title">管理层坦诚度</span> <span class="tag">灭</span></div>
-        </div>
-        <div class="data">仍披露量价 / HBM / 指引</div>
-      </div>
-      <div class="row">
-        <div>
-          <div class="head"><span class="title">扩产 / 并购</span> <span class="tag">灭</span></div>
-        </div>
-        <div class="data">CapEx 升 · FCF 创纪录<br>无失控硬证据</div>
-      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Indicator</th>
+            <th class="valh">Latest reading</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="ind">ASP / Contract price</td>
+            <td class="val">DRAM ASP +low-60% QoQ · NAND +mid-80% QoQ<br><small>Industry: DRAM +13–18% · NAND +10–15% (3Q26)</small></td>
+            <td class="st"><span class="pill clear">CLEAR</span></td>
+          </tr>
+          <tr>
+            <td class="ind">Shipments vs price</td>
+            <td class="val">Bits ↑ (DRAM LSD · NAND MSD) with ASP ↑<br><small>Volume-up / price-down rule not met</small></td>
+            <td class="st"><span class="pill clear">CLEAR</span></td>
+          </tr>
+          <tr>
+            <td class="ind">Finished goods</td>
+            <td class="val">$1,094M → $812M → $621M<br><small>Two consecutive declines</small></td>
+            <td class="st"><span class="pill clear">CLEAR</span></td>
+          </tr>
+          <tr>
+            <td class="ind">End-demand quality</td>
+            <td class="val">Revenue growth ASP-led<br><small>No confirmed destocking language · ND</small></td>
+            <td class="st"><span class="pill clear">CLEAR</span></td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
-    <footer>下次更新：月度 2 号或 FQ4 后</footer>
-  </main>
+    <section class="panel">
+      <div class="panel-h">
+        <h2>Company</h2>
+        <span>Trigger: ≥1 lit</span>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Indicator</th>
+            <th class="valh">Latest reading</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="ind">HBM revenue share</td>
+            <td class="val">21% → 18% (Q1’26 → Q2’26)<br><small>DRAM overall share 22% → 24%</small></td>
+            <td class="st"><span class="pill watch">WATCH</span></td>
+          </tr>
+          <tr>
+            <td class="ind">Gross margin</td>
+            <td class="val">Non-GAAP 74.9% → 84.9%<br><small>FQ4 guide ~86%</small></td>
+            <td class="st"><span class="pill clear">CLEAR</span></td>
+          </tr>
+          <tr>
+            <td class="ind">CapEx &amp; FCF</td>
+            <td class="val">Adj. FCF $6.9B → $18.3B<br><small>OpCF − CapEx expanding</small></td>
+            <td class="st"><span class="pill clear">CLEAR</span></td>
+          </tr>
+          <tr>
+            <td class="ind">Disclosure quality</td>
+            <td class="val">Specific volume, pricing, HBM, guidance disclosed</td>
+            <td class="st"><span class="pill clear">CLEAR</span></td>
+          </tr>
+          <tr>
+            <td class="ind">CapEx / M&amp;A discipline</td>
+            <td class="val">Higher CapEx with record FCF<br><small>No value-destruction evidence</small></td>
+            <td class="st"><span class="pill clear">CLEAR</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer>
+      Protocol: HOLD while all clear. Review on ≥2 cycle signals or any company signal.
+      Next scheduled update: 2nd of month or post-FQ4. Source detail retained in repository, not on this page.
+    </footer>
+  </div>
 </body>
 </html>
