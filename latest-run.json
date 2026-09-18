@@ -1,10 +1,245 @@
 {
-  "run_at": "2026-09-11T00:00:00-07:00",
-  "verdict": "all_green_hold",
-  "cycle_lights": 0,
-  "company_lights": 0,
+  "run_at": "2026-09-18",
+  "verdict": "qualitative_review_with_watch_items",
+  "cycle_lights": null,
+  "company_lights": null,
+  "trigger_assessment": "not_scored_thresholds_undefined",
   "company_data_as_of": "2026-05-28",
-  "industry_price_as_of": "2026-07-03",
-  "hbm_share_as_of": "2026-09-01",
-  "flags": ["hbm_share_watch_q1_21_to_q2_18_counterpoint_revenue"]
+  "industry_price_as_of": "2026-09-16",
+  "hbm_share_as_of": "2026-06-30",
+  "hbm_source_published_at": "2026-09-02",
+  "next_earnings_at": "2026-09-30",
+  "state_counts": {
+    "ok": 7,
+    "watch": 2,
+    "unknown": 1
+  },
+  "flags": [
+    "consumer_demand_weak",
+    "capex_acceleration_watch",
+    "hbm_share_secondary_only",
+    "trigger_thresholds_undefined"
+  ],
+  "sources": {
+    "deck": {
+      "label": "美光 FQ3 业绩演示 · 06-24 · 第 32 页",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf#page=32",
+      "published_at": "2026-06-24"
+    },
+    "q3": {
+      "label": "美光 FQ3 10-Q · 存货附注 · 第 13 页",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/0000723125-26-000015.pdf#page=13",
+      "published_at": "2026-06-25"
+    },
+    "q2": {
+      "label": "美光 FQ2 10-Q · Note 6 存货",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000006/mu-20260226.htm",
+      "published_at": "2026-03-19"
+    },
+    "earnings": {
+      "label": "美光 FQ3 财报 · 06-24 · 含两季对照及现金流调节表",
+      "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Results-for-the-Third-Quarter-of-Fiscal-2026/default.aspx",
+      "published_at": "2026-06-24"
+    },
+    "remarks": {
+      "label": "美光 FQ3 管理层说明 · 06-24 · 第 9–10 页",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf#page=9",
+      "published_at": "2026-06-24"
+    },
+    "contract": {
+      "label": "TrendForce 合同价预测 · 07-03",
+      "url": "https://www.trendforce.cn/presscenter/news/20260703-13133.html",
+      "published_at": "2026-07-03"
+    },
+    "dram": {
+      "label": "TrendForce DRAM 更新 · 09-07",
+      "url": "https://www.trendforce.com/presscenter/news/20260907-13219.html",
+      "published_at": "2026-09-07"
+    },
+    "spot": {
+      "label": "TrendForce 现货与需求周报 · 09-16",
+      "url": "https://www.trendforce.com/news/2026/09/16/insights-memory-spot-price-update-dram-spot-cools-as-ddr5-inquiries-slow-2gx8-ddr4-prices-retreat/",
+      "published_at": "2026-09-16"
+    },
+    "ssd": {
+      "label": "TrendForce 企业级 SSD 报告 · 09-01",
+      "url": "https://www.trendforce.com/presscenter/news/20260901-13210.html",
+      "published_at": "2026-09-01"
+    },
+    "hbm": {
+      "label": "Counterpoint 原始报告 · 09-02（原表未读取）",
+      "url": "https://counterpointresearch.com/en/insights/global-dram-and-hbm-market-share",
+      "published_at": "2026-09-02"
+    },
+    "hbm_secondary": {
+      "label": "Financial News 转引 Counterpoint · 09-03",
+      "url": "https://en.fnnews.com/news/202609031610354859",
+      "published_at": "2026-09-03"
+    },
+    "next": {
+      "label": "美光 FQ4 财报日程 · 09-30",
+      "url": "https://investors.micron.com/events-and-presentations/event-details/2026/Microns-Fourth-Quarter-2026-Financial-Call/default.aspx",
+      "published_at": null
+    }
+  },
+  "metrics": [
+    {
+      "name": "内存平均售价",
+      "state": "ok",
+      "value": "DRAM 涨幅约六成出头",
+      "takeaway": "上涨偏利好 · 支撑盈利",
+      "period": "FY2026 Q3 vs Q2",
+      "evidence": "reported",
+      "explanation": [
+        "美光 FQ3 平均售价环比：DRAM 涨幅为 60% 出头，NAND 约 85%。公司披露的是大致幅度，并非精确区间。",
+        "售价上涨有利于收入和毛利，但也受产品组合影响，不能只据此认定终端销量大增。"
+      ],
+      "source_ids": [
+        "deck"
+      ]
+    },
+    {
+      "name": "行业合同价",
+      "state": "ok",
+      "value": "DRAM 预计 +13–18%",
+      "takeaway": "仍看涨 · 属于预测",
+      "period": "CY2026 Q3 vs Q2",
+      "evidence": "forecast",
+      "explanation": [
+        "TrendForce 预计 2026 年第三季度普通型 DRAM 合同价环比上涨 13%–18%，NAND 上涨 10%–15%。9 月 7 日报告仍维持 DRAM 预测；NAND 此处沿用 7 月 3 日预测。",
+        "涨价预期支持行业景气，但涨幅已放缓。这是行业预测，不能当成已实现价格，也不等于美光自身售价。"
+      ],
+      "source_ids": [
+        "dram",
+        "contract"
+      ]
+    },
+    {
+      "name": "出货量与价格",
+      "state": "ok",
+      "value": "量价同步上升",
+      "takeaway": "偏利好 · 收入有量价支撑",
+      "period": "FY2026 Q3 vs Q2",
+      "evidence": "reported",
+      "explanation": [
+        "FQ3 DRAM 位元出货量环比增长低个位数，NAND 增长中个位数，平均售价同时上涨。",
+        "量价齐升比单纯涨价更有支撑。不过销量增幅远小于价格涨幅，收入主要受价格拉动；厂家出货不等于终端实际消耗。"
+      ],
+      "source_ids": [
+        "deck"
+      ]
+    },
+    {
+      "name": "产成品库存",
+      "state": "ok",
+      "value": "8.12 → 6.21 亿美元",
+      "takeaway": "下降 23.5% · 成品积压压力减轻",
+      "period": "2026-02-26 → 2026-05-28",
+      "evidence": "reported",
+      "explanation": [
+        "产成品库存从 2026 年 2 月 26 日的 8.12 亿美元，降至 5 月 28 日的 6.21 亿美元，环比下降约 23.5%。",
+        "下降通常偏利好：成品占用的资金减少，滞销和跌价压力减轻。结合当季出货量增长，方向更积极。",
+        "但这是账面金额，不能排除成本、减产或减值的影响。同期总库存由 82.67 亿升至 85.67 亿美元（约 +3.6%），不能说整体库存也下降。"
+      ],
+      "source_ids": [
+        "q3",
+        "q2"
+      ]
+    },
+    {
+      "name": "终端需求质量",
+      "state": "watch",
+      "value": "AI 强，消费端偏弱",
+      "takeaway": "需要观察 · 需求增长不均衡",
+      "period": "Industry updates through 2026-09-16",
+      "evidence": "reported_and_outlook",
+      "explanation": [
+        "TrendForce 9 月 1 日报告显示企业级 SSD 需求强劲；9 月 16 日周报则显示消费端疲弱、DDR5 询价放缓，部分 DRAM 与 NAND 现货价格回落。",
+        "AI 需求仍有支撑，但高价正在压制部分消费需求，不能把收入增长等同于全面复苏。现货走弱也不代表合同价已经转跌。"
+      ],
+      "source_ids": [
+        "spot",
+        "ssd"
+      ]
+    },
+    {
+      "name": "HBM 收入份额",
+      "state": "unknown",
+      "value": "21% → 18%（转引）",
+      "takeaway": "待核实 · 若属实需关注竞争",
+      "period": "CY2026 Q1 → Q2",
+      "evidence": "secondary_only",
+      "explanation": [
+        "Financial News 9 月 3 日转引 Counterpoint：美光 HBM 收入份额由 Q1 的 21% 降至 Q2 的 18%，下降 3 个百分点。",
+        "本次未能读取 Counterpoint 原始数据表，因此保留转引并标为待核实。份额若下降，说明增速可能落后同行；市场扩张时，份额下降不等于 HBM 收入下降。"
+      ],
+      "source_ids": [
+        "hbm_secondary",
+        "hbm"
+      ]
+    },
+    {
+      "name": "毛利率",
+      "state": "ok",
+      "value": "74.9% → 84.9%",
+      "takeaway": "提升 10 个百分点 · 盈利改善",
+      "period": "FY2026 Q2 → Q3",
+      "evidence": "reported",
+      "explanation": [
+        "非 GAAP 毛利率从 FQ2 的 74.9% 升至 FQ3 的 84.9%，两者均为已公布实际值。",
+        "每单位收入留下的毛利更多，盈利能力改善。该口径含调整项；后续仍需结合价格、成本及产品组合判断持续性。"
+      ],
+      "source_ids": [
+        "earnings"
+      ]
+    },
+    {
+      "name": "自由现金流",
+      "state": "ok",
+      "value": "69.0 → 183.0 亿美元",
+      "takeaway": "明显增长 · 投资后现金更充裕",
+      "period": "FY2026 Q2 → Q3",
+      "evidence": "reported",
+      "explanation": [
+        "调整后自由现金流由 FQ2 的 68.99 亿美元增至 FQ3 的 183.04 亿美元，两者均为实际值。",
+        "扣除净资本开支后仍产生更多现金，资金承受力增强。公司口径为经营现金流减净资本开支，包含政府补助等调整；单季增长不保证长期持续。"
+      ],
+      "source_ids": [
+        "earnings"
+      ]
+    },
+    {
+      "name": "披露质量",
+      "state": "ok",
+      "value": "量价、库存与现金流可核对",
+      "takeaway": "信息较充分 · 方便跟踪变化",
+      "period": "FY2026 Q3",
+      "evidence": "qualitative_review",
+      "explanation": [
+        "本次可在公司原始材料核对位元出货、平均售价、库存分类、毛利率及现金流调节表，核心指标有明确口径。",
+        "信息充分有助于分辨价格和数量驱动，但不代表预测必然兑现；行业 HBM 份额仍依赖第三方资料。"
+      ],
+      "source_ids": [
+        "deck",
+        "q3",
+        "earnings"
+      ]
+    },
+    {
+      "name": "资本开支纪律",
+      "state": "watch",
+      "value": "下季净开支预计约 100 亿美元",
+      "takeaway": "扩产加速 · 留意后续回报",
+      "period": "FY2026 Q3 actual; Q4 / FY2027 outlook",
+      "evidence": "reported_and_forecast",
+      "explanation": [
+        "FQ3 净资本开支为 70.84 亿美元。管理层预计 FQ4 约 100 亿美元、FY2026 全年约 270 亿美元，FY2027 季度开支还将高于 FQ4 水平。",
+        "当前现金流能支持投资，但扩产越快，未来利用率和回报越值得观察。新增产能需要持续需求消化，不能仅凭现金流同步增长就判定资本开支有纪律。"
+      ],
+      "source_ids": [
+        "earnings",
+        "remarks"
+      ]
+    }
+  ]
 }

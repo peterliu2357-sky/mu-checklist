@@ -53,217 +53,275 @@
     @media (min-width:700px) { .wrap { padding-top:56px; } }
     @media (max-width:360px) { .wrap { padding-left:18px; padding-right:18px; } .mu-item > summary { gap:8px; } .mu-check-state { gap:6px; } }
     @media (prefers-reduced-motion:reduce) { .mu-chevron { transition:none; } }
+    .mu-takeaway { margin-top:5px; font-size:12px; line-height:1.6; color:var(--green); }
+    [data-state="watch"] .mu-takeaway { color:var(--amber); }
+    [data-state="unknown"] .mu-takeaway { color:var(--purple); }
+    .mu-detail p + p { margin-top:9px; }
+    .mu-source a { display:block; width:fit-content; max-width:100%; padding:7px 0; color:var(--ink); text-decoration:underline; text-decoration-color:var(--muted); text-underline-offset:3px; }
+    a:focus-visible { outline:2px solid var(--ink); outline-offset:3px; }
   </style>
 </head>
 <body>
 <main class="wrap">
-<h1>美光重要指标</h1>
-<p class="updated">截至 2026-09-11</p>
-<div class="mu-inline-stats" aria-label="指标状态汇总">
-<div>
-<strong data-count="ok">8</strong>
-<span>正常</span>
-</div>
-<div>
-<strong data-count="watch">1</strong>
-<span>观察</span>
-</div>
-<div>
-<strong data-count="unknown">1</strong>
-<span>待核实</span>
-</div>
-</div>
-<div class="mu-filters" role="group" aria-label="筛选指标" hidden="">
-<button type="button" data-filter="all" aria-pressed="true">全部 10</button>
-<button type="button" data-filter="attention" aria-pressed="false">待关注 2</button>
-</div>
-<div class="mu-checklist" aria-live="polite">
-<div class="mu-check-group">
-<h2 class="mu-group-label">内存周期 / 5</h2>
-<details class="mu-item" data-state="ok">
-<summary>
-<div>
-<div class="mu-name">内存平均售价</div>
-<div class="mu-value">DRAM +60–65%</div>
-</div>
-<div class="mu-check-state">
-<span class="mu-status ok">正常</span>
-<span class="mu-chevron" aria-hidden="true">›</span>
-</div>
-</summary>
-<div class="mu-detail">
-<p>DRAM 平均售价环比上涨约 60%–65%，NAND 上涨约 80%–85%。</p>
-<div class="mu-source">
-<strong>来源</strong>美光 FQ3-26 业绩幻灯片 / 管理层准备稿</div>
-</div>
-</details>
-<details class="mu-item" data-state="ok">
-<summary>
-<div>
-<div class="mu-name">行业合同价</div>
-<div class="mu-value">DRAM +13–18%</div>
-</div>
-<div class="mu-check-state">
-<span class="mu-status ok">正常</span>
-<span class="mu-chevron" aria-hidden="true">›</span>
-</div>
-</summary>
-<div class="mu-detail">
-<p>3Q26 合同价展望：DRAM 环比上涨 13%–18%，NAND 上涨 10%–15%。</p>
-<div class="mu-source">
-<strong>来源</strong>TrendForce 新闻稿 · 2026-07-03</div>
-</div>
-</details>
-<details class="mu-item" data-state="ok">
-<summary>
-<div>
-<div class="mu-name">出货量与价格</div>
-<div class="mu-value">量价同步上升</div>
-</div>
-<div class="mu-check-state">
-<span class="mu-status ok">正常</span>
-<span class="mu-chevron" aria-hidden="true">›</span>
-</div>
-</summary>
-<div class="mu-detail">
-<p>DRAM 出货量增长低个位数，NAND 增长中个位数，平均售价同步上升。</p>
-<div class="mu-source">
-<strong>来源</strong>美光 FQ3-26 业绩幻灯片</div>
-</div>
-</details>
-<details class="mu-item" data-state="ok">
-<summary>
-<div>
-<div class="mu-name">产成品库存</div>
-<div class="mu-value">$621M</div>
-</div>
-<div class="mu-check-state">
-<span class="mu-status ok">正常</span>
-<span class="mu-chevron" aria-hidden="true">›</span>
-</div>
-</summary>
-<div class="mu-detail">
-<p>产成品库存：$1,094M（2025-08-28）→ $812M（2026-02-26）→ $621M（2026-05-28）。</p>
-<div class="mu-source">
-<strong>来源</strong>美光 10-Q · 存货附注</div>
-</div>
-</details>
-<details class="mu-item" data-state="unknown">
-<summary>
-<div>
-<div class="mu-name">终端需求质量</div>
-<div class="mu-value">数据不足</div>
-</div>
-<div class="mu-check-state">
-<span class="mu-status unknown">待核实</span>
-<span class="mu-chevron" aria-hidden="true">›</span>
-</div>
-</summary>
-<div class="mu-detail">
-<p>收入增长主要由平均售价驱动；终端需求与去库存情况尚缺充分证据。</p>
-<div class="mu-source">
-<strong>来源</strong>美光 FQ3-26 业绩说明 / 电话会实录</div>
-</div>
-</details>
-</div>
-<div class="mu-check-group">
-<h2 class="mu-group-label">公司基本面 / 5</h2>
-<details class="mu-item" data-state="watch">
-<summary>
-<div>
-<div class="mu-name">HBM 收入份额</div>
-<div class="mu-value">18%</div>
-</div>
-<div class="mu-check-state">
-<span class="mu-status watch">观察</span>
-<span class="mu-chevron" aria-hidden="true">›</span>
-</div>
-</summary>
-<div class="mu-detail">
-<p>Q1’26 至 Q2’26，HBM 收入份额从 21% 降至 18%，下降 3 个百分点。</p>
-<div class="mu-source">
-<strong>来源</strong>Counterpoint HBM 收入份额报告 · 2026-09-01</div>
-</div>
-</details>
-<details class="mu-item" data-state="ok">
-<summary>
-<div>
-<div class="mu-name">毛利率</div>
-<div class="mu-value">74.9% → 84.9%</div>
-</div>
-<div class="mu-check-state">
-<span class="mu-status ok">正常</span>
-<span class="mu-chevron" aria-hidden="true">›</span>
-</div>
-</summary>
-<div class="mu-detail">
-<p>非 GAAP 毛利率：74.9% → 84.9%。实际值与指引的对应期间待确认。</p>
-<div class="mu-source">
-<strong>来源</strong>美光 FQ3-26 非 GAAP 业绩表 / 业绩指引</div>
-</div>
-</details>
-<details class="mu-item" data-state="ok">
-<summary>
-<div>
-<div class="mu-name">自由现金流</div>
-<div class="mu-value">$6.9B → $18.3B</div>
-</div>
-<div class="mu-check-state">
-<span class="mu-status ok">正常</span>
-<span class="mu-chevron" aria-hidden="true">›</span>
-</div>
-</summary>
-<div class="mu-detail">
-<p>调整后自由现金流：$6.9B → $18.3B。比较期间待确认。</p>
-<div class="mu-source">
-<strong>来源</strong>美光 FQ3-26 现金流量表 / 10-Q</div>
-</div>
-</details>
-<details class="mu-item" data-state="ok">
-<summary>
-<div>
-<div class="mu-name">披露质量</div>
-<div class="mu-value">量价与指引均有披露</div>
-</div>
-<div class="mu-check-state">
-<span class="mu-status ok">正常</span>
-<span class="mu-chevron" aria-hidden="true">›</span>
-</div>
-</summary>
-<div class="mu-detail">
-<p>出货、定价、HBM 与业绩指引均有具体披露。</p>
-<div class="mu-source">
-<strong>来源</strong>美光 FQ3-26 业绩幻灯片 / 电话会</div>
-</div>
-</details>
-<details class="mu-item" data-state="ok">
-<summary>
-<div>
-<div class="mu-name">资本开支纪律</div>
-<div class="mu-value">资本开支与现金流同增</div>
-</div>
-<div class="mu-check-state">
-<span class="mu-status ok">正常</span>
-<span class="mu-chevron" aria-hidden="true">›</span>
-</div>
-</summary>
-<div class="mu-detail">
-<p>资本开支上升，伴随自由现金流增长。</p>
-<div class="mu-source">
-<strong>来源</strong>美光 FQ3-26 业绩材料</div>
-</div>
-</details>
-</div>
-</div>
-<footer class="mu-footer">
-<details class="mu-rule">
-<summary>复核规则<span aria-hidden="true" class="mu-chevron">›</span>
-</summary>
-<p>内存周期至少 2 项触发，或公司基本面任一项触发，需要复核。观察与待核实不计为已触发。</p>
-<p>当前已记录触发：内存周期 0 / 5，公司基本面 0 / 5。</p>
-</details>
-<p>美光 FQ3-26 · 财报截至 2026-05-28</p>
-</footer>
+  <h1>美光重要指标</h1>
+  <p class="updated">复核于 2026-09-18 · 财报 FQ3</p>
+  <div class="mu-inline-stats" aria-label="指标状态汇总">
+    <div>
+      <strong data-count="ok">7</strong>
+      <span>正常</span>
+    </div>
+    <div>
+      <strong data-count="watch">2</strong>
+      <span>观察</span>
+    </div>
+    <div>
+      <strong data-count="unknown">1</strong>
+      <span>待核实</span>
+    </div>
+  </div>
+  <div class="mu-filters" role="group" aria-label="筛选指标" hidden="">
+    <button type="button" data-filter="all" aria-pressed="true">全部 10</button>
+    <button type="button" data-filter="attention" aria-pressed="false">待关注 3</button>
+  </div>
+  <div class="mu-checklist" aria-live="polite">
+    <div class="mu-check-group">
+      <h2 class="mu-group-label">内存周期 / 5</h2>
+      <details class="mu-item" data-state="ok">
+        <summary>
+          <div>
+            <div class="mu-name">内存平均售价</div>
+            <div class="mu-value">DRAM 涨幅约六成出头</div>
+            <div class="mu-takeaway">上涨偏利好 · 支撑盈利</div>
+          </div>
+          <div class="mu-check-state">
+            <span class="mu-status ok">正常</span>
+            <span class="mu-chevron" aria-hidden="true">›</span>
+          </div>
+        </summary>
+        <div class="mu-detail">
+          <p>美光 FQ3 平均售价环比：DRAM 涨幅为 60% 出头，NAND 约 85%。公司披露的是大致幅度，并非精确区间。</p>
+          <p>售价上涨有利于收入和毛利，但也受产品组合影响，不能只据此认定终端销量大增。</p>
+          <div class="mu-source">
+            <strong>数据来源</strong>
+            <a href="https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf#page=32" target="_blank" rel="noopener noreferrer">美光 FQ3 业绩演示 · 06-24 · 第 32 页 ↗</a>
+          </div>
+        </div>
+      </details>
+      <details class="mu-item" data-state="ok">
+        <summary>
+          <div>
+            <div class="mu-name">行业合同价</div>
+            <div class="mu-value">DRAM 预计 +13–18%</div>
+            <div class="mu-takeaway">仍看涨 · 属于预测</div>
+          </div>
+          <div class="mu-check-state">
+            <span class="mu-status ok">正常</span>
+            <span class="mu-chevron" aria-hidden="true">›</span>
+          </div>
+        </summary>
+        <div class="mu-detail">
+          <p>TrendForce 预计 2026 年第三季度普通型 DRAM 合同价环比上涨 13%–18%，NAND 上涨 10%–15%。9 月 7 日报告仍维持 DRAM 预测；NAND 此处沿用 7 月 3 日预测。</p>
+          <p>涨价预期支持行业景气，但涨幅已放缓。这是行业预测，不能当成已实现价格，也不等于美光自身售价。</p>
+          <div class="mu-source">
+            <strong>数据来源</strong>
+            <a href="https://www.trendforce.com/presscenter/news/20260907-13219.html" target="_blank" rel="noopener noreferrer">TrendForce DRAM 更新 · 09-07 ↗</a>
+            <a href="https://www.trendforce.cn/presscenter/news/20260703-13133.html" target="_blank" rel="noopener noreferrer">TrendForce 合同价预测 · 07-03 ↗</a>
+          </div>
+        </div>
+      </details>
+      <details class="mu-item" data-state="ok">
+        <summary>
+          <div>
+            <div class="mu-name">出货量与价格</div>
+            <div class="mu-value">量价同步上升</div>
+            <div class="mu-takeaway">偏利好 · 收入有量价支撑</div>
+          </div>
+          <div class="mu-check-state">
+            <span class="mu-status ok">正常</span>
+            <span class="mu-chevron" aria-hidden="true">›</span>
+          </div>
+        </summary>
+        <div class="mu-detail">
+          <p>FQ3 DRAM 位元出货量环比增长低个位数，NAND 增长中个位数，平均售价同时上涨。</p>
+          <p>量价齐升比单纯涨价更有支撑。不过销量增幅远小于价格涨幅，收入主要受价格拉动；厂家出货不等于终端实际消耗。</p>
+          <div class="mu-source">
+            <strong>数据来源</strong>
+            <a href="https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf#page=32" target="_blank" rel="noopener noreferrer">美光 FQ3 业绩演示 · 06-24 · 第 32 页 ↗</a>
+          </div>
+        </div>
+      </details>
+      <details class="mu-item" data-state="ok">
+        <summary>
+          <div>
+            <div class="mu-name">产成品库存</div>
+            <div class="mu-value">8.12 → 6.21 亿美元</div>
+            <div class="mu-takeaway">下降 23.5% · 成品积压压力减轻</div>
+          </div>
+          <div class="mu-check-state">
+            <span class="mu-status ok">正常</span>
+            <span class="mu-chevron" aria-hidden="true">›</span>
+          </div>
+        </summary>
+        <div class="mu-detail">
+          <p>产成品库存从 2026 年 2 月 26 日的 8.12 亿美元，降至 5 月 28 日的 6.21 亿美元，环比下降约 23.5%。</p>
+          <p>下降通常偏利好：成品占用的资金减少，滞销和跌价压力减轻。结合当季出货量增长，方向更积极。</p>
+          <p>但这是账面金额，不能排除成本、减产或减值的影响。同期总库存由 82.67 亿升至 85.67 亿美元（约 +3.6%），不能说整体库存也下降。</p>
+          <div class="mu-source">
+            <strong>数据来源</strong>
+            <a href="https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/0000723125-26-000015.pdf#page=13" target="_blank" rel="noopener noreferrer">美光 FQ3 10-Q · 存货附注 · 第 13 页 ↗</a>
+            <a href="https://www.sec.gov/Archives/edgar/data/723125/000072312526000006/mu-20260226.htm" target="_blank" rel="noopener noreferrer">美光 FQ2 10-Q · Note 6 存货 ↗</a>
+          </div>
+        </div>
+      </details>
+      <details class="mu-item" data-state="watch">
+        <summary>
+          <div>
+            <div class="mu-name">终端需求质量</div>
+            <div class="mu-value">AI 强，消费端偏弱</div>
+            <div class="mu-takeaway">需要观察 · 需求增长不均衡</div>
+          </div>
+          <div class="mu-check-state">
+            <span class="mu-status watch">观察</span>
+            <span class="mu-chevron" aria-hidden="true">›</span>
+          </div>
+        </summary>
+        <div class="mu-detail">
+          <p>TrendForce 9 月 1 日报告显示企业级 SSD 需求强劲；9 月 16 日周报则显示消费端疲弱、DDR5 询价放缓，部分 DRAM 与 NAND 现货价格回落。</p>
+          <p>AI 需求仍有支撑，但高价正在压制部分消费需求，不能把收入增长等同于全面复苏。现货走弱也不代表合同价已经转跌。</p>
+          <div class="mu-source">
+            <strong>数据来源</strong>
+            <a href="https://www.trendforce.com/news/2026/09/16/insights-memory-spot-price-update-dram-spot-cools-as-ddr5-inquiries-slow-2gx8-ddr4-prices-retreat/" target="_blank" rel="noopener noreferrer">TrendForce 现货与需求周报 · 09-16 ↗</a>
+            <a href="https://www.trendforce.com/presscenter/news/20260901-13210.html" target="_blank" rel="noopener noreferrer">TrendForce 企业级 SSD 报告 · 09-01 ↗</a>
+          </div>
+        </div>
+      </details>
+    </div>
+    <div class="mu-check-group">
+      <h2 class="mu-group-label">公司基本面 / 5</h2>
+      <details class="mu-item" data-state="unknown">
+        <summary>
+          <div>
+            <div class="mu-name">HBM 收入份额</div>
+            <div class="mu-value">21% → 18%（转引）</div>
+            <div class="mu-takeaway">待核实 · 若属实需关注竞争</div>
+          </div>
+          <div class="mu-check-state">
+            <span class="mu-status unknown">待核实</span>
+            <span class="mu-chevron" aria-hidden="true">›</span>
+          </div>
+        </summary>
+        <div class="mu-detail">
+          <p>Financial News 9 月 3 日转引 Counterpoint：美光 HBM 收入份额由 Q1 的 21% 降至 Q2 的 18%，下降 3 个百分点。</p>
+          <p>本次未能读取 Counterpoint 原始数据表，因此保留转引并标为待核实。份额若下降，说明增速可能落后同行；市场扩张时，份额下降不等于 HBM 收入下降。</p>
+          <div class="mu-source">
+            <strong>数据来源</strong>
+            <a href="https://en.fnnews.com/news/202609031610354859" target="_blank" rel="noopener noreferrer">Financial News 转引 Counterpoint · 09-03 ↗</a>
+            <a href="https://counterpointresearch.com/en/insights/global-dram-and-hbm-market-share" target="_blank" rel="noopener noreferrer">Counterpoint 原始报告 · 09-02（原表未读取） ↗</a>
+          </div>
+        </div>
+      </details>
+      <details class="mu-item" data-state="ok">
+        <summary>
+          <div>
+            <div class="mu-name">毛利率</div>
+            <div class="mu-value">74.9% → 84.9%</div>
+            <div class="mu-takeaway">提升 10 个百分点 · 盈利改善</div>
+          </div>
+          <div class="mu-check-state">
+            <span class="mu-status ok">正常</span>
+            <span class="mu-chevron" aria-hidden="true">›</span>
+          </div>
+        </summary>
+        <div class="mu-detail">
+          <p>非 GAAP 毛利率从 FQ2 的 74.9% 升至 FQ3 的 84.9%，两者均为已公布实际值。</p>
+          <p>每单位收入留下的毛利更多，盈利能力改善。该口径含调整项；后续仍需结合价格、成本及产品组合判断持续性。</p>
+          <div class="mu-source">
+            <strong>数据来源</strong>
+            <a href="https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Results-for-the-Third-Quarter-of-Fiscal-2026/default.aspx" target="_blank" rel="noopener noreferrer">美光 FQ3 财报 · 06-24 · 含两季对照及现金流调节表 ↗</a>
+          </div>
+        </div>
+      </details>
+      <details class="mu-item" data-state="ok">
+        <summary>
+          <div>
+            <div class="mu-name">自由现金流</div>
+            <div class="mu-value">69.0 → 183.0 亿美元</div>
+            <div class="mu-takeaway">明显增长 · 投资后现金更充裕</div>
+          </div>
+          <div class="mu-check-state">
+            <span class="mu-status ok">正常</span>
+            <span class="mu-chevron" aria-hidden="true">›</span>
+          </div>
+        </summary>
+        <div class="mu-detail">
+          <p>调整后自由现金流由 FQ2 的 68.99 亿美元增至 FQ3 的 183.04 亿美元，两者均为实际值。</p>
+          <p>扣除净资本开支后仍产生更多现金，资金承受力增强。公司口径为经营现金流减净资本开支，包含政府补助等调整；单季增长不保证长期持续。</p>
+          <div class="mu-source">
+            <strong>数据来源</strong>
+            <a href="https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Results-for-the-Third-Quarter-of-Fiscal-2026/default.aspx" target="_blank" rel="noopener noreferrer">美光 FQ3 财报 · 06-24 · 含两季对照及现金流调节表 ↗</a>
+          </div>
+        </div>
+      </details>
+      <details class="mu-item" data-state="ok">
+        <summary>
+          <div>
+            <div class="mu-name">披露质量</div>
+            <div class="mu-value">量价、库存与现金流可核对</div>
+            <div class="mu-takeaway">信息较充分 · 方便跟踪变化</div>
+          </div>
+          <div class="mu-check-state">
+            <span class="mu-status ok">正常</span>
+            <span class="mu-chevron" aria-hidden="true">›</span>
+          </div>
+        </summary>
+        <div class="mu-detail">
+          <p>本次可在公司原始材料核对位元出货、平均售价、库存分类、毛利率及现金流调节表，核心指标有明确口径。</p>
+          <p>信息充分有助于分辨价格和数量驱动，但不代表预测必然兑现；行业 HBM 份额仍依赖第三方资料。</p>
+          <div class="mu-source">
+            <strong>数据来源</strong>
+            <a href="https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf#page=32" target="_blank" rel="noopener noreferrer">美光 FQ3 业绩演示 · 06-24 · 第 32 页 ↗</a>
+            <a href="https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/0000723125-26-000015.pdf#page=13" target="_blank" rel="noopener noreferrer">美光 FQ3 10-Q · 存货附注 · 第 13 页 ↗</a>
+            <a href="https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Results-for-the-Third-Quarter-of-Fiscal-2026/default.aspx" target="_blank" rel="noopener noreferrer">美光 FQ3 财报 · 06-24 · 含两季对照及现金流调节表 ↗</a>
+          </div>
+        </div>
+      </details>
+      <details class="mu-item" data-state="watch">
+        <summary>
+          <div>
+            <div class="mu-name">资本开支纪律</div>
+            <div class="mu-value">下季净开支预计约 100 亿美元</div>
+            <div class="mu-takeaway">扩产加速 · 留意后续回报</div>
+          </div>
+          <div class="mu-check-state">
+            <span class="mu-status watch">观察</span>
+            <span class="mu-chevron" aria-hidden="true">›</span>
+          </div>
+        </summary>
+        <div class="mu-detail">
+          <p>FQ3 净资本开支为 70.84 亿美元。管理层预计 FQ4 约 100 亿美元、FY2026 全年约 270 亿美元，FY2027 季度开支还将高于 FQ4 水平。</p>
+          <p>当前现金流能支持投资，但扩产越快，未来利用率和回报越值得观察。新增产能需要持续需求消化，不能仅凭现金流同步增长就判定资本开支有纪律。</p>
+          <div class="mu-source">
+            <strong>数据来源</strong>
+            <a href="https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Results-for-the-Third-Quarter-of-Fiscal-2026/default.aspx" target="_blank" rel="noopener noreferrer">美光 FQ3 财报 · 06-24 · 含两季对照及现金流调节表 ↗</a>
+            <a href="https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf#page=9" target="_blank" rel="noopener noreferrer">美光 FQ3 管理层说明 · 06-24 · 第 9–10 页 ↗</a>
+          </div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <footer class="mu-footer">
+    <details class="mu-rule">
+      <summary>口径与复核规则<span aria-hidden="true" class="mu-chevron">›</span>
+      </summary>
+      <p>正常、观察、待核实是本次定性判断。解读为本站分析；数据、预测及转引已分别注明。FQ 为美光财季，行业 Q 为自然季度；环比均与上一季度比较。</p>
+      <p>原规则：内存周期至少 2 项触发，或公司基本面任一项触发，需要复核。逐项触发阈值尚未定义，因此本次不计算触发数；观察与待核实不视为已触发。</p>
+      <p>最新已公布财报为 FQ3，截至 2026-05-28；FQ4 计划于 2026-09-30 发布。复核日期不代表所有数据更新至当天。</p>
+      <div class="mu-source">
+        <a href="https://investors.micron.com/events-and-presentations/event-details/2026/Microns-Fourth-Quarter-2026-Financial-Call/default.aspx" target="_blank" rel="noopener noreferrer">下一次财报日程 ↗</a>
+      </div>
+    </details>
+    <p>财报截至 2026-05-28 · 行业资料至 2026-09-16</p>
+  </footer>
 </main>
   <script>
     (() => {
