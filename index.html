@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="color-scheme" content="light dark" />
-  <title>MU 监测记分卡</title>
+  <title>MU Monitoring Scorecard</title>
   <style>
     :root {
       --bg: #f2f2f7;
@@ -61,6 +61,12 @@
       color: var(--mute);
       font-size: 14px;
       line-height: 1.45;
+    }
+    .rule {
+      margin: 6px 0 0;
+      color: var(--mute);
+      font-size: 13px;
+      line-height: 1.4;
     }
     .summary {
       display: grid;
@@ -147,7 +153,7 @@
       letter-spacing: -0.02em;
       line-height: 1.4;
     }
-    td.val .sub {
+    td.val .asof {
       display: block;
       margin-top: 5px;
       font-size: 13px;
@@ -155,18 +161,20 @@
       color: var(--mute);
       letter-spacing: 0;
     }
-    td.st { width: 92px; }
+    td.st { width: 100px; }
     .pill {
       display: inline-block;
-      min-width: 52px;
+      min-width: 64px;
       text-align: center;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
+      letter-spacing: .02em;
       padding: 5px 10px;
       border-radius: 6px;
     }
     .pill.clear { background: var(--neutral-bg); color: var(--mute); }
     .pill.watch { background: var(--amber-bg); color: var(--amber); }
+    .pill.nd { background: var(--neutral-bg); color: var(--mute); }
 
     footer {
       margin-top: 18px;
@@ -199,61 +207,62 @@
 <body>
   <div class="wrap">
     <p class="kicker">Position Monitor</p>
-    <h1>MU 监测记分卡</h1>
-    <p class="meta">数据截止：2026-09-11（PT） · 公司财务：FQ3-26（截至 2026-05-28）</p>
+    <h1>MU Monitoring Scorecard</h1>
+    <p class="meta">As of 2026-09-11 (PT) · Company print FQ3-26 (ended 2026-05-28)</p>
+    <p class="rule">Cycle ≥2 or any company signal → review</p>
 
     <section class="summary">
       <div class="kpi">
-        <div class="l">结论</div>
-        <div class="v ok">持有</div>
+        <div class="l">Decision</div>
+        <div class="v ok">HOLD</div>
       </div>
       <div class="kpi">
-        <div class="l">周期信号</div>
+        <div class="l">Cycle lit</div>
         <div class="v">0 / 4</div>
       </div>
       <div class="kpi">
-        <div class="l">公司信号</div>
+        <div class="l">Company lit</div>
         <div class="v">0 / 5</div>
       </div>
       <div class="kpi">
-        <div class="l">观察项</div>
+        <div class="l">Watch</div>
         <div class="v warn">1</div>
       </div>
     </section>
 
     <section class="panel">
       <div class="panel-h">
-        <h2>周期</h2>
-        <span>触发条件：≥2 项亮灯</span>
+        <h2>Cycle</h2>
+        <span>Trigger ≥2</span>
       </div>
       <table>
         <thead>
           <tr>
-            <th>指标</th>
-            <th>最新读数</th>
-            <th>状态</th>
+            <th>Indicator</th>
+            <th>Latest reading</th>
+            <th>Status</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td class="ind">合同价 / ASP</td>
-            <td class="val">DRAM ASP 环比 +低60% · NAND +中80%<span class="sub">行业展望 3Q26：DRAM +13–18% · NAND +10–15%</span></td>
-            <td class="st"><span class="pill clear">灭</span></td>
+            <td class="ind">ASP / Contract</td>
+            <td class="val">DRAM ASP +low-60% QoQ · NAND +mid-80% QoQ<span class="asof">as of 2026-07-03 · TF 3Q26 outlook +13–18% / +10–15%</span></td>
+            <td class="st"><span class="pill clear">CLEAR</span></td>
           </tr>
           <tr>
-            <td class="ind">出货 vs 价格</td>
-            <td class="val">出货量上升（DRAM LSD · NAND MSD），ASP 同步上升<span class="sub">“量升价跌”条件未触发</span></td>
-            <td class="st"><span class="pill clear">灭</span></td>
+            <td class="ind">Shipments vs price</td>
+            <td class="val">Bits ↑ (DRAM LSD · NAND MSD) with ASP ↑<span class="asof">as of FQ3-26 · volume-up / price-down not met</span></td>
+            <td class="st"><span class="pill clear">CLEAR</span></td>
           </tr>
           <tr>
-            <td class="ind">产成品库存</td>
-            <td class="val">$1,094M → $812M → $621M<span class="sub">连续两季下降</span></td>
-            <td class="st"><span class="pill clear">灭</span></td>
+            <td class="ind">Finished goods</td>
+            <td class="val">$1,094M → $812M → $621M<span class="asof">as of 2026-05-28 · two consecutive declines</span></td>
+            <td class="st"><span class="pill clear">CLEAR</span></td>
           </tr>
           <tr>
-            <td class="ind">终端需求质量</td>
-            <td class="val">收入增长主要由 ASP 驱动<span class="sub">未见确认性去库存表述 · ND</span></td>
-            <td class="st"><span class="pill clear">灭</span></td>
+            <td class="ind">End-demand quality</td>
+            <td class="val">Revenue growth ASP-led<span class="asof">as of FQ3-26 · no confirmed destock language · ND</span></td>
+            <td class="st"><span class="pill clear">CLEAR</span></td>
           </tr>
         </tbody>
       </table>
@@ -261,49 +270,50 @@
 
     <section class="panel">
       <div class="panel-h">
-        <h2>公司面</h2>
-        <span>触发条件：≥1 项亮灯</span>
+        <h2>Company</h2>
+        <span>Trigger ≥1</span>
       </div>
       <table>
         <thead>
           <tr>
-            <th>指标</th>
-            <th>最新读数</th>
-            <th>状态</th>
+            <th>Indicator</th>
+            <th>Latest reading</th>
+            <th>Status</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td class="ind">HBM 收入份额</td>
-            <td class="val">21% → 18%（Q1’26 → Q2’26）<span class="sub">DRAM 整体份额 22% → 24%</span></td>
-            <td class="st"><span class="pill watch">观察</span></td>
+            <td class="ind">HBM revenue share</td>
+            <td class="val">21% → 18% (Q1’26 → Q2’26)<span class="asof">as of 2026-09-01 · DRAM overall 22% → 24%</span></td>
+            <td class="st"><span class="pill watch">WATCH</span></td>
           </tr>
           <tr>
-            <td class="ind">毛利率</td>
-            <td class="val">Non-GAAP 74.9% → 84.9%<span class="sub">FQ4 指引约 86%</span></td>
-            <td class="st"><span class="pill clear">灭</span></td>
+            <td class="ind">Gross margin</td>
+            <td class="val">Non-GAAP 74.9% → 84.9%<span class="asof">as of FQ3-26 · FQ4 guide ~86%</span></td>
+            <td class="st"><span class="pill clear">CLEAR</span></td>
           </tr>
           <tr>
-            <td class="ind">CapEx 与自由现金流</td>
-            <td class="val">调整后 FCF $6.9B → $18.3B<span class="sub">经营现金流减资本开支继续扩大</span></td>
-            <td class="st"><span class="pill clear">灭</span></td>
+            <td class="ind">CapEx &amp; FCF</td>
+            <td class="val">Adj. FCF $6.9B → $18.3B<span class="asof">as of FQ3-26 · OpCF − CapEx expanding</span></td>
+            <td class="st"><span class="pill clear">CLEAR</span></td>
           </tr>
           <tr>
-            <td class="ind">披露质量</td>
-            <td class="val">对出货、定价、HBM 与指引均有具体披露</td>
-            <td class="st"><span class="pill clear">灭</span></td>
+            <td class="ind">Disclosure quality</td>
+            <td class="val">Volume, pricing, HBM, guidance disclosed<span class="asof">as of FQ3-26</span></td>
+            <td class="st"><span class="pill clear">CLEAR</span></td>
           </tr>
           <tr>
-            <td class="ind">CapEx / 并购纪律</td>
-            <td class="val">资本开支上升，伴随创纪录自由现金流<span class="sub">未见价值毁损证据</span></td>
-            <td class="st"><span class="pill clear">灭</span></td>
+            <td class="ind">CapEx / M&amp;A discipline</td>
+            <td class="val">Higher CapEx with record FCF<span class="asof">as of FQ3-26 · no value-destruction evidence</span></td>
+            <td class="st"><span class="pill clear">CLEAR</span></td>
           </tr>
         </tbody>
       </table>
     </section>
 
     <footer>
-      规则：信号全灭则维持持有；周期 ≥2 项或公司面任一亮灯则启动复核。下次更新：每月 2 日或 FQ4 披露后。细则与数据源见仓库文件，本页仅展示最新读数。
+      HOLD while all CLEAR. Review on ≥2 cycle signals or any company signal.
+      Next update: 2nd of month or post-FQ4. Thresholds and sources live in the repository.
     </footer>
   </div>
 </body>
