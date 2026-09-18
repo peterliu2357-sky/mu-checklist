@@ -95,47 +95,36 @@
     .kpi .v.ok { color: var(--green); }
     .kpi .v.warn { color: var(--amber); }
 
+    .block {
+      margin-bottom: 40px;
+    }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      margin: 0 2px 12px;
+    }
+    .section-head h2 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      line-height: 1.15;
+    }
+    .section-head .section-meta {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--mute);
+      white-space: nowrap;
+    }
     .panel {
       background: var(--card);
       border: 1px solid var(--line);
-      border-radius: 16px;
+      border-radius: 14px;
       overflow: hidden;
-      margin-bottom: 28px;
-    }
-    .panel-h {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      padding: 18px 20px;
-      background: linear-gradient(180deg, #fafafa 0%, #f3f3f5 100%);
-      border-bottom: 1px solid var(--line);
-      border-left: 4px solid #0071e3;
-    }
-    .panel-h h2 {
-      margin: 0;
-      font-size: 22px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      color: #0071e3;
-      line-height: 1.2;
-    }
-    .panel-h span {
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--mute);
-      white-space: nowrap;
-      background: rgba(0,0,0,.04);
-      padding: 5px 10px;
-      border-radius: 999px;
-    }
-    @media (prefers-color-scheme: dark) {
-      .panel-h {
-        background: linear-gradient(180deg, #242426 0%, #1c1c1e 100%);
-        border-left-color: #0a84ff;
-      }
-      .panel-h h2 { color: #0a84ff; }
-      .panel-h span { background: rgba(255,255,255,.08); }
     }
     table {
       width: 100%;
@@ -159,9 +148,9 @@
     tr:last-child td { border-bottom: none; }
     td.ind {
       width: 26%;
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 600;
-      color: var(--mute);
+      color: var(--ink);
       padding-right: 10px;
     }
     td.val {
@@ -174,11 +163,9 @@
     }
     td.val .src {
       display: block;
-      margin-top: 8px;
-      padding-top: 8px;
-      border-top: 1px solid var(--line);
+      margin-top: 6px;
       font-size: 14px;
-      font-weight: 500;
+      font-weight: 400;
       color: var(--mute);
       letter-spacing: 0;
     }
@@ -203,6 +190,8 @@
     }
 
     @media (max-width: 720px) {
+      .section-head { flex-direction: column; align-items: flex-start; gap: 4px; margin-bottom: 10px; }
+      .section-head h2 { font-size: 24px; }
       .summary { grid-template-columns: 1fr 1fr; }
       table, thead, tbody, th, td, tr { display: block; }
       thead { display: none; }
@@ -250,11 +239,12 @@
       </div>
     </section>
 
-    <section class="panel">
-      <div class="panel-h">
+    <section class="block">
+      <div class="section-head">
         <h2>内存周期监测指标</h2>
-        <span>触发：≥2 项</span>
+        <p class="section-meta">触发：≥2 项</p>
       </div>
+      <div class="panel">
       <table>
         <thead>
           <tr>
@@ -291,13 +281,15 @@
           </tr>
         </tbody>
       </table>
+      </div>
     </section>
 
-    <section class="panel">
-      <div class="panel-h">
+    <section class="block">
+      <div class="section-head">
         <h2>公司基本面监测指标</h2>
-        <span>触发：≥1 项</span>
+        <p class="section-meta">触发：≥1 项</p>
       </div>
+      <div class="panel">
       <table>
         <thead>
           <tr>
@@ -334,6 +326,7 @@
           </tr>
         </tbody>
       </table>
+      </div>
     </section>
   </div>
 </body>
