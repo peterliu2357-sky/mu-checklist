@@ -1,75 +1,89 @@
-# 美光重要指标 — 维护与核查
+# 美光重要指标 — 数据与来源维护
 
-这是公开的手机投资监控页。目的：用可追溯的事实检验投资判断，不将检查项数量转换成买卖评分。只发布公开研究资料，禁止放入个人持仓、成本、聊天记录、凭据或私人任务标识。
+## 产品原则
 
-## 页面与数据
+用户要求 fact-heavy：展示事实和数据，允许紧贴数据的一两句解读；不要写投资结论、股票判断、买卖建议、投资评分、主观“支持 / 关注”状态或估值假设。首页直接呈现指标读数、变化、期间和来源。深度投资分析不属于此网站。
 
-- `index.html`、`preview.html`：同一页面入口，旧预览链接继续可用。内嵌一份带日期的初始备用快照；只有网络读取失败才显示，必须提示为旧快照。
-- `assets/monitor.js`、`assets/monitor.css`：无外部依赖的渲染和情景测算。
-- `data/monitor.json`：唯一当前数据源；页面按无缓存方式读取。日常核查更新此文件即可。
-- `data/history/`：历次已发布快照，不覆盖旧版本。更新前保存上一版（已有同一 revision 的归档时不重复）；文件名使用 ISO 日期时间或 revision。
-- `latest-run.json`、`preview-data.json`：2026-09-18 / 09-20 的旧版研究记录，现已停止驱动页面。
+位元出货不能用收入数据代替。收入用于侧面观察需求时必须显著标记“间接指标”，说明受售价、容量和产品组合共同影响。库存是账面金额，下降可作为供需偏紧的间接佐证，不能单独认定全行业供不应求、实物库存减少或客户已消化。
 
-## 每次核查
+本仓库公开：不要上传用户持仓、成本、私人聊天、凭据或自动任务 ID；不执行交易。
 
-1. 从 GitHub 读取最新 `main` 和当前数据，先确认当前版本，避免覆盖其他改动。
-2. 检查 Micron 投资者关系最新财报、10-Q/10-K、业绩演示、管理层说明、产品进度及下一次财报日程。以原始资料为主。
-3. 核对 TrendForce 最新公开的合同价、现货、行业供需和终端报告，关注 HBM 市场数据。全文不可得时，仅使用可读摘要，标记未读取内容；不假装掌握付费表格。
-4. 更新最近常规交易收盘价与前一交易日收盘价，包含准确交易日期及来源。周末沿用最近交易日；不混合盘后价、不同时间点或拆股口径。拆股时先统一价格和 EPS 的每股口径。
-5. 更新每项实际读数、上期同口径数值、差值、数据日期、原始来源与核查日期，再重新写判断、限制、当前复核条件状态。不能只改日期。
-6. 同步更新 `overview` 的结论、证据卡片文字、缺失项、事件和估值输入；陈旧的文本不能与新数字并存。重大判断改变时，`changes` 记下旧判断、新事实、为何改变，不把今天补研究写成公司今天新披露。
-7. 先校验再发布。保存旧快照，原子提交到 `main`，以当前树为基础，只修改所需文件；禁止强制推送。验证 Pages 部署和线上 `revision`。
-8. 有实质影响投资逻辑的新事实或持续更新失败时，向用户简明说明并给网站链接；无实质变化不发送日常噪声通知。不要改动用户的独立量价复盘任务，不执行交易。
+## 文件
 
-## 时间与运行状态
+- `data/monitor.json`：唯一当前数据源，schema_version=2。
+- `assets/monitor.js` / `monitor.css`：前端；`index.html` / `preview.html` 是相同入口。
+- HTML 内嵌初始备用数据，只在取最新数据失败时使用，必须显示日期与警示。更新数据不需要改前端；若改 schema，必须同步渲染和备用数据。
+- `data/history/`：版本快照。日常更新前保存旧版，同 revision 已存在则不重复，不覆盖旧记录。
+- `latest-run.json`、`preview-data.json` 为旧版研究记录，不再驱动页面。
+- `qa/responsive.html`：390 / 320 / 430 px 页面检查；不出现在主站导航。
 
-- `updated_at`：这份数据记录生成时间。`last_attempt_at`：最新一次尝试核查时间。
-- `last_successful_check_at`：最新完整成功核查时间；不能因为页面刷新或失败尝试而推进。
-- 来源自己的 `checked_at` 只在实际重新读取该来源后推进。核查完成不代表所有原始数据都在当天发布。
-- `sources.*.published_at` 保留原发布日；滚动行情页对应当前采用收盘日。资料页无日期用 null。
-- `check_log` 最新在前，状态 `success`、`partial`、`failed`。部分失败时说明哪些来源受影响，保留成功数据和旧日期；不得删除故障痕迹或伪造 fresh 状态。
-- `changes` 用于研究和事实变化，不在无变化时编造新事件；例行核查记录单独放 `check_log`。
-- `financial_as_of` 是已公布财季截止日，`financial_published_at` 是报告发布日。
-- `next_earnings_at` 是已确认的下一次活动时间，`expected_report_review_by` 是该报告应复核完成的时间。新财报已完成复核后，将期限改成下一次已确认期限；尚无日期时设为 null，避免把旧期限永远留着。
-- 超过 36 小时未完整核查显示提示；收盘价超过 4 天显示提示；财报复核期限到期显示提示。
-- 每日核查不是实时行情或实时新闻推送。载入最新记录按钮只重新读取已发布数据，不触发研究。
-- 自动核查由用户的已授权定时任务运行。公开数据只记录是否启用及频率，不存私人任务 ID。
+## 更新过程
 
-## 数据结构（schema_version = 1）
+1. 读取 GitHub 最新 main、本文和当前数据，检查其他人是否有变动。
+2. 核查 Micron 投资者关系的最新财报、10-Q/10-K、业绩材料、管理层说明、产品信息和财报日程；公司指标优先使用直接披露。
+3. 核查 TrendForce 等行业原始报告；媒体转引与公开摘要必须保留标记，不得声称已经读取付费全文或原始表格。
+4. 更新最近常规交易收盘与前一交易日收盘；保留交易日期、时区和价格口径，不混盘后价。发生拆股时先统一历史价格及 EPS 口径。
+5. 逐行核对“指标名称—值—单位—期间—来源—原文位置”。链接到对应 PDF 页或具体章节，不以首页、相邻收入表替代出处。每个链接必须能解释其在该行支持的输入。
+6. 补齐前期同口径数值、计算输入和公式；缺失用 null，定性幅度保留定性。实际、计划、预测、机构估计分开。
+7. 简短解读只解释所列数据能说明什么与边界；不能补写宏观投资论点、股票贵便宜或对未来利润的深层判断。首页卡片自动从原始行取数，不手抄一份数字。
+8. 有数据、来源或口径变化时更新 `changes`；例行核查写 `check_log`。保存旧快照，再基于最新树原子提交到 main，禁止强推或覆盖他人变更。
+9. 验证 GitHub Pages 部署和线上 revision / 页面。仅在有重要新数据、临近或完成财报更新、或核查失败时简洁通知用户。例行检查和普通股价波动不发送噪声通知。不要修改另一个量价复盘任务。
 
-`metrics[]` 的稳定 `id`：asp、volume、inventory、orders、hbm、capex、margin、cash、supply、contract、demand、valuation。类别 `business` / `industry` / `valuation`；状态 `support` / `mixed` / `watch` / `unknown`。这些状态是研究归纳，不是交易指令。
+## schema_version = 2
 
-每项有 `headline`、`judgment`、`rows`、`limits`、`trigger`、`trigger_status`、`period`、`checked_at`、`next_review`。`trigger` 是判断复核条件，`trigger_status` 必须说明目前有无证据触及。不能只列“以后怎么看”。
+`metrics` 的稳定 ID：asp、volume、inventory、revenue、margin、cash、capex、orders、hbm、contract、supply、demand。
 
-每行必须包含：
+- 类别只有 `business` 和 `industry`。
+- 每项有 `title`、`definition`、`rows`、`interpretation`、`limits`、`period`、`checked_at`、`next_review`。
+- `interpretation` 是紧贴事实的简要解读，通常一两句；有需要时用 `interpretation_sources` 标识额外引用。
+- 不恢复旧字段 `judgment`、`status`、`headline`、`trigger`、`trigger_status` 或 valuation 情景。
 
-- `label`：稳定、明确的指标名称。
-- `current` / `previous`：数字或准确的定性原文概括；缺失用 null。不可将定性“低个位数”伪造成精确点估计。
-- `unit`：`USDm` 存百万美元，页面除以 100 显示亿美元；`pct` 存原始百分数（84.9，不是 0.849）；`USD` 为美元；`days` 为天；`multiple` 为倍。
-- `period`：完整口径，明确美光财季 FQ、自然季度 Q、期末或季后。无同比对象时 `previous=null`，不能强做环比。
-- `kind`：实际、公司披露、预测、计划、计算、行业估计、行业报价、转引、缺失等；陈旧预测标为旧预测。
-- `source_ids`：对应 `sources` 的原始链接。计算行的输入必须能回到来源，并在标签或 note 写公式。
-- `note`：重要边界、计量方法或差异。
-- `change`：通常 null，由同口径数字计算。来源报告的精确涨幅与舍入展示值略有差别时，写清“报告值”。不能把一项的同比变动填给另一项。
+每行包含：
 
-`overview.support_cards` 与 `watch_cards`：`metric_id` 链接证据；`row_label` 引用行名；`stat=current/change` 从行数据取值。`stat=required_eps` 从 `quote.price / pe` 算年度 EPS。`value` 可显示简短非数字关注点。`text` 是需要随证据更新的研究判断。
+- `label`：明确的数据名称；出货、收入、报价、份额必须写出具体口径。
+- `current` / `previous`：数字、来源明确披露的定性描述或 null。null 不当零。未给精确百分比的 low-single / mid-single / low-60s / mid-80s 不改成精确点值。
+- `unit`：USDm 存百万美元，展示时除以 100 为亿美元；pct 存原始百分数（84.9 而非 0.849）；USD 为美元，days 为天，multiple 为倍。
+- `kind`：实际、公司披露、公司指引、行业预测、旧预测、行业估计、行业报价、转引、计算、缺失等。来源直接说过的预测仍然是预测。
+- `evidence_type`：direct / calculated / proxy / secondary / unavailable。它表示这个数字支持当前指标的方式；不表示预测已经实现。
+- `source_ids`：对应 sources 中的真实引用；不能凭公司名字就认定该页能支持数字。
+- `location`：原文所在的 PDF 页、标题、表格行、当前及前期列。手机 PDF 阅读器可能忽略 #page，因此可见文字也必须说明位置。
+- `period`：完整期间。公司财季 FQ、自然季度 Q、季末、季后分开。没有可比前期时 previous=null。
+- `note`：口径边界、计算输入与公式、间接证据的限制。
+- `change`：通常 null，使用 current 与 previous 计算。来源给出的未舍入涨幅与展示值略有差别时，标记“报告值”。
 
-`quote`：price、previous_close、as_of（带时区的常规收盘时间）、session=regular_close、source_id、checked_at。
+`overview.fact_cards` 只包含 metric_id 与 row_label，必须引用存在的行，不能写总投资论点、主观评分或估值。
 
-`valuation`：quarter_eps 是已公布非 GAAP 单季 EPS，eps_period 与 eps_source_id 明确来源；pe_assumptions、retention_assumptions 只是敏感性假设。EPS × 4 不是年度盈利预测。未建立完整模型前，不将情景值称为目标价、内在价值或合理市盈率。
+`guidance` 为单独的公司指引行；预测标签与目标财季不能省略。`events` 为已确认披露日程。`quote` 保留实际收盘资料，不与 PE 或盈利假设混合。
 
-## 当前最重要的证据缺口
+每个 source 包含 label、short_label、url、locator、published_at、checked_at、type。short_label 应显示易定位的页码 / 章节，locator 解释原文位置。
 
-- HBM 原始份额表、量产良率、独立盈利和客户广度；送样、认证、出货阶段分开。
-- 客户库存、真实消耗和订单履约；自身成品下降不等于客户去库存完成。
-- 长单保证金实际到账；季末 RPO 与季后 RPO 不是同一时间点。
-- 最新 NAND 合同价和可比的每位元成本。
-- DRAM 与 NAND 供需分别判断；投产计划不等于可销售成熟产量。
+## 核查日期
 
-## 验证
+- updated_at：记录生成时间。
+- last_attempt_at：最新完整数据核查的尝试；失败也应记录。
+- last_successful_check_at：最近完整成功数据核查。仅改设计、修链接或审校不推进此时间。
+- last_source_audit_at：最近逐项指标 / 引用审校。与行情或全面更新分开。
+- sources.*.checked_at：实际重新读取来源才更新；published_at 保留源发布时间。
+- check_log 最新在前，status 为 success / partial / failed；引用审校另用 scope=source_audit。失败保留成功数据和日期。
+- financial_as_of 是报告期末；financial_published_at 是发布日。next_earnings_at 是已确认的下一次活动；expected_report_review_by 是应完成该报告核查的期限。
+- 新财报完成更新后，将复核期限设为下一次确认期限；暂无则 null，避免旧期限永久报警。
+- 核查用 UTC；市场和活动用 ET；原报告的日期按原文。超过 36 小时未完成核查显示提示。
+- 每日核查并非实时行情。按钮只载入已发布记录，不触发研究。
 
-发布前检查所有引用存在、HTTPS 来源可追溯、单位一致、预测不冒充实际、前后期可比。数量核对示例：总库存等于三类库存之和；CFO − 设备购置 + 补助 + 资产出售 = 调整后 FCF；净资本开支 = 设备购置 − 补助 − 资产出售。不同口径时先解释差异，不为通过等式而改原始数据。
+## 本次审校记录（2026-09-20）
 
-估值：需要的年度 EPS = 股价 / PE；情景每股值 = 单季 EPS × 4 × 保留比例 × PE；余量 = (情景值 − 股价) / 情景值，而非未来收益率。零、负值和非有限输入须拒绝，不能显示 Infinity 或伪造结果。
+- 位元出货从“出货与收入结构”拆出，DRAM / NAND 直接引用业绩材料第 22 页 Bit shipments；原第 32 页也有 Sales volume change，但不再与收入表混呈。MCBU 出货减少引用第 25 页。
+- 收入独立成卡：产品收入 p33，部门收入 p23。收入不能替代出货。
+- ASP 保留 low-60s / mid-80s 定性幅度，不写精确 85%。
+- 库存及贸易应收分别取 FQ3 与 FQ2 10-Q 的 Note 6 / Note 5 当前期列，不能将前财年末列错当上季。
+- 现金流使用 p41 的单季调节表；不使用利润表发布页中的九个月累计现金流代替单季。
+- 长单补入 4.22 亿美元合同负债期末余额；它主要与保证金有关，但不等于当季到账额，也不与预计 180 亿美元直接计算到账比例。
+- HBM 收入不等于位元量；媒体转引的 21% → 18% 是营收份额，非出货份额。
+- 企业 SSD 收入、MCBU 出货用于观察终端真实消耗时均为间接指标。手机行业报告仅引用可见摘要。
+- 供需缺口为机构预测，厂房节点为公司计划；首批晶圆与商业出货不是同一阶段。
 
-验证手机导航、展开证据、来源超链接、价格/EPS 输入及重置，确认加载失败仍显示明确日期的备用数据和警示。不得为了显示“已更新”而把未知事实变成已确认。
+## 必要验证
+
+验证数据结构、引用存在、每行定位齐全、首页指向有效行。确认 volume 只使用直接位元出货披露，需求卡的收入行标 proxy。核对现金流与库存加总、百分点和百分比差异、估计与实际标签。
+
+验证手机横向无溢出、分类导航和深链接、证据展开、来源链接以及网络失败提示。不能仅为了显示 fresh 而推进核查日期。
