@@ -12,6 +12,18 @@
     if(row.previous===0) return '';
     return `${sign}${num(Math.abs(change/row.previous)*100,1)}%`;
   }
+  function guidanceActuals(row, dataset) {
+    return (row.actuals||[]).map(ref=>{
+      const source=dataset.metrics.find(m=>m.id===ref.metric_id)?.rows.find(r=>r.label===ref.row_label);
+      return {...ref,value:source?.[ref.field],unit:source?.unit,source_ids:source?.source_ids||[]};
+    });
+  }
+  function guidanceComparison(row,dataset) {
+    const actuals=guidanceActuals(row,dataset),latest=actuals[actuals.length-1];
+    if(!latest||!Number.isFinite(latest.value)||latest.value===0||!Number.isFinite(row.current)) return null;
+    const difference=row.unit==='pct'?row.current-latest.value:(row.current/latest.value-1)*100;
+    return {period:latest.period,value:difference,unit:row.unit==='pct'?'个百分点':'%'};
+  }
   function freshness(data,now=Date.now()) {
     const warnings=[],last=Date.parse(data.last_successful_check_at);
     if(!Number.isFinite(last)||now-last>36*3600000) warnings.push('超过 36 小时未完成数据核查。当前显示最近保存的资料，请留意每项日期。');
@@ -28,9 +40,14 @@
       ids.add(m.id);
       for(const r of m.rows) if(!provenance[r.evidence_type]||!r.location||!Array.isArray(r.source_ids)||r.source_ids.some(s=>!data.sources[s])) return false;
     }
+    if(!Array.isArray(data.guidance)||!data.guidance.every(g=>
+      Number.isFinite(g.current)&&g.source_ids?.every(id=>data.sources[id])&&
+      (g.tolerance==null||(Number.isFinite(g.tolerance)&&g.tolerance>=0))&&
+      g.actuals?.length===2&&guidanceActuals(g,data).every(a=>Number.isFinite(a.value)&&a.unit===g.unit)
+    )) return false;
     return data.overview.fact_cards.every(c=>data.metrics.find(m=>m.id===c.metric_id)?.rows.some(r=>r.label===c.row_label));
   }
-  if(typeof module!=='undefined'&&module.exports) module.exports={rowChange,freshness,validate};
+  if(typeof module!=='undefined'&&module.exports) module.exports={rowChange,freshness,validate,guidanceActuals,guidanceComparison};
   if(typeof document==='undefined') return;
   let data;
   function date(value,detailed=false) {
@@ -76,11 +93,20 @@
     const metric=data.metrics.find(m=>m.id===card.metric_id),row=metric.rows.find(r=>r.label===card.row_label);
     return `<article class="card fact-card"><div class="fact-label">${esc(row.label)}</div>${numberLine(row,true)}<p class="row-period">${esc(row.period)}</p><div class="tag-group">${tags(row)}</div><div class="source-links">${row.source_ids.map(id=>sourceLink(id)).join('')}</div><a class="detail-link" href="#${esc(metric.id)}" data-metric="${esc(metric.id)}">更多数据与解读 →</a></article>`;
   }
+  function guidanceRow(row) {
+    const actuals=guidanceActuals(row,data),change=guidanceComparison(row,data);
+    const quarter=period=>period.replace(/^FY\d+\s+F?Q/,'FQ');
+    const compact=value=>(row.unit==='USDm'?value/100:value).toLocaleString('en-US',{maximumFractionDigits:2});
+    const forecast=row.tolerance!=null?`${compact(row.current)} ± ${compact(row.tolerance)}`:`${row.approximate?'约 ':''}${formatted(row.current,row.unit)}`;
+    const sources=[...new Set([...actuals.flatMap(a=>a.source_ids),...row.source_ids])];
+    const changeText=change?`${row.approximate?'约 ':''}${change.value>=0?'+':'−'}${num(Math.abs(change.value),1)}${change.unit==='%'?'%':' 个百分点'}`:'';
+    return `<article class="guidance-row"><div class="row-top"><h3>${esc(row.label)}<span class="unit">${esc(unitName(row.unit))}</span></h3><span class="micro">${esc(row.period.match(/^FY\d+/)?.[0]||'')}</span></div><dl class="quarter-comparison">${actuals.map(a=>`<div><dt>${esc(quarter(a.period))} 实际</dt><dd>${formatted(a.value,row.unit)}</dd></div>`).join('')}<div class="next-quarter"><dt>${esc(quarter(row.period))} 指引</dt><dd>${forecast}</dd></div></dl>${change?`<p class="guidance-change">较 ${esc(quarter(change.period))} 实际：<strong>${changeText}</strong>${row.tolerance!=null?' <span>（指引中值）</span>':''}</p>`:''}<div class="source-links">${sources.map(id=>sourceLink(id)).join('')}</div></article>`;
+  }
   function overview() {
-    return `<div class="data-heading"><h2>关键数据</h2><span>${esc(data.financial_period)}</span></div><p class="section-intro">财季截至 ${esc(data.financial_as_of)} · 发布 ${esc(data.financial_published_at)}</p><div class="fact-grid">${data.overview.fact_cards.map(factCard).join('')}</div><a class="all-data" href="#business" data-panel-link="business">查看全部公司数据 →</a><div class="section-heading"><h2>下一季公司指引</h2><span class="small">预测 · 尚未实现</span></div><section class="card guidance-card">${data.guidance.map(evidence).join('')}</section><div class="section-heading"><h2>披露日程</h2></div>${data.events.map(e=>`<div class="card event"><div class="date">${esc(e.date)}</div><h3>${esc(e.title)}</h3><p>${date(data.next_earnings_at,true)}</p><div class="source-links">${sourceLink(e.source_id)}</div></div>`).join('')}<div class="section-heading"><h2>尚未取得的数据</h2></div><ul class="gap-list">${data.overview.gaps.map(g=>`<li>${esc(g)}</li>`).join('')}</ul><div class="quote-line"><span>MU 最近常规收盘</span><strong>$${num(data.quote.price)}</strong><span>${date(data.quote.as_of)}</span>${sourceLink(data.quote.source_id)}</div>`;
+    return `<div class="data-heading"><h2>关键数据</h2><span>${esc(data.financial_period)}</span></div><p class="section-intro">财季截至 ${esc(data.financial_as_of)} · 发布 ${esc(data.financial_published_at)}</p><div class="fact-grid">${data.overview.fact_cards.map(factCard).join('')}</div><a class="all-data" href="#business" data-panel-link="business">查看全部公司数据 →</a><div class="section-heading"><h2>下一季公司指引</h2><span class="small">预测 · 尚未实现</span></div><section class="card guidance-card">${data.guidance.map(guidanceRow).join('')}</section><div class="section-heading"><h2>披露日程</h2></div>${data.events.map(e=>`<div class="card event"><div class="date">${esc(e.date)}</div><h3>${esc(e.title)}</h3><p>${date(data.next_earnings_at,true)}</p><div class="source-links">${sourceLink(e.source_id)}</div></div>`).join('')}<div class="section-heading"><h2>尚未取得的数据</h2></div><ul class="gap-list">${data.overview.gaps.map(g=>`<li>${esc(g)}</li>`).join('')}</ul><div class="quote-line"><span>MU 最近常规收盘</span><strong>$${num(data.quote.price)}</strong><span>${date(data.quote.as_of)}</span>${sourceLink(data.quote.source_id)}</div>`;
   }
   function updates() {
-    return `<section class="card update-status"><div class="line"><span>最近完整数据核查</span><strong>${checkDate(data.last_successful_check_at,true)}</strong></div><div class="line"><span>最近引用审校</span><strong>${checkDate(data.last_source_audit_at,true)}</strong></div><div class="line"><span>财报覆盖期间</span><strong>${esc(data.financial_period)}<br><span>截至 ${esc(data.financial_as_of)}</span></strong></div><div class="line"><span>持续核查</span><strong>${data.automation.enabled?'每日核查已启用':'尚未启用'}</strong></div><p>${esc(data.automation.note)} 核查日不等于原始发布日期，引用审校也不等于行情更新。核查时间用 UTC；交易与活动时间用 ET。</p><button class="button" id="refresh-data" style="margin-top:14px">载入最新记录</button><p id="refresh-state" role="status"></p></section><div class="section-heading"><h2>证据标记</h2></div><div class="provenance-key"><p><b>直接披露</b>：来源明确给出这个指标。</p><p><b>本页计算</b>：由已列明输入及公式计算。</p><p><b>间接指标</b>：用于侧面观察另一变量，不能替代其直接数据。</p><p><b>媒体转引</b>：已核对转引报道，未读取原始表格。</p><p><b>未取得</b>：没有可核实数值；不填零。</p><p>“直接披露”标明证据来源；是否为实际、估计或预测，以旁边的类型标签为准。</p></div><div class="section-heading"><h2>数据来源</h2></div><div class="source-directory">${Object.entries(data.sources).map(([id,s])=>`<div class="source-entry">${sourceLink(id,true)}<p>${esc(s.locator||'')}<br>${esc(s.type)} · 发布 ${esc(s.published_at||'未标注')} · 核查 ${esc(s.checked_at)} UTC</p></div>`).join('')}</div><div class="section-heading"><h2>修订记录</h2></div><ol class="timeline">${data.changes.slice(0,5).map(c=>`<li><time>${esc(c.date)}</time><h3>${esc(c.title)}</h3><p>${esc(c.text)}</p></li>`).join('')}</ol><div class="section-heading"><h2>核查记录</h2></div><ol class="timeline">${data.check_log.slice(0,7).map(c=>`<li><time>${checkDate(c.at,true)} · ${c.scope==='source_audit'?'引用审校':c.status==='success'?'数据核查完成':c.status==='failed'?'核查失败':'部分完成'}</time><p>${esc(c.text)}</p></li>`).join('')}</ol><div class="section-heading"><h2>口径说明</h2></div><ul class="method">${data.methodology.map(s=>`<li>${esc(s)}</li>`).join('')}</ul>`;
+    return `<section class="card update-status"><div class="line"><span>最近完整数据核查</span><strong>${checkDate(data.last_successful_check_at,true)}</strong></div><div class="line"><span>最近引用审校</span><strong>${checkDate(data.last_source_audit_at,true)}</strong></div><div class="line"><span>财报覆盖期间</span><strong>${esc(data.financial_period)}<br><span>截至 ${esc(data.financial_as_of)}</span></strong></div><div class="line"><span>持续核查</span><strong>${data.automation.enabled?'每日核查已启用':'尚未启用'}</strong></div><p>${esc(data.automation.note)} 核查日不等于原始发布日期，引用审校也不等于行情更新。核查时间用 UTC；交易与活动时间用 ET。</p><button class="button" id="refresh-data" style="margin-top:14px">载入最新记录</button><p id="refresh-state" role="status"></p></section><div class="section-heading"><h2>证据标记</h2></div><div class="provenance-key"><p><b>直接披露</b>：来源明确给出这个指标。</p><p><b>本页计算</b>：由已列明输入及公式计算。</p><p><b>间接指标</b>：用于侧面观察另一变量，不能替代其直接数据。</p><p><b>媒体转引</b>：已核对转引报道，未读取原始表格。</p><p><b>未取得</b>：暂无可核实数值。</p><p>“直接披露”标明证据来源；是否为实际、估计或预测，以旁边的类型标签为准。</p></div><div class="section-heading"><h2>数据来源</h2></div><div class="source-directory">${Object.entries(data.sources).map(([id,s])=>`<div class="source-entry">${sourceLink(id,true)}<p>${esc(s.locator||'')}<br>${esc(s.type)} · 发布 ${esc(s.published_at||'未标注')} · 核查 ${esc(s.checked_at)} UTC</p></div>`).join('')}</div><div class="section-heading"><h2>修订记录</h2></div><ol class="timeline">${data.changes.slice(0,5).map(c=>`<li><time>${esc(c.date)}</time><h3>${esc(c.title)}</h3><p>${esc(c.text)}</p></li>`).join('')}</ol><div class="section-heading"><h2>核查记录</h2></div><ol class="timeline">${data.check_log.slice(0,7).map(c=>`<li><time>${checkDate(c.at,true)} · ${c.scope==='source_audit'?'引用审校':c.status==='success'?'数据核查完成':c.status==='failed'?'核查失败':'部分完成'}</time><p>${esc(c.text)}</p></li>`).join('')}</ol><div class="section-heading"><h2>口径说明</h2></div><ul class="method">${data.methodology.map(s=>`<li>${esc(s)}</li>`).join('')}</ul>`;
   }
   function show(panel,updateHash=true) {
     if(!['overview','business','industry','updates'].includes(panel)) panel='overview';
