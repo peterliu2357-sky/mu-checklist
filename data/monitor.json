@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
-  "revision": "2026-09-20-ecosystem-4",
-  "updated_at": "2026-09-20T18:03:26Z",
-  "last_successful_check_at": "2026-09-20T02:30:13Z",
-  "last_attempt_at": "2026-09-20T02:30:13Z",
+  "revision": "2026-09-20-check-5",
+  "updated_at": "2026-09-20T23:50:00Z",
+  "last_successful_check_at": "2026-09-20T23:50:00Z",
+  "last_attempt_at": "2026-09-20T23:50:00Z",
   "financial_period": "FY2026 Q3",
   "financial_as_of": "2026-05-28",
   "financial_published_at": "2026-06-24",
@@ -20,7 +20,7 @@
     "as_of": "2026-09-18T16:00:00-04:00",
     "session": "regular_close",
     "source_id": "price",
-    "checked_at": "2026-09-20T02:30:13Z"
+    "checked_at": "2026-09-20T23:50:00Z"
   },
   "overview": {
     "fact_cards": [
@@ -72,6 +72,16 @@
     }
   ],
   "changes": [
+    {
+      "date": "2026-09-20",
+      "title": "更新产品进展与行业展望",
+      "text": "补入 09-15 的 512GB DDR5 RDIMM 验证及量产计划、09-16 的 NAND 分市场展望；行业新报告采用公开摘要。"
+    },
+    {
+      "date": "2026-09-20",
+      "title": "补充产业链现金流与 Azure 数据",
+      "text": "加入微软 09-02 重列的 Azure 收入及调整后指引，补充英伟达、三星、台积电经营现金流及 Oracle 客户预付款口径。"
+    },
     {
       "date": "2026-09-20",
       "title": "增加产业链跟踪",
@@ -506,7 +516,7 @@
       "url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_2Q_conference_eng.pdf?pubDate=20260802#page=15",
       "published_at": "2026-07-30",
       "checked_at": "2026-09-20",
-      "locator": "第 15 页 Appendix 4：Purchase of PP&E，2Q25 / 2Q26。",
+      "locator": "第 15 页 Appendix 4：Cash flows from operating activities / Purchase of PP&E，2Q25 / 2Q26。",
       "type": "公司原始披露"
     },
     "eco_samsung_outlook": {
@@ -552,6 +562,69 @@
       "published_at": "2026-07-16",
       "checked_at": "2026-09-20",
       "locator": "第 5 页：C.C. Wei，near-term demand outlook。",
+      "type": "公司原始披露"
+    },
+    "rdimm_512": {
+      "label": "美光 512GB DDR5 RDIMM 产品进展",
+      "short_label": "512GB RDIMM 公告 09-15",
+      "url": "https://investors.micron.com/news/press-release/2026/Micron-Advances-Memory-Innovation-With-the-Worlds-First-Ultra-Dense-Module-for-Next-Generation-Servers/default.aspx",
+      "published_at": "2026-09-15",
+      "checked_at": "2026-09-20",
+      "locator": "首段多平台演示；AMD / Intel 验证段；volume production 时间表。",
+      "type": "公司原始披露"
+    },
+    "nand_2027": {
+      "label": "TrendForce 2027 NAND 分市场展望 · 公开摘要",
+      "short_label": "NAND 2027 摘要 09-16",
+      "url": "https://www.trendforce.com/research/download/RP260915MC",
+      "published_at": "2026-09-16",
+      "checked_at": "2026-09-20",
+      "locator": "页面 Last Modified 2026-09-16；Summary。仅读取公开摘要，未取得付费全文或原表。",
+      "type": "行业公开摘要"
+    },
+    "nand_q3": {
+      "label": "TrendForce NAND 3Q26 行业分析 · 公开摘要",
+      "short_label": "NAND Q3 摘要 09-10",
+      "url": "https://www.trendforce.com/research/download/RP260910ZM",
+      "published_at": "2026-09-10",
+      "checked_at": "2026-09-20",
+      "locator": "页面 Last Modified 2026-09-10；Summary。仅读取公开摘要，未取得付费全文或原表。",
+      "type": "行业公开摘要"
+    },
+    "eco_ms_recast": {
+      "label": "Microsoft FY27 分部及 Azure 历史数据重列",
+      "short_label": "Azure 重列数据 p20",
+      "url": "https://microsoft.gcs-web.com/static-files/6f77f14c-9bdd-49c1-bfa3-1dbe8d872424#page=20",
+      "published_at": "2026-09-02",
+      "checked_at": "2026-09-20",
+      "locator": "8-K 附件 PDF 第 20 页 Products and Service Offerings Revenue · As Restated · Azure，FY2026 / FY2025 Q4；第 10、14 页统计定义。",
+      "type": "公司原始披露"
+    },
+    "eco_ms_adjusted": {
+      "label": "Microsoft FY2027 Q1 调整后指引",
+      "short_label": "Azure 新口径指引 p24",
+      "url": "https://microsoft.gcs-web.com/static-files/6f77f14c-9bdd-49c1-bfa3-1dbe8d872424#page=24",
+      "published_at": "2026-09-02",
+      "checked_at": "2026-09-20",
+      "locator": "8-K 附件 PDF 第 24 页 Adjusted Outlook · Azure revenue；第 23 页说明只按报告结构作机械调整。",
+      "type": "公司原始披露"
+    },
+    "eco_tsmc_ocf": {
+      "label": "台积电 2026 Q2 经营现金流",
+      "short_label": "台积电现金流 p3",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-08/3e494f0c14dd0890f897aa044415e21d93486cc4/TSMC%202Q26%20Transcript.pdf#page=3",
+      "published_at": "2026-07-16",
+      "checked_at": "2026-09-20",
+      "locator": "第 3 页 Regarding cash flow and CapEx：单季经营现金流约 7,830 亿新台币。",
+      "type": "公司原始披露"
+    },
+    "eco_tsmc_prior_ocf": {
+      "label": "台积电 2025 Q2 经营现金流",
+      "short_label": "台积电同期现金流 p5",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2025-07/1fec9df3de99e6e9f190e1eda7179449381ce6d8/2Q25ManagementReport.pdf#page=5",
+      "published_at": "2025-07-17",
+      "checked_at": "2026-09-20",
+      "locator": "第 5 页 IV-1 Summary of Cash Flow · Net Operating Sources/(Uses)，2Q25 列。",
       "type": "公司原始披露"
     }
   },
@@ -1412,7 +1485,7 @@
     },
     {
       "id": "hbm",
-      "title": "HBM 收入与交付",
+      "title": "HBM 与服务器内存",
       "category": "business",
       "rows": [
         {
@@ -1461,6 +1534,36 @@
           "evidence_type": "direct"
         },
         {
+          "label": "512GB DDR5 RDIMM 验证",
+          "current": "多平台演示完成；AMD、Intel 正在验证",
+          "previous": null,
+          "unit": "",
+          "source_ids": [
+            "rdimm_512"
+          ],
+          "kind": "公司披露",
+          "note": "",
+          "period": "截至 2026-09-15",
+          "change": null,
+          "location": "公告首段及 AMD / Intel 验证段。",
+          "evidence_type": "direct"
+        },
+        {
+          "label": "512GB DDR5 RDIMM 量产",
+          "current": "2027 年下半年",
+          "previous": null,
+          "unit": "",
+          "source_ids": [
+            "rdimm_512"
+          ],
+          "kind": "公司计划",
+          "note": "",
+          "period": "2027 下半年",
+          "change": null,
+          "location": "公告 volume production 段。",
+          "evidence_type": "direct"
+        },
+        {
           "label": "HBM 营收份额（转引）",
           "current": 18,
           "previous": 21,
@@ -1494,11 +1597,11 @@
       "limits": [
         "份额采用媒体转引，Counterpoint 原始表格待核实。"
       ],
-      "period": "公司披露 06-24；份额转引 09-03",
+      "period": "HBM 披露 06-24；份额转引 09-03；DDR5 进展 09-15",
       "checked_at": "2026-09-20",
       "next_review": "2026-09-30",
-      "definition": "HBM 收入、交付阶段与营收份额。",
-      "interpretation": "HBM4 已有商业交付，同时向多家客户提供认证样品。"
+      "definition": "HBM 收入、交付阶段与服务器内存产品进度。",
+      "interpretation": "HBM4 已进入商业交付；512GB DDR5 RDIMM 仍处于验证阶段，量产时间为公司计划。"
     },
     {
       "id": "contract",
@@ -1526,13 +1629,29 @@
           "previous": null,
           "unit": "",
           "source_ids": [
-            "contract"
+            "contract",
+            "nand_q3"
           ],
           "kind": "旧预测",
-          "note": "07-03 发布，尚未取得后续可核实同口径预测。",
+          "note": "07-03 量化预测；09-10 公开摘要未给新的涨幅区间。",
           "period": "2026 Q3",
           "change": null,
-          "location": "07-03 报告 · 导读 / 首段。",
+          "location": "07-03 报告 · 导读 / 首段。 09-10 Summary · contract price trends。",
+          "evidence_type": "direct"
+        },
+        {
+          "label": "NAND 合同价趋势",
+          "current": "涨幅收敛",
+          "previous": null,
+          "unit": "",
+          "source_ids": [
+            "nand_q3"
+          ],
+          "kind": "行业预测",
+          "note": "公开摘要未给涨幅区间；付费全文未读。",
+          "period": "2026 Q3 · 09-10 公开摘要",
+          "change": null,
+          "location": "Summary · contract price trends。",
           "evidence_type": "direct"
         },
         {
@@ -1567,13 +1686,13 @@
         }
       ],
       "limits": [
-        "现货报价按指定规格采样。NAND 合同价仍采用 07-03 发布的预测。"
+        "现货报价按指定规格采样。NAND 合同价的量化预测发布于 07-03，后续趋势来自 09-10 公开摘要。"
       ],
       "period": "报价至 09-15；报告至 09-16",
       "checked_at": "2026-09-20",
       "next_review": "每周",
       "definition": "行业合同价预测与现货报价。",
-      "interpretation": "报告中的 DDR4 规格小幅上涨，NAND 规格小幅下降。"
+      "interpretation": "现货周报中的 DDR4 规格小幅上涨，NAND 规格小幅下降；合同价摘要预计涨幅收敛，未提供新的量化区间。"
     },
     {
       "id": "supply",
@@ -1596,18 +1715,18 @@
           "evidence_type": "direct"
         },
         {
-          "label": "2027 NAND 供需",
-          "current": "下半年趋松",
+          "label": "2027 NAND 分市场展望",
+          "current": "企业 SSD 偏强；消费级存储承压",
           "previous": null,
           "unit": "",
           "source_ids": [
-            "supply"
+            "nand_2027"
           ],
           "kind": "行业预测",
-          "note": "",
-          "period": "TrendForce 07-30 展望",
+          "note": "仅公开摘要；付费全文及供需数值未取得。",
+          "period": "2027 · 09-16 公开摘要",
           "change": null,
-          "location": "TrendForce 07-30 报告 · DRAM supply / NAND Flash capacity。",
+          "location": "Summary · enterprise SSD demand / consumer-market oversupply。",
           "evidence_type": "direct"
         },
         {
@@ -1674,11 +1793,11 @@
       "limits": [
         "首批晶圆、产品出货和成熟产量属于不同阶段。"
       ],
-      "period": "2026–2027 展望 · 06-24 / 07-30",
+      "period": "2026–2027 展望 · 披露至 09-16",
       "checked_at": "2026-09-20",
       "next_review": "新行业报告",
       "definition": "机构供需预测及公司产能计划。",
-      "interpretation": "TrendForce 与美光对 NAND 中期供需的预测存在分歧。"
+      "interpretation": "TrendForce 最新摘要预计 NAND 不同终端市场分化；企业 SSD 的需求展望不宜外推至全部消费级存储。"
     },
     {
       "id": "demand",
@@ -1784,6 +1903,12 @@
     "产业链指引和管理层展望按原披露日期及目标期间记录，文字为中文摘要；同比由原始金额计算，百分点与百分比区分。"
   ],
   "check_log": [
+    {
+      "at": "2026-09-20T23:50:00Z",
+      "status": "success",
+      "scope": "full",
+      "text": "重新核查美光 FY2026 Q3 财报、10-Q、业绩材料、管理层及产品披露、09-30 财报活动、行业资料、09-18 常规收盘和九家公司最新季度原文；更新产品、行业摘要及产业链数据。付费全文、HBM 份额原表与客户库存等未取得项目保留缺口。"
+    },
     {
       "at": "2026-09-20T18:03:26Z",
       "status": "success",
@@ -1897,9 +2022,9 @@
       ]
     }
   ],
-  "last_source_audit_at": "2026-09-20T07:31:14Z",
+  "last_source_audit_at": "2026-09-20T23:50:00Z",
   "ecosystem": {
-    "checked_at": "2026-09-20T18:03:26Z",
+    "checked_at": "2026-09-20T23:50:00Z",
     "groups": [
       {
         "id": "cloud",
@@ -1924,8 +2049,21 @@
         "period_end": "2026-06-30",
         "published_at": "2026-07-29",
         "checked_at": "2026-09-20",
-        "scope": "Intelligent Cloud 含 Azure、服务器产品及相关服务。",
+        "scope": "Azure 收入采用 09-02 重列口径；Intelligent Cloud 为原财报分部口径。",
         "metrics": [
+          {
+            "id": "azure_revenue",
+            "label": "Azure 收入（新口径）",
+            "current": 29417,
+            "previous": 20712,
+            "unit": "USDm",
+            "source_ids": [
+              "eco_ms_recast"
+            ],
+            "location": "PDF 第 20 页 · As Restated · Azure，FY2026 / FY2025 的 Q4 列。",
+            "note": "09-02 重列；GitHub、Security Copilot 及部分行业云业务转至其他项目。",
+            "evidence_type": "direct"
+          },
           {
             "id": "revenue",
             "label": "Intelligent Cloud 收入",
@@ -1984,18 +2122,18 @@
             "id": "azure",
             "label": "Azure 收入同比",
             "type": "numeric",
-            "value": "约 +45%",
-            "summary": "固定汇率口径。",
+            "value": "+44%–45%",
+            "summary": "固定汇率；09-02 按新 Azure 定义调整。",
             "prior_guidance": "",
             "period": "FY2027 Q1",
-            "issued_at": "2026-07-29",
-            "speaker": "CFO Amy Hood",
+            "issued_at": "2026-09-02",
+            "speaker": "Microsoft 管理层",
             "kind": "公司指引",
             "evidence_type": "direct",
             "source_ids": [
-              "eco_ms_call"
+              "eco_ms_adjusted"
             ],
-            "location": "Q1 segment guidance · Azure。"
+            "location": "PDF 第 24 页 · Adjusted Outlook · Azure revenue。"
           },
           {
             "id": "capex",
@@ -2050,7 +2188,7 @@
           }
         ],
         "notes": [
-          "Azure 未单独披露营业利润，采用 Intelligent Cloud 分部口径。"
+          "Azure 未单独披露营业利润。FY2027 起报告分部改为 Agents and Infra、Devices and Consumer；此处 Intelligent Cloud 保留 FY2026 原披露口径。"
         ]
       },
       {
@@ -2343,8 +2481,8 @@
             "source_ids": [
               "eco_oracle"
             ],
-            "location": "Free Cash Flow 表 · GAAP Operating Cash Flow；FY2027 Q1 / FY2026 Q1。",
-            "note": "",
+            "location": "Statements of Cash Flows · Net cash provided by operating activities / Increase in deferred revenues from customer prepayments with a significant financing component；Three Months Ended August 31。",
+            "note": "当季包含具有重大融资成分的客户预付款所带来的递延收入增加 113.63 亿美元。",
             "evidence_type": "direct"
           }
         ],
@@ -2576,6 +2714,32 @@
             "location": "Q2 Fiscal 2027 Summary · GAAP Gross margin。",
             "note": "",
             "evidence_type": "direct"
+          },
+          {
+            "id": "capex",
+            "label": "集团现金购置固定及无形资产",
+            "current": 2677,
+            "previous": 1894,
+            "unit": "USDm",
+            "source_ids": [
+              "eco_nvidia"
+            ],
+            "location": "Statements of Cash Flows · Purchases related to property and equipment and intangible assets；Three Months Ended July 26, 2026 / July 27, 2025。",
+            "note": "包含无形资产购置。",
+            "evidence_type": "direct"
+          },
+          {
+            "id": "ocf",
+            "label": "集团经营现金流",
+            "current": 24077,
+            "previous": 15365,
+            "unit": "USDm",
+            "source_ids": [
+              "eco_nvidia"
+            ],
+            "location": "Statements of Cash Flows · Net cash provided by operating activities；Three Months Ended July 26, 2026 / July 27, 2025。",
+            "note": "",
+            "evidence_type": "direct"
           }
         ],
         "outlook": [
@@ -2644,7 +2808,7 @@
         "period_end": "2026-06-30",
         "published_at": "2026-07-16",
         "checked_at": "2026-09-20",
-        "scope": "收入和资本开支为美元；利润为新台币。",
+        "scope": "收入和资本开支为美元；利润和经营现金流为新台币。",
         "metrics": [
           {
             "id": "revenue",
@@ -2688,6 +2852,21 @@
             "note": "",
             "evidence_type": "direct",
             "digits": 1
+          },
+          {
+            "id": "ocf",
+            "label": "集团经营现金流",
+            "current": 783,
+            "previous": 497.07,
+            "unit": "TWDb",
+            "source_ids": [
+              "eco_tsmc_ocf",
+              "eco_tsmc_prior_ocf"
+            ],
+            "location": "本期业绩会 p3：约 783 十亿新台币；上年管理报告 p5：497.07 十亿新台币。",
+            "note": "本期为公司披露的约数，同比按展示值计算。",
+            "evidence_type": "direct",
+            "digits": 2
           }
         ],
         "outlook": [
@@ -2800,6 +2979,19 @@
               "eco_samsung_cash"
             ],
             "location": "业绩材料 p15 · Purchase of PP&E，2Q26 / 2Q25。",
+            "note": "",
+            "evidence_type": "direct"
+          },
+          {
+            "id": "ocf",
+            "label": "集团经营现金流",
+            "current": 105.08,
+            "previous": 17.31,
+            "unit": "KRWt",
+            "source_ids": [
+              "eco_samsung_cash"
+            ],
+            "location": "业绩材料 p15 · Cash flows from operating activities，2Q26 / 2Q25。",
             "note": "",
             "evidence_type": "direct"
           }
@@ -2952,7 +3144,7 @@
           }
         ],
         "notes": [
-          "本次财报新闻稿未提供可核对的季度资本开支数值。"
+          "本次读取的财报新闻稿未提供可逐项核对的季度资本开支及经营现金流，保留数据缺口。"
         ]
       }
     ]
