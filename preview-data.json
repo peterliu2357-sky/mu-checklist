@@ -1,0 +1,299 @@
+{
+  "version": "12-indicator-preview",
+  "prepared_at": "2026-09-20",
+  "company_data_as_of": "2026-05-28",
+  "industry_data_through": "2026-09-16",
+  "basis": "Retains the 2026-09-18 financial review; adds sources and review conditions on 2026-09-20. Qualitative states are not investment scores.",
+  "valuation": "Unassessed until manual inputs; EPS sensitivity only, fixed multiple, no price feed.",
+  "sources": {
+    "deck": {
+      "label": "美光 FQ3 业绩演示 · 06-24 · 第 32 页",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf#page=32",
+      "published_at": "2026-06-24"
+    },
+    "q3": {
+      "label": "美光 FQ3 10-Q · 存货附注 · 第 13 页",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/0000723125-26-000015.pdf#page=13",
+      "published_at": "2026-06-25"
+    },
+    "q2": {
+      "label": "美光 FQ2 10-Q · Note 6 存货",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000006/mu-20260226.htm",
+      "published_at": "2026-03-19"
+    },
+    "earnings": {
+      "label": "美光 FQ3 财报 · 06-24 · 含两季对照及现金流调节表",
+      "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Results-for-the-Third-Quarter-of-Fiscal-2026/default.aspx",
+      "published_at": "2026-06-24"
+    },
+    "remarks": {
+      "label": "美光 FQ3 管理层说明 · 06-24 · 第 9–10 页",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf#page=9",
+      "published_at": "2026-06-24"
+    },
+    "contract": {
+      "label": "TrendForce 合同价预测 · 07-03",
+      "url": "https://www.trendforce.cn/presscenter/news/20260703-13133.html",
+      "published_at": "2026-07-03"
+    },
+    "dram": {
+      "label": "TrendForce DRAM 更新 · 09-07",
+      "url": "https://www.trendforce.com/presscenter/news/20260907-13219.html",
+      "published_at": "2026-09-07"
+    },
+    "spot": {
+      "label": "TrendForce 现货与需求周报 · 09-16",
+      "url": "https://www.trendforce.com/news/2026/09/16/insights-memory-spot-price-update-dram-spot-cools-as-ddr5-inquiries-slow-2gx8-ddr4-prices-retreat/",
+      "published_at": "2026-09-16"
+    },
+    "ssd": {
+      "label": "TrendForce 企业级 SSD 报告 · 09-01",
+      "url": "https://www.trendforce.com/presscenter/news/20260901-13210.html",
+      "published_at": "2026-09-01"
+    },
+    "hbm": {
+      "label": "Counterpoint 原始报告 · 09-02（原表未读取）",
+      "url": "https://counterpointresearch.com/en/insights/global-dram-and-hbm-market-share",
+      "published_at": "2026-09-02"
+    },
+    "hbm_secondary": {
+      "label": "Financial News 转引 Counterpoint · 09-03",
+      "url": "https://en.fnnews.com/news/202609031610354859",
+      "published_at": "2026-09-03"
+    },
+    "next": {
+      "label": "美光 FQ4 财报日程 · 09-30",
+      "url": "https://investors.micron.com/events-and-presentations/event-details/2026/Microns-Fourth-Quarter-2026-Financial-Call/default.aspx",
+      "published_at": null
+    },
+    "supply": {
+      "label": "TrendForce · 2027 年供需展望 · 07-30",
+      "url": "https://www.trendforce.com/presscenter/news/20260730-13158.html"
+    },
+    "q3_orders": {
+      "label": "美光 FQ3 10-Q · 长单与 RPO · 第 21 页",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/0000723125-26-000015.pdf#page=21"
+    },
+    "orders": {
+      "label": "美光管理层说明 · 长单 · 第 3、7 页",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf#page=3"
+    },
+    "hbm_product": {
+      "label": "美光管理层说明 · HBM4 · 第 4 页",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf#page=4"
+    },
+    "mobile": {
+      "label": "TrendForce · 手机内存报告公开摘要 · 09-09",
+      "url": "https://www.trendforce.com/research/download/RP260909CK"
+    },
+    "normalization": {
+      "label": "Damodaran · 周期企业盈利正常化",
+      "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/valquestions/normearn.htm"
+    }
+  },
+  "metrics": [
+    {
+      "id": "supply",
+      "name": "行业供需",
+      "group": "行业周期",
+      "state": "watch",
+      "value": "DRAM 偏紧，NAND 或转松",
+      "takeaway": "关注 2027 年新增供给何时释放",
+      "period": "2027 年展望 · 行业预测",
+      "evidence": "TrendForce 预计 DRAM 在 2027 年仍偏紧，NAND 在下半年可能趋于宽松。美光 6 月则预计两者的紧张供需将延续至 2027 年之后；两方判断存在分歧。",
+      "why": "供需缺口收窄可能削弱定价。应分别跟踪 DRAM、NAND 的位元供需、制程增产和新厂实际出货；投资金额不等于当期新增产量。",
+      "review": "新增产量持续追上需求，且库存同步增加时复核。不能仅凭扩产公告就认定过剩。",
+      "source_ids": [
+        "supply",
+        "dram",
+        "remarks"
+      ],
+      "new": true
+    },
+    {
+      "id": "contract",
+      "name": "行业合同价",
+      "group": "行业周期",
+      "state": "ok",
+      "value": "DRAM 预计 +13–18%",
+      "takeaway": "仍看涨 · 涨幅放缓",
+      "period": "2026 自然年 Q3 环比 · 预测",
+      "evidence": "TrendForce 预计普通型 DRAM 合同价环比上涨 13%–18%，NAND 上涨 10%–15%。DRAM 预测见 9 月 7 日报告；NAND 此处沿用 7 月 3 日预测。",
+      "why": "价格预期仍支撑景气，但尚不是实现值。现货、行业合同价和美光自身售价需分别观察。",
+      "review": "后续预测下修，并获得实际合同价转弱的证据时复核；单周现货波动先观察。",
+      "source_ids": [
+        "dram",
+        "contract"
+      ],
+      "new": false
+    },
+    {
+      "id": "asp",
+      "name": "内存平均售价",
+      "group": "行业周期",
+      "state": "ok",
+      "value": "DRAM 涨幅约六成出头",
+      "takeaway": "上涨偏利好 · 支撑盈利",
+      "period": "美光 FY2026 Q3 环比 · 实际",
+      "evidence": "美光 DRAM 平均售价环比上涨 60% 出头，NAND 约 85%；公司披露的是大致幅度。",
+      "why": "涨价有利于收入和毛利，但产品组合也影响平均售价，不能据此推断终端销量同步增长。",
+      "review": "同类产品售价转跌，且降本未能抵消影响时复核。",
+      "source_ids": [
+        "deck"
+      ],
+      "new": false
+    },
+    {
+      "id": "volume",
+      "name": "出货量与价格",
+      "group": "行业周期",
+      "state": "ok",
+      "value": "量价同步上升",
+      "takeaway": "偏利好 · 收入有量价支撑",
+      "period": "美光 FY2026 Q3 环比 · 实际",
+      "evidence": "DRAM 位元出货量环比增长低个位数，NAND 增长中个位数，售价同时上涨。",
+      "why": "量价齐升有助于收入增长，但当季价格贡献更大；厂家出货不等于终端消耗。",
+      "review": "出货指引下调、实际出货减少，或量价同时走弱时复核。",
+      "source_ids": [
+        "deck"
+      ],
+      "new": false
+    },
+    {
+      "id": "inventory",
+      "name": "库存与客户拉货",
+      "group": "行业周期",
+      "state": "ok",
+      "value": "产成品环比下降 23.5%",
+      "takeaway": "成品积压减轻 · 客户库存仍需跟踪",
+      "period": "2026-02-26 → 05-28 · 实际",
+      "evidence": "产成品库存由 8.12 亿降至 6.21 亿美元；同期总库存由 82.67 亿升至 85.67 亿美元。期末库存天数为 120 天。",
+      "why": "成品下降通常有利于减少积压和资金占用。总库存、在制品及客户库存还要分开看；本次未取得统一口径的客户内存库存数据。",
+      "review": "客户库存增加并减少拉货，或成品库存与库存天数同时恶化时复核；先排除制造周期、成本和产品组合影响。",
+      "source_ids": [
+        "q3",
+        "q2",
+        "remarks"
+      ],
+      "new": false
+    },
+    {
+      "id": "demand",
+      "name": "终端需求质量",
+      "group": "行业周期",
+      "state": "watch",
+      "value": "AI 强，消费端偏弱",
+      "takeaway": "需求分化 · 留意提前囤货",
+      "period": "行业资料至 2026-09-16",
+      "evidence": "企业级 SSD 需求强劲；消费端疲弱，DDR5 询价放缓。TrendForce 的手机内存报告摘要还提到提前采购和买方库存增加。",
+      "why": "要看真实部署和消耗能否消化采购。云厂商总资本开支还包括建筑、电力等，不能直接等同于内存需求。",
+      "review": "客户延后部署或提货，同时降低内存采购预期时复核；客户总库存只作旁证。",
+      "source_ids": [
+        "spot",
+        "ssd",
+        "mobile"
+      ],
+      "new": false
+    },
+    {
+      "id": "orders",
+      "name": "长单质量与兑现",
+      "group": "公司经营",
+      "state": "ok",
+      "value": "已签 16 份战略长单",
+      "takeaway": "增强收入可见性 · 继续核对履约",
+      "period": "截至 2026-06-24 · 公司披露",
+      "evidence": "协议含最低采购承诺，多数为固定价或设价格上下限。财季末 RPO 约 50 亿美元；计入季后已签协议，约 1,000 亿美元，属于多年待履约金额。",
+      "why": "最低量价可增强可见性，价格上限也可能限制上涨收益。应跟踪交付和保证金实际到账；RPO 因正常交付而下降不代表订单流失。",
+      "review": "交付延期、合同重新议价或保证金未按约到账时复核。多年 RPO 不能直接当作下一年收入。",
+      "source_ids": [
+        "q3_orders",
+        "orders"
+      ],
+      "new": true
+    },
+    {
+      "id": "hbm",
+      "name": "HBM 竞争力与交付",
+      "group": "公司经营",
+      "state": "unknown",
+      "value": "HBM4 已出货，份额待核实",
+      "takeaway": "跟踪产品换代 · 不能只看份额",
+      "period": "公司披露 06-24 · 份额转引 09-03",
+      "evidence": "美光披露 HBM4 已实现超过 10 亿美元收入。Financial News 转引的 HBM 收入份额为自然年 Q1 的 21% → Q2 的 18%；原始表格仍未核实。",
+      "why": "交付、认证、良率和盈利共同决定竞争力。份额下降不必然意味着收入下降；未公开的良率不做数字估算。",
+      "review": "新品认证或量产延期、良率进度低于公司计划，或收入持续落后行业时复核。",
+      "source_ids": [
+        "hbm_product",
+        "hbm_secondary",
+        "hbm"
+      ],
+      "new": false
+    },
+    {
+      "id": "capex",
+      "name": "资本开支纪律",
+      "group": "公司经营",
+      "state": "watch",
+      "value": "下季净开支预计约 100 亿美元",
+      "takeaway": "扩产加速 · 留意后续回报",
+      "period": "FY2026 Q3 实际 / Q4 与 FY2027 预测",
+      "evidence": "FQ3 净资本开支为 70.84 亿美元；管理层预计 FQ4 约 100 亿美元，FY2027 季度开支还将更高。",
+      "why": "当前现金流支持投资，但新增产能需要未来需求消化。应将实际投产、利用率与长单覆盖一起看。",
+      "review": "资本开支上调而需求或订单下调，或新产能利用率持续低于计划时复核。",
+      "source_ids": [
+        "earnings",
+        "remarks"
+      ],
+      "new": false
+    },
+    {
+      "id": "margin",
+      "name": "毛利率",
+      "group": "公司经营",
+      "state": "ok",
+      "value": "74.9% → 84.9%",
+      "takeaway": "提升 10 个百分点 · 盈利改善",
+      "period": "美光 FY2026 Q2 → Q3 · 实际",
+      "evidence": "非 GAAP 毛利率从 74.9% 升至 84.9%，两者都是已公布实际值。",
+      "why": "每单位收入留下的毛利增加，仍需分辨售价、成本和产品组合的贡献。",
+      "review": "毛利率实际值低于公司指引，并伴随售价或成本持续恶化时复核。",
+      "source_ids": [
+        "earnings"
+      ],
+      "new": false
+    },
+    {
+      "id": "cash",
+      "name": "自由现金流",
+      "group": "公司经营",
+      "state": "ok",
+      "value": "69.0 → 183.0 亿美元",
+      "takeaway": "明显增长 · 投资后现金更充裕",
+      "period": "美光 FY2026 Q2 → Q3 · 实际",
+      "evidence": "调整后自由现金流由 68.99 亿美元增至 183.04 亿美元，为经营现金流减净资本开支，包含政府补助等调整。",
+      "why": "投资后仍有更多现金，资金承受力增强。需区分持续经营获现与补助、营运资金等阶段性影响。",
+      "review": "利润增长但经营现金流持续走弱，或扩产开始消耗现金储备时复核。",
+      "source_ids": [
+        "earnings"
+      ],
+      "new": false
+    },
+    {
+      "id": "valuation",
+      "name": "估值安全边际",
+      "group": "价格与回报",
+      "state": "pending",
+      "value": "当前价格需要多高的盈利？",
+      "takeaway": "填入假设 · 检查价格是否有余地",
+      "period": "手动试算 · 尚未形成估值结论",
+      "evidence": "用可持续的年度每股盈利（EPS）与合理市盈率（PE）估算价值，避免直接把旺季单季利润乘四。",
+      "why": "业务增长能否带来投资回报，还取决于买入价格及盈利持续性。下方试算使用你的假设。",
+      "review": "只有乐观盈利才能支持价格，或保守情景明显缺乏安全边际时，重新检查假设和买入价格。",
+      "source_ids": [
+        "normalization"
+      ],
+      "new": true
+    }
+  ]
+}
