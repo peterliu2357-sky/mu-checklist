@@ -2,3 +2,70 @@
 /* Fact-focused layout */
 .nav{grid-template-columns:repeat(4,1fr)}.data-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px}.data-heading h2{font-size:23px}.data-heading>span{font-size:12px;color:var(--muted)}.fact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.fact-card{padding:17px 15px;min-width:0}.fact-label{font-size:13px;font-weight:550;line-height:1.65;min-height:42px}.fact-card .current{font-size:25px;line-height:1.4}.fact-card .current.text-value{font-size:20px;letter-spacing:-.3px}.fact-card .previous{font-size:14px}.compact-numbers{gap:3px 6px;margin-top:5px}.compact-numbers .current{width:100%;display:block}.compact-numbers .unit{font-size:11px}.change-line{font-variant-numeric:tabular-nums;font-size:12px;color:#4c6355;margin-top:5px}.fact-card .change-line{min-height:21px}.tag-group{display:flex;flex-wrap:wrap;gap:4px;align-items:center}.row-top>.tag-group{justify-content:flex-end;max-width:48%;flex-shrink:0}.fact-card>.tag-group{margin-top:9px}.basis{font-size:10px;line-height:1.7;border:1px solid #e0e6dd;border-radius:4px;padding:0 5px;color:#5b6d61}.basis.proxy,.basis.secondary{background:#fff7e9;border-color:#f0ddbc;color:#7c601e}.basis.calculated{background:#f2f5f8;color:#526778}.basis.unavailable{color:#7a807a}.fact-card .source-links{gap:0 8px;margin-top:9px}.fact-card .source-links a{font-size:11px}.detail-link{font-size:11px;display:inline-flex;align-items:center;min-height:36px;margin-top:4px;color:var(--muted)}.all-data{display:block;text-align:center;border:1px solid var(--line);border-radius:11px;padding:13px;margin-top:13px;font-size:13px;min-height:48px}.definition{font-size:13px;color:var(--muted);line-height:1.8;margin-top:9px}.metric-top{padding-bottom:18px}.metric-top h3{font-size:19px}.source-location{font-size:11px;line-height:1.7;color:#768279;margin-top:3px}.evidence-row .row-note{font-size:12px}.interpretation{background:#f8f9f5;border-top:1px solid var(--line);padding:17px 21px}.interpretation h4{font-size:11px;font-weight:600;color:var(--muted);margin-bottom:5px}.interpretation p{font-size:13px;line-height:1.85;color:#506457}.guidance-card .evidence-row:first-child{border-top:0}.quote-line{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px 14px;font-size:11px;color:var(--muted);border-top:1px solid var(--line);margin-top:22px;padding-top:16px}.quote-line strong{color:var(--ink);font-size:16px}.provenance-key{font-size:13px;color:var(--muted);line-height:1.9}.provenance-key p{margin:7px 0}.review ul{margin-bottom:7px}.hero h2{text-wrap:balance}@media(min-width:700px){.fact-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.fact-card{padding:18px 16px}.fact-label{font-size:13px}.interpretation{padding:18px 27px}}@media(max-width:359px){.fact-card{padding:14px 11px}.fact-card .current{font-size:22px}.fact-card .current.text-value{font-size:18px}.fact-label{font-size:12px}.tag-group{gap:3px}.kind,.basis{font-size:9px}.interpretation{padding:15px 16px}}
 .guidance-row{padding:19px 21px;border-top:1px solid var(--line)}.guidance-row:first-child{border-top:0}.guidance-row h3{font-size:15px;font-weight:600}.guidance-row h3 .unit{font-size:11px;margin-left:7px}.quarter-comparison{display:grid;grid-template-columns:1fr 1fr 1.15fr;gap:8px;margin:15px 0 12px;font-variant-numeric:tabular-nums}.quarter-comparison>div{min-width:0;padding:8px 0}.quarter-comparison dt{font-size:11px;color:var(--muted);white-space:nowrap}.quarter-comparison dd{font-size:19px;font-weight:600;margin:5px 0 0;line-height:1.4;letter-spacing:-.5px;white-space:nowrap}.quarter-comparison .next-quarter{background:#f3f6ed;padding:8px;border-radius:8px}.guidance-change{font-size:12px;color:#596c5e;margin:0 0 8px}.guidance-change strong{font-weight:600;color:var(--ink)}.guidance-change span{font-size:11px;color:var(--muted)}@media(max-width:359px){.guidance-row{padding:16px}.quarter-comparison{gap:5px}.quarter-comparison dd{font-size:16px}.quarter-comparison .next-quarter{padding:8px 5px}}
+
+/* Industry participants: reported financials and dated management outlook. */
+.nav{grid-template-columns:repeat(5,minmax(0,1fr))}
+.ecosystem-tabs{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:5px;background:#e9ede3;border-radius:12px;margin:19px 0 12px}
+.ecosystem-tabs button{border:0;background:transparent;color:var(--muted);border-radius:8px;min-height:44px;padding:8px 5px;font-size:13px;font-weight:600}
+.ecosystem-tabs button[aria-pressed=true]{background:white;color:var(--ink);box-shadow:0 1px 4px #172b2712}
+.ecosystem-tabs button span{font-size:10px;font-weight:500;margin-left:6px;color:var(--muted)}
+.ecosystem-group[hidden]{display:none!important}
+.group-description{font-size:12px;color:var(--muted);line-height:1.8;margin:0 0 9px}
+.company-jumps{display:flex;flex-wrap:wrap;gap:4px 8px;margin:0 0 15px}
+.company-jumps a{display:inline-flex;align-items:center;min-height:40px;padding:5px 10px;border:1px solid var(--line);background:#fafbf7;border-radius:8px;font-size:11px}
+.partner-card{margin-bottom:20px;scroll-margin-top:82px}
+.partner-header{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:21px 20px 0}
+.partner-header h3{font-size:20px;overflow-wrap:anywhere;line-height:1.5}
+.partner-role{font-size:10px;letter-spacing:.4px;color:var(--muted);margin-bottom:4px}
+.partner-ticker{font-size:10px;letter-spacing:.5px;white-space:nowrap;color:var(--green);background:var(--green-bg);padding:3px 7px;border-radius:5px}
+.partner-date{font-size:10px;color:var(--muted);margin:8px 20px 0}
+.partner-scope{font-size:12px;color:#647267;line-height:1.8;margin:8px 20px 16px}
+.partner-facts{padding:0 20px 12px}
+.partner-facts>h4{font-size:13px;display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:5px 0 9px}
+.partner-facts>h4>span{font-size:10px;font-weight:400;color:var(--muted)}
+.partner-table{border-collapse:collapse;table-layout:fixed;width:100%;font-variant-numeric:tabular-nums}
+.partner-table thead th{border-block:1px solid var(--line);font-weight:500;padding:10px 0;font-size:11px;color:var(--muted);text-align:right;vertical-align:top}
+.partner-table th:first-child{width:42%;text-align:left;padding-right:10px}
+.partner-table th:nth-child(2){width:30%}
+.partner-table th:nth-child(3){width:28%}
+.partner-table small{display:block;font-size:10px;line-height:1.7;font-weight:400;color:var(--muted);margin-top:3px}
+.partner-table thead small{font-size:9px}
+.partner-table tbody th,.partner-table td{padding:12px 0;border-bottom:1px solid #edf0e8;vertical-align:top;text-align:right;font-size:15px}
+.partner-table tbody th{font-size:12px;font-weight:500;line-height:1.7}
+.partner-table tbody th a{display:block;color:var(--ink);text-decoration:none}
+.partner-table tbody th a:hover{text-decoration:underline}
+.partner-table tbody th a span{color:var(--green);font-size:10px}
+.partner-table td strong{font-size:16px;font-weight:650;white-space:nowrap;letter-spacing:-.4px}
+.partner-table .partner-previous{color:#768179;font-size:14px;white-space:nowrap}
+.partner-table .partner-change{font-size:10px;color:#526559;line-height:1.65;overflow-wrap:anywhere}
+.partner-table tbody tr:last-child th,.partner-table tbody tr:last-child td{border-bottom:0}
+.partner-outlook{background:#f8f7ef;border-top:1px solid #e8e6d8}
+.partner-outlook>summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:54px;padding:13px 20px;font-size:13px;font-weight:600;color:#43594c}
+.partner-outlook>summary::-webkit-details-marker{display:none}
+.partner-outlook>summary small{font-size:10px;font-weight:400;margin-left:6px;color:var(--muted)}
+.disclosure-arrow{font-size:18px;font-weight:400;line-height:1;transition:transform .15s}
+.partner-outlook[open] .disclosure-arrow{transform:rotate(180deg)}
+.outlook-intro{font-size:10px;color:var(--muted);padding:0 20px 11px}
+.partner-outlook-item{padding:16px 20px;border-top:1px solid #e8e6d8}
+.outlook-label{display:flex;align-items:center;flex-wrap:wrap;justify-content:space-between;gap:7px}
+.outlook-label h5{font-size:13px;font-weight:600;line-height:1.65;margin:0}
+.outlook-period{font-size:11px;color:var(--muted);margin:5px 0}
+.outlook-value{font-size:23px;line-height:1.45;letter-spacing:-.6px;font-weight:650;margin:8px 0;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.prior-guidance{font-size:11px;color:var(--muted);margin:4px 0 7px}
+.outlook-summary{font-size:13px;line-height:1.9;color:#40584a;margin:5px 0}
+.outlook-byline{font-size:10px;color:var(--muted);margin-top:10px}
+.partner-outlook-item .source-links{margin-top:4px}
+.partner-outlook-item .source-links a{font-size:10px}
+.partner-outlook-item .source-location{font-size:10px;color:#7c857c}
+.partner-notes{border-top:1px solid var(--line);background:#fff}
+.partner-notes>summary{padding:13px 20px;font-size:11px;min-height:44px;color:var(--muted)}
+.partner-notes>div{padding:0 20px 18px;font-size:11px;color:var(--muted);line-height:1.85}
+.partner-notes section+section{margin-top:13px;padding-top:12px;border-top:1px solid #edf0e8}
+.partner-notes h5{font-size:12px;color:#4a6152;margin:0 0 4px;font-weight:600}
+.partner-notes ul{padding-left:16px;margin:13px 0}
+.partner-notes .source-links{margin-top:4px}
+.partner-notes .source-links a{font-size:11px}
+.ecosystem-footnote{font-size:11px;color:var(--muted);line-height:1.9;margin:17px 0 0}
+@media(min-width:700px){.partner-header{padding:24px 27px 0}.partner-date,.partner-scope{margin-left:27px;margin-right:27px}.partner-facts{padding:0 27px 17px}.partner-table tbody th{font-size:14px}.partner-table td strong{font-size:20px}.partner-table .partner-previous{font-size:17px}.partner-table small{font-size:11px}.partner-outlook>summary,.partner-outlook-item{padding-left:27px;padding-right:27px}.outlook-intro{padding-left:27px}.partner-notes>summary,.partner-notes>div{padding-left:27px;padding-right:27px}}
+@media(max-width:359px){.nav button{font-size:12px}.partner-header{padding:18px 15px 0}.partner-header h3{font-size:18px}.partner-date,.partner-scope{margin-left:15px;margin-right:15px}.partner-date{font-size:9px}.partner-facts{padding:0 15px 10px}.partner-table th:first-child{width:42%;padding-right:5px}.partner-table td strong{font-size:14px}.partner-table .partner-previous{font-size:12px}.partner-table tbody th{font-size:11px}.partner-table small,.partner-table .partner-change{font-size:9px}.partner-table thead small{font-size:8px}.partner-outlook>summary,.partner-outlook-item{padding-left:15px;padding-right:15px}.outlook-intro{padding-left:15px}.outlook-value{font-size:21px}.partner-notes>summary,.partner-notes>div{padding-left:15px;padding-right:15px}.ecosystem-tabs button{font-size:12px}.company-jumps a{padding:5px 8px}}
+@media(prefers-reduced-motion:reduce){.disclosure-arrow{transition:none}}

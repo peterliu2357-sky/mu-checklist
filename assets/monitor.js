@@ -24,6 +24,44 @@
     const difference=row.unit==='pct'?row.current-latest.value:(row.current/latest.value-1)*100;
     return {period:latest.period,value:difference,unit:row.unit==='pct'?'个百分点':'%'};
   }
+  const partnerUnits={USDm:'亿美元',TWDb:'十亿新台币',KRWt:'万亿韩元',pct:'%'};
+  function partnerValue(value,unit,digits) {
+    if(!Number.isFinite(value)) return '—';
+    return num(unit==='USDm'?value/100:value,digits??(unit==='pct'?1:2));
+  }
+  function partnerChange(row) {
+    if(row.change) return row.change;
+    if(!Number.isFinite(row.current)||!Number.isFinite(row.previous)) return '';
+    const delta=row.current-row.previous,sign=delta>0?'+':delta<0?'−':'';
+    if(row.unit==='pct') return `${sign}${num(Math.abs(delta),1)} 个百分点`;
+    if(row.change_mode==='absolute'||row.previous<=0) return `${sign}${partnerValue(Math.abs(delta),row.unit,row.digits)} ${partnerUnits[row.unit]}`;
+    return `${sign}${num(Math.abs(delta/row.previous)*100,1)}%`;
+  }
+  function validateEcosystem(data) {
+    const e=data.ecosystem;
+    if(!e||!Number.isFinite(Date.parse(e.checked_at))||!Array.isArray(e.groups)||!Array.isArray(e.companies)||!e.companies.length) return false;
+    const groups=new Set(e.groups.map(g=>g.id)),ids=new Set();
+    const cited=r=>provenance[r.evidence_type]&&r.location&&Array.isArray(r.source_ids)&&r.source_ids.length&&r.source_ids.every(id=>/^https:\/\//.test(data.sources[id]?.url||''));
+    for(const c of e.companies) {
+      if(ids.has(c.id)||!groups.has(c.group)||!c.period||!c.previous_period||!c.period_end||!c.published_at||!Array.isArray(c.metrics)||!c.metrics.length||!Array.isArray(c.outlook)||!Array.isArray(c.notes)) return false;
+      ids.add(c.id);
+      const rowIds=new Set();
+      for(const r of c.metrics) {
+        if(rowIds.has(r.id)||!r.id||!r.label||!partnerUnits[r.unit]||!cited(r)||
+          !(Number.isFinite(r.current)||(r.current===null&&r.evidence_type==='unavailable'))||
+          !(Number.isFinite(r.previous)||r.previous===null)) return false;
+        rowIds.add(r.id);
+      }
+      const outlookIds=new Set();
+      for(const g of c.outlook) {
+        if(outlookIds.has(g.id)||!g.id||!cited(g)||!g.period||!g.speaker||!Number.isFinite(Date.parse(g.issued_at))||
+          !['公司指引','管理层展望','管理层观察','公司计划'].includes(g.kind)||
+          !['numeric','text'].includes(g.type)||(g.type==='numeric'?!g.value:!g.summary)) return false;
+        outlookIds.add(g.id);
+      }
+    }
+    return true;
+  }
   function freshness(data,now=Date.now()) {
     const warnings=[],last=Date.parse(data.last_successful_check_at);
     if(!Number.isFinite(last)||now-last>36*3600000) warnings.push('超过 36 小时未完成数据核查。当前显示最近保存的资料，请留意每项日期。');
@@ -45,11 +83,11 @@
       (g.tolerance==null||(Number.isFinite(g.tolerance)&&g.tolerance>=0))&&
       g.actuals?.length===2&&guidanceActuals(g,data).every(a=>Number.isFinite(a.value)&&a.unit===g.unit)
     )) return false;
-    return data.overview.fact_cards.every(c=>data.metrics.find(m=>m.id===c.metric_id)?.rows.some(r=>r.label===c.row_label));
+    return validateEcosystem(data)&&data.overview.fact_cards.every(c=>data.metrics.find(m=>m.id===c.metric_id)?.rows.some(r=>r.label===c.row_label));
   }
-  if(typeof module!=='undefined'&&module.exports) module.exports={rowChange,freshness,validate,guidanceActuals,guidanceComparison};
+  if(typeof module!=='undefined'&&module.exports) module.exports={rowChange,freshness,validate,guidanceActuals,guidanceComparison,partnerValue,partnerChange,validateEcosystem};
   if(typeof document==='undefined') return;
-  let data;
+  let data,ecosystemGroup='cloud';
   function date(value,detailed=false) {
     if(!value) return '未标注';
     if(!value.includes('T')) return value;
@@ -102,20 +140,44 @@
     const changeText=change?`${row.approximate?'约 ':''}${change.value>=0?'+':'−'}${num(Math.abs(change.value),1)}${change.unit==='%'?'%':' 个百分点'}`:'';
     return `<article class="guidance-row"><div class="row-top"><h3>${esc(row.label)}<span class="unit">${esc(unitName(row.unit))}</span></h3><span class="micro">${esc(row.period.match(/^FY\d+/)?.[0]||'')}</span></div><dl class="quarter-comparison">${actuals.map(a=>`<div><dt>${esc(quarter(a.period))} 实际</dt><dd>${formatted(a.value,row.unit)}</dd></div>`).join('')}<div class="next-quarter"><dt>${esc(quarter(row.period))} 指引</dt><dd>${forecast}</dd></div></dl>${change?`<p class="guidance-change">较 ${esc(quarter(change.period))} 实际：<strong>${changeText}</strong>${row.tolerance!=null?' <span>（指引中值）</span>':''}</p>`:''}<div class="source-links">${sources.map(id=>sourceLink(id)).join('')}</div></article>`;
   }
+  function partnerMetric(row,company) {
+    const source=data.sources[row.source_ids[0]],change=partnerChange(row);
+    return `<tr><th scope="row"><a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer" aria-label="${esc(company.name+' '+row.label+' 数据来源')}" title="${esc(row.location)}">${esc(row.label)} <span aria-hidden="true">↗</span></a><small>${esc(partnerUnits[row.unit])}${row.evidence_type!=='direct'?` · ${provenance[row.evidence_type]}`:''}</small></th><td><strong>${partnerValue(row.current,row.unit,row.digits)}</strong>${change?`<small class="partner-change">${esc(change)}</small>`:''}</td><td class="partner-previous">${partnerValue(row.previous,row.unit,row.digits)}</td></tr>`;
+  }
+  function partnerOutlook(item) {
+    return `<div class="partner-outlook-item ${item.type==='numeric'?'numeric-outlook':''}"><div class="outlook-label"><h5>${esc(item.label)}</h5><span class="kind forecast">${esc(item.kind)}</span>${item.evidence_type!=='direct'?`<span class="basis ${esc(item.evidence_type)}">${provenance[item.evidence_type]}</span>`:''}</div><p class="outlook-period">${esc(item.period)}</p>${item.value?`<p class="outlook-value">${esc(item.value)}</p>`:''}${item.prior_guidance?`<p class="prior-guidance">前次：${esc(item.prior_guidance)}</p>`:''}${item.summary?`<p class="outlook-summary">${esc(item.summary)}</p>`:''}<p class="outlook-byline">${esc(item.speaker)} · ${esc(item.issued_at)}</p><div class="source-links">${item.source_ids.map(id=>sourceLink(id)).join('')}</div><p class="source-location">${esc(item.location)}</p></div>`;
+  }
+  function partnerCard(company) {
+    return `<article class="card partner-card" id="partner-${esc(company.id)}"><header class="partner-header"><div><p class="partner-role">${esc(company.role)}</p><h3>${esc(company.name)}</h3></div><span class="partner-ticker">${esc(company.ticker)}</span></header><p class="partner-date">财季截至 ${esc(company.period_end)} · 发布 ${esc(company.published_at)}</p><p class="partner-scope">${esc(company.scope)}</p><div class="partner-facts"><h4>财报实绩<span>同比对照</span></h4><table class="partner-table"><caption class="sr-only">${esc(company.name)} ${esc(company.period)} 财报与上年同期比较，变化为同比</caption><thead><tr><th scope="col">指标 / 单位</th><th scope="col">本期<small>${esc(company.period)}</small></th><th scope="col">上年同期<small>${esc(company.previous_period)}</small></th></tr></thead><tbody>${company.metrics.map(r=>partnerMetric(r,company)).join('')}</tbody></table></div><details class="partner-outlook"><summary><span>指引与展望 <small>${company.outlook.length} 条</small></span><span class="disclosure-arrow" aria-hidden="true">⌄</span></summary><p class="outlook-intro">按披露时点记录 · 中文摘要</p>${company.outlook.map(partnerOutlook).join('')}</details><details class="partner-notes"><summary>数据口径与来源</summary><div>${company.metrics.map(r=>`<section><h5>${esc(r.label)}</h5>${r.note?`<p>${esc(r.note)}</p>`:''}<p>${esc(r.location)}</p><div class="source-links">${r.source_ids.map(id=>sourceLink(id)).join('')}</div></section>`).join('')}${company.notes.length?`<ul>${company.notes.map(n=>`<li>${esc(n)}</li>`).join('')}</ul>`:''}<p class="micro">核查 ${esc(company.checked_at)} UTC</p></div></details></article>`;
+  }
+  function ecosystem() {
+    const e=data.ecosystem;
+    return `<div class="data-heading"><h2>产业链跟踪</h2><span>${e.companies.length} 家公司</span></div><p class="section-intro">客户投入、算力建设与存储供给。</p><div class="ecosystem-tabs" role="group" aria-label="产业链分组">${e.groups.map(g=>`<button type="button" data-ecosystem-group="${esc(g.id)}" aria-pressed="${g.id===ecosystemGroup}">${esc(g.title)}<span>${e.companies.filter(c=>c.group===g.id).length}</span></button>`).join('')}</div>${e.groups.map(g=>`<section class="ecosystem-group" id="ecosystem-${esc(g.id)}" aria-label="${esc(g.title)}" ${g.id===ecosystemGroup?'':'hidden'}><p class="group-description">${esc(g.description)}</p><nav class="company-jumps" aria-label="${esc(g.title)}公司跳转">${e.companies.filter(c=>c.group===g.id).map(c=>`<a href="#partner-${esc(c.id)}" data-partner="${esc(c.id)}">${esc(c.name.split(' / ')[0])}</a>`).join('')}</nav>${e.companies.filter(c=>c.group===g.id).map(partnerCard).join('')}</section>`).join('')}<p class="ecosystem-footnote">资本开支涵盖设备、网络与厂房等投入；内存采购未单独披露。产业链资料核查 ${checkDate(e.checked_at)}。</p>`;
+  }
+  function selectEcosystemGroup(group) {
+    if(!data.ecosystem.groups.some(g=>g.id===group)) return;
+    ecosystemGroup=group;
+    document.querySelectorAll('.ecosystem-group').forEach(el=>el.hidden=el.id!==`ecosystem-${group}`);
+    document.querySelectorAll('[data-ecosystem-group]').forEach(el=>el.setAttribute('aria-pressed',String(el.dataset.ecosystemGroup===group)));
+  }
   function overview() {
-    return `<div class="data-heading"><h2>关键数据</h2><span>${esc(data.financial_period)}</span></div><p class="section-intro">财季截至 ${esc(data.financial_as_of)} · 发布 ${esc(data.financial_published_at)}</p><div class="fact-grid">${data.overview.fact_cards.map(factCard).join('')}</div><a class="all-data" href="#business" data-panel-link="business">查看全部公司数据 →</a><div class="section-heading"><h2>下一季公司指引</h2><span class="small">预测 · 尚未实现</span></div><section class="card guidance-card">${data.guidance.map(guidanceRow).join('')}</section><div class="section-heading"><h2>披露日程</h2></div>${data.events.map(e=>`<div class="card event"><div class="date">${esc(e.date)}</div><h3>${esc(e.title)}</h3><p>${date(data.next_earnings_at,true)}</p><div class="source-links">${sourceLink(e.source_id)}</div></div>`).join('')}<div class="section-heading"><h2>尚未取得的数据</h2></div><ul class="gap-list">${data.overview.gaps.map(g=>`<li>${esc(g)}</li>`).join('')}</ul><div class="quote-line"><span>MU 最近常规收盘</span><strong>$${num(data.quote.price)}</strong><span>${date(data.quote.as_of)}</span>${sourceLink(data.quote.source_id)}</div>`;
+    return `<div class="data-heading"><h2>关键数据</h2><span>${esc(data.financial_period)}</span></div><p class="section-intro">财季截至 ${esc(data.financial_as_of)} · 发布 ${esc(data.financial_published_at)}</p><div class="fact-grid">${data.overview.fact_cards.map(factCard).join('')}</div><a class="all-data" href="#business" data-panel-link="business">查看全部公司数据 →</a><div class="section-heading"><h2>下一季公司指引</h2><span class="small">预测 · 尚未实现</span></div><section class="card guidance-card">${data.guidance.map(guidanceRow).join('')}</section><a class="all-data" href="#ecosystem" data-panel-link="ecosystem">查看产业链数据与指引 →</a><div class="section-heading"><h2>披露日程</h2></div>${data.events.map(e=>`<div class="card event"><div class="date">${esc(e.date)}</div><h3>${esc(e.title)}</h3><p>${date(data.next_earnings_at,true)}</p><div class="source-links">${sourceLink(e.source_id)}</div></div>`).join('')}<div class="section-heading"><h2>尚未取得的数据</h2></div><ul class="gap-list">${data.overview.gaps.map(g=>`<li>${esc(g)}</li>`).join('')}</ul><div class="quote-line"><span>MU 最近常规收盘</span><strong>$${num(data.quote.price)}</strong><span>${date(data.quote.as_of)}</span>${sourceLink(data.quote.source_id)}</div>`;
   }
   function updates() {
-    return `<section class="card update-status"><div class="line"><span>最近完整数据核查</span><strong>${checkDate(data.last_successful_check_at,true)}</strong></div><div class="line"><span>最近引用审校</span><strong>${checkDate(data.last_source_audit_at,true)}</strong></div><div class="line"><span>财报覆盖期间</span><strong>${esc(data.financial_period)}<br><span>截至 ${esc(data.financial_as_of)}</span></strong></div><div class="line"><span>持续核查</span><strong>${data.automation.enabled?'每日核查已启用':'尚未启用'}</strong></div><p>${esc(data.automation.note)} 核查日不等于原始发布日期，引用审校也不等于行情更新。核查时间用 UTC；交易与活动时间用 ET。</p><button class="button" id="refresh-data" style="margin-top:14px">载入最新记录</button><p id="refresh-state" role="status"></p></section><div class="section-heading"><h2>证据标记</h2></div><div class="provenance-key"><p><b>直接披露</b>：来源明确给出这个指标。</p><p><b>本页计算</b>：由已列明输入及公式计算。</p><p><b>间接指标</b>：用于侧面观察另一变量，不能替代其直接数据。</p><p><b>媒体转引</b>：已核对转引报道，未读取原始表格。</p><p><b>未取得</b>：暂无可核实数值。</p><p>“直接披露”标明证据来源；是否为实际、估计或预测，以旁边的类型标签为准。</p></div><div class="section-heading"><h2>数据来源</h2></div><div class="source-directory">${Object.entries(data.sources).map(([id,s])=>`<div class="source-entry">${sourceLink(id,true)}<p>${esc(s.locator||'')}<br>${esc(s.type)} · 发布 ${esc(s.published_at||'未标注')} · 核查 ${esc(s.checked_at)} UTC</p></div>`).join('')}</div><div class="section-heading"><h2>修订记录</h2></div><ol class="timeline">${data.changes.slice(0,5).map(c=>`<li><time>${esc(c.date)}</time><h3>${esc(c.title)}</h3><p>${esc(c.text)}</p></li>`).join('')}</ol><div class="section-heading"><h2>核查记录</h2></div><ol class="timeline">${data.check_log.slice(0,7).map(c=>`<li><time>${checkDate(c.at,true)} · ${c.scope==='source_audit'?'引用审校':c.status==='success'?'数据核查完成':c.status==='failed'?'核查失败':'部分完成'}</time><p>${esc(c.text)}</p></li>`).join('')}</ol><div class="section-heading"><h2>口径说明</h2></div><ul class="method">${data.methodology.map(s=>`<li>${esc(s)}</li>`).join('')}</ul>`;
+    return `<section class="card update-status"><div class="line"><span>最近完整数据核查</span><strong>${checkDate(data.last_successful_check_at,true)}</strong></div><div class="line"><span>最近引用审校</span><strong>${checkDate(data.last_source_audit_at,true)}</strong></div><div class="line"><span>财报覆盖期间</span><strong>${esc(data.financial_period)}<br><span>截至 ${esc(data.financial_as_of)}</span></strong></div><div class="line"><span>持续核查</span><strong>${data.automation.enabled?'每日核查已启用':'尚未启用'}</strong></div><p>${esc(data.automation.note)} 核查日不等于原始发布日期，引用审校也不等于行情更新。核查时间用 UTC；交易与活动时间用 ET。</p><button class="button" id="refresh-data" style="margin-top:14px">载入最新记录</button><p id="refresh-state" role="status"></p></section><div class="section-heading"><h2>证据标记</h2></div><div class="provenance-key"><p><b>直接披露</b>：来源明确给出这个指标。</p><p><b>本页计算</b>：由已列明输入及公式计算。</p><p><b>间接指标</b>：用于侧面观察另一变量，不能替代其直接数据。</p><p><b>媒体转引</b>：已核对转引报道，未读取原始表格。</p><p><b>未取得</b>：暂无可核实数值。</p><p>“直接披露”标明证据来源；是否为实际、估计或预测，以旁边的类型标签为准。</p></div><div class="section-heading"><h2>数据来源</h2></div><div class="source-directory">${Object.entries(data.sources).map(([id,s])=>`<div class="source-entry">${sourceLink(id,true)}<p>${esc(s.locator||'')}<br>${esc(s.type)} · 发布 ${esc(s.published_at||'未标注')} · 核查 ${esc(s.checked_at)} UTC</p></div>`).join('')}</div><div class="section-heading"><h2>修订记录</h2></div><ol class="timeline">${data.changes.slice(0,5).map(c=>`<li><time>${esc(c.date)}</time><h3>${esc(c.title)}</h3><p>${esc(c.text)}</p></li>`).join('')}</ol><div class="section-heading"><h2>核查记录</h2></div><ol class="timeline">${data.check_log.slice(0,7).map(c=>`<li><time>${checkDate(c.at,true)} · ${c.scope==='ecosystem'?'产业链核查':c.scope==='source_audit'?'引用审校':c.status==='success'?'数据核查完成':c.status==='failed'?'核查失败':'部分完成'}</time><p>${esc(c.text)}</p></li>`).join('')}</ol><div class="section-heading"><h2>口径说明</h2></div><ul class="method">${data.methodology.map(s=>`<li>${esc(s)}</li>`).join('')}</ul>`;
   }
   function show(panel,updateHash=true) {
-    if(!['overview','business','industry','updates'].includes(panel)) panel='overview';
+    if(!['overview','business','industry','ecosystem','updates'].includes(panel)) panel='overview';
     document.querySelectorAll('.panel').forEach(el=>el.hidden=el.id!==`panel-${panel}`);
     document.querySelectorAll('.nav button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.panel===panel)));
     if(updateHash) history.replaceState(null,'',`#${panel}`);
   }
   function navigateHash(scroll=true) {
     const key=location.hash.slice(1),metric=data.metrics.find(m=>m.id===(key==='valuation'?'revenue':key));
+    const partner=data.ecosystem.companies.find(c=>`partner-${c.id}`===key);
+    if(partner) {show('ecosystem',false);selectEcosystemGroup(partner.group);if(scroll)document.getElementById(key)?.scrollIntoView({behavior:'instant',block:'start'});return;}
+    const group=data.ecosystem.groups.find(g=>`ecosystem-${g.id}`===key);
+    if(group) {show('ecosystem',false);selectEcosystemGroup(group.id);return;}
     show(metric?metric.category:key,false);
     if(scroll&&metric) document.getElementById(metric.id)?.scrollIntoView({behavior:'instant',block:'start'});
   }
@@ -127,6 +189,7 @@
     document.getElementById('panel-overview').innerHTML=overview();
     for(const category of ['business','industry']) document.getElementById(`panel-${category}`).innerHTML=`<h2>${category==='business'?'公司数据':'行业数据'}</h2><p class="section-intro">${category==='business'?'财务金额为亿美元；FQ 为美光财季。各项附来源和原文位置。':'行业估计、报价与预测分别标识；用于观察终端消耗的间接指标单独说明。'}</p>${data.metrics.map((m,i)=>m.category===category?metricCard(m,i):'').join('')}`;
     document.getElementById('panel-updates').innerHTML=updates();
+    document.getElementById('panel-ecosystem').innerHTML=ecosystem();
     document.getElementById('refresh-data').addEventListener('click',()=>load(true));
     navigateHash(false);document.getElementById('loading').hidden=true;
   }
@@ -147,6 +210,10 @@
   }
   document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>{show(b.dataset.panel);window.scrollTo({top:0,behavior:'instant'});}));
   document.addEventListener('click',event=>{
+    const groupButton=event.target.closest('[data-ecosystem-group]');
+    if(groupButton){selectEcosystemGroup(groupButton.dataset.ecosystemGroup);history.replaceState(null,'',`#ecosystem-${ecosystemGroup}`);return;}
+    const partnerLink=event.target.closest('[data-partner]');
+    if(partnerLink){event.preventDefault();history.replaceState(null,'',`#partner-${partnerLink.dataset.partner}`);navigateHash();return;}
     const link=event.target.closest('[data-metric],[data-panel-link]');if(!link)return;
     event.preventDefault();history.replaceState(null,'',`#${link.dataset.metric||link.dataset.panelLink}`);navigateHash();
     if(link.dataset.panelLink) window.scrollTo({top:0,behavior:'instant'});

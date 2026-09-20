@@ -22,6 +22,7 @@
 1. 读取 GitHub 最新 main、本文和当前数据，检查其他人是否有变动。
 2. 核查 Micron 投资者关系的最新财报、10-Q/10-K、业绩材料、管理层说明、产品信息和财报日程；公司指标优先使用直接披露。
 3. 核查 TrendForce 等行业原始报告；媒体转引与公开摘要必须保留标记，不得声称已经读取付费全文或原始表格。
+   同时核查 `ecosystem.companies` 九家公司最新财报、指引及投资者关系更新。无新报告时保留原财季与发布日期；只有实际重新读取后才推进核查日期。
 4. 更新最近常规交易收盘与前一交易日收盘；保留交易日期、时区和价格口径，不混盘后价。发生拆股时先统一历史价格及 EPS 口径。
 5. 逐行核对“指标名称—值—单位—期间—来源—原文位置”。链接到对应 PDF 页或具体章节，不以首页、相邻收入表替代出处。每个链接必须能解释其在该行支持的输入。
 6. 补齐前期同口径数值、计算输入和公式；缺失用 null，定性幅度保留定性。实际、计划、预测、机构估计分开。
@@ -95,3 +96,37 @@
 - `actuals` 恰好两项，按时间从旧到新，以 `{period, metric_id, row_label, field}` 引用 metrics 行的 previous / current，不重复手填数值。切换财季时同步期间及引用。
 - 变化由前端以指引中值对比最近一季实际自动计算；毛利率使用百分点，收入和 EPS 使用百分比。此为指引比较，不标为已实现增长。
 - 精简页面文案不删除 direct / calculated / proxy / secondary 等证据标记。
+
+## 产业链数据 `ecosystem`
+
+schema_version 仍为 2，新增必填 `ecosystem`；已有美光指标与财季对照保持独立。
+
+- `checked_at`：产业链这一部分的实际核查时间。仅新增或更新产业链时，不推进美光、行业价格、行情的完整核查日期。`check_log` 使用 `scope=ecosystem`。
+- `groups`：`cloud`（云与 AI 客户）与 `chips`（芯片与存储）。Meta 为 AI 基础设施买家。
+- 公司稳定 ID：`microsoft`、`amazon`、`alphabet`、`oracle`、`meta`、`nvidia`、`tsmc`、`samsung`、`skhynix`。
+- 每家公司保留 `name`、`ticker`、`group`、`role`、`period`、`previous_period`、`period_end`、`published_at`、`checked_at`、`scope`、`metrics`、`outlook`、`notes`。本期及上年同期用各公司自己的财年，不能套用美光财年。
+
+### 财报实绩 `metrics`
+
+每行具有稳定 `id`、`label`、`current`、`previous`、`unit`、`source_ids`、`location`、`note`、`evidence_type`。原始数字存入数据，不把金额与涨幅写成展示字符串。前端默认显示本期、上年同期与同比变化。
+
+- `USDm` 存百万美元，展示为亿美元；`TWDb` 存十亿新台币；`KRWt` 存万亿韩元；`pct` 存百分数。保持原币，不用汇率换算制造可比性。
+- 可选 `digits` 控制展示精度。`change` 只用于明确标为报告值的同比等例外；如 NVIDIA 数据中心摘要采用舍入金额、同比用报告值。
+- 毛利率、营业利润率的变化用百分点。亏损或零基数用金额变化；低且舍入的基数可用 `change_mode=absolute`，例如三星 DS 利润。
+- 每个输入均需对应来源。两份报告提供本期与同期时，在 `source_ids` 同时列出，PDF 链接指向各自相应页。来源定位在展开区可见，表格指标名称可直接打开原文。
+- AWS / Google Cloud 可用云分部营业利润。Microsoft 使用 Intelligent Cloud（含 Azure、服务器等）；Oracle OCI 没有独立利润时只标集团营业利润；三星 DS 利润不能改标为 Memory 利润。
+- 云厂商资本开支与现金流采用集团口径。现金购置 PP&E、净资本开支、融资租赁确认额、本金支付、供应商融资与客户预付款要分清。数字指引也必须写出所用口径。
+- 资本开支、云收入、GPU 收入与存储厂收入均非美光的直接内存采购量。不要由收入倒推位元量，不汇总为美光订单或市场供需缺口。
+
+### 指引与展望 `outlook`
+
+每条具有稳定 `id`、`type`（`numeric` / `text`）、`label`、`value`、`summary`、`prior_guidance`、`period`、`issued_at`、`speaker`、`kind`、`evidence_type`、`source_ids`、`location`。
+
+- `numeric` 的 `value` 保留来源的区间、约数和单位，例如“1,950–2,050 亿美元”；`text` 的 `value=null`，用短句 `summary` 忠实概括。
+- `kind` 仅使用公司指引、管理层展望、管理层观察、公司计划。已披露的当前观察和未来预测分清；不能把公司的观点写成本网站确认的事实。
+- `period` 为目标期间或观察时点，`issued_at` 为原披露日，`speaker` 为原文确认的人员或管理层角色。自然年与财年需明示。
+- `prior_guidance` 只比较同一目标期间、同一口径且有来源的前次指引。年度租赁口径变化不能标为实际投资削减。
+- 不加入本网站的股票判断、置信评分、买卖信号或红绿“利好利空”。文字默认折叠，数字实绩默认展开，手机可用分组和公司跳转。
+- 更新同一公司财报时同步实绩、前期、指引与口径，不把过期目标期留作当前展望。历史保存在 `data/history/`，不覆盖旧快照。
+
+新增验证：`validateEcosystem`、币种/单位换算、同比分母、亏损及零基数、百分点、引用完整性、分组与公司深链接、指引展开、320/390 px 无横向溢出。既有美光三季指引对照须继续有效。
