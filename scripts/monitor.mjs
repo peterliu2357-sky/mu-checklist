@@ -19,7 +19,7 @@ const report=issues=>{console.log(JSON.stringify({ok:issues.length===0,issues},n
 const runDir=()=>{const value=flag('run');if(!value)throw new Error('--run is required');const p=path.resolve(value);if(!p.startsWith(path.join(root,'.monitor')+path.sep))throw new Error('Runs must live inside .monitor/');return p;};
 
 try {
-  if(command==='help')console.log(`mu-checklist data pipeline\n\n  npm ci\n  npm run verify\n  npm test\n  npm run test:ui\n  npm run monitor -- plan --scope full --run .monitor/runs/example\n  npm run monitor -- fetch --run .monitor/runs/example --source SOURCE_ID\n  npm run monitor -- capture --run .monitor/runs/example --source SOURCE_ID --file /path/to/read-source --access full --reviewed\n  npm run monitor -- build --run .monitor/runs/example\n  npm run monitor -- status --run .monitor/runs/example\n  npm run monitor -- apply --run .monitor/runs/example\n  npm run monitor -- verify-live --url https://peterliu2357-sky.github.io/mu-checklist/\n\nRead AGENTS.md and docs/PIPELINE.md before a data update. Planning and building never publish.`);
+  if(command==='help')console.log(`mu-checklist data pipeline\n\n  npm ci\n  npm run verify\n  npm test\n  npm run test:ui\n  npm run monitor -- plan --scope full --run .monitor/runs/example\n  npm run monitor -- fetch --run .monitor/runs/example --source SOURCE_ID\n  npm run monitor -- capture --run .monitor/runs/example --source SOURCE_ID --file /path/to/read-source --access full --reviewed\n  npm run monitor -- evidence-draft --run .monitor/runs/example --metric METRIC_ID\n  npm run monitor -- build --run .monitor/runs/example\n  npm run monitor -- status --run .monitor/runs/example\n  npm run monitor -- apply --run .monitor/runs/example\n  npm run monitor -- verify-live --url https://peterliu2357-sky.github.io/mu-checklist/\n\nRead AGENTS.md and docs/PIPELINE.md before a data update. Planning and building never publish.`);
   else if(command==='verify') {
     const {ledger,evidence,catalog,legacy}=state(),issues=validateLedger(ledger,catalog,evidence,legacy),d=materialize(ledger);
     if(stable(d)!==stable(read('data/monitor.json')))issues.push({code:'GENERATED_FILE',path:'data/monitor.json',message:'Published data differs from canonical records'});
@@ -33,7 +33,7 @@ try {
         issues.push(...validateEvolution({oldCatalog:fromBase('pipeline/catalog.json'),catalog,oldLedger:fromBase('data/ledger.json'),ledger,oldEvidence:fromBase('data/evidence.json'),evidence,oldLegacy:fromBase('pipeline/legacy-baseline.json'),legacy}));
       }
       const changed=git('diff','--name-only',base,'HEAD').split('\n');
-      for(const p of changed.filter(p=>p.startsWith('data/history/'))){try{const old=git('show',`${base}:${p}`);if(old!==fs.readFileSync(p,'utf8').trim())issues.push({code:'HISTORY',path:p,message:'Historical snapshots are immutable'});}catch(e){if(!fs.existsSync(p))issues.push({code:'HISTORY',path:p,message:'Historical snapshot deleted'});}}
+      for(const p of changed.filter(p=>p.startsWith('data/history/')&&paths.includes(p))){try{const old=git('show',`${base}:${p}`);if(old!==fs.readFileSync(p,'utf8').trim())issues.push({code:'HISTORY',path:p,message:'Historical snapshots are immutable'});}catch(e){if(!fs.existsSync(p))issues.push({code:'HISTORY',path:p,message:'Historical snapshot deleted'});}}
       if(hash(previous)!==hash(d)){
         const receiptPath=`data/releases/${d.revision}.json`;
         if(!fs.existsSync(receiptPath))issues.push({code:'RECEIPT',path:receiptPath,message:'Data changes require a pipeline receipt'});
@@ -46,7 +46,7 @@ try {
             issues.push(...validateTransition(previous,d,receipt,catalog));
             if(receipt.base_sha256!==hash(previous))issues.push({code:'BASE_CHANGED',path:receiptPath,message:'Release was prepared against a different base snapshot'});
           }
-          if(receipt.artifact_sha256!==hash(d)||receipt.ledger_sha256!==hash(ledger)||receipt.evidence_sha256!==hash(evidence))issues.push({code:'RECEIPT_HASH',path:receiptPath,message:'Receipt does not match the verified artifact'});
+          if(receipt.catalog_sha256!==hash(catalog)||receipt.artifact_sha256!==hash(d)||receipt.ledger_sha256!==hash(ledger)||receipt.evidence_sha256!==hash(evidence))issues.push({code:'RECEIPT_HASH',path:receiptPath,message:'Receipt does not match the verified artifact'});
         }
       }
     }
@@ -92,8 +92,10 @@ try {
   }else if(command==='apply'){
     const dir=runDir(),receipt=read(path.join(dir,'build/receipt.json')),candidate=read(path.join(dir,'build/candidate.json')),ledger=read(path.join(dir,'build/ledger.json')),evidence=read(path.join(dir,'build/evidence.json')),s=state(),old=materialize(s.ledger);
     if(git('rev-parse','HEAD')!==receipt.base_commit||hash(old)!==receipt.base_sha256)throw new Error('BASE_CHANGED: refresh main and rebuild; never overwrite concurrent changes');
+    if(receipt.catalog_sha256!==hash(s.catalog))throw new Error('CATALOG_CHANGED: rebuild against the current metric definitions');
     if(receipt.state!=='verified'||hash(candidate)!==receipt.artifact_sha256||hash(ledger)!==receipt.ledger_sha256||hash(evidence)!==receipt.evidence_sha256)throw new Error('Candidate differs from the verified artifact');
-    const issues=[...validateLedger(ledger,s.catalog,evidence,s.legacy),...validateTransition(old,candidate,receipt,s.catalog),...await verifyCaptures(dir,receipt.reads.filter(r=>r.status!=='failed'))];
+    const issues=[...validateEvolution({oldCatalog:s.catalog,catalog:s.catalog,oldLedger:s.ledger,ledger,oldEvidence:s.evidence,evidence,oldLegacy:s.legacy,legacy:s.legacy}),...validateLedger(ledger,s.catalog,evidence,s.legacy),...validateTransition(old,candidate,receipt,s.catalog),...await verifyCaptures(dir,receipt.reads.filter(r=>r.status!=='failed'))];
+    if(stable(materialize(ledger))!==stable(candidate))issues.push({code:'GENERATED_FILE',path:'candidate',message:'Candidate differs from its canonical records'});
     if(issues.length){report(issues);}else{
       const archive=`data/history/${old.revision}.json`;
       if(fs.existsSync(archive)&&hash(read(archive))!==hash(old))throw new Error('HISTORY_CONFLICT: existing snapshot differs');
