@@ -1,0 +1,2815 @@
+{
+  "version": 1,
+  "required_sections": [
+    "asp",
+    "volume",
+    "inventory",
+    "revenue",
+    "margin",
+    "cash",
+    "capex",
+    "orders",
+    "hbm",
+    "contract",
+    "supply",
+    "demand"
+  ],
+  "optional_sections": [],
+  "required_companies": [
+    "microsoft",
+    "amazon",
+    "alphabet",
+    "oracle",
+    "meta",
+    "nvidia",
+    "tsmc",
+    "samsung",
+    "skhynix"
+  ],
+  "companies": {
+    "microsoft": {
+      "name": "Microsoft",
+      "group": "cloud",
+      "discovery": {
+        "adapter": "agent",
+        "entry_url": "https://microsoft.gcs-web.com/static-files/6f77f14c-9bdd-49c1-bfa3-1dbe8d872424#page=20",
+        "search_query": "site:microsoft.gcs-web.com Microsoft latest quarterly results investor relations",
+        "require_latest_disclosure": true
+      }
+    },
+    "amazon": {
+      "name": "Amazon / AWS",
+      "group": "cloud",
+      "discovery": {
+        "adapter": "agent",
+        "entry_url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Second-Quarter-Results/default.aspx?linkId=987889123",
+        "search_query": "site:ir.aboutamazon.com Amazon / AWS latest quarterly results investor relations",
+        "require_latest_disclosure": true
+      }
+    },
+    "alphabet": {
+      "name": "Alphabet / Google Cloud",
+      "group": "cloud",
+      "discovery": {
+        "adapter": "agent",
+        "entry_url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q2/2026q2-alphabet-earnings-release.pdf#page=2",
+        "search_query": "site:s206.q4cdn.com Alphabet / Google Cloud latest quarterly results investor relations",
+        "require_latest_disclosure": true
+      }
+    },
+    "oracle": {
+      "name": "Oracle / OCI",
+      "group": "cloud",
+      "discovery": {
+        "adapter": "agent",
+        "entry_url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Q1-Results-Driven-by-Triple-Digit-Growth-in-Cloud-Infrastructure-Revenues/default.aspx?send_id=slate-b20260911-084845",
+        "search_query": "site:investor.oracle.com Oracle / OCI latest quarterly results investor relations",
+        "require_latest_disclosure": true
+      }
+    },
+    "meta": {
+      "name": "Meta",
+      "group": "cloud",
+      "discovery": {
+        "adapter": "agent",
+        "entry_url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Second-Quarter-2026-Results/",
+        "search_query": "site:investor.atmeta.com Meta latest quarterly results investor relations",
+        "require_latest_disclosure": true
+      }
+    },
+    "nvidia": {
+      "name": "英伟达 NVIDIA",
+      "group": "chips",
+      "discovery": {
+        "adapter": "agent",
+        "entry_url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Second-Quarter-Fiscal-2027/default.aspx",
+        "search_query": "site:investor.nvidia.com 英伟达 NVIDIA latest quarterly results investor relations",
+        "require_latest_disclosure": true
+      }
+    },
+    "tsmc": {
+      "name": "台积电 TSMC",
+      "group": "chips",
+      "discovery": {
+        "adapter": "agent",
+        "entry_url": "https://pr.tsmc.com/system/files/newspdf/attachment/e98d0838eea3c47083fb67dbc349c059d8457c25/2Q26%20(E)_with%20gudiance_final_wmn.pdf#page=1",
+        "search_query": "site:pr.tsmc.com 台积电 TSMC latest quarterly results investor relations",
+        "require_latest_disclosure": true
+      }
+    },
+    "samsung": {
+      "name": "三星 Samsung",
+      "group": "chips",
+      "discovery": {
+        "adapter": "agent",
+        "entry_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_2Q_conference_eng.pdf?pubDate=20260802#page=13",
+        "search_query": "site:images.samsung.com 三星 Samsung latest quarterly results investor relations",
+        "require_latest_disclosure": true
+      }
+    },
+    "skhynix": {
+      "name": "SK 海力士",
+      "group": "chips",
+      "discovery": {
+        "adapter": "agent",
+        "entry_url": "https://news.skhynix.com/en/q2-2026-business-results/",
+        "search_query": "site:news.skhynix.com SK 海力士 latest quarterly results investor relations",
+        "require_latest_disclosure": true
+      }
+    }
+  },
+  "definitions": {
+    "mu.asp.dram": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "asp",
+      "unit": "",
+      "scope": "DRAM 售价环比",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter_change",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.asp.nand": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "asp",
+      "unit": "",
+      "scope": "NAND 售价环比",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter_change",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.volume.dram_bits": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "bit_shipments",
+      "unit": "",
+      "scope": "DRAM 位元出货环比",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter_change",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.volume.nand_bits": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "bit_shipments",
+      "unit": "",
+      "scope": "NAND 位元出货环比",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter_change",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.volume.mobile_bits": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "bit_shipments",
+      "unit": "",
+      "scope": "手机与客户端位元出货",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter_change",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.inventory.finished_goods": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "inventory",
+      "unit": "USDm",
+      "scope": "产成品",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "point_in_time",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.inventory.total": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "inventory",
+      "unit": "USDm",
+      "scope": "总库存",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "point_in_time",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.inventory.work_in_process": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "inventory",
+      "unit": "USDm",
+      "scope": "在制品",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "point_in_time",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.inventory.raw_materials": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "inventory",
+      "unit": "USDm",
+      "scope": "原材料",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "point_in_time",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.inventory.days": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "inventory",
+      "unit": "days",
+      "scope": "库存天数",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "period_end",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.inventory.receivables": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "inventory",
+      "unit": "USDm",
+      "scope": "贸易应收款",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "point_in_time",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.inventory.receivables_revenue": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "revenue",
+      "unit": "pct",
+      "scope": "期末贸易应收 / 季收入",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "period_end",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "calculated"
+      ]
+    },
+    "mu.revenue.total": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "revenue",
+      "unit": "USDm",
+      "scope": "总收入",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.revenue.dram": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "revenue",
+      "unit": "USDm",
+      "scope": "DRAM 收入",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.revenue.nand": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "revenue",
+      "unit": "USDm",
+      "scope": "NAND 收入",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.revenue.cmbu": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "revenue",
+      "unit": "USDm",
+      "scope": "云内存收入 CMBU",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.revenue.cdbu": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "revenue",
+      "unit": "USDm",
+      "scope": "核心数据中心收入 CDBU",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.revenue.datacenter_share": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "revenue",
+      "unit": "pct",
+      "scope": "CMBU + CDBU 占总收入",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "calculated"
+      ]
+    },
+    "mu.revenue.mcbu": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "revenue",
+      "unit": "USDm",
+      "scope": "手机与客户端收入 MCBU",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.revenue.aebu": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "revenue",
+      "unit": "USDm",
+      "scope": "汽车与嵌入式收入 AEBU",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.revenue.eps_nongaap": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "revenue",
+      "unit": "USD",
+      "scope": "非 GAAP 每股盈利",
+      "accounting_basis": "non_gaap",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.revenue.eps_gaap": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "revenue",
+      "unit": "USD",
+      "scope": "GAAP 每股盈利",
+      "accounting_basis": "gaap",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.margin.nongaap": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "margin",
+      "unit": "pct",
+      "scope": "非 GAAP 毛利率",
+      "accounting_basis": "non_gaap",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.margin.gaap": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "margin",
+      "unit": "pct",
+      "scope": "GAAP 毛利率",
+      "accounting_basis": "gaap",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.margin.revenue": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "revenue",
+      "unit": "USDm",
+      "scope": "收入",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.margin.cogs": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "margin",
+      "unit": "USDm",
+      "scope": "GAAP 销售成本",
+      "accounting_basis": "gaap",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.margin.guidance": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "margin",
+      "unit": "pct",
+      "scope": "下季非 GAAP 毛利率指引",
+      "accounting_basis": "non_gaap",
+      "temporal_basis": "forecast_quarter",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.margin.bit_cost": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "margin",
+      "unit": "",
+      "scope": "同组合每位元成本变化",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "unavailable"
+      ]
+    },
+    "mu.cash.adjusted_fcf": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "cash",
+      "unit": "USDm",
+      "scope": "调整后自由现金流",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.cash.operating": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "cash",
+      "unit": "USDm",
+      "scope": "经营现金流",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.cash.ppe": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "cash",
+      "unit": "USDm",
+      "scope": "设备购置现金流出",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.cash.grants": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "cash",
+      "unit": "USDm",
+      "scope": "收到的政府补助",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.cash.disposals": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "cash",
+      "unit": "USDm",
+      "scope": "资产出售收入",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.cash.gross_fcf": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "cash",
+      "unit": "USDm",
+      "scope": "经营现金流 − 设备购置",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "calculated"
+      ]
+    },
+    "mu.cash.profit_conversion": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "operating_profit",
+      "unit": "pct",
+      "scope": "经营现金流 / GAAP 净利润",
+      "accounting_basis": "gaap",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "calculated"
+      ]
+    },
+    "mu.capex.net": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "capex",
+      "unit": "USDm",
+      "scope": "净资本开支",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.capex.revenue_ratio": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "revenue",
+      "unit": "pct",
+      "scope": "净资本开支 / 收入",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "calculated"
+      ]
+    },
+    "mu.capex.coverage": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "capex",
+      "unit": "multiple",
+      "scope": "经营现金流 / 净开支",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "calculated"
+      ]
+    },
+    "mu.capex.guidance": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "capex",
+      "unit": "USDm",
+      "scope": "下一季净资本开支",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "forecast_quarter",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.capex.next_year": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "capex",
+      "unit": "",
+      "scope": "FY2027 季度开支",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "as_disclosed",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.capex.net_cash": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "capex",
+      "unit": "USDm",
+      "scope": "净现金（现金投资减债务）",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "point_in_time",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "calculated"
+      ]
+    },
+    "mu.orders.agreements": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "orders",
+      "unit": "份",
+      "scope": "已签战略协议",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.orders.coverage": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "orders",
+      "unit": "",
+      "scope": "多年覆盖量",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.orders.rpo_quarter_end": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "orders",
+      "unit": "USDm",
+      "scope": "财季末 RPO",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.orders.rpo_post_quarter": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "orders",
+      "unit": "USDm",
+      "scope": "含季后协议的 RPO",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.orders.contract_liability": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "orders",
+      "unit": "USDm",
+      "scope": "期末已确认合同负债",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.orders.deposits_forecast": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "orders",
+      "unit": "USDm",
+      "scope": "预计现金保证金",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "as_disclosed",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.orders.terms": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "orders",
+      "unit": "",
+      "scope": "合同量价约束",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.hbm.hbm4_revenue": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "revenue",
+      "unit": "",
+      "scope": "HBM4 累计已实现收入",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.hbm.hbm4_delivery": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "hbm",
+      "unit": "",
+      "scope": "HBM4 客户进度",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.hbm.hbm4e_plan": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "hbm",
+      "unit": "",
+      "scope": "HBM4E 时间表",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "as_disclosed",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.hbm.rdimm_validation": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "hbm",
+      "unit": "",
+      "scope": "512GB DDR5 RDIMM 验证",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.hbm.rdimm_production": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "hbm",
+      "unit": "",
+      "scope": "512GB DDR5 RDIMM 量产",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "as_disclosed",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.hbm.revenue_share": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "revenue",
+      "unit": "pct",
+      "scope": "HBM 营收份额（转引）",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "secondary"
+      ]
+    },
+    "mu.hbm.yield": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "hbm",
+      "unit": "",
+      "scope": "量产良率 / HBM 单独毛利率",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "unavailable"
+      ]
+    },
+    "mu.contract.dram_forecast": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "industry",
+      "measurement": "contract",
+      "unit": "",
+      "scope": "普通型 DRAM 合同价环比",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "as_disclosed",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.contract.nand_forecast": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "industry",
+      "measurement": "contract",
+      "unit": "",
+      "scope": "NAND 合同价环比",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "as_disclosed",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.contract.nand_trend": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "industry",
+      "measurement": "contract",
+      "unit": "",
+      "scope": "NAND 合同价趋势",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "as_disclosed",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.contract.ddr4_spot": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "industry",
+      "measurement": "contract",
+      "unit": "USD",
+      "scope": "DDR4 1Gx8 3200 现货",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.contract.tlc_spot": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "industry",
+      "measurement": "contract",
+      "unit": "USD",
+      "scope": "512Gb TLC 现货",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.supply.dram_balance": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "industry",
+      "measurement": "supply",
+      "unit": "",
+      "scope": "2026 DRAM 供需充足率",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "as_disclosed",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.supply.nand_outlook": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "industry",
+      "measurement": "supply",
+      "unit": "",
+      "scope": "2027 NAND 分市场展望",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "as_disclosed",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.supply.micron_outlook": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "industry",
+      "measurement": "supply",
+      "unit": "",
+      "scope": "美光对 DRAM / NAND 的展望",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "as_disclosed",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.supply.tongluo": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "industry",
+      "measurement": "supply",
+      "unit": "",
+      "scope": "铜锣厂出货计划",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "as_disclosed",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.supply.idaho": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "industry",
+      "measurement": "supply",
+      "unit": "",
+      "scope": "Idaho ID1 首批晶圆计划",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "as_disclosed",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.supply.singapore": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "industry",
+      "measurement": "supply",
+      "unit": "",
+      "scope": "新加坡 HBM 封装",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "as_disclosed",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.demand.ssd_industry_revenue": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "industry",
+      "measurement": "end_consumption_proxy",
+      "unit": "",
+      "scope": "五大企业 SSD 厂商收入",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "proxy"
+      ]
+    },
+    "mu.demand.ssd_micron_revenue": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "industry",
+      "measurement": "end_consumption_proxy",
+      "unit": "",
+      "scope": "美光企业 SSD 收入",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "proxy"
+      ]
+    },
+    "mu.demand.mobile_bits_proxy": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "industry",
+      "measurement": "end_consumption_proxy",
+      "unit": "",
+      "scope": "美光手机与客户端位元出货",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "proxy"
+      ]
+    },
+    "mu.demand.mobile_inventory_proxy": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "industry",
+      "measurement": "end_consumption_proxy",
+      "unit": "",
+      "scope": "手机客户库存 / 提前采购",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "proxy"
+      ]
+    },
+    "mu.demand.customer_inventory": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "industry",
+      "measurement": "end_consumption_proxy",
+      "unit": "",
+      "scope": "客户实际内存库存天数",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "unavailable"
+      ]
+    },
+    "guidance.revenue": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "revenue",
+      "unit": "USDm",
+      "scope": "收入",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "forecast_quarter",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "guidance.margin_nongaap": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "guidance",
+      "unit": "pct",
+      "scope": "非 GAAP 毛利率",
+      "accounting_basis": "non_gaap",
+      "temporal_basis": "forecast_quarter",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "guidance.eps_nongaap": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "guidance",
+      "unit": "USD",
+      "scope": "非 GAAP EPS",
+      "accounting_basis": "non_gaap",
+      "temporal_basis": "forecast_quarter",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.microsoft.azure_revenue": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "microsoft",
+      "measurement": "revenue",
+      "unit": "USDm",
+      "scope": "Azure 收入（新口径）",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.microsoft.revenue": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "microsoft",
+      "measurement": "revenue",
+      "unit": "USDm",
+      "scope": "Intelligent Cloud 收入",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.microsoft.profit": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "microsoft",
+      "measurement": "operating_profit",
+      "unit": "USDm",
+      "scope": "Intelligent Cloud 营业利润",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.microsoft.capex": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "microsoft",
+      "measurement": "capex",
+      "unit": "USDm",
+      "scope": "集团现金资本开支",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.microsoft.ocf": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "microsoft",
+      "measurement": "ocf",
+      "unit": "USDm",
+      "scope": "集团经营现金流",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "outlook.microsoft.azure": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "microsoft",
+      "measurement": "outlook",
+      "unit": "",
+      "scope": "Azure 收入同比",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "target_period",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "outlook.microsoft.capex": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "microsoft",
+      "measurement": "outlook",
+      "unit": "",
+      "scope": "集团资本开支",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "target_period",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "outlook.microsoft.demand": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "microsoft",
+      "measurement": "outlook",
+      "unit": "",
+      "scope": "需求与产能",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "target_period",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "outlook.microsoft.annual_capex": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "microsoft",
+      "measurement": "outlook",
+      "unit": "",
+      "scope": "全年资本开支",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "target_period",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.amazon.revenue": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "amazon",
+      "measurement": "revenue",
+      "unit": "USDm",
+      "scope": "AWS 收入",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.amazon.profit": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "amazon",
+      "measurement": "operating_profit",
+      "unit": "USDm",
+      "scope": "AWS 营业利润",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.amazon.capex": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "amazon",
+      "measurement": "capex",
+      "unit": "USDm",
+      "scope": "集团现金资本开支",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.amazon.ocf": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "amazon",
+      "measurement": "ocf",
+      "unit": "USDm",
+      "scope": "集团经营现金流",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "outlook.amazon.profit": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "amazon",
+      "measurement": "operating_profit",
+      "unit": "",
+      "scope": "集团营业利润",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "target_period",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "outlook.amazon.revenue": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "amazon",
+      "measurement": "revenue",
+      "unit": "",
+      "scope": "集团收入",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "target_period",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.alphabet.revenue": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "alphabet",
+      "measurement": "revenue",
+      "unit": "USDm",
+      "scope": "Google Cloud 收入",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.alphabet.profit": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "alphabet",
+      "measurement": "operating_profit",
+      "unit": "USDm",
+      "scope": "Google Cloud 营业利润",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.alphabet.capex": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "alphabet",
+      "measurement": "capex",
+      "unit": "USDm",
+      "scope": "集团现金资本开支",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.alphabet.ocf": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "alphabet",
+      "measurement": "ocf",
+      "unit": "USDm",
+      "scope": "集团经营现金流",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "outlook.alphabet.capex": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "alphabet",
+      "measurement": "outlook",
+      "unit": "",
+      "scope": "集团资本开支",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "target_period",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "outlook.alphabet.capacity": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "alphabet",
+      "measurement": "outlook",
+      "unit": "",
+      "scope": "产能与利润率",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "target_period",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "outlook.alphabet.next_year": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "alphabet",
+      "measurement": "outlook",
+      "unit": "",
+      "scope": "后续投入",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "target_period",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.oracle.revenue": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "oracle",
+      "measurement": "revenue",
+      "unit": "USDm",
+      "scope": "OCI 收入",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.oracle.profit": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "oracle",
+      "measurement": "operating_profit",
+      "unit": "USDm",
+      "scope": "集团 GAAP 营业利润",
+      "accounting_basis": "gaap",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.oracle.capex": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "oracle",
+      "measurement": "capex",
+      "unit": "USDm",
+      "scope": "集团现金资本开支",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.oracle.ocf": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "oracle",
+      "measurement": "ocf",
+      "unit": "USDm",
+      "scope": "集团经营现金流",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "outlook.oracle.cloud": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "oracle",
+      "measurement": "outlook",
+      "unit": "",
+      "scope": "云收入同比（IaaS + SaaS）",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "target_period",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "outlook.oracle.revenue": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "oracle",
+      "measurement": "revenue",
+      "unit": "",
+      "scope": "集团全年收入",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "target_period",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "outlook.oracle.demand": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "oracle",
+      "measurement": "outlook",
+      "unit": "",
+      "scope": "AI 云供需",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "target_period",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.meta.revenue": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "meta",
+      "measurement": "revenue",
+      "unit": "USDm",
+      "scope": "集团收入",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.meta.profit": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "meta",
+      "measurement": "operating_profit",
+      "unit": "USDm",
+      "scope": "集团营业利润",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.meta.capex": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "meta",
+      "measurement": "capex",
+      "unit": "USDm",
+      "scope": "集团现金资本开支",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.meta.ocf": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "meta",
+      "measurement": "ocf",
+      "unit": "USDm",
+      "scope": "集团经营现金流",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "outlook.meta.capex": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "meta",
+      "measurement": "outlook",
+      "unit": "",
+      "scope": "集团资本开支",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "target_period",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "outlook.meta.profit": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "meta",
+      "measurement": "operating_profit",
+      "unit": "",
+      "scope": "全年盈利",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "target_period",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.nvidia.revenue": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "nvidia",
+      "measurement": "revenue",
+      "unit": "USDm",
+      "scope": "集团收入",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.nvidia.datacenter": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "nvidia",
+      "measurement": "datacenter",
+      "unit": "USDm",
+      "scope": "数据中心收入",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.nvidia.profit": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "nvidia",
+      "measurement": "operating_profit",
+      "unit": "USDm",
+      "scope": "集团 GAAP 营业利润",
+      "accounting_basis": "gaap",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.nvidia.margin": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "nvidia",
+      "measurement": "margin",
+      "unit": "pct",
+      "scope": "集团 GAAP 毛利率",
+      "accounting_basis": "gaap",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.nvidia.capex": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "nvidia",
+      "measurement": "capex",
+      "unit": "USDm",
+      "scope": "集团现金购置固定及无形资产",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.nvidia.ocf": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "nvidia",
+      "measurement": "ocf",
+      "unit": "USDm",
+      "scope": "集团经营现金流",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "outlook.nvidia.revenue": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "nvidia",
+      "measurement": "revenue",
+      "unit": "",
+      "scope": "集团收入",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "target_period",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "outlook.nvidia.margin": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "nvidia",
+      "measurement": "outlook",
+      "unit": "",
+      "scope": "GAAP / 非 GAAP 毛利率",
+      "accounting_basis": "non_gaap",
+      "temporal_basis": "target_period",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "outlook.nvidia.demand": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "nvidia",
+      "measurement": "outlook",
+      "unit": "",
+      "scope": "AI 需求",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "target_period",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.tsmc.revenue": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "tsmc",
+      "measurement": "revenue",
+      "unit": "USDm",
+      "scope": "集团收入",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.tsmc.profit": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "tsmc",
+      "measurement": "operating_profit",
+      "unit": "TWDb",
+      "scope": "集团营业利润",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.tsmc.capex": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "tsmc",
+      "measurement": "capex",
+      "unit": "USDm",
+      "scope": "集团资本开支",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.tsmc.ocf": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "tsmc",
+      "measurement": "ocf",
+      "unit": "TWDb",
+      "scope": "集团经营现金流",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "outlook.tsmc.revenue": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "tsmc",
+      "measurement": "revenue",
+      "unit": "",
+      "scope": "集团收入",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "target_period",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "outlook.tsmc.capex": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "tsmc",
+      "measurement": "outlook",
+      "unit": "",
+      "scope": "集团资本预算",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "target_period",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "outlook.tsmc.demand": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "tsmc",
+      "measurement": "outlook",
+      "unit": "",
+      "scope": "先进制程与终端需求",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "target_period",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.samsung.revenue": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "samsung",
+      "measurement": "revenue",
+      "unit": "KRWt",
+      "scope": "Memory 收入",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.samsung.profit": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "samsung",
+      "measurement": "operating_profit",
+      "unit": "KRWt",
+      "scope": "DS 营业利润",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.samsung.capex": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "samsung",
+      "measurement": "capex",
+      "unit": "KRWt",
+      "scope": "集团现金资本开支",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.samsung.ocf": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "samsung",
+      "measurement": "ocf",
+      "unit": "KRWt",
+      "scope": "集团经营现金流",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "outlook.samsung.demand": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "samsung",
+      "measurement": "outlook",
+      "unit": "",
+      "scope": "存储需求与供给",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "target_period",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "outlook.samsung.products": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "samsung",
+      "measurement": "outlook",
+      "unit": "",
+      "scope": "产品组合",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "target_period",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.skhynix.revenue": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "skhynix",
+      "measurement": "revenue",
+      "unit": "KRWt",
+      "scope": "集团收入",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.skhynix.profit": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "skhynix",
+      "measurement": "operating_profit",
+      "unit": "KRWt",
+      "scope": "集团营业利润",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.skhynix.margin": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "skhynix",
+      "measurement": "margin",
+      "unit": "pct",
+      "scope": "集团营业利润率",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "outlook.skhynix.hbm": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "skhynix",
+      "measurement": "outlook",
+      "unit": "",
+      "scope": "HBM4 产量",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "target_period",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "outlook.skhynix.nand": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "skhynix",
+      "measurement": "outlook",
+      "unit": "",
+      "scope": "321 层 NAND 产能占比",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "target_period",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "outlook.skhynix.capacity": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "skhynix",
+      "measurement": "outlook",
+      "unit": "",
+      "scope": "新增产能",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "target_period",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "quote.mu": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "regular_close",
+      "unit": "",
+      "scope": "quote.mu",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "event.next_earnings": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "event",
+      "unit": "",
+      "scope": "event.next_earnings",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "input.micron.net_income": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": true,
+      "entity": "micron",
+      "measurement": "supporting",
+      "unit": "USDm",
+      "scope": "GAAP 净利润",
+      "accounting_basis": "gaap",
+      "temporal_basis": "quarter",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "input.micron.cash": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": true,
+      "entity": "micron",
+      "measurement": "supporting",
+      "unit": "USDm",
+      "scope": "现金及现金等价物",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "point_in_time",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "input.micron.short_investments": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": true,
+      "entity": "micron",
+      "measurement": "supporting",
+      "unit": "USDm",
+      "scope": "短期投资",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "point_in_time",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "input.micron.long_investments": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": true,
+      "entity": "micron",
+      "measurement": "supporting",
+      "unit": "USDm",
+      "scope": "长期投资",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "point_in_time",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "input.micron.debt": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": true,
+      "entity": "micron",
+      "measurement": "supporting",
+      "unit": "USDm",
+      "scope": "债务",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "point_in_time",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    }
+  },
+  "source_roles": {
+    "technology": [
+      "mu.asp.dram",
+      "mu.asp.nand",
+      "mu.volume.dram_bits",
+      "mu.volume.nand_bits"
+    ],
+    "mobile_bits": [
+      "mu.volume.mobile_bits",
+      "mu.demand.mobile_bits_proxy"
+    ],
+    "q3": [
+      "mu.inventory.finished_goods",
+      "mu.inventory.total",
+      "mu.inventory.work_in_process",
+      "mu.inventory.raw_materials",
+      "mu.inventory.receivables",
+      "mu.inventory.receivables_revenue"
+    ],
+    "q2": [
+      "mu.inventory.finished_goods",
+      "mu.inventory.total",
+      "mu.inventory.work_in_process",
+      "mu.inventory.raw_materials",
+      "mu.inventory.receivables",
+      "mu.inventory.receivables_revenue"
+    ],
+    "inventory_days": [
+      "mu.inventory.days"
+    ],
+    "financial": [
+      "mu.inventory.receivables_revenue",
+      "mu.revenue.total",
+      "mu.revenue.datacenter_share",
+      "mu.margin.nongaap",
+      "mu.margin.gaap",
+      "mu.margin.revenue",
+      "mu.margin.cogs",
+      "mu.cash.profit_conversion",
+      "mu.capex.revenue_ratio",
+      "input.micron.net_income"
+    ],
+    "technology_revenue": [
+      "mu.revenue.dram",
+      "mu.revenue.nand"
+    ],
+    "business": [
+      "mu.revenue.cmbu",
+      "mu.revenue.cdbu",
+      "mu.revenue.datacenter_share",
+      "mu.revenue.mcbu",
+      "mu.revenue.aebu"
+    ],
+    "cash_table": [
+      "mu.revenue.eps_nongaap",
+      "mu.revenue.eps_gaap",
+      "mu.cash.adjusted_fcf",
+      "mu.cash.operating",
+      "mu.cash.ppe",
+      "mu.cash.grants",
+      "mu.cash.disposals",
+      "mu.cash.gross_fcf",
+      "mu.cash.profit_conversion",
+      "mu.capex.net",
+      "mu.capex.revenue_ratio",
+      "mu.capex.coverage"
+    ],
+    "guidance": [
+      "mu.margin.guidance",
+      "guidance.revenue",
+      "guidance.margin_nongaap",
+      "guidance.eps_nongaap"
+    ],
+    "hbm_product": [
+      "mu.margin.bit_cost",
+      "mu.hbm.hbm4_revenue",
+      "mu.hbm.yield"
+    ],
+    "capex_plan": [
+      "mu.capex.guidance",
+      "mu.capex.next_year"
+    ],
+    "cash_balance": [
+      "mu.capex.net_cash",
+      "input.micron.cash",
+      "input.micron.short_investments",
+      "input.micron.long_investments",
+      "input.micron.debt"
+    ],
+    "orders": [
+      "mu.orders.agreements",
+      "mu.orders.coverage"
+    ],
+    "q3_orders": [
+      "mu.orders.rpo_quarter_end",
+      "mu.orders.contract_liability",
+      "mu.orders.terms"
+    ],
+    "orders_cash": [
+      "mu.orders.rpo_post_quarter",
+      "mu.orders.deposits_forecast"
+    ],
+    "hbm_highlights": [
+      "mu.hbm.hbm4_delivery",
+      "mu.hbm.hbm4e_plan"
+    ],
+    "rdimm_512": [
+      "mu.hbm.rdimm_validation",
+      "mu.hbm.rdimm_production"
+    ],
+    "hbm_secondary": [
+      "mu.hbm.revenue_share"
+    ],
+    "dram": [
+      "mu.contract.dram_forecast"
+    ],
+    "contract": [
+      "mu.contract.nand_forecast"
+    ],
+    "nand_q3": [
+      "mu.contract.nand_forecast",
+      "mu.contract.nand_trend"
+    ],
+    "spot": [
+      "mu.contract.ddr4_spot",
+      "mu.contract.tlc_spot"
+    ],
+    "supply": [
+      "mu.supply.dram_balance"
+    ],
+    "nand_2027": [
+      "mu.supply.nand_outlook"
+    ],
+    "market_outlook": [
+      "mu.supply.micron_outlook"
+    ],
+    "supply_plans": [
+      "mu.supply.tongluo",
+      "mu.supply.idaho"
+    ],
+    "singapore": [
+      "mu.supply.singapore"
+    ],
+    "ssd": [
+      "mu.demand.ssd_industry_revenue",
+      "mu.demand.ssd_micron_revenue"
+    ],
+    "mobile": [
+      "mu.demand.mobile_inventory_proxy",
+      "mu.demand.customer_inventory"
+    ],
+    "eco_ms_recast": [
+      "eco.microsoft.azure_revenue"
+    ],
+    "eco_ms": [
+      "eco.microsoft.revenue",
+      "eco.microsoft.profit",
+      "eco.microsoft.capex",
+      "eco.microsoft.ocf"
+    ],
+    "eco_ms_adjusted": [
+      "outlook.microsoft.azure"
+    ],
+    "eco_ms_call": [
+      "outlook.microsoft.capex",
+      "outlook.microsoft.demand",
+      "outlook.microsoft.annual_capex"
+    ],
+    "eco_amazon": [
+      "eco.amazon.revenue",
+      "eco.amazon.profit",
+      "eco.amazon.capex",
+      "eco.amazon.ocf",
+      "outlook.amazon.profit",
+      "outlook.amazon.revenue"
+    ],
+    "eco_google_cloud": [
+      "eco.alphabet.revenue",
+      "eco.alphabet.profit"
+    ],
+    "eco_google_cash": [
+      "eco.alphabet.capex",
+      "eco.alphabet.ocf"
+    ],
+    "eco_google_call": [
+      "outlook.alphabet.capex",
+      "outlook.alphabet.capacity",
+      "outlook.alphabet.next_year"
+    ],
+    "eco_oracle": [
+      "eco.oracle.revenue",
+      "eco.oracle.profit",
+      "eco.oracle.capex",
+      "eco.oracle.ocf",
+      "outlook.oracle.cloud",
+      "outlook.oracle.revenue",
+      "outlook.oracle.demand"
+    ],
+    "eco_meta": [
+      "eco.meta.revenue",
+      "eco.meta.profit",
+      "eco.meta.capex",
+      "eco.meta.ocf",
+      "outlook.meta.capex",
+      "outlook.meta.profit"
+    ],
+    "eco_nvidia": [
+      "eco.nvidia.revenue",
+      "eco.nvidia.datacenter",
+      "eco.nvidia.profit",
+      "eco.nvidia.margin",
+      "eco.nvidia.capex",
+      "eco.nvidia.ocf",
+      "outlook.nvidia.revenue",
+      "outlook.nvidia.margin",
+      "outlook.nvidia.demand"
+    ],
+    "eco_nvidia_prior": [
+      "eco.nvidia.datacenter"
+    ],
+    "eco_tsmc_guide": [
+      "eco.tsmc.revenue",
+      "outlook.tsmc.revenue"
+    ],
+    "eco_tsmc_prior_revenue": [
+      "eco.tsmc.revenue"
+    ],
+    "eco_tsmc": [
+      "eco.tsmc.profit"
+    ],
+    "eco_tsmc_call": [
+      "eco.tsmc.capex"
+    ],
+    "eco_tsmc_prior": [
+      "eco.tsmc.capex"
+    ],
+    "eco_tsmc_ocf": [
+      "eco.tsmc.ocf"
+    ],
+    "eco_tsmc_prior_ocf": [
+      "eco.tsmc.ocf"
+    ],
+    "eco_tsmc_budget": [
+      "outlook.tsmc.capex"
+    ],
+    "eco_tsmc_demand": [
+      "outlook.tsmc.demand"
+    ],
+    "eco_samsung": [
+      "eco.samsung.revenue",
+      "eco.samsung.profit"
+    ],
+    "eco_samsung_cash": [
+      "eco.samsung.capex",
+      "eco.samsung.ocf"
+    ],
+    "eco_samsung_outlook": [
+      "outlook.samsung.demand",
+      "outlook.samsung.products"
+    ],
+    "eco_skhynix": [
+      "eco.skhynix.revenue",
+      "eco.skhynix.profit",
+      "eco.skhynix.margin",
+      "outlook.skhynix.hbm",
+      "outlook.skhynix.nand",
+      "outlook.skhynix.capacity"
+    ],
+    "price": [
+      "quote.mu"
+    ],
+    "next": [
+      "event.next_earnings"
+    ]
+  },
+  "calculations": [
+    {
+      "target": "mu.inventory.receivables_revenue",
+      "op": "ratio_pct",
+      "inputs": [
+        "mu.inventory.receivables",
+        "mu.revenue.total"
+      ]
+    },
+    {
+      "target": "mu.revenue.datacenter_share",
+      "op": "sum_ratio_pct",
+      "inputs": [
+        "mu.revenue.cmbu",
+        "mu.revenue.cdbu",
+        "mu.revenue.total"
+      ]
+    },
+    {
+      "target": "mu.cash.gross_fcf",
+      "op": "difference",
+      "inputs": [
+        "mu.cash.operating",
+        "mu.cash.ppe"
+      ]
+    },
+    {
+      "target": "mu.cash.profit_conversion",
+      "op": "ratio_pct",
+      "inputs": [
+        "mu.cash.operating",
+        "input.micron.net_income"
+      ]
+    },
+    {
+      "target": "mu.capex.revenue_ratio",
+      "op": "ratio_pct",
+      "inputs": [
+        "mu.capex.net",
+        "mu.revenue.total"
+      ]
+    },
+    {
+      "target": "mu.capex.coverage",
+      "op": "ratio",
+      "inputs": [
+        "mu.cash.operating",
+        "mu.capex.net"
+      ]
+    },
+    {
+      "target": "mu.capex.net_cash",
+      "op": "net_cash",
+      "inputs": [
+        "input.micron.cash",
+        "input.micron.short_investments",
+        "input.micron.long_investments",
+        "input.micron.debt"
+      ]
+    }
+  ],
+  "reconciliations": [
+    {
+      "target": "mu.inventory.total",
+      "op": "sum",
+      "inputs": [
+        "mu.inventory.finished_goods",
+        "mu.inventory.work_in_process",
+        "mu.inventory.raw_materials"
+      ]
+    },
+    {
+      "target": "mu.capex.net",
+      "op": "difference",
+      "inputs": [
+        "mu.cash.ppe",
+        "mu.cash.grants",
+        "mu.cash.disposals"
+      ]
+    },
+    {
+      "target": "mu.cash.adjusted_fcf",
+      "op": "difference",
+      "inputs": [
+        "mu.cash.operating",
+        "mu.capex.net"
+      ]
+    },
+    {
+      "target": "mu.margin.revenue",
+      "op": "sum",
+      "inputs": [
+        "mu.revenue.total"
+      ]
+    }
+  ],
+  "discovery": {
+    "micron": {
+      "adapter": "agent",
+      "entry_url": "https://investors.micron.com/overview/default.aspx",
+      "require_latest_disclosure": true
+    },
+    "industry": {
+      "adapter": "agent",
+      "entry_url": "https://www.trendforce.com/presscenter/news",
+      "require_latest_disclosure": true
+    },
+    "quote": {
+      "adapter": "agent",
+      "entry_url": "https://stockanalysis.com/stocks/mu/history/",
+      "require_latest_disclosure": true
+    }
+  }
+}

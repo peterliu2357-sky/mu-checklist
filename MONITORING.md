@@ -1,5 +1,11 @@
 # 美光重要指标 — 数据与来源维护
 
+## 执行入口
+
+先读 `AGENTS.md` 与 `docs/PIPELINE.md`。数据更新必须使用 `npm run monitor -- plan / capture / evidence-draft / build / apply` 流程；`npm run verify`、`npm test` 和手机测试为发布门槛。不得手改生成的 `data/monitor.json`，不得扩大历史迁移的证据豁免。UI 修改不触发取数，也不推进任何核查日期。
+
+指标目录 `pipeline/catalog.json` 是覆盖范围、定义版本、来源角色与公式的机器配置；下列条目解释业务规则。
+
 ## 产品原则
 
 用户要求 fact-heavy：展示事实和数据，允许紧贴数据的一两句解读；不要写投资结论、股票判断、买卖建议、投资评分、主观“支持 / 关注”状态或估值假设。首页直接呈现指标读数、变化、期间和来源。深度投资分析不属于此网站。
@@ -10,9 +16,13 @@
 
 ## 文件
 
-- `data/monitor.json`：唯一当前数据源，schema_version=2。
+- `data/ledger.json`：规范化事实记录与当前文档引用；`data/evidence.json`：对应证据。只能通过候选流程生成。
+- `data/monitor.json`：网站发布产物，schema_version=2，由 ledger 生成，不直接编辑。
+- `pipeline/catalog.json`：稳定指标 ID、定义、覆盖范围、来源角色和计算公式。
+- `data/releases/`：发布收据；`.monitor/`：不提交的取证缓存及可恢复工作目录。
+- `lib/monitor-core.js`：无 DOM 的比较及展示契约函数。
 - `assets/monitor.js` / `monitor.css`：前端；`index.html` / `preview.html` 是相同入口。
-- HTML 内嵌初始备用数据，只在取最新数据失败时使用，必须显示日期与警示。更新数据不需要改前端；若改 schema，必须同步渲染和备用数据。
+- HTML 内嵌初始备用数据，只在取最新数据失败时使用，必须显示日期与警示。站点构建自动嵌入同一份已验证数据。更新数据不需要改前端；若改 schema，必须同步契约及兼容性测试。
 - `data/history/`：版本快照。日常更新前保存旧版，同 revision 已存在则不重复，不覆盖旧记录。
 - `latest-run.json`、`preview-data.json` 为旧版研究记录，不再驱动页面。
 - `qa/responsive.html`：390 / 320 / 430 px 页面检查；不出现在主站导航。
@@ -27,7 +37,7 @@
 5. 逐行核对“指标名称—值—单位—期间—来源—原文位置”。链接到对应 PDF 页或具体章节，不以首页、相邻收入表替代出处。每个链接必须能解释其在该行支持的输入。
 6. 补齐前期同口径数值、计算输入和公式；缺失用 null，定性幅度保留定性。实际、计划、预测、机构估计分开。
 7. 简短解读只解释所列数据能说明什么与边界；不能补写宏观投资论点、股票贵便宜或对未来利润的深层判断。首页卡片自动从原始行取数，不手抄一份数字。
-8. 有数据、来源或口径变化时更新 `changes`；例行核查写 `check_log`。保存旧快照，再基于最新树原子提交到 main，禁止强推或覆盖他人变更。
+8. 在候选 proposal 中记录变化；核查日期及 check_log 由 pipeline 生成。build 通过后 apply 归档并准备正式文件；提交 ledger、evidence、monitor、history 和发布收据作为一个原子变更。提交前检查最新 main，禁止强推或覆盖他人变更。
 9. 验证 GitHub Pages 部署和线上 revision / 页面。仅在有重要新数据、临近或完成财报更新、或核查失败时简洁通知用户。例行检查和普通股价波动不发送噪声通知。不要修改另一个量价复盘任务。
 
 ## schema_version = 2
@@ -52,7 +62,7 @@
 - `note`：口径边界、计算输入与公式、间接证据的限制。
 - `change`：通常 null，使用 current 与 previous 计算。来源给出的未舍入涨幅与展示值略有差别时，标记“报告值”。
 
-`overview.fact_cards` 只包含 metric_id 与 row_label，必须引用存在的行，不能写总投资论点、主观评分或估值。
+`overview.fact_cards` 包含 metric_id、稳定 row_id 与兼容显示标签 row_label，必须引用存在的行，不能写总投资论点、主观评分或估值。
 
 `guidance` 为单独的公司指引行；预测标签与目标财季不能省略。`events` 为已确认披露日程。`quote` 保留实际收盘资料，不与 PE 或盈利假设混合。
 
@@ -93,7 +103,7 @@
 
 - 面向网站读者写作，不复述聊天、纠错过程或对维护者的提醒。标签、标题已经明确的内容，不在 note 重复。保留确有用途的来源、计算公式、定性原文及口径边界，避免反复写“不是 / 不得 / 不能”式防御说明。
 - `guidance` 每行并列前两季实际与下一季指引。`current` 为指引中值（使用标准 unit），`tolerance` 是公司公布的正负区间；没有区间用 null。`approximate` 标记约数。
-- `actuals` 恰好两项，按时间从旧到新，以 `{period, metric_id, row_label, field}` 引用 metrics 行的 previous / current，不重复手填数值。切换财季时同步期间及引用。
+- `actuals` 恰好两项，按时间从旧到新，以 `{period, metric_id, row_id, row_label, field}` 引用 metrics 行的 previous / current，不重复手填数值。切换财季时同步期间及引用。
 - 变化由前端以指引中值对比最近一季实际自动计算；毛利率使用百分点，收入和 EPS 使用百分比。此为指引比较，不标为已实现增长。
 - 精简页面文案不删除 direct / calculated / proxy / secondary 等证据标记。
 
@@ -114,7 +124,7 @@ schema_version 仍为 2，新增必填 `ecosystem`；已有美光指标与财季
 - 可选 `digits` 控制展示精度。`change` 只用于明确标为报告值的同比等例外；如 NVIDIA 数据中心摘要采用舍入金额、同比用报告值。
 - 毛利率、营业利润率的变化用百分点。亏损或零基数用金额变化；低且舍入的基数可用 `change_mode=absolute`，例如三星 DS 利润。
 - 每个输入均需对应来源。两份报告提供本期与同期时，在 `source_ids` 同时列出，PDF 链接指向各自相应页。来源定位在展开区可见，表格指标名称可直接打开原文。
-- AWS / Google Cloud 可用云分部营业利润。Microsoft 使用 Intelligent Cloud（含 Azure、服务器等）；Oracle OCI 没有独立利润时只标集团营业利润；三星 DS 利润不能改标为 Memory 利润。
+- AWS / Google Cloud 可用云分部营业利润。Microsoft 的 Azure 收入使用公司重列口径，Intelligent Cloud 利润保留原分部口径；Oracle OCI 没有独立利润时只标集团营业利润；三星 DS 利润不能改标为 Memory 利润。
 - 云厂商资本开支与现金流采用集团口径。现金购置 PP&E、净资本开支、融资租赁确认额、本金支付、供应商融资与客户预付款要分清。数字指引也必须写出所用口径。
 - 资本开支、云收入、GPU 收入与存储厂收入均非美光的直接内存采购量。不要由收入倒推位元量，不汇总为美光订单或市场供需缺口。
 

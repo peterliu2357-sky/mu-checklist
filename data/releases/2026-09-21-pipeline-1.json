@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "migration": true,
+  "base_commit": "19ba4aa7e60e66eefd1ec80b9159514f52268184",
+  "base_revision": "2026-09-20-check-5",
+  "base_sha256": "48ccc22b7d15e53944f60b93e5714b65b0055c00faecd59bcecc467835e02d5c",
+  "artifact_sha256": "39d8dcf12bbe9123943cf6b6a9a2c2a19f1b2513e011e731d497a150148b5064",
+  "ledger_sha256": "c9c9e1a109bae8370fc27f3338770a71b6405c69791ef2acbc1a240ca635809d",
+  "evidence_sha256": "af6cf6d2ebd1a111d02c09b57cf70f2fa3e66fdb16deb6784ccf3e9e39e9ffe3",
+  "catalog_sha256": "ebd527d7234fd27380f0e77ac7b66672d69f4ca2e0e84738439203f3f269f8d6",
+  "scope": "architecture",
+  "created_at": "2026-09-21T16:44:34.677Z",
+  "summary": "Schema-2 compatible canonical-record migration; values and source-check dates preserved."
+}

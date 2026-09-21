@@ -1,0 +1,78 @@
+name: Monitor checks and Pages
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: monitor-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: Data and UI contracts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - name: Validate generated data and evidence
+        run: npm run verify
+      - name: Verify release transition
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          if [[ "$BASE_SHA" =~ ^[a-f0-9]{40}$ ]] && [[ "$BASE_SHA" != 0000000000000000000000000000000000000000 ]]; then
+            npm run monitor -- verify --base "$BASE_SHA"
+          fi
+      - name: Regression and failure tests (offline fixtures)
+        run: npm test
+      - name: Install test browser
+        run: npx playwright install --with-deps chromium --only-shell
+      - name: Mobile and interface contract tests
+        run: npm run test:ui
+      - name: Build verified site only
+        run: npm run build
+      - name: Upload verified site
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+  deploy:
+    name: Publish verified artifact
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: check
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy the artifact that passed checks
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  verify-live:
+    name: Verify published data
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+      - run: npm ci --ignore-scripts
+      - name: Confirm online revision and data hash
+        run: npm run monitor -- verify-live --url https://peterliu2357-sky.github.io/mu-checklist/

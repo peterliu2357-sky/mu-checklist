@@ -1,0 +1,63 @@
+{
+  "calculations": [
+    {
+      "target": "mu.inventory.receivables_revenue",
+      "op": "ratio_pct",
+      "inputs": [
+        "mu.inventory.receivables",
+        "mu.revenue.total"
+      ]
+    },
+    {
+      "target": "mu.revenue.datacenter_share",
+      "op": "sum_ratio_pct",
+      "inputs": [
+        "mu.revenue.cmbu",
+        "mu.revenue.cdbu",
+        "mu.revenue.total"
+      ]
+    },
+    {
+      "target": "mu.cash.gross_fcf",
+      "op": "difference",
+      "inputs": [
+        "mu.cash.operating",
+        "mu.cash.ppe"
+      ]
+    },
+    {
+      "target": "mu.cash.profit_conversion",
+      "op": "ratio_pct",
+      "inputs": [
+        "mu.cash.operating",
+        "input.micron.net_income"
+      ]
+    },
+    {
+      "target": "mu.capex.revenue_ratio",
+      "op": "ratio_pct",
+      "inputs": [
+        "mu.capex.net",
+        "mu.revenue.total"
+      ]
+    },
+    {
+      "target": "mu.capex.coverage",
+      "op": "ratio",
+      "inputs": [
+        "mu.cash.operating",
+        "mu.capex.net"
+      ]
+    },
+    {
+      "target": "mu.capex.net_cash",
+      "op": "net_cash",
+      "inputs": [
+        "input.micron.cash",
+        "input.micron.short_investments",
+        "input.micron.long_investments",
+        "input.micron.debt"
+      ]
+    }
+  ]
+}

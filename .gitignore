@@ -1,0 +1,6 @@
+node_modules/
+.monitor/
+dist/
+test-results/
+playwright-report/
+*.tmp
