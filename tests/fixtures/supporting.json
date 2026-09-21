@@ -1,0 +1,82 @@
+{
+  "input.micron.net_income": {
+    "id": "net_income",
+    "label": "GAAP 净利润",
+    "current": 28243,
+    "previous": 13785,
+    "unit": "USDm",
+    "source_ids": [
+      "financial"
+    ],
+    "kind": "实际",
+    "note": "迁移自已发布计算口径中的输入；尚未按新取证协议重新核查。",
+    "period": "FY2026 Q3 / Q2",
+    "change": null,
+    "location": "Quarterly financial summary / Consolidated statements of operations",
+    "evidence_type": "direct"
+  },
+  "input.micron.cash": {
+    "id": "cash",
+    "label": "现金及现金等价物",
+    "current": 24995,
+    "previous": 13908,
+    "unit": "USDm",
+    "source_ids": [
+      "cash_balance"
+    ],
+    "kind": "实际",
+    "note": "迁移自已发布计算口径中的输入；尚未按新取证协议重新核查。",
+    "period": "FY2026 Q3 / Q2",
+    "change": null,
+    "location": "第 42 页 · Cash, investments and debt",
+    "evidence_type": "direct"
+  },
+  "input.micron.short_investments": {
+    "id": "short_investments",
+    "label": "短期投资",
+    "current": 1027,
+    "previous": 681,
+    "unit": "USDm",
+    "source_ids": [
+      "cash_balance"
+    ],
+    "kind": "实际",
+    "note": "迁移自已发布计算口径中的输入；尚未按新取证协议重新核查。",
+    "period": "FY2026 Q3 / Q2",
+    "change": null,
+    "location": "第 42 页 · Cash, investments and debt",
+    "evidence_type": "direct"
+  },
+  "input.micron.long_investments": {
+    "id": "long_investments",
+    "label": "长期投资",
+    "current": 4106,
+    "previous": 2038,
+    "unit": "USDm",
+    "source_ids": [
+      "cash_balance"
+    ],
+    "kind": "实际",
+    "note": "迁移自已发布计算口径中的输入；尚未按新取证协议重新核查。",
+    "period": "FY2026 Q3 / Q2",
+    "change": null,
+    "location": "第 42 页 · Cash, investments and debt",
+    "evidence_type": "direct"
+  },
+  "input.micron.debt": {
+    "id": "debt",
+    "label": "债务",
+    "current": 5722,
+    "previous": 10142,
+    "unit": "USDm",
+    "source_ids": [
+      "cash_balance"
+    ],
+    "kind": "实际",
+    "note": "迁移自已发布计算口径中的输入；尚未按新取证协议重新核查。",
+    "period": "FY2026 Q3 / Q2",
+    "change": null,
+    "location": "第 42 页 · Cash, investments and debt",
+    "evidence_type": "direct"
+  }
+}

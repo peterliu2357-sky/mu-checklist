@@ -1,0 +1,901 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://peterliu2357-sky.github.io/mu-checklist/schemas/monitor.schema.json",
+  "type": "object",
+  "properties": {
+    "revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "updated_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "last_successful_check_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "last_attempt_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "financial_period": {
+      "type": "string",
+      "minLength": 1
+    },
+    "financial_as_of": {
+      "type": "string",
+      "minLength": 1
+    },
+    "financial_published_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "last_source_audit_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "schema_version": {
+      "const": 2
+    },
+    "next_earnings_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "expected_report_review_by": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "automation": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "cadence": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "enabled",
+        "cadence",
+        "note"
+      ],
+      "additionalProperties": false
+    },
+    "quote": {
+      "type": "object",
+      "properties": {
+        "price": {
+          "type": "number"
+        },
+        "previous_close": {
+          "type": "number"
+        },
+        "as_of": {
+          "type": "string",
+          "minLength": 1
+        },
+        "session": {
+          "const": "regular_close"
+        },
+        "source_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "checked_at": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "price",
+        "previous_close",
+        "as_of",
+        "session",
+        "source_id",
+        "checked_at"
+      ],
+      "additionalProperties": false
+    },
+    "overview": {
+      "type": "object",
+      "properties": {
+        "fact_cards": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "metric_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "row_label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "row_id": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "metric_id",
+              "row_label",
+              "row_id"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        },
+        "gaps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "fact_cards",
+        "gaps"
+      ],
+      "additionalProperties": false
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "date": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_id": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "date",
+          "title",
+          "source_id"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "changes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "text": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "date",
+          "title",
+          "text"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "sources": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "short_label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "url": {
+            "type": "string",
+            "pattern": "^https://[^\\s]+$"
+          },
+          "published_at": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "checked_at": {
+            "type": "string",
+            "minLength": 1
+          },
+          "locator": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "label",
+          "short_label",
+          "url",
+          "published_at",
+          "checked_at",
+          "locator",
+          "type"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "metrics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "category": {
+            "enum": [
+              "business",
+              "industry"
+            ]
+          },
+          "rows": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "label": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "current": {
+                  "type": [
+                    "number",
+                    "string",
+                    "null"
+                  ]
+                },
+                "previous": {
+                  "type": [
+                    "number",
+                    "string",
+                    "null"
+                  ]
+                },
+                "unit": {
+                  "type": "string"
+                },
+                "source_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "minItems": 1
+                },
+                "kind": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "note": {
+                  "type": "string"
+                },
+                "period": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "change": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "location": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "evidence_type": {
+                  "enum": [
+                    "direct",
+                    "calculated",
+                    "proxy",
+                    "secondary",
+                    "unavailable"
+                  ]
+                }
+              },
+              "required": [
+                "id",
+                "label",
+                "current",
+                "previous",
+                "unit",
+                "source_ids",
+                "kind",
+                "note",
+                "period",
+                "change",
+                "location",
+                "evidence_type"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1
+          },
+          "limits": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "period": {
+            "type": "string",
+            "minLength": 1
+          },
+          "checked_at": {
+            "type": "string",
+            "minLength": 1
+          },
+          "next_review": {
+            "type": "string",
+            "minLength": 1
+          },
+          "definition": {
+            "type": "string",
+            "minLength": 1
+          },
+          "interpretation": {
+            "type": "string"
+          },
+          "interpretation_sources": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "category",
+          "rows",
+          "limits",
+          "period",
+          "checked_at",
+          "next_review",
+          "definition",
+          "interpretation"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "methodology": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "check_log": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "at": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "enum": [
+              "success",
+              "partial",
+              "failed"
+            ]
+          },
+          "scope": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "at",
+          "status",
+          "text"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "guidance": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "current": {
+            "type": "number"
+          },
+          "previous": {
+            "type": [
+              "number",
+              "string",
+              "null"
+            ]
+          },
+          "unit": {
+            "type": "string"
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "kind": {
+            "type": "string",
+            "minLength": 1
+          },
+          "note": {
+            "type": "string"
+          },
+          "period": {
+            "type": "string",
+            "minLength": 1
+          },
+          "change": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "location": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence_type": {
+            "enum": [
+              "direct",
+              "calculated",
+              "proxy",
+              "secondary",
+              "unavailable"
+            ]
+          },
+          "tolerance": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "approximate": {
+            "type": "boolean"
+          },
+          "actuals": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "period": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "metric_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "row_label": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "row_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "field": {
+                  "enum": [
+                    "previous",
+                    "current"
+                  ]
+                }
+              },
+              "required": [
+                "period",
+                "metric_id",
+                "row_label",
+                "row_id",
+                "field"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 2,
+            "maxItems": 2
+          }
+        },
+        "required": [
+          "id",
+          "label",
+          "current",
+          "previous",
+          "unit",
+          "source_ids",
+          "kind",
+          "note",
+          "period",
+          "change",
+          "location",
+          "evidence_type",
+          "tolerance",
+          "approximate",
+          "actuals"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "ecosystem": {
+      "type": "object",
+      "properties": {
+        "checked_at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "groups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "id",
+              "title",
+              "description"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        },
+        "companies": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "ticker": {
+                "type": "string",
+                "minLength": 1
+              },
+              "group": {
+                "type": "string",
+                "minLength": 1
+              },
+              "role": {
+                "type": "string",
+                "minLength": 1
+              },
+              "period": {
+                "type": "string",
+                "minLength": 1
+              },
+              "previous_period": {
+                "type": "string",
+                "minLength": 1
+              },
+              "period_end": {
+                "type": "string",
+                "minLength": 1
+              },
+              "published_at": {
+                "type": "string",
+                "minLength": 1
+              },
+              "checked_at": {
+                "type": "string",
+                "minLength": 1
+              },
+              "scope": {
+                "type": "string",
+                "minLength": 1
+              },
+              "metrics": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "label": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "current": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "previous": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "unit": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "source_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "minItems": 1
+                    },
+                    "location": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "note": {
+                      "type": "string"
+                    },
+                    "evidence_type": {
+                      "enum": [
+                        "direct",
+                        "calculated",
+                        "proxy",
+                        "secondary",
+                        "unavailable"
+                      ]
+                    },
+                    "digits": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 6
+                    },
+                    "change": {
+                      "type": "string"
+                    },
+                    "change_mode": {
+                      "enum": [
+                        "absolute"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "label",
+                    "current",
+                    "previous",
+                    "unit",
+                    "source_ids",
+                    "location",
+                    "note",
+                    "evidence_type"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 1
+              },
+              "outlook": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "label": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "type": {
+                      "enum": [
+                        "numeric",
+                        "text"
+                      ]
+                    },
+                    "value": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "summary": {
+                      "type": "string"
+                    },
+                    "prior_guidance": {
+                      "type": "string"
+                    },
+                    "period": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "issued_at": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "speaker": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "kind": {
+                      "enum": [
+                        "公司指引",
+                        "管理层展望",
+                        "管理层观察",
+                        "公司计划"
+                      ]
+                    },
+                    "evidence_type": {
+                      "enum": [
+                        "direct",
+                        "calculated",
+                        "proxy",
+                        "secondary",
+                        "unavailable"
+                      ]
+                    },
+                    "source_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "minItems": 1
+                    },
+                    "location": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "label",
+                    "type",
+                    "value",
+                    "summary",
+                    "prior_guidance",
+                    "period",
+                    "issued_at",
+                    "speaker",
+                    "kind",
+                    "evidence_type",
+                    "source_ids",
+                    "location"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "notes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "ticker",
+              "group",
+              "role",
+              "period",
+              "previous_period",
+              "period_end",
+              "published_at",
+              "checked_at",
+              "scope",
+              "metrics",
+              "outlook",
+              "notes"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "checked_at",
+        "groups",
+        "companies"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "revision",
+    "updated_at",
+    "last_successful_check_at",
+    "last_attempt_at",
+    "financial_period",
+    "financial_as_of",
+    "financial_published_at",
+    "last_source_audit_at",
+    "schema_version",
+    "next_earnings_at",
+    "expected_report_review_by",
+    "automation",
+    "quote",
+    "overview",
+    "events",
+    "changes",
+    "sources",
+    "metrics",
+    "methodology",
+    "check_log",
+    "guidance",
+    "ecosystem"
+  ],
+  "additionalProperties": false
+}

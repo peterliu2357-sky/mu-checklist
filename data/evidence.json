@@ -1,0 +1,1601 @@
+{
+  "legacy-dda80ee58db67b304562efb15589dd79be346740893c9fe28a33db12129870f8": {
+    "id": "legacy-dda80ee58db67b304562efb15589dd79be346740893c9fe28a33db12129870f8",
+    "mode": "legacy",
+    "record_hash": "dda80ee58db67b304562efb15589dd79be346740893c9fe28a33db12129870f8",
+    "source_ids": [
+      "price"
+    ],
+    "location": "已发布记录的来源定位",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-e564fcde1028f4caa4c1c8c77b080178430e14cd0394c65762d28f6d08715259": {
+    "id": "legacy-e564fcde1028f4caa4c1c8c77b080178430e14cd0394c65762d28f6d08715259",
+    "mode": "legacy",
+    "record_hash": "e564fcde1028f4caa4c1c8c77b080178430e14cd0394c65762d28f6d08715259",
+    "source_ids": [
+      "next"
+    ],
+    "location": "已发布记录的来源定位",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-0c679da3e7c9f9204bb97bd7d9060744a63d3621fe19e3118f4aa483ddbcf1c8": {
+    "id": "legacy-0c679da3e7c9f9204bb97bd7d9060744a63d3621fe19e3118f4aa483ddbcf1c8",
+    "mode": "legacy",
+    "record_hash": "0c679da3e7c9f9204bb97bd7d9060744a63d3621fe19e3118f4aa483ddbcf1c8",
+    "source_ids": [
+      "technology"
+    ],
+    "location": "第 22 页 · DRAM · ASPs。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-bd9116bf4e8bfd8bcccbf90b5e2ad69edbe9ade937fa86ab6cc7c0a1cae1323a": {
+    "id": "legacy-bd9116bf4e8bfd8bcccbf90b5e2ad69edbe9ade937fa86ab6cc7c0a1cae1323a",
+    "mode": "legacy",
+    "record_hash": "bd9116bf4e8bfd8bcccbf90b5e2ad69edbe9ade937fa86ab6cc7c0a1cae1323a",
+    "source_ids": [
+      "technology"
+    ],
+    "location": "第 22 页 · NAND · ASPs。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-e8e558c63e1c98f6e73799c4f0ed0057a1cc9a88bf47d68d9479187b10a9e90a": {
+    "id": "legacy-e8e558c63e1c98f6e73799c4f0ed0057a1cc9a88bf47d68d9479187b10a9e90a",
+    "mode": "legacy",
+    "record_hash": "e8e558c63e1c98f6e73799c4f0ed0057a1cc9a88bf47d68d9479187b10a9e90a",
+    "source_ids": [
+      "technology"
+    ],
+    "location": "第 22 页 · DRAM · Bit shipments；原文关键词 low-single digit。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-439569a9800fa3ef267f8a6638476c7e71efd5c24fd9862d60f62bf2b7e5ac60": {
+    "id": "legacy-439569a9800fa3ef267f8a6638476c7e71efd5c24fd9862d60f62bf2b7e5ac60",
+    "mode": "legacy",
+    "record_hash": "439569a9800fa3ef267f8a6638476c7e71efd5c24fd9862d60f62bf2b7e5ac60",
+    "source_ids": [
+      "technology"
+    ],
+    "location": "第 22 页 · NAND · Bit shipments；原文关键词 mid-single digit。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-826ae94ac3188409f8c8faa82b32318fb884a6ad6206521a62f687d1557a246b": {
+    "id": "legacy-826ae94ac3188409f8c8faa82b32318fb884a6ad6206521a62f687d1557a246b",
+    "mode": "legacy",
+    "record_hash": "826ae94ac3188409f8c8faa82b32318fb884a6ad6206521a62f687d1557a246b",
+    "source_ids": [
+      "mobile_bits"
+    ],
+    "location": "第 25 页 · MCBU · lower bit shipments。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-bcc66f0de49e11328f2580da3e2f5962f6a4714700ebc50da9953d7be8815505": {
+    "id": "legacy-bcc66f0de49e11328f2580da3e2f5962f6a4714700ebc50da9953d7be8815505",
+    "mode": "legacy",
+    "record_hash": "bcc66f0de49e11328f2580da3e2f5962f6a4714700ebc50da9953d7be8815505",
+    "source_ids": [
+      "q3",
+      "q2"
+    ],
+    "location": "本期：FQ3 10-Q p13 Note 6；上期：FQ2 10-Q Note 6。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-177c60ea5e192b2c350f4484324cde2bf089abf4549f6b1b8cc30130b17eb8bb": {
+    "id": "legacy-177c60ea5e192b2c350f4484324cde2bf089abf4549f6b1b8cc30130b17eb8bb",
+    "mode": "legacy",
+    "record_hash": "177c60ea5e192b2c350f4484324cde2bf089abf4549f6b1b8cc30130b17eb8bb",
+    "source_ids": [
+      "q3",
+      "q2"
+    ],
+    "location": "本期：FQ3 10-Q p13 Note 6；上期：FQ2 10-Q Note 6。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-24eee9f9dff534e7457c932d937e4ce3aecadda5740fc55f5747c035868bcfe1": {
+    "id": "legacy-24eee9f9dff534e7457c932d937e4ce3aecadda5740fc55f5747c035868bcfe1",
+    "mode": "legacy",
+    "record_hash": "24eee9f9dff534e7457c932d937e4ce3aecadda5740fc55f5747c035868bcfe1",
+    "source_ids": [
+      "q3",
+      "q2"
+    ],
+    "location": "本期：FQ3 10-Q p13 Note 6；上期：FQ2 10-Q Note 6。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-cadaca70cd8d4f3f21d481017c14c0d6d9bc79c97c7315a9cf484b13f5ddeba9": {
+    "id": "legacy-cadaca70cd8d4f3f21d481017c14c0d6d9bc79c97c7315a9cf484b13f5ddeba9",
+    "mode": "legacy",
+    "record_hash": "cadaca70cd8d4f3f21d481017c14c0d6d9bc79c97c7315a9cf484b13f5ddeba9",
+    "source_ids": [
+      "q3",
+      "q2"
+    ],
+    "location": "本期：FQ3 10-Q p13 Note 6；上期：FQ2 10-Q Note 6。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-95a61a68a55d7b376a5556f21dd0c38e7fde76b81088f01451caf57594f792d3": {
+    "id": "legacy-95a61a68a55d7b376a5556f21dd0c38e7fde76b81088f01451caf57594f792d3",
+    "mode": "legacy",
+    "record_hash": "95a61a68a55d7b376a5556f21dd0c38e7fde76b81088f01451caf57594f792d3",
+    "source_ids": [
+      "inventory_days"
+    ],
+    "location": "第 9 页 · Inventory · days of inventory。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-6059b0360c7c2ff35cdcade0f7d8d168b1395cac846321ff379fd758c9e7d4ae": {
+    "id": "legacy-6059b0360c7c2ff35cdcade0f7d8d168b1395cac846321ff379fd758c9e7d4ae",
+    "mode": "legacy",
+    "record_hash": "6059b0360c7c2ff35cdcade0f7d8d168b1395cac846321ff379fd758c9e7d4ae",
+    "source_ids": [
+      "q3",
+      "q2"
+    ],
+    "location": "本期：FQ3 10-Q p13 Note 5；上期：FQ2 10-Q Note 5。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-e3667a7680c8e54d42a21b0c1c32fdfa35cd3b0f16a050ddaa385a8a814304dd": {
+    "id": "legacy-e3667a7680c8e54d42a21b0c1c32fdfa35cd3b0f16a050ddaa385a8a814304dd",
+    "mode": "legacy",
+    "record_hash": "e3667a7680c8e54d42a21b0c1c32fdfa35cd3b0f16a050ddaa385a8a814304dd",
+    "source_ids": [
+      "q3",
+      "q2",
+      "financial"
+    ],
+    "location": "贸易应收来自两季 10-Q Note 5；收入来自财报两季比较。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-7fed8ce2eb6f884238ab5f0e0981a9f206673e3c16afc4feeaaeef744b82e486": {
+    "id": "legacy-7fed8ce2eb6f884238ab5f0e0981a9f206673e3c16afc4feeaaeef744b82e486",
+    "mode": "legacy",
+    "record_hash": "7fed8ce2eb6f884238ab5f0e0981a9f206673e3c16afc4feeaaeef744b82e486",
+    "source_ids": [
+      "financial"
+    ],
+    "location": "Quarterly financial summary / Consolidated statements of operations",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-a867e0fa1ca4c10301d60b201ebb0061414fd49f0c1f1446efee7e906b75264d": {
+    "id": "legacy-a867e0fa1ca4c10301d60b201ebb0061414fd49f0c1f1446efee7e906b75264d",
+    "mode": "legacy",
+    "record_hash": "a867e0fa1ca4c10301d60b201ebb0061414fd49f0c1f1446efee7e906b75264d",
+    "source_ids": [
+      "technology_revenue"
+    ],
+    "location": "第 33 页 · DRAM；FQ2-26 → FQ3-26。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-0b78b37d226283e880820a0638899caa1114e04e5cf1f012367854f6599258ab": {
+    "id": "legacy-0b78b37d226283e880820a0638899caa1114e04e5cf1f012367854f6599258ab",
+    "mode": "legacy",
+    "record_hash": "0b78b37d226283e880820a0638899caa1114e04e5cf1f012367854f6599258ab",
+    "source_ids": [
+      "technology_revenue"
+    ],
+    "location": "第 33 页 · NAND；FQ2-26 → FQ3-26。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-3fa66c34c3084737f42acfc11578c5be5115f5e4fa61f46dbd3f4b0f74ec3a41": {
+    "id": "legacy-3fa66c34c3084737f42acfc11578c5be5115f5e4fa61f46dbd3f4b0f74ec3a41",
+    "mode": "legacy",
+    "record_hash": "3fa66c34c3084737f42acfc11578c5be5115f5e4fa61f46dbd3f4b0f74ec3a41",
+    "source_ids": [
+      "business"
+    ],
+    "location": "第 23 页 · Quarterly business unit financial results",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-05dd299e39a671a4a3441e47e3e9e74ba656f0c733d0398543d7d397d99be96f": {
+    "id": "legacy-05dd299e39a671a4a3441e47e3e9e74ba656f0c733d0398543d7d397d99be96f",
+    "mode": "legacy",
+    "record_hash": "05dd299e39a671a4a3441e47e3e9e74ba656f0c733d0398543d7d397d99be96f",
+    "source_ids": [
+      "business"
+    ],
+    "location": "第 23 页 · Quarterly business unit financial results",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-ed2bdf9282dd9aa91f76be017e8c85790af4f37da191bd94c37b197eaeed56a6": {
+    "id": "legacy-ed2bdf9282dd9aa91f76be017e8c85790af4f37da191bd94c37b197eaeed56a6",
+    "mode": "legacy",
+    "record_hash": "ed2bdf9282dd9aa91f76be017e8c85790af4f37da191bd94c37b197eaeed56a6",
+    "source_ids": [
+      "business",
+      "financial"
+    ],
+    "location": "第 23 页 · Quarterly business unit financial results；Quarterly financial summary / Consolidated statements of operations",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-081fd7bb79d46a41ceaad503f3dc6aaf2ef140bdad54ef5238a8911f9a6f63a6": {
+    "id": "legacy-081fd7bb79d46a41ceaad503f3dc6aaf2ef140bdad54ef5238a8911f9a6f63a6",
+    "mode": "legacy",
+    "record_hash": "081fd7bb79d46a41ceaad503f3dc6aaf2ef140bdad54ef5238a8911f9a6f63a6",
+    "source_ids": [
+      "business"
+    ],
+    "location": "第 23 页 · MCBU · Revenue。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-c36bfa585a4865b944f34c0f131d9f96f089380387e41418b1d32dfd267761d5": {
+    "id": "legacy-c36bfa585a4865b944f34c0f131d9f96f089380387e41418b1d32dfd267761d5",
+    "mode": "legacy",
+    "record_hash": "c36bfa585a4865b944f34c0f131d9f96f089380387e41418b1d32dfd267761d5",
+    "source_ids": [
+      "business"
+    ],
+    "location": "第 23 页 · AEBU · Revenue。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-1606b4d6d53865c7c2c2ae5194a1122414e2ca2e3db39cea6e979025552f294d": {
+    "id": "legacy-1606b4d6d53865c7c2c2ae5194a1122414e2ca2e3db39cea6e979025552f294d",
+    "mode": "legacy",
+    "record_hash": "1606b4d6d53865c7c2c2ae5194a1122414e2ca2e3db39cea6e979025552f294d",
+    "source_ids": [
+      "cash_table"
+    ],
+    "location": "第 41 页 · Non-GAAP diluted earnings per share。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-a1d3726a10b05fa79a152a7866ca62d7fee46f5a347562690d4391d7b4fa2de2": {
+    "id": "legacy-a1d3726a10b05fa79a152a7866ca62d7fee46f5a347562690d4391d7b4fa2de2",
+    "mode": "legacy",
+    "record_hash": "a1d3726a10b05fa79a152a7866ca62d7fee46f5a347562690d4391d7b4fa2de2",
+    "source_ids": [
+      "cash_table"
+    ],
+    "location": "第 41 页 · GAAP diluted earnings per share。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-c3be7b49a44ab3ef41b633d6ce75e51c3015f40fd7567827d6341ec62ba5f992": {
+    "id": "legacy-c3be7b49a44ab3ef41b633d6ce75e51c3015f40fd7567827d6341ec62ba5f992",
+    "mode": "legacy",
+    "record_hash": "c3be7b49a44ab3ef41b633d6ce75e51c3015f40fd7567827d6341ec62ba5f992",
+    "source_ids": [
+      "financial"
+    ],
+    "location": "财报季度比较 / 利润表；FQ2-26 → FQ3-26。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-d74b78f4fe786b9f8c2a87150b8d7e3d1e0b16a4b3a420f213b0bba544f6f2be": {
+    "id": "legacy-d74b78f4fe786b9f8c2a87150b8d7e3d1e0b16a4b3a420f213b0bba544f6f2be",
+    "mode": "legacy",
+    "record_hash": "d74b78f4fe786b9f8c2a87150b8d7e3d1e0b16a4b3a420f213b0bba544f6f2be",
+    "source_ids": [
+      "financial"
+    ],
+    "location": "财报季度比较 / 利润表；FQ2-26 → FQ3-26。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-e81a5b509728a4f077369761bfd0b0bde38c16b8d647ce767d96fcce1d16e2b8": {
+    "id": "legacy-e81a5b509728a4f077369761bfd0b0bde38c16b8d647ce767d96fcce1d16e2b8",
+    "mode": "legacy",
+    "record_hash": "e81a5b509728a4f077369761bfd0b0bde38c16b8d647ce767d96fcce1d16e2b8",
+    "source_ids": [
+      "financial"
+    ],
+    "location": "财报季度比较 / 利润表；FQ2-26 → FQ3-26。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-39951fca60fa8cf40c66b9f18cd057c974ec1dd427430c2dab057a54db778216": {
+    "id": "legacy-39951fca60fa8cf40c66b9f18cd057c974ec1dd427430c2dab057a54db778216",
+    "mode": "legacy",
+    "record_hash": "39951fca60fa8cf40c66b9f18cd057c974ec1dd427430c2dab057a54db778216",
+    "source_ids": [
+      "financial"
+    ],
+    "location": "财报季度比较 / 利润表；FQ2-26 → FQ3-26。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-971f62e93d3c207f447237b1d32466b409b57f071ed5fefca7b0dc7adcc3173a": {
+    "id": "legacy-971f62e93d3c207f447237b1d32466b409b57f071ed5fefca7b0dc7adcc3173a",
+    "mode": "legacy",
+    "record_hash": "971f62e93d3c207f447237b1d32466b409b57f071ed5fefca7b0dc7adcc3173a",
+    "source_ids": [
+      "guidance"
+    ],
+    "location": "第 28 页 · Gross margin · Non-GAAP。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-cf6545480f1c2e6c7dbe6a764f798929f53a26fb7cb60b49964e139ac506a177": {
+    "id": "legacy-cf6545480f1c2e6c7dbe6a764f798929f53a26fb7cb60b49964e139ac506a177",
+    "mode": "legacy",
+    "record_hash": "cf6545480f1c2e6c7dbe6a764f798929f53a26fb7cb60b49964e139ac506a177",
+    "source_ids": [
+      "hbm_product"
+    ],
+    "location": "管理层说明第 4 页讨论组合与位元成本趋势，未给可比的同组合降本百分比。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-f5df8f1aa8ddbf44d7884bfa26c6dd294b2f600943b1fb55238614698df7ce9e": {
+    "id": "legacy-f5df8f1aa8ddbf44d7884bfa26c6dd294b2f600943b1fb55238614698df7ce9e",
+    "mode": "legacy",
+    "record_hash": "f5df8f1aa8ddbf44d7884bfa26c6dd294b2f600943b1fb55238614698df7ce9e",
+    "source_ids": [
+      "cash_table"
+    ],
+    "location": "第 41 页 · 单季现金流调节表 · FQ2-26 → FQ3-26。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-17f041bd763b3d68c53f244e88a967cbca5aa66c4575cf432e925df8a45b786a": {
+    "id": "legacy-17f041bd763b3d68c53f244e88a967cbca5aa66c4575cf432e925df8a45b786a",
+    "mode": "legacy",
+    "record_hash": "17f041bd763b3d68c53f244e88a967cbca5aa66c4575cf432e925df8a45b786a",
+    "source_ids": [
+      "cash_table"
+    ],
+    "location": "第 41 页 · 单季现金流调节表 · FQ2-26 → FQ3-26。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-b9a99d94d5495e45a03231c479ea753da19b30951bb2e61d342a5c11c3cf809b": {
+    "id": "legacy-b9a99d94d5495e45a03231c479ea753da19b30951bb2e61d342a5c11c3cf809b",
+    "mode": "legacy",
+    "record_hash": "b9a99d94d5495e45a03231c479ea753da19b30951bb2e61d342a5c11c3cf809b",
+    "source_ids": [
+      "cash_table"
+    ],
+    "location": "第 41 页 · 单季现金流调节表 · FQ2-26 → FQ3-26。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-ed7bd9f77075af7c0ce587d5dd4a7cc654fb8cb2044762f38ea042e07a266188": {
+    "id": "legacy-ed7bd9f77075af7c0ce587d5dd4a7cc654fb8cb2044762f38ea042e07a266188",
+    "mode": "legacy",
+    "record_hash": "ed7bd9f77075af7c0ce587d5dd4a7cc654fb8cb2044762f38ea042e07a266188",
+    "source_ids": [
+      "cash_table"
+    ],
+    "location": "第 41 页 · 单季现金流调节表 · FQ2-26 → FQ3-26。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-afa4c56fffa02e2fee7e4e41ab0ac57ffc53966ee5bade6f7c23eea2564f672d": {
+    "id": "legacy-afa4c56fffa02e2fee7e4e41ab0ac57ffc53966ee5bade6f7c23eea2564f672d",
+    "mode": "legacy",
+    "record_hash": "afa4c56fffa02e2fee7e4e41ab0ac57ffc53966ee5bade6f7c23eea2564f672d",
+    "source_ids": [
+      "cash_table"
+    ],
+    "location": "第 41 页 · 单季现金流调节表 · FQ2-26 → FQ3-26。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-e22e9ce83d379880e9cae09b5c92cf9899a61f0ef715525d76596cc07bb98640": {
+    "id": "legacy-e22e9ce83d379880e9cae09b5c92cf9899a61f0ef715525d76596cc07bb98640",
+    "mode": "legacy",
+    "record_hash": "e22e9ce83d379880e9cae09b5c92cf9899a61f0ef715525d76596cc07bb98640",
+    "source_ids": [
+      "cash_table"
+    ],
+    "location": "第 41 页 · 单季现金流调节表 · FQ2-26 → FQ3-26。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-1e0c01b4d6f26ff750ae5bba8ce7684111800f0ccd6daec21ac47260d4e8402a": {
+    "id": "legacy-1e0c01b4d6f26ff750ae5bba8ce7684111800f0ccd6daec21ac47260d4e8402a",
+    "mode": "legacy",
+    "record_hash": "1e0c01b4d6f26ff750ae5bba8ce7684111800f0ccd6daec21ac47260d4e8402a",
+    "source_ids": [
+      "cash_table",
+      "financial"
+    ],
+    "location": "第 41 页 · 单季现金流调节表 · FQ2-26 → FQ3-26。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-7b9e28eed4b715b67e868edce16125c43a471be199e4d123d5d22088d40eb0aa": {
+    "id": "legacy-7b9e28eed4b715b67e868edce16125c43a471be199e4d123d5d22088d40eb0aa",
+    "mode": "legacy",
+    "record_hash": "7b9e28eed4b715b67e868edce16125c43a471be199e4d123d5d22088d40eb0aa",
+    "source_ids": [
+      "cash_table"
+    ],
+    "location": "第 41 页 · Investments in capital expenditures, net。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-abd5f806fbb140633133c9a1c79897bc125e92fb3aa56f0d436989a7d73db54f": {
+    "id": "legacy-abd5f806fbb140633133c9a1c79897bc125e92fb3aa56f0d436989a7d73db54f",
+    "mode": "legacy",
+    "record_hash": "abd5f806fbb140633133c9a1c79897bc125e92fb3aa56f0d436989a7d73db54f",
+    "source_ids": [
+      "cash_table",
+      "financial"
+    ],
+    "location": "净开支：业绩材料 p41；收入：财报季度比较。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-c193065fc08e7c57a1bc526eb1ada6b25a5f32d1b721967019fa30c28288764c": {
+    "id": "legacy-c193065fc08e7c57a1bc526eb1ada6b25a5f32d1b721967019fa30c28288764c",
+    "mode": "legacy",
+    "record_hash": "c193065fc08e7c57a1bc526eb1ada6b25a5f32d1b721967019fa30c28288764c",
+    "source_ids": [
+      "cash_table"
+    ],
+    "location": "第 41 页 · 同季经营现金流与净资本开支。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-82b97b7ec3fbdc503c183035b657736d0f0cd0b86558f8b4aaea85d3d88086ad": {
+    "id": "legacy-82b97b7ec3fbdc503c183035b657736d0f0cd0b86558f8b4aaea85d3d88086ad",
+    "mode": "legacy",
+    "record_hash": "82b97b7ec3fbdc503c183035b657736d0f0cd0b86558f8b4aaea85d3d88086ad",
+    "source_ids": [
+      "capex_plan"
+    ],
+    "location": "第 29 页 · Outlook。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-1acaabd13868938fcb074881d0cacc9192bd5781b45159747627de9f663e8e1f": {
+    "id": "legacy-1acaabd13868938fcb074881d0cacc9192bd5781b45159747627de9f663e8e1f",
+    "mode": "legacy",
+    "record_hash": "1acaabd13868938fcb074881d0cacc9192bd5781b45159747627de9f663e8e1f",
+    "source_ids": [
+      "capex_plan"
+    ],
+    "location": "第 29 页 · Outlook。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-eb9a8bbebd4da7ac215374acdcfbb87416a32505f29b3bdf7a03fb07923ef08c": {
+    "id": "legacy-eb9a8bbebd4da7ac215374acdcfbb87416a32505f29b3bdf7a03fb07923ef08c",
+    "mode": "legacy",
+    "record_hash": "eb9a8bbebd4da7ac215374acdcfbb87416a32505f29b3bdf7a03fb07923ef08c",
+    "source_ids": [
+      "cash_balance"
+    ],
+    "location": "第 42 页 · 现金、短长期投资及债务。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-58777f0a3be950f0affcdfb16052346226b322e4d17ced427d2c3ba190d6a0b4": {
+    "id": "legacy-58777f0a3be950f0affcdfb16052346226b322e4d17ced427d2c3ba190d6a0b4",
+    "mode": "legacy",
+    "record_hash": "58777f0a3be950f0affcdfb16052346226b322e4d17ced427d2c3ba190d6a0b4",
+    "source_ids": [
+      "orders"
+    ],
+    "location": "管理层说明第 2–3 页 · SCAs 数量。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-5d5bd5a0cd6b3e0b6b810a6df1911c03a26120b2eacf022dfa0df27ba1708e0e": {
+    "id": "legacy-5d5bd5a0cd6b3e0b6b810a6df1911c03a26120b2eacf022dfa0df27ba1708e0e",
+    "mode": "legacy",
+    "record_hash": "5d5bd5a0cd6b3e0b6b810a6df1911c03a26120b2eacf022dfa0df27ba1708e0e",
+    "source_ids": [
+      "orders"
+    ],
+    "location": "管理层说明第 3 页 · 16 份协议覆盖量。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-98dedb55d75dfc22d9f86a6042c1d816a916c49112fa948f225189bdcbe62de8": {
+    "id": "legacy-98dedb55d75dfc22d9f86a6042c1d816a916c49112fa948f225189bdcbe62de8",
+    "mode": "legacy",
+    "record_hash": "98dedb55d75dfc22d9f86a6042c1d816a916c49112fa948f225189bdcbe62de8",
+    "source_ids": [
+      "q3_orders"
+    ],
+    "location": "10-Q 第 21 页 · Note 14 · 截至 05-28。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-8a67afc40526c014c5814e5b9aa1bacaa7dee0b31d0f1e591dfcf7c97635d11f": {
+    "id": "legacy-8a67afc40526c014c5814e5b9aa1bacaa7dee0b31d0f1e591dfcf7c97635d11f",
+    "mode": "legacy",
+    "record_hash": "8a67afc40526c014c5814e5b9aa1bacaa7dee0b31d0f1e591dfcf7c97635d11f",
+    "source_ids": [
+      "orders_cash"
+    ],
+    "location": "管理层说明第 7 页 · 含季后协议的 RPO。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-6da25c0f70d4006845b920c78d3350be7844af4c08cbc0736dd6290a0df8d8e7": {
+    "id": "legacy-6da25c0f70d4006845b920c78d3350be7844af4c08cbc0736dd6290a0df8d8e7",
+    "mode": "legacy",
+    "record_hash": "6da25c0f70d4006845b920c78d3350be7844af4c08cbc0736dd6290a0df8d8e7",
+    "source_ids": [
+      "q3_orders"
+    ],
+    "location": "10-Q 第 21 页 · Note 14 · contract liabilities。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-c35e6a308d8d4489982d4ed9488043b7e199816087054866e175bf018e5e30c7": {
+    "id": "legacy-c35e6a308d8d4489982d4ed9488043b7e199816087054866e175bf018e5e30c7",
+    "mode": "legacy",
+    "record_hash": "c35e6a308d8d4489982d4ed9488043b7e199816087054866e175bf018e5e30c7",
+    "source_ids": [
+      "orders_cash"
+    ],
+    "location": "管理层说明第 7 页 · 预计现金保证金。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-223ac3b9a7f06575032414ad41b5890bf0f8f57d6fa71bf05cba97577cea6de6": {
+    "id": "legacy-223ac3b9a7f06575032414ad41b5890bf0f8f57d6fa71bf05cba97577cea6de6",
+    "mode": "legacy",
+    "record_hash": "223ac3b9a7f06575032414ad41b5890bf0f8f57d6fa71bf05cba97577cea6de6",
+    "source_ids": [
+      "q3_orders"
+    ],
+    "location": "10-Q 第 21 页 · Note 14 · take-or-pay / pricing。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-777dd77c6b248f9a7ee7beada90f857d777176720e00fab8eca8cdc97281df20": {
+    "id": "legacy-777dd77c6b248f9a7ee7beada90f857d777176720e00fab8eca8cdc97281df20",
+    "mode": "legacy",
+    "record_hash": "777dd77c6b248f9a7ee7beada90f857d777176720e00fab8eca8cdc97281df20",
+    "source_ids": [
+      "hbm_product"
+    ],
+    "location": "管理层说明第 4 页 · Technology and product leadership。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-637f17fd5203788578945f892ded0a9e5bd3e4bac74137f88e54e3a949a0ea7a": {
+    "id": "legacy-637f17fd5203788578945f892ded0a9e5bd3e4bac74137f88e54e3a949a0ea7a",
+    "mode": "legacy",
+    "record_hash": "637f17fd5203788578945f892ded0a9e5bd3e4bac74137f88e54e3a949a0ea7a",
+    "source_ids": [
+      "hbm_highlights"
+    ],
+    "location": "财报 Product highlights · HBM4 / HBM4E。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-1d5b114d488eccffedf5dc6eaad3288802dfb792e6f3f2f1b8a8daccbb144586": {
+    "id": "legacy-1d5b114d488eccffedf5dc6eaad3288802dfb792e6f3f2f1b8a8daccbb144586",
+    "mode": "legacy",
+    "record_hash": "1d5b114d488eccffedf5dc6eaad3288802dfb792e6f3f2f1b8a8daccbb144586",
+    "source_ids": [
+      "hbm_highlights"
+    ],
+    "location": "财报 Product highlights · HBM4 / HBM4E。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-face969761be5c5a321e15191b0c3b1bb5cdb72c0c259a51e797d3ccf0acc0e7": {
+    "id": "legacy-face969761be5c5a321e15191b0c3b1bb5cdb72c0c259a51e797d3ccf0acc0e7",
+    "mode": "legacy",
+    "record_hash": "face969761be5c5a321e15191b0c3b1bb5cdb72c0c259a51e797d3ccf0acc0e7",
+    "source_ids": [
+      "rdimm_512"
+    ],
+    "location": "公告首段及 AMD / Intel 验证段。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-5e0988515249ef6eb5221fa8d515b0d895fc99f603c40bee30cba4ac59011cff": {
+    "id": "legacy-5e0988515249ef6eb5221fa8d515b0d895fc99f603c40bee30cba4ac59011cff",
+    "mode": "legacy",
+    "record_hash": "5e0988515249ef6eb5221fa8d515b0d895fc99f603c40bee30cba4ac59011cff",
+    "source_ids": [
+      "rdimm_512"
+    ],
+    "location": "公告 volume production 段。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-e0fd5153cc693ebda9f5a2fbed5c68eae4337be02fb0eea09df81e70a33b6871": {
+    "id": "legacy-e0fd5153cc693ebda9f5a2fbed5c68eae4337be02fb0eea09df81e70a33b6871",
+    "mode": "legacy",
+    "record_hash": "e0fd5153cc693ebda9f5a2fbed5c68eae4337be02fb0eea09df81e70a33b6871",
+    "source_ids": [
+      "hbm_secondary"
+    ],
+    "location": "媒体正文 Micron 段；2026 自然年 Q1 → Q2。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-0cb09fbd3184525d469e77d663a01d13ed441bd23f5f3a6616b070600782ecb5": {
+    "id": "legacy-0cb09fbd3184525d469e77d663a01d13ed441bd23f5f3a6616b070600782ecb5",
+    "mode": "legacy",
+    "record_hash": "0cb09fbd3184525d469e77d663a01d13ed441bd23f5f3a6616b070600782ecb5",
+    "source_ids": [
+      "hbm_product"
+    ],
+    "location": "本次查阅的管理层说明只含定性良率进度。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-c231a5a82fb54496770acd37453b5acaa47fdc81d0185e704f41c4ade2651ebd": {
+    "id": "legacy-c231a5a82fb54496770acd37453b5acaa47fdc81d0185e704f41c4ade2651ebd",
+    "mode": "legacy",
+    "record_hash": "c231a5a82fb54496770acd37453b5acaa47fdc81d0185e704f41c4ade2651ebd",
+    "source_ids": [
+      "dram"
+    ],
+    "location": "09-07 报告 · 第三季普通型 DRAM 合同价展望。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-08f10193eeb142a76c5839cbda76f0f77440411c943d16d1ff94bf52f413f2e9": {
+    "id": "legacy-08f10193eeb142a76c5839cbda76f0f77440411c943d16d1ff94bf52f413f2e9",
+    "mode": "legacy",
+    "record_hash": "08f10193eeb142a76c5839cbda76f0f77440411c943d16d1ff94bf52f413f2e9",
+    "source_ids": [
+      "contract",
+      "nand_q3"
+    ],
+    "location": "07-03 报告 · 导读 / 首段。 09-10 Summary · contract price trends。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-1c94c925fe2210f371e8a27c9e104b3749dbd69e2f00878f0da50cffa786d0b1": {
+    "id": "legacy-1c94c925fe2210f371e8a27c9e104b3749dbd69e2f00878f0da50cffa786d0b1",
+    "mode": "legacy",
+    "record_hash": "1c94c925fe2210f371e8a27c9e104b3749dbd69e2f00878f0da50cffa786d0b1",
+    "source_ids": [
+      "nand_q3"
+    ],
+    "location": "Summary · contract price trends。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-fc13a5423662062eb893327fbfde4b16e2bee7ec136a2401adb77a42c2a435e0": {
+    "id": "legacy-fc13a5423662062eb893327fbfde4b16e2bee7ec136a2401adb77a42c2a435e0",
+    "mode": "legacy",
+    "record_hash": "fc13a5423662062eb893327fbfde4b16e2bee7ec136a2401adb77a42c2a435e0",
+    "source_ids": [
+      "spot"
+    ],
+    "location": "09-16 现货周报 · DRAM Spot Price。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-a980d5e84da4168814af01ce8ba7eb33b1544c81fc91726ea9a621ae2191fe82": {
+    "id": "legacy-a980d5e84da4168814af01ce8ba7eb33b1544c81fc91726ea9a621ae2191fe82",
+    "mode": "legacy",
+    "record_hash": "a980d5e84da4168814af01ce8ba7eb33b1544c81fc91726ea9a621ae2191fe82",
+    "source_ids": [
+      "spot"
+    ],
+    "location": "09-16 现货周报 · NAND Flash Spot Price。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-024fa47fab18553136b96b3818129502a11ef681b94acaa4759868737846e637": {
+    "id": "legacy-024fa47fab18553136b96b3818129502a11ef681b94acaa4759868737846e637",
+    "mode": "legacy",
+    "record_hash": "024fa47fab18553136b96b3818129502a11ef681b94acaa4759868737846e637",
+    "source_ids": [
+      "supply"
+    ],
+    "location": "TrendForce 07-30 报告 · DRAM supply / NAND Flash capacity。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-9702a61108fde216e97fb76223ea8be8e1f7bb7bd6580abb7d5ba5af5ed78856": {
+    "id": "legacy-9702a61108fde216e97fb76223ea8be8e1f7bb7bd6580abb7d5ba5af5ed78856",
+    "mode": "legacy",
+    "record_hash": "9702a61108fde216e97fb76223ea8be8e1f7bb7bd6580abb7d5ba5af5ed78856",
+    "source_ids": [
+      "nand_2027"
+    ],
+    "location": "Summary · enterprise SSD demand / consumer-market oversupply。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-81ca2cf5e398b0cf07428075e058af001921b6d2d9e3c41e30f563d26f4f812d": {
+    "id": "legacy-81ca2cf5e398b0cf07428075e058af001921b6d2d9e3c41e30f563d26f4f812d",
+    "mode": "legacy",
+    "record_hash": "81ca2cf5e398b0cf07428075e058af001921b6d2d9e3c41e30f563d26f4f812d",
+    "source_ids": [
+      "market_outlook"
+    ],
+    "location": "第 16 页 · Market outlook。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-488e838761b54368f1a3051c6c475f8a07f8d32b1cf9316f606b40c0aa279312": {
+    "id": "legacy-488e838761b54368f1a3051c6c475f8a07f8d32b1cf9316f606b40c0aa279312",
+    "mode": "legacy",
+    "record_hash": "488e838761b54368f1a3051c6c475f8a07f8d32b1cf9316f606b40c0aa279312",
+    "source_ids": [
+      "supply_plans"
+    ],
+    "location": "第 19 页 · Tongluo。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-a6dc662542bfe581698940166076a5e7faaef32301240e465fb7c0d410159544": {
+    "id": "legacy-a6dc662542bfe581698940166076a5e7faaef32301240e465fb7c0d410159544",
+    "mode": "legacy",
+    "record_hash": "a6dc662542bfe581698940166076a5e7faaef32301240e465fb7c0d410159544",
+    "source_ids": [
+      "supply_plans"
+    ],
+    "location": "第 18 页 · ID1 first wafer output。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-d9afcbd42368879cbea6cb21ca7a166f86334b04f6c0f285467479e5931776ba": {
+    "id": "legacy-d9afcbd42368879cbea6cb21ca7a166f86334b04f6c0f285467479e5931776ba",
+    "mode": "legacy",
+    "record_hash": "d9afcbd42368879cbea6cb21ca7a166f86334b04f6c0f285467479e5931776ba",
+    "source_ids": [
+      "singapore"
+    ],
+    "location": "第 19 页 · Singapore HBM packaging。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-2cf1e16f40ac931ec8f0ef91b1d8ce25af5a1da1e03633177f067bca0cf2b532": {
+    "id": "legacy-2cf1e16f40ac931ec8f0ef91b1d8ce25af5a1da1e03633177f067bca0cf2b532",
+    "mode": "legacy",
+    "record_hash": "2cf1e16f40ac931ec8f0ef91b1d8ce25af5a1da1e03633177f067bca0cf2b532",
+    "source_ids": [
+      "ssd"
+    ],
+    "location": "TrendForce 09-01 报告 · 首段 / Micron 段。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-7b616b2fe255b2ea658c6038f6e7a20562adbd5230fc9da04f37cc7200ec7513": {
+    "id": "legacy-7b616b2fe255b2ea658c6038f6e7a20562adbd5230fc9da04f37cc7200ec7513",
+    "mode": "legacy",
+    "record_hash": "7b616b2fe255b2ea658c6038f6e7a20562adbd5230fc9da04f37cc7200ec7513",
+    "source_ids": [
+      "ssd"
+    ],
+    "location": "TrendForce 09-01 报告 · 首段 / Micron 段。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-5dc3a99b70e366e2fb6e96f3dc1405b8e0613189ae253fcf20679723895062a3": {
+    "id": "legacy-5dc3a99b70e366e2fb6e96f3dc1405b8e0613189ae253fcf20679723895062a3",
+    "mode": "legacy",
+    "record_hash": "5dc3a99b70e366e2fb6e96f3dc1405b8e0613189ae253fcf20679723895062a3",
+    "source_ids": [
+      "mobile_bits"
+    ],
+    "location": "第 25 页 · MCBU · lower bit shipments。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-85f2ecdc9e806408f2e59d2aff40405f34c9704c94f1b1cec5912de87cea26b5": {
+    "id": "legacy-85f2ecdc9e806408f2e59d2aff40405f34c9704c94f1b1cec5912de87cea26b5",
+    "mode": "legacy",
+    "record_hash": "85f2ecdc9e806408f2e59d2aff40405f34c9704c94f1b1cec5912de87cea26b5",
+    "source_ids": [
+      "mobile"
+    ],
+    "location": "公开摘要及 Key Highlights。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-6e35f1ca9d8d2ee94432e01e1b5103852e5525e2bbf3174cdf68d141bd177a93": {
+    "id": "legacy-6e35f1ca9d8d2ee94432e01e1b5103852e5525e2bbf3174cdf68d141bd177a93",
+    "mode": "legacy",
+    "record_hash": "6e35f1ca9d8d2ee94432e01e1b5103852e5525e2bbf3174cdf68d141bd177a93",
+    "source_ids": [
+      "mobile"
+    ],
+    "location": "公开摘要没有客户实际库存天数。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-a7c3e4687479ae77411e6d6fa88b226ca2137ec449055be3fb85b595683d408f": {
+    "id": "legacy-a7c3e4687479ae77411e6d6fa88b226ca2137ec449055be3fb85b595683d408f",
+    "mode": "legacy",
+    "record_hash": "a7c3e4687479ae77411e6d6fa88b226ca2137ec449055be3fb85b595683d408f",
+    "source_ids": [
+      "guidance"
+    ],
+    "location": "第 28 页 · Revenue。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-a8cb8b9b542647c4f661230af4e466a1ee3b47df94724397838d6faecc672661": {
+    "id": "legacy-a8cb8b9b542647c4f661230af4e466a1ee3b47df94724397838d6faecc672661",
+    "mode": "legacy",
+    "record_hash": "a8cb8b9b542647c4f661230af4e466a1ee3b47df94724397838d6faecc672661",
+    "source_ids": [
+      "guidance"
+    ],
+    "location": "第 28 页 · Gross margin。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-49037b69411768f5400037ab1c93865ec7b67ebbc40b8e998e1cf027c3311bbf": {
+    "id": "legacy-49037b69411768f5400037ab1c93865ec7b67ebbc40b8e998e1cf027c3311bbf",
+    "mode": "legacy",
+    "record_hash": "49037b69411768f5400037ab1c93865ec7b67ebbc40b8e998e1cf027c3311bbf",
+    "source_ids": [
+      "guidance"
+    ],
+    "location": "第 28 页 · Diluted earnings per share。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-1b6a1f35cb68a8a40def33208f2e805e37c3aede8d4f40bd184edf6b9057dbe9": {
+    "id": "legacy-1b6a1f35cb68a8a40def33208f2e805e37c3aede8d4f40bd184edf6b9057dbe9",
+    "mode": "legacy",
+    "record_hash": "1b6a1f35cb68a8a40def33208f2e805e37c3aede8d4f40bd184edf6b9057dbe9",
+    "source_ids": [
+      "eco_ms_recast"
+    ],
+    "location": "PDF 第 20 页 · As Restated · Azure，FY2026 / FY2025 的 Q4 列。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-d0ec233b152bb1046d2e1f8539de2869111c4ba3cf8f769619f572dad14808ba": {
+    "id": "legacy-d0ec233b152bb1046d2e1f8539de2869111c4ba3cf8f769619f572dad14808ba",
+    "mode": "legacy",
+    "record_hash": "d0ec233b152bb1046d2e1f8539de2869111c4ba3cf8f769619f572dad14808ba",
+    "source_ids": [
+      "eco_ms"
+    ],
+    "location": "Segment Results · Intelligent Cloud · Revenue；2026 / 2025 季度列。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-e30b2d27c087d3422fa7c93ad1bb355f89a7a614228e136661ac1d35c2b1462d": {
+    "id": "legacy-e30b2d27c087d3422fa7c93ad1bb355f89a7a614228e136661ac1d35c2b1462d",
+    "mode": "legacy",
+    "record_hash": "e30b2d27c087d3422fa7c93ad1bb355f89a7a614228e136661ac1d35c2b1462d",
+    "source_ids": [
+      "eco_ms"
+    ],
+    "location": "Segment Results · Intelligent Cloud · Operating income；2026 / 2025 季度列。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-d33a2c407d4fb316b903f133998fd50f9a4109b4932740bed0b0d195ff467ae6": {
+    "id": "legacy-d33a2c407d4fb316b903f133998fd50f9a4109b4932740bed0b0d195ff467ae6",
+    "mode": "legacy",
+    "record_hash": "d33a2c407d4fb316b903f133998fd50f9a4109b4932740bed0b0d195ff467ae6",
+    "source_ids": [
+      "eco_ms"
+    ],
+    "location": "Cash Flows · Additions to property and equipment；2026 / 2025 季度列。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-2b9359b99c4246916fff8ba2eda9d9286cb7dc7e4b45ea0826ca4073340a291e": {
+    "id": "legacy-2b9359b99c4246916fff8ba2eda9d9286cb7dc7e4b45ea0826ca4073340a291e",
+    "mode": "legacy",
+    "record_hash": "2b9359b99c4246916fff8ba2eda9d9286cb7dc7e4b45ea0826ca4073340a291e",
+    "source_ids": [
+      "eco_ms"
+    ],
+    "location": "Cash Flows · Net cash from operations；2026 / 2025 季度列。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-0b1b2464fcd0441db9550d494fc0fdbe0ea8cab2ec962037bb1bdd309ee44d15": {
+    "id": "legacy-0b1b2464fcd0441db9550d494fc0fdbe0ea8cab2ec962037bb1bdd309ee44d15",
+    "mode": "legacy",
+    "record_hash": "0b1b2464fcd0441db9550d494fc0fdbe0ea8cab2ec962037bb1bdd309ee44d15",
+    "source_ids": [
+      "eco_ms_adjusted"
+    ],
+    "location": "PDF 第 24 页 · Adjusted Outlook · Azure revenue。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-3b3cc21306ae41037d6a7627a2ec5fb8246d283872979ef52b9476e485c0ad3a": {
+    "id": "legacy-3b3cc21306ae41037d6a7627a2ec5fb8246d283872979ef52b9476e485c0ad3a",
+    "mode": "legacy",
+    "record_hash": "3b3cc21306ae41037d6a7627a2ec5fb8246d283872979ef52b9476e485c0ad3a",
+    "source_ids": [
+      "eco_ms_call"
+    ],
+    "location": "Q1 outlook · Capital expenditures。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-81309797c6a8d82334076c58a95632ad6a7c351dc25341e0475ee9cb029da188": {
+    "id": "legacy-81309797c6a8d82334076c58a95632ad6a7c351dc25341e0475ee9cb029da188",
+    "mode": "legacy",
+    "record_hash": "81309797c6a8d82334076c58a95632ad6a7c351dc25341e0475ee9cb029da188",
+    "source_ids": [
+      "eco_ms_call"
+    ],
+    "location": "Azure guidance；FY27 full-year commentary。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-00718aac1fe84bee2816523c71eb60a522007254ddbdf094b13bcc7ff81c0156": {
+    "id": "legacy-00718aac1fe84bee2816523c71eb60a522007254ddbdf094b13bcc7ff81c0156",
+    "mode": "legacy",
+    "record_hash": "00718aac1fe84bee2816523c71eb60a522007254ddbdf094b13bcc7ff81c0156",
+    "source_ids": [
+      "eco_ms_call"
+    ],
+    "location": "Useful life update / calendar year 2026 CapEx。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-eef330810c30d96e2d3b15913624703195393ef24bc9c15e2cb5b79f9bd710c0": {
+    "id": "legacy-eef330810c30d96e2d3b15913624703195393ef24bc9c15e2cb5b79f9bd710c0",
+    "mode": "legacy",
+    "record_hash": "eef330810c30d96e2d3b15913624703195393ef24bc9c15e2cb5b79f9bd710c0",
+    "source_ids": [
+      "eco_amazon"
+    ],
+    "location": "Segment Information · AWS · Net sales；2026 / 2025 三个月列。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-2a3d2df4c479a72626075a38b10bd32e3be80ac20d9c01112859a98c777f79df": {
+    "id": "legacy-2a3d2df4c479a72626075a38b10bd32e3be80ac20d9c01112859a98c777f79df",
+    "mode": "legacy",
+    "record_hash": "2a3d2df4c479a72626075a38b10bd32e3be80ac20d9c01112859a98c777f79df",
+    "source_ids": [
+      "eco_amazon"
+    ],
+    "location": "Segment Information · AWS · Operating income；2026 / 2025 三个月列。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-1d108f911c03717cfbea71906cfce25490740dc0f504373e134b7be5f0d351b1": {
+    "id": "legacy-1d108f911c03717cfbea71906cfce25490740dc0f504373e134b7be5f0d351b1",
+    "mode": "legacy",
+    "record_hash": "1d108f911c03717cfbea71906cfce25490740dc0f504373e134b7be5f0d351b1",
+    "source_ids": [
+      "eco_amazon"
+    ],
+    "location": "Statements of Cash Flows · Purchases of property and equipment；三个月列。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-67ac229e3a19363ba6773ed547cad5a102d14ffa9385ffb3ded9c3664b563df7": {
+    "id": "legacy-67ac229e3a19363ba6773ed547cad5a102d14ffa9385ffb3ded9c3664b563df7",
+    "mode": "legacy",
+    "record_hash": "67ac229e3a19363ba6773ed547cad5a102d14ffa9385ffb3ded9c3664b563df7",
+    "source_ids": [
+      "eco_amazon"
+    ],
+    "location": "Statements of Cash Flows · Net cash provided by operating activities；三个月列。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-a5eaf7963819bbec963369d1c23f5e739cb621f759bf6bd93e462dddc7f5a3fb": {
+    "id": "legacy-a5eaf7963819bbec963369d1c23f5e739cb621f759bf6bd93e462dddc7f5a3fb",
+    "mode": "legacy",
+    "record_hash": "a5eaf7963819bbec963369d1c23f5e739cb621f759bf6bd93e462dddc7f5a3fb",
+    "source_ids": [
+      "eco_amazon"
+    ],
+    "location": "Financial Guidance · Third Quarter 2026 Guidance · Operating income。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-d3b1e8102d61cd1be588beefff8e9a0a7a90a5b19c078f3d2e14d7a540cb5af7": {
+    "id": "legacy-d3b1e8102d61cd1be588beefff8e9a0a7a90a5b19c078f3d2e14d7a540cb5af7",
+    "mode": "legacy",
+    "record_hash": "d3b1e8102d61cd1be588beefff8e9a0a7a90a5b19c078f3d2e14d7a540cb5af7",
+    "source_ids": [
+      "eco_amazon"
+    ],
+    "location": "Financial Guidance · Third Quarter 2026 Guidance · Net sales。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-ba6d95ee060f6f9591e53457ec603c74df840785b8baa20ce5c3eec4aa0a5453": {
+    "id": "legacy-ba6d95ee060f6f9591e53457ec603c74df840785b8baa20ce5c3eec4aa0a5453",
+    "mode": "legacy",
+    "record_hash": "ba6d95ee060f6f9591e53457ec603c74df840785b8baa20ce5c3eec4aa0a5453",
+    "source_ids": [
+      "eco_google_cloud"
+    ],
+    "location": "财报 p2 · Google Cloud revenues；2026 / 2025。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-e5f5487714fd317ce82230804eb77186060e0a1a953f616e38fb525e1048dd20": {
+    "id": "legacy-e5f5487714fd317ce82230804eb77186060e0a1a953f616e38fb525e1048dd20",
+    "mode": "legacy",
+    "record_hash": "e5f5487714fd317ce82230804eb77186060e0a1a953f616e38fb525e1048dd20",
+    "source_ids": [
+      "eco_google_cloud"
+    ],
+    "location": "财报 p2 · Segment Operating Results · Google Cloud。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-ef644fd5cdf94d646b1ddabc50dd53bca5086e6a17ed66c40402a9f0c2d87813": {
+    "id": "legacy-ef644fd5cdf94d646b1ddabc50dd53bca5086e6a17ed66c40402a9f0c2d87813",
+    "mode": "legacy",
+    "record_hash": "ef644fd5cdf94d646b1ddabc50dd53bca5086e6a17ed66c40402a9f0c2d87813",
+    "source_ids": [
+      "eco_google_cash"
+    ],
+    "location": "财报 p7 · Purchases of property and equipment；Quarter Ended June 30。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-74c02d62d0c3c3514959e614ba9f91f821822c93711075a7e32f069850223c29": {
+    "id": "legacy-74c02d62d0c3c3514959e614ba9f91f821822c93711075a7e32f069850223c29",
+    "mode": "legacy",
+    "record_hash": "74c02d62d0c3c3514959e614ba9f91f821822c93711075a7e32f069850223c29",
+    "source_ids": [
+      "eco_google_cash"
+    ],
+    "location": "财报 p7 · Net cash provided by operating activities；季度列。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-8938701c51fa1433b6c2f6eb8f2e18f297a7600f4ca569a3f8023607d244c42c": {
+    "id": "legacy-8938701c51fa1433b6c2f6eb8f2e18f297a7600f4ca569a3f8023607d244c42c",
+    "mode": "legacy",
+    "record_hash": "8938701c51fa1433b6c2f6eb8f2e18f297a7600f4ca569a3f8023607d244c42c",
+    "source_ids": [
+      "eco_google_call"
+    ],
+    "location": "业绩会 p13 · full year 2026 CapEx guidance。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-da224d122f558ab020f6d301a966dfa45f829e8d355a63b0b746875a027f5f12": {
+    "id": "legacy-da224d122f558ab020f6d301a966dfa45f829e8d355a63b0b746875a027f5f12",
+    "mode": "legacy",
+    "record_hash": "da224d122f558ab020f6d301a966dfa45f829e8d355a63b0b746875a027f5f12",
+    "source_ids": [
+      "eco_google_call"
+    ],
+    "location": "业绩会 p13 · third-party capacity。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-dd261852047e9b20033fc688dbce76eb7b45fbc958d3e8cda99bfe26814465c6": {
+    "id": "legacy-dd261852047e9b20033fc688dbce76eb7b45fbc958d3e8cda99bfe26814465c6",
+    "mode": "legacy",
+    "record_hash": "dd261852047e9b20033fc688dbce76eb7b45fbc958d3e8cda99bfe26814465c6",
+    "source_ids": [
+      "eco_google_call"
+    ],
+    "location": "业绩会 p13–14 · 2027 CapEx / free cash flow。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-4e148a62dd735a25f2ff0dbdfd05707d25ed97df6eb17c1ba7a1108000983efb": {
+    "id": "legacy-4e148a62dd735a25f2ff0dbdfd05707d25ed97df6eb17c1ba7a1108000983efb",
+    "mode": "legacy",
+    "record_hash": "4e148a62dd735a25f2ff0dbdfd05707d25ed97df6eb17c1ba7a1108000983efb",
+    "source_ids": [
+      "eco_oracle"
+    ],
+    "location": "Cloud Revenues by Offerings · Cloud infrastructure；FY2027 Q1 / FY2026 Q1。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-15c4e3fbb59056366912f773631c43ab0dbabf38086903009ad454f95b876f05": {
+    "id": "legacy-15c4e3fbb59056366912f773631c43ab0dbabf38086903009ad454f95b876f05",
+    "mode": "legacy",
+    "record_hash": "15c4e3fbb59056366912f773631c43ab0dbabf38086903009ad454f95b876f05",
+    "source_ids": [
+      "eco_oracle"
+    ],
+    "location": "Statements of Operations · Operating income；Three Months Ended August 31。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-c1350e00a4634ac7e8acf916f30d2fc3cb46898946a85c9781d97f92baa75bc7": {
+    "id": "legacy-c1350e00a4634ac7e8acf916f30d2fc3cb46898946a85c9781d97f92baa75bc7",
+    "mode": "legacy",
+    "record_hash": "c1350e00a4634ac7e8acf916f30d2fc3cb46898946a85c9781d97f92baa75bc7",
+    "source_ids": [
+      "eco_oracle"
+    ],
+    "location": "Free Cash Flow 表 · Capital Expenditures；FY2027 Q1 / FY2026 Q1。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-76a9a4f25a46dd39d2a64f0d04f61ec8a2146ca15dd04816637b9382c412a2b0": {
+    "id": "legacy-76a9a4f25a46dd39d2a64f0d04f61ec8a2146ca15dd04816637b9382c412a2b0",
+    "mode": "legacy",
+    "record_hash": "76a9a4f25a46dd39d2a64f0d04f61ec8a2146ca15dd04816637b9382c412a2b0",
+    "source_ids": [
+      "eco_oracle"
+    ],
+    "location": "Statements of Cash Flows · Net cash provided by operating activities / Increase in deferred revenues from customer prepayments with a significant financing component；Three Months Ended August 31。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-31f0962184271d0d35013ea131aad66beec9685a02e890ec969cab71ec42b05b": {
+    "id": "legacy-31f0962184271d0d35013ea131aad66beec9685a02e890ec969cab71ec42b05b",
+    "mode": "legacy",
+    "record_hash": "31f0962184271d0d35013ea131aad66beec9685a02e890ec969cab71ec42b05b",
+    "source_ids": [
+      "eco_oracle"
+    ],
+    "location": "Guidance for Q2 FY2027 · Total Cloud revenue。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-16498b35944beaafb11f0dcf15d10c5c241e7cf7b190fcfb17d85e44ca71621f": {
+    "id": "legacy-16498b35944beaafb11f0dcf15d10c5c241e7cf7b190fcfb17d85e44ca71621f",
+    "mode": "legacy",
+    "record_hash": "16498b35944beaafb11f0dcf15d10c5c241e7cf7b190fcfb17d85e44ca71621f",
+    "source_ids": [
+      "eco_oracle"
+    ],
+    "location": "Guidance for Full FY2027。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-c949101bc18581563f90543d6d96c5deb5d25983bade34186093b719a880cb70": {
+    "id": "legacy-c949101bc18581563f90543d6d96c5deb5d25983bade34186093b719a880cb70",
+    "mode": "legacy",
+    "record_hash": "c949101bc18581563f90543d6d96c5deb5d25983bade34186093b719a880cb70",
+    "source_ids": [
+      "eco_oracle"
+    ],
+    "location": "Remaining Performance Obligations。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-10dbcd340b7095367da414c0dc4d056830bff916f4ce488ba06cb5492f52c6bb": {
+    "id": "legacy-10dbcd340b7095367da414c0dc4d056830bff916f4ce488ba06cb5492f52c6bb",
+    "mode": "legacy",
+    "record_hash": "10dbcd340b7095367da414c0dc4d056830bff916f4ce488ba06cb5492f52c6bb",
+    "source_ids": [
+      "eco_meta"
+    ],
+    "location": "Financial Highlights · Revenue；2026 / 2025 三个月列。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-c9374de93e9701e51081760894aa914bccc33d754151e46a1a2bee556859c5d3": {
+    "id": "legacy-c9374de93e9701e51081760894aa914bccc33d754151e46a1a2bee556859c5d3",
+    "mode": "legacy",
+    "record_hash": "c9374de93e9701e51081760894aa914bccc33d754151e46a1a2bee556859c5d3",
+    "source_ids": [
+      "eco_meta"
+    ],
+    "location": "Financial Highlights · Income from operations；2026 / 2025。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-d420800b3ed7b1351466cdffd6fca9f1228617e673091016c8fc551779488abb": {
+    "id": "legacy-d420800b3ed7b1351466cdffd6fca9f1228617e673091016c8fc551779488abb",
+    "mode": "legacy",
+    "record_hash": "d420800b3ed7b1351466cdffd6fca9f1228617e673091016c8fc551779488abb",
+    "source_ids": [
+      "eco_meta"
+    ],
+    "location": "Cash Flows / GAAP to Non-GAAP reconciliation · Purchases of property and equipment。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-464067927ce4c2f30fe4ce41973df185999ed73735865a6815f1be7e78cb918e": {
+    "id": "legacy-464067927ce4c2f30fe4ce41973df185999ed73735865a6815f1be7e78cb918e",
+    "mode": "legacy",
+    "record_hash": "464067927ce4c2f30fe4ce41973df185999ed73735865a6815f1be7e78cb918e",
+    "source_ids": [
+      "eco_meta"
+    ],
+    "location": "GAAP to Non-GAAP reconciliation · Net cash provided by operating activities；三个月列。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-6316da4946f8ef8e48aa01e144c69f531e7bc2cdf32fb81f5bf4c34eeac9185e": {
+    "id": "legacy-6316da4946f8ef8e48aa01e144c69f531e7bc2cdf32fb81f5bf4c34eeac9185e",
+    "mode": "legacy",
+    "record_hash": "6316da4946f8ef8e48aa01e144c69f531e7bc2cdf32fb81f5bf4c34eeac9185e",
+    "source_ids": [
+      "eco_meta"
+    ],
+    "location": "CFO Outlook Commentary · Capital expenditures。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-d7576dba23bc376b1421ff6b073828eefdc272f3b71753690f44247c988159fe": {
+    "id": "legacy-d7576dba23bc376b1421ff6b073828eefdc272f3b71753690f44247c988159fe",
+    "mode": "legacy",
+    "record_hash": "d7576dba23bc376b1421ff6b073828eefdc272f3b71753690f44247c988159fe",
+    "source_ids": [
+      "eco_meta"
+    ],
+    "location": "CFO Outlook Commentary · operating income。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-5af440888a707c553624feb63a2ef7ba3fb8d51a10dd806f2ada80729293483e": {
+    "id": "legacy-5af440888a707c553624feb63a2ef7ba3fb8d51a10dd806f2ada80729293483e",
+    "mode": "legacy",
+    "record_hash": "5af440888a707c553624feb63a2ef7ba3fb8d51a10dd806f2ada80729293483e",
+    "source_ids": [
+      "eco_nvidia"
+    ],
+    "location": "Q2 Fiscal 2027 Summary · GAAP Revenue；Q2 FY27 / Q2 FY26。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-6efbc9256cf00bbfbd56a6c855875df07f347fa8ffd6bba1e36872b0d3297671": {
+    "id": "legacy-6efbc9256cf00bbfbd56a6c855875df07f347fa8ffd6bba1e36872b0d3297671",
+    "mode": "legacy",
+    "record_hash": "6efbc9256cf00bbfbd56a6c855875df07f347fa8ffd6bba1e36872b0d3297671",
+    "source_ids": [
+      "eco_nvidia",
+      "eco_nvidia_prior"
+    ],
+    "location": "两份财报 · Data Center highlights。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-97fd0c5a5008a5eca12f91bb3dc554372ed6333f7ecb0c4bdc39b30c66417664": {
+    "id": "legacy-97fd0c5a5008a5eca12f91bb3dc554372ed6333f7ecb0c4bdc39b30c66417664",
+    "mode": "legacy",
+    "record_hash": "97fd0c5a5008a5eca12f91bb3dc554372ed6333f7ecb0c4bdc39b30c66417664",
+    "source_ids": [
+      "eco_nvidia"
+    ],
+    "location": "Q2 Fiscal 2027 Summary · GAAP Operating income；Q2 FY27 / Q2 FY26。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-82d8c578bd6b7fce9f6bbafee506e48000864c3a1d7702cdd260a802b3a5966e": {
+    "id": "legacy-82d8c578bd6b7fce9f6bbafee506e48000864c3a1d7702cdd260a802b3a5966e",
+    "mode": "legacy",
+    "record_hash": "82d8c578bd6b7fce9f6bbafee506e48000864c3a1d7702cdd260a802b3a5966e",
+    "source_ids": [
+      "eco_nvidia"
+    ],
+    "location": "Q2 Fiscal 2027 Summary · GAAP Gross margin。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-43ec5eddbd93ad0a1ebcb1afbc3213c08548037ac76076c6f9a0772f8ab9eb19": {
+    "id": "legacy-43ec5eddbd93ad0a1ebcb1afbc3213c08548037ac76076c6f9a0772f8ab9eb19",
+    "mode": "legacy",
+    "record_hash": "43ec5eddbd93ad0a1ebcb1afbc3213c08548037ac76076c6f9a0772f8ab9eb19",
+    "source_ids": [
+      "eco_nvidia"
+    ],
+    "location": "Statements of Cash Flows · Purchases related to property and equipment and intangible assets；Three Months Ended July 26, 2026 / July 27, 2025。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-60316c1d394a61028d9b239280fd1bd161c89fa77355471853cebf6c4d2729d6": {
+    "id": "legacy-60316c1d394a61028d9b239280fd1bd161c89fa77355471853cebf6c4d2729d6",
+    "mode": "legacy",
+    "record_hash": "60316c1d394a61028d9b239280fd1bd161c89fa77355471853cebf6c4d2729d6",
+    "source_ids": [
+      "eco_nvidia"
+    ],
+    "location": "Statements of Cash Flows · Net cash provided by operating activities；Three Months Ended July 26, 2026 / July 27, 2025。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-93de459d196d886971dbbffe6ae7d43814bb12e83f12b2e3f406c0be130a4d96": {
+    "id": "legacy-93de459d196d886971dbbffe6ae7d43814bb12e83f12b2e3f406c0be130a4d96",
+    "mode": "legacy",
+    "record_hash": "93de459d196d886971dbbffe6ae7d43814bb12e83f12b2e3f406c0be130a4d96",
+    "source_ids": [
+      "eco_nvidia"
+    ],
+    "location": "Outlook · Revenue。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-5cdce846e0f7826bc1a9dfd606067817535d04bd2aed718be982256705c0049c": {
+    "id": "legacy-5cdce846e0f7826bc1a9dfd606067817535d04bd2aed718be982256705c0049c",
+    "mode": "legacy",
+    "record_hash": "5cdce846e0f7826bc1a9dfd606067817535d04bd2aed718be982256705c0049c",
+    "source_ids": [
+      "eco_nvidia"
+    ],
+    "location": "Outlook · Gross margins。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-943eadc92e7d4870163ac01a56d224965878fceeed6e0ca15004c43320dff8ef": {
+    "id": "legacy-943eadc92e7d4870163ac01a56d224965878fceeed6e0ca15004c43320dff8ef",
+    "mode": "legacy",
+    "record_hash": "943eadc92e7d4870163ac01a56d224965878fceeed6e0ca15004c43320dff8ef",
+    "source_ids": [
+      "eco_nvidia"
+    ],
+    "location": "CEO commentary。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-839c5481296e74beaba9055720cbd15568f3ca195eaa61ea78cdf8324cb1a4cd": {
+    "id": "legacy-839c5481296e74beaba9055720cbd15568f3ca195eaa61ea78cdf8324cb1a4cd",
+    "mode": "legacy",
+    "record_hash": "839c5481296e74beaba9055720cbd15568f3ca195eaa61ea78cdf8324cb1a4cd",
+    "source_ids": [
+      "eco_tsmc_guide",
+      "eco_tsmc_prior_revenue"
+    ],
+    "location": "本期财报 p1：美元收入 402 亿；上年管理报告 p1：300.7 亿。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-77e34f61dde450296adf232ab294c8d46b573f56b363325d9d5c8032e291aefd": {
+    "id": "legacy-77e34f61dde450296adf232ab294c8d46b573f56b363325d9d5c8032e291aefd",
+    "mode": "legacy",
+    "record_hash": "77e34f61dde450296adf232ab294c8d46b573f56b363325d9d5c8032e291aefd",
+    "source_ids": [
+      "eco_tsmc"
+    ],
+    "location": "财报 p2 · Income from operations，原始单位百万新台币，除以 1,000。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-1fbc24139420768d331ef494a57d4cd338561c220932ca9812578ed22e547b0e": {
+    "id": "legacy-1fbc24139420768d331ef494a57d4cd338561c220932ca9812578ed22e547b0e",
+    "mode": "legacy",
+    "record_hash": "1fbc24139420768d331ef494a57d4cd338561c220932ca9812578ed22e547b0e",
+    "source_ids": [
+      "eco_tsmc_call",
+      "eco_tsmc_prior"
+    ],
+    "location": "本期业绩会 p3：157 亿美元；上年管理报告 p5：96.3 亿美元。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-930ef32ebb87aed37125cf2df337e7aeb6af85f0edfbe85e8b263a453b31de80": {
+    "id": "legacy-930ef32ebb87aed37125cf2df337e7aeb6af85f0edfbe85e8b263a453b31de80",
+    "mode": "legacy",
+    "record_hash": "930ef32ebb87aed37125cf2df337e7aeb6af85f0edfbe85e8b263a453b31de80",
+    "source_ids": [
+      "eco_tsmc_ocf",
+      "eco_tsmc_prior_ocf"
+    ],
+    "location": "本期业绩会 p3：约 783 十亿新台币；上年管理报告 p5：497.07 十亿新台币。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-c587e3866e01dbb06e25b0496ff5c9c6eee5fb9a4d7192561987fca10b91bf7d": {
+    "id": "legacy-c587e3866e01dbb06e25b0496ff5c9c6eee5fb9a4d7192561987fca10b91bf7d",
+    "mode": "legacy",
+    "record_hash": "c587e3866e01dbb06e25b0496ff5c9c6eee5fb9a4d7192561987fca10b91bf7d",
+    "source_ids": [
+      "eco_tsmc_guide"
+    ],
+    "location": "财报 p1 · Revenue outlook。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-f68e25b2c981fbb747379c0759898827c0412442af8ff3f543716f04435b13d3": {
+    "id": "legacy-f68e25b2c981fbb747379c0759898827c0412442af8ff3f543716f04435b13d3",
+    "mode": "legacy",
+    "record_hash": "f68e25b2c981fbb747379c0759898827c0412442af8ff3f543716f04435b13d3",
+    "source_ids": [
+      "eco_tsmc_budget"
+    ],
+    "location": "业绩会 p4 · 2026 capital budget。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-827ad8e95899b5979cc364ccc2a78646af69e92a17bcb93457d29fc1b473c89a": {
+    "id": "legacy-827ad8e95899b5979cc364ccc2a78646af69e92a17bcb93457d29fc1b473c89a",
+    "mode": "legacy",
+    "record_hash": "827ad8e95899b5979cc364ccc2a78646af69e92a17bcb93457d29fc1b473c89a",
+    "source_ids": [
+      "eco_tsmc_demand"
+    ],
+    "location": "业绩会 p5 · near-term demand outlook。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-758920bc4d816f688c9e963ea73fd317f555a8416edfd13b2a88378198b905db": {
+    "id": "legacy-758920bc4d816f688c9e963ea73fd317f555a8416edfd13b2a88378198b905db",
+    "mode": "legacy",
+    "record_hash": "758920bc4d816f688c9e963ea73fd317f555a8416edfd13b2a88378198b905db",
+    "source_ids": [
+      "eco_samsung"
+    ],
+    "location": "业绩材料 p13 · Sales · Memory，2Q26 / 2Q25。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-b2f0e256b413de563cf9c1c84329b220b34bf613223d15ca77987d64ae0fa65d": {
+    "id": "legacy-b2f0e256b413de563cf9c1c84329b220b34bf613223d15ca77987d64ae0fa65d",
+    "mode": "legacy",
+    "record_hash": "b2f0e256b413de563cf9c1c84329b220b34bf613223d15ca77987d64ae0fa65d",
+    "source_ids": [
+      "eco_samsung"
+    ],
+    "location": "业绩材料 p13 · Operating Profit · DS，2Q26 / 2Q25。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-09ac02a1493bb9ad6b7dce1c24e153fdfcd061cf8eab4598711942751a80c592": {
+    "id": "legacy-09ac02a1493bb9ad6b7dce1c24e153fdfcd061cf8eab4598711942751a80c592",
+    "mode": "legacy",
+    "record_hash": "09ac02a1493bb9ad6b7dce1c24e153fdfcd061cf8eab4598711942751a80c592",
+    "source_ids": [
+      "eco_samsung_cash"
+    ],
+    "location": "业绩材料 p15 · Purchase of PP&E，2Q26 / 2Q25。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-2339e96714d3693df30a9a3d7c1bb5156b76519f022584c3ae41ca9d66e5116a": {
+    "id": "legacy-2339e96714d3693df30a9a3d7c1bb5156b76519f022584c3ae41ca9d66e5116a",
+    "mode": "legacy",
+    "record_hash": "2339e96714d3693df30a9a3d7c1bb5156b76519f022584c3ae41ca9d66e5116a",
+    "source_ids": [
+      "eco_samsung_cash"
+    ],
+    "location": "业绩材料 p15 · Cash flows from operating activities，2Q26 / 2Q25。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-c4a1eacda4c8cfb04b111ef4b290f47a23f39188d3b1da5753ff6f791649130f": {
+    "id": "legacy-c4a1eacda4c8cfb04b111ef4b290f47a23f39188d3b1da5753ff6f791649130f",
+    "mode": "legacy",
+    "record_hash": "c4a1eacda4c8cfb04b111ef4b290f47a23f39188d3b1da5753ff6f791649130f",
+    "source_ids": [
+      "eco_samsung_outlook"
+    ],
+    "location": "DS / Memory · H2 2026 outlook。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-3645bf39cf650dfb44482547c3607c8d828a5f07d5052d2248de53ef9fb448ab": {
+    "id": "legacy-3645bf39cf650dfb44482547c3607c8d828a5f07d5052d2248de53ef9fb448ab",
+    "mode": "legacy",
+    "record_hash": "3645bf39cf650dfb44482547c3607c8d828a5f07d5052d2248de53ef9fb448ab",
+    "source_ids": [
+      "eco_samsung_outlook"
+    ],
+    "location": "DS / Memory · product portfolio plans。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-24d385d234626d90873cdfe0e5dd85bf6be32710301702e97a2a106707ab6bb1": {
+    "id": "legacy-24d385d234626d90873cdfe0e5dd85bf6be32710301702e97a2a106707ab6bb1",
+    "mode": "legacy",
+    "record_hash": "24d385d234626d90873cdfe0e5dd85bf6be32710301702e97a2a106707ab6bb1",
+    "source_ids": [
+      "eco_skhynix"
+    ],
+    "location": "2Q26 Financial Results 表 · Revenue，2Q26 / 2Q25；十亿韩元除以 1,000。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-de41c2d22a0b00969ed0377065b012b995c239cab9213e56abf584df751ef7ea": {
+    "id": "legacy-de41c2d22a0b00969ed0377065b012b995c239cab9213e56abf584df751ef7ea",
+    "mode": "legacy",
+    "record_hash": "de41c2d22a0b00969ed0377065b012b995c239cab9213e56abf584df751ef7ea",
+    "source_ids": [
+      "eco_skhynix"
+    ],
+    "location": "2Q26 Financial Results 表 · Operating Profit；十亿韩元除以 1,000。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-485f58f44e44be876984a727f0968deecd4dcf0f8b04876ba271e10b0815689b": {
+    "id": "legacy-485f58f44e44be876984a727f0968deecd4dcf0f8b04876ba271e10b0815689b",
+    "mode": "legacy",
+    "record_hash": "485f58f44e44be876984a727f0968deecd4dcf0f8b04876ba271e10b0815689b",
+    "source_ids": [
+      "eco_skhynix"
+    ],
+    "location": "2Q26 Financial Results 表 · Operating Margin；按公司整数精度披露。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-8c1acf157c3a2728ffe10d077945eb2577ae0364e4119d73e7c99ae01a3a63a9": {
+    "id": "legacy-8c1acf157c3a2728ffe10d077945eb2577ae0364e4119d73e7c99ae01a3a63a9",
+    "mode": "legacy",
+    "record_hash": "8c1acf157c3a2728ffe10d077945eb2577ae0364e4119d73e7c99ae01a3a63a9",
+    "source_ids": [
+      "eco_skhynix"
+    ],
+    "location": "HBM4 mass shipments / ramp-up 段落。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-69538c191921b585967de48605944111b9c3530dacdd81e5eef5efa98cb89498": {
+    "id": "legacy-69538c191921b585967de48605944111b9c3530dacdd81e5eef5efa98cb89498",
+    "mode": "legacy",
+    "record_hash": "69538c191921b585967de48605944111b9c3530dacdd81e5eef5efa98cb89498",
+    "source_ids": [
+      "eco_skhynix"
+    ],
+    "location": "NAND transition · domestic production capacity。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-d3facd32ff5c347fb5dc2a65a3aad021be258df5be49f9191b84ab82deb119df": {
+    "id": "legacy-d3facd32ff5c347fb5dc2a65a3aad021be258df5be49f9191b84ab82deb119df",
+    "mode": "legacy",
+    "record_hash": "d3facd32ff5c347fb5dc2a65a3aad021be258df5be49f9191b84ab82deb119df",
+    "source_ids": [
+      "eco_skhynix"
+    ],
+    "location": "M15X / Yongin Phase 1 / CapEx Discipline 段落。",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-1c12c6e84b1c25eb93a67690a0514cad647a17a8c1b51c920cf3e3ded4fa3830": {
+    "id": "legacy-1c12c6e84b1c25eb93a67690a0514cad647a17a8c1b51c920cf3e3ded4fa3830",
+    "mode": "legacy",
+    "record_hash": "1c12c6e84b1c25eb93a67690a0514cad647a17a8c1b51c920cf3e3ded4fa3830",
+    "source_ids": [
+      "financial"
+    ],
+    "location": "Quarterly financial summary / Consolidated statements of operations",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-3ed1866a4d6a4dc4352f13adfe6702b0c9540c20d3834d7fb63c42c8963614c7": {
+    "id": "legacy-3ed1866a4d6a4dc4352f13adfe6702b0c9540c20d3834d7fb63c42c8963614c7",
+    "mode": "legacy",
+    "record_hash": "3ed1866a4d6a4dc4352f13adfe6702b0c9540c20d3834d7fb63c42c8963614c7",
+    "source_ids": [
+      "cash_balance"
+    ],
+    "location": "第 42 页 · Cash, investments and debt",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-70d4093b3e07f24f9011971b26ccb68be97a82f7d171ef08d06f0b7c26f3167f": {
+    "id": "legacy-70d4093b3e07f24f9011971b26ccb68be97a82f7d171ef08d06f0b7c26f3167f",
+    "mode": "legacy",
+    "record_hash": "70d4093b3e07f24f9011971b26ccb68be97a82f7d171ef08d06f0b7c26f3167f",
+    "source_ids": [
+      "cash_balance"
+    ],
+    "location": "第 42 页 · Cash, investments and debt",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-4cc4d027363ba4007511f2b1330c7c06204800f33d52bbd3ac8c71caf68bcdac": {
+    "id": "legacy-4cc4d027363ba4007511f2b1330c7c06204800f33d52bbd3ac8c71caf68bcdac",
+    "mode": "legacy",
+    "record_hash": "4cc4d027363ba4007511f2b1330c7c06204800f33d52bbd3ac8c71caf68bcdac",
+    "source_ids": [
+      "cash_balance"
+    ],
+    "location": "第 42 页 · Cash, investments and debt",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "legacy-2ef8b9334edb8957557fdd32f0b929d4a4af3bedd6a16e9cc1ff2af39d63009d": {
+    "id": "legacy-2ef8b9334edb8957557fdd32f0b929d4a4af3bedd6a16e9cc1ff2af39d63009d",
+    "mode": "legacy",
+    "record_hash": "2ef8b9334edb8957557fdd32f0b929d4a4af3bedd6a16e9cc1ff2af39d63009d",
+    "source_ids": [
+      "cash_balance"
+    ],
+    "location": "第 42 页 · Cash, investments and debt",
+    "inherited_revision": "2026-09-20-check-5",
+    "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  }
+}

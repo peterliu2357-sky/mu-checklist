@@ -1,0 +1,2 @@
+import {defineConfig} from '@playwright/test';
+export default defineConfig({testDir:'./tests/ui',fullyParallel:true,workers:2,retries:0,reporter:'list',use:{baseURL:'http://127.0.0.1:4173',browserName:'chromium',launchOptions:process.env.MONITOR_CHROMIUM_EXECUTABLE?{executablePath:process.env.MONITOR_CHROMIUM_EXECUTABLE}:{}},webServer:{command:'npm run build && npm run serve',url:'http://127.0.0.1:4173',reuseExistingServer:!process.env.CI,timeout:30000}});
