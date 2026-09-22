@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "scope": "quote",
+  "base_commit": "9183ebd101338a65b1e0ea07ba26af2a87db6fc8",
+  "base_revision": "2026-09-22-ba45b6a8f0",
+  "base_sha256": "0bca85cc31adada3c33fbf13804b08fb361fa01ba8d5e91e18534c21d40621d1",
+  "catalog_sha256": "2655e4f5ea75f1e844f48ebbdcb20dc44337d783b65694aefdd4b694434658a0",
+  "created_at": "2026-09-22T00:12:43.772Z",
+  "completed_at": "2026-09-22T00:14:18.417Z",
+  "state": "verified",
+  "coverage": [
+    {
+      "key": "quote",
+      "status": "verified",
+      "evidence": [
+        "price"
+      ],
+      "reviewed_at": "2026-09-22T00:13:35.135Z",
+      "latest_disclosure": {
+        "url": "https://stockanalysis.com/stocks/mu/history/",
+        "published_at": "2026-09-21"
+      },
+      "reason": "Recorded the latest completed Nasdaq regular session and excluded after-hours trading."
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "price",
+      "url": "https://stockanalysis.com/stocks/mu/history/",
+      "sha256": "88287f93b94f4b942ead2a97df81fca90d02cea27d2c138ac0191e99a9de9799",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-22T00:13:35.135Z",
+      "reviewed_at": "2026-09-22T00:13:35.135Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [],
+  "publication_corrections": [
+    "price"
+  ],
+  "summary": "更新 MU 09-21 常规交易收盘价；盘后报价未混入。",
+  "result": "success",
+  "artifact_sha256": "abda0943c41d39903acb3ed84e42f0f5d30822704d004c380bb72f9c91b69254",
+  "ledger_sha256": "a477f21f55efc514c300163207ba2fe0725ea9c05b097173d17d06637d11b997",
+  "evidence_sha256": "35efc5cb01ecd23883c6a9dfdb2b86f7cfb9dd60d40d63575d7e775ca7f237e2"
+}
