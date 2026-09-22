@@ -1819,5 +1819,61 @@
     "mode": "verified",
     "record_hash": "0e33faa23504fb168d843f6ea27bdfec0b13293991f6b0ef720e6dca831ca074",
     "id": "e-ee6d2dba799bed9a43ec1b494bf6ba60a6f089624bf5b46d8f2862128095ade4"
+  },
+  "e-f904719ecede8e8ca5de8bef50cd90b371023e59dc16eff86bba15de9b2ca364": {
+    "measurement": "regular_close",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "quote.mu",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "price",
+        "value": 1043.96,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-09-21 regular close",
+        "locator": "Page header · At close: Sep 21, 2026, 4:00 PM EDT",
+        "source_id": "price"
+      },
+      {
+        "field": "previous_close",
+        "value": 1015.8,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-09-18 regular close",
+        "locator": "Historical Data · Sep 18, 2026 · Close",
+        "source_id": "price"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the public quote page and separated the regular close from the after-hours quote",
+      "at": "2026-09-22T00:13:35.135Z"
+    },
+    "documents": [
+      {
+        "source_id": "price",
+        "url": "https://stockanalysis.com/stocks/mu/history/",
+        "sha256": "88287f93b94f4b942ead2a97df81fca90d02cea27d2c138ac0191e99a9de9799",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-22T00:13:35.135Z",
+        "reviewed_at": "2026-09-22T00:13:35.135Z",
+        "status": "read",
+        "locator": "Page header regular close and Historical Data table",
+        "excerpt": "At close: Sep 21, 2026, 4:00 PM EDT; Sep 18 historical close 1,015.80"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "68bed24b344ab83cec0b390473d48958e91ec64d02e003b1f1effb26b8697517",
+    "id": "e-f904719ecede8e8ca5de8bef50cd90b371023e59dc16eff86bba15de9b2ca364"
   }
 }

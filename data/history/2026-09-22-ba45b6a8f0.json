@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "revision": "2026-09-22-01b3136268",
-  "updated_at": "2026-09-22T00:14:18.417Z",
+  "revision": "2026-09-22-ba45b6a8f0",
+  "updated_at": "2026-09-22T00:05:03.777Z",
   "last_successful_check_at": "2026-09-20T23:50:00Z",
   "last_attempt_at": "2026-09-20T23:50:00Z",
   "financial_period": "FY2026 Q3",
@@ -15,12 +15,12 @@
     "note": "每日核查公开资料与最近收盘，完成核查后更新；非盘中实时数据。"
   },
   "quote": {
-    "price": 1043.96,
-    "previous_close": 1015.8,
-    "as_of": "2026-09-21T16:00:00-04:00",
+    "price": 1015.8,
+    "previous_close": 977.5,
+    "as_of": "2026-09-18T16:00:00-04:00",
     "session": "regular_close",
     "source_id": "price",
-    "checked_at": "2026-09-22T00:14:18.417Z"
+    "checked_at": "2026-09-20T23:50:00Z"
   },
   "overview": {
     "fact_cards": [
@@ -261,11 +261,11 @@
     "price": {
       "label": "Stock Analysis · MU 历史收盘价（S&P Global）",
       "url": "https://stockanalysis.com/stocks/mu/history/",
-      "published_at": "2026-09-21",
-      "checked_at": "2026-09-22",
+      "published_at": "2026-09-18",
+      "checked_at": "2026-09-20",
       "type": "行情资料",
       "short_label": "历史收盘价",
-      "locator": "At close · 2026-09-21；Historical data · 2026-09-18"
+      "locator": "Historical stock prices · 2026-09-18 / 09-17"
     },
     "technology": {
       "label": "美光 FQ3 业绩材料 · 位元出货与 ASP",
@@ -2008,12 +2008,6 @@
     "产业链指引和管理层展望按原披露日期及目标期间记录，文字为中文摘要；同比由原始金额计算，百分点与百分比区分。"
   ],
   "check_log": [
-    {
-      "at": "2026-09-22T00:14:18.417Z",
-      "status": "success",
-      "scope": "quote",
-      "text": "更新 MU 09-21 常规交易收盘价；盘后报价未混入。"
-    },
     {
       "at": "2026-09-22T00:05:03.777Z",
       "status": "success",
