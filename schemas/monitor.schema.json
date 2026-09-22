@@ -871,6 +871,409 @@
         "companies"
       ],
       "additionalProperties": false
+    },
+    "monitoring": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "policy": {
+          "type": "object",
+          "properties": {
+            "financial_discovery_days": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "industry_discovery_days": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "grace_hours": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "earnings_review_hours": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "timezone": {
+              "type": "string",
+              "minLength": 1
+            },
+            "weekly_days": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 6
+              }
+            },
+            "quote_stale_sessions": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          "required": [
+            "financial_discovery_days",
+            "industry_discovery_days",
+            "grace_hours",
+            "earnings_review_hours",
+            "timezone",
+            "weekly_days",
+            "quote_stale_sessions"
+          ],
+          "additionalProperties": false
+        },
+        "checks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "key": {
+                "type": "string",
+                "minLength": 1
+              },
+              "status": {
+                "enum": [
+                  "verified",
+                  "unchanged",
+                  "gap",
+                  "failed",
+                  "pending"
+                ]
+              },
+              "finding": {
+                "enum": [
+                  "unchanged",
+                  "new_disclosure",
+                  "unconfirmed"
+                ]
+              },
+              "checked_at": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "attempted_at": {
+                "type": "string",
+                "minLength": 1
+              },
+              "latest_disclosure": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "url": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "published_at": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "period": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "kind": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "url",
+                  "published_at"
+                ],
+                "additionalProperties": false
+              },
+              "source_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "reason": {
+                "type": "string"
+              },
+              "processed_at": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "key",
+              "status",
+              "finding",
+              "checked_at",
+              "attempted_at",
+              "latest_disclosure",
+              "source_ids",
+              "reason"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "calendar": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "company_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1
+              },
+              "period": {
+                "type": "string",
+                "minLength": 1
+              },
+              "scheduled_at": {
+                "type": "string",
+                "minLength": 1
+              },
+              "review_after": {
+                "type": "string",
+                "minLength": 1
+              },
+              "confirmation": {
+                "enum": [
+                  "confirmed",
+                  "estimated"
+                ]
+              },
+              "source_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 1
+              },
+              "location": {
+                "type": "string",
+                "minLength": 1
+              },
+              "kind": {
+                "const": "公司日程"
+              },
+              "evidence_type": {
+                "const": "direct"
+              }
+            },
+            "required": [
+              "id",
+              "company_id",
+              "title",
+              "period",
+              "scheduled_at",
+              "review_after",
+              "confirmation",
+              "source_ids",
+              "location",
+              "kind",
+              "evidence_type"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "version",
+        "policy",
+        "checks",
+        "calendar"
+      ],
+      "additionalProperties": false
+    },
+    "news": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "story_key": {
+                "type": "string",
+                "minLength": 1
+              },
+              "category": {
+                "type": "string",
+                "minLength": 1
+              },
+              "companies": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 1
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1
+              },
+              "summary": {
+                "type": "string",
+                "minLength": 1
+              },
+              "kind": {
+                "enum": [
+                  "公司披露",
+                  "公司计划",
+                  "管理层观察",
+                  "管理层展望",
+                  "公司指引",
+                  "行业观察",
+                  "行业估计",
+                  "行业预测",
+                  "行业报价",
+                  "媒体转引"
+                ]
+              },
+              "period": {
+                "type": "string",
+                "minLength": 1
+              },
+              "published_at": {
+                "type": "string",
+                "minLength": 1
+              },
+              "updated_at": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 1
+              },
+              "location": {
+                "type": "string",
+                "minLength": 1
+              },
+              "evidence_type": {
+                "enum": [
+                  "direct",
+                  "secondary",
+                  "proxy"
+                ]
+              },
+              "note": {
+                "type": "string"
+              },
+              "interpretation": {
+                "type": "string"
+              },
+              "fact_refs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "metric_id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "record_id": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "metric_id",
+                    "record_id"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "id",
+              "story_key",
+              "category",
+              "companies",
+              "title",
+              "summary",
+              "kind",
+              "period",
+              "published_at",
+              "updated_at",
+              "source_ids",
+              "location",
+              "evidence_type",
+              "note",
+              "interpretation",
+              "fact_refs"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "fact_records": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "metric_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "context": {
+                "type": "object"
+              },
+              "payload": {
+                "type": "object"
+              }
+            },
+            "required": [
+              "metric_id",
+              "context",
+              "payload"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "categories": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "entities": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "items",
+        "fact_records",
+        "categories",
+        "entities"
+      ],
+      "additionalProperties": false
     }
   },
   "required": [

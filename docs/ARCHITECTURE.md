@@ -10,6 +10,9 @@
 | `pipeline/validate.mjs` | Schema, semantics, evidence, periods, reconciliations | No live source fetching |
 | `pipeline/run.mjs` | Candidate state, scope outcomes, timestamp derivation | Inputs are records plus research artifacts |
 | `pipeline/evolution.mjs` | Definition evolution and append-only history | Compare previous and candidate releases |
+| `pipeline/updates.mjs` | Discovery targets, company calendar, news references and scope transitions | Deterministic planning; no task-service or DOM dependency |
+| `lib/update-core.js` | Section freshness, trading sessions and news filters | Pure UI helpers; no collection |
+| `pipeline/quote-adapter.mjs` | Structured final daily OHLC parsing | Captured provider response in, validated quote out |
 | `lib/monitor-core.js` | Pure comparisons and renderability compatibility | Browser or Node; no acquisition |
 | `assets/monitor.js` | DOM rendering, navigation, published JSON loading | No research or publication dependency |
 | workflow/build | Verified artifact publication | Build allowlist; research caches excluded |

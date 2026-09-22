@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import Ajv from 'ajv';
 import {fileURLToPath} from 'node:url';
 import {activeRecords,entries,materialize,makeRecord,recordHash,hash,stable,compute,orderedCalculations} from './model.mjs';
+import {coverageKeys,validateUpdates,validateUpdateTransition} from './updates.mjs';
 
 const schema=JSON.parse(fs.readFileSync(fileURLToPath(new URL('../schemas/monitor.schema.json',import.meta.url))));
 const shape=new Ajv({allErrors:true,strict:true,allowUnionTypes:true}).compile(schema);
@@ -76,6 +77,7 @@ export function validateDocument(document,catalog) {
   for(const field of ['updated_at','last_successful_check_at','last_attempt_at','financial_as_of','financial_published_at'])if(!date(document[field]))add('DATE',field,'Invalid date');
   if(document.quote.session!=='regular_close')add('QUOTE_SESSION','quote','Only a regular trading close is allowed');
   if(Date.parse(document.last_successful_check_at)>Date.parse(document.last_attempt_at))add('CHECK_TIME','last_successful_check_at','Successful check cannot be later than its attempt');
+  issues.push(...validateUpdates(document,catalog));
   return issues;
 }
 
@@ -84,6 +86,7 @@ export function validateLedger(ledger,catalog,evidence,legacy) {
   let document;
   try{document=materialize(ledger);}catch(error){return [{code:'RECORD',path:'ledger',message:error.message}];}
   issues.push(...validateDocument(document,catalog));
+  issues.push(...validateUpdates(document,catalog,ledger));
   const active=activeRecords(ledger),byMetric=new Map(active.map(r=>[r.metric_id,r]));
   for(const entry of entries(document,catalog)) {
     if(!catalog.definitions[entry.metric_id])continue;
@@ -143,12 +146,12 @@ export function validateLedger(ledger,catalog,evidence,legacy) {
 
 export function validateTransition(previous,next,manifest,catalog) {
   const issues=[],add=(code,path,message)=>issues.push({code,path,message});
-  const scopes=manifest.scope==='full'?['micron','industry','quote','ecosystem']: [manifest.scope];
   const successful=(manifest.coverage||[]).filter(c=>['verified','unchanged','gap'].includes(c.status));
-  const required=scopes.flatMap(s=>s==='ecosystem'?catalog.required_companies.map(c=>'company:'+c):[s]);
+  const required=manifest.scope==='maintenance'?[]:coverageKeys(manifest.scope,catalog,manifest.targets);
+  for(const c of manifest.coverage||[])if(!required.includes(c.key))add('RUN_SCOPE',c.key,'Coverage is outside the requested scope');
   for(const key of required)if(!manifest.coverage?.some(c=>c.key===key))add('RUN_COVERAGE',key,'Every required scope needs an explicit result');
   for(const c of successful){
-    if(!c.evidence?.length||!c.reviewed_at||!c.latest_disclosure?.url||!c.latest_disclosure?.published_at)add('DISCOVERY',c.key,'Successful coverage requires source reads and latest-disclosure identification');
+    if(!c.evidence?.length||!c.reviewed_at||!c.latest_disclosure?.url||(!c.latest_disclosure?.published_at&&c.key!=='calendar'))add('DISCOVERY',c.key,'Successful coverage requires source reads and latest-disclosure identification');
     for(const sid of c.evidence||[])if(!manifest.reads?.some(r=>r.source_id===sid&&r.status==='read'&&r.reviewed_at&&r.sha256))add('DISCOVERY_READ',c.key,'Coverage references a source not actually read');
   }
   const completed=required.every(key=>successful.some(c=>c.key===key));
@@ -171,5 +174,6 @@ export function validateTransition(previous,next,manifest,catalog) {
   }
   if(manifest.scope==='source_audit'&&(next.last_successful_check_at!==previous.last_successful_check_at||next.quote.checked_at!==previous.quote.checked_at))add('AUDIT_SCOPE','dates','Source audit cannot advance full or quote checks');
   if(next.revision===previous.revision&&hash(next)!==hash(previous))add('REVISION','revision','Changed content must have a distinct revision');
+  issues.push(...validateUpdateTransition(previous,next,manifest,catalog));
   return issues;
 }

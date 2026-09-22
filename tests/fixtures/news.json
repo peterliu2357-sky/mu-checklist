@@ -1,0 +1,29 @@
+{
+  "sources": {
+    "news_fixture": {
+      "label": "测试原文",
+      "short_label": "原文",
+      "url": "https://example.com/original-disclosure",
+      "published_at": "2026-09-21",
+      "checked_at": "2026-09-22",
+      "type": "测试资料",
+      "locator": "示例表格与产品计划"
+    }
+  },
+  "news": {
+    "categories": {"memory":"内存供需与价格","products":"产品与技术","applications":"AI 应用"},
+    "entities": {"micron":"美光","nvidia":"NVIDIA","meta":"Meta"},
+    "items": [
+      {"id":"memory_example","story_key":"memory-example","category":"memory","companies":["micron"],"title":"用于手机窄屏测试的较长内存供需标题：交付时间与均衡基准分别展示","summary":"测试观察值，附原始表格与期间。","kind":"行业观察","period":"2026-09-21 观察","published_at":"2026-09-21","updated_at":"2026-09-21","source_ids":["news_fixture"],"location":"原文表格第一行","evidence_type":"direct","note":"基准不表示上一期。","interpretation":"","fact_refs":[{"metric_id":"example.lead_time","record_id":"fixed-example-record"}]},
+      {"id":"product_example","story_key":"product-example","category":"products","companies":["nvidia"],"title":"测试产品量产计划","summary":"预计 2027 年推出；尚未量产。","kind":"公司计划","period":"2027 年目标","published_at":"2026-09-20","updated_at":"2026-09-20","source_ids":["news_fixture"],"location":"原文产品计划段落","evidence_type":"direct","note":"目标日期按原披露记录。","interpretation":"","fact_refs":[]},
+      {"id":"archived_example","story_key":"archived-example","category":"applications","companies":["meta"],"title":"历史 AI 应用测试记录","summary":"历史记录可通过独立链接打开。","kind":"公司披露","period":"2026-07 发布","published_at":"2026-07-01","updated_at":"2026-07-01","source_ids":["news_fixture"],"location":"原文介绍","evidence_type":"direct","note":"","interpretation":"","fact_refs":[]}
+    ],
+    "fact_records": {
+      "fixed-example-record": {
+        "metric_id":"example.lead_time",
+        "context":{"period":"2026-09-21","sources":[{"id":"news_fixture","url":"https://example.com/original-disclosure","published_at":"2026-09-21"}]},
+        "payload":{"label":"测试交期","current":16,"previous":null,"unit":"周","kind":"行业观察","evidence_type":"proxy","period":"2026-09-21","source_ids":["news_fixture"],"location":"示例表格","note":"均衡基准 8 周。"}
+      }
+    }
+  }
+}

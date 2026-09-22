@@ -1875,5 +1875,227 @@
     "mode": "verified",
     "record_hash": "68bed24b344ab83cec0b390473d48958e91ec64d02e003b1f1effb26b8697517",
     "id": "e-f904719ecede8e8ca5de8bef50cd90b371023e59dc16eff86bba15de9b2ca364"
+  },
+  "e-6c2571d1ca790591b25e56b0236fb30a154ab716aeaf436e7c64d4ae20a9bf09": {
+    "measurement": "disclosure_calendar",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "calendar.micron_fy2026_q4",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "original-source sections reviewed; dated observation and forward plan distinguished",
+      "at": "2026-09-22T20:56:16.851Z"
+    },
+    "documents": [
+      {
+        "source_id": "calendar_mu_20260930",
+        "url": "https://investors.micron.com/events-and-presentations/event-details/2026/Microns-Fourth-Quarter-2026-Financial-Call/default.aspx",
+        "sha256": "8cac904036bfcc512558a29e2e700c2a4783869064f56abb89404f8428ea28c5",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-22T20:55:38.166Z",
+        "reviewed_at": "2026-09-22T20:55:38.166Z",
+        "status": "read",
+        "locator": "活动标题与日期：September 30, 2026 4:30 PM ET。",
+        "excerpt": "September 30, 2026 4:30 PM ET"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "c0f2943b13a2c2f156d13dfbda3174b9cc652af9333c7c9a1d7d18769e1468f3",
+    "id": "e-6c2571d1ca790591b25e56b0236fb30a154ab716aeaf436e7c64d4ae20a9bf09"
+  },
+  "e-c78a8623998d4a6d4c21b89e9d5bc41f6f8972c0e8139e4a7316788f2b40ca84": {
+    "measurement": "sourced_news",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "news.tf_essd_20260921",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "TrendForce 周报观察到，NAND 厂商正将产能转向企业级 SSD，交付周期仍处于高位。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "original-source sections reviewed; dated observation and forward plan distinguished",
+      "at": "2026-09-22T20:56:16.848Z"
+    },
+    "documents": [
+      {
+        "source_id": "news_tf_20260921",
+        "url": "https://insights.trendforce.com/p/weekly-radar-002",
+        "sha256": "9304966b94b762b5f305b5602c5bf53d0a2cffdc79d1cb629776272bf2bab946",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-22T20:55:31.446Z",
+        "reviewed_at": "2026-09-22T20:55:31.446Z",
+        "status": "read",
+        "locator": "This Week in 30 Seconds · 第一条企业 SSD 观察。",
+        "excerpt": "eSSD lead times remain elevated at 16 weeks against a balanced 8"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "a6d6b7884e90eb32d8d457691d87dfddf81379d9adb16f4fc5e53cb7746a1df7",
+    "id": "e-c78a8623998d4a6d4c21b89e9d5bc41f6f8972c0e8139e4a7316788f2b40ca84"
+  },
+  "e-36974068b1699bccb251b41993ed979c794f0f3321c6447baa79dffdca209b3d": {
+    "measurement": "sourced_news",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "news.nv_dsx_20260921",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "DSX Ready 首批覆盖电池储能系统和冷却分配单元。公告列出已通过相应要求的合作厂商，并说明后续将增加基础设施与软件类别。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "original-source sections reviewed; dated observation and forward plan distinguished",
+      "at": "2026-09-22T20:56:16.851Z"
+    },
+    "documents": [
+      {
+        "source_id": "news_nv_20260921",
+        "url": "https://blogs.nvidia.com/blog/dsx-ready-ai-factories-power-cooling/",
+        "sha256": "8f7da9799e42506aa8ea3f06bed2708b3d6fc6604c7d941c9b35bcb5b89aee82",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-22T20:55:32.702Z",
+        "reviewed_at": "2026-09-22T20:55:32.702Z",
+        "status": "read",
+        "locator": "Power and Cooling Qualification；Qualified Building Blocks for Building AI Factory。",
+        "excerpt": "The program launches with two initial categories: battery energy storage systems (BESS) and cooling distribution units (CDUs)."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "75cb9e56bc2af518568b201e52b19297a0a4096bb9dd8b6124fa2d163b3befbe",
+    "id": "e-36974068b1699bccb251b41993ed979c794f0f3321c6447baa79dffdca209b3d"
+  },
+  "e-2891c2649714750ecdf3e1ad1260e9a7ef7abf4edfb9035ea4bd0a6870dafc13": {
+    "measurement": "sourced_news",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "news.sk_ventures_20260918",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "SK 海力士推出 SK hynix Ventures 品牌，计划将创投范围拓展至 AI 计算、数据中心、系统软件和光互连，并加强与初创企业的技术合作。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "original-source sections reviewed; dated observation and forward plan distinguished",
+      "at": "2026-09-22T20:56:16.851Z"
+    },
+    "documents": [
+      {
+        "source_id": "news_sk_20260918",
+        "url": "https://news.skhynix.com/en/sk-hynix-ventures/",
+        "sha256": "707aa9aeed3551a0d83004ea7bfcac83973fbccb3227d0c7e40458e1461ced9c",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-22T20:55:33.969Z",
+        "reviewed_at": "2026-09-22T20:55:33.969Z",
+        "status": "read",
+        "locator": "Discussing Cooperation in AI Computing, Data Centers, and Optical Interconnect。",
+        "excerpt": "the company plans to broaden its investment scope from traditional semiconductors and emerging tech to the broader AI ecosystem"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "8a811090b1dfc2ad1e3238316bb087ee76a2e3469433e391b0953c231a70177b",
+    "id": "e-2891c2649714750ecdf3e1ad1260e9a7ef7abf4edfb9035ea4bd0a6870dafc13"
+  },
+  "e-979f13065282bf6f455d04aeca64a07ab2ed8f4389a21a2323643998b2dc36ee": {
+    "measurement": "sourced_news",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "news.mu_rdimm_20260915",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "AMD 与 Intel 正在验证该模块。美光预计于 2027 年下半年根据客户需求进入量产。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "original-source sections reviewed; dated observation and forward plan distinguished",
+      "at": "2026-09-22T20:56:16.851Z"
+    },
+    "documents": [
+      {
+        "source_id": "news_mu_20260915",
+        "url": "https://investors.micron.com/news/press-release/2026/Micron-Advances-Memory-Innovation-With-the-Worlds-First-Ultra-Dense-Module-for-Next-Generation-Servers/default.aspx",
+        "sha256": "a44e1afc11a7addd4f6d5457cdccb633fc2a3e490227e89a9a282e80fb469c50",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-22T20:55:35.475Z",
+        "reviewed_at": "2026-09-22T20:55:35.475Z",
+        "status": "read",
+        "locator": "Ecosystem partner validation；量产时间表段落。",
+        "excerpt": "Micron expects 512GB RDIMMs to be in volume production sometime in the second half of 2027 aligned to customer needs."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "176557a8c4f9a757c6372b7a055558e46a22c1ab37e1c3bb80f887a405470d05",
+    "id": "e-979f13065282bf6f455d04aeca64a07ab2ed8f4389a21a2323643998b2dc36ee"
+  },
+  "e-16cac962a23cb90bf9ebfc484d2ca7fd0535133c9a515fbeb381c58bcb3cf2aa": {
+    "measurement": "sourced_news",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "news.meta_muse_20260908",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "Meta 开始在美国推出 Muse 个人 AI agent，提供 iOS、Android 与网页入口。公司表示，agent 在独立云端虚拟机内运行，可跨应用执行任务，并提供免费使用及订阅方案。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "original-source sections reviewed; dated observation and forward plan distinguished",
+      "at": "2026-09-22T20:56:16.851Z"
+    },
+    "documents": [
+      {
+        "source_id": "news_meta_20260908",
+        "url": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
+        "sha256": "f47ecb9be3826fe43a82aefeb0885550dac86286a58bfc8d7354a180d609a35e",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-22T20:55:36.824Z",
+        "reviewed_at": "2026-09-22T20:55:36.824Z",
+        "status": "read",
+        "locator": "Takeaways；Built to be Private, Safe, and Secure；Looking Ahead。",
+        "excerpt": "Muse runs on Muse Secure VM, a dedicated secure computer with its own browser"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "d35d5d362ddfab280707a6083db65fa82f1987e64f08fcebfac7365420d9e000",
+    "id": "e-16cac962a23cb90bf9ebfc484d2ca7fd0535133c9a515fbeb381c58bcb3cf2aa"
   }
 }

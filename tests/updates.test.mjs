@@ -1,0 +1,64 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import ui from '../lib/update-core.js';
+import {updatePlan,validateUpdates,deriveDiscovery} from '../pipeline/updates.mjs';
+import {createManifest,buildCandidate} from '../pipeline/run.mjs';
+import {materialize,clone,recordDocument,hash} from '../pipeline/model.mjs';
+import {validateTransition} from '../pipeline/validate.mjs';
+const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url)));
+const catalog=read('pipeline/catalog.json'),ledger=read('data/ledger.json'),evidence=read('data/evidence.json'),legacy=read('pipeline/legacy-baseline.json'),base=read('tests/fixtures/baseline.json');
+const fresh=()=>{const d=clone(base);d.monitoring={version:1,policy:catalog.monitoring.policy,checks:[],calendar:[]};return d;};
+const check=(key,at='2026-09-22T12:00:00Z')=>({key,status:'unchanged',finding:'unchanged',checked_at:at,attempted_at:at,latest_disclosure:{url:'https://example.com/earnings',published_at:'2026-06-24'},source_ids:['financial'],reason:'No new report.'});
+const event={id:'example',company_id:'micron',confirmation:'confirmed',scheduled_at:'2026-09-30T16:30:00-04:00',review_after:'2026-10-01T20:30:00Z',source_ids:['next'],period:'FY2026 Q4'};
+
+test('quarterly facts do not expire merely because the report is months old',()=>{const d=fresh();d.financial_published_at='2026-06-24';d.monitoring.checks=[check('company:micron')];assert.deepEqual(ui.warnings(d,Date.parse('2026-09-25T12:00:00Z'),'business'),[]);});
+test('weekly disclosure checks have a grace period independent of statement age',()=>{const d=fresh();d.monitoring.checks=[check('company:micron')];assert.equal(ui.warnings(d,Date.parse('2026-09-30T11:59:00Z'),'business').length,0);assert.match(ui.warnings(d,Date.parse('2026-09-30T12:01:00Z'),'business')[0],/公告查新已逾期/);});
+test('one company failure does not contaminate Micron or industry warnings',()=>{const d=fresh();d.monitoring.checks=[check('company:micron'),{...check('company:nvidia'),status:'failed'},check('industry')];assert.equal(ui.warnings(d,Date.parse('2026-09-23'),'business').length,0);assert.equal(ui.warnings(d,Date.parse('2026-09-23'),'industry').length,0);assert(ui.warnings(d,Date.parse('2026-09-23'),'ecosystem').some(x=>/NVIDIA/.test(x)));});
+test('new company disclosure is distinct from an elapsed expected date',()=>{const d=fresh();d.monitoring.calendar=[event];assert(ui.warnings(d,Date.parse('2026-10-02'),'business').some(x=>/待确认/.test(x)));d.monitoring.checks=[{...check('company:micron','2026-10-01T21:00:00Z'),finding:'new_disclosure'}];assert(ui.warnings(d,Date.parse('2026-10-02'),'business').some(x=>/发现新披露/.test(x)));});
+test('an estimated earnings date does not trigger a confirmed-release warning',()=>{const d=fresh();d.monitoring.calendar=[{...event,confirmation:'estimated'}];d.monitoring.checks=[check('company:micron','2026-10-02T12:00:00Z')];assert.deepEqual(ui.warnings(d,Date.parse('2026-10-03'),'business'),[]);});
+test('weekend and Labor Day do not count as missing market closes',()=>{assert.equal(ui.missedSessions('2026-09-04T16:00:00-04:00',Date.parse('2026-09-07T23:00:00Z')),0);assert.equal(ui.missedSessions('2026-09-04T16:00:00-04:00',Date.parse('2026-09-08T23:00:00Z')),1);});
+test('intraday prices are not expected before the end-of-day buffer',()=>{assert.equal(ui.missedSessions('2026-09-21T16:00:00-04:00',Date.parse('2026-09-22T19:00:00Z')),0);assert.equal(ui.missedSessions('2026-09-21T16:00:00-04:00',Date.parse('2026-09-22T23:00:00Z')),1);});
+test('unverified future exchange calendar is not silently assumed',()=>assert.equal(ui.isSession('2030-01-02'),null));
+test('midweek plan only checks industry and news',()=>assert.deepEqual(updatePlan(fresh(),catalog,{mode:'midweek',now:'2026-09-22T12:00:00Z'}).discovery_targets,['industry','news']));
+test('company manual plan is isolated',()=>{const p=updatePlan(fresh(),catalog,{mode:'manual',company:'nvidia'});assert.deepEqual(p.discovery_targets,['company:nvidia']);assert.equal(p.news,false);});
+test('scheduled report review waits for the explicit confirmed event',()=>{const d=fresh();d.monitoring.calendar=[event];assert.deepEqual(updatePlan(d,catalog,{mode:'earnings',now:'2026-09-30T20:30:00Z'}).financial_candidates,[]);assert.equal(updatePlan(d,catalog,{mode:'earnings',now:'2026-10-01T21:00:00Z'}).financial_candidates[0].company,'micron');});
+test('completed quarterly rollover removes the old event from due work',()=>{const d=fresh();d.monitoring.calendar=[event];d.financial_published_at='2026-10-01';assert.deepEqual(updatePlan(d,catalog,{mode:'earnings',now:'2026-10-02T12:00:00Z'}).financial_candidates,[]);});
+test('new interim guidance is eligible without changing the current financial quarter',()=>{const d=fresh();d.monitoring.checks=[{...check('company:micron'),finding:'new_disclosure',latest_disclosure:{url:'https://example.com/guidance',published_at:'2026-09-22',kind:'guidance_revision'}}];assert.equal(updatePlan(d,catalog,{now:'2026-09-23'}).financial_candidates[0].scope,'micron');assert.equal(d.financial_period,base.financial_period);});
+test('unknown targets cannot broaden a manual run',()=>assert.throws(()=>createManifest({scope:'discovery',targets:['everything'],document:base,catalog,at:'2026-09-22'}),/Unknown/));
+test('newly registered companies automatically enter weekly discovery',()=>{const c=clone(catalog);c.monitoring.targets['company:example']={label:'Example'};assert(updatePlan(fresh(),c).discovery_targets.includes('company:example'));});
+test('failed discovery keeps its last successful search time',()=>{const d=fresh();d.monitoring.checks=[check('company:micron')];const next=clone(d);deriveDiscovery(d,next,{scope:'discovery',completed_at:'2026-09-23',coverage:[{key:'company:micron',status:'failed',reason:'Access failed'}]},catalog);assert.equal(next.monitoring.checks[0].checked_at,'2026-09-22T12:00:00Z');assert.equal(next.monitoring.checks[0].status,'failed');});
+test('discovery cannot advance the financial source check date or change facts',()=>{
+ const d=materialize(ledger),at=new Date(Date.parse(d.updated_at)+86400000).toISOString(),m={...createManifest({scope:'discovery',targets:['company:micron'],base_commit:'a'.repeat(40),document:d,catalog,at}),completed_at:at};
+ const p=clone(d);p.monitoring||={version:1,policy:catalog.monitoring.policy,checks:[],calendar:[]};
+ const r=buildCandidate({previousLedger:ledger,previousEvidence:evidence,proposal:p,supporting:Object.fromEntries(Object.entries(ledger.supporting).map(([id,ref])=>[id,ledger.records[ref].payload])),evidenceInput:{},manifest:m,catalog,legacy});
+ assert.deepEqual(r.issues,[]);assert.deepEqual(r.document.metrics,d.metrics);assert.deepEqual(r.document.ecosystem,d.ecosystem);assert.equal(r.document.last_successful_check_at,d.last_successful_check_at);
+});
+test('a hand-edited discovery timestamp has no read evidence and fails',()=>{const d=fresh(),next=clone(d);next.revision+='-changed';next.monitoring.checks=[check('company:micron')];const m={scope:'news',coverage:[],reads:[]};assert(validateTransition(d,next,m,catalog).some(i=>i.code==='DISCOVERY_SCOPE'));});
+test('news filters preserve original publication dates and isolate companies',()=>{const d=fresh();d.news={items:[{id:'a',category:'memory',companies:['micron'],published_at:'2026-08-01',updated_at:'2026-09-20'},{id:'b',category:'products',companies:['nvidia'],published_at:'2026-09-21',updated_at:'2026-09-21'}]};const result=ui.filterNews(d,{company:'micron',now:Date.parse('2026-09-22')});assert.deepEqual(result.map(n=>n.id),['a']);assert.equal(result[0].published_at,'2026-08-01');});
+test('duplicate syndication cannot become a second news event',()=>{const d=materialize(ledger);assert(d.news?.items.length);const n=clone(d.news.items[0]);n.id+='-duplicate';d.news.items.push(n);assert(validateUpdates(d,catalog).some(i=>i.code==='NEWS_DUPLICATE'));});
+test('news pointers preserve historical numbers across metric updates',()=>{const d=materialize(ledger);assert(d.news?.items.length);const old=d.news.items.flatMap(n=>n.fact_refs)[0],expected=clone(d.news.fact_records[old.record_id]);const changed=clone(d);const [_,section,rowId]=old.metric_id.split('.');changed.metrics.find(m=>m.id===section).rows.find(r=>r.id===rowId).current='new disclosure';const next=materialize(recordDocument(changed,catalog,ledger));assert.deepEqual(next.news.fact_records[old.record_id],expected);});
+test('news facts cannot point to an absent evidence record',()=>{const d=materialize(ledger);assert(d.news?.items.length);d.news.items[0].fact_refs=[{metric_id:'mu.inventory.total',record_id:'bad'}];assert(validateUpdates(d,catalog,ledger).some(i=>i.code==='NEWS_FACT_REFERENCE'));});
+test('processing a discovered guidance revision resolves its alert without a fresh discovery timestamp',()=>{const d=fresh();d.monitoring.checks=[{...check('company:micron'),finding:'new_disclosure'}];const next=clone(d);deriveDiscovery(d,next,{scope:'micron',completed_at:'2026-09-23T12:00:00Z',coverage:[{key:'micron',status:'verified',latest_disclosure:d.monitoring.checks[0].latest_disclosure}]},catalog);assert.equal(next.monitoring.checks[0].checked_at,d.monitoring.checks[0].checked_at);assert.equal(next.monitoring.checks[0].processed_at,'2026-09-23T12:00:00Z');assert.deepEqual(updatePlan(next,catalog,{now:'2026-09-23'}).financial_candidates,[]);});
+test('report published on the scheduled date resolves its financial-calendar deadline',()=>{const d=fresh();d.monitoring.calendar=[event];d.financial_published_at='2026-09-30';assert.deepEqual(updatePlan(d,catalog,{mode:'earnings',now:'2026-10-02T12:00:00Z'}).financial_candidates,[]);});
+test('re-reading an unprocessed disclosure cannot clear the pending release',()=>{
+  const d=fresh();d.monitoring.checks=[{...check('company:micron'),finding:'new_disclosure',processed_at:null}];
+  const next=clone(d),old=d.monitoring.checks[0];
+  deriveDiscovery(d,next,{scope:'discovery',completed_at:'2026-09-23T12:00:00Z',coverage:[{key:old.key,status:'unchanged',finding:'unchanged',evidence:old.source_ids,reviewed_at:'2026-09-23T12:00:00Z',latest_disclosure:old.latest_disclosure}]},catalog);
+  assert.equal(next.monitoring.checks[0].finding,'new_disclosure');
+  assert.equal(updatePlan(next,catalog,{mode:'earnings',now:'2026-09-23'}).financial_candidates[0].company,'micron');
+});
+test('failed discovery preserves processing history for an already ingested release',()=>{
+  const d=fresh();d.monitoring.checks=[{...check('company:micron'),finding:'new_disclosure',processed_at:'2026-09-22T13:00:00Z'}];
+  const next=clone(d);deriveDiscovery(d,next,{scope:'discovery',completed_at:'2026-09-23T12:00:00Z',coverage:[{key:'company:micron',status:'failed',latest_disclosure:null}]},catalog);
+  assert.equal(next.monitoring.checks[0].processed_at,'2026-09-22T13:00:00Z');
+  assert.deepEqual(updatePlan(next,catalog,{mode:'earnings',now:'2026-09-23'}).financial_candidates,[]);
+});
+test('targeted batch failures can produce a default run summary and preserve financial facts',()=>{
+  const d=materialize(ledger),at=new Date(Date.parse(d.updated_at)+86400000).toISOString();
+  const manifest={...createManifest({scope:'batch',targets:['news','calendar'],document:d,catalog,at,base_commit:'a'.repeat(40)}),completed_at:at};
+  for(const c of manifest.coverage)c.status='failed';
+  const result=buildCandidate({previousLedger:ledger,previousEvidence:evidence,proposal:clone(d),supporting:Object.fromEntries(Object.entries(ledger.supporting).map(([id,ref])=>[id,ledger.records[ref].payload])),evidenceInput:{},manifest,catalog,legacy});
+  assert.deepEqual(result.issues,[]);assert.match(result.document.check_log[0].text,/0 \/ 2/);assert.deepEqual(result.document.metrics,d.metrics);
+});
+test('future news updates cannot manufacture freshness',()=>{const d=materialize(ledger);d.news.items[0].updated_at='2030-01-01';assert(validateUpdates(d,catalog).some(i=>i.code==='NEWS_DATE'));});

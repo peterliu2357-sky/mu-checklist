@@ -4,6 +4,11 @@ on:
   push:
   pull_request:
   workflow_dispatch:
+    inputs:
+      base_sha:
+        description: Exact base commit for a prepared data release
+        type: string
+        required: false
 
 permissions:
   contents: read
@@ -29,7 +34,7 @@ jobs:
         run: npm run verify
       - name: Verify release transition
         env:
-          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha || inputs.base_sha || github.event.before }}
         run: |
           if [[ "$BASE_SHA" =~ ^[a-f0-9]{40}$ ]] && [[ "$BASE_SHA" != 0000000000000000000000000000000000000000 ]]; then
             npm run monitor -- verify --base "$BASE_SHA"
