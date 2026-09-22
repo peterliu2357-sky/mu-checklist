@@ -28,6 +28,11 @@ test('currency substitution fails',()=>has(validateDocument(mutation(c=>c.ecosys
 test('quarterly and annual comparison cannot silently change',()=>has(validateDocument(mutation(c=>c.ecosystem.companies[0].previous_period='FY2025'),catalog),'YOY_PERIOD'));
 test('forecast labels cannot become actuals',()=>has(validateDocument(mutation(c=>c.guidance[0].kind='实际'),catalog),'FORECAST_AS_ACTUAL'));
 test('end consumption proxy cannot become direct',()=>has(validateDocument(mutation(c=>row(c,'demand','ssd_industry_revenue').evidence_type='direct'),catalog),'PROXY'));
+test('enterprise SSD lead time remains a dated proxy with a benchmark, not a prior-period value',()=>{
+  const metric=row(d,'demand','essd_lead_time');
+  assert.equal(metric.current,'16 周（均衡基准 8 周）');assert.equal(metric.previous,null);assert.equal(metric.evidence_type,'proxy');assert.equal(metric.period,'截至 2026-09-21');
+  assert.deepEqual(catalog.source_roles.essd_weekly,['mu.demand.essd_lead_time']);
+});
 test('null is not zero',()=>has(validateDocument(mutation(c=>row(c,'inventory','total').current=null),catalog),'MISSING_VALUE'));
 test('dangling overview references fail',()=>has(validateDocument(mutation(c=>c.overview.fact_cards[0].row_id='missing'),catalog),'REFERENCE'));
 test('guidance requires sequential quarter references',()=>has(validateDocument(mutation(c=>c.guidance[0].actuals[0].period='FY2025 Q4'),catalog),'GUIDANCE_PERIOD'));

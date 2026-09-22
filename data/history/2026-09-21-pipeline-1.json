@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "revision": "2026-09-22-ba45b6a8f0",
-  "updated_at": "2026-09-22T00:05:03.777Z",
+  "revision": "2026-09-21-pipeline-1",
+  "updated_at": "2026-09-21T16:44:34.677Z",
   "last_successful_check_at": "2026-09-20T23:50:00Z",
   "last_attempt_at": "2026-09-20T23:50:00Z",
   "financial_period": "FY2026 Q3",
@@ -172,7 +172,7 @@
       "label": "TrendForce 企业级 SSD 报告 · 09-01",
       "url": "https://www.trendforce.com/presscenter/news/20260901-13210.html",
       "published_at": "2026-09-01",
-      "checked_at": "2026-09-22",
+      "checked_at": "2026-09-20",
       "type": "行业研究估计",
       "short_label": "TrendForce · SSD 收入",
       "locator": "首段：五大厂收入；Micron 段：美光企业 SSD 收入"
@@ -235,7 +235,7 @@
       "label": "TrendForce · 手机内存报告公开摘要 · 09-09",
       "url": "https://www.trendforce.com/research/download/RP260909CK",
       "published_at": "2026-09-09",
-      "checked_at": "2026-09-22",
+      "checked_at": "2026-09-20",
       "type": "研究摘要",
       "short_label": "TrendForce · 公开摘要",
       "locator": "公开摘要 / Key Highlights；未读取付费全文"
@@ -282,7 +282,7 @@
       "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf#page=25",
       "locator": "第 25 页 · MCBU · lower bit shipments",
       "published_at": "2026-06-24",
-      "checked_at": "2026-09-22",
+      "checked_at": "2026-09-20",
       "type": "公司披露"
     },
     "technology_revenue": {
@@ -590,15 +590,6 @@
       "checked_at": "2026-09-20",
       "locator": "页面 Last Modified 2026-09-16；Summary。仅读取公开摘要，未取得付费全文或原表。",
       "type": "行业公开摘要"
-    },
-    "essd_weekly": {
-      "label": "TrendForce Weekly Radar 002",
-      "short_label": "09-21 · 周度雷达",
-      "url": "https://insights.trendforce.com/p/weekly-radar-002",
-      "published_at": "2026-09-21",
-      "checked_at": "2026-09-22",
-      "locator": "This Week in 30 Seconds · enterprise SSD lead-time bullet。",
-      "type": "行业公开观察"
     },
     "nand_q3": {
       "label": "TrendForce NAND 3Q26 行业分析 · 公开摘要",
@@ -1767,7 +1758,7 @@
         "现货报价按指定规格采样。NAND 合同价的量化预测发布于 07-03，后续趋势来自 09-10 公开摘要。"
       ],
       "period": "报价至 09-15；报告至 09-16",
-      "checked_at": "2026-09-22",
+      "checked_at": "2026-09-20",
       "next_review": "每周",
       "definition": "行业合同价预测与现货报价。",
       "interpretation": "现货周报中的 DDR4 规格小幅上涨，NAND 规格小幅下降；合同价摘要预计涨幅收敛，未提供新的量化区间。"
@@ -1878,7 +1869,7 @@
         "首批晶圆、产品出货和成熟产量属于不同阶段。"
       ],
       "period": "2026–2027 展望 · 披露至 09-16",
-      "checked_at": "2026-09-22",
+      "checked_at": "2026-09-20",
       "next_review": "新行业报告",
       "definition": "机构供需预测及公司产能计划。",
       "interpretation": "TrendForce 最新摘要预计 NAND 不同终端市场分化；企业 SSD 的需求展望不宜外推至全部消费级存储。"
@@ -1953,22 +1944,6 @@
           "id": "mobile_inventory_proxy"
         },
         {
-          "label": "企业 SSD 交付周期",
-          "current": "16 周（均衡基准 8 周）",
-          "previous": null,
-          "unit": "",
-          "source_ids": [
-            "essd_weekly"
-          ],
-          "kind": "行业观察",
-          "note": "交付周期同时受需求与供给配置影响，不等于美光订单量。",
-          "period": "截至 2026-09-21",
-          "change": null,
-          "location": "This Week in 30 Seconds · enterprise SSD lead-time bullet。",
-          "evidence_type": "proxy",
-          "id": "essd_lead_time"
-        },
-        {
           "label": "客户实际内存库存天数",
           "current": null,
           "previous": null,
@@ -1989,11 +1964,11 @@
         "行业自然年 Q2 与美光 FQ3 的覆盖期间不同。",
         "手机报告采用公开摘要，缺少统一口径的客户库存天数和消耗量。"
       ],
-      "period": "行业资料至 09-21",
-      "checked_at": "2026-09-22",
+      "period": "行业资料至 09-16",
+      "checked_at": "2026-09-20",
       "next_review": "每周",
       "definition": "用于观察终端需求的间接指标。",
-      "interpretation": "企业 SSD 交付周期为 16 周，而 TrendForce 给出的均衡基准为 8 周，说明交付仍受约束；收入与交付周期都不是美光采购量。客户实际库存与消耗量仍待补充。"
+      "interpretation": "企业 SSD 收入受售价、出货量和产品组合影响；手机与客户端出货反映供应商交付。客户实际库存与消耗量仍待补充。"
     }
   ],
   "methodology": [
@@ -2008,12 +1983,6 @@
     "产业链指引和管理层展望按原披露日期及目标期间记录，文字为中文摘要；同比由原始金额计算，百分点与百分比区分。"
   ],
   "check_log": [
-    {
-      "at": "2026-09-22T00:05:03.777Z",
-      "status": "success",
-      "scope": "industry",
-      "text": "核查 09-21 最新行业资料；新增企业 SSD 交付周期及均衡基准，保留其间接指标边界。"
-    },
     {
       "at": "2026-09-20T23:50:00Z",
       "status": "success",

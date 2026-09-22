@@ -1239,6 +1239,22 @@
         "proxy"
       ]
     },
+    "mu.demand.essd_lead_time": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "industry",
+      "measurement": "end_consumption_proxy",
+      "unit": "",
+      "scope": "企业 SSD 交付周期",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "point_in_time",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "proxy"
+      ]
+    },
     "mu.demand.customer_inventory": {
       "version": 1,
       "active": true,
@@ -2570,6 +2586,9 @@
     "ssd": [
       "mu.demand.ssd_industry_revenue",
       "mu.demand.ssd_micron_revenue"
+    ],
+    "essd_weekly": [
+      "mu.demand.essd_lead_time"
     ],
     "mobile": [
       "mu.demand.mobile_inventory_proxy",
