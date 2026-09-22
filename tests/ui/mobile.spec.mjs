@@ -12,7 +12,7 @@ for(const width of [320,390,430])test(`all panels remain usable at ${width}px`,a
   await expect(page.locator('.fact-card')).toHaveCount(8);
   await expect(page.locator('.guidance-row')).toHaveCount(3);
   for(const panel of ['overview','business','industry','ecosystem','news','updates']){
-    await page.locator(`.nav [data-panel="${panel}"]`).click();
+    await page.locator(panel==='updates'?'footer [data-panel-link="updates"]':`.nav [data-panel="${panel}"]`).click();
     await expect(page.locator(`#panel-${panel}`)).toBeVisible();
     expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
   }
