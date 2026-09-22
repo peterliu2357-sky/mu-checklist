@@ -1597,5 +1597,227 @@
     "location": "第 42 页 · Cash, investments and debt",
     "inherited_revision": "2026-09-20-check-5",
     "note": "仅迁移已有数据和引用；未声称按新协议重新读取原文。"
+  },
+  "e-24d346a711d0645c4450de4bcd1e03e28e8cfb7a00ac89d1dc24ab84a66d7ae1": {
+    "measurement": "end_consumption_proxy",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "五大企业 SSD 厂商收入",
+    "values": {
+      "current": "约 375.9 亿美元",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the public TrendForce release and checked the reported industry total and quarter-over-quarter rate",
+      "at": "2026-09-22T00:06:18.452Z"
+    },
+    "documents": [
+      {
+        "source_id": "ssd",
+        "url": "https://www.trendforce.com/presscenter/news/20260901-13210.html",
+        "sha256": "ef350efc30b6a3df4c8bf9e87dd437c0354f75c422df5b06a5a5b93ec15183fd",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-22T00:06:18.452Z",
+        "reviewed_at": "2026-09-22T00:06:18.452Z",
+        "status": "read",
+        "locator": "Opening paragraph · top-five enterprise SSD revenue",
+        "excerpt": "reaching $37.59 billion in 2Q26—a staggering 103.6% increase"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "d3b8c2feaa8b8731f3238ecc0de0a42311923d001a48e0ab398e5b7201c46486",
+    "id": "e-24d346a711d0645c4450de4bcd1e03e28e8cfb7a00ac89d1dc24ab84a66d7ae1"
+  },
+  "e-3a19a52c600e6f515d2909ef31c26bfa727c75b14c8889621365c64c3398a503": {
+    "measurement": "end_consumption_proxy",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "美光企业 SSD 收入",
+    "values": {
+      "current": "约 69.8 亿美元",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the public TrendForce release and checked the Micron paragraph's revenue estimate and growth rate",
+      "at": "2026-09-22T00:06:18.452Z"
+    },
+    "documents": [
+      {
+        "source_id": "ssd",
+        "url": "https://www.trendforce.com/presscenter/news/20260901-13210.html",
+        "sha256": "ef350efc30b6a3df4c8bf9e87dd437c0354f75c422df5b06a5a5b93ec15183fd",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-22T00:06:18.452Z",
+        "reviewed_at": "2026-09-22T00:06:18.452Z",
+        "status": "read",
+        "locator": "Micron paragraph · third-ranked supplier",
+        "excerpt": "revenue surging 126.3% QoQ to approximately $6.98 billion"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "d5994a5ee5b84ef4ddac00a943f46d4fbcce9564fbadbd4123ccf0873a969abd",
+    "id": "e-3a19a52c600e6f515d2909ef31c26bfa727c75b14c8889621365c64c3398a503"
+  },
+  "e-b4a49176474f4d6a90adee402d333e9b8b6c71853a37301485eb61f9d2da7930": {
+    "measurement": "end_consumption_proxy",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "美光手机与客户端位元出货",
+    "values": {
+      "current": "环比减少",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read Micron's earnings deck and checked the MCBU shipment-direction disclosure on PDF page 25",
+      "at": "2026-09-22T00:06:18.974Z"
+    },
+    "documents": [
+      {
+        "source_id": "mobile_bits",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf#page=25",
+        "sha256": "88f5c0729596ded76c4914d1159f27bdce90d7cdfe35c263856edc66368e4a99",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-22T00:06:18.974Z",
+        "reviewed_at": "2026-09-22T00:06:18.974Z",
+        "status": "read",
+        "locator": "PDF page 25 · Financial performance by business unit (2 of 2) · MCBU",
+        "excerpt": "MCBU revenue was up 49% sequentially ... partially offset by lower bit shipments"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "f8f5cb058cf58407fef023a307713ec226c3c91f3bbc9aa47f1d147f41347316",
+    "id": "e-b4a49176474f4d6a90adee402d333e9b8b6c71853a37301485eb61f9d2da7930"
+  },
+  "e-54c95a9a1a502a415ec2f13ea4152a25c80a782c7d9cdb6acc78e024b715dbc6": {
+    "measurement": "end_consumption_proxy",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "手机客户库存 / 提前采购",
+    "values": {
+      "current": "公开摘要提示库存增加与提前采购",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the publicly visible TrendForce summary and Key Highlights; the paid PDF was not accessed",
+      "at": "2026-09-22T00:06:18.721Z"
+    },
+    "documents": [
+      {
+        "source_id": "mobile",
+        "url": "https://www.trendforce.com/research/download/RP260909CK",
+        "sha256": "96c982813150c2a0c683170581f79e57429df4a218fa5667d25ed07c82ae4dc2",
+        "access": "abstract",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-22T00:06:18.721Z",
+        "reviewed_at": "2026-09-22T00:06:18.721Z",
+        "status": "read",
+        "locator": "Public summary and Key Highlights · inventory and pull-in discussion",
+        "excerpt": "Constrained by a high base and rising buyer inventory levels"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "f5466b5716f3f284a328f314d3f8b801b5625c3ee26291ca47598ac4438fc3fa",
+    "id": "e-54c95a9a1a502a415ec2f13ea4152a25c80a782c7d9cdb6acc78e024b715dbc6"
+  },
+  "e-c6f7b16b3d34f329e46538a7fc43e9d04645daac0b99b86e7bc955032445c522": {
+    "measurement": "end_consumption_proxy",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "point_in_time",
+    "accounting_basis": "as_disclosed",
+    "scope": "企业 SSD 交付周期",
+    "values": {
+      "current": "16 周（均衡基准 8 周）",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the public TrendForce article and checked the lead-time statement against its dated summary section",
+      "at": "2026-09-22T00:04:27.672Z"
+    },
+    "documents": [
+      {
+        "source_id": "essd_weekly",
+        "url": "https://insights.trendforce.com/p/weekly-radar-002",
+        "sha256": "7ab27e35426bd1bcc9fba38277ae065857bc667a7ec57c4c033eb400402b929f",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-22T00:04:27.672Z",
+        "reviewed_at": "2026-09-22T00:04:27.672Z",
+        "status": "read",
+        "locator": "This Week in 30 Seconds · first bullet",
+        "excerpt": "eSSD lead times remain elevated at 16 weeks against a balanced 8"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "118bf3fa83426b7f84ead2cff388fb58fab49d1094343dfe7d38b99aeaa0e32d",
+    "id": "e-c6f7b16b3d34f329e46538a7fc43e9d04645daac0b99b86e7bc955032445c522"
+  },
+  "e-ee6d2dba799bed9a43ec1b494bf6ba60a6f089624bf5b46d8f2862128095ade4": {
+    "measurement": "end_consumption_proxy",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "客户实际内存库存天数",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the publicly visible TrendForce summary and verified that no comparable customer inventory-days number was disclosed",
+      "at": "2026-09-22T00:06:18.721Z"
+    },
+    "documents": [
+      {
+        "source_id": "mobile",
+        "url": "https://www.trendforce.com/research/download/RP260909CK",
+        "sha256": "96c982813150c2a0c683170581f79e57429df4a218fa5667d25ed07c82ae4dc2",
+        "access": "abstract",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-22T00:06:18.721Z",
+        "reviewed_at": "2026-09-22T00:06:18.721Z",
+        "status": "read",
+        "locator": "Public summary, Key Highlights and table of contents; paid PDF not accessed",
+        "excerpt": "Constrained by a high base and rising buyer inventory levels"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "0e33faa23504fb168d843f6ea27bdfec0b13293991f6b0ef720e6dca831ca074",
+    "id": "e-ee6d2dba799bed9a43ec1b494bf6ba60a6f089624bf5b46d8f2862128095ade4"
   }
 }

@@ -2,8 +2,8 @@
   "format_version": 1,
   "document": {
     "schema_version": 2,
-    "revision": "2026-09-21-pipeline-1",
-    "updated_at": "2026-09-21T16:44:34.677Z",
+    "revision": "2026-09-22-ba45b6a8f0",
+    "updated_at": "2026-09-22T00:05:03.777Z",
     "last_successful_check_at": "2026-09-20T23:50:00Z",
     "last_attempt_at": "2026-09-20T23:50:00Z",
     "financial_period": "FY2026 Q3",
@@ -166,7 +166,7 @@
         "label": "TrendForce 企业级 SSD 报告 · 09-01",
         "url": "https://www.trendforce.com/presscenter/news/20260901-13210.html",
         "published_at": "2026-09-01",
-        "checked_at": "2026-09-20",
+        "checked_at": "2026-09-22",
         "type": "行业研究估计",
         "short_label": "TrendForce · SSD 收入",
         "locator": "首段：五大厂收入；Micron 段：美光企业 SSD 收入"
@@ -229,7 +229,7 @@
         "label": "TrendForce · 手机内存报告公开摘要 · 09-09",
         "url": "https://www.trendforce.com/research/download/RP260909CK",
         "published_at": "2026-09-09",
-        "checked_at": "2026-09-20",
+        "checked_at": "2026-09-22",
         "type": "研究摘要",
         "short_label": "TrendForce · 公开摘要",
         "locator": "公开摘要 / Key Highlights；未读取付费全文"
@@ -276,7 +276,7 @@
         "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf#page=25",
         "locator": "第 25 页 · MCBU · lower bit shipments",
         "published_at": "2026-06-24",
-        "checked_at": "2026-09-20",
+        "checked_at": "2026-09-22",
         "type": "公司披露"
       },
       "technology_revenue": {
@@ -584,6 +584,15 @@
         "checked_at": "2026-09-20",
         "locator": "页面 Last Modified 2026-09-16；Summary。仅读取公开摘要，未取得付费全文或原表。",
         "type": "行业公开摘要"
+      },
+      "essd_weekly": {
+        "label": "TrendForce Weekly Radar 002",
+        "short_label": "09-21 · 周度雷达",
+        "url": "https://insights.trendforce.com/p/weekly-radar-002",
+        "published_at": "2026-09-21",
+        "checked_at": "2026-09-22",
+        "locator": "This Week in 30 Seconds · enterprise SSD lead-time bullet。",
+        "type": "行业公开观察"
       },
       "nand_q3": {
         "label": "TrendForce NAND 3Q26 行业分析 · 公开摘要",
@@ -961,7 +970,7 @@
           "现货报价按指定规格采样。NAND 合同价的量化预测发布于 07-03，后续趋势来自 09-10 公开摘要。"
         ],
         "period": "报价至 09-15；报告至 09-16",
-        "checked_at": "2026-09-20",
+        "checked_at": "2026-09-22",
         "next_review": "每周",
         "definition": "行业合同价预测与现货报价。",
         "interpretation": "现货周报中的 DDR4 规格小幅上涨，NAND 规格小幅下降；合同价摘要预计涨幅收敛，未提供新的量化区间。"
@@ -994,7 +1003,7 @@
           "首批晶圆、产品出货和成熟产量属于不同阶段。"
         ],
         "period": "2026–2027 展望 · 披露至 09-16",
-        "checked_at": "2026-09-20",
+        "checked_at": "2026-09-22",
         "next_review": "新行业报告",
         "definition": "机构供需预测及公司产能计划。",
         "interpretation": "TrendForce 最新摘要预计 NAND 不同终端市场分化；企业 SSD 的需求展望不宜外推至全部消费级存储。"
@@ -1005,30 +1014,33 @@
         "category": "industry",
         "rows": [
           {
-            "record_ref": "2cf1e16f40ac931ec8f0ef91b1d8ce25af5a1da1e03633177f067bca0cf2b532"
+            "record_ref": "d3b8c2feaa8b8731f3238ecc0de0a42311923d001a48e0ab398e5b7201c46486"
           },
           {
-            "record_ref": "7b616b2fe255b2ea658c6038f6e7a20562adbd5230fc9da04f37cc7200ec7513"
+            "record_ref": "d5994a5ee5b84ef4ddac00a943f46d4fbcce9564fbadbd4123ccf0873a969abd"
           },
           {
-            "record_ref": "5dc3a99b70e366e2fb6e96f3dc1405b8e0613189ae253fcf20679723895062a3"
+            "record_ref": "f8f5cb058cf58407fef023a307713ec226c3c91f3bbc9aa47f1d147f41347316"
           },
           {
-            "record_ref": "85f2ecdc9e806408f2e59d2aff40405f34c9704c94f1b1cec5912de87cea26b5"
+            "record_ref": "f5466b5716f3f284a328f314d3f8b801b5625c3ee26291ca47598ac4438fc3fa"
           },
           {
-            "record_ref": "6e35f1ca9d8d2ee94432e01e1b5103852e5525e2bbf3174cdf68d141bd177a93"
+            "record_ref": "118bf3fa83426b7f84ead2cff388fb58fab49d1094343dfe7d38b99aeaa0e32d"
+          },
+          {
+            "record_ref": "0e33faa23504fb168d843f6ea27bdfec0b13293991f6b0ef720e6dca831ca074"
           }
         ],
         "limits": [
           "行业自然年 Q2 与美光 FQ3 的覆盖期间不同。",
           "手机报告采用公开摘要，缺少统一口径的客户库存天数和消耗量。"
         ],
-        "period": "行业资料至 09-16",
-        "checked_at": "2026-09-20",
+        "period": "行业资料至 09-21",
+        "checked_at": "2026-09-22",
         "next_review": "每周",
         "definition": "用于观察终端需求的间接指标。",
-        "interpretation": "企业 SSD 收入受售价、出货量和产品组合影响；手机与客户端出货反映供应商交付。客户实际库存与消耗量仍待补充。"
+        "interpretation": "企业 SSD 交付周期为 16 周，而 TrendForce 给出的均衡基准为 8 周，说明交付仍受约束；收入与交付周期都不是美光采购量。客户实际库存与消耗量仍待补充。"
       }
     ],
     "methodology": [
@@ -1043,6 +1055,12 @@
       "产业链指引和管理层展望按原披露日期及目标期间记录，文字为中文摘要；同比由原始金额计算，百分点与百分比区分。"
     ],
     "check_log": [
+      {
+        "at": "2026-09-22T00:05:03.777Z",
+        "status": "success",
+        "scope": "industry",
+        "text": "核查 09-21 最新行业资料；新增企业 SSD 交付周期及均衡基准，保留其间接指标边界。"
+      },
       {
         "at": "2026-09-20T23:50:00Z",
         "status": "success",
@@ -7575,6 +7593,246 @@
         "legacy-2ef8b9334edb8957557fdd32f0b929d4a4af3bedd6a16e9cc1ff2af39d63009d"
       ],
       "id": "2ef8b9334edb8957557fdd32f0b929d4a4af3bedd6a16e9cc1ff2af39d63009d"
+    },
+    "d3b8c2feaa8b8731f3238ecc0de0a42311923d001a48e0ab398e5b7201c46486": {
+      "metric_id": "mu.demand.ssd_industry_revenue",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "行业资料至 09-21",
+        "measurement": "end_consumption_proxy",
+        "unit": "",
+        "scope": "五大企业 SSD 厂商收入",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "ssd",
+            "url": "https://www.trendforce.com/presscenter/news/20260901-13210.html",
+            "published_at": "2026-09-01"
+          }
+        ]
+      },
+      "payload": {
+        "label": "五大企业 SSD 厂商收入",
+        "current": "约 375.9 亿美元",
+        "previous": null,
+        "unit": "",
+        "source_ids": [
+          "ssd"
+        ],
+        "kind": "行业估计",
+        "note": "收入受售价、出货量和产品组合共同影响。",
+        "period": "2026 自然年 Q2",
+        "change": "环比 +103.6%",
+        "evidence_type": "proxy",
+        "location": "TrendForce 09-01 报告 · 首段 / Micron 段。",
+        "id": "ssd_industry_revenue"
+      },
+      "evidence_ids": [
+        "e-24d346a711d0645c4450de4bcd1e03e28e8cfb7a00ac89d1dc24ab84a66d7ae1"
+      ],
+      "id": "d3b8c2feaa8b8731f3238ecc0de0a42311923d001a48e0ab398e5b7201c46486"
+    },
+    "d5994a5ee5b84ef4ddac00a943f46d4fbcce9564fbadbd4123ccf0873a969abd": {
+      "metric_id": "mu.demand.ssd_micron_revenue",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "行业资料至 09-21",
+        "measurement": "end_consumption_proxy",
+        "unit": "",
+        "scope": "美光企业 SSD 收入",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "ssd",
+            "url": "https://www.trendforce.com/presscenter/news/20260901-13210.html",
+            "published_at": "2026-09-01"
+          }
+        ]
+      },
+      "payload": {
+        "label": "美光企业 SSD 收入",
+        "current": "约 69.8 亿美元",
+        "previous": null,
+        "unit": "",
+        "source_ids": [
+          "ssd"
+        ],
+        "kind": "行业估计",
+        "note": "收入受售价、出货量和产品组合共同影响。",
+        "period": "2026 自然年 Q2",
+        "change": "环比 +126.3%",
+        "evidence_type": "proxy",
+        "location": "TrendForce 09-01 报告 · 首段 / Micron 段。",
+        "id": "ssd_micron_revenue"
+      },
+      "evidence_ids": [
+        "e-3a19a52c600e6f515d2909ef31c26bfa727c75b14c8889621365c64c3398a503"
+      ],
+      "id": "d5994a5ee5b84ef4ddac00a943f46d4fbcce9564fbadbd4123ccf0873a969abd"
+    },
+    "f8f5cb058cf58407fef023a307713ec226c3c91f3bbc9aa47f1d147f41347316": {
+      "metric_id": "mu.demand.mobile_bits_proxy",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "行业资料至 09-21",
+        "measurement": "end_consumption_proxy",
+        "unit": "",
+        "scope": "美光手机与客户端位元出货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "mobile_bits",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf#page=25",
+            "published_at": "2026-06-24"
+          }
+        ]
+      },
+      "payload": {
+        "label": "美光手机与客户端位元出货",
+        "current": "环比减少",
+        "previous": null,
+        "unit": "",
+        "source_ids": [
+          "mobile_bits"
+        ],
+        "kind": "公司披露",
+        "note": "以供应商交付量观察终端需求。",
+        "period": "FY2026 Q3",
+        "change": null,
+        "evidence_type": "proxy",
+        "location": "第 25 页 · MCBU · lower bit shipments。",
+        "id": "mobile_bits_proxy"
+      },
+      "evidence_ids": [
+        "e-b4a49176474f4d6a90adee402d333e9b8b6c71853a37301485eb61f9d2da7930"
+      ],
+      "id": "f8f5cb058cf58407fef023a307713ec226c3c91f3bbc9aa47f1d147f41347316"
+    },
+    "f5466b5716f3f284a328f314d3f8b801b5625c3ee26291ca47598ac4438fc3fa": {
+      "metric_id": "mu.demand.mobile_inventory_proxy",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "行业资料至 09-21",
+        "measurement": "end_consumption_proxy",
+        "unit": "",
+        "scope": "手机客户库存 / 提前采购",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "mobile",
+            "url": "https://www.trendforce.com/research/download/RP260909CK",
+            "published_at": "2026-09-09"
+          }
+        ]
+      },
+      "payload": {
+        "label": "手机客户库存 / 提前采购",
+        "current": "公开摘要提示库存增加与提前采购",
+        "previous": null,
+        "unit": "",
+        "source_ids": [
+          "mobile"
+        ],
+        "kind": "研究摘要",
+        "note": "公开摘要未给出客户库存数值。",
+        "period": "09-09 报告",
+        "change": null,
+        "evidence_type": "proxy",
+        "location": "公开摘要及 Key Highlights。",
+        "id": "mobile_inventory_proxy"
+      },
+      "evidence_ids": [
+        "e-54c95a9a1a502a415ec2f13ea4152a25c80a782c7d9cdb6acc78e024b715dbc6"
+      ],
+      "id": "f5466b5716f3f284a328f314d3f8b801b5625c3ee26291ca47598ac4438fc3fa"
+    },
+    "118bf3fa83426b7f84ead2cff388fb58fab49d1094343dfe7d38b99aeaa0e32d": {
+      "metric_id": "mu.demand.essd_lead_time",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "行业资料至 09-21",
+        "measurement": "end_consumption_proxy",
+        "unit": "",
+        "scope": "企业 SSD 交付周期",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "point_in_time",
+        "sources": [
+          {
+            "id": "essd_weekly",
+            "url": "https://insights.trendforce.com/p/weekly-radar-002",
+            "published_at": "2026-09-21"
+          }
+        ]
+      },
+      "payload": {
+        "label": "企业 SSD 交付周期",
+        "current": "16 周（均衡基准 8 周）",
+        "previous": null,
+        "unit": "",
+        "source_ids": [
+          "essd_weekly"
+        ],
+        "kind": "行业观察",
+        "note": "交付周期同时受需求与供给配置影响，不等于美光订单量。",
+        "period": "截至 2026-09-21",
+        "change": null,
+        "location": "This Week in 30 Seconds · enterprise SSD lead-time bullet。",
+        "evidence_type": "proxy",
+        "id": "essd_lead_time"
+      },
+      "evidence_ids": [
+        "e-c6f7b16b3d34f329e46538a7fc43e9d04645daac0b99b86e7bc955032445c522"
+      ],
+      "id": "118bf3fa83426b7f84ead2cff388fb58fab49d1094343dfe7d38b99aeaa0e32d"
+    },
+    "0e33faa23504fb168d843f6ea27bdfec0b13293991f6b0ef720e6dca831ca074": {
+      "metric_id": "mu.demand.customer_inventory",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "行业资料至 09-21",
+        "measurement": "end_consumption_proxy",
+        "unit": "",
+        "scope": "客户实际内存库存天数",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "mobile",
+            "url": "https://www.trendforce.com/research/download/RP260909CK",
+            "published_at": "2026-09-09"
+          }
+        ]
+      },
+      "payload": {
+        "label": "客户实际内存库存天数",
+        "current": null,
+        "previous": null,
+        "unit": "",
+        "source_ids": [
+          "mobile"
+        ],
+        "kind": "缺失",
+        "note": "未取得统一、可核对的数值。",
+        "period": "截至本次核查",
+        "change": null,
+        "location": "公开摘要没有客户实际库存天数。",
+        "evidence_type": "unavailable",
+        "id": "customer_inventory"
+      },
+      "evidence_ids": [
+        "e-ee6d2dba799bed9a43ec1b494bf6ba60a6f089624bf5b46d8f2862128095ade4"
+      ],
+      "id": "0e33faa23504fb168d843f6ea27bdfec0b13293991f6b0ef720e6dca831ca074"
     }
   },
   "supporting": {

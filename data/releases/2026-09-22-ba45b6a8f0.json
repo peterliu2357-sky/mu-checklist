@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "scope": "industry",
+  "base_commit": "922f87e509d793b29f5ceb68af0717eb6cbb8a22",
+  "base_revision": "2026-09-21-pipeline-1",
+  "base_sha256": "39d8dcf12bbe9123943cf6b6a9a2c2a19f1b2513e011e731d497a150148b5064",
+  "catalog_sha256": "2655e4f5ea75f1e844f48ebbdcb20dc44337d783b65694aefdd4b694434658a0",
+  "created_at": "2026-09-22T00:02:50.586Z",
+  "completed_at": "2026-09-22T00:05:03.777Z",
+  "state": "verified",
+  "coverage": [
+    {
+      "key": "industry",
+      "status": "verified",
+      "evidence": [
+        "essd_weekly",
+        "ssd",
+        "mobile_bits",
+        "mobile"
+      ],
+      "reviewed_at": "2026-09-22T00:04:27.672Z",
+      "latest_disclosure": {
+        "url": "https://insights.trendforce.com/p/weekly-radar-002",
+        "published_at": "2026-09-21"
+      },
+      "reason": "Reviewed the latest public TrendForce weekly radar; added its eSSD lead-time observation with an explicit proxy boundary."
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "essd_weekly",
+      "url": "https://insights.trendforce.com/p/weekly-radar-002",
+      "sha256": "7ab27e35426bd1bcc9fba38277ae065857bc667a7ec57c4c033eb400402b929f",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-22T00:04:27.672Z",
+      "reviewed_at": "2026-09-22T00:04:27.672Z",
+      "status": "read"
+    },
+    {
+      "source_id": "ssd",
+      "url": "https://www.trendforce.com/presscenter/news/20260901-13210.html",
+      "sha256": "ef350efc30b6a3df4c8bf9e87dd437c0354f75c422df5b06a5a5b93ec15183fd",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-22T00:06:18.452Z",
+      "reviewed_at": "2026-09-22T00:06:18.452Z",
+      "status": "read"
+    },
+    {
+      "source_id": "mobile",
+      "url": "https://www.trendforce.com/research/download/RP260909CK",
+      "sha256": "96c982813150c2a0c683170581f79e57429df4a218fa5667d25ed07c82ae4dc2",
+      "access": "abstract",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-22T00:06:18.721Z",
+      "reviewed_at": "2026-09-22T00:06:18.721Z",
+      "status": "read"
+    },
+    {
+      "source_id": "mobile_bits",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf#page=25",
+      "sha256": "88f5c0729596ded76c4914d1159f27bdce90d7cdfe35c263856edc66368e4a99",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-22T00:06:18.974Z",
+      "reviewed_at": "2026-09-22T00:06:18.974Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [],
+  "publication_corrections": [],
+  "summary": "核查 09-21 最新行业资料；新增企业 SSD 交付周期及均衡基准，保留其间接指标边界。",
+  "result": "success",
+  "artifact_sha256": "0bca85cc31adada3c33fbf13804b08fb361fa01ba8d5e91e18534c21d40621d1",
+  "ledger_sha256": "1e0961c3d62ad1056f06e218545cf12ae0ad929be5b030fc8335d36875173504",
+  "evidence_sha256": "86081a82dbe68a77a5339d52b4e09251a888e67817efeae514e9b80afa4081cb"
+}
