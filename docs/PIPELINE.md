@@ -20,7 +20,7 @@ npm test
 npm run monitor -- plan --scope full --run .monitor/runs/review
 ```
 
-Scopes: `full`, `micron`, `industry`, `quote`, `ecosystem`, `source_audit`. The command creates:
+Scopes: `full`, `micron`, `industry`, `quote`, `ecosystem`, `source_audit`, `company:<id>`, `discovery`, `news`, `calendar`, `batch`, `maintenance`. Routine work starts with `schedule` and targeted discovery; `full` is an explicit complete source audit. See [cadence and news](CADENCE.md) for targets and event handling. The command creates:
 
 - `manifest.json`: base commit/data/catalog hashes, coverage, source-read receipts, report-bundle declarations and resumable state.
 - `proposal.json`: editable candidate in the familiar schema-2 format, including stable IDs.

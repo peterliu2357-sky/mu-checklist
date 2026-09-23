@@ -2,8 +2,8 @@
   "format_version": 1,
   "document": {
     "schema_version": 2,
-    "revision": "2026-09-22-01b3136268",
-    "updated_at": "2026-09-22T00:14:18.417Z",
+    "revision": "2026-09-22-fa107b5338",
+    "updated_at": "2026-09-22T20:56:18.300Z",
     "last_successful_check_at": "2026-09-20T23:50:00Z",
     "last_attempt_at": "2026-09-20T23:50:00Z",
     "financial_period": "FY2026 Q3",
@@ -13,8 +13,8 @@
     "expected_report_review_by": "2026-10-02T00:30:00Z",
     "automation": {
       "enabled": true,
-      "cadence": "每日核查",
-      "note": "每日核查公开资料与最近收盘，完成核查后更新；非盘中实时数据。"
+      "cadence": "周日综合巡检 · 周三行业与动态",
+      "note": "财报按新披露更新；已确认财报日程安排单公司核查，也可按需更新。行情为标注交易日收盘。"
     },
     "quote": {
       "record_ref": "68bed24b344ab83cec0b390473d48958e91ec64d02e003b1f1effb26b8697517"
@@ -75,6 +75,11 @@
       }
     ],
     "changes": [
+      {
+        "date": "2026-09-22",
+        "title": "按资料类型更新，新增 AI 动态",
+        "text": "季度财报按披露更新；行业与动态每周查新。增加公司日程、来源明确的动态及分项检查提示。"
+      },
       {
         "date": "2026-09-20",
         "title": "更新产品进展与行业展望",
@@ -638,6 +643,60 @@
         "checked_at": "2026-09-20",
         "locator": "第 5 页 IV-1 Summary of Cash Flow · Net Operating Sources/(Uses)，2Q25 列。",
         "type": "公司原始披露"
+      },
+      "news_tf_20260921": {
+        "label": "TrendForce 周报 09-21",
+        "short_label": "TrendForce 周报 09-21",
+        "url": "https://insights.trendforce.com/p/weekly-radar-002",
+        "published_at": "2026-09-21",
+        "checked_at": "2026-09-22",
+        "type": "原始公开资料",
+        "locator": "This Week in 30 Seconds · 第一条企业 SSD 观察。"
+      },
+      "news_nv_20260921": {
+        "label": "NVIDIA DSX Ready 公告",
+        "short_label": "NVIDIA DSX Ready 公告",
+        "url": "https://blogs.nvidia.com/blog/dsx-ready-ai-factories-power-cooling/",
+        "published_at": "2026-09-21",
+        "checked_at": "2026-09-22",
+        "type": "原始公开资料",
+        "locator": "Power and Cooling Qualification；Qualified Building Blocks for Building AI Factory。"
+      },
+      "news_sk_20260918": {
+        "label": "SK 海力士 Ventures 公告",
+        "short_label": "SK 海力士 Ventures 公告",
+        "url": "https://news.skhynix.com/en/sk-hynix-ventures/",
+        "published_at": "2026-09-18",
+        "checked_at": "2026-09-22",
+        "type": "原始公开资料",
+        "locator": "Discussing Cooperation in AI Computing, Data Centers, and Optical Interconnect。"
+      },
+      "news_mu_20260915": {
+        "label": "美光 512GB RDIMM 公告",
+        "short_label": "美光 512GB RDIMM 公告",
+        "url": "https://investors.micron.com/news/press-release/2026/Micron-Advances-Memory-Innovation-With-the-Worlds-First-Ultra-Dense-Module-for-Next-Generation-Servers/default.aspx",
+        "published_at": "2026-09-15",
+        "checked_at": "2026-09-22",
+        "type": "原始公开资料",
+        "locator": "Ecosystem partner validation；量产时间表段落。"
+      },
+      "news_meta_20260908": {
+        "label": "Meta Muse 发布公告",
+        "short_label": "Meta Muse 发布公告",
+        "url": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
+        "published_at": "2026-09-08",
+        "checked_at": "2026-09-22",
+        "type": "原始公开资料",
+        "locator": "Takeaways；Built to be Private, Safe, and Secure；Looking Ahead。"
+      },
+      "calendar_mu_20260930": {
+        "label": "美光 FY2026 Q4 财报活动",
+        "short_label": "美光财报日程",
+        "url": "https://investors.micron.com/events-and-presentations/event-details/2026/Microns-Fourth-Quarter-2026-Financial-Call/default.aspx",
+        "published_at": null,
+        "checked_at": "2026-09-22",
+        "type": "公司日程",
+        "locator": "活动标题与日期：September 30, 2026 4:30 PM ET。"
       }
     },
     "metrics": [
@@ -1055,6 +1114,12 @@
       "产业链指引和管理层展望按原披露日期及目标期间记录，文字为中文摘要；同比由原始金额计算，百分点与百分比区分。"
     ],
     "check_log": [
+      {
+        "at": "2026-09-22T20:56:18.300Z",
+        "status": "success",
+        "scope": "batch",
+        "text": "新增 AI 动态与按资料类型更新的日程；财报数据及原有核查时间保持不变。"
+      },
       {
         "at": "2026-09-22T00:14:18.417Z",
         "status": "success",
@@ -1482,6 +1547,68 @@
           "notes": [
             "本次读取的财报新闻稿未提供可逐项核对的季度资本开支及经营现金流，保留数据缺口。"
           ]
+        }
+      ]
+    },
+    "monitoring": {
+      "version": 1,
+      "policy": {
+        "financial_discovery_days": 7,
+        "industry_discovery_days": 4,
+        "grace_hours": 24,
+        "earnings_review_hours": 24,
+        "timezone": "America/Los_Angeles",
+        "weekly_days": [
+          0,
+          3
+        ],
+        "quote_stale_sessions": 2
+      },
+      "checks": [],
+      "calendar": [
+        {
+          "record_ref": "c0f2943b13a2c2f156d13dfbda3174b9cc652af9333c7c9a1d7d18769e1468f3"
+        }
+      ]
+    },
+    "news": {
+      "categories": {
+        "memory": "内存价格与供需",
+        "customers": "客户需求与投入",
+        "products": "芯片与产品",
+        "capacity": "竞争与产能",
+        "applications": "AI 产品与应用"
+      },
+      "entities": {
+        "micron": "美光",
+        "microsoft": "Microsoft",
+        "amazon": "Amazon / AWS",
+        "alphabet": "Alphabet / Google Cloud",
+        "oracle": "Oracle / OCI",
+        "meta": "Meta",
+        "nvidia": "英伟达 NVIDIA",
+        "tsmc": "台积电 TSMC",
+        "samsung": "三星 Samsung",
+        "skhynix": "SK 海力士",
+        "trendforce": "TrendForce",
+        "openai": "OpenAI",
+        "anthropic": "Anthropic"
+      },
+      "items": [
+        {
+          "record_ref": "a6d6b7884e90eb32d8d457691d87dfddf81379d9adb16f4fc5e53cb7746a1df7"
+        },
+        {
+          "record_ref": "75cb9e56bc2af518568b201e52b19297a0a4096bb9dd8b6124fa2d163b3befbe"
+        },
+        {
+          "record_ref": "8a811090b1dfc2ad1e3238316bb087ee76a2e3469433e391b0953c231a70177b"
+        },
+        {
+          "record_ref": "176557a8c4f9a757c6372b7a055558e46a22c1ab37e1c3bb80f887a405470d05"
+        },
+        {
+          "record_ref": "d35d5d362ddfab280707a6083db65fa82f1987e64f08fcebfac7365420d9e000"
         }
       ]
     }
@@ -7871,6 +7998,289 @@
         "e-f904719ecede8e8ca5de8bef50cd90b371023e59dc16eff86bba15de9b2ca364"
       ],
       "id": "68bed24b344ab83cec0b390473d48958e91ec64d02e003b1f1effb26b8697517"
+    },
+    "a6d6b7884e90eb32d8d457691d87dfddf81379d9adb16f4fc5e53cb7746a1df7": {
+      "metric_id": "news.tf_essd_20260921",
+      "definition_version": 1,
+      "context": {
+        "entity": "news",
+        "period": "截至 2026-09-21",
+        "measurement": "sourced_news",
+        "unit": "",
+        "scope": "news.tf_essd_20260921",
+        "accounting_basis": "not_applicable",
+        "temporal_basis": "dated_disclosure",
+        "sources": [
+          {
+            "id": "news_tf_20260921",
+            "url": "https://insights.trendforce.com/p/weekly-radar-002",
+            "published_at": "2026-09-21"
+          }
+        ]
+      },
+      "payload": {
+        "id": "tf_essd_20260921",
+        "story_key": "trendforce-essd-lead-time-2026-09-21",
+        "category": "memory",
+        "companies": [
+          "trendforce"
+        ],
+        "title": "企业级 SSD 交付周期仍高于均衡基准",
+        "summary": "TrendForce 周报观察到，NAND 厂商正将产能转向企业级 SSD，交付周期仍处于高位。",
+        "kind": "行业观察",
+        "period": "截至 2026-09-21",
+        "published_at": "2026-09-21",
+        "source_ids": [
+          "news_tf_20260921"
+        ],
+        "location": "This Week in 30 Seconds · 第一条企业 SSD 观察。",
+        "evidence_type": "direct",
+        "note": "8 周是均衡市场基准；交期用于间接观察供需，未披露客户实际消耗量。",
+        "interpretation": "较长交期与供给紧张相符，也会受到采购排程影响。",
+        "fact_refs": [
+          {
+            "metric_id": "mu.demand.essd_lead_time",
+            "record_id": "118bf3fa83426b7f84ead2cff388fb58fab49d1094343dfe7d38b99aeaa0e32d"
+          }
+        ],
+        "updated_at": "2026-09-21"
+      },
+      "evidence_ids": [
+        "e-c78a8623998d4a6d4c21b89e9d5bc41f6f8972c0e8139e4a7316788f2b40ca84"
+      ],
+      "id": "a6d6b7884e90eb32d8d457691d87dfddf81379d9adb16f4fc5e53cb7746a1df7"
+    },
+    "75cb9e56bc2af518568b201e52b19297a0a4096bb9dd8b6124fa2d163b3befbe": {
+      "metric_id": "news.nv_dsx_20260921",
+      "definition_version": 1,
+      "context": {
+        "entity": "news",
+        "period": "2026-09-21 公告",
+        "measurement": "sourced_news",
+        "unit": "",
+        "scope": "news.nv_dsx_20260921",
+        "accounting_basis": "not_applicable",
+        "temporal_basis": "dated_disclosure",
+        "sources": [
+          {
+            "id": "news_nv_20260921",
+            "url": "https://blogs.nvidia.com/blog/dsx-ready-ai-factories-power-cooling/",
+            "published_at": "2026-09-21"
+          }
+        ]
+      },
+      "payload": {
+        "id": "nv_dsx_20260921",
+        "story_key": "nvidia-dsx-ready-launch",
+        "category": "products",
+        "companies": [
+          "nvidia"
+        ],
+        "title": "NVIDIA 推出 AI 数据中心供电与冷却认证项目",
+        "summary": "DSX Ready 首批覆盖电池储能系统和冷却分配单元。公告列出已通过相应要求的合作厂商，并说明后续将增加基础设施与软件类别。",
+        "kind": "公司披露",
+        "period": "2026-09-21 公告",
+        "published_at": "2026-09-21",
+        "source_ids": [
+          "news_nv_20260921"
+        ],
+        "location": "Power and Cooling Qualification；Qualified Building Blocks for Building AI Factory。",
+        "evidence_type": "direct",
+        "note": "产品认证覆盖特定边界；实际部署仍需场地工程评估。",
+        "interpretation": "这一进展涉及 AI 数据中心建设条件，公告未披露新增内存采购量。",
+        "fact_refs": [],
+        "updated_at": "2026-09-21"
+      },
+      "evidence_ids": [
+        "e-36974068b1699bccb251b41993ed979c794f0f3321c6447baa79dffdca209b3d"
+      ],
+      "id": "75cb9e56bc2af518568b201e52b19297a0a4096bb9dd8b6124fa2d163b3befbe"
+    },
+    "8a811090b1dfc2ad1e3238316bb087ee76a2e3469433e391b0953c231a70177b": {
+      "metric_id": "news.sk_ventures_20260918",
+      "definition_version": 1,
+      "context": {
+        "entity": "news",
+        "period": "2026-09-18 公布的投资方向",
+        "measurement": "sourced_news",
+        "unit": "",
+        "scope": "news.sk_ventures_20260918",
+        "accounting_basis": "not_applicable",
+        "temporal_basis": "dated_disclosure",
+        "sources": [
+          {
+            "id": "news_sk_20260918",
+            "url": "https://news.skhynix.com/en/sk-hynix-ventures/",
+            "published_at": "2026-09-18"
+          }
+        ]
+      },
+      "payload": {
+        "id": "sk_ventures_20260918",
+        "story_key": "sk-hynix-ventures-launch",
+        "category": "capacity",
+        "companies": [
+          "skhynix"
+        ],
+        "title": "SK 海力士扩大 AI 生态战略投资范围",
+        "summary": "SK 海力士推出 SK hynix Ventures 品牌，计划将创投范围拓展至 AI 计算、数据中心、系统软件和光互连，并加强与初创企业的技术合作。",
+        "kind": "公司计划",
+        "period": "2026-09-18 公布的投资方向",
+        "published_at": "2026-09-18",
+        "source_ids": [
+          "news_sk_20260918"
+        ],
+        "location": "Discussing Cooperation in AI Computing, Data Centers, and Optical Interconnect。",
+        "evidence_type": "direct",
+        "note": "这是创投与技术合作计划；公告未披露新增投资金额或晶圆产能。",
+        "interpretation": "",
+        "fact_refs": [],
+        "updated_at": "2026-09-18"
+      },
+      "evidence_ids": [
+        "e-2891c2649714750ecdf3e1ad1260e9a7ef7abf4edfb9035ea4bd0a6870dafc13"
+      ],
+      "id": "8a811090b1dfc2ad1e3238316bb087ee76a2e3469433e391b0953c231a70177b"
+    },
+    "176557a8c4f9a757c6372b7a055558e46a22c1ab37e1c3bb80f887a405470d05": {
+      "metric_id": "news.mu_rdimm_20260915",
+      "definition_version": 1,
+      "context": {
+        "entity": "news",
+        "period": "验证进展截至 2026-09-15；量产目标 2027 年下半年",
+        "measurement": "sourced_news",
+        "unit": "",
+        "scope": "news.mu_rdimm_20260915",
+        "accounting_basis": "not_applicable",
+        "temporal_basis": "dated_disclosure",
+        "sources": [
+          {
+            "id": "news_mu_20260915",
+            "url": "https://investors.micron.com/news/press-release/2026/Micron-Advances-Memory-Innovation-With-the-Worlds-First-Ultra-Dense-Module-for-Next-Generation-Servers/default.aspx",
+            "published_at": "2026-09-15"
+          }
+        ]
+      },
+      "payload": {
+        "id": "mu_rdimm_20260915",
+        "story_key": "micron-512gb-rdimm",
+        "category": "products",
+        "companies": [
+          "micron"
+        ],
+        "title": "美光完成 512GB DDR5 RDIMM 多平台演示",
+        "summary": "AMD 与 Intel 正在验证该模块。美光预计于 2027 年下半年根据客户需求进入量产。",
+        "kind": "公司计划",
+        "period": "验证进展截至 2026-09-15；量产目标 2027 年下半年",
+        "published_at": "2026-09-15",
+        "source_ids": [
+          "news_mu_20260915"
+        ],
+        "location": "Ecosystem partner validation；量产时间表段落。",
+        "evidence_type": "direct",
+        "note": "验证进展与量产目标分开记录。",
+        "interpretation": "",
+        "fact_refs": [
+          {
+            "metric_id": "mu.hbm.rdimm_validation",
+            "record_id": "face969761be5c5a321e15191b0c3b1bb5cdb72c0c259a51e797d3ccf0acc0e7"
+          },
+          {
+            "metric_id": "mu.hbm.rdimm_production",
+            "record_id": "5e0988515249ef6eb5221fa8d515b0d895fc99f603c40bee30cba4ac59011cff"
+          }
+        ],
+        "updated_at": "2026-09-15"
+      },
+      "evidence_ids": [
+        "e-979f13065282bf6f455d04aeca64a07ab2ed8f4389a21a2323643998b2dc36ee"
+      ],
+      "id": "176557a8c4f9a757c6372b7a055558e46a22c1ab37e1c3bb80f887a405470d05"
+    },
+    "d35d5d362ddfab280707a6083db65fa82f1987e64f08fcebfac7365420d9e000": {
+      "metric_id": "news.meta_muse_20260908",
+      "definition_version": 1,
+      "context": {
+        "entity": "news",
+        "period": "2026-09-08 发布",
+        "measurement": "sourced_news",
+        "unit": "",
+        "scope": "news.meta_muse_20260908",
+        "accounting_basis": "not_applicable",
+        "temporal_basis": "dated_disclosure",
+        "sources": [
+          {
+            "id": "news_meta_20260908",
+            "url": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
+            "published_at": "2026-09-08"
+          }
+        ]
+      },
+      "payload": {
+        "id": "meta_muse_20260908",
+        "story_key": "meta-muse-launch",
+        "category": "applications",
+        "companies": [
+          "meta"
+        ],
+        "title": "Meta 发布运行于独立云端虚拟机的 Muse",
+        "summary": "Meta 开始在美国推出 Muse 个人 AI agent，提供 iOS、Android 与网页入口。公司表示，agent 在独立云端虚拟机内运行，可跨应用执行任务，并提供免费使用及订阅方案。",
+        "kind": "公司披露",
+        "period": "2026-09-08 发布",
+        "published_at": "2026-09-08",
+        "source_ids": [
+          "news_meta_20260908"
+        ],
+        "location": "Takeaways；Built to be Private, Safe, and Secure；Looking Ahead。",
+        "evidence_type": "direct",
+        "note": "产品与运行方式按 Meta 公告记录；公告未披露用户量、订阅收入或内存采购规模。",
+        "interpretation": "",
+        "fact_refs": [],
+        "updated_at": "2026-09-08"
+      },
+      "evidence_ids": [
+        "e-16cac962a23cb90bf9ebfc484d2ca7fd0535133c9a515fbeb381c58bcb3cf2aa"
+      ],
+      "id": "d35d5d362ddfab280707a6083db65fa82f1987e64f08fcebfac7365420d9e000"
+    },
+    "c0f2943b13a2c2f156d13dfbda3174b9cc652af9333c7c9a1d7d18769e1468f3": {
+      "metric_id": "calendar.micron_fy2026_q4",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4",
+        "measurement": "disclosure_calendar",
+        "unit": "",
+        "scope": "calendar.micron_fy2026_q4",
+        "accounting_basis": "not_applicable",
+        "temporal_basis": "dated_disclosure",
+        "sources": [
+          {
+            "id": "calendar_mu_20260930",
+            "url": "https://investors.micron.com/events-and-presentations/event-details/2026/Microns-Fourth-Quarter-2026-Financial-Call/default.aspx",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "id": "micron_fy2026_q4",
+        "company_id": "micron",
+        "title": "美光 FY2026 Q4 财报",
+        "period": "FY2026 Q4",
+        "scheduled_at": "2026-09-30T16:30:00-04:00",
+        "review_after": "2026-10-01T20:30:00Z",
+        "confirmation": "confirmed",
+        "source_ids": [
+          "calendar_mu_20260930"
+        ],
+        "location": "活动标题与日期：September 30, 2026 4:30 PM ET。",
+        "kind": "公司日程",
+        "evidence_type": "direct"
+      },
+      "evidence_ids": [
+        "e-6c2571d1ca790591b25e56b0236fb30a154ab716aeaf436e7c64d4ae20a9bf09"
+      ],
+      "id": "c0f2943b13a2c2f156d13dfbda3174b9cc652af9333c7c9a1d7d18769e1468f3"
     }
   },
   "supporting": {

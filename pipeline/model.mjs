@@ -35,6 +35,10 @@ export function entries(document, catalog) {
     const row=document.events[i];
     add(`event.${row.id}`,row,{entity:'micron'},v=>document.events[i]=v);
   }
+  for(const [group,prefix] of [[document.news?.items,'news'],[document.monitoring?.calendar,'calendar']])for(let i=0;i<(group?.length||0);i++) {
+    const row=group[i];
+    add(`${prefix}.${row.id}`,row,{entity:prefix==='news'?'news':row.company_id,period:row.period},v=>group[i]=v);
+  }
   return result;
 }
 
@@ -63,11 +67,20 @@ export function materialize(ledger) {
     }
     return value;
   }
-  return visit(ledger.document);
+  const result=visit(ledger.document);
+  if(result.news){
+    result.news.fact_records={};
+    for(const n of result.news.items)for(const ref of n.fact_refs){
+      const r=ledger.records[ref.record_id];
+      if(r)result.news.fact_records[ref.record_id]={metric_id:r.metric_id,context:clone(r.context),payload:clone(r.payload)};
+    }
+  }
+  return result;
 }
 
 export function recordDocument(document,catalog,previous=null,evidenceByMetric={}) {
   const ledger={format_version:1,document:clone(document),records:clone(previous?.records||{}),supporting:clone(previous?.supporting||{})};
+  if(ledger.document.news)delete ledger.document.news.fact_records;
   for(const entry of entries(ledger.document,catalog)) {
     const record=makeRecord(entry,document,catalog);
     record.evidence_ids=evidenceByMetric[entry.metric_id] || previous?.records[record.id]?.evidence_ids || [];

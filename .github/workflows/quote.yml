@@ -1,0 +1,32 @@
+name: Regular close update
+on:
+  schedule:
+    # 18:10 ET across both daylight-saving offsets; the local-time guard runs once.
+    - cron: '10 22,23 * * 1-5'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pull-requests: write
+  actions: write
+concurrency:
+  group: regular-close-update
+  cancel-in-progress: false
+jobs:
+  quote:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - name: Prepare and publish through candidate checks
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_KIND: ${{ github.event_name }}
+        run: bash scripts/publish-quote.sh

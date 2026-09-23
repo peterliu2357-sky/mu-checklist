@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "required_sections": [
     "asp",
     "volume",
@@ -32,7 +32,7 @@
       "group": "cloud",
       "discovery": {
         "adapter": "agent",
-        "entry_url": "https://microsoft.gcs-web.com/static-files/6f77f14c-9bdd-49c1-bfa3-1dbe8d872424#page=20",
+        "entry_url": "https://www.microsoft.com/en-us/Investor",
         "search_query": "site:microsoft.gcs-web.com Microsoft latest quarterly results investor relations",
         "require_latest_disclosure": true
       }
@@ -42,7 +42,7 @@
       "group": "cloud",
       "discovery": {
         "adapter": "agent",
-        "entry_url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Second-Quarter-Results/default.aspx?linkId=987889123",
+        "entry_url": "https://ir.aboutamazon.com/quarterly-results/default.aspx",
         "search_query": "site:ir.aboutamazon.com Amazon / AWS latest quarterly results investor relations",
         "require_latest_disclosure": true
       }
@@ -52,7 +52,7 @@
       "group": "cloud",
       "discovery": {
         "adapter": "agent",
-        "entry_url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q2/2026q2-alphabet-earnings-release.pdf#page=2",
+        "entry_url": "https://abc.xyz/investor/",
         "search_query": "site:s206.q4cdn.com Alphabet / Google Cloud latest quarterly results investor relations",
         "require_latest_disclosure": true
       }
@@ -62,7 +62,7 @@
       "group": "cloud",
       "discovery": {
         "adapter": "agent",
-        "entry_url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Q1-Results-Driven-by-Triple-Digit-Growth-in-Cloud-Infrastructure-Revenues/default.aspx?send_id=slate-b20260911-084845",
+        "entry_url": "https://investor.oracle.com/financials/quarterly-reports/default.aspx",
         "search_query": "site:investor.oracle.com Oracle / OCI latest quarterly results investor relations",
         "require_latest_disclosure": true
       }
@@ -72,7 +72,7 @@
       "group": "cloud",
       "discovery": {
         "adapter": "agent",
-        "entry_url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Second-Quarter-2026-Results/",
+        "entry_url": "https://investor.atmeta.com/financials/",
         "search_query": "site:investor.atmeta.com Meta latest quarterly results investor relations",
         "require_latest_disclosure": true
       }
@@ -82,7 +82,7 @@
       "group": "chips",
       "discovery": {
         "adapter": "agent",
-        "entry_url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Second-Quarter-Fiscal-2027/default.aspx",
+        "entry_url": "https://investor.nvidia.com/financial-info/financial-reports-and-sec-filings/default.aspx",
         "search_query": "site:investor.nvidia.com 英伟达 NVIDIA latest quarterly results investor relations",
         "require_latest_disclosure": true
       }
@@ -92,7 +92,7 @@
       "group": "chips",
       "discovery": {
         "adapter": "agent",
-        "entry_url": "https://pr.tsmc.com/system/files/newspdf/attachment/e98d0838eea3c47083fb67dbc349c059d8457c25/2Q26%20(E)_with%20gudiance_final_wmn.pdf#page=1",
+        "entry_url": "https://investor.tsmc.com/english/financial-calendar",
         "search_query": "site:pr.tsmc.com 台积电 TSMC latest quarterly results investor relations",
         "require_latest_disclosure": true
       }
@@ -102,7 +102,7 @@
       "group": "chips",
       "discovery": {
         "adapter": "agent",
-        "entry_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_2Q_conference_eng.pdf?pubDate=20260802#page=13",
+        "entry_url": "https://www.samsung.com/global/ir/financial-information/earnings-release/",
         "search_query": "site:images.samsung.com 三星 Samsung latest quarterly results investor relations",
         "require_latest_disclosure": true
       }
@@ -112,7 +112,7 @@
       "group": "chips",
       "discovery": {
         "adapter": "agent",
-        "entry_url": "https://news.skhynix.com/en/q2-2026-business-results/",
+        "entry_url": "https://news.skhynix.com/en/category/financial/",
         "search_query": "site:news.skhynix.com SK 海力士 latest quarterly results investor relations",
         "require_latest_disclosure": true
       }
@@ -2438,6 +2438,114 @@
       "evidence_types": [
         "direct"
       ]
+    },
+    "news.tf_essd_20260921": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "entity": "news",
+      "measurement": "sourced_news",
+      "unit": "",
+      "scope": "news.tf_essd_20260921",
+      "accounting_basis": "not_applicable",
+      "temporal_basis": "dated_disclosure",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct",
+        "proxy",
+        "secondary"
+      ]
+    },
+    "news.nv_dsx_20260921": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "entity": "news",
+      "measurement": "sourced_news",
+      "unit": "",
+      "scope": "news.nv_dsx_20260921",
+      "accounting_basis": "not_applicable",
+      "temporal_basis": "dated_disclosure",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct",
+        "proxy",
+        "secondary"
+      ]
+    },
+    "news.sk_ventures_20260918": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "entity": "news",
+      "measurement": "sourced_news",
+      "unit": "",
+      "scope": "news.sk_ventures_20260918",
+      "accounting_basis": "not_applicable",
+      "temporal_basis": "dated_disclosure",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct",
+        "proxy",
+        "secondary"
+      ]
+    },
+    "news.mu_rdimm_20260915": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "entity": "news",
+      "measurement": "sourced_news",
+      "unit": "",
+      "scope": "news.mu_rdimm_20260915",
+      "accounting_basis": "not_applicable",
+      "temporal_basis": "dated_disclosure",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct",
+        "proxy",
+        "secondary"
+      ]
+    },
+    "news.meta_muse_20260908": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "entity": "news",
+      "measurement": "sourced_news",
+      "unit": "",
+      "scope": "news.meta_muse_20260908",
+      "accounting_basis": "not_applicable",
+      "temporal_basis": "dated_disclosure",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct",
+        "proxy",
+        "secondary"
+      ]
+    },
+    "calendar.micron_fy2026_q4": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "disclosure_calendar",
+      "unit": "",
+      "scope": "calendar.micron_fy2026_q4",
+      "accounting_basis": "not_applicable",
+      "temporal_basis": "dated_disclosure",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct",
+        "proxy",
+        "secondary"
+      ]
     }
   },
   "source_roles": {
@@ -2716,6 +2824,27 @@
     ],
     "next": [
       "event.next_earnings"
+    ],
+    "news_tf_20260921": [
+      "news.tf_essd_20260921"
+    ],
+    "news_nv_20260921": [
+      "news.nv_dsx_20260921"
+    ],
+    "news_sk_20260918": [
+      "news.sk_ventures_20260918"
+    ],
+    "news_mu_20260915": [
+      "news.mu_rdimm_20260915"
+    ],
+    "news_meta_20260908": [
+      "news.meta_muse_20260908"
+    ],
+    "calendar_mu_20260930": [
+      "calendar.micron_fy2026_q4"
+    ],
+    "price_auto": [
+      "quote.mu"
     ]
   },
   "calculations": [
@@ -2829,6 +2958,222 @@
       "adapter": "agent",
       "entry_url": "https://stockanalysis.com/stocks/mu/history/",
       "require_latest_disclosure": true
+    }
+  },
+  "monitoring": {
+    "version": 1,
+    "policy": {
+      "financial_discovery_days": 7,
+      "industry_discovery_days": 4,
+      "grace_hours": 24,
+      "earnings_review_hours": 24,
+      "timezone": "America/Los_Angeles",
+      "weekly_days": [
+        0,
+        3
+      ],
+      "quote_stale_sessions": 2
+    },
+    "targets": {
+      "company:micron": {
+        "label": "美光",
+        "cadence": "new_disclosure",
+        "entry_urls": [
+          "https://investors.micron.com/overview/default.aspx"
+        ],
+        "include": [
+          "earnings",
+          "filings",
+          "guidance_revisions",
+          "financial_calendar"
+        ]
+      },
+      "company:microsoft": {
+        "label": "Microsoft",
+        "cadence": "new_disclosure",
+        "entry_urls": [
+          "https://www.microsoft.com/en-us/Investor"
+        ],
+        "include": [
+          "earnings",
+          "filings",
+          "guidance_revisions",
+          "financial_calendar"
+        ]
+      },
+      "company:amazon": {
+        "label": "Amazon / AWS",
+        "cadence": "new_disclosure",
+        "entry_urls": [
+          "https://ir.aboutamazon.com/quarterly-results/default.aspx"
+        ],
+        "include": [
+          "earnings",
+          "filings",
+          "guidance_revisions",
+          "financial_calendar"
+        ]
+      },
+      "company:alphabet": {
+        "label": "Alphabet / Google Cloud",
+        "cadence": "new_disclosure",
+        "entry_urls": [
+          "https://abc.xyz/investor/"
+        ],
+        "include": [
+          "earnings",
+          "filings",
+          "guidance_revisions",
+          "financial_calendar"
+        ]
+      },
+      "company:oracle": {
+        "label": "Oracle / OCI",
+        "cadence": "new_disclosure",
+        "entry_urls": [
+          "https://investor.oracle.com/financials/quarterly-reports/default.aspx"
+        ],
+        "include": [
+          "earnings",
+          "filings",
+          "guidance_revisions",
+          "financial_calendar"
+        ]
+      },
+      "company:meta": {
+        "label": "Meta",
+        "cadence": "new_disclosure",
+        "entry_urls": [
+          "https://investor.atmeta.com/financials/"
+        ],
+        "include": [
+          "earnings",
+          "filings",
+          "guidance_revisions",
+          "financial_calendar"
+        ]
+      },
+      "company:nvidia": {
+        "label": "英伟达 NVIDIA",
+        "cadence": "new_disclosure",
+        "entry_urls": [
+          "https://investor.nvidia.com/financial-info/financial-reports-and-sec-filings/default.aspx"
+        ],
+        "include": [
+          "earnings",
+          "filings",
+          "guidance_revisions",
+          "financial_calendar"
+        ]
+      },
+      "company:tsmc": {
+        "label": "台积电 TSMC",
+        "cadence": "new_disclosure",
+        "entry_urls": [
+          "https://investor.tsmc.com/english/financial-calendar"
+        ],
+        "include": [
+          "earnings",
+          "filings",
+          "guidance_revisions",
+          "financial_calendar"
+        ]
+      },
+      "company:samsung": {
+        "label": "三星 Samsung",
+        "cadence": "new_disclosure",
+        "entry_urls": [
+          "https://www.samsung.com/global/ir/financial-information/earnings-release/"
+        ],
+        "include": [
+          "earnings",
+          "filings",
+          "guidance_revisions",
+          "financial_calendar"
+        ]
+      },
+      "company:skhynix": {
+        "label": "SK 海力士",
+        "cadence": "new_disclosure",
+        "entry_urls": [
+          "https://news.skhynix.com/en/category/financial/"
+        ],
+        "include": [
+          "earnings",
+          "filings",
+          "guidance_revisions",
+          "financial_calendar"
+        ]
+      },
+      "industry": {
+        "label": "行业资料",
+        "cadence": "twice_weekly",
+        "entry_urls": [
+          "https://www.trendforce.com/presscenter/",
+          "https://insights.trendforce.com/"
+        ]
+      },
+      "news": {
+        "label": "AI 动态",
+        "cadence": "twice_weekly",
+        "entry_urls": [
+          "https://www.trendforce.com/presscenter/",
+          "https://insights.trendforce.com/",
+          "https://investors.micron.com/news/default.aspx",
+          "https://nvidianews.nvidia.com/news",
+          "https://news.skhynix.com/en/",
+          "https://news.samsung.com/global/",
+          "https://about.fb.com/news/",
+          "https://blogs.microsoft.com/",
+          "https://aws.amazon.com/blogs/aws/",
+          "https://blog.google/technology/ai/",
+          "https://www.oracle.com/news/",
+          "https://pr.tsmc.com/english"
+        ]
+      }
+    },
+    "news_categories": {
+      "memory": "内存价格与供需",
+      "customers": "客户需求与投入",
+      "products": "芯片与产品",
+      "capacity": "竞争与产能",
+      "applications": "AI 产品与应用"
+    },
+    "news_entities": {
+      "micron": "美光",
+      "microsoft": "Microsoft",
+      "amazon": "Amazon / AWS",
+      "alphabet": "Alphabet / Google Cloud",
+      "oracle": "Oracle / OCI",
+      "meta": "Meta",
+      "nvidia": "英伟达 NVIDIA",
+      "tsmc": "台积电 TSMC",
+      "samsung": "三星 Samsung",
+      "skhynix": "SK 海力士",
+      "trendforce": "TrendForce",
+      "openai": "OpenAI",
+      "anthropic": "Anthropic"
+    },
+    "news_sources": [
+      "https://www.trendforce.com/presscenter/",
+      "https://insights.trendforce.com/",
+      "https://investors.micron.com/news/default.aspx",
+      "https://nvidianews.nvidia.com/news",
+      "https://news.skhynix.com/en/",
+      "https://news.samsung.com/global/",
+      "https://about.fb.com/news/",
+      "https://blogs.microsoft.com/",
+      "https://aws.amazon.com/blogs/aws/",
+      "https://blog.google/technology/ai/",
+      "https://www.oracle.com/news/",
+      "https://pr.tsmc.com/english"
+    ],
+    "monthly_disclosures": {
+      "tsmc": {
+        "entry_url": "https://investor.tsmc.com/english/monthly-revenue",
+        "period_basis": "calendar_month",
+        "note": "Revenue is an indirect demand observation; keep monthly and quarterly periods separate."
+      }
     }
   }
 }

@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {execFileSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
+import {updatePlan} from '../pipeline/updates.mjs';
 import {clone,hash,stable,materialize,activeRecords,entries} from '../pipeline/model.mjs';
 import {validateLedger,validateTransition} from '../pipeline/validate.mjs';
 import {createManifest,buildCandidate} from '../pipeline/run.mjs';
@@ -20,6 +21,9 @@ const runDir=()=>{const value=flag('run');if(!value)throw new Error('--run is re
 
 try {
   if(command==='help')console.log(`mu-checklist data pipeline\n\n  npm ci\n  npm run verify\n  npm test\n  npm run test:ui\n  npm run monitor -- plan --scope full --run .monitor/runs/example\n  npm run monitor -- fetch --run .monitor/runs/example --source SOURCE_ID\n  npm run monitor -- capture --run .monitor/runs/example --source SOURCE_ID --file /path/to/read-source --access full --reviewed\n  npm run monitor -- evidence-draft --run .monitor/runs/example --metric METRIC_ID\n  npm run monitor -- build --run .monitor/runs/example\n  npm run monitor -- status --run .monitor/runs/example\n  npm run monitor -- apply --run .monitor/runs/example\n  npm run monitor -- verify-live --url https://peterliu2357-sky.github.io/mu-checklist/\n\nRead AGENTS.md and docs/PIPELINE.md before a data update. Planning and building never publish.`);
+  else if(command==='schedule') {
+    const s=state();console.log(JSON.stringify(updatePlan(materialize(s.ledger),s.catalog,{mode:flag('mode','weekly'),company:flag('company'),now:flag('at',new Date().toISOString())}),null,2));
+  }
   else if(command==='verify') {
     const {ledger,evidence,catalog,legacy}=state(),issues=validateLedger(ledger,catalog,evidence,legacy),d=materialize(ledger);
     if(stable(d)!==stable(read('data/monitor.json')))issues.push({code:'GENERATED_FILE',path:'data/monitor.json',message:'Published data differs from canonical records'});
@@ -54,7 +58,7 @@ try {
   }else if(command==='plan'){
     const dir=runDir();if(fs.existsSync(path.join(dir,'manifest.json')))throw new Error('Run already exists; resume it or choose a new directory');
     const s=state(),d=materialize(s.ledger),at=flag('at',new Date().toISOString());
-    const manifest=createManifest({scope:flag('scope','full'),base_commit:git('rev-parse','HEAD'),document:d,catalog:s.catalog,at});
+    const manifest=createManifest({scope:flag('scope','full'),targets:flag('targets')?.split(','),base_commit:git('rev-parse','HEAD'),document:d,catalog:s.catalog,at});
     write(path.join(dir,'manifest.json'),manifest);write(path.join(dir,'proposal.json'),d);write(path.join(dir,'evidence.json'),{});
     write(path.join(dir,'supporting.json'),Object.fromEntries(Object.entries(s.ledger.supporting).map(([id,ref])=>[id,s.ledger.records[ref].payload])));
     console.log(JSON.stringify({run:dir,scope:manifest.scope,coverage:manifest.coverage.map(c=>c.key),next:'Read sources, complete evidence.json and manifest.json, then build.'},null,2));

@@ -1,0 +1,116 @@
+{
+  "version": 1,
+  "scope": "batch",
+  "base_commit": "88bb13fae12a0b449871c28f21c523e74fbb5e7b",
+  "base_revision": "2026-09-22-01b3136268",
+  "base_sha256": "abda0943c41d39903acb3ed84e42f0f5d30822704d004c380bb72f9c91b69254",
+  "catalog_sha256": "3efa62b350e1f2c7b66cdf331fb1a8ff79e56ce746f757a43a122326a971cf8f",
+  "created_at": "2026-09-22T20:54:52.293Z",
+  "completed_at": "2026-09-22T20:56:18.300Z",
+  "state": "verified",
+  "targets": [
+    "news",
+    "calendar"
+  ],
+  "coverage": [
+    {
+      "key": "news",
+      "status": "verified",
+      "evidence": [
+        "news_tf_20260921",
+        "news_nv_20260921",
+        "news_sk_20260918",
+        "news_mu_20260915",
+        "news_meta_20260908"
+      ],
+      "reviewed_at": "2026-09-22T20:56:16.852Z",
+      "latest_disclosure": {
+        "url": "https://blogs.nvidia.com/blog/dsx-ready-ai-factories-power-cooling/",
+        "published_at": "2026-09-21"
+      },
+      "reason": "录入五条已读取原文的动态；未声称完成全部新闻来源查新。"
+    },
+    {
+      "key": "calendar",
+      "status": "verified",
+      "evidence": [
+        "calendar_mu_20260930"
+      ],
+      "reviewed_at": "2026-09-22T20:56:16.852Z",
+      "latest_disclosure": {
+        "url": "https://investors.micron.com/events-and-presentations/event-details/2026/Microns-Fourth-Quarter-2026-Financial-Call/default.aspx",
+        "published_at": null
+      },
+      "reason": "核对美光已确认的财报活动；其他公司日期待查新确认。"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "news_tf_20260921",
+      "url": "https://insights.trendforce.com/p/weekly-radar-002",
+      "sha256": "9304966b94b762b5f305b5602c5bf53d0a2cffdc79d1cb629776272bf2bab946",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-22T20:55:31.446Z",
+      "reviewed_at": "2026-09-22T20:55:31.446Z",
+      "status": "read"
+    },
+    {
+      "source_id": "news_nv_20260921",
+      "url": "https://blogs.nvidia.com/blog/dsx-ready-ai-factories-power-cooling/",
+      "sha256": "8f7da9799e42506aa8ea3f06bed2708b3d6fc6604c7d941c9b35bcb5b89aee82",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-22T20:55:32.702Z",
+      "reviewed_at": "2026-09-22T20:55:32.702Z",
+      "status": "read"
+    },
+    {
+      "source_id": "news_sk_20260918",
+      "url": "https://news.skhynix.com/en/sk-hynix-ventures/",
+      "sha256": "707aa9aeed3551a0d83004ea7bfcac83973fbccb3227d0c7e40458e1461ced9c",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-22T20:55:33.969Z",
+      "reviewed_at": "2026-09-22T20:55:33.969Z",
+      "status": "read"
+    },
+    {
+      "source_id": "news_mu_20260915",
+      "url": "https://investors.micron.com/news/press-release/2026/Micron-Advances-Memory-Innovation-With-the-Worlds-First-Ultra-Dense-Module-for-Next-Generation-Servers/default.aspx",
+      "sha256": "a44e1afc11a7addd4f6d5457cdccb633fc2a3e490227e89a9a282e80fb469c50",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-22T20:55:35.475Z",
+      "reviewed_at": "2026-09-22T20:55:35.475Z",
+      "status": "read"
+    },
+    {
+      "source_id": "news_meta_20260908",
+      "url": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
+      "sha256": "f47ecb9be3826fe43a82aefeb0885550dac86286a58bfc8d7354a180d609a35e",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-22T20:55:36.824Z",
+      "reviewed_at": "2026-09-22T20:55:36.824Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_mu_20260930",
+      "url": "https://investors.micron.com/events-and-presentations/event-details/2026/Microns-Fourth-Quarter-2026-Financial-Call/default.aspx",
+      "sha256": "8cac904036bfcc512558a29e2e700c2a4783869064f56abb89404f8428ea28c5",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-22T20:55:38.166Z",
+      "reviewed_at": "2026-09-22T20:55:38.166Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [],
+  "publication_corrections": [],
+  "summary": "新增 AI 动态与按资料类型更新的日程；财报数据及原有核查时间保持不变。",
+  "result": "success",
+  "artifact_sha256": "1c90561c78e85ff3c598eb82e46ee0792c7134cc78d13e236ea94f734cd571a2",
+  "ledger_sha256": "b9564bb20b567902d24702971b849804be1c90aa2d343e7f77cc22738f1f5e88",
+  "evidence_sha256": "c3e9b2c3979a18718b63a141e04e963a82455531a519437766e2110543476716"
+}

@@ -9,7 +9,7 @@ Two repository settings make the gate enforceable:
 
 These settings require repository-owner/admin access; committing a workflow alone does not prove they are configured. Verify their actual state before claiming enforcement.
 
-The workflow does not schedule research. The existing monitoring automation supplies the research agent, which reads `AGENTS.md` and uses the pipeline. UI commits do not trigger live acquisition. Unrelated automations remain independent.
+The deployment workflow does not schedule research. The monitoring automation supplies Sunday/Wednesday research and a separate next-event task handles confirmed earnings, following `docs/CADENCE.md`. A dedicated quote workflow schedules only deterministic daily OHLC collection. It requires Actions permission to create PRs and follows the same candidate checks; branch rules may require a permitted reviewer before merging. UI commits never trigger acquisition. Unrelated automations remain independent.
 
 After deployment, verify `data/monitor.json` against its complete expected content hash with `npm run monitor -- verify-live --url https://peterliu2357-sky.github.io/mu-checklist/`. `release.json` also identifies the UI commit and data revision. If deployment fails, report that separately from source-check completion.
 

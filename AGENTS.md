@@ -1,12 +1,12 @@
 # Agent entry point
 
-This public repository is a facts-first Micron monitor. Read this file, `MONITORING.md`, and `docs/PIPELINE.md` before changing data. No chat history is required.
+This public repository is a facts-first Micron monitor. Read this file, `MONITORING.md`, `docs/PIPELINE.md`, and `docs/CADENCE.md` before changing data. No chat history is required.
 
 ## Start
 
 1. Fetch latest `main`; note its exact commit. Preserve concurrent work. Never force-push.
 2. `npm ci --ignore-scripts` (Node 22+), then `npm run verify` and `npm test`.
-3. For data work, create a run with `npm run monitor -- plan --scope full --run .monitor/runs/<local-name>`.
+3. For data work, start with `npm run monitor -- schedule --mode weekly|midweek|earnings|manual` (optional `--company <id>`), then create a run using the selected discovery/company/news scope. See `docs/CADENCE.md`. Do not default routine discovery to a full-source audit.
 4. Read original sources and identify the latest disclosure, not merely the previously linked report. Capture what was actually read. Fill the candidate, evidence drafts and run coverage as described in the pipeline guide.
 5. `build` is a dry run. Resolve errors before `apply`. A failed/partial run keeps old facts and successful-check dates. A valid failure receipt may be published to explain the failed attempt.
 6. Validate the applied files, run regression/mobile tests, publish them atomically, then verify deployment and the complete live data hash.
