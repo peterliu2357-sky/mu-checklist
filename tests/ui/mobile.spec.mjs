@@ -45,9 +45,9 @@ test('news filters, evidence and historical deep links work on a phone',async({p
   await expect(page.locator('#news-days')).toHaveValue('all');
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
 });
-test('a pending company appears only in its section and old quarterly facts have no 36-hour alert',async({page})=>{
-  const data=withNews();data.monitoring={version:1,policy:{financial_discovery_days:7},calendar:[],checks:[{key:'company:nvidia',status:'failed',finding:'unchanged',checked_at:'2026-09-20',attempted_at:'2026-09-22',source_ids:[]}]};
-  await page.clock.setFixedTime(new Date('2026-09-22T12:00:00Z'));
+test('a pending company appears only in its section and old financial checks do not expire',async({page})=>{
+  const data=withNews();data.monitoring={version:1,policy:{financial_discovery_days:7},calendar:[],checks:[{key:'company:nvidia',status:'failed',finding:'unchanged',checked_at:'2026-09-20',attempted_at:'2026-09-22',source_ids:[]},{key:'company:micron',status:'unchanged',finding:'unchanged',checked_at:'2026-09-20',attempted_at:'2026-09-20',source_ids:[]}]};
+  await page.clock.setFixedTime(new Date('2026-10-02T12:00:00Z'));
   await page.route('**/data/monitor.json?*',route=>route.fulfill({json:data}));
   await page.goto('/#business');
   await expect(page.locator('#freshness')).toBeEmpty();
