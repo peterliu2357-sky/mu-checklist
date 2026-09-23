@@ -26,13 +26,20 @@ export function updatePlan(document,catalog,{mode='weekly',company,now=new Date(
   const clock=Date.parse(now),checks=document.monitoring?.checks||[];
   const events=document.monitoring?.calendar||[];
   const published=id=>id==='micron'?document.financial_published_at:document.ecosystem.companies.find(c=>c.id===id)?.published_at;
-  const outstanding=e=>String(published(e.company_id)).slice(0,10)<e.scheduled_at.slice(0,10);
+  const outstanding=e=>!published(e.company_id)||String(published(e.company_id)).slice(0,10)<e.scheduled_at.slice(0,10);
   const pending=events.filter(e=>e.confirmation==='confirmed'&&Date.parse(e.review_after)<=clock&&outstanding(e));
-  const keys=Object.keys(catalog.monitoring.targets).filter(k=>company?k==='company:'+company:mode==='midweek'?['industry','news'].includes(k):mode==='earnings'?pending.some(e=>k==='company:'+e.company_id)||checks.some(c=>c.key===k&&k.startsWith('company:')&&c.finding==='new_disclosure'&&!c.processed_at):true);
+  const due=new Set([
+    ...pending.map(e=>'company:'+e.company_id),
+    ...checks.filter(c=>c.key.startsWith('company:')&&c.finding==='new_disclosure'&&!c.processed_at).map(c=>c.key)
+  ]);
+  const targets=Object.keys(catalog.monitoring.targets);
+  const keys=targets.filter(k=>company?k==='company:'+company:mode==='manual'||due.has(k)||mode!=='earnings'&&['industry','news'].includes(k));
   const newer=checks.filter(c=>c.finding==='new_disclosure'&&!c.processed_at&&keys.includes(c.key));
   const financial=[...new Set([...pending.filter(e=>keys.includes('company:'+e.company_id)).map(e=>e.company_id),...newer.filter(c=>c.key.startsWith('company:')).map(c=>c.key.slice(8))])];
   const future=events.filter(e=>e.confirmation==='confirmed'&&Date.parse(e.review_after)>clock&&outstanding(e)).sort((a,b)=>Date.parse(a.review_after)-Date.parse(b.review_after));
-  return {mode,as_of:now,discovery_targets:keys,financial_candidates:financial.map(id=>({company:id,scope:id==='micron'?'micron':'company:'+id,action:'Read newly published or revised documents; preserve old facts until the report bundle passes.'})),news:mode!=='earnings'&&!company,next_event_run_at:future[0]?.review_after||null,next_event_companies:future.filter(e=>e.review_after===future[0]?.review_after).map(e=>e.company_id)};
+  // Missing dates need calendar maintenance, not another read of unchanged reports.
+  const calendarTargets=mode==='weekly'&&!company?targets.filter(k=>k.startsWith('company:')).map(k=>k.slice(8)).filter(id=>!events.some(e=>e.company_id===id&&e.confirmation==='confirmed'&&outstanding(e))):[];
+  return {mode,as_of:now,discovery_targets:keys,calendar_targets:calendarTargets,financial_candidates:financial.map(id=>({company:id,scope:id==='micron'?'micron':'company:'+id,action:'Read newly published or revised documents; preserve old facts until the report bundle passes.'})),news:mode!=='earnings'&&!company,next_event_run_at:future[0]?.review_after||null,next_event_companies:future.filter(e=>e.review_after===future[0]?.review_after).map(e=>e.company_id)};
 }
 
 export function validateUpdates(d,catalog,ledger) {

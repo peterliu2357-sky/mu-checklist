@@ -6,13 +6,13 @@ The scheduler selects work. Research discovers and reads original disclosures. T
 
 | Run | Scope | When facts change |
 |---|---|---|
-| Sunday comprehensive discovery | All `catalog.monitoring.targets`, including every company, industry and news | Only after finding a new or revised original disclosure |
-| Wednesday discovery | `industry,news` | New supply/demand, contract/spot pricing and AI developments |
+| Sunday discovery | `industry,news`, due/unprocessed company disclosures; missing calendar dates separately | New or revised original disclosures only |
+| Wednesday discovery | `industry,news` and due/unprocessed company disclosures | New supply/demand, pricing, AI developments or targeted disclosures |
 | Confirmed earnings review | The companies due in the calendar, about 24 hours after the announced call | The complete report bundle, including comparable prior data and guidance |
 | User request | Requested company/section, or comprehensive discovery if unspecified | Same evidence and publication gates as scheduled work |
 | Regular close | Quote adapter after the completed trading session | Final daily OHLC only; no report/news acquisition |
 
-The monitoring automation runs Sunday and Wednesday in America/Los_Angeles. Select the run mode using that local weekday. Wednesday does not reopen ten companies' unchanged statements. A successful discovery run means checking for newer disclosures, not re-reading every old financial table. Interim guidance revisions, restatements and material filings also qualify as new disclosures.
+The monitoring automation runs Sunday and Wednesday in America/Los_Angeles. Select the run mode using that local weekday. Neither routine run sweeps every company's report directory or reopens unchanged statements. Company discovery is selected only for confirmed reports due for review or identified, unprocessed disclosures. An explicit manual run may still request a broader check. Interim guidance revisions, preliminary results, restatements and material filings qualify as new disclosures even between quarterly reports.
 
 ```sh
 npm run monitor -- schedule --mode weekly
@@ -23,6 +23,8 @@ npm run monitor -- plan --scope discovery --targets industry,news --run .monitor
 ```
 
 `schedule` only prints a deterministic plan. It does not create external tasks. For each discovery target, read its current original IR/news index and relevant new releases. Store read receipts and register source IDs/roles in the catalog when needed. In discovery coverage, set `finding=unchanged|new_disclosure|unconfirmed` and `latest_disclosure={url,published_at}`. Identify the newest relevant report/guidance, not an old bookmark. Store the actual search time in `reviewed_at`.
+
+When news research finds a financial revision or a new report, create a targeted `discovery` run for that company and then process its report/guidance scope. Do not wait for the next quarterly event. Due and unprocessed company disclosures also appear in routine plans so a missed event run can recover without a full-company sweep.
 
 Run `build` and `apply` to publish discovery outcomes. Then plan from that new state and process new items with `micron`, `company:<id>`, `industry`, `news`, or `calendar`. `batch --targets news,calendar` combines explicit scopes. Unchanged quarterly facts, their original-source dates and the legacy full-audit timestamp remain unchanged. A pending or failed lookup retains its last successful discovery time. Re-discovering an unprocessed release keeps its pending alert. Process it using the same `latest_disclosure` identity to resolve the alert.
 
@@ -37,14 +39,16 @@ Every targeted scope needs a result, including failures. Retain credible prior f
 
 Calendar entries have a stable ID, company, report period, `scheduled_at`, `review_after`, confirmation status and evidenced source. Announced call time is not proof that results have been published. Unknown dates stay unknown; estimates never trigger a confirmed-release alert or an automatic event run.
 
-After weekly discovery, inspect `schedule --mode earnings`. Privately inspect existing automations and maintain one next-event task for this website, using `next_event_run_at` and its companies. Reschedule when the issuer changes its confirmed date; do not duplicate tasks. At execution, re-read latest main and the calendar, confirm the publication actually appeared, and process only due companies. Afterward arrange the next confirmed event; if a source is unavailable, retain the pending state and schedule a bounded retry. Do not edit the separate MU technical-analysis task. Task identifiers stay outside the public repository.
+The Sunday plan returns `calendar_targets` for registered companies without an outstanding confirmed report date. Read only the relevant official event calendar or date announcement for these targets, and persist evidenced dates through the `calendar` scope. Unknown or estimated dates remain unconfirmed. This is calendar maintenance, not company financial discovery: it does not advance company discovery or report-source check dates. A confirmed outstanding date needs no routine recheck unless a new announcement changes it; revalidate it when the event task executes. If the calendar lookup reveals an already-published, unprocessed report, perform targeted discovery for that company.
 
-The initial calendar confirms Micron's FY2026 Q4 call. Other companies display “date to be confirmed” until their official calendar is reviewed. Company coverage comes from the catalog, so adding a company extends discovery without editing the scheduler.
+After calendar changes or report processing, inspect `schedule --mode earnings`. Privately inspect existing automations and maintain one next-event task for this website, using `next_event_run_at` and its companies. Reschedule when the issuer changes its confirmed date; do not duplicate tasks. At execution, re-read latest main and the calendar, confirm the publication actually appeared, and process only due companies. Afterward look for that company's next official date and arrange the next confirmed event; if a source is unavailable, retain the pending state and schedule a bounded retry. Routine runs continue to include overdue or unprocessed companies. Do not edit the separate MU technical-analysis task. Task identifiers stay outside the public repository.
+
+The initial calendar confirms Micron's FY2026 Q4 call. Other companies display “date to be confirmed” until their official calendar is reviewed. Company coverage comes from the catalog, so adding a company extends calendar maintenance without a weekly financial sweep.
 
 ## Freshness shown to readers
 
 - Quarterly facts carry their reporting period and publication date; elapsed statement age alone does not expire them.
-- Company discovery has a seven-day interval plus a 24-hour grace period. Industry/news discovery has a four-day interval plus the same grace period. Display overdue/failed/pending messages only in the relevant section.
+- Company report/discovery age alone never triggers an overdue warning. Company warnings reflect failed/pending targeted checks, unprocessed disclosures or a confirmed event whose review time has passed. The legacy `financial_discovery_days` field remains in stored policy for schema compatibility and is not an active timer. Industry/news discovery keeps a four-day interval plus a 24-hour grace period. Display warnings only in the relevant section.
 - “New disclosure pending” remains distinct from “expected announcement time passed; publication unconfirmed.” A completed report removes its old calendar deadline.
 - Market staleness counts completed trading sessions, excluding weekends and confirmed holidays. No intraday price expectation is created. Unknown calendar years require a calendar update.
 - `last_successful_check_at` remains a historical full-source audit field; it is not the dashboard's freshness clock. Refresh only reloads published data.
