@@ -9,6 +9,7 @@ import {validateLedger,validateTransition} from '../pipeline/validate.mjs';
 import {createManifest,buildCandidate} from '../pipeline/run.mjs';
 import {fetchSource,saveCapture,verifyCaptures} from '../pipeline/acquire.mjs';
 import {validateEvolution} from '../pipeline/evolution.mjs';
+import {readUpdateStatus} from './update-status.mjs';
 
 const root=fileURLToPath(new URL('../',import.meta.url));process.chdir(root);
 const args=process.argv.slice(2),command=args.shift()||'help',flag=(name,fallback)=>{const i=args.indexOf('--'+name);return i<0?fallback:args[i+1];};
@@ -109,8 +110,12 @@ try {
     }
   }else if(command==='verify-live'){
     const base=flag('url');if(!base?.startsWith('https://'))throw new Error('--url must be the HTTPS site URL');
-    const expected=read('data/monitor.json'),response=await fetch(new URL(`data/monitor.json?revision=${encodeURIComponent(expected.revision)}`,base),{signal:AbortSignal.timeout(20000)});
-    if(!response.ok)throw new Error(`Live site HTTP ${response.status}`);
-    const live=await response.json();if(hash(live)!==hash(expected))throw new Error(`Live data mismatch: ${live.revision}`);console.log(`Verified live revision ${live.revision} and full data hash.`);
+    const expected=read('data/monitor.json'),status=readUpdateStatus(expected);
+    const get=async file=>{const response=await fetch(new URL(`${file}?revision=${encodeURIComponent(expected.revision)}`,base),{signal:AbortSignal.timeout(20000),cache:'no-store'});if(!response.ok)throw new Error(`Live ${file} HTTP ${response.status}`);return response.json();};
+    const [live,liveStatus,release]=await Promise.all([get('data/monitor.json'),get('data/update-status.json'),get('release.json')]);
+    if(hash(live)!==hash(expected))throw new Error(`Live data mismatch: ${live.revision}`);
+    if(hash(liveStatus)!==hash(status)||liveStatus.data_revision!==live.revision)throw new Error('Live update schedule or check times mismatch');
+    if(release.data_sha256!==hash(expected)||release.update_status_sha256!==hash(status))throw new Error('Live release manifest mismatch');
+    console.log(`Verified live revision ${live.revision}, data hash, update times, and schedule.`);
   }else throw new Error(`Unknown command ${command}`);
 }catch(error){console.error(error.message);process.exitCode=1;}

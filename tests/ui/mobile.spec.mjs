@@ -2,6 +2,7 @@ import {test,expect} from '@playwright/test';
 import fs from 'node:fs';
 const fixture=JSON.parse(fs.readFileSync(new URL('../fixtures/baseline.json',import.meta.url)));
 const newsFixture=JSON.parse(fs.readFileSync(new URL('../fixtures/news.json',import.meta.url)));
+const updateSchedule=JSON.parse(fs.readFileSync(new URL('../../config/update-schedule.json',import.meta.url)));
 const withNews=()=>({...structuredClone(fixture),...structuredClone(newsFixture),sources:{...fixture.sources,...newsFixture.sources}});
 for(const width of [320,390,430])test(`all panels remain usable at ${width}px`,async({page})=>{
   await page.setViewportSize({width,height:844});
@@ -70,4 +71,31 @@ test('refresh loads published JSON and never contacts financial sources',async({
   const external=[];page.on('request',r=>{if(!r.url().startsWith('http://127.0.0.1:4173/'))external.push(r.url());});
   await page.route('**/data/monitor.json?*',r=>r.fulfill({json:fixture}));await page.goto('/#updates');await page.locator('#refresh-data').click();
   await expect(page.locator('#refresh-state')).toContainText('已载入');expect(external).toEqual([]);
+});
+for(const width of [320,390,430])test(`header update schedule expands without overflow at ${width}px`,async({page})=>{
+  await page.setViewportSize({width,height:844});
+  await page.clock.setFixedTime(new Date('2026-09-24T12:00:00Z'));
+  const d=withNews(),schedule={...updateSchedule,earnings:{enabled:false,events:[]}};
+  const status={version:1,data_revision:d.revision,last_data_update_at:'2026-09-21T17:02:00Z',checks:{quote:{last_checked_at:'2026-09-21T17:01:00Z'},industry:{last_checked_at:'2026-09-23T23:52:00Z'},news:{last_checked_at:'2026-09-23T23:47:00Z'},'company:micron':{last_checked_at:'2026-09-20'}},schedule};
+  await page.route('**/data/monitor.json?*',r=>r.fulfill({json:d}));
+  await page.route('**/data/update-status.json?*',r=>r.fulfill({json:status}));
+  await page.goto('/');await expect(page.locator('#loading')).toBeHidden();
+  await expect(page.locator('#last-data-update')).toContainText('09/21 10:02 PT');
+  await expect(page.locator('#update-details-body')).toBeHidden();
+  await page.locator('#update-details > summary').click();
+  await expect(page.locator('.update-next')).toContainText('2026-09-24 15:10');
+  await expect(page.locator('[data-update-key="news"]')).toContainText('2026-09-23 16:47');
+  await page.locator('.update-companies > summary').click();
+  await expect(page.locator('.update-companies li')).toHaveCount(d.ecosystem.companies.length+1);
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
+});
+test('a mismatched update receipt never labels the current facts as newly updated',async({page})=>{
+  const d=withNews();
+  await page.route('**/data/monitor.json?*',r=>r.fulfill({json:d}));
+  await page.route('**/data/update-status.json?*',r=>r.fulfill({json:{version:1,data_revision:'other',last_data_update_at:d.updated_at,schedule:updateSchedule,checks:{}}}));
+  await page.goto('/');
+  await expect(page.locator('#last-data-update')).toHaveText('时间待确认');
+  await page.locator('#update-details > summary').click();
+  await expect(page.locator('#update-details-body')).toContainText('更新时间记录暂不可用');
+  await expect(page.locator('.fact-card')).toHaveCount(8);
 });
