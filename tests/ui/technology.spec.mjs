@@ -20,6 +20,7 @@ for(const width of [320,390,860])test(`manufacturing and product comparison at $
   await expect(page.locator('#tech-dram_1gamma')).toBeVisible();
   await page.goto('/#ecosystem');
   await expect(page.locator('#product-comparison')).toBeVisible();
+  await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
   await page.screenshot({path:testInfo.outputPath('ecosystem-page-top.png')});
   await page.locator('#product-comparison').screenshot({path:testInfo.outputPath('ddr5-comparison.png')});
   await page.locator('#tech-micron-model').selectOption('micron_rdimm256');
