@@ -2097,5 +2097,416 @@
     "mode": "verified",
     "record_hash": "d35d5d362ddfab280707a6083db65fa82f1987e64f08fcebfac7365420d9e000",
     "id": "e-16cac962a23cb90bf9ebfc484d2ca7fd0535133c9a515fbeb381c58bcb3cf2aa"
+  },
+  "e-836abb2074df7fbdc6c2f1fe954fe86e3f64c8df09532bc0e0c5b426b14b4397": {
+    "measurement": "contract",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "普通型 DRAM 合同价环比",
+    "values": {
+      "current": "+13% 至 +18%",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Manual review of TrendForce original public release",
+      "at": "2026-09-23T23:54:00Z"
+    },
+    "documents": [
+      {
+        "source_id": "dram",
+        "url": "https://www.trendforce.com/presscenter/news/20260907-13219.html",
+        "sha256": "0d6b4e11d3d026a689c3b3d901f752f51c5a421d984b44bb60ba4c064618d1e4",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-23T23:53:07.803Z",
+        "reviewed_at": "2026-09-23T23:53:07.803Z",
+        "status": "read",
+        "locator": "Third-quarter outlook, conventional DRAM contract price paragraph",
+        "excerpt": "Conventional DRAM contract prices were projected to moderate to 13–18% QoQ in 3Q26."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "dc37ff963b3ccf8a021ace752e8f0b2dcc4c907f070e0b0a0aa3044bed585c11",
+    "id": "e-836abb2074df7fbdc6c2f1fe954fe86e3f64c8df09532bc0e0c5b426b14b4397"
+  },
+  "e-d2f44799f52026c64cd9146115cf21915dcfa1efe8d7f31a7d5f55a9fa70d81d": {
+    "measurement": "contract",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "NAND 合同价环比",
+    "values": {
+      "current": "+10% 至 +15%",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Manual review of original release plus public paid-report abstract",
+      "at": "2026-09-23T23:54:00Z"
+    },
+    "documents": [
+      {
+        "source_id": "contract",
+        "url": "https://www.trendforce.cn/presscenter/news/20260703-13133.html",
+        "sha256": "0d6b4e11d3d026a689c3b3d901f752f51c5a421d984b44bb60ba4c064618d1e4",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-23T23:53:08.817Z",
+        "reviewed_at": "2026-09-23T23:53:08.817Z",
+        "status": "read",
+        "locator": "Article lead and opening paragraph",
+        "excerpt": "TrendForce projected 3Q26 NAND Flash contract prices to rise 10–15% QoQ."
+      },
+      {
+        "source_id": "nand_q3",
+        "url": "https://www.trendforce.com/research/download/RP260910ZM",
+        "sha256": "0d6b4e11d3d026a689c3b3d901f752f51c5a421d984b44bb60ba4c064618d1e4",
+        "access": "abstract",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-23T23:53:09.817Z",
+        "reviewed_at": "2026-09-23T23:53:09.817Z",
+        "status": "read",
+        "locator": "Public Summary and Price Growth Moderation key highlight",
+        "excerpt": "The public abstract says contract-price increases are narrowing after multiple quarters of rapid gains."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "1c782181971f05c980510d1c040e747af30526fd066cd8544d1f92e0553fbff5",
+    "id": "e-d2f44799f52026c64cd9146115cf21915dcfa1efe8d7f31a7d5f55a9fa70d81d"
+  },
+  "e-d010d7cc6adfda088a463fdcafe937088060fe5675b4f34bdbebd5e44ce0c53a": {
+    "measurement": "contract",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "NAND 合同价趋势",
+    "values": {
+      "current": "涨幅收敛",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Manual review of TrendForce public paid-report abstract",
+      "at": "2026-09-23T23:54:00Z"
+    },
+    "documents": [
+      {
+        "source_id": "nand_q3",
+        "url": "https://www.trendforce.com/research/download/RP260910ZM",
+        "sha256": "0d6b4e11d3d026a689c3b3d901f752f51c5a421d984b44bb60ba4c064618d1e4",
+        "access": "abstract",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-23T23:53:09.817Z",
+        "reviewed_at": "2026-09-23T23:53:09.817Z",
+        "status": "read",
+        "locator": "Public Summary and Price Growth Moderation key highlight",
+        "excerpt": "The abstract reports a narrowing of contract-price increases as the market reaches a high plateau."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "40de271190fdbaefbc39b029976f71b8a847bb4fb536ea4479c3126f3bf38a72",
+    "id": "e-d010d7cc6adfda088a463fdcafe937088060fe5675b4f34bdbebd5e44ce0c53a"
+  },
+  "e-488c2a0b7ee07c66472e8b9ac35c94958a66872bdc4e780a06285639eacf8fc2": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "DDR4 1Gx8 3200 现货",
+    "values": {
+      "current": 45.893,
+      "previous": 46.036,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 45.893,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-09-23",
+        "locator": "Daily Express Sep.23 · DDR4 8G (1Gx8) 3200 average price",
+        "source_id": "spot_daily_20260923"
+      },
+      {
+        "field": "previous",
+        "value": 46.036,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-09-22",
+        "locator": "Daily Express Sep.22 · DDR4 8G (1Gx8) 3200 average price",
+        "source_id": "spot_daily_20260923"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-page review and same-specification arithmetic check",
+      "at": "2026-09-23T23:52:00Z"
+    },
+    "documents": [
+      {
+        "source_id": "spot_daily_20260923",
+        "url": "https://www.trendforce.com/presscenter/",
+        "sha256": "b202dcc7b93e634fc8dbc7bc1ef41352d01e012baf628a35590f70f9a421dcb7",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-23T23:51:12.270Z",
+        "reviewed_at": "2026-09-23T23:51:12.270Z",
+        "status": "read",
+        "locator": "Daily Express Sep.22 and Sep.23 spot-market summaries",
+        "excerpt": "Sep.23 average DDR4 8G 3200 price: USD 45.893; Sep.22: USD 46.036."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "32e4e5c25efec68ed7e3eebb70079472ea64f34aa9584b4a6786b07ea76b48c3",
+    "id": "e-488c2a0b7ee07c66472e8b9ac35c94958a66872bdc4e780a06285639eacf8fc2"
+  },
+  "e-4f5a16d3ea14064cd4313dfc7c09d821cd62a7730cd0646b965b72f121a2dad3": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "512Gb TLC 现货",
+    "values": {
+      "current": 20.083,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 20.083,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-09-14",
+        "locator": "NAND Flash Spot Price · 512Gb TLC wafer",
+        "source_id": "spot"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual review of TrendForce original public spot-price report",
+      "at": "2026-09-23T23:54:00Z"
+    },
+    "documents": [
+      {
+        "source_id": "spot",
+        "url": "https://www.trendforce.com/news/2026/09/16/insights-memory-spot-price-update-dram-spot-cools-as-ddr5-inquiries-slow-2gx8-ddr4-prices-retreat/",
+        "sha256": "0d6b4e11d3d026a689c3b3d901f752f51c5a421d984b44bb60ba4c064618d1e4",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-23T23:53:10.813Z",
+        "reviewed_at": "2026-09-23T23:53:10.813Z",
+        "status": "read",
+        "locator": "NAND Flash Spot Price paragraph",
+        "excerpt": "512Gb TLC was USD 20.083 on Sep.14, down 0.31% for the week."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "7b3bde84fde97a67093f263f4aa85bd62e279a708e8b68c42991004754ffd579",
+    "id": "e-4f5a16d3ea14064cd4313dfc7c09d821cd62a7730cd0646b965b72f121a2dad3"
+  },
+  "e-f0b13de1a4d374f0828a8712018a4d6392320ad3b7f28a3c774673e6a58b22e7": {
+    "measurement": "sourced_news",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "news.samsung_airan_20260923",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "Samsung 宣布已与 KT、SK Telecom 签约，分别担任 KT 项目的唯一全球供应商和 SK Telecom 项目的主要供应商；项目计划从 2026 年 10 月起在船厂和石化设施部署 5G SA 专网，验证焊接、巡检等 physical AI 应用。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Manual review of Samsung original project announcement",
+      "at": "2026-09-23T23:52:00Z"
+    },
+    "documents": [
+      {
+        "source_id": "news_samsung_airan_20260923",
+        "url": "https://news.samsung.com/global/samsung-at-the-forefront-of-koreas-ai-ran-projects-with-kt-and-sk-telecom",
+        "sha256": "b202dcc7b93e634fc8dbc7bc1ef41352d01e012baf628a35590f70f9a421dcb7",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-23T23:51:16.053Z",
+        "reviewed_at": "2026-09-23T23:51:16.053Z",
+        "status": "read",
+        "locator": "Project roles and timing; welding-robot and patrol-robot sections",
+        "excerpt": "Projects begin in October 2026 with private 5G networks for shipyard and petrochemical physical-AI trials."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "0ed25f1f117ee2821344be122f7c1c64426f1527443cc4dec57064ff1c335ffa",
+    "id": "e-f0b13de1a4d374f0828a8712018a4d6392320ad3b7f28a3c774673e6a58b22e7"
+  },
+  "e-73bafd36d4641ed6974b9722f21ae26c8a3435f418136231821d3146f5a0e5ed": {
+    "measurement": "sourced_news",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "news.tf_dram_20260922",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "TrendForce 统计，2025 年全球 DRAM 模组市场收入为 212 亿美元，同比增长 59%，高于 2024 年的 7%。报告称，2025 年下半年北美和中国 CSP 增加服务器 DRAM 订单，限制了 PC 与消费应用的供给分配并推高整体 DRAM 价格。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Manual review of TrendForce original public release",
+      "at": "2026-09-23T23:52:00Z"
+    },
+    "documents": [
+      {
+        "source_id": "news_tf_dram_20260922",
+        "url": "https://www.trendforce.com/presscenter/news/20260922-13249.html",
+        "sha256": "b202dcc7b93e634fc8dbc7bc1ef41352d01e012baf628a35590f70f9a421dcb7",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-23T23:51:11.347Z",
+        "reviewed_at": "2026-09-23T23:51:11.347Z",
+        "status": "read",
+        "locator": "Opening market statistics and first/second-half market analysis",
+        "excerpt": "2025 module revenue was $21.2 billion, up 59%; CSP server demand constrained PC and consumer allocations."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "7cf833b46cc1c18d08de805510a6a1442aef05e1033fc2c6bfa29897822bb57e",
+    "id": "e-73bafd36d4641ed6974b9722f21ae26c8a3435f418136231821d3146f5a0e5ed"
+  },
+  "e-f825da17d93b20516a8e00df4ee33e2c61f3cbacfcc7387877fe5771c80e1c0c": {
+    "measurement": "sourced_news",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "news.nv_isaac_20260922",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "Isaac ROS 5.0 已免费开源，面向约 130 万 ROS 用户加入 agentic 开发流程和新平台支持。NVIDIA 表示，新的 FoundationPose 推理库可使机器人目标姿态感知与跟踪速度最高提升 5.5 倍。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Manual review of NVIDIA original product announcement",
+      "at": "2026-09-23T23:52:00Z"
+    },
+    "documents": [
+      {
+        "source_id": "news_nv_isaac_20260922",
+        "url": "https://blogs.nvidia.com/blog/isaac-ros-5-0-agentic-open-source-robotics/",
+        "sha256": "b202dcc7b93e634fc8dbc7bc1ef41352d01e012baf628a35590f70f9a421dcb7",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-23T23:51:13.193Z",
+        "reviewed_at": "2026-09-23T23:51:13.193Z",
+        "status": "read",
+        "locator": "Bringing AI Agents Into Robotics Development; FoundationPose; availability",
+        "excerpt": "Isaac ROS serves nearly 1.3 million ROS users; FoundationPose tracking is up to 5.5x faster."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "414239a4abb1dd7ec9c2cb4c3220b817ef6da4a4da85827eb345a09a6f118ae9",
+    "id": "e-f825da17d93b20516a8e00df4ee33e2c61f3cbacfcc7387877fe5771c80e1c0c"
+  },
+  "e-eb3e9da130911984c8e49695f9f4d52a9234c9c28caecdaa6cecccdcbf8029f4": {
+    "measurement": "sourced_news",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "news.aws_omni_20260922",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "CloudWatch Omni 将 agent 可观测、评估和实验整合到 IDE 与独立网页体验，支持不同模型提供商、框架和运行环境，并提供正确性、连贯性、检索质量及工具选择等内置评估器。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Manual review of AWS original product announcement",
+      "at": "2026-09-23T23:52:00Z"
+    },
+    "documents": [
+      {
+        "source_id": "news_aws_omni_20260922",
+        "url": "https://aws.amazon.com/blogs/aws/introducing-amazon-cloudwatch-omni-ai-powered-observability-for-generative-ai-and-agentic-workloads/",
+        "sha256": "b202dcc7b93e634fc8dbc7bc1ef41352d01e012baf628a35590f70f9a421dcb7",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-23T23:51:15.132Z",
+        "reviewed_at": "2026-09-23T23:51:15.132Z",
+        "status": "read",
+        "locator": "Product overview; built-in evaluators; experiments and session exploration",
+        "excerpt": "Omni evaluates agent correctness, coherence, retrieval quality, and tool selection across model providers and runtimes."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "b4c5b79e7ae51d3f0dc9bb28622ecb9a3d47ef8f75987caa86815dc8baaf163c",
+    "id": "e-eb3e9da130911984c8e49695f9f4d52a9234c9c28caecdaa6cecccdcbf8029f4"
+  },
+  "e-0c681dc4176a4a4a426f9a016d8bca130fceac7429a44f81ba4d1fa6aba81d7c": {
+    "measurement": "sourced_news",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "news.meta_petal_20260921",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "Petal 计划连接美国与法国，全长约 7,000 公里，容量 1 Pbps，为现有先进跨洋电缆的两倍；Meta 预计 2029 年投入服务，并称无需按比例增加功耗或物理基础设施。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Manual review of Meta original infrastructure announcement",
+      "at": "2026-09-23T23:52:00Z"
+    },
+    "documents": [
+      {
+        "source_id": "news_meta_petal_20260921",
+        "url": "https://about.fb.com/news/2026/09/announcing-petal-meta-petabit-transoceanic-cable/",
+        "sha256": "b202dcc7b93e634fc8dbc7bc1ef41352d01e012baf628a35590f70f9a421dcb7",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-23T23:51:14.154Z",
+        "reviewed_at": "2026-09-23T23:51:14.154Z",
+        "status": "read",
+        "locator": "Takeaways; Pushing the Boundaries of Subsea Innovation; What's Next",
+        "excerpt": "Petal targets 1 Pbps across 7,000 km, twice current leading capacity, with service expected in 2029."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "633cd15fcfd48f3b6e02881cbe6f95fbc5bd7e1f49854adeec4617067d6e4a10",
+    "id": "e-0c681dc4176a4a4a426f9a016d8bca130fceac7429a44f81ba4d1fa6aba81d7c"
   }
 }

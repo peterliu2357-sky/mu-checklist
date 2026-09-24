@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "revision": "2026-09-23-264480e0af",
-  "updated_at": "2026-09-23T23:54:02.833Z",
+  "revision": "2026-09-23-f80e8727d4",
+  "updated_at": "2026-09-23T23:48:22.182Z",
   "last_successful_check_at": "2026-09-20T23:50:00Z",
   "last_attempt_at": "2026-09-20T23:50:00Z",
   "financial_period": "FY2026 Q3",
@@ -150,7 +150,7 @@
       "label": "TrendForce 合同价预测 · 07-03",
       "url": "https://www.trendforce.cn/presscenter/news/20260703-13133.html",
       "published_at": "2026-07-03",
-      "checked_at": "2026-09-23",
+      "checked_at": "2026-09-20",
       "type": "行业预测",
       "short_label": "NAND 预测 · 07-03",
       "locator": "文章导读与首段：3Q26 NAND 合约价季增预测"
@@ -159,7 +159,7 @@
       "label": "TrendForce DRAM 更新 · 09-07",
       "url": "https://www.trendforce.com/presscenter/news/20260907-13219.html",
       "published_at": "2026-09-07",
-      "checked_at": "2026-09-23",
+      "checked_at": "2026-09-20",
       "type": "行业预测",
       "short_label": "DRAM 预测 · 09-07",
       "locator": "展望第三季：Conventional DRAM contract price growth"
@@ -168,7 +168,7 @@
       "label": "TrendForce 现货与需求周报 · 09-16",
       "url": "https://www.trendforce.com/news/2026/09/16/insights-memory-spot-price-update-dram-spot-cools-as-ddr5-inquiries-slow-2gx8-ddr4-prices-retreat/",
       "published_at": "2026-09-16",
-      "checked_at": "2026-09-23",
+      "checked_at": "2026-09-20",
       "type": "行业报价",
       "short_label": "TrendForce · 现货周报",
       "locator": "DRAM Spot Price / NAND Flash Spot Price"
@@ -610,7 +610,7 @@
       "short_label": "NAND Q3 摘要 09-10",
       "url": "https://www.trendforce.com/research/download/RP260910ZM",
       "published_at": "2026-09-10",
-      "checked_at": "2026-09-23",
+      "checked_at": "2026-09-20",
       "locator": "页面 Last Modified 2026-09-10；Summary。仅读取公开摘要，未取得付费全文或原表。",
       "type": "行业公开摘要"
     },
@@ -712,42 +712,6 @@
       "checked_at": "2026-09-23",
       "type": "原始公开资料",
       "locator": "项目角色、2026 年 10 月启动计划及工业应用段落。"
-    },
-    "news_nv_isaac_20260922": {
-      "label": "NVIDIA Isaac ROS 5.0 公告",
-      "short_label": "NVIDIA Isaac ROS 5.0",
-      "url": "https://blogs.nvidia.com/blog/isaac-ros-5-0-agentic-open-source-robotics/",
-      "published_at": "2026-09-22",
-      "checked_at": "2026-09-23",
-      "type": "原始公开资料",
-      "locator": "Bringing AI Agents Into Robotics Development；FoundationPose 性能段落。"
-    },
-    "news_meta_petal_20260921": {
-      "label": "Meta Petal 海底电缆公告",
-      "short_label": "Meta Petal 公告",
-      "url": "https://about.fb.com/news/2026/09/announcing-petal-meta-petabit-transoceanic-cable/",
-      "published_at": "2026-09-21",
-      "checked_at": "2026-09-23",
-      "type": "原始公开资料",
-      "locator": "Takeaways；Pushing the Boundaries of Subsea Innovation；What's Next。"
-    },
-    "news_aws_omni_20260922": {
-      "label": "AWS CloudWatch Omni 公告",
-      "short_label": "AWS CloudWatch Omni",
-      "url": "https://aws.amazon.com/blogs/aws/introducing-amazon-cloudwatch-omni-ai-powered-observability-for-generative-ai-and-agentic-workloads/",
-      "published_at": "2026-09-22",
-      "checked_at": "2026-09-23",
-      "type": "原始公开资料",
-      "locator": "产品定位、内置评估器及实验功能段落。"
-    },
-    "spot_daily_20260923": {
-      "label": "TrendForce 09-23 DRAM 现货摘要",
-      "short_label": "09-23 DRAM 现货",
-      "url": "https://www.trendforce.com/presscenter/",
-      "published_at": "2026-09-23",
-      "checked_at": "2026-09-23",
-      "type": "原始公开摘要",
-      "locator": "Daily Express Sep.23, 2026 Spot Market Today。"
     },
     "calendar_mu_20260930": {
       "label": "美光 FY2026 Q4 财报活动",
@@ -1845,17 +1809,17 @@
         },
         {
           "label": "DDR4 1Gx8 3200 现货",
-          "current": 45.893,
-          "previous": 46.036,
+          "current": 45.54,
+          "previous": 45.32,
           "unit": "USD",
           "source_ids": [
-            "spot_daily_20260923"
+            "spot"
           ],
           "kind": "行业报价",
-          "note": "按 09-22 与 09-23 两份公开日度摘要的同规格均价计算。",
-          "period": "09-22 → 09-23",
-          "change": "日变动 −0.31%（由报价计算）",
-          "location": "TrendForce Press Center · Daily Express Sep.22 / Sep.23 · DRAM Spot Market。",
+          "note": "报告变动幅度基于未四舍五入报价，可能与展示值直接计算略有差别。",
+          "period": "09-09 → 09-15",
+          "change": "周变动 +0.47%（报告值）",
+          "location": "09-16 现货周报 · DRAM Spot Price。",
           "evidence_type": "direct",
           "id": "ddr4_spot"
         },
@@ -1879,11 +1843,11 @@
       "limits": [
         "现货报价按指定规格采样。NAND 合同价的量化预测发布于 07-03，后续趋势来自 09-10 公开摘要。"
       ],
-      "period": "DRAM 报价至 09-23；NAND 报价至 09-14；报告至 09-16",
-      "checked_at": "2026-09-23",
+      "period": "报价至 09-15；报告至 09-16",
+      "checked_at": "2026-09-22",
       "next_review": "每周",
       "definition": "行业合同价预测与现货报价。",
-      "interpretation": "09-23 的 DDR4 指定规格均价较前一日小幅回落；NAND 规格仍沿用 09-14 最近一次已核查报价。合同价摘要预计涨幅收敛，未提供新的量化区间。"
+      "interpretation": "现货周报中的 DDR4 规格小幅上涨，NAND 规格小幅下降；合同价摘要预计涨幅收敛，未提供新的量化区间。"
     },
     {
       "id": "supply",
@@ -1991,7 +1955,7 @@
         "首批晶圆、产品出货和成熟产量属于不同阶段。"
       ],
       "period": "2026–2027 展望 · 披露至 09-16",
-      "checked_at": "2026-09-23",
+      "checked_at": "2026-09-22",
       "next_review": "新行业报告",
       "definition": "机构供需预测及公司产能计划。",
       "interpretation": "TrendForce 最新摘要预计 NAND 不同终端市场分化；企业 SSD 的需求展望不宜外推至全部消费级存储。"
@@ -2103,7 +2067,7 @@
         "手机报告采用公开摘要，缺少统一口径的客户库存天数和消耗量。"
       ],
       "period": "行业资料至 09-21",
-      "checked_at": "2026-09-23",
+      "checked_at": "2026-09-22",
       "next_review": "每周",
       "definition": "用于观察终端需求的间接指标。",
       "interpretation": "企业 SSD 交付周期为 16 周，而 TrendForce 给出的均衡基准为 8 周，说明交付仍受约束；收入与交付周期都不是美光采购量。客户实际库存与消耗量仍待补充。"
@@ -2121,12 +2085,6 @@
     "产业链指引和管理层展望按原披露日期及目标期间记录，文字为中文摘要；同比由原始金额计算，百分点与百分比区分。"
   ],
   "check_log": [
-    {
-      "at": "2026-09-23T23:54:02.833Z",
-      "status": "success",
-      "scope": "batch",
-      "text": "更新 DRAM 现货与供需资料，并新增五条 AI 基础设施、产品和应用动态；公司财报数据保持不变。"
-    },
     {
       "at": "2026-09-23T23:48:22.182Z",
       "status": "success",
@@ -3435,7 +3393,7 @@
           "news_tf_dram_20260922"
         ],
         "reason": "TrendForce 新增 DRAM 模组市场与供给挤占数据，另确认 09-23 现货摘要；需要定向行业更新。",
-        "processed_at": "2026-09-23T23:54:02.833Z"
+        "processed_at": null
       },
       {
         "key": "news",
@@ -3451,7 +3409,7 @@
           "news_samsung_airan_20260923"
         ],
         "reason": "已逐一检查全部 12 个新闻入口；发现新的行业、基础设施、AI 产品与应用动态，未发现新财报或指引修订。",
-        "processed_at": "2026-09-23T23:54:02.833Z"
+        "processed_at": null
       }
     ],
     "calendar": [
@@ -3496,116 +3454,6 @@
       "anthropic": "Anthropic"
     },
     "items": [
-      {
-        "id": "samsung_airan_20260923",
-        "story_key": "samsung-korea-ai-ran-projects",
-        "category": "applications",
-        "companies": [
-          "samsung"
-        ],
-        "title": "Samsung 取得韩国两项 AI RAN 项目角色",
-        "summary": "Samsung 宣布已与 KT、SK Telecom 签约，分别担任 KT 项目的唯一全球供应商和 SK Telecom 项目的主要供应商；项目计划从 2026 年 10 月起在船厂和石化设施部署 5G SA 专网，验证焊接、巡检等 physical AI 应用。",
-        "kind": "公司计划",
-        "period": "2026-09-23 公告；计划 2026 年 10 月启动",
-        "published_at": "2026-09-23",
-        "source_ids": [
-          "news_samsung_airan_20260923"
-        ],
-        "location": "项目角色与启动时间；AI-Powered Welding Robots；Autonomous Patrol Robots。",
-        "evidence_type": "direct",
-        "note": "公告披露的是签约与验证计划，未披露项目金额、内存采购量或三星存储产能。",
-        "interpretation": "这是工业 physical AI 的部署验证，不等同于已形成规模化硬件需求。",
-        "fact_refs": [],
-        "updated_at": "2026-09-23"
-      },
-      {
-        "id": "tf_dram_20260922",
-        "story_key": "trendforce-dram-module-market-2025",
-        "category": "memory",
-        "companies": [
-          "trendforce"
-        ],
-        "title": "2025 年 DRAM 模组市场收入增长 59%",
-        "summary": "TrendForce 统计，2025 年全球 DRAM 模组市场收入为 212 亿美元，同比增长 59%，高于 2024 年的 7%。报告称，2025 年下半年北美和中国 CSP 增加服务器 DRAM 订单，限制了 PC 与消费应用的供给分配并推高整体 DRAM 价格。",
-        "kind": "行业观察",
-        "period": "2025 全年；2026-09-22 发布",
-        "published_at": "2026-09-22",
-        "source_ids": [
-          "news_tf_dram_20260922"
-        ],
-        "location": "首段；2025 年上下半年市场变化；市场集中度段落。",
-        "evidence_type": "direct",
-        "note": "收入增长同时受价格、出货量和产品组合影响，不能直接当作位元出货增长。",
-        "interpretation": "CSP 订单与消费端争夺 DRAM 分配的现象支持供给偏紧观察，但数据期间为 2025 年。",
-        "fact_refs": [],
-        "updated_at": "2026-09-22"
-      },
-      {
-        "id": "nv_isaac_20260922",
-        "story_key": "nvidia-isaac-ros-5-launch",
-        "category": "products",
-        "companies": [
-          "nvidia"
-        ],
-        "title": "NVIDIA 发布 Isaac ROS 5.0",
-        "summary": "Isaac ROS 5.0 已免费开源，面向约 130 万 ROS 用户加入 agentic 开发流程和新平台支持。NVIDIA 表示，新的 FoundationPose 推理库可使机器人目标姿态感知与跟踪速度最高提升 5.5 倍。",
-        "kind": "公司披露",
-        "period": "2026-09-22 发布",
-        "published_at": "2026-09-22",
-        "source_ids": [
-          "news_nv_isaac_20260922"
-        ],
-        "location": "Bringing AI Agents Into Robotics Development；FoundationPose 性能段落；Available now。",
-        "evidence_type": "direct",
-        "note": "5.5 倍是 NVIDIA 对特定推理库的产品性能描述，不是机器人出货或商业收入。",
-        "interpretation": "该版本扩展了 physical AI 的开发和边缘部署工具，未披露新增 GPU 或内存采购量。",
-        "fact_refs": [],
-        "updated_at": "2026-09-22"
-      },
-      {
-        "id": "aws_omni_20260922",
-        "story_key": "aws-cloudwatch-omni-launch",
-        "category": "applications",
-        "companies": [
-          "amazon"
-        ],
-        "title": "AWS 推出面向 AI agent 的 CloudWatch Omni",
-        "summary": "CloudWatch Omni 将 agent 可观测、评估和实验整合到 IDE 与独立网页体验，支持不同模型提供商、框架和运行环境，并提供正确性、连贯性、检索质量及工具选择等内置评估器。",
-        "kind": "公司披露",
-        "period": "2026-09-22 发布",
-        "published_at": "2026-09-22",
-        "source_ids": [
-          "news_aws_omni_20260922"
-        ],
-        "location": "产品定位；built-in evaluators；Omni Experiments 与 Session Explorer。",
-        "evidence_type": "direct",
-        "note": "这是产品功能发布；公告未披露使用量、收入或基础设施投入。",
-        "interpretation": "发布反映云平台继续完善 agent 生产运维工具，但不能量化为新增算力或内存需求。",
-        "fact_refs": [],
-        "updated_at": "2026-09-22"
-      },
-      {
-        "id": "meta_petal_20260921",
-        "story_key": "meta-petal-subsea-cable",
-        "category": "customers",
-        "companies": [
-          "meta"
-        ],
-        "title": "Meta 计划建设 1 Pbps 跨洋海底电缆",
-        "summary": "Petal 计划连接美国与法国，全长约 7,000 公里，容量 1 Pbps，为现有先进跨洋电缆的两倍；Meta 预计 2029 年投入服务，并称无需按比例增加功耗或物理基础设施。",
-        "kind": "公司计划",
-        "period": "2026-09-21 公布；目标 2029 年投入服务",
-        "published_at": "2026-09-21",
-        "source_ids": [
-          "news_meta_petal_20260921"
-        ],
-        "location": "Takeaways；Pushing the Boundaries of Subsea Innovation；What's Next。",
-        "evidence_type": "direct",
-        "note": "这是网络基础设施容量与时间表，不是 Meta 云分部数据或已发生资本开支。",
-        "interpretation": "Petal 扩展跨洋数据传输能力；公告未说明由 AI 流量占比或相关内存采购。",
-        "fact_refs": [],
-        "updated_at": "2026-09-21"
-      },
       {
         "id": "tf_essd_20260921",
         "story_key": "trendforce-essd-lead-time-2026-09-21",
