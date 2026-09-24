@@ -2529,6 +2529,96 @@
         "secondary"
       ]
     },
+    "news.tf_dram_20260922": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "entity": "news",
+      "measurement": "sourced_news",
+      "unit": "",
+      "scope": "news.tf_dram_20260922",
+      "accounting_basis": "not_applicable",
+      "temporal_basis": "dated_disclosure",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct",
+        "proxy",
+        "secondary"
+      ]
+    },
+    "news.nv_isaac_20260922": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "entity": "news",
+      "measurement": "sourced_news",
+      "unit": "",
+      "scope": "news.nv_isaac_20260922",
+      "accounting_basis": "not_applicable",
+      "temporal_basis": "dated_disclosure",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct",
+        "proxy",
+        "secondary"
+      ]
+    },
+    "news.meta_petal_20260921": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "entity": "news",
+      "measurement": "sourced_news",
+      "unit": "",
+      "scope": "news.meta_petal_20260921",
+      "accounting_basis": "not_applicable",
+      "temporal_basis": "dated_disclosure",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct",
+        "proxy",
+        "secondary"
+      ]
+    },
+    "news.aws_omni_20260922": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "entity": "news",
+      "measurement": "sourced_news",
+      "unit": "",
+      "scope": "news.aws_omni_20260922",
+      "accounting_basis": "not_applicable",
+      "temporal_basis": "dated_disclosure",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct",
+        "proxy",
+        "secondary"
+      ]
+    },
+    "news.samsung_airan_20260923": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "entity": "news",
+      "measurement": "sourced_news",
+      "unit": "",
+      "scope": "news.samsung_airan_20260923",
+      "accounting_basis": "not_applicable",
+      "temporal_basis": "dated_disclosure",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct",
+        "proxy",
+        "secondary"
+      ]
+    },
     "calendar.micron_fy2026_q4": {
       "version": 1,
       "active": true,
@@ -2839,6 +2929,24 @@
     ],
     "news_meta_20260908": [
       "news.meta_muse_20260908"
+    ],
+    "news_tf_dram_20260922": [
+      "news.tf_dram_20260922"
+    ],
+    "news_nv_isaac_20260922": [
+      "news.nv_isaac_20260922"
+    ],
+    "news_meta_petal_20260921": [
+      "news.meta_petal_20260921"
+    ],
+    "news_aws_omni_20260922": [
+      "news.aws_omni_20260922"
+    ],
+    "news_samsung_airan_20260923": [
+      "news.samsung_airan_20260923"
+    ],
+    "spot_daily_20260923": [
+      "mu.contract.ddr4_spot"
     ],
     "calendar_mu_20260930": [
       "calendar.micron_fy2026_q4"
