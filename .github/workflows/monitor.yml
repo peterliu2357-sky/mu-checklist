@@ -45,6 +45,14 @@ jobs:
         run: npx playwright install --with-deps chromium --only-shell
       - name: Mobile and interface contract tests
         run: npm run test:ui
+      - name: Keep interface screenshots for review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: interface-screenshots
+          path: test-results/**/*.png
+          if-no-files-found: ignore
+          retention-days: 3
       - name: Build verified site only
         run: npm run build
       - name: Upload verified site

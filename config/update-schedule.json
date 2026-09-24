@@ -1,20 +1,30 @@
 {
   "version": 1,
   "display_timezone": "America/Los_Angeles",
-  "verified_at": "2026-09-24T02:53:00Z",
+  "verified_at": "2026-09-24T06:12:02.496Z",
   "completion_grace_minutes": 120,
   "research": {
     "enabled": true,
     "timezone": "America/Los_Angeles",
-    "weekdays": [0, 3],
+    "weekdays": [
+      0,
+      3
+    ],
     "hour": 17,
     "minute": 0,
-    "starts_at": "2026-09-24T00:00:00Z"
+    "starts_at": "2026-09-24T00:00:00Z",
+    "technology_starts_at": "2026-09-24T06:12:02.496Z"
   },
   "quote": {
     "enabled": true,
     "timezone": "America/New_York",
-    "weekdays": [1, 2, 3, 4, 5],
+    "weekdays": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
     "hour": 18,
     "minute": 10,
     "starts_at": "2026-09-23T03:29:13Z"

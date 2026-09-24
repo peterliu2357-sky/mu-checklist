@@ -1,0 +1,41 @@
+import {test,expect} from '@playwright/test';
+import fs from 'node:fs';
+const data=JSON.parse(fs.readFileSync(new URL('../../data/monitor.json',import.meta.url)));
+for(const width of [320,390,860])test(`manufacturing and product comparison at ${width}px`,async({page},testInfo)=>{
+  const errors=[];page.on('pageerror',e=>errors.push(e.message));
+  await page.setViewportSize({width,height:900});
+  await page.route('**/data/monitor.json?*',r=>r.fulfill({json:data}));
+  await page.goto('/#tech-sanand');
+  await expect(page.locator('#tech-sanand')).toBeVisible();
+  await expect(page.locator('#tech-sanand')).toContainText('封装测试');
+  await expect(page.locator('#tech-sanand')).toContainText('颗/年');
+  await page.locator('#tech-sanand .tech-evidence summary').click();
+  await expect(page.locator('#tech-sanand .tech-evidence[open]')).toContainText('已实现年度封测量');
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  await page.locator('#tech-sanand').screenshot({path:testInfo.outputPath('sanand.png')});
+  await page.goto('/#tech-dram_1gamma');
+  await expect(page.locator('#tech-dram_1gamma')).toBeVisible();
+  await page.goto('/#product-comparison');
+  await expect(page.locator('#product-comparison')).toBeVisible();
+  await page.locator('#product-comparison').screenshot({path:testInfo.outputPath('ddr5-comparison.png')});
+  await page.locator('#tech-micron-model').selectOption('micron_rdimm256');
+  await expect(page.locator('#tech-micron_rdimm256')).toBeVisible();
+  await page.locator('#tech-family').selectOption('hbm4e');
+  await expect(page.locator('.tech-table')).toContainText('HBM4E');
+  if(width<600){await page.locator('#tech-peer').selectOption('skhynix');await expect(page.locator('#tech-skhynix_hbm4e')).toBeVisible();await expect(page.locator('#tech-samsung_hbm4e')).toBeHidden();}
+  else await expect(page.locator('#tech-samsung_hbm4e')).toBeVisible();
+  await page.locator('#tech-skhynix_hbm4e .tech-evidence summary').click();
+  await expect(page.locator('#tech-skhynix_hbm4e .tech-evidence[open]')).toContainText('基准');
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  await page.goto('/#news-mu_rdimm_20260915');
+  await page.locator('#news-mu_rdimm_20260915 [data-tech-link]').click();
+  await expect(page.locator('#tech-micron_rdimm512')).toBeVisible();
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  expect(errors).toEqual([]);
+});
+test('technology content survives the offline fallback',async({page},testInfo)=>{
+  await page.route('**/data/*.json?*',r=>r.abort());
+  await page.goto('/#tech-sanand');
+  await expect(page.locator('#tech-sanand')).toBeVisible();
+  await expect(page.locator('#freshness')).toContainText('备用资料');
+});

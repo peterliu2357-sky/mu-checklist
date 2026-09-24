@@ -1207,6 +1207,14 @@
                   ],
                   "additionalProperties": false
                 }
+              },
+              "technology_refs": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
               }
             },
             "required": [
@@ -1272,6 +1280,320 @@
         "fact_records",
         "categories",
         "entities"
+      ],
+      "additionalProperties": false
+    },
+    "technology": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "type": {
+                "enum": [
+                  "facility",
+                  "process",
+                  "product"
+                ]
+              },
+              "company_id": {
+                "enum": [
+                  "micron",
+                  "samsung",
+                  "skhynix"
+                ]
+              },
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "family": {
+                "type": "string",
+                "minLength": 1
+              },
+              "role": {
+                "type": "string"
+              },
+              "stage": {
+                "enum": [
+                  "announced",
+                  "construction",
+                  "sampling",
+                  "qualification",
+                  "production",
+                  "ramping",
+                  "certified",
+                  "listed"
+                ]
+              },
+              "as_of": {
+                "type": "string",
+                "minLength": 1
+              },
+              "period": {
+                "type": "string",
+                "minLength": 1
+              },
+              "summary": {
+                "type": "string",
+                "minLength": 1
+              },
+              "kind": {
+                "const": "公司披露"
+              },
+              "evidence_type": {
+                "const": "direct"
+              },
+              "source_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              },
+              "location": {
+                "type": "string",
+                "minLength": 1
+              },
+              "note": {
+                "type": "string"
+              },
+              "facts": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "label": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "value": {
+                      "type": [
+                        "number",
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "unit": {
+                      "type": "string"
+                    },
+                    "qualifier": {
+                      "type": "string"
+                    },
+                    "nature": {
+                      "enum": [
+                        "actual",
+                        "plan",
+                        "vendor_claim",
+                        "unavailable"
+                      ]
+                    },
+                    "period": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "as_of": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "source_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "minItems": 1,
+                      "uniqueItems": true
+                    },
+                    "location": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "baseline": {
+                      "type": "string"
+                    },
+                    "note": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "label",
+                    "value",
+                    "unit",
+                    "qualifier",
+                    "nature",
+                    "period",
+                    "as_of",
+                    "source_ids",
+                    "location",
+                    "baseline",
+                    "note"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "power_test": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "metric": {
+                        "enum": [
+                          "operating_power_w",
+                          "vendor_relative",
+                          "unavailable"
+                        ]
+                      },
+                      "capacity_gb": {
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "speed_mtps": {
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "platform": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "workload": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "voltage": {
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "temperature_c": {
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "method": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "metric",
+                      "capacity_gb",
+                      "speed_mtps",
+                      "platform",
+                      "workload",
+                      "voltage",
+                      "temperature_c",
+                      "method"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "date_basis": {
+                "enum": [
+                  "disclosure",
+                  "page_checked"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "company_id",
+              "name",
+              "family",
+              "role",
+              "stage",
+              "as_of",
+              "period",
+              "summary",
+              "kind",
+              "evidence_type",
+              "source_ids",
+              "location",
+              "note",
+              "facts",
+              "power_test",
+              "date_basis"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        },
+        "highlights": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "maxItems": 3
+        },
+        "history": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "record_id",
+                "payload",
+                "sources"
+              ],
+              "properties": {
+                "record_id": {
+                  "type": "string"
+                },
+                "payload": {
+                  "$ref": "#/properties/technology/properties/items/items"
+                },
+                "sources": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        }
+      },
+      "required": [
+        "version",
+        "items",
+        "highlights"
       ],
       "additionalProperties": false
     }

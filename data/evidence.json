@@ -2508,5 +2508,975 @@
     "mode": "verified",
     "record_hash": "633cd15fcfd48f3b6e02881cbe6f95fbc5bd7e1f49854adeec4617067d6e4a10",
     "id": "e-0c681dc4176a4a4a426f9a016d8bca130fceac7429a44f81ba4d1fa6aba81d7c"
+  },
+  "e-a794c6b77c0e0eb736d77b0bac9ee59707fda29a4360795e380eb46f5c0f69e5": {
+    "measurement": "sourced_news",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "news.mu_rdimm_20260915",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "AMD 与 Intel 正在验证该模块。美光预计于 2027 年下半年根据客户需求进入量产。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Original issuer documents read and compared to each field, its date, manufacturing role, unit, stage and test baseline; numeric source values retained.",
+      "at": "2026-09-24T05:59:21.469Z"
+    },
+    "documents": [
+      {
+        "source_id": "news_mu_20260915",
+        "url": "https://investors.micron.com/news/press-release/2026/Micron-Advances-Memory-Innovation-With-the-Worlds-First-Ultra-Dense-Module-for-Next-Generation-Servers/default.aspx",
+        "sha256": "62e650db97a20203e3b7315052e79ab09b83c8c8e2f837e7ef71a7e6c6db3c8e",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-24T05:59:18.403Z",
+        "reviewed_at": "2026-09-24T05:59:18.403Z",
+        "status": "read",
+        "locator": "Ecosystem partner validation；量产时间表段落。",
+        "excerpt": "16.0W"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "0f0ad3dd4922c0fe0670ff7fa02a287a546da97f02fcad1f00151e0bf16ef3fa",
+    "id": "e-a794c6b77c0e0eb736d77b0bac9ee59707fda29a4360795e380eb46f5c0f69e5"
+  },
+  "e-827657025564c4defbb0333d18c323719332043221f5abacb9616043d9adc8ce": {
+    "measurement": "technology_facility",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "sanand",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "已商业生产，并向 Dell 交付首批印度制造内存模块。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Original issuer documents read and compared to each field, its date, manufacturing role, unit, stage and test baseline; numeric source values retained.",
+      "at": "2026-09-24T05:59:21.469Z"
+    },
+    "documents": [
+      {
+        "source_id": "tech_sanand",
+        "url": "https://investors.micron.com/news/press-release/2026/Micron-Celebrates-Opening-of-Indias-First-Semiconductor-Assembly-and-Test-Facility-02-28-2026/default.aspx",
+        "sha256": "17acb99167183d97e08932b8db65a1efcd057c6d28a76aafe8057dfaf376db47",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-24T05:59:15.829Z",
+        "reviewed_at": "2026-09-24T05:59:15.829Z",
+        "status": "read",
+        "locator": "开厂公告：商业生产、首批交付、2026/2027 年封测目标",
+        "excerpt": "tens of millions"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "31531c414918eefc97bd9b46597fdb188496e49551f56b63b988f8a2e6f39eb1",
+    "id": "e-827657025564c4defbb0333d18c323719332043221f5abacb9616043d9adc8ce"
+  },
+  "e-ff2d8b7c85464017f983bfa9b4065145d6c64a7a296aee010f13e76ba49f5da5": {
+    "measurement": "technology_facility",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "idaho_id1",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "新厂建设推进中。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Original issuer documents read and compared to each field, its date, manufacturing role, unit, stage and test baseline; numeric source values retained.",
+      "at": "2026-09-24T05:59:21.469Z"
+    },
+    "documents": [
+      {
+        "source_id": "tech_q3_deck",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf",
+        "sha256": "29468a786fa4a9c7728735ea8e3ad5853bb1375a297c636e86e6a4dd3b155929",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-09-24T05:59:16.328Z",
+        "reviewed_at": "2026-09-24T05:59:16.328Z",
+        "status": "read",
+        "locator": "p11 技术进展；p17–19 制造项目",
+        "excerpt": "first wafer"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "6e35183ef44e0662de4f3f3f6c9a1cab1bfaf987f877ca8191297ba35c1238f8",
+    "id": "e-ff2d8b7c85464017f983bfa9b4065145d6c64a7a296aee010f13e76ba49f5da5"
+  },
+  "e-80fed8cb91de585e2b8a0c68fe3ca03b56e123964eaa1d436e8d781bb9e01508": {
+    "measurement": "technology_facility",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "tongluo",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "收购厂区扩建，第二洁净室已开工。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Original issuer documents read and compared to each field, its date, manufacturing role, unit, stage and test baseline; numeric source values retained.",
+      "at": "2026-09-24T05:59:21.469Z"
+    },
+    "documents": [
+      {
+        "source_id": "tech_q3_deck",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf",
+        "sha256": "29468a786fa4a9c7728735ea8e3ad5853bb1375a297c636e86e6a4dd3b155929",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-09-24T05:59:16.328Z",
+        "reviewed_at": "2026-09-24T05:59:16.328Z",
+        "status": "read",
+        "locator": "p11 技术进展；p17–19 制造项目",
+        "excerpt": "meaningful product shipments"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "55a8770c2c8e05e9ba5d1210a6fc7534bd33a17d58c7a1315acd36a08a0d3874",
+    "id": "e-80fed8cb91de585e2b8a0c68fe3ca03b56e123964eaa1d436e8d781bb9e01508"
+  },
+  "e-178426b2c9c05e500f699fa5fb9958c8aade6f228bf1cef1dd0c0ee821513b9e": {
+    "measurement": "technology_facility",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "singapore_hbm",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "先进封装设施建设按计划推进。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Original issuer documents read and compared to each field, its date, manufacturing role, unit, stage and test baseline; numeric source values retained.",
+      "at": "2026-09-24T05:59:21.469Z"
+    },
+    "documents": [
+      {
+        "source_id": "tech_q3_deck",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf",
+        "sha256": "29468a786fa4a9c7728735ea8e3ad5853bb1375a297c636e86e6a4dd3b155929",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-09-24T05:59:16.328Z",
+        "reviewed_at": "2026-09-24T05:59:16.328Z",
+        "status": "read",
+        "locator": "p11 技术进展；p17–19 制造项目",
+        "excerpt": "HBM packaging capacity"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "ed2cbf65073e6d1912ea46dd9866f8b28a36527e181b2cb610b8bb029d19d1a7",
+    "id": "e-178426b2c9c05e500f699fa5fb9958c8aade6f228bf1cef1dd0c0ee821513b9e"
+  },
+  "e-87f821ff27b80969d0e6faee9bb25de86fdaf7d428d401ab81c155bbd90198e9": {
+    "measurement": "technology_process",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "dram_1gamma",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "1γ 正在爬坡；下一代 DRAM 预计于 2027 年下半年开始量产。"
+    },
+    "raw_inputs": [
+      {
+        "field": "facts.bit_density.value",
+        "value": 30,
+        "scale": 1,
+        "source_unit": "bits/wafer_pct",
+        "period": "2025-02-25",
+        "locator": "Why this matters / Improved bit-density output；脚注 2、3",
+        "source_id": "tech_gamma"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Original issuer documents read and compared to each field, its date, manufacturing role, unit, stage and test baseline; numeric source values retained.",
+      "at": "2026-09-24T05:59:21.469Z"
+    },
+    "documents": [
+      {
+        "source_id": "tech_gamma",
+        "url": "https://investors.micron.com/news/press-release/2025/Micron-Announces-Shipment-of-1-1-gamma-DRAM-Pioneering-Memory-Technology-Advancements-for-Future-Compute-Needs-02-25-2025/default.aspx",
+        "sha256": "6f3f45bbcfafb7edf4f4bb52372e2bd99e6e5bcdc2b7eed8de2028e2b824b44d",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-24T05:59:16.001Z",
+        "reviewed_at": "2026-09-24T05:59:16.001Z",
+        "status": "read",
+        "locator": "Why this matters / Improved bit-density output；脚注 2、3",
+        "excerpt": "greater than 30%"
+      },
+      {
+        "source_id": "tech_q3_deck",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf",
+        "sha256": "29468a786fa4a9c7728735ea8e3ad5853bb1375a297c636e86e6a4dd3b155929",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-09-24T05:59:16.328Z",
+        "reviewed_at": "2026-09-24T05:59:16.328Z",
+        "status": "read",
+        "locator": "p11 技术进展；p17–19 制造项目",
+        "excerpt": "ramping well"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "7c314038f980aee3db374eefeb3cad5dbd45a5f43730d934507f73b304e36b6f",
+    "id": "e-87f821ff27b80969d0e6faee9bb25de86fdaf7d428d401ab81c155bbd90198e9"
+  },
+  "e-0437281c84438f052989090c13de1c96a589dd67bbc380f217cf031d8d53b1da": {
+    "measurement": "technology_process",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "nand_g9",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "G9 已随 SSD 出货，最新财报披露仍在扩大生产。"
+    },
+    "raw_inputs": [
+      {
+        "field": "facts.io_speed.value",
+        "value": 3.6,
+        "scale": 1,
+        "source_unit": "GB/s",
+        "period": "2024-07-30",
+        "locator": "正文：G9 TLC NAND 随 SSD 出货、3.6 GB/s 接口",
+        "source_id": "tech_g9"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Original issuer documents read and compared to each field, its date, manufacturing role, unit, stage and test baseline; numeric source values retained.",
+      "at": "2026-09-24T05:59:21.469Z"
+    },
+    "documents": [
+      {
+        "source_id": "tech_g9",
+        "url": "https://investors.micron.com/news/press-release/2024/Micron-Announces-Volume-Production-of-Ninth-Generation-NAND-Flash-Technology-07-30-2024/default.aspx",
+        "sha256": "0a207f77e4a2cb6cfb0b61bb12b1274ecb2574baf58a0b3568a7c47d4050d5bc",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-24T05:59:16.168Z",
+        "reviewed_at": "2026-09-24T05:59:16.168Z",
+        "status": "read",
+        "locator": "正文：G9 TLC NAND 随 SSD 出货、3.6 GB/s 接口",
+        "excerpt": "3.6 GB/s"
+      },
+      {
+        "source_id": "tech_q3_deck",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf",
+        "sha256": "29468a786fa4a9c7728735ea8e3ad5853bb1375a297c636e86e6a4dd3b155929",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-09-24T05:59:16.328Z",
+        "reviewed_at": "2026-09-24T05:59:16.328Z",
+        "status": "read",
+        "locator": "p11 技术进展；p17–19 制造项目",
+        "excerpt": "ramping well"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "8139ef6edc3c44a5088437f85b98e88570f6bc7d938fe4439aa93dc6ee9abaae",
+    "id": "e-0437281c84438f052989090c13de1c96a589dd67bbc380f217cf031d8d53b1da"
+  },
+  "e-2f2b447fb62799f2b1947c2161d7c580299f21d185b5f72645ec76f72eb57101": {
+    "measurement": "technology_product",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "micron_rdimm512",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "多服务器平台演示完成；AMD 和 Intel 正在验证。"
+    },
+    "raw_inputs": [
+      {
+        "field": "facts.capacity.value",
+        "value": 512,
+        "scale": 1,
+        "source_unit": "GB",
+        "period": "2026-09-15",
+        "locator": "平台演示与验证、速率、量产计划；功耗脚注 1",
+        "source_id": "tech_rdimm"
+      },
+      {
+        "field": "facts.speed.value",
+        "value": 9200,
+        "scale": 1,
+        "source_unit": "MTps",
+        "period": "产品计划规格",
+        "locator": "平台演示与验证、速率、量产计划；功耗脚注 1",
+        "source_id": "tech_rdimm"
+      },
+      {
+        "field": "facts.power.value",
+        "value": 16,
+        "scale": 1,
+        "source_unit": "W",
+        "period": "2026-09-15",
+        "locator": "平台演示与验证、速率、量产计划；功耗脚注 1",
+        "source_id": "tech_rdimm"
+      },
+      {
+        "field": "facts.power_change.value",
+        "value": 60,
+        "scale": 1,
+        "source_unit": "pct",
+        "period": "2026-09-15",
+        "locator": "平台演示与验证、速率、量产计划；功耗脚注 1",
+        "source_id": "tech_rdimm"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Original issuer documents read and compared to each field, its date, manufacturing role, unit, stage and test baseline; numeric source values retained.",
+      "at": "2026-09-24T05:59:21.469Z"
+    },
+    "documents": [
+      {
+        "source_id": "tech_rdimm",
+        "url": "https://investors.micron.com/news/press-release/2026/Micron-Advances-Memory-Innovation-With-the-Worlds-First-Ultra-Dense-Module-for-Next-Generation-Servers/default.aspx",
+        "sha256": "62e650db97a20203e3b7315052e79ab09b83c8c8e2f837e7ef71a7e6c6db3c8e",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-24T05:59:16.665Z",
+        "reviewed_at": "2026-09-24T05:59:16.665Z",
+        "status": "read",
+        "locator": "平台演示与验证、速率、量产计划；功耗脚注 1",
+        "excerpt": "16.0W"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "2c4e11731725558a7af693786a6421b296235f47b7d33f52681e2d77c9695404",
+    "id": "e-2f2b447fb62799f2b1947c2161d7c580299f21d185b5f72645ec76f72eb57101"
+  },
+  "e-642828a0166598ccb391a421a52d9e2cd7678f1764975123199de2242804c6a4": {
+    "measurement": "technology_product",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "micron_rdimm256",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "验证样品已交付主要服务器生态合作伙伴。"
+    },
+    "raw_inputs": [
+      {
+        "field": "facts.capacity.value",
+        "value": 256,
+        "scale": 1,
+        "source_unit": "GB",
+        "period": "2026-06-24",
+        "locator": "Product highlights：HBM4 / HBM4E / 256GB DDR5 RDIMM",
+        "source_id": "tech_mu_q3"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Original issuer documents read and compared to each field, its date, manufacturing role, unit, stage and test baseline; numeric source values retained.",
+      "at": "2026-09-24T05:59:21.469Z"
+    },
+    "documents": [
+      {
+        "source_id": "tech_mu_q3",
+        "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Results-for-the-Third-Quarter-of-Fiscal-2026/default.aspx",
+        "sha256": "a2e688677e3795406103b255005644e6611856b7af39cd47089ce5250ebb946c",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-24T05:59:16.501Z",
+        "reviewed_at": "2026-09-24T05:59:16.501Z",
+        "status": "read",
+        "locator": "Product highlights：HBM4 / HBM4E / 256GB DDR5 RDIMM",
+        "excerpt": "Product highlights"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "2857a99ee9dbf72f773ef086d9f795dc8b4980b4a683dd4162bacee2898bd69e",
+    "id": "e-642828a0166598ccb391a421a52d9e2cd7678f1764975123199de2242804c6a4"
+  },
+  "e-3877e9e81ed12e96545cb65ef01242239fd53eff2b0a3df5c64fb498ca8598f3": {
+    "measurement": "technology_product",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "samsung_rdimm",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "官网产品系列列出最高 256GB 容量；具体型号与速率组合需单独确认。"
+    },
+    "raw_inputs": [
+      {
+        "field": "facts.capacity.value",
+        "value": 256,
+        "scale": 1,
+        "source_unit": "GB",
+        "period": "2026-09-24",
+        "locator": "DDR5 Memory Modules > RDIMM；容量与速率为系列范围",
+        "source_id": "tech_samsung_ddr"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Original issuer documents read and compared to each field, its date, manufacturing role, unit, stage and test baseline; numeric source values retained.",
+      "at": "2026-09-24T05:59:21.469Z"
+    },
+    "documents": [
+      {
+        "source_id": "tech_samsung_ddr",
+        "url": "https://semiconductor.samsung.com/dram/ddr/",
+        "sha256": "949b65ae8f889b7b99d5ca7316865b406e4b55602c54c80e46b50d1fb53230a8",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-09-24T05:59:17.027Z",
+        "reviewed_at": "2026-09-24T05:59:17.027Z",
+        "status": "read",
+        "locator": "DDR5 Memory Modules > RDIMM；容量与速率为系列范围",
+        "excerpt": "Up to 256 GB"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "b54e12136d1a61e57c6b332bc906920e4e23f117c5d6719e3347ed4a9e852429",
+    "id": "e-3877e9e81ed12e96545cb65ef01242239fd53eff2b0a3df5c64fb498ca8598f3"
+  },
+  "e-125815888b9f98646223c8081c48d2f6c0687561d09de0cd406224128b8410be": {
+    "measurement": "technology_product",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "skhynix_rdimm256",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "基于 32Gb 1b 芯片，通过 Intel Xeon 6 数据中心认证。"
+    },
+    "raw_inputs": [
+      {
+        "field": "facts.capacity.value",
+        "value": 256,
+        "scale": 1,
+        "source_unit": "GB",
+        "period": "2025-12-17",
+        "locator": "正文：Intel Xeon 6 认证、32Gb 1b 芯片；功耗比较段。页面日期 12/17，正文 Seoul 12/18。",
+        "source_id": "tech_sk_rdimm"
+      },
+      {
+        "field": "facts.power_change.value",
+        "value": 18,
+        "scale": 1,
+        "source_unit": "pct",
+        "period": "2025-12-17",
+        "locator": "正文：Intel Xeon 6 认证、32Gb 1b 芯片；功耗比较段。页面日期 12/17，正文 Seoul 12/18。",
+        "source_id": "tech_sk_rdimm"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Original issuer documents read and compared to each field, its date, manufacturing role, unit, stage and test baseline; numeric source values retained.",
+      "at": "2026-09-24T05:59:21.469Z"
+    },
+    "documents": [
+      {
+        "source_id": "tech_sk_rdimm",
+        "url": "https://news.skhynix.com/en/sk-hynix-first-to-complete-intel-data-center-certificationfor-32gb-die-based-256gb-server-ddr5-rdimm/",
+        "sha256": "f5e3a365f6378e2c92e1c89a4e7f3c810083b95a6bf21e04e6d5d52c44b5c269",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-09-24T05:59:16.827Z",
+        "reviewed_at": "2026-09-24T05:59:16.827Z",
+        "status": "read",
+        "locator": "正文：Intel Xeon 6 认证、32Gb 1b 芯片；功耗比较段。页面日期 12/17，正文 Seoul 12/18。",
+        "excerpt": "18%"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "045690ae9efe829387b98ce5f1438f1bee2ebc4483d822494f885fbdf3574510",
+    "id": "e-125815888b9f98646223c8081c48d2f6c0687561d09de0cd406224128b8410be"
+  },
+  "e-404b8309408f429ded1798864308e1017e27311fcb078dfb30371fc8a0654786": {
+    "measurement": "technology_product",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "micron_hbm4",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "已高量出货；12H 爬坡速度约为前代 12H 的两倍。"
+    },
+    "raw_inputs": [
+      {
+        "field": "facts.capacity.value",
+        "value": 36,
+        "scale": 1,
+        "source_unit": "GB",
+        "period": "2026-03-16",
+        "locator": "正文：36GB 12H 出货、16H 送样；脚注 1、2、5",
+        "source_id": "tech_mu_hbm4"
+      },
+      {
+        "field": "facts.stack.value",
+        "value": 12,
+        "scale": 1,
+        "source_unit": "layers",
+        "period": "2026-03-16",
+        "locator": "正文：36GB 12H 出货、16H 送样；脚注 1、2、5",
+        "source_id": "tech_mu_hbm4"
+      },
+      {
+        "field": "facts.speed.value",
+        "value": 11,
+        "scale": 1,
+        "source_unit": "Gbps",
+        "period": "2026-03-16",
+        "locator": "正文：36GB 12H 出货、16H 送样；脚注 1、2、5",
+        "source_id": "tech_mu_hbm4"
+      },
+      {
+        "field": "facts.bandwidth.value",
+        "value": 2.8,
+        "scale": 1,
+        "source_unit": "TBps",
+        "period": "2026-03-16",
+        "locator": "正文：36GB 12H 出货、16H 送样；脚注 1、2、5",
+        "source_id": "tech_mu_hbm4"
+      },
+      {
+        "field": "facts.power_change.value",
+        "value": 20,
+        "scale": 1,
+        "source_unit": "pct",
+        "period": "2026-03-16",
+        "locator": "正文：36GB 12H 出货、16H 送样；脚注 1、2、5",
+        "source_id": "tech_mu_hbm4"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Original issuer documents read and compared to each field, its date, manufacturing role, unit, stage and test baseline; numeric source values retained.",
+      "at": "2026-09-24T05:59:21.469Z"
+    },
+    "documents": [
+      {
+        "source_id": "tech_mu_hbm4",
+        "url": "https://investors.micron.com/news/press-release/2026/Micron-in-High-Volume-Production-of-HBM4-Designed-for-NVIDIA-Vera-Rubin-PCIe-Gen6-SSD-and-SOCAMM2-03-16-2026/default.aspx",
+        "sha256": "ba63f764892282e42caa1dbdc64033a6b634f046203cfe93ed3b852cd88a3bbe",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-24T05:59:17.198Z",
+        "reviewed_at": "2026-09-24T05:59:17.198Z",
+        "status": "read",
+        "locator": "正文：36GB 12H 出货、16H 送样；脚注 1、2、5",
+        "excerpt": "36GB 12H"
+      },
+      {
+        "source_id": "tech_mu_q3",
+        "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Results-for-the-Third-Quarter-of-Fiscal-2026/default.aspx",
+        "sha256": "a2e688677e3795406103b255005644e6611856b7af39cd47089ce5250ebb946c",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-24T05:59:16.501Z",
+        "reviewed_at": "2026-09-24T05:59:16.501Z",
+        "status": "read",
+        "locator": "Product highlights：HBM4 / HBM4E / 256GB DDR5 RDIMM",
+        "excerpt": "Product highlights"
+      },
+      {
+        "source_id": "tech_q3_deck",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf",
+        "sha256": "29468a786fa4a9c7728735ea8e3ad5853bb1375a297c636e86e6a4dd3b155929",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-09-24T05:59:16.328Z",
+        "reviewed_at": "2026-09-24T05:59:16.328Z",
+        "status": "read",
+        "locator": "p11 技术进展；p17–19 制造项目",
+        "excerpt": "ramping well"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "0dcfe9c4c87d2b922006a53ddffd9c51d27fe3fa42ea095676266d09cfd4a480",
+    "id": "e-404b8309408f429ded1798864308e1017e27311fcb078dfb30371fc8a0654786"
+  },
+  "e-573a59e7e18bff0f8455f2f38d7886704f43e555e366c85dfcc1cb95a43fb1e9": {
+    "measurement": "technology_product",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "samsung_hbm4",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "已量产并向客户交付商业产品。"
+    },
+    "raw_inputs": [
+      {
+        "field": "facts.stack.value",
+        "value": 12,
+        "scale": 1,
+        "source_unit": "layers",
+        "period": "2026-02-12",
+        "locator": "Setting the Bar for Maximum Performance and Efficiency；工艺与功耗段",
+        "source_id": "tech_samsung_hbm4"
+      },
+      {
+        "field": "facts.speed.value",
+        "value": 11.7,
+        "scale": 1,
+        "source_unit": "Gbps",
+        "period": "2026-02-12",
+        "locator": "Setting the Bar for Maximum Performance and Efficiency；工艺与功耗段",
+        "source_id": "tech_samsung_hbm4"
+      },
+      {
+        "field": "facts.bandwidth.value",
+        "value": 3.3,
+        "scale": 1,
+        "source_unit": "TBps",
+        "period": "2026-02-12",
+        "locator": "Setting the Bar for Maximum Performance and Efficiency；工艺与功耗段",
+        "source_id": "tech_samsung_hbm4"
+      },
+      {
+        "field": "facts.power_change.value",
+        "value": 40,
+        "scale": 1,
+        "source_unit": "pct",
+        "period": "2026-02-12",
+        "locator": "Setting the Bar for Maximum Performance and Efficiency；工艺与功耗段",
+        "source_id": "tech_samsung_hbm4"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Original issuer documents read and compared to each field, its date, manufacturing role, unit, stage and test baseline; numeric source values retained.",
+      "at": "2026-09-24T05:59:21.469Z"
+    },
+    "documents": [
+      {
+        "source_id": "tech_samsung_hbm4",
+        "url": "https://news.samsung.com/global/samsung-ships-industry-first-commercial-hbm4-with-ultimate-performance-for-ai-computing",
+        "sha256": "ecbb6caf30457b209640489c9ba3a7ff504b14dc35e78077e029d5d32b516f50",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-24T05:59:17.358Z",
+        "reviewed_at": "2026-09-24T05:59:17.358Z",
+        "status": "read",
+        "locator": "Setting the Bar for Maximum Performance and Efficiency；工艺与功耗段",
+        "excerpt": "11.7"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "059ff325bc92f47d2a6571eaa928a342e15b9c14285966116e6bafd1137a6de4",
+    "id": "e-573a59e7e18bff0f8455f2f38d7886704f43e555e366c85dfcc1cb95a43fb1e9"
+  },
+  "e-beb1063e7d36929734d39dff440748d2d5c5e6632abd3d3597bffc1cb9a60cf1": {
+    "measurement": "technology_product",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "skhynix_hbm4",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "2026 年第二季开始批量出货，计划下半年扩大生产。"
+    },
+    "raw_inputs": [
+      {
+        "field": "facts.speed.value",
+        "value": 10,
+        "scale": 1,
+        "source_unit": "Gbps",
+        "period": "2025-09-12",
+        "locator": "正文：1b、2048 I/O、超过 10Gbps、能效及 MR-MUF",
+        "source_id": "tech_sk_hbm4"
+      },
+      {
+        "field": "facts.power_change.value",
+        "value": 40,
+        "scale": 1,
+        "source_unit": "pct",
+        "period": "2025-09-12",
+        "locator": "正文：1b、2048 I/O、超过 10Gbps、能效及 MR-MUF",
+        "source_id": "tech_sk_hbm4"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Original issuer documents read and compared to each field, its date, manufacturing role, unit, stage and test baseline; numeric source values retained.",
+      "at": "2026-09-24T05:59:21.469Z"
+    },
+    "documents": [
+      {
+        "source_id": "tech_sk_hbm4",
+        "url": "https://news.skhynix.com/en/sk-hynix-completes-worlds-first-hbm4-development-and-readies-mass-production/",
+        "sha256": "02f865ac6b363124d87a2dc6ff7e2138fb18450f55db89c5c25a5a7e45332272",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-09-24T05:59:17.586Z",
+        "reviewed_at": "2026-09-24T05:59:17.586Z",
+        "status": "read",
+        "locator": "正文：1b、2048 I/O、超过 10Gbps、能效及 MR-MUF",
+        "excerpt": "10Gbps"
+      },
+      {
+        "source_id": "tech_sk_q2",
+        "url": "https://news.skhynix.com/en/q2-2026-business-results/",
+        "sha256": "1ebe2bfae67904e4455164da7a4794a5d9637bacae8b13317de8fae3ea7809be",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-09-24T05:59:17.816Z",
+        "reviewed_at": "2026-09-24T05:59:17.816Z",
+        "status": "read",
+        "locator": "HBM4 于第二季开始批量出货、下半年爬坡；HBM4E 已送样",
+        "excerpt": "mass shipments"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "470cbc81e42cbefa6376b65ced6f95f28b747b96e0d882908fe1fd7b62e24cb4",
+    "id": "e-beb1063e7d36929734d39dff440748d2d5c5e6632abd3d3597bffc1cb9a60cf1"
+  },
+  "e-fde69891939ea65eefbb451055f2e9fdd1c14fe21ea362ef8568a35d517fe90e": {
+    "measurement": "technology_product",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "micron_hbm4e",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "开发推进中，计划采用 1γ DRAM。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Original issuer documents read and compared to each field, its date, manufacturing role, unit, stage and test baseline; numeric source values retained.",
+      "at": "2026-09-24T05:59:21.469Z"
+    },
+    "documents": [
+      {
+        "source_id": "tech_mu_q3",
+        "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Results-for-the-Third-Quarter-of-Fiscal-2026/default.aspx",
+        "sha256": "a2e688677e3795406103b255005644e6611856b7af39cd47089ce5250ebb946c",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-24T05:59:16.501Z",
+        "reviewed_at": "2026-09-24T05:59:16.501Z",
+        "status": "read",
+        "locator": "Product highlights：HBM4 / HBM4E / 256GB DDR5 RDIMM",
+        "excerpt": "Product highlights"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "e50ae6df4f32cc24ce46a5b9c09e1132843980605a4810fb76d440b74ea01d21",
+    "id": "e-fde69891939ea65eefbb451055f2e9fdd1c14fe21ea362ef8568a35d517fe90e"
+  },
+  "e-cdb011765f2d77564f89d7520a055bb27a421cd45bd6da9f906407be3603d7a6": {
+    "measurement": "technology_product",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "samsung_hbm4e",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "12层样品已交付主要客户。"
+    },
+    "raw_inputs": [
+      {
+        "field": "facts.capacity.value",
+        "value": 48,
+        "scale": 1,
+        "source_unit": "GB",
+        "period": "2026-05-29",
+        "locator": "正文：12层48GB、14/16Gbps、1c/4nm、能效、量产安排",
+        "source_id": "tech_samsung_hbm4e"
+      },
+      {
+        "field": "facts.stack.value",
+        "value": 12,
+        "scale": 1,
+        "source_unit": "layers",
+        "period": "2026-05-29",
+        "locator": "正文：12层48GB、14/16Gbps、1c/4nm、能效、量产安排",
+        "source_id": "tech_samsung_hbm4e"
+      },
+      {
+        "field": "facts.speed.value",
+        "value": 16,
+        "scale": 1,
+        "source_unit": "Gbps",
+        "period": "2026-05-29",
+        "locator": "正文：12层48GB、14/16Gbps、1c/4nm、能效、量产安排",
+        "source_id": "tech_samsung_hbm4e"
+      },
+      {
+        "field": "facts.bandwidth.value",
+        "value": 3.6,
+        "scale": 1,
+        "source_unit": "TBps",
+        "period": "2026-05-29",
+        "locator": "正文：12层48GB、14/16Gbps、1c/4nm、能效、量产安排",
+        "source_id": "tech_samsung_hbm4e"
+      },
+      {
+        "field": "facts.power_change.value",
+        "value": 16,
+        "scale": 1,
+        "source_unit": "pct",
+        "period": "2026-05-29",
+        "locator": "正文：12层48GB、14/16Gbps、1c/4nm、能效、量产安排",
+        "source_id": "tech_samsung_hbm4e"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Original issuer documents read and compared to each field, its date, manufacturing role, unit, stage and test baseline; numeric source values retained.",
+      "at": "2026-09-24T05:59:21.469Z"
+    },
+    "documents": [
+      {
+        "source_id": "tech_samsung_hbm4e",
+        "url": "https://news.samsung.com/global/samsung-electronics-begins-shipment-of-industry-first-hbm4e-samples",
+        "sha256": "47c05bdea58baaa312367c25e54015f2a80751f853c92fb43169a1be49087c99",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-24T05:59:17.996Z",
+        "reviewed_at": "2026-09-24T05:59:17.996Z",
+        "status": "read",
+        "locator": "正文：12层48GB、14/16Gbps、1c/4nm、能效、量产安排",
+        "excerpt": "48-gigabyte"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "e7c42e060aa3357bcbc17a8a7168ee7c250430a6639950ff0098711e5231d7ac",
+    "id": "e-cdb011765f2d77564f89d7520a055bb27a421cd45bd6da9f906407be3603d7a6"
+  },
+  "e-8b899b9b82fd979a701da5d404ff8be786edb9e794083603cebcd791f73fcc27": {
+    "measurement": "technology_product",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "skhynix_hbm4e",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "12层样品已交付主要客户。"
+    },
+    "raw_inputs": [
+      {
+        "field": "facts.capacity.value",
+        "value": 48,
+        "scale": 1,
+        "source_unit": "GB",
+        "period": "2026-06-18",
+        "locator": "正文：12层48GB、16Gbps、Advanced MR-MUF、能效及热阻",
+        "source_id": "tech_sk_hbm4e"
+      },
+      {
+        "field": "facts.stack.value",
+        "value": 12,
+        "scale": 1,
+        "source_unit": "layers",
+        "period": "2026-06-18",
+        "locator": "正文：12层48GB、16Gbps、Advanced MR-MUF、能效及热阻",
+        "source_id": "tech_sk_hbm4e"
+      },
+      {
+        "field": "facts.speed.value",
+        "value": 16,
+        "scale": 1,
+        "source_unit": "Gbps",
+        "period": "2026-06-18",
+        "locator": "正文：12层48GB、16Gbps、Advanced MR-MUF、能效及热阻",
+        "source_id": "tech_sk_hbm4e"
+      },
+      {
+        "field": "facts.power_change.value",
+        "value": 20,
+        "scale": 1,
+        "source_unit": "pct",
+        "period": "2026-06-18",
+        "locator": "正文：12层48GB、16Gbps、Advanced MR-MUF、能效及热阻",
+        "source_id": "tech_sk_hbm4e"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Original issuer documents read and compared to each field, its date, manufacturing role, unit, stage and test baseline; numeric source values retained.",
+      "at": "2026-09-24T05:59:21.469Z"
+    },
+    "documents": [
+      {
+        "source_id": "tech_sk_hbm4e",
+        "url": "https://news.skhynix.com/en/sk-hynix-ships-samples-of-12-layer-next-gen-hbm4e-2/",
+        "sha256": "de699faa4ed1ff93400f7aed0086d3b93753434c0cfe642e0db9dbaa0f4b9d26",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-09-24T05:59:18.174Z",
+        "reviewed_at": "2026-09-24T05:59:18.174Z",
+        "status": "read",
+        "locator": "正文：12层48GB、16Gbps、Advanced MR-MUF、能效及热阻",
+        "excerpt": "48GB"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "24a8a63a64137fe040b6a9312034059145b10510df1d2c3473a47408b0c3bb16",
+    "id": "e-8b899b9b82fd979a701da5d404ff8be786edb9e794083603cebcd791f73fcc27"
   }
 }

@@ -39,7 +39,18 @@ export function entries(document, catalog) {
     const row=group[i];
     add(`${prefix}.${row.id}`,row,{entity:prefix==='news'?'news':row.company_id,period:row.period},v=>group[i]=v);
   }
+  for(let i=0;i<(document.technology?.items.length||0);i++) {
+    const row=document.technology.items[i];
+    add(`tech.${row.id}`,row,{entity:row.company_id,period:row.as_of},v=>document.technology.items[i]=v);
+  }
   return result;
+}
+
+// Structured technology numbers use the same raw-input and scaling proof as financial rows.
+export function numericInputs(row) {
+  const fields=['current','previous','price','previous_close'].filter(k=>typeof row[k]==='number').map(field=>({field,value:row[field],unit:row.unit}));
+  for(const fact of row.facts||[])if(typeof fact.value==='number')fields.push({field:`facts.${fact.id}.value`,value:fact.value,unit:fact.unit,source_ids:fact.source_ids});
+  return fields;
 }
 
 export function makeRecord(entry,document,catalog) {
@@ -75,12 +86,19 @@ export function materialize(ledger) {
       if(r)result.news.fact_records[ref.record_id]={metric_id:r.metric_id,context:clone(r.context),payload:clone(r.payload)};
     }
   }
+  if(result.technology){
+    result.technology.history={};
+    for(const item of result.technology.items){
+      result.technology.history[item.id]=Object.values(ledger.records).filter(r=>r.metric_id==='tech.'+item.id).map(r=>({record_id:r.id,payload:clone(r.payload),sources:clone(r.context.sources)})).reverse().slice(0,5);
+    }
+  }
   return result;
 }
 
 export function recordDocument(document,catalog,previous=null,evidenceByMetric={}) {
   const ledger={format_version:1,document:clone(document),records:clone(previous?.records||{}),supporting:clone(previous?.supporting||{})};
   if(ledger.document.news)delete ledger.document.news.fact_records;
+  if(ledger.document.technology)delete ledger.document.technology.history;
   for(const entry of entries(ledger.document,catalog)) {
     const record=makeRecord(entry,document,catalog);
     record.evidence_ids=evidenceByMetric[entry.metric_id] || previous?.records[record.id]?.evidence_ids || [];

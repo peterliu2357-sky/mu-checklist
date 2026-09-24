@@ -1,12 +1,13 @@
 import {clone,hash,stable,materialize,recordDocument,makeRecord,activeRecords,calculate} from './model.mjs';
 import {validateLedger,validateTransition} from './validate.mjs';
 import {coverageKeys,deriveDiscovery} from './updates.mjs';
+import {technologyTargets,technologyReviews} from './technology.mjs';
 
 export const scopeKeys=(scope,catalog,targets)=>scope==='maintenance'?[]:coverageKeys(scope,catalog,targets);
 export function createManifest({scope='full',base_commit,document,catalog,at,targets}) {
-  if(!['full','micron','industry','quote','ecosystem','source_audit','discovery','news','calendar','maintenance','batch'].includes(scope)&&!scope.startsWith('company:'))throw new Error('Unknown scope');
+  if(!['full','micron','industry','quote','ecosystem','source_audit','discovery','news','calendar','maintenance','batch','technology',...technologyTargets(catalog)].includes(scope)&&!scope.startsWith('company:'))throw new Error('Unknown scope');
   return {version:1,scope,base_commit,base_revision:document.revision,base_sha256:hash(document),catalog_sha256:hash(catalog),created_at:at,completed_at:null,state:'planned',
-    targets:targets||null,coverage:scopeKeys(scope,catalog,targets).map(key=>({key,status:'pending',evidence:[],reviewed_at:null,latest_disclosure:null,reason:''})),reads:[],report_bundle:[],publication_corrections:[]};
+    targets:targets||null,coverage:scopeKeys(scope,catalog,targets).map(key=>({key,status:'pending',evidence:[],reviewed_at:null,latest_disclosure:null,reason:''})),reads:[],report_bundle:[],publication_corrections:[],technology_reviews:technologyReviews(document,scopeKeys(scope,catalog,targets).filter(k=>k==='micron'||k.startsWith('company:')).map(k=>k==='micron'?'micron':k.slice(8)))};
 }
 
 function changedCompany(old,next){return stable({...old,checked_at:null})!==stable({...next,checked_at:null});}
@@ -25,7 +26,8 @@ export function buildCandidate({previousLedger,previousEvidence,proposal,support
     if(numeric(proposal)!==numeric(previous))add('AUDIT_SCOPE','proposal','A source-only audit cannot change numeric facts');
   }
   const recordInScope=(scope,id)=>scope==='full'||scope==='source_audit'||(scope==='news'&&id.startsWith('news.'))||(scope==='calendar'&&id.startsWith('calendar.'))||(scope.startsWith('company:')&&["eco."+scope.slice(8)+".","outlook."+scope.slice(8)+"."].some(p=>id.startsWith(p)))||(scope==='ecosystem'&&(id.startsWith('eco.')||id.startsWith('outlook.')))||(scope==='quote'&&id==='quote.mu')||(scope==='industry'&&/^mu\.(contract|supply|demand)\./.test(id))||(scope==='micron'&&(!/^(eco|outlook|quote|news|calendar)\./.test(id)&&!/^mu\.(contract|supply|demand)\./.test(id)));
-  const inScope=id=>run.scope==='batch'?run.targets.some(scope=>recordInScope(scope,id)):recordInScope(run.scope,id);
+  const scoped=(scope,id)=>id.startsWith('tech.')?scope==='full'||scope==='source_audit'||scope==='technology'||scope===catalog.definitions[id]?.monitoring_target:recordInScope(scope,id);
+  const inScope=id=>run.scope==='batch'?run.targets.some(scope=>scoped(scope,id)):scoped(run.scope,id);
   const financialAccepted=run.scope==='discovery'?new Set():accepted;
   // Dates come from source-read receipts and completed coverage, never from the proposed JSON.
   next.updated_at=at;next.last_successful_check_at=previous.last_successful_check_at;next.last_attempt_at=previous.last_attempt_at;next.last_source_audit_at=previous.last_source_audit_at;

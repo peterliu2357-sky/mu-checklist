@@ -1,0 +1,244 @@
+{
+  "version": 1,
+  "scope": "batch",
+  "base_commit": "4d1baa2c604742e08a80df8294d60e7b51267631",
+  "base_revision": "2026-09-23-264480e0af",
+  "base_sha256": "8a399652b46766ad68b10a9a565f482581a57c9bc645763d8c87df312a6e5e78",
+  "catalog_sha256": "367dfe64156bebdce11bcee8c133f456a5a4741c208afbfa00c60ebdbbfc5d50",
+  "created_at": "2026-09-24T05:57:20.930Z",
+  "completed_at": "2026-09-24T05:59:21.769Z",
+  "state": "verified",
+  "targets": [
+    "technology:facilities",
+    "technology:processes",
+    "technology:products",
+    "news"
+  ],
+  "coverage": [
+    {
+      "key": "technology:facilities",
+      "status": "verified",
+      "evidence": [
+        "tech_sanand",
+        "tech_q3_deck"
+      ],
+      "reviewed_at": "2026-09-24T05:59:21.469Z",
+      "latest_disclosure": {
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf",
+        "published_at": "2026-06-24"
+      },
+      "reason": "读取各条原始披露，初始化长期技术记录；各字段保留原披露日和目标期间。"
+    },
+    {
+      "key": "technology:processes",
+      "status": "verified",
+      "evidence": [
+        "tech_gamma",
+        "tech_q3_deck",
+        "tech_g9"
+      ],
+      "reviewed_at": "2026-09-24T05:59:21.475Z",
+      "latest_disclosure": {
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf",
+        "published_at": "2026-06-24"
+      },
+      "reason": "读取各条原始披露，初始化长期技术记录；各字段保留原披露日和目标期间。"
+    },
+    {
+      "key": "technology:products",
+      "status": "verified",
+      "evidence": [
+        "tech_rdimm",
+        "tech_mu_q3",
+        "tech_samsung_ddr",
+        "tech_sk_rdimm",
+        "tech_mu_hbm4",
+        "tech_q3_deck",
+        "tech_samsung_hbm4",
+        "tech_sk_hbm4",
+        "tech_sk_q2",
+        "tech_samsung_hbm4e",
+        "tech_sk_hbm4e"
+      ],
+      "reviewed_at": "2026-09-24T05:59:21.475Z",
+      "latest_disclosure": {
+        "url": "https://investors.micron.com/news/press-release/2026/Micron-Advances-Memory-Innovation-With-the-Worlds-First-Ultra-Dense-Module-for-Next-Generation-Servers/default.aspx",
+        "published_at": "2026-09-15"
+      },
+      "reason": "读取各条原始披露，初始化长期技术记录；各字段保留原披露日和目标期间。"
+    },
+    {
+      "key": "news",
+      "status": "verified",
+      "evidence": [
+        "news_mu_20260915"
+      ],
+      "reviewed_at": "2026-09-24T05:59:21.475Z",
+      "latest_disclosure": {
+        "url": "https://investors.micron.com/news/press-release/2026/Micron-Advances-Memory-Innovation-With-the-Worlds-First-Ultra-Dense-Module-for-Next-Generation-Servers/default.aspx",
+        "published_at": "2026-09-15"
+      },
+      "reason": "为已收录的 512GB RDIMM 动态添加长期技术记录入口，原新闻日期与历史数字保留。"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "tech_sanand",
+      "url": "https://investors.micron.com/news/press-release/2026/Micron-Celebrates-Opening-of-Indias-First-Semiconductor-Assembly-and-Test-Facility-02-28-2026/default.aspx",
+      "sha256": "17acb99167183d97e08932b8db65a1efcd057c6d28a76aafe8057dfaf376db47",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-24T05:59:15.829Z",
+      "reviewed_at": "2026-09-24T05:59:15.829Z",
+      "status": "read"
+    },
+    {
+      "source_id": "tech_gamma",
+      "url": "https://investors.micron.com/news/press-release/2025/Micron-Announces-Shipment-of-1-1-gamma-DRAM-Pioneering-Memory-Technology-Advancements-for-Future-Compute-Needs-02-25-2025/default.aspx",
+      "sha256": "6f3f45bbcfafb7edf4f4bb52372e2bd99e6e5bcdc2b7eed8de2028e2b824b44d",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-24T05:59:16.001Z",
+      "reviewed_at": "2026-09-24T05:59:16.001Z",
+      "status": "read"
+    },
+    {
+      "source_id": "tech_g9",
+      "url": "https://investors.micron.com/news/press-release/2024/Micron-Announces-Volume-Production-of-Ninth-Generation-NAND-Flash-Technology-07-30-2024/default.aspx",
+      "sha256": "0a207f77e4a2cb6cfb0b61bb12b1274ecb2574baf58a0b3568a7c47d4050d5bc",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-24T05:59:16.168Z",
+      "reviewed_at": "2026-09-24T05:59:16.168Z",
+      "status": "read"
+    },
+    {
+      "source_id": "tech_q3_deck",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf",
+      "sha256": "29468a786fa4a9c7728735ea8e3ad5853bb1375a297c636e86e6a4dd3b155929",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-09-24T05:59:16.328Z",
+      "reviewed_at": "2026-09-24T05:59:16.328Z",
+      "status": "read"
+    },
+    {
+      "source_id": "tech_mu_q3",
+      "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Results-for-the-Third-Quarter-of-Fiscal-2026/default.aspx",
+      "sha256": "a2e688677e3795406103b255005644e6611856b7af39cd47089ce5250ebb946c",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-24T05:59:16.501Z",
+      "reviewed_at": "2026-09-24T05:59:16.501Z",
+      "status": "read"
+    },
+    {
+      "source_id": "tech_rdimm",
+      "url": "https://investors.micron.com/news/press-release/2026/Micron-Advances-Memory-Innovation-With-the-Worlds-First-Ultra-Dense-Module-for-Next-Generation-Servers/default.aspx",
+      "sha256": "62e650db97a20203e3b7315052e79ab09b83c8c8e2f837e7ef71a7e6c6db3c8e",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-24T05:59:16.665Z",
+      "reviewed_at": "2026-09-24T05:59:16.665Z",
+      "status": "read"
+    },
+    {
+      "source_id": "tech_sk_rdimm",
+      "url": "https://news.skhynix.com/en/sk-hynix-first-to-complete-intel-data-center-certificationfor-32gb-die-based-256gb-server-ddr5-rdimm/",
+      "sha256": "f5e3a365f6378e2c92e1c89a4e7f3c810083b95a6bf21e04e6d5d52c44b5c269",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-09-24T05:59:16.827Z",
+      "reviewed_at": "2026-09-24T05:59:16.827Z",
+      "status": "read"
+    },
+    {
+      "source_id": "tech_samsung_ddr",
+      "url": "https://semiconductor.samsung.com/dram/ddr/",
+      "sha256": "949b65ae8f889b7b99d5ca7316865b406e4b55602c54c80e46b50d1fb53230a8",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-09-24T05:59:17.027Z",
+      "reviewed_at": "2026-09-24T05:59:17.027Z",
+      "status": "read"
+    },
+    {
+      "source_id": "tech_mu_hbm4",
+      "url": "https://investors.micron.com/news/press-release/2026/Micron-in-High-Volume-Production-of-HBM4-Designed-for-NVIDIA-Vera-Rubin-PCIe-Gen6-SSD-and-SOCAMM2-03-16-2026/default.aspx",
+      "sha256": "ba63f764892282e42caa1dbdc64033a6b634f046203cfe93ed3b852cd88a3bbe",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-24T05:59:17.198Z",
+      "reviewed_at": "2026-09-24T05:59:17.198Z",
+      "status": "read"
+    },
+    {
+      "source_id": "tech_samsung_hbm4",
+      "url": "https://news.samsung.com/global/samsung-ships-industry-first-commercial-hbm4-with-ultimate-performance-for-ai-computing",
+      "sha256": "ecbb6caf30457b209640489c9ba3a7ff504b14dc35e78077e029d5d32b516f50",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-24T05:59:17.358Z",
+      "reviewed_at": "2026-09-24T05:59:17.358Z",
+      "status": "read"
+    },
+    {
+      "source_id": "tech_sk_hbm4",
+      "url": "https://news.skhynix.com/en/sk-hynix-completes-worlds-first-hbm4-development-and-readies-mass-production/",
+      "sha256": "02f865ac6b363124d87a2dc6ff7e2138fb18450f55db89c5c25a5a7e45332272",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-09-24T05:59:17.586Z",
+      "reviewed_at": "2026-09-24T05:59:17.586Z",
+      "status": "read"
+    },
+    {
+      "source_id": "tech_sk_q2",
+      "url": "https://news.skhynix.com/en/q2-2026-business-results/",
+      "sha256": "1ebe2bfae67904e4455164da7a4794a5d9637bacae8b13317de8fae3ea7809be",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-09-24T05:59:17.816Z",
+      "reviewed_at": "2026-09-24T05:59:17.816Z",
+      "status": "read"
+    },
+    {
+      "source_id": "tech_samsung_hbm4e",
+      "url": "https://news.samsung.com/global/samsung-electronics-begins-shipment-of-industry-first-hbm4e-samples",
+      "sha256": "47c05bdea58baaa312367c25e54015f2a80751f853c92fb43169a1be49087c99",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-24T05:59:17.996Z",
+      "reviewed_at": "2026-09-24T05:59:17.996Z",
+      "status": "read"
+    },
+    {
+      "source_id": "tech_sk_hbm4e",
+      "url": "https://news.skhynix.com/en/sk-hynix-ships-samples-of-12-layer-next-gen-hbm4e-2/",
+      "sha256": "de699faa4ed1ff93400f7aed0086d3b93753434c0cfe642e0db9dbaa0f4b9d26",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-09-24T05:59:18.174Z",
+      "reviewed_at": "2026-09-24T05:59:18.174Z",
+      "status": "read"
+    },
+    {
+      "source_id": "news_mu_20260915",
+      "url": "https://investors.micron.com/news/press-release/2026/Micron-Advances-Memory-Innovation-With-the-Worlds-First-Ultra-Dense-Module-for-Next-Generation-Servers/default.aspx",
+      "sha256": "62e650db97a20203e3b7315052e79ab09b83c8c8e2f837e7ef71a7e6c6db3c8e",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-24T05:59:18.403Z",
+      "reviewed_at": "2026-09-24T05:59:18.403Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [],
+  "publication_corrections": [],
+  "technology_reviews": [],
+  "summary": "新增印度等工厂、1γ/G9 制程与三厂 DDR5/HBM 对比；各条保留来源日期、计划阶段和功耗测试基准。",
+  "result": "success",
+  "artifact_sha256": "1dcf274e5b9999e506bf7fcd088aff903e29b0a5ad2359ee89217959ff8e8501",
+  "ledger_sha256": "7863cd6c0694c2b4eaf36e7ba143e2761fc937c2a68ff71353b2db9f8979de76",
+  "evidence_sha256": "cd9843527c82f824ef15509b3bc4d38dba003df9fcf220e0797fef70cb70e948"
+}
