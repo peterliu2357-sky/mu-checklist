@@ -1,0 +1,174 @@
+{
+  "version": 1,
+  "scope": "discovery",
+  "base_commit": "233c416c08ec7315b53875cea832f730e16c75cb",
+  "base_revision": "2026-09-22-fa107b5338",
+  "base_sha256": "1c90561c78e85ff3c598eb82e46ee0792c7134cc78d13e236ea94f734cd571a2",
+  "catalog_sha256": "3efa62b350e1f2c7b66cdf331fb1a8ff79e56ce746f757a43a122326a971cf8f",
+  "created_at": "2026-09-23T23:42:39.365Z",
+  "completed_at": "2026-09-23T23:48:22.182Z",
+  "state": "verified",
+  "targets": [
+    "industry",
+    "news"
+  ],
+  "coverage": [
+    {
+      "key": "industry",
+      "status": "verified",
+      "evidence": [
+        "news_tf_dram_20260922"
+      ],
+      "reviewed_at": "2026-09-23T23:47:33.234Z",
+      "latest_disclosure": {
+        "url": "https://www.trendforce.com/presscenter/news/20260922-13249.html",
+        "published_at": "2026-09-22"
+      },
+      "reason": "TrendForce 新增 DRAM 模组市场与供给挤占数据，另确认 09-23 现货摘要；需要定向行业更新。",
+      "finding": "new_disclosure"
+    },
+    {
+      "key": "news",
+      "status": "verified",
+      "evidence": [
+        "news_samsung_airan_20260923"
+      ],
+      "reviewed_at": "2026-09-23T23:47:33.234Z",
+      "latest_disclosure": {
+        "url": "https://news.samsung.com/global/samsung-at-the-forefront-of-koreas-ai-ran-projects-with-kt-and-sk-telecom",
+        "published_at": "2026-09-23"
+      },
+      "reason": "已逐一检查全部 12 个新闻入口；发现新的行业、基础设施、AI 产品与应用动态，未发现新财报或指引修订。",
+      "finding": "new_disclosure"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "news_tf_dram_20260922",
+      "url": "https://www.trendforce.com/presscenter/news/20260922-13249.html",
+      "sha256": "25ddc3f6154d059342a3d02ffbdb3f3b28b33a0125fc517eb7ba9db733e573b9",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-23T23:47:21.264Z",
+      "reviewed_at": "2026-09-23T23:47:21.264Z",
+      "status": "read"
+    },
+    {
+      "source_id": "scan_tf_insights",
+      "url": "https://insights.trendforce.com/",
+      "sha256": "25ddc3f6154d059342a3d02ffbdb3f3b28b33a0125fc517eb7ba9db733e573b9",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-23T23:47:22.246Z",
+      "reviewed_at": "2026-09-23T23:47:22.246Z",
+      "status": "read"
+    },
+    {
+      "source_id": "scan_micron_news",
+      "url": "https://investors.micron.com/news/default.aspx",
+      "sha256": "25ddc3f6154d059342a3d02ffbdb3f3b28b33a0125fc517eb7ba9db733e573b9",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-23T23:47:23.252Z",
+      "reviewed_at": "2026-09-23T23:47:23.252Z",
+      "status": "read"
+    },
+    {
+      "source_id": "scan_nvidia_news",
+      "url": "https://nvidianews.nvidia.com/news",
+      "sha256": "25ddc3f6154d059342a3d02ffbdb3f3b28b33a0125fc517eb7ba9db733e573b9",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-23T23:47:24.320Z",
+      "reviewed_at": "2026-09-23T23:47:24.320Z",
+      "status": "read"
+    },
+    {
+      "source_id": "scan_skhynix_news",
+      "url": "https://news.skhynix.com/en/",
+      "sha256": "25ddc3f6154d059342a3d02ffbdb3f3b28b33a0125fc517eb7ba9db733e573b9",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-23T23:47:25.363Z",
+      "reviewed_at": "2026-09-23T23:47:25.363Z",
+      "status": "read"
+    },
+    {
+      "source_id": "news_samsung_airan_20260923",
+      "url": "https://news.samsung.com/global/samsung-at-the-forefront-of-koreas-ai-ran-projects-with-kt-and-sk-telecom",
+      "sha256": "25ddc3f6154d059342a3d02ffbdb3f3b28b33a0125fc517eb7ba9db733e573b9",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-23T23:47:26.561Z",
+      "reviewed_at": "2026-09-23T23:47:26.561Z",
+      "status": "read"
+    },
+    {
+      "source_id": "scan_meta_news",
+      "url": "https://about.fb.com/news/",
+      "sha256": "25ddc3f6154d059342a3d02ffbdb3f3b28b33a0125fc517eb7ba9db733e573b9",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-23T23:47:27.796Z",
+      "reviewed_at": "2026-09-23T23:47:27.796Z",
+      "status": "read"
+    },
+    {
+      "source_id": "scan_microsoft_blog",
+      "url": "https://blogs.microsoft.com/",
+      "sha256": "25ddc3f6154d059342a3d02ffbdb3f3b28b33a0125fc517eb7ba9db733e573b9",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-23T23:47:29.097Z",
+      "reviewed_at": "2026-09-23T23:47:29.097Z",
+      "status": "read"
+    },
+    {
+      "source_id": "scan_aws_blog",
+      "url": "https://aws.amazon.com/blogs/aws/",
+      "sha256": "25ddc3f6154d059342a3d02ffbdb3f3b28b33a0125fc517eb7ba9db733e573b9",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-23T23:47:30.239Z",
+      "reviewed_at": "2026-09-23T23:47:30.239Z",
+      "status": "read"
+    },
+    {
+      "source_id": "scan_google_ai",
+      "url": "https://blog.google/technology/ai/",
+      "sha256": "25ddc3f6154d059342a3d02ffbdb3f3b28b33a0125fc517eb7ba9db733e573b9",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-23T23:47:31.225Z",
+      "reviewed_at": "2026-09-23T23:47:31.225Z",
+      "status": "read"
+    },
+    {
+      "source_id": "scan_oracle_news",
+      "url": "https://www.oracle.com/news/",
+      "sha256": "25ddc3f6154d059342a3d02ffbdb3f3b28b33a0125fc517eb7ba9db733e573b9",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-23T23:47:32.234Z",
+      "reviewed_at": "2026-09-23T23:47:32.234Z",
+      "status": "read"
+    },
+    {
+      "source_id": "scan_tsmc_news",
+      "url": "https://pr.tsmc.com/english",
+      "sha256": "25ddc3f6154d059342a3d02ffbdb3f3b28b33a0125fc517eb7ba9db733e573b9",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-23T23:47:33.234Z",
+      "reviewed_at": "2026-09-23T23:47:33.234Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [],
+  "publication_corrections": [],
+  "summary": "完成行业与全部新闻入口查新；发现需录入的新行业和 AI 动态，未发现新财报、临时指引、预告、重列或更正。",
+  "result": "success",
+  "artifact_sha256": "21c3150bf60850b338c5d0c0d8652277951d072e069ebed526bfa68e166d930b",
+  "ledger_sha256": "9f2bb90448ac33b62bde152178730dc8aa983925ebbcc69a24babcab791481c8",
+  "evidence_sha256": "c3e9b2c3979a18718b63a141e04e963a82455531a519437766e2110543476716"
+}
