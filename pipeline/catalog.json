@@ -905,8 +905,8 @@
     },
     "mu.hbm.hbm4_delivery": {
       "version": 1,
-      "active": true,
-      "required": true,
+      "active": false,
+      "required": false,
       "supporting": false,
       "entity": "micron",
       "measurement": "hbm",
@@ -917,12 +917,13 @@
       "nature": "actual_or_observation",
       "evidence_types": [
         "direct"
-      ]
+      ],
+      "replacement": "tech.micron_hbm4"
     },
     "mu.hbm.hbm4e_plan": {
       "version": 1,
-      "active": true,
-      "required": true,
+      "active": false,
+      "required": false,
       "supporting": false,
       "entity": "micron",
       "measurement": "hbm",
@@ -933,12 +934,13 @@
       "nature": "forecast",
       "evidence_types": [
         "direct"
-      ]
+      ],
+      "replacement": "tech.micron_hbm4e"
     },
     "mu.hbm.rdimm_validation": {
       "version": 1,
-      "active": true,
-      "required": true,
+      "active": false,
+      "required": false,
       "supporting": false,
       "entity": "micron",
       "measurement": "hbm",
@@ -949,12 +951,13 @@
       "nature": "actual_or_observation",
       "evidence_types": [
         "direct"
-      ]
+      ],
+      "replacement": "tech.micron_rdimm512"
     },
     "mu.hbm.rdimm_production": {
       "version": 1,
-      "active": true,
-      "required": true,
+      "active": false,
+      "required": false,
       "supporting": false,
       "entity": "micron",
       "measurement": "hbm",
@@ -965,7 +968,8 @@
       "nature": "forecast",
       "evidence_types": [
         "direct"
-      ]
+      ],
+      "replacement": "tech.micron_rdimm512"
     },
     "mu.hbm.revenue_share": {
       "version": 1,
@@ -1129,8 +1133,8 @@
     },
     "mu.supply.tongluo": {
       "version": 1,
-      "active": true,
-      "required": true,
+      "active": false,
+      "required": false,
       "supporting": false,
       "entity": "industry",
       "measurement": "supply",
@@ -1141,12 +1145,13 @@
       "nature": "forecast",
       "evidence_types": [
         "direct"
-      ]
+      ],
+      "replacement": "tech.tongluo"
     },
     "mu.supply.idaho": {
       "version": 1,
-      "active": true,
-      "required": true,
+      "active": false,
+      "required": false,
       "supporting": false,
       "entity": "industry",
       "measurement": "supply",
@@ -1157,12 +1162,13 @@
       "nature": "forecast",
       "evidence_types": [
         "direct"
-      ]
+      ],
+      "replacement": "tech.idaho_id1"
     },
     "mu.supply.singapore": {
       "version": 1,
-      "active": true,
-      "required": true,
+      "active": false,
+      "required": false,
       "supporting": false,
       "entity": "industry",
       "measurement": "supply",
@@ -1173,7 +1179,8 @@
       "nature": "forecast",
       "evidence_types": [
         "direct"
-      ]
+      ],
+      "replacement": "tech.singapore_hbm"
     },
     "mu.demand.ssd_industry_revenue": {
       "version": 1,
@@ -2636,6 +2643,278 @@
         "proxy",
         "secondary"
       ]
+    },
+    "tech.sanand": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "technology_facility",
+      "unit": "",
+      "scope": "sanand",
+      "accounting_basis": "not_applicable",
+      "temporal_basis": "dated_disclosure",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ],
+      "monitoring_target": "technology:facilities"
+    },
+    "tech.idaho_id1": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "technology_facility",
+      "unit": "",
+      "scope": "idaho_id1",
+      "accounting_basis": "not_applicable",
+      "temporal_basis": "dated_disclosure",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ],
+      "monitoring_target": "technology:facilities"
+    },
+    "tech.tongluo": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "technology_facility",
+      "unit": "",
+      "scope": "tongluo",
+      "accounting_basis": "not_applicable",
+      "temporal_basis": "dated_disclosure",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ],
+      "monitoring_target": "technology:facilities"
+    },
+    "tech.singapore_hbm": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "technology_facility",
+      "unit": "",
+      "scope": "singapore_hbm",
+      "accounting_basis": "not_applicable",
+      "temporal_basis": "dated_disclosure",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ],
+      "monitoring_target": "technology:facilities"
+    },
+    "tech.dram_1gamma": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "technology_process",
+      "unit": "",
+      "scope": "dram_1gamma",
+      "accounting_basis": "not_applicable",
+      "temporal_basis": "dated_disclosure",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ],
+      "monitoring_target": "technology:processes"
+    },
+    "tech.nand_g9": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "technology_process",
+      "unit": "",
+      "scope": "nand_g9",
+      "accounting_basis": "not_applicable",
+      "temporal_basis": "dated_disclosure",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ],
+      "monitoring_target": "technology:processes"
+    },
+    "tech.micron_rdimm512": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "technology_product",
+      "unit": "",
+      "scope": "micron_rdimm512",
+      "accounting_basis": "not_applicable",
+      "temporal_basis": "dated_disclosure",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ],
+      "monitoring_target": "technology:products"
+    },
+    "tech.micron_rdimm256": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "technology_product",
+      "unit": "",
+      "scope": "micron_rdimm256",
+      "accounting_basis": "not_applicable",
+      "temporal_basis": "dated_disclosure",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ],
+      "monitoring_target": "technology:products"
+    },
+    "tech.samsung_rdimm": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "samsung",
+      "measurement": "technology_product",
+      "unit": "",
+      "scope": "samsung_rdimm",
+      "accounting_basis": "not_applicable",
+      "temporal_basis": "dated_disclosure",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ],
+      "monitoring_target": "technology:products"
+    },
+    "tech.skhynix_rdimm256": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "skhynix",
+      "measurement": "technology_product",
+      "unit": "",
+      "scope": "skhynix_rdimm256",
+      "accounting_basis": "not_applicable",
+      "temporal_basis": "dated_disclosure",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ],
+      "monitoring_target": "technology:products"
+    },
+    "tech.micron_hbm4": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "technology_product",
+      "unit": "",
+      "scope": "micron_hbm4",
+      "accounting_basis": "not_applicable",
+      "temporal_basis": "dated_disclosure",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ],
+      "monitoring_target": "technology:products"
+    },
+    "tech.samsung_hbm4": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "samsung",
+      "measurement": "technology_product",
+      "unit": "",
+      "scope": "samsung_hbm4",
+      "accounting_basis": "not_applicable",
+      "temporal_basis": "dated_disclosure",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ],
+      "monitoring_target": "technology:products"
+    },
+    "tech.skhynix_hbm4": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "skhynix",
+      "measurement": "technology_product",
+      "unit": "",
+      "scope": "skhynix_hbm4",
+      "accounting_basis": "not_applicable",
+      "temporal_basis": "dated_disclosure",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ],
+      "monitoring_target": "technology:products"
+    },
+    "tech.micron_hbm4e": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "micron",
+      "measurement": "technology_product",
+      "unit": "",
+      "scope": "micron_hbm4e",
+      "accounting_basis": "not_applicable",
+      "temporal_basis": "dated_disclosure",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ],
+      "monitoring_target": "technology:products"
+    },
+    "tech.samsung_hbm4e": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "samsung",
+      "measurement": "technology_product",
+      "unit": "",
+      "scope": "samsung_hbm4e",
+      "accounting_basis": "not_applicable",
+      "temporal_basis": "dated_disclosure",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ],
+      "monitoring_target": "technology:products"
+    },
+    "tech.skhynix_hbm4e": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "skhynix",
+      "measurement": "technology_product",
+      "unit": "",
+      "scope": "skhynix_hbm4e",
+      "accounting_basis": "not_applicable",
+      "temporal_basis": "dated_disclosure",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ],
+      "monitoring_target": "technology:products"
     }
   },
   "source_roles": {
@@ -2953,6 +3232,55 @@
     ],
     "price_auto": [
       "quote.mu"
+    ],
+    "tech_sanand": [
+      "tech.sanand"
+    ],
+    "tech_q3_deck": [
+      "tech.idaho_id1",
+      "tech.tongluo",
+      "tech.singapore_hbm",
+      "tech.dram_1gamma",
+      "tech.nand_g9",
+      "tech.micron_hbm4"
+    ],
+    "tech_gamma": [
+      "tech.dram_1gamma"
+    ],
+    "tech_g9": [
+      "tech.nand_g9"
+    ],
+    "tech_rdimm": [
+      "tech.micron_rdimm512"
+    ],
+    "tech_mu_q3": [
+      "tech.micron_rdimm256",
+      "tech.micron_hbm4",
+      "tech.micron_hbm4e"
+    ],
+    "tech_samsung_ddr": [
+      "tech.samsung_rdimm"
+    ],
+    "tech_sk_rdimm": [
+      "tech.skhynix_rdimm256"
+    ],
+    "tech_mu_hbm4": [
+      "tech.micron_hbm4"
+    ],
+    "tech_samsung_hbm4": [
+      "tech.samsung_hbm4"
+    ],
+    "tech_sk_hbm4": [
+      "tech.skhynix_hbm4"
+    ],
+    "tech_sk_q2": [
+      "tech.skhynix_hbm4"
+    ],
+    "tech_samsung_hbm4e": [
+      "tech.samsung_hbm4e"
+    ],
+    "tech_sk_hbm4e": [
+      "tech.skhynix_hbm4e"
     ]
   },
   "calculations": [
@@ -3238,6 +3566,52 @@
           "https://www.oracle.com/news/",
           "https://pr.tsmc.com/english"
         ]
+      },
+      "technology:facilities": {
+        "label": "工厂与产能",
+        "cadence": "twice_weekly",
+        "entry_urls": [
+          "https://investors.micron.com/news/default.aspx"
+        ],
+        "include": [
+          "Sanand India",
+          "Idaho ID1",
+          "Tongluo",
+          "Singapore HBM packaging",
+          "capacity units",
+          "milestone revisions"
+        ]
+      },
+      "technology:processes": {
+        "label": "制程换代",
+        "cadence": "twice_weekly",
+        "entry_urls": [
+          "https://investors.micron.com/news/default.aspx"
+        ],
+        "include": [
+          "1-gamma 1-delta DRAM",
+          "G9 next-generation NAND",
+          "bits per wafer",
+          "adoption mix",
+          "yield",
+          "ramp"
+        ]
+      },
+      "technology:products": {
+        "label": "同类产品",
+        "cadence": "twice_weekly",
+        "entry_urls": [
+          "https://investors.micron.com/news/default.aspx",
+          "https://news.samsung.com/global/",
+          "https://news.skhynix.com/en/"
+        ],
+        "include": [
+          "DDR5 RDIMM",
+          "HBM4 HBM4E",
+          "module vs die capacity",
+          "qualification vs volume production",
+          "power baseline and test conditions"
+        ]
       }
     },
     "news_categories": {
@@ -3282,6 +3656,237 @@
         "period_basis": "calendar_month",
         "note": "Revenue is an indirect demand observation; keep monthly and quarterly periods separate."
       }
+    }
+  },
+  "technology": {
+    "version": 1,
+    "items": {
+      "sanand": {
+        "type": "facility",
+        "company_id": "micron",
+        "family": "DRAM / NAND",
+        "role": "assembly_test",
+        "required_facts": [
+          "capacity",
+          "next_milestone"
+        ]
+      },
+      "idaho_id1": {
+        "type": "facility",
+        "company_id": "micron",
+        "family": "DRAM",
+        "role": "wafer_fab",
+        "required_facts": [
+          "capacity",
+          "next_milestone"
+        ]
+      },
+      "tongluo": {
+        "type": "facility",
+        "company_id": "micron",
+        "family": "DRAM",
+        "role": "wafer_fab",
+        "required_facts": [
+          "capacity",
+          "next_milestone"
+        ]
+      },
+      "singapore_hbm": {
+        "type": "facility",
+        "company_id": "micron",
+        "family": "HBM",
+        "role": "advanced_packaging",
+        "required_facts": [
+          "capacity",
+          "next_milestone"
+        ]
+      },
+      "dram_1gamma": {
+        "type": "process",
+        "company_id": "micron",
+        "family": "DRAM",
+        "role": "",
+        "required_facts": [
+          "bit_density",
+          "adoption",
+          "yield",
+          "supply_growth",
+          "next_milestone"
+        ]
+      },
+      "nand_g9": {
+        "type": "process",
+        "company_id": "micron",
+        "family": "NAND",
+        "role": "",
+        "required_facts": [
+          "bit_density",
+          "adoption",
+          "yield",
+          "supply_growth",
+          "next_milestone"
+        ]
+      },
+      "micron_rdimm512": {
+        "type": "product",
+        "company_id": "micron",
+        "family": "ddr5_rdimm",
+        "role": "",
+        "required_facts": [
+          "capacity",
+          "speed",
+          "process",
+          "power",
+          "next_milestone"
+        ]
+      },
+      "micron_rdimm256": {
+        "type": "product",
+        "company_id": "micron",
+        "family": "ddr5_rdimm",
+        "role": "",
+        "required_facts": [
+          "capacity",
+          "speed",
+          "process",
+          "power",
+          "next_milestone"
+        ]
+      },
+      "samsung_rdimm": {
+        "type": "product",
+        "company_id": "samsung",
+        "family": "ddr5_rdimm",
+        "role": "",
+        "required_facts": [
+          "capacity",
+          "speed",
+          "process",
+          "power",
+          "next_milestone"
+        ]
+      },
+      "skhynix_rdimm256": {
+        "type": "product",
+        "company_id": "skhynix",
+        "family": "ddr5_rdimm",
+        "role": "",
+        "required_facts": [
+          "capacity",
+          "speed",
+          "process",
+          "power",
+          "next_milestone"
+        ]
+      },
+      "micron_hbm4": {
+        "type": "product",
+        "company_id": "micron",
+        "family": "hbm4",
+        "role": "",
+        "required_facts": [
+          "capacity",
+          "speed",
+          "process",
+          "power",
+          "next_milestone"
+        ]
+      },
+      "samsung_hbm4": {
+        "type": "product",
+        "company_id": "samsung",
+        "family": "hbm4",
+        "role": "",
+        "required_facts": [
+          "capacity",
+          "speed",
+          "process",
+          "power",
+          "next_milestone"
+        ]
+      },
+      "skhynix_hbm4": {
+        "type": "product",
+        "company_id": "skhynix",
+        "family": "hbm4",
+        "role": "",
+        "required_facts": [
+          "capacity",
+          "speed",
+          "process",
+          "power",
+          "next_milestone"
+        ]
+      },
+      "micron_hbm4e": {
+        "type": "product",
+        "company_id": "micron",
+        "family": "hbm4e",
+        "role": "",
+        "required_facts": [
+          "capacity",
+          "speed",
+          "process",
+          "power",
+          "next_milestone"
+        ]
+      },
+      "samsung_hbm4e": {
+        "type": "product",
+        "company_id": "samsung",
+        "family": "hbm4e",
+        "role": "",
+        "required_facts": [
+          "capacity",
+          "speed",
+          "process",
+          "power",
+          "next_milestone"
+        ]
+      },
+      "skhynix_hbm4e": {
+        "type": "product",
+        "company_id": "skhynix",
+        "family": "hbm4e",
+        "role": "",
+        "required_facts": [
+          "capacity",
+          "speed",
+          "process",
+          "power",
+          "next_milestone"
+        ]
+      }
+    },
+    "fact_units": {
+      "speed": [
+        "MTps",
+        "Gbps"
+      ],
+      "power": [
+        "W"
+      ],
+      "power_change": [
+        "pct"
+      ],
+      "bit_density": [
+        "bits/wafer_pct"
+      ],
+      "adoption": [
+        "pct"
+      ],
+      "yield": [
+        "pct"
+      ],
+      "supply_growth": [
+        "pct"
+      ],
+      "bandwidth": [
+        "TBps"
+      ],
+      "stack": [
+        "layers"
+      ]
     }
   }
 }

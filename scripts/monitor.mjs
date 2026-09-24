@@ -4,7 +4,7 @@ import path from 'node:path';
 import {execFileSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 import {updatePlan} from '../pipeline/updates.mjs';
-import {clone,hash,stable,materialize,activeRecords,entries} from '../pipeline/model.mjs';
+import {clone,hash,stable,materialize,activeRecords,entries,numericInputs} from '../pipeline/model.mjs';
 import {validateLedger,validateTransition} from '../pipeline/validate.mjs';
 import {createManifest,buildCandidate} from '../pipeline/run.mjs';
 import {fetchSource,saveCapture,verifyCaptures} from '../pipeline/acquire.mjs';
@@ -80,7 +80,7 @@ try {
     const ids=row.source_ids||(row.source_id?[row.source_id]:[]);
     output[metric]={measurement:def.measurement,unit:def.unit,definition_version:def.version,temporal_basis:def.temporal_basis,accounting_basis:def.accounting_basis,scope:def.scope,
       values:{current:row.current??null,previous:row.previous??null,value:row.value??null,summary:row.summary??null},
-      raw_inputs:['current','previous','price','previous_close'].filter(k=>typeof row[k]==='number').map(field=>({field,value:null,scale:null,source_unit:'',period:'',locator:'',source_id:ids[0]})),
+      raw_inputs:numericInputs(row).map(({field,source_ids})=>({field,value:null,scale:null,source_unit:'',period:'',locator:'',source_id:source_ids?.[0]||ids[0]})),
       review:{confirmed:false,method:'',at:null},documents:ids.map(source_id=>({...manifest.reads.find(r=>r.source_id===source_id),source_id,locator:'',excerpt:''}))};
     write(path.join(dir,'evidence.json'),output);console.log('Draft created. Fill original inputs, locators and excerpts; confirm only after reading the source.');
   }else if(command==='build'){

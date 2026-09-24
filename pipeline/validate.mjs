@@ -1,8 +1,9 @@
 import fs from 'node:fs';
 import Ajv from 'ajv';
 import {fileURLToPath} from 'node:url';
-import {activeRecords,entries,materialize,makeRecord,recordHash,hash,stable,compute,orderedCalculations} from './model.mjs';
+import {activeRecords,entries,materialize,makeRecord,recordHash,hash,stable,compute,orderedCalculations,numericInputs} from './model.mjs';
 import {coverageKeys,validateUpdates,validateUpdateTransition} from './updates.mjs';
+import {validateTechnology,validateTechnologyTransition} from './technology.mjs';
 
 const schema=JSON.parse(fs.readFileSync(fileURLToPath(new URL('../schemas/monitor.schema.json',import.meta.url))));
 const shape=new Ajv({allErrors:true,strict:true,allowUnionTypes:true}).compile(schema);
@@ -29,6 +30,7 @@ export function validateDocument(document,catalog) {
     if(value&&typeof value==='object')for(const [k,v]of Object.entries(value)){if(forbidden.has(k))add('FORBIDDEN_FIELD',`${path}/${k}`,'Investment judgments are not data fields');walk(v,`${path}/${k}`);}
   }
   walk(document);
+  issues.push(...validateTechnology(document,catalog));
   const list=entries(document,catalog),seen=new Set();
   for(const entry of list) {
     const {metric_id:id,payload:r}=entry,def=catalog.definitions[id];
@@ -126,11 +128,10 @@ export function validateLedger(ledger,catalog,evidence,legacy) {
       if(e.measurement!==def.measurement||e.unit!==def.unit||e.definition_version!==def.version)add('SEMANTICS',r.metric_id,'Evidence measurement/unit/version differs from the metric definition');
       if(e.temporal_basis!==def.temporal_basis||e.accounting_basis!==def.accounting_basis||e.scope!==def.scope)add('SEMANTICS',r.metric_id,'Evidence period basis, accounting basis and entity scope must match the definition');
       if(!equal(e.values,{current:r.payload.current??null,previous:r.payload.previous??null,value:r.payload.value??null,summary:r.payload.summary??null}))add('SOURCE_VALUES',r.metric_id,'Evidence values must match the candidate fact');
-      const numericFields=['current','previous','price','previous_close'].filter(field=>finite(r.payload[field]));
-      for(const field of numericFields){
+      for(const {field,value,source_ids} of numericInputs(r.payload)){
         const input=e.raw_inputs?.find(x=>x.field===field);
         if(!input||!finite(input.value)||!finite(input.scale)||!input.source_unit||!input.period||!input.locator||!sourceIds.includes(input.source_id))add('RAW_INPUT',`${r.metric_id}.${field}`,'Preserve the source value, unit, period, locator and explicit scale');
-        else if(Math.abs(input.value*input.scale-r.payload[field])>Math.max(1,Math.abs(r.payload[field]))*1e-10)add('NORMALIZATION',`${r.metric_id}.${field}`,'Raw value and scale do not produce the published value');
+        else if(Math.abs(input.value*input.scale-value)>Math.max(1,Math.abs(value))*1e-10||source_ids&&!source_ids.includes(input.source_id))add('NORMALIZATION',`${r.metric_id}.${field}`,'Raw value, source and scale must produce the published value');
       }
     }
   }
@@ -175,5 +176,6 @@ export function validateTransition(previous,next,manifest,catalog) {
   if(manifest.scope==='source_audit'&&(next.last_successful_check_at!==previous.last_successful_check_at||next.quote.checked_at!==previous.quote.checked_at))add('AUDIT_SCOPE','dates','Source audit cannot advance full or quote checks');
   if(next.revision===previous.revision&&hash(next)!==hash(previous))add('REVISION','revision','Changed content must have a distinct revision');
   issues.push(...validateUpdateTransition(previous,next,manifest,catalog));
+  issues.push(...validateTechnologyTransition(previous,next,manifest,catalog));
   return issues;
 }

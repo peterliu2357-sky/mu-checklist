@@ -14,6 +14,7 @@ function stripClocks(value){
 function content(document,key){
   if(key==='quote')return stripClocks(document.quote);
   if(key==='news')return stripClocks(document.news?.items||[]);
+  if(key.startsWith('technology:'))return (document.technology?.items||[]).filter(i=>i.type===({facilities:'facility',processes:'process',products:'product'})[key.slice(11)]);
   if(key==='calendar')return document.monitoring?.calendar||[];
   if(key==='industry')return stripClocks(document.metrics.filter(m=>m.category==='industry'));
   if(key==='company:micron')return stripClocks({period:document.financial_period,published:document.financial_published_at,metrics:document.metrics.filter(m=>m.category==='business'),guidance:document.guidance});
@@ -66,7 +67,7 @@ export function buildUpdateStatus(document,snapshots,receipts,schedule){
       const key=keyFor(c.key);
       attempt(key,r.completed_at,c.status);
       // A news import reviews selected stories; only discovery/news checks all entry sources.
-      if(accepted(c.status)&&(key!=='news'||r.scope==='discovery')&&!(r.scope==='discovery'&&key.startsWith('company:')))checked(key,c.reviewed_at||r.completed_at);
+      if(accepted(c.status)&&(!['news','technology:facilities','technology:processes','technology:products'].includes(key)||r.scope==='discovery')&&!(r.scope==='discovery'&&key.startsWith('company:')))checked(key,c.reviewed_at||r.completed_at);
       if(!accepted(c.status)||['discovery','source_audit','maintenance'].includes(r.scope)||!['success','partial'].includes(r.result))continue;
       if(stable(content(before,key))!==stable(content(after,key))){ensure(key).last_content_update_at=r.completed_at;changed.push(key);}
     }
@@ -77,6 +78,7 @@ export function buildUpdateStatus(document,snapshots,receipts,schedule){
     if(!key.startsWith('company:'))checked(key,c.checked_at);
   }
   ensure('news');ensure('industry');
+  if(document.technology)for(const topic of ['facilities','processes','products'])ensure('technology:'+topic);
   return {version:1,data_revision:document.revision,data_sha256:hash(document),last_data_update_at:lastDataUpdateAt,last_data_keys:lastDataKeys,checks,schedule};
 }
 export function readUpdateStatus(document,root='.'){

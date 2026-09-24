@@ -6,8 +6,8 @@ The scheduler selects work. Research discovers and reads original disclosures. T
 
 | Run | Scope | When facts change |
 |---|---|---|
-| Sunday discovery | `industry,news`, due/unprocessed company disclosures; missing calendar dates separately | New or revised original disclosures only |
-| Wednesday discovery | `industry,news` and due/unprocessed company disclosures | New supply/demand, pricing, AI developments or targeted disclosures |
+| Sunday discovery | `industry,news,technology:*`, due/unprocessed company disclosures; missing calendar dates separately | New or revised original disclosures only |
+| Wednesday discovery | `industry,news,technology:*` and due/unprocessed company disclosures | New supply/demand, pricing, AI developments or targeted disclosures |
 | Confirmed earnings review | The companies due in the calendar, about 24 hours after the announced call | The complete report bundle, including comparable prior data and guidance |
 | User request | Requested company/section, or comprehensive discovery if unspecified | Same evidence and publication gates as scheduled work |
 | Regular close | Quote adapter after the completed trading session | Final daily OHLC only; no report/news acquisition |
@@ -19,14 +19,14 @@ npm run monitor -- schedule --mode weekly
 npm run monitor -- schedule --mode midweek
 npm run monitor -- schedule --mode earnings
 npm run monitor -- schedule --mode manual --company nvidia
-npm run monitor -- plan --scope discovery --targets industry,news --run .monitor/runs/check-new
+npm run monitor -- plan --scope discovery --targets industry,news,technology:facilities,technology:processes,technology:products --run .monitor/runs/check-new
 ```
 
 `schedule` only prints a deterministic plan. It does not create external tasks. For each discovery target, read its current original IR/news index and relevant new releases. Store read receipts and register source IDs/roles in the catalog when needed. In discovery coverage, set `finding=unchanged|new_disclosure|unconfirmed` and `latest_disclosure={url,published_at}`. Identify the newest relevant report/guidance, not an old bookmark. Store the actual search time in `reviewed_at`.
 
 When news research finds a financial revision or a new report, create a targeted `discovery` run for that company and then process its report/guidance scope. Do not wait for the next quarterly event. Due and unprocessed company disclosures also appear in routine plans so a missed event run can recover without a full-company sweep.
 
-Run `build` and `apply` to publish discovery outcomes. Then plan from that new state and process new items with `micron`, `company:<id>`, `industry`, `news`, or `calendar`. `batch --targets news,calendar` combines explicit scopes. Unchanged quarterly facts, their original-source dates and the legacy full-audit timestamp remain unchanged. A pending or failed lookup retains its last successful discovery time. Re-discovering an unprocessed release keeps its pending alert. Process it using the same `latest_disclosure` identity to resolve the alert.
+Run `build` and `apply` to publish discovery outcomes. Then plan from that new state and process new items with `micron`, `company:<id>`, `industry`, `news`, `calendar`, or the affected `technology:*` topic. `batch --targets news,calendar` combines explicit scopes. Unchanged quarterly facts, their original-source dates and the legacy full-audit timestamp remain unchanged. A pending or failed lookup retains its last successful discovery time. Re-discovering an unprocessed release keeps its pending alert. Process it using the same `latest_disclosure` identity to resolve the alert.
 
 ```sh
 npm run monitor -- plan --scope company:nvidia --run .monitor/runs/nvidia-report
@@ -34,6 +34,10 @@ npm run monitor -- plan --scope batch --targets news,calendar --run .monitor/run
 ```
 
 Every targeted scope needs a result, including failures. Retain credible prior facts when access or extraction fails. Reading a public abstract does not count as reading the paid report. Use `news` coverage for the stories actually reviewed; advance the broader `discovery/news` check only after checking all configured news entry sources, recording any unavailable source as incomplete.
+
+## Technology coverage
+
+Factory, process and product discovery are separate catalog targets in both routine plans. Complete all configured official index reads before marking each topic successful. The first record import only advances content time. The header displays all-source discovery separately and uses `research.technology_starts_at` to avoid backdating the new coverage schedule. New Micron, Samsung and SK hynix financial report bundles must review every registered technical item; changes enter explicit batch scopes with fresh evidence. See [TECHNOLOGY.md](TECHNOLOGY.md) for source lists, required fields, comparison baselines, failure rules and examples.
 
 ## Company calendar and event task
 

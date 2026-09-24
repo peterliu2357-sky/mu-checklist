@@ -7,6 +7,7 @@ This public repository is a facts-first Micron monitor. Read this file, `MONITOR
 1. Fetch latest `main`; note its exact commit. Preserve concurrent work. Never force-push.
 2. `npm ci --ignore-scripts` (Node 22+), then `npm run verify` and `npm test`.
 3. For data work, start with `npm run monitor -- schedule --mode weekly|midweek|earnings|manual` (optional `--company <id>`), then create a run using the selected discovery/company/news scope. Routine discovery covers industry/news and companies with due or unprocessed disclosures; `calendar_targets` only need missing report dates. See `docs/CADENCE.md`. Do not perform a weekly sweep of all company reports or default to a full-source audit.
+   Both routine plans also include the three `technology:*` targets. Read `docs/TECHNOLOGY.md`: factory, process and product updates require topic coverage; new Micron/Samsung/SK hynix reports require a reviewed result for every tracked item. Do not reduce scheduler targets to a fixed industry/news list.
 4. Read original sources and identify the latest disclosure, not merely the previously linked report. Capture what was actually read. Fill the candidate, evidence drafts and run coverage as described in the pipeline guide.
 5. `build` is a dry run. Resolve errors before `apply`. A failed/partial run keeps old facts and successful-check dates. A valid failure receipt may be published to explain the failed attempt.
 6. Validate the applied files, run regression/mobile tests, publish them atomically, then verify deployment and the complete live data hash.

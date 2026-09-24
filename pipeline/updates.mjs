@@ -1,11 +1,14 @@
 import {stable} from './model.mjs';
+import {technologyTargets} from './technology.mjs';
 
 export function coverageKeys(scope,catalog,targets) {
   if(scope==='batch') {
-    const allowed=['micron','industry','quote','news','calendar',...catalog.required_companies.map(c=>'company:'+c)];
+    const allowed=['micron','industry','quote','news','calendar',...technologyTargets(catalog),...catalog.required_companies.map(c=>'company:'+c)];
     if(!targets?.length||targets.some(k=>!allowed.includes(k)))throw new Error('Batch needs explicit valid targets');
     return [...new Set(targets)];
   }
+  if(scope==='technology')return technologyTargets(catalog);
+  if(scope.startsWith('technology:')){if(!technologyTargets(catalog).includes(scope))throw new Error('Unknown technology topic');return [scope];}
   if(scope==='discovery') {
     const all=Object.keys(catalog.monitoring?.targets||{});
     if(targets?.some(k=>!all.includes(k)))throw new Error('Unknown discovery target');
@@ -15,7 +18,7 @@ export function coverageKeys(scope,catalog,targets) {
     if(!catalog.required_companies.includes(scope.slice(8)))throw new Error('Unknown company');
     return [scope];
   }
-  if(scope==='full')return ['micron','industry','quote',...catalog.required_companies.map(c=>'company:'+c)];
+  if(scope==='full')return ['micron','industry','quote',...technologyTargets(catalog),...catalog.required_companies.map(c=>'company:'+c)];
   if(scope==='ecosystem')return catalog.required_companies.map(c=>'company:'+c);
   return [scope];
 }
@@ -33,13 +36,14 @@ export function updatePlan(document,catalog,{mode='weekly',company,now=new Date(
     ...checks.filter(c=>c.key.startsWith('company:')&&c.finding==='new_disclosure'&&!c.processed_at).map(c=>c.key)
   ]);
   const targets=Object.keys(catalog.monitoring.targets);
-  const keys=targets.filter(k=>company?k==='company:'+company:mode==='manual'||due.has(k)||mode!=='earnings'&&['industry','news'].includes(k));
+  const keys=targets.filter(k=>company?k==='company:'+company:mode==='manual'||due.has(k)||mode!=='earnings'&&catalog.monitoring.targets[k].cadence==='twice_weekly');
   const newer=checks.filter(c=>c.finding==='new_disclosure'&&!c.processed_at&&keys.includes(c.key));
   const financial=[...new Set([...pending.filter(e=>keys.includes('company:'+e.company_id)).map(e=>e.company_id),...newer.filter(c=>c.key.startsWith('company:')).map(c=>c.key.slice(8))])];
   const future=events.filter(e=>e.confirmation==='confirmed'&&Date.parse(e.review_after)>clock&&outstanding(e)).sort((a,b)=>Date.parse(a.review_after)-Date.parse(b.review_after));
   // Missing dates need calendar maintenance, not another read of unchanged reports.
   const calendarTargets=mode==='weekly'&&!company?targets.filter(k=>k.startsWith('company:')).map(k=>k.slice(8)).filter(id=>!events.some(e=>e.company_id===id&&e.confirmation==='confirmed'&&outstanding(e))):[];
-  return {mode,as_of:now,discovery_targets:keys,calendar_targets:calendarTargets,financial_candidates:financial.map(id=>({company:id,scope:id==='micron'?'micron':'company:'+id,action:'Read newly published or revised documents; preserve old facts until the report bundle passes.'})),news:mode!=='earnings'&&!company,next_event_run_at:future[0]?.review_after||null,next_event_companies:future.filter(e=>e.review_after===future[0]?.review_after).map(e=>e.company_id)};
+  const related=id=>[...new Set(Object.values(catalog.technology?.items||{}).filter(i=>i.company_id===id).map(i=>'technology:'+({facility:'facilities',process:'processes',product:'products'})[i.type]))];
+  return {mode,as_of:now,discovery_targets:keys,calendar_targets:calendarTargets,financial_candidates:financial.map(id=>({company:id,scope:id==='micron'?'micron':'company:'+id,related_technology_targets:related(id),action:'Read newly published or revised documents; review tracked technology items; preserve old facts until the report bundle passes.'})),technology_candidates:newer.filter(c=>c.key.startsWith('technology:')).map(c=>({scope:c.key,latest_disclosure:c.latest_disclosure})),news:mode!=='earnings'&&!company,next_event_run_at:future[0]?.review_after||null,next_event_companies:future.filter(e=>e.review_after===future[0]?.review_after).map(e=>e.company_id)};
 }
 
 export function validateUpdates(d,catalog,ledger) {
@@ -124,7 +128,7 @@ export function validateUpdateTransition(previous,next,run,catalog){
   }
   // A changed scope cannot make unrelated financial metadata look freshly read.
   if(['discovery','news','calendar','maintenance'].includes(run.scope)){
-    for(const key of ['metrics','guidance','ecosystem','quote','financial_period','financial_as_of','financial_published_at','overview'])if(stable(previous[key])!==stable(next[key]))add('UNRELATED_FACT_CHANGE',key,'This run cannot change financial/quote facts or their dates');
+    for(const key of ['metrics','guidance','ecosystem','quote','financial_period','financial_as_of','financial_published_at','overview','technology'])if(stable(previous[key])!==stable(next[key]))add('UNRELATED_FACT_CHANGE',key,'This run cannot change financial/quote/technology facts or their dates');
   }
   return issues;
 }
