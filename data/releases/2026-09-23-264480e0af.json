@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "scope": "batch",
+  "base_commit": "a88e1f7ca510f6b8804fa50374b0ca509404e4e0",
+  "base_revision": "2026-09-23-f80e8727d4",
+  "base_sha256": "21c3150bf60850b338c5d0c0d8652277951d072e069ebed526bfa68e166d930b",
+  "catalog_sha256": "3673d778855df12c40cfc4e2e00ab90aebd08e3d32df765191ecddac935fd5d4",
+  "created_at": "2026-09-23T23:49:29.300Z",
+  "completed_at": "2026-09-23T23:54:02.833Z",
+  "state": "verified",
+  "targets": [
+    "industry",
+    "news"
+  ],
+  "coverage": [
+    {
+      "key": "industry",
+      "status": "verified",
+      "evidence": [
+        "news_tf_dram_20260922",
+        "spot_daily_20260923"
+      ],
+      "reviewed_at": "2026-09-23T23:52:00Z",
+      "latest_disclosure": {
+        "url": "https://www.trendforce.com/presscenter/news/20260922-13249.html",
+        "published_at": "2026-09-22"
+      },
+      "reason": "录入 DRAM 模组市场供需事实，并更新 09-23 同规格 DRAM 现货报价；未改动无新原文的 NAND 报价。"
+    },
+    {
+      "key": "news",
+      "status": "verified",
+      "evidence": [
+        "news_samsung_airan_20260923",
+        "news_tf_dram_20260922",
+        "news_nv_isaac_20260922",
+        "news_aws_omni_20260922",
+        "news_meta_petal_20260921"
+      ],
+      "reviewed_at": "2026-09-23T23:52:00Z",
+      "latest_disclosure": {
+        "url": "https://news.samsung.com/global/samsung-at-the-forefront-of-koreas-ai-ran-projects-with-kt-and-sk-telecom",
+        "published_at": "2026-09-23"
+      },
+      "reason": "录入五条有实质事实或数字的原始公告；应用、基础设施、计划与已实现事实保持区分。"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "news_tf_dram_20260922",
+      "url": "https://www.trendforce.com/presscenter/news/20260922-13249.html",
+      "sha256": "b202dcc7b93e634fc8dbc7bc1ef41352d01e012baf628a35590f70f9a421dcb7",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-23T23:51:11.347Z",
+      "reviewed_at": "2026-09-23T23:51:11.347Z",
+      "status": "read"
+    },
+    {
+      "source_id": "spot_daily_20260923",
+      "url": "https://www.trendforce.com/presscenter/",
+      "sha256": "b202dcc7b93e634fc8dbc7bc1ef41352d01e012baf628a35590f70f9a421dcb7",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-23T23:51:12.270Z",
+      "reviewed_at": "2026-09-23T23:51:12.270Z",
+      "status": "read"
+    },
+    {
+      "source_id": "news_nv_isaac_20260922",
+      "url": "https://blogs.nvidia.com/blog/isaac-ros-5-0-agentic-open-source-robotics/",
+      "sha256": "b202dcc7b93e634fc8dbc7bc1ef41352d01e012baf628a35590f70f9a421dcb7",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-23T23:51:13.193Z",
+      "reviewed_at": "2026-09-23T23:51:13.193Z",
+      "status": "read"
+    },
+    {
+      "source_id": "news_meta_petal_20260921",
+      "url": "https://about.fb.com/news/2026/09/announcing-petal-meta-petabit-transoceanic-cable/",
+      "sha256": "b202dcc7b93e634fc8dbc7bc1ef41352d01e012baf628a35590f70f9a421dcb7",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-23T23:51:14.154Z",
+      "reviewed_at": "2026-09-23T23:51:14.154Z",
+      "status": "read"
+    },
+    {
+      "source_id": "news_aws_omni_20260922",
+      "url": "https://aws.amazon.com/blogs/aws/introducing-amazon-cloudwatch-omni-ai-powered-observability-for-generative-ai-and-agentic-workloads/",
+      "sha256": "b202dcc7b93e634fc8dbc7bc1ef41352d01e012baf628a35590f70f9a421dcb7",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-23T23:51:15.132Z",
+      "reviewed_at": "2026-09-23T23:51:15.132Z",
+      "status": "read"
+    },
+    {
+      "source_id": "news_samsung_airan_20260923",
+      "url": "https://news.samsung.com/global/samsung-at-the-forefront-of-koreas-ai-ran-projects-with-kt-and-sk-telecom",
+      "sha256": "b202dcc7b93e634fc8dbc7bc1ef41352d01e012baf628a35590f70f9a421dcb7",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-23T23:51:16.053Z",
+      "reviewed_at": "2026-09-23T23:51:16.053Z",
+      "status": "read"
+    },
+    {
+      "source_id": "dram",
+      "url": "https://www.trendforce.com/presscenter/news/20260907-13219.html",
+      "sha256": "0d6b4e11d3d026a689c3b3d901f752f51c5a421d984b44bb60ba4c064618d1e4",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-23T23:53:07.803Z",
+      "reviewed_at": "2026-09-23T23:53:07.803Z",
+      "status": "read"
+    },
+    {
+      "source_id": "contract",
+      "url": "https://www.trendforce.cn/presscenter/news/20260703-13133.html",
+      "sha256": "0d6b4e11d3d026a689c3b3d901f752f51c5a421d984b44bb60ba4c064618d1e4",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-23T23:53:08.817Z",
+      "reviewed_at": "2026-09-23T23:53:08.817Z",
+      "status": "read"
+    },
+    {
+      "source_id": "nand_q3",
+      "url": "https://www.trendforce.com/research/download/RP260910ZM",
+      "sha256": "0d6b4e11d3d026a689c3b3d901f752f51c5a421d984b44bb60ba4c064618d1e4",
+      "access": "abstract",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-23T23:53:09.817Z",
+      "reviewed_at": "2026-09-23T23:53:09.817Z",
+      "status": "read"
+    },
+    {
+      "source_id": "spot",
+      "url": "https://www.trendforce.com/news/2026/09/16/insights-memory-spot-price-update-dram-spot-cools-as-ddr5-inquiries-slow-2gx8-ddr4-prices-retreat/",
+      "sha256": "0d6b4e11d3d026a689c3b3d901f752f51c5a421d984b44bb60ba4c064618d1e4",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-23T23:53:10.813Z",
+      "reviewed_at": "2026-09-23T23:53:10.813Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [],
+  "publication_corrections": [],
+  "summary": "更新 DRAM 现货与供需资料，并新增五条 AI 基础设施、产品和应用动态；公司财报数据保持不变。",
+  "result": "success",
+  "artifact_sha256": "8a399652b46766ad68b10a9a565f482581a57c9bc645763d8c87df312a6e5e78",
+  "ledger_sha256": "69bc87f1f6b422b7f78dca3dcf77984ce1a6094c31bae326b45d9e61fa664e78",
+  "evidence_sha256": "e55c73f1676de5be2a44d0342421af176912f50616f5c91ee9bcf65013996cb9"
+}
