@@ -5,7 +5,24 @@
   const {rowChange,freshness,isRenderable:validate,guidanceActuals,guidanceComparison,partnerValue,partnerChange,provenance,partnerUnits}=globalThis.MonitorCore;
   const num = (value,digits=2) => Number(value).toLocaleString('en-US',{minimumFractionDigits:digits,maximumFractionDigits:digits});
   const updateCore=globalThis.MonitorUpdates;
-  let data,ecosystemGroup='cloud',newsCategory='all',newsCompany='all',newsDays=30;
+  const updateTimes=globalThis.MonitorUpdateTimes;
+  let data,updateStatus,savedData=false,updatePanelState,ecosystemGroup='cloud',newsCategory='all',newsCompany='all',newsDays=30;
+  function updateTime(value,short=false){return value?`<time datetime="${esc(value)}">${esc(updateTimes.format(value,short))}</time>`:'暂无记录';}
+  function renderUpdatePanel(){
+    if(!data)return;
+    const v=updateTimes.view(data,updateStatus),signature=JSON.stringify([v,savedData]);
+    if(signature===updatePanelState)return;updatePanelState=signature;
+    document.getElementById('last-data-update').innerHTML=v.last_at?updateTime(v.last_at,true):'时间待确认';
+    const health=document.getElementById('update-health');
+    health.textContent=savedData?'备用记录':!v.available?'时间待确认':v.warnings.length?'部分待更新':'';health.hidden=!health.textContent;
+    if(!v.available){document.getElementById('update-details-body').innerHTML='<p class="update-note">更新时间记录暂不可用，数据日期以各项资料为准。</p>';return;}
+    const last=(r)=>r.last_checked_at?updateTime(r.last_checked_at):r.key==='news'?'暂无完整查新记录':'暂无核查记录';
+    const rows=v.rows.map(r=>`<article class="update-row" data-update-key="${esc(r.key)}"><h3>${esc(r.label)}</h3><dl class="update-times"><div><dt>${r.key==='news'?'上次全部来源查新':'上次核查'}</dt><dd>${last(r)}</dd></div><div><dt>下次计划启动</dt><dd>${r.next_at?`约 ${updateTime(r.next_at)}`:esc(r.next_label)}</dd></div></dl>${r.key==='quote'?`<p class="update-note">行情交易日 ${esc(updateCore.marketDate(Date.parse(data.quote.as_of)))}</p>`:''}${r.key==='news'&&r.last_content_update_at?`<p class="update-note">最近收录 ${updateTime(r.last_content_update_at)}</p>`:''}<p class="update-note">${esc(r.rule)}</p>${r.warning?`<p class="update-issue">${esc(r.warning)}</p>`:''}</article>`).join('');
+    const finances=v.financial.map(f=>`约 ${updateTime(f.at)} · ${esc(f.label)}`).join('<br>');
+    const financialWarnings=v.warnings.filter(w=>!v.rows.some(r=>r.warning&&(w===r.warning||w===r.label+'：'+r.warning)));
+    const companyChecks=v.companies.map(c=>`<li><span>${esc(c.name)}</span><span>${c.last_checked_at?updateTime(c.last_checked_at):'暂无核查记录'}</span></li>`).join('');
+    document.getElementById('update-details-body').innerHTML=`<div class="update-next"><p>下次计划启动${v.next?' · '+esc(v.next.label):''}</p><strong>${v.next?`约 ${updateTime(v.next.at)}`:'暂无已确认的计划时间'}</strong><p class="update-note">以下时间均为美西时间 PT · 实际完成时间以核查结果为准</p></div>${savedData?'<p class="update-issue">当前显示已保存资料；更新时间与安排也来自该版本。</p>':''}${rows}<article class="update-row" data-update-key="financial"><h3>各公司财报与指引</h3><dl class="update-times"><div><dt>上次核查</dt><dd><details class="update-companies"><summary>查看各公司记录</summary><ul>${companyChecks}</ul></details></dd></div><div><dt>下次计划启动</dt><dd>${finances||(!updateStatus.schedule.earnings.enabled?'计划已暂停':'日期待确认')}</dd></div></dl><p class="update-note">确认财报后约 24 小时定向核查；指引修订与更正随新披露处理。周日补查未确认的下一财报日期。</p><p class="update-note">美光当前 ${esc(data.financial_period)} · 原报告发布 ${esc(data.financial_published_at)}</p>${financialWarnings.map(w=>`<p class="update-issue">${esc(w)}</p>`).join('')}</article><p class="update-footnote">上次更新是成功核查并写入新内容的时间；查新没有变化时，只记录对应核查时间。计划启动不保证资料已经核实或发布。</p><a class="update-history" href="#updates" data-panel-link="updates">来源与完整更新记录 →</a>`;
+  }
   const panelWarnings=section=>updateCore.warnings(data,Date.now(),section).map(w=>`<p class="section-warning" role="status">${esc(w)}</p>`).join('');
   function date(value,detailed=false) {
     if(!value) return '未标注';
@@ -117,7 +134,7 @@
     if(scroll&&metric) document.getElementById(metric.id)?.scrollIntoView({behavior:'instant',block:'start'});
   }
   function render(fallback=false) {
-    document.getElementById('checked-stamp').textContent=`${data.financial_period} · 披露 ${data.financial_published_at}`;
+    renderUpdatePanel();
     const warnings=[];
     if(fallback) warnings.unshift(`未能载入最新记录，显示 ${checkDate(data.updated_at,true)} 保存的备用资料。`);
     document.getElementById('freshness').innerHTML=warnings.map(w=>`<div class="banner" role="status">${esc(w)}</div>`).join('');
@@ -133,15 +150,18 @@
     const feedback=document.getElementById('refresh-state');
     if(refresh&&feedback) feedback.textContent='正在载入已发布的记录…';
     try {
-      const response=await fetch(`data/monitor.json?t=${Date.now()}`,{cache:'no-store'});
-      if(!response.ok) throw new Error('HTTP '+response.status);
-      const next=await response.json();
+      const read=async file=>{const response=await fetch(`${file}?t=${Date.now()}`,{cache:'no-store'});if(!response.ok)throw new Error('HTTP '+response.status);return response.json();};
+      const [documentResult,statusResult]=await Promise.allSettled([read('data/monitor.json'),read('data/update-status.json')]);
+      if(documentResult.status!=='fulfilled')throw documentResult.reason;
+      const next=documentResult.value;
       if(!validate(next)) throw new Error('Invalid data');
-      data=next;render();
-      if(refresh) document.getElementById('refresh-state').textContent=`已载入 ${checkDate(data.updated_at,true)} 发布的记录。`;
+      data=next;updateStatus=statusResult.status==='fulfilled'&&updateTimes.matches(next,statusResult.value)?statusResult.value:null;savedData=false;
+      render();
+      if(refresh) document.getElementById('refresh-state').textContent=`已载入 ${checkDate(data.updated_at,true)} 发布的记录${updateStatus?'。':'；更新时间记录暂不可用。'}`;
     } catch(error) {
-      if(!data) {data=JSON.parse(document.getElementById('fallback-data').textContent);render(true);}
-      else {document.getElementById('freshness').innerHTML=`<div class="banner" role="alert">最新记录载入失败，保留 ${checkDate(data.updated_at,true)} 的资料。</div>`;if(feedback)feedback.textContent='载入失败，请稍后重试。';}
+      savedData=true;
+      if(!data) {data=JSON.parse(document.getElementById('fallback-data').textContent);const fallback=JSON.parse(document.getElementById('fallback-update-status').textContent);updateStatus=updateTimes.matches(data,fallback)?fallback:null;render(true);}
+      else {renderUpdatePanel();document.getElementById('freshness').innerHTML=`<div class="banner" role="alert">最新记录载入失败，保留 ${checkDate(data.updated_at,true)} 的资料。</div>`;if(feedback)feedback.textContent='载入失败，请稍后重试。';}
     }
   }
   document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>{show(b.dataset.panel);window.scrollTo({top:0,behavior:'instant'});}));
@@ -156,5 +176,6 @@
   });
   document.addEventListener('change',event=>{const id=event.target.id;if(!['news-category','news-company','news-days'].includes(id))return;if(id==='news-category')newsCategory=event.target.value;if(id==='news-company')newsCompany=event.target.value;if(id==='news-days')newsDays=event.target.value==='all'?null:30;document.getElementById('panel-news').innerHTML=news();document.getElementById(id)?.focus();});
   window.addEventListener('hashchange',()=>navigateHash());
+  setInterval(renderUpdatePanel,60000);
   load().then(()=>navigateHash());
 })();
