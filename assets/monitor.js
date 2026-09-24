@@ -89,7 +89,7 @@
   }
   function ecosystem() {
     const e=data.ecosystem;
-    return `<div class="data-heading"><h2>产业链跟踪</h2><span>${e.companies.length} 家公司</span></div><p class="section-intro">客户投入、算力建设与存储供给。</p>${technology.comparison(data)}<div class="ecosystem-tabs" role="group" aria-label="产业链分组">${e.groups.map(g=>`<button type="button" data-ecosystem-group="${esc(g.id)}" aria-pressed="${g.id===ecosystemGroup}">${esc(g.title)}<span>${e.companies.filter(c=>c.group===g.id).length}</span></button>`).join('')}</div>${e.groups.map(g=>`<section class="ecosystem-group" id="ecosystem-${esc(g.id)}" aria-label="${esc(g.title)}" ${g.id===ecosystemGroup?'':'hidden'}><p class="group-description">${esc(g.description)}</p><nav class="company-jumps" aria-label="${esc(g.title)}公司跳转">${e.companies.filter(c=>c.group===g.id).map(c=>`<a href="#partner-${esc(c.id)}" data-partner="${esc(c.id)}">${esc(c.name.split(' / ')[0])}</a>`).join('')}</nav>${e.companies.filter(c=>c.group===g.id).map(partnerCard).join('')}</section>`).join('')}<p class="ecosystem-footnote">资本开支涵盖设备、网络与厂房等投入；内存采购未单独披露。产业链资料核查 ${checkDate(e.checked_at)}。</p>`;
+    return `${technology.comparison(data)}<div class="data-heading"><h2>产业链跟踪</h2><span>${e.companies.length} 家公司</span></div><p class="section-intro">客户投入、算力建设与存储供给。</p><div class="ecosystem-tabs" role="group" aria-label="产业链分组">${e.groups.map(g=>`<button type="button" data-ecosystem-group="${esc(g.id)}" aria-pressed="${g.id===ecosystemGroup}">${esc(g.title)}<span>${e.companies.filter(c=>c.group===g.id).length}</span></button>`).join('')}</div>${e.groups.map(g=>`<section class="ecosystem-group" id="ecosystem-${esc(g.id)}" aria-label="${esc(g.title)}" ${g.id===ecosystemGroup?'':'hidden'}><p class="group-description">${esc(g.description)}</p><nav class="company-jumps" aria-label="${esc(g.title)}公司跳转">${e.companies.filter(c=>c.group===g.id).map(c=>`<a href="#partner-${esc(c.id)}" data-partner="${esc(c.id)}">${esc(c.name.split(' / ')[0])}</a>`).join('')}</nav>${e.companies.filter(c=>c.group===g.id).map(partnerCard).join('')}</section>`).join('')}<p class="ecosystem-footnote">资本开支涵盖设备、网络与厂房等投入；内存采购未单独披露。产业链资料核查 ${checkDate(e.checked_at)}。</p>`;
   }
   function selectEcosystemGroup(group) {
     if(!data.ecosystem.groups.some(g=>g.id===group)) return;
@@ -147,7 +147,13 @@
     if(fallback) warnings.unshift(`未能载入最新记录，显示 ${checkDate(data.updated_at,true)} 保存的备用资料。`);
     document.getElementById('freshness').innerHTML=warnings.map(w=>`<div class="banner" role="status">${esc(w)}</div>`).join('');
     document.getElementById('panel-overview').innerHTML=panelWarnings('overview')+overview();
-    for(const category of ['business','industry']) document.getElementById(`panel-${category}`).innerHTML=panelWarnings(category)+`<h2>${category==='business'?'公司数据':'行业数据'}</h2><p class="section-intro">${category==='business'?'财务金额为亿美元；FQ 为美光财季。各项附来源和原文位置。':'行业估计、报价与预测分别标识；用于观察终端消耗的间接指标单独说明。'}</p>${category==='business'?technology.manufacturing(data):''}${data.metrics.map((m,i)=>m.category===category?metricCard(m,i):'').join('')}`;
+    for(const category of ['business','industry']) {
+      const manufacturing=category==='business'?technology.manufacturing(data):'';
+      const title=category==='business'?(manufacturing?'财务与经营数据':'公司数据'):'行业数据';
+      const intro=category==='business'?'财务金额为亿美元；FQ 为美光财季。各项附来源和原文位置。':'行业估计、报价与预测分别标识；用于观察终端消耗的间接指标单独说明。';
+      const heading=manufacturing?`<div class="section-heading"><h2>${title}</h2></div>`:`<h2>${title}</h2>`;
+      document.getElementById(`panel-${category}`).innerHTML=panelWarnings(category)+manufacturing+heading+`<p class="section-intro">${intro}</p>${data.metrics.map((m,i)=>m.category===category?metricCard(m,i):'').join('')}`;
+    }
     document.getElementById('panel-updates').innerHTML=updates();
     document.getElementById('panel-ecosystem').innerHTML=panelWarnings('ecosystem')+ecosystem();
     document.getElementById('panel-news').innerHTML=news();
