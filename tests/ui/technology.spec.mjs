@@ -5,6 +5,9 @@ for(const width of [320,390,860])test(`manufacturing and product comparison at $
   const errors=[];page.on('pageerror',e=>errors.push(e.message));
   await page.setViewportSize({width,height:900});
   await page.route('**/data/monitor.json?*',r=>r.fulfill({json:data}));
+  await page.goto('/#business');
+  await page.locator('#manufacturing').waitFor({state:'visible'});
+  await page.screenshot({path:testInfo.outputPath('company-page-top.png')});
   await page.goto('/#tech-sanand');
   await expect(page.locator('#tech-sanand')).toBeVisible();
   await expect(page.locator('#tech-sanand')).toContainText('封装测试');
@@ -15,8 +18,10 @@ for(const width of [320,390,860])test(`manufacturing and product comparison at $
   await page.locator('#tech-sanand').screenshot({path:testInfo.outputPath('sanand.png')});
   await page.goto('/#tech-dram_1gamma');
   await expect(page.locator('#tech-dram_1gamma')).toBeVisible();
-  await page.goto('/#product-comparison');
+  await page.goto('/#ecosystem');
   await expect(page.locator('#product-comparison')).toBeVisible();
+  await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
+  await page.screenshot({path:testInfo.outputPath('ecosystem-page-top.png')});
   await page.locator('#product-comparison').screenshot({path:testInfo.outputPath('ddr5-comparison.png')});
   await page.locator('#tech-micron-model').selectOption('micron_rdimm256');
   await expect(page.locator('#tech-micron_rdimm256')).toBeVisible();
