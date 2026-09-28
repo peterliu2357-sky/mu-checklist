@@ -1,0 +1,230 @@
+{
+  "version": 1,
+  "scope": "discovery",
+  "base_commit": "3b6e3a8de0ac59ed445f06684c578976e4fc430f",
+  "base_revision": "2026-09-24-59baa9e693",
+  "base_sha256": "1dcf274e5b9999e506bf7fcd088aff903e29b0a5ad2359ee89217959ff8e8501",
+  "catalog_sha256": "88d7e8a6a49b2c5a9384b898b8eb5b93237db47b3a9463c7ce62453c673d4a52",
+  "created_at": "2026-09-28T00:14:21.436Z",
+  "completed_at": "2026-09-28T00:18:00Z",
+  "state": "verified",
+  "targets": [
+    "industry",
+    "news",
+    "technology:facilities",
+    "technology:processes",
+    "technology:products"
+  ],
+  "coverage": [
+    {
+      "key": "industry",
+      "status": "unchanged",
+      "evidence": [
+        "index_tf_press_20260927",
+        "index_tf_insights_20260927"
+      ],
+      "reviewed_at": "2026-09-28T00:15:57.491Z",
+      "latest_disclosure": {
+        "url": "https://www.trendforce.com/presscenter/",
+        "published_at": "2026-09-24"
+      },
+      "reason": "已检查两项行业入口；09-24 同规格 DDR4 日度均价小幅变动，无新的合同价、供需预测或 NAND 指标需要改写。"
+    },
+    {
+      "key": "news",
+      "status": "verified",
+      "evidence": [
+        "index_tf_press_20260927",
+        "index_tf_insights_20260927",
+        "index_micron_news_20260927",
+        "index_nvidia_news_20260927",
+        "index_skhynix_news_20260927",
+        "index_samsung_news_20260927",
+        "index_meta_news_20260927",
+        "index_microsoft_blogs_20260927",
+        "index_aws_news_20260927",
+        "index_google_ai_20260927",
+        "index_oracle_news_20260927",
+        "index_tsmc_press_20260927"
+      ],
+      "reviewed_at": "2026-09-28T00:15:59.271Z",
+      "latest_disclosure": {
+        "url": "https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/",
+        "published_at": "2026-09-25"
+      },
+      "reason": "已逐一检查全部 12 个新闻入口；发现 Microsoft Copilot 与 Meta Connect 两项新的 AI 应用披露，未发现新财报、临时指引、重列或更正。",
+      "finding": "new_disclosure"
+    },
+    {
+      "key": "technology:facilities",
+      "status": "unchanged",
+      "evidence": [
+        "index_micron_news_20260927"
+      ],
+      "reviewed_at": "2026-09-28T00:15:57.674Z",
+      "latest_disclosure": {
+        "url": "https://investors.micron.com/news/press-release/2026/Micron-Celebrates-Opening-of-Indias-First-Semiconductor-Assembly-and-Test-Facility-02-28-2026/default.aspx",
+        "published_at": "2026-02-28"
+      },
+      "reason": "Micron 官方新闻入口无新的 Sanand、Idaho ID1、Tongluo 或 Singapore HBM packaging 里程碑。"
+    },
+    {
+      "key": "technology:processes",
+      "status": "unchanged",
+      "evidence": [
+        "index_micron_news_20260927"
+      ],
+      "reviewed_at": "2026-09-28T00:15:57.674Z",
+      "latest_disclosure": {
+        "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Results-for-the-Third-Quarter-of-Fiscal-2026/default.aspx",
+        "published_at": "2026-06-24"
+      },
+      "reason": "Micron 官方入口未披露新的 1-gamma/1-delta、G9 后继节点、位元密度、采用率、良率或爬坡数据。"
+    },
+    {
+      "key": "technology:products",
+      "status": "unchanged",
+      "evidence": [
+        "index_micron_news_20260927",
+        "index_samsung_news_20260927",
+        "index_skhynix_news_20260927"
+      ],
+      "reviewed_at": "2026-09-28T00:15:58.198Z",
+      "latest_disclosure": {
+        "url": "https://investors.micron.com/news/press-release/2026/Micron-Advances-Memory-Innovation-With-the-Worlds-First-Ultra-Dense-Module-for-Next-Generation-Servers/default.aspx",
+        "published_at": "2026-09-15"
+      },
+      "reason": "三家公司官方入口均未出现新的可比 DDR5 RDIMM、HBM4/HBM4E 容量、速率、验证/量产阶段或同基准功耗披露。"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "index_tf_press_20260927",
+      "url": "https://www.trendforce.com/presscenter/",
+      "sha256": "f5a34bcea415d87f7bda3575f3f715008da1e71609828a53e64b53fddefb17a4",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-28T00:15:57.317Z",
+      "reviewed_at": "2026-09-28T00:15:57.317Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_tf_insights_20260927",
+      "url": "https://insights.trendforce.com/",
+      "sha256": "f5a34bcea415d87f7bda3575f3f715008da1e71609828a53e64b53fddefb17a4",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-28T00:15:57.491Z",
+      "reviewed_at": "2026-09-28T00:15:57.491Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_micron_news_20260927",
+      "url": "https://investors.micron.com/news/default.aspx",
+      "sha256": "f5a34bcea415d87f7bda3575f3f715008da1e71609828a53e64b53fddefb17a4",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-28T00:15:57.674Z",
+      "reviewed_at": "2026-09-28T00:15:57.674Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_nvidia_news_20260927",
+      "url": "https://nvidianews.nvidia.com/news",
+      "sha256": "f5a34bcea415d87f7bda3575f3f715008da1e71609828a53e64b53fddefb17a4",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-28T00:15:57.847Z",
+      "reviewed_at": "2026-09-28T00:15:57.847Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_skhynix_news_20260927",
+      "url": "https://news.skhynix.com/en/",
+      "sha256": "f5a34bcea415d87f7bda3575f3f715008da1e71609828a53e64b53fddefb17a4",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-28T00:15:58.027Z",
+      "reviewed_at": "2026-09-28T00:15:58.027Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_samsung_news_20260927",
+      "url": "https://news.samsung.com/global/",
+      "sha256": "f5a34bcea415d87f7bda3575f3f715008da1e71609828a53e64b53fddefb17a4",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-28T00:15:58.198Z",
+      "reviewed_at": "2026-09-28T00:15:58.198Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_meta_news_20260927",
+      "url": "https://about.fb.com/news/",
+      "sha256": "f5a34bcea415d87f7bda3575f3f715008da1e71609828a53e64b53fddefb17a4",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-28T00:15:58.378Z",
+      "reviewed_at": "2026-09-28T00:15:58.378Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_microsoft_blogs_20260927",
+      "url": "https://blogs.microsoft.com/",
+      "sha256": "f5a34bcea415d87f7bda3575f3f715008da1e71609828a53e64b53fddefb17a4",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-28T00:15:58.565Z",
+      "reviewed_at": "2026-09-28T00:15:58.565Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_aws_news_20260927",
+      "url": "https://aws.amazon.com/blogs/aws/",
+      "sha256": "f5a34bcea415d87f7bda3575f3f715008da1e71609828a53e64b53fddefb17a4",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-28T00:15:58.745Z",
+      "reviewed_at": "2026-09-28T00:15:58.745Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_google_ai_20260927",
+      "url": "https://blog.google/technology/ai/",
+      "sha256": "f5a34bcea415d87f7bda3575f3f715008da1e71609828a53e64b53fddefb17a4",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-28T00:15:58.919Z",
+      "reviewed_at": "2026-09-28T00:15:58.919Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_oracle_news_20260927",
+      "url": "https://www.oracle.com/news/",
+      "sha256": "f5a34bcea415d87f7bda3575f3f715008da1e71609828a53e64b53fddefb17a4",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-28T00:15:59.094Z",
+      "reviewed_at": "2026-09-28T00:15:59.094Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_tsmc_press_20260927",
+      "url": "https://pr.tsmc.com/english",
+      "sha256": "f5a34bcea415d87f7bda3575f3f715008da1e71609828a53e64b53fddefb17a4",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-28T00:15:59.271Z",
+      "reviewed_at": "2026-09-28T00:15:59.271Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [],
+  "publication_corrections": [],
+  "technology_reviews": [],
+  "summary": "完成行业、AI 动态与三类制造技术入口查新；发现两项待录入 AI 应用披露，技术记录与行业长期指标保持不变。",
+  "result": "success",
+  "artifact_sha256": "d58ba809115668f394a7801391fe30bf1f45fad065f893b44e2a1b5c07c91474",
+  "ledger_sha256": "efd2be8a94bbd27123758e31667990f2f3134d40801fe326f31d676fc2d6be0e",
+  "evidence_sha256": "cd9843527c82f824ef15509b3bc4d38dba003df9fcf220e0797fef70cb70e948"
+}

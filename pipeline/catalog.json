@@ -2626,6 +2626,42 @@
         "secondary"
       ]
     },
+    "news.microsoft_copilot_20260925": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "entity": "news",
+      "measurement": "sourced_news",
+      "unit": "",
+      "scope": "news.microsoft_copilot_20260925",
+      "accounting_basis": "not_applicable",
+      "temporal_basis": "dated_disclosure",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct",
+        "proxy",
+        "secondary"
+      ]
+    },
+    "news.meta_connect_20260924": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "entity": "news",
+      "measurement": "sourced_news",
+      "unit": "",
+      "scope": "news.meta_connect_20260924",
+      "accounting_basis": "not_applicable",
+      "temporal_basis": "dated_disclosure",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct",
+        "proxy",
+        "secondary"
+      ]
+    },
     "calendar.micron_fy2026_q4": {
       "version": 1,
       "active": true,
@@ -2635,6 +2671,24 @@
       "measurement": "disclosure_calendar",
       "unit": "",
       "scope": "calendar.micron_fy2026_q4",
+      "accounting_basis": "not_applicable",
+      "temporal_basis": "dated_disclosure",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct",
+        "proxy",
+        "secondary"
+      ]
+    },
+    "calendar.tsmc_2026_q3": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "entity": "tsmc",
+      "measurement": "disclosure_calendar",
+      "unit": "",
+      "scope": "calendar.tsmc_2026_q3",
       "accounting_basis": "not_applicable",
       "temporal_basis": "dated_disclosure",
       "nature": "actual_or_observation",
@@ -3224,11 +3278,20 @@
     "news_samsung_airan_20260923": [
       "news.samsung_airan_20260923"
     ],
+    "news_microsoft_copilot_20260925": [
+      "news.microsoft_copilot_20260925"
+    ],
+    "news_meta_connect_20260924": [
+      "news.meta_connect_20260924"
+    ],
     "spot_daily_20260923": [
       "mu.contract.ddr4_spot"
     ],
     "calendar_mu_20260930": [
       "calendar.micron_fy2026_q4"
+    ],
+    "calendar_tsmc_20261015": [
+      "calendar.tsmc_2026_q3"
     ],
     "price_auto": [
       "quote.mu"
