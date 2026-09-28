@@ -2,8 +2,8 @@
   "format_version": 1,
   "document": {
     "schema_version": 2,
-    "revision": "2026-09-28-aa4599f360",
-    "updated_at": "2026-09-28T00:18:00Z",
+    "revision": "2026-09-28-4cbeb645cb",
+    "updated_at": "2026-09-28T00:25:00Z",
     "last_successful_check_at": "2026-09-20T23:50:00Z",
     "last_attempt_at": "2026-09-20T23:50:00Z",
     "financial_period": "FY2026 Q3",
@@ -122,6 +122,24 @@
       }
     ],
     "sources": {
+      "news_microsoft_copilot_20260925": {
+        "label": "Microsoft · new Copilot with Home, Code and Autopilot",
+        "short_label": "Microsoft Copilot · 09-25",
+        "url": "https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/",
+        "published_at": "2026-09-25",
+        "checked_at": "2026-09-28",
+        "type": "公司原始披露",
+        "locator": "Opening summary；A new experience for every mode of work；Autopilot；Get started。"
+      },
+      "news_meta_connect_20260924": {
+        "label": "Meta · The Biggest News From Connect 2026",
+        "short_label": "Meta Connect · 09-24",
+        "url": "https://about.fb.com/news/2026/09/the-biggest-news-from-connect-2026/",
+        "published_at": "2026-09-24",
+        "checked_at": "2026-09-28",
+        "type": "公司原始披露",
+        "locator": "Takeaways；Bringing Muse to AI Glasses；Glasses That Transform the VR Experience；The Future of AI。"
+      },
       "index_tf_press_20260927": {
         "label": "TrendForce Press Center 入口",
         "short_label": "TrendForce Press Center",
@@ -1382,6 +1400,12 @@
     ],
     "check_log": [
       {
+        "at": "2026-09-28T00:25:00Z",
+        "status": "success",
+        "scope": "news",
+        "text": "新增 Microsoft Copilot 持续工作 agent 与 Meta Muse AI 眼镜两项官方动态；未改动公司财报与技术记录。"
+      },
+      {
         "at": "2026-09-28T00:18:00Z",
         "status": "success",
         "scope": "discovery",
@@ -1898,7 +1922,7 @@
             "index_tsmc_press_20260927"
           ],
           "reason": "已逐一检查全部 12 个新闻入口；发现 Microsoft Copilot 与 Meta Connect 两项新的 AI 应用披露，未发现新财报、临时指引、重列或更正。",
-          "processed_at": null
+          "processed_at": "2026-09-28T00:25:00Z"
         },
         {
           "key": "technology:facilities",
@@ -1981,6 +2005,12 @@
         "anthropic": "Anthropic"
       },
       "items": [
+        {
+          "record_ref": "d7a75c32f934d0680826f5f9bd559b73fb94d9ea890178e1f589d8c54eb1edb5"
+        },
+        {
+          "record_ref": "1176c0d93d67842484b688110376f009e45904717af6954a462cffc6f628954a"
+        },
         {
           "record_ref": "0ed25f1f117ee2821344be122f7c1c64426f1527443cc4dec57064ff1c335ffa"
         },
@@ -11562,6 +11592,98 @@
         "e-8b899b9b82fd979a701da5d404ff8be786edb9e794083603cebcd791f73fcc27"
       ],
       "id": "24a8a63a64137fe040b6a9312034059145b10510df1d2c3473a47408b0c3bb16"
+    },
+    "d7a75c32f934d0680826f5f9bd559b73fb94d9ea890178e1f589d8c54eb1edb5": {
+      "metric_id": "news.microsoft_copilot_20260925",
+      "definition_version": 1,
+      "context": {
+        "entity": "news",
+        "period": "2026-09-25 公告；未来数周与 9 月底分阶段预览",
+        "measurement": "sourced_news",
+        "unit": "",
+        "scope": "news.microsoft_copilot_20260925",
+        "accounting_basis": "not_applicable",
+        "temporal_basis": "dated_disclosure",
+        "sources": [
+          {
+            "id": "news_microsoft_copilot_20260925",
+            "url": "https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/",
+            "published_at": "2026-09-25"
+          }
+        ]
+      },
+      "payload": {
+        "id": "microsoft_copilot_20260925",
+        "story_key": "microsoft-copilot-home-code-autopilot",
+        "category": "applications",
+        "companies": [
+          "microsoft"
+        ],
+        "title": "Microsoft 将 Copilot 扩展为可持续运行的工作 agent",
+        "summary": "Microsoft 公布 Copilot Home、Code 与 Autopilot。Home 和 Code 将分阶段进入 Frontier 项目，Autopilot 计划于 9 月底扩大至私有预览；公司称 Autopilot 在云端持续运行，并拥有独立身份、记忆、计算机与工作区。",
+        "kind": "公司计划",
+        "period": "2026-09-25 公告；未来数周与 9 月底分阶段预览",
+        "published_at": "2026-09-25",
+        "source_ids": [
+          "news_microsoft_copilot_20260925"
+        ],
+        "location": "Opening summary；A new experience for every mode of work；Autopilot；Get started。",
+        "evidence_type": "direct",
+        "note": "功能发布与预览时间按 Microsoft 公告记录；公告未披露采用量、收入或新增基础设施采购规模。",
+        "interpretation": "这是企业工作 agent 从对话工具向持续执行任务的产品扩展，仍处于分阶段预览。",
+        "fact_refs": [],
+        "updated_at": "2026-09-25"
+      },
+      "evidence_ids": [
+        "e-2c0ffe782883cda286374be25fa764137ca92072ff5dc76168b016ae99b1d7e1"
+      ],
+      "id": "d7a75c32f934d0680826f5f9bd559b73fb94d9ea890178e1f589d8c54eb1edb5"
+    },
+    "1176c0d93d67842484b688110376f009e45904717af6954a462cffc6f628954a": {
+      "metric_id": "news.meta_connect_20260924",
+      "definition_version": 1,
+      "context": {
+        "entity": "news",
+        "period": "2026-09-24 公告；Muse 为未来数月目标，产品组合为 2026 年底目标",
+        "measurement": "sourced_news",
+        "unit": "",
+        "scope": "news.meta_connect_20260924",
+        "accounting_basis": "not_applicable",
+        "temporal_basis": "dated_disclosure",
+        "sources": [
+          {
+            "id": "news_meta_connect_20260924",
+            "url": "https://about.fb.com/news/2026/09/the-biggest-news-from-connect-2026/",
+            "published_at": "2026-09-24"
+          }
+        ]
+      },
+      "payload": {
+        "id": "meta_connect_20260924",
+        "story_key": "meta-connect-2026-ai-glasses-muse",
+        "category": "applications",
+        "companies": [
+          "meta"
+        ],
+        "title": "Meta 计划把 Muse agent 带入 AI 眼镜",
+        "summary": "Meta 宣布计划在未来数月把 Muse 引入 AI 眼镜，并预计到 2026 年底提供超过 100 种 AI 眼镜选择；同期发布约 100 克的 Meta VR Glasses。",
+        "kind": "公司计划",
+        "period": "2026-09-24 公告；Muse 为未来数月目标，产品组合为 2026 年底目标",
+        "published_at": "2026-09-24",
+        "source_ids": [
+          "news_meta_connect_20260924"
+        ],
+        "location": "Takeaways；Bringing Muse to AI Glasses；Glasses That Transform the VR Experience；The Future of AI。",
+        "evidence_type": "direct",
+        "note": "未来时间与产品数量属于公司计划；公告未披露用户量、收入或内存采购规模。",
+        "interpretation": "AI agent 正被扩展到可穿戴终端，但公告仍以产品计划与功能演示为主。",
+        "fact_refs": [],
+        "updated_at": "2026-09-24"
+      },
+      "evidence_ids": [
+        "e-eca6e5b6f5a28c6831f3f967d1f17892a9f6c95201b1c435155bc490f7d34968"
+      ],
+      "id": "1176c0d93d67842484b688110376f009e45904717af6954a462cffc6f628954a"
     }
   },
   "supporting": {
