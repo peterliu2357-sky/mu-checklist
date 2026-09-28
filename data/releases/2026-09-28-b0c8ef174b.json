@@ -1,0 +1,135 @@
+{
+  "version": 1,
+  "scope": "calendar",
+  "base_commit": "b3048b0b77686db85633b0b4acfbb9357e094034",
+  "base_revision": "2026-09-28-4cbeb645cb",
+  "base_sha256": "158ef58bbfc4a9c209057f18dec8e0147d233a6cfe0d792cb472c894551d62ef",
+  "catalog_sha256": "88d7e8a6a49b2c5a9384b898b8eb5b93237db47b3a9463c7ce62453c673d4a52",
+  "created_at": "2026-09-28T00:19:32.159Z",
+  "completed_at": "2026-09-28T00:28:00Z",
+  "state": "verified",
+  "targets": null,
+  "coverage": [
+    {
+      "key": "calendar",
+      "status": "verified",
+      "evidence": [
+        "calendar_index_microsoft_20260927",
+        "calendar_index_amazon_20260927",
+        "calendar_index_alphabet_20260927",
+        "calendar_index_oracle_20260927",
+        "calendar_index_meta_20260927",
+        "calendar_index_nvidia_20260927",
+        "calendar_tsmc_20261015",
+        "calendar_index_samsung_20260927",
+        "calendar_index_skhynix_20260927"
+      ],
+      "reviewed_at": "2026-09-28T00:20:02.739Z",
+      "latest_disclosure": {
+        "url": "https://investor.tsmc.com/english/financial-calendar",
+        "published_at": null
+      },
+      "reason": "九家公司官方日程入口均已检查；TSMC 确认 10 月 15 日发布 2026 Q3 业绩，其余目标尚无官方确认日期，且未发现漏处理报告。"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "calendar_index_microsoft_20260927",
+      "url": "https://www.microsoft.com/en-us/Investor",
+      "sha256": "017933af82e6c72a39f147e4aacf98ecf05228c8625f8281b3fdb18000174cf8",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-28T00:20:01.365Z",
+      "reviewed_at": "2026-09-28T00:20:01.365Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_amazon_20260927",
+      "url": "https://ir.aboutamazon.com/quarterly-results/default.aspx",
+      "sha256": "017933af82e6c72a39f147e4aacf98ecf05228c8625f8281b3fdb18000174cf8",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-28T00:20:01.538Z",
+      "reviewed_at": "2026-09-28T00:20:01.538Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_alphabet_20260927",
+      "url": "https://abc.xyz/investor/",
+      "sha256": "017933af82e6c72a39f147e4aacf98ecf05228c8625f8281b3fdb18000174cf8",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-28T00:20:01.723Z",
+      "reviewed_at": "2026-09-28T00:20:01.723Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_oracle_20260927",
+      "url": "https://investor.oracle.com/financials/quarterly-reports/default.aspx",
+      "sha256": "017933af82e6c72a39f147e4aacf98ecf05228c8625f8281b3fdb18000174cf8",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-28T00:20:01.896Z",
+      "reviewed_at": "2026-09-28T00:20:01.896Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_meta_20260927",
+      "url": "https://investor.atmeta.com/financials/",
+      "sha256": "017933af82e6c72a39f147e4aacf98ecf05228c8625f8281b3fdb18000174cf8",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-28T00:20:02.058Z",
+      "reviewed_at": "2026-09-28T00:20:02.058Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_nvidia_20260927",
+      "url": "https://investor.nvidia.com/financial-info/financial-reports-and-sec-filings/default.aspx",
+      "sha256": "017933af82e6c72a39f147e4aacf98ecf05228c8625f8281b3fdb18000174cf8",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-28T00:20:02.231Z",
+      "reviewed_at": "2026-09-28T00:20:02.231Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_tsmc_20261015",
+      "url": "https://investor.tsmc.com/english/financial-calendar",
+      "sha256": "017933af82e6c72a39f147e4aacf98ecf05228c8625f8281b3fdb18000174cf8",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-28T00:20:02.396Z",
+      "reviewed_at": "2026-09-28T00:20:02.396Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_samsung_20260927",
+      "url": "https://www.samsung.com/global/ir/financial-information/earnings-release/",
+      "sha256": "017933af82e6c72a39f147e4aacf98ecf05228c8625f8281b3fdb18000174cf8",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-28T00:20:02.565Z",
+      "reviewed_at": "2026-09-28T00:20:02.565Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_skhynix_20260927",
+      "url": "https://news.skhynix.com/en/category/financial/",
+      "sha256": "017933af82e6c72a39f147e4aacf98ecf05228c8625f8281b3fdb18000174cf8",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-28T00:20:02.739Z",
+      "reviewed_at": "2026-09-28T00:20:02.739Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [],
+  "publication_corrections": [],
+  "technology_reviews": [],
+  "summary": "新增 TSMC 2026 Q3 已确认财报日程；其余八家公司保留待确认状态。",
+  "result": "success",
+  "artifact_sha256": "0c7855fc36e89892741675b9c0b29db38f7c6610ba0313f597045e4dcea64109",
+  "ledger_sha256": "75aa1b6859d34a0b9bb5d8452b878ae4ec0287ffc43f39372c8bc1efd27ec92e",
+  "evidence_sha256": "81ae840cfe9f8b479935b09b0e3f12b6f7baefede46a476d3ce772fe5a41e686"
+}

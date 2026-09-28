@@ -3552,5 +3552,42 @@
     "mode": "verified",
     "record_hash": "1176c0d93d67842484b688110376f009e45904717af6954a462cffc6f628954a",
     "id": "e-eca6e5b6f5a28c6831f3f967d1f17892a9f6c95201b1c435155bc490f7d34968"
+  },
+  "e-3e5e2ad23753ed9be045d6077ecf06f2b0f7099846fb6e102e01a2a81c2bbc25": {
+    "measurement": "disclosure_calendar",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "calendar.tsmc_2026_q3",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "manual review of official TSMC financial calendar",
+      "at": "2026-09-28T00:20:02.396Z"
+    },
+    "documents": [
+      {
+        "source_id": "calendar_tsmc_20261015",
+        "url": "https://investor.tsmc.com/english/financial-calendar",
+        "sha256": "017933af82e6c72a39f147e4aacf98ecf05228c8625f8281b3fdb18000174cf8",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-28T00:20:02.396Z",
+        "reviewed_at": "2026-09-28T00:20:02.396Z",
+        "status": "read",
+        "locator": "Upcoming Events · October 15, 2026 · TSMC 3Q'26 Results。",
+        "excerpt": "TSMC lists its third-quarter 2026 earnings conference for October 15 at 02:00 ET."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "9803fa7087df28d0a0c6b33aed03d73e414d0fdaef976b88b8f9af9f01d94f83",
+    "id": "e-3e5e2ad23753ed9be045d6077ecf06f2b0f7099846fb6e102e01a2a81c2bbc25"
   }
 }
