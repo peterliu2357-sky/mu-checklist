@@ -3478,5 +3478,79 @@
     "mode": "verified",
     "record_hash": "24a8a63a64137fe040b6a9312034059145b10510df1d2c3473a47408b0c3bb16",
     "id": "e-8b899b9b82fd979a701da5d404ff8be786edb9e794083603cebcd791f73fcc27"
+  },
+  "e-2c0ffe782883cda286374be25fa764137ca92072ff5dc76168b016ae99b1d7e1": {
+    "measurement": "sourced_news",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "news.microsoft_copilot_20260925",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "Microsoft 公布 Copilot Home、Code 与 Autopilot。Home 和 Code 将分阶段进入 Frontier 项目，Autopilot 计划于 9 月底扩大至私有预览；公司称 Autopilot 在云端持续运行，并拥有独立身份、记忆、计算机与工作区。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "manual review of original Microsoft announcement",
+      "at": "2026-09-28T00:18:36.806Z"
+    },
+    "documents": [
+      {
+        "source_id": "news_microsoft_copilot_20260925",
+        "url": "https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/",
+        "sha256": "3baa1c41e25f0f9924ce1b8f08459dfc299d8e33b84ffe2f7634ad6cec28ef14",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-28T00:18:36.806Z",
+        "reviewed_at": "2026-09-28T00:18:36.806Z",
+        "status": "read",
+        "locator": "Opening summary；A new experience for every mode of work；Autopilot；Get started。",
+        "excerpt": "Home and Code roll out in Frontier; Autopilot expands to private preview and remains cloud-hosted."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "d7a75c32f934d0680826f5f9bd559b73fb94d9ea890178e1f589d8c54eb1edb5",
+    "id": "e-2c0ffe782883cda286374be25fa764137ca92072ff5dc76168b016ae99b1d7e1"
+  },
+  "e-eca6e5b6f5a28c6831f3f967d1f17892a9f6c95201b1c435155bc490f7d34968": {
+    "measurement": "sourced_news",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "news.meta_connect_20260924",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "Meta 宣布计划在未来数月把 Muse 引入 AI 眼镜，并预计到 2026 年底提供超过 100 种 AI 眼镜选择；同期发布约 100 克的 Meta VR Glasses。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "manual review of original Meta Connect announcement",
+      "at": "2026-09-28T00:18:36.981Z"
+    },
+    "documents": [
+      {
+        "source_id": "news_meta_connect_20260924",
+        "url": "https://about.fb.com/news/2026/09/the-biggest-news-from-connect-2026/",
+        "sha256": "3baa1c41e25f0f9924ce1b8f08459dfc299d8e33b84ffe2f7634ad6cec28ef14",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-09-28T00:18:36.981Z",
+        "reviewed_at": "2026-09-28T00:18:36.981Z",
+        "status": "read",
+        "locator": "Takeaways；Bringing Muse to AI Glasses；Glasses That Transform the VR Experience；The Future of AI。",
+        "excerpt": "Muse is planned for AI glasses; Meta targets over 100 glasses options by year-end."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "1176c0d93d67842484b688110376f009e45904717af6954a462cffc6f628954a",
+    "id": "e-eca6e5b6f5a28c6831f3f967d1f17892a9f6c95201b1c435155bc490f7d34968"
   }
 }

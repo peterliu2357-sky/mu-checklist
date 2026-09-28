@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "scope": "news",
+  "base_commit": "2c6a5a8b9d2bbdfac146ca4f208572c6de7c2c8d",
+  "base_revision": "2026-09-28-aa4599f360",
+  "base_sha256": "d58ba809115668f394a7801391fe30bf1f45fad065f893b44e2a1b5c07c91474",
+  "catalog_sha256": "88d7e8a6a49b2c5a9384b898b8eb5b93237db47b3a9463c7ce62453c673d4a52",
+  "created_at": "2026-09-28T00:17:04.517Z",
+  "completed_at": "2026-09-28T00:25:00Z",
+  "state": "verified",
+  "targets": null,
+  "coverage": [
+    {
+      "key": "news",
+      "status": "verified",
+      "evidence": [
+        "news_microsoft_copilot_20260925",
+        "news_meta_connect_20260924"
+      ],
+      "reviewed_at": "2026-09-28T00:18:36.981Z",
+      "latest_disclosure": {
+        "url": "https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/",
+        "published_at": "2026-09-25"
+      },
+      "reason": "录入 Microsoft Copilot 与 Meta Connect 两项 AI 应用公告；公司计划、预览阶段与已实现功能分开表述。"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "news_microsoft_copilot_20260925",
+      "url": "https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/",
+      "sha256": "3baa1c41e25f0f9924ce1b8f08459dfc299d8e33b84ffe2f7634ad6cec28ef14",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-28T00:18:36.806Z",
+      "reviewed_at": "2026-09-28T00:18:36.806Z",
+      "status": "read"
+    },
+    {
+      "source_id": "news_meta_connect_20260924",
+      "url": "https://about.fb.com/news/2026/09/the-biggest-news-from-connect-2026/",
+      "sha256": "3baa1c41e25f0f9924ce1b8f08459dfc299d8e33b84ffe2f7634ad6cec28ef14",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-09-28T00:18:36.981Z",
+      "reviewed_at": "2026-09-28T00:18:36.981Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [],
+  "publication_corrections": [],
+  "technology_reviews": [],
+  "summary": "新增 Microsoft Copilot 持续工作 agent 与 Meta Muse AI 眼镜两项官方动态；未改动公司财报与技术记录。",
+  "result": "success",
+  "artifact_sha256": "158ef58bbfc4a9c209057f18dec8e0147d233a6cfe0d792cb472c894551d62ef",
+  "ledger_sha256": "a63266189e01102e60a54e0a3ef762fed999dc723f5d5dd60415b49a4d4cd487",
+  "evidence_sha256": "63f5b885078b939b5791e1883ebe146756fa0cdd1d9a750e3c91f7ff21ace062"
+}
