@@ -2,8 +2,8 @@
   "format_version": 1,
   "document": {
     "schema_version": 2,
-    "revision": "2026-09-28-4cbeb645cb",
-    "updated_at": "2026-09-28T00:25:00Z",
+    "revision": "2026-09-28-b0c8ef174b",
+    "updated_at": "2026-09-28T00:28:00Z",
     "last_successful_check_at": "2026-09-20T23:50:00Z",
     "last_attempt_at": "2026-09-20T23:50:00Z",
     "financial_period": "FY2026 Q3",
@@ -122,6 +122,87 @@
       }
     ],
     "sources": {
+      "calendar_index_microsoft_20260927": {
+        "label": "Microsoft Investor 入口",
+        "short_label": "Microsoft Investor",
+        "url": "https://www.microsoft.com/en-us/Investor",
+        "published_at": null,
+        "checked_at": "2026-09-28",
+        "type": "公司日程入口",
+        "locator": "Investor events and earnings。"
+      },
+      "calendar_index_amazon_20260927": {
+        "label": "Amazon 季度业绩入口",
+        "short_label": "Amazon Quarterly Results",
+        "url": "https://ir.aboutamazon.com/quarterly-results/default.aspx",
+        "published_at": null,
+        "checked_at": "2026-09-28",
+        "type": "公司日程入口",
+        "locator": "Quarterly results 最新财季。"
+      },
+      "calendar_index_alphabet_20260927": {
+        "label": "Alphabet Investor 入口",
+        "short_label": "Alphabet Investor",
+        "url": "https://abc.xyz/investor/",
+        "published_at": null,
+        "checked_at": "2026-09-28",
+        "type": "公司日程入口",
+        "locator": "Events and earnings。"
+      },
+      "calendar_index_oracle_20260927": {
+        "label": "Oracle 季度业绩入口",
+        "short_label": "Oracle Quarterly Reports",
+        "url": "https://investor.oracle.com/financials/quarterly-reports/default.aspx",
+        "published_at": null,
+        "checked_at": "2026-09-28",
+        "type": "公司日程入口",
+        "locator": "Quarterly reports and events。"
+      },
+      "calendar_index_meta_20260927": {
+        "label": "Meta 财务入口",
+        "short_label": "Meta Financials",
+        "url": "https://investor.atmeta.com/financials/",
+        "published_at": null,
+        "checked_at": "2026-09-28",
+        "type": "公司日程入口",
+        "locator": "Financials and events。"
+      },
+      "calendar_index_nvidia_20260927": {
+        "label": "NVIDIA 财务报告入口",
+        "short_label": "NVIDIA Financial Reports",
+        "url": "https://investor.nvidia.com/financial-info/financial-reports-and-sec-filings/default.aspx",
+        "published_at": null,
+        "checked_at": "2026-09-28",
+        "type": "公司日程入口",
+        "locator": "Financial reports and event links。"
+      },
+      "calendar_tsmc_20261015": {
+        "label": "TSMC 2026 Q3 财报日程",
+        "short_label": "TSMC 财报日程",
+        "url": "https://investor.tsmc.com/english/financial-calendar",
+        "published_at": null,
+        "checked_at": "2026-09-28",
+        "type": "公司日程",
+        "locator": "Upcoming Events · October 15, 2026 · TSMC 3Q'26 Results。"
+      },
+      "calendar_index_samsung_20260927": {
+        "label": "Samsung Earnings Release 入口",
+        "short_label": "Samsung Earnings",
+        "url": "https://www.samsung.com/global/ir/financial-information/earnings-release/",
+        "published_at": null,
+        "checked_at": "2026-09-28",
+        "type": "公司日程入口",
+        "locator": "Earnings release 最新财季。"
+      },
+      "calendar_index_skhynix_20260927": {
+        "label": "SK hynix 财务新闻入口",
+        "short_label": "SK hynix Financial",
+        "url": "https://news.skhynix.com/en/category/financial/",
+        "published_at": null,
+        "checked_at": "2026-09-28",
+        "type": "公司日程入口",
+        "locator": "Financial category 最新财季。"
+      },
       "news_microsoft_copilot_20260925": {
         "label": "Microsoft · new Copilot with Home, Code and Autopilot",
         "short_label": "Microsoft Copilot · 09-25",
@@ -1400,6 +1481,12 @@
     ],
     "check_log": [
       {
+        "at": "2026-09-28T00:28:00Z",
+        "status": "success",
+        "scope": "calendar",
+        "text": "新增 TSMC 2026 Q3 已确认财报日程；其余八家公司保留待确认状态。"
+      },
+      {
         "at": "2026-09-28T00:25:00Z",
         "status": "success",
         "scope": "news",
@@ -1978,6 +2065,9 @@
       "calendar": [
         {
           "record_ref": "c0f2943b13a2c2f156d13dfbda3174b9cc652af9333c7c9a1d7d18769e1468f3"
+        },
+        {
+          "record_ref": "9803fa7087df28d0a0c6b33aed03d73e414d0fdaef976b88b8f9af9f01d94f83"
         }
       ]
     },
@@ -11684,6 +11774,45 @@
         "e-eca6e5b6f5a28c6831f3f967d1f17892a9f6c95201b1c435155bc490f7d34968"
       ],
       "id": "1176c0d93d67842484b688110376f009e45904717af6954a462cffc6f628954a"
+    },
+    "9803fa7087df28d0a0c6b33aed03d73e414d0fdaef976b88b8f9af9f01d94f83": {
+      "metric_id": "calendar.tsmc_2026_q3",
+      "definition_version": 1,
+      "context": {
+        "entity": "tsmc",
+        "period": "2026 Q3",
+        "measurement": "disclosure_calendar",
+        "unit": "",
+        "scope": "calendar.tsmc_2026_q3",
+        "accounting_basis": "not_applicable",
+        "temporal_basis": "dated_disclosure",
+        "sources": [
+          {
+            "id": "calendar_tsmc_20261015",
+            "url": "https://investor.tsmc.com/english/financial-calendar",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "id": "tsmc_2026_q3",
+        "company_id": "tsmc",
+        "title": "TSMC 2026 Q3 财报",
+        "period": "2026 Q3",
+        "scheduled_at": "2026-10-15T02:00:00-04:00",
+        "review_after": "2026-10-16T06:00:00Z",
+        "confirmation": "confirmed",
+        "source_ids": [
+          "calendar_tsmc_20261015"
+        ],
+        "location": "Financial Calendar · October 15, 2026 · TSMC 3Q'26 Results；02:00 ET / 14:00 Taiwan。",
+        "kind": "公司日程",
+        "evidence_type": "direct"
+      },
+      "evidence_ids": [
+        "e-3e5e2ad23753ed9be045d6077ecf06f2b0f7099846fb6e102e01a2a81c2bbc25"
+      ],
+      "id": "9803fa7087df28d0a0c6b33aed03d73e414d0fdaef976b88b8f9af9f01d94f83"
     }
   },
   "supporting": {
