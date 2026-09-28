@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "revision": "2026-09-28-aa4599f360",
-  "updated_at": "2026-09-28T00:18:00Z",
+  "revision": "2026-09-24-59baa9e693",
+  "updated_at": "2026-09-24T05:59:21.769Z",
   "last_successful_check_at": "2026-09-20T23:50:00Z",
   "last_attempt_at": "2026-09-20T23:50:00Z",
   "financial_period": "FY2026 Q3",
@@ -128,114 +128,6 @@
     }
   ],
   "sources": {
-    "index_tf_press_20260927": {
-      "label": "TrendForce Press Center 入口",
-      "short_label": "TrendForce Press Center",
-      "url": "https://www.trendforce.com/presscenter/",
-      "published_at": null,
-      "checked_at": "2026-09-28",
-      "type": "官方入口",
-      "locator": "Press Releases 与 In-Depth Analyses 最新条目。"
-    },
-    "index_tf_insights_20260927": {
-      "label": "TrendForce Insights 入口",
-      "short_label": "TrendForce Insights",
-      "url": "https://insights.trendforce.com/",
-      "published_at": null,
-      "checked_at": "2026-09-28",
-      "type": "官方入口",
-      "locator": "首页与最新周报入口。"
-    },
-    "index_micron_news_20260927": {
-      "label": "Micron 新闻入口",
-      "short_label": "Micron News",
-      "url": "https://investors.micron.com/news/default.aspx",
-      "published_at": null,
-      "checked_at": "2026-09-28",
-      "type": "公司官方入口",
-      "locator": "2026 年新闻列表。"
-    },
-    "index_nvidia_news_20260927": {
-      "label": "NVIDIA Newsroom 入口",
-      "short_label": "NVIDIA Newsroom",
-      "url": "https://nvidianews.nvidia.com/news",
-      "published_at": null,
-      "checked_at": "2026-09-28",
-      "type": "公司官方入口",
-      "locator": "News Archive 最新条目。"
-    },
-    "index_skhynix_news_20260927": {
-      "label": "SK hynix Newsroom 入口",
-      "short_label": "SK hynix Newsroom",
-      "url": "https://news.skhynix.com/en/",
-      "published_at": null,
-      "checked_at": "2026-09-28",
-      "type": "公司官方入口",
-      "locator": "WHAT'S NEW 最新条目。"
-    },
-    "index_samsung_news_20260927": {
-      "label": "Samsung Global Newsroom 入口",
-      "short_label": "Samsung Newsroom",
-      "url": "https://news.samsung.com/global/",
-      "published_at": null,
-      "checked_at": "2026-09-28",
-      "type": "公司官方入口",
-      "locator": "Latest 最新条目。"
-    },
-    "index_meta_news_20260927": {
-      "label": "Meta Newsroom 入口",
-      "short_label": "Meta Newsroom",
-      "url": "https://about.fb.com/news/",
-      "published_at": null,
-      "checked_at": "2026-09-28",
-      "type": "公司官方入口",
-      "locator": "Newsroom Topics 与 Recent News。"
-    },
-    "index_microsoft_blogs_20260927": {
-      "label": "Microsoft 官方博客入口",
-      "short_label": "Microsoft Blog",
-      "url": "https://blogs.microsoft.com/",
-      "published_at": null,
-      "checked_at": "2026-09-28",
-      "type": "公司官方入口",
-      "locator": "Featured 与 More News。"
-    },
-    "index_aws_news_20260927": {
-      "label": "AWS News Blog 入口",
-      "short_label": "AWS News Blog",
-      "url": "https://aws.amazon.com/blogs/aws/",
-      "published_at": null,
-      "checked_at": "2026-09-28",
-      "type": "公司官方入口",
-      "locator": "AWS News Blog 最新文章。"
-    },
-    "index_google_ai_20260927": {
-      "label": "Google AI 官方博客入口",
-      "short_label": "Google AI Blog",
-      "url": "https://blog.google/technology/ai/",
-      "published_at": null,
-      "checked_at": "2026-09-28",
-      "type": "公司官方入口",
-      "locator": "AI feed 与最新主题。"
-    },
-    "index_oracle_news_20260927": {
-      "label": "Oracle News 入口",
-      "short_label": "Oracle News",
-      "url": "https://www.oracle.com/news/",
-      "published_at": null,
-      "checked_at": "2026-09-28",
-      "type": "公司官方入口",
-      "locator": "Latest Oracle News。"
-    },
-    "index_tsmc_press_20260927": {
-      "label": "TSMC Press Center 入口",
-      "short_label": "TSMC Press Center",
-      "url": "https://pr.tsmc.com/english",
-      "published_at": null,
-      "checked_at": "2026-09-28",
-      "type": "公司官方入口",
-      "locator": "LATEST NEWS。"
-    },
     "q3": {
       "label": "美光 FQ3 10-Q · 存货附注 · 第 13 页",
       "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/0000723125-26-000015.pdf#page=13",
@@ -2244,12 +2136,6 @@
   ],
   "check_log": [
     {
-      "at": "2026-09-28T00:18:00Z",
-      "status": "success",
-      "scope": "discovery",
-      "text": "完成行业、AI 动态与三类制造技术入口查新；发现两项待录入 AI 应用披露，技术记录与行业长期指标保持不变。"
-    },
-    {
       "at": "2026-09-24T05:59:21.769Z",
       "status": "success",
       "scope": "batch",
@@ -3557,97 +3443,35 @@
     "checks": [
       {
         "key": "industry",
-        "status": "unchanged",
-        "finding": "unchanged",
-        "checked_at": "2026-09-28T00:15:57.491Z",
-        "attempted_at": "2026-09-28T00:18:00Z",
+        "status": "verified",
+        "finding": "new_disclosure",
+        "checked_at": "2026-09-23T23:47:33.234Z",
+        "attempted_at": "2026-09-23T23:48:22.182Z",
         "latest_disclosure": {
-          "url": "https://www.trendforce.com/presscenter/",
-          "published_at": "2026-09-24"
+          "url": "https://www.trendforce.com/presscenter/news/20260922-13249.html",
+          "published_at": "2026-09-22"
         },
         "source_ids": [
-          "index_tf_press_20260927",
-          "index_tf_insights_20260927"
+          "news_tf_dram_20260922"
         ],
-        "reason": "已检查两项行业入口；09-24 同规格 DDR4 日度均价小幅变动，无新的合同价、供需预测或 NAND 指标需要改写。",
-        "processed_at": null
+        "reason": "TrendForce 新增 DRAM 模组市场与供给挤占数据，另确认 09-23 现货摘要；需要定向行业更新。",
+        "processed_at": "2026-09-23T23:54:02.833Z"
       },
       {
         "key": "news",
         "status": "verified",
         "finding": "new_disclosure",
-        "checked_at": "2026-09-28T00:15:59.271Z",
-        "attempted_at": "2026-09-28T00:18:00Z",
+        "checked_at": "2026-09-23T23:47:33.234Z",
+        "attempted_at": "2026-09-23T23:48:22.182Z",
         "latest_disclosure": {
-          "url": "https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/",
-          "published_at": "2026-09-25"
+          "url": "https://news.samsung.com/global/samsung-at-the-forefront-of-koreas-ai-ran-projects-with-kt-and-sk-telecom",
+          "published_at": "2026-09-23"
         },
         "source_ids": [
-          "index_tf_press_20260927",
-          "index_tf_insights_20260927",
-          "index_micron_news_20260927",
-          "index_nvidia_news_20260927",
-          "index_skhynix_news_20260927",
-          "index_samsung_news_20260927",
-          "index_meta_news_20260927",
-          "index_microsoft_blogs_20260927",
-          "index_aws_news_20260927",
-          "index_google_ai_20260927",
-          "index_oracle_news_20260927",
-          "index_tsmc_press_20260927"
+          "news_samsung_airan_20260923"
         ],
-        "reason": "已逐一检查全部 12 个新闻入口；发现 Microsoft Copilot 与 Meta Connect 两项新的 AI 应用披露，未发现新财报、临时指引、重列或更正。",
-        "processed_at": null
-      },
-      {
-        "key": "technology:facilities",
-        "status": "unchanged",
-        "finding": "unchanged",
-        "checked_at": "2026-09-28T00:15:57.674Z",
-        "attempted_at": "2026-09-28T00:18:00Z",
-        "latest_disclosure": {
-          "url": "https://investors.micron.com/news/press-release/2026/Micron-Celebrates-Opening-of-Indias-First-Semiconductor-Assembly-and-Test-Facility-02-28-2026/default.aspx",
-          "published_at": "2026-02-28"
-        },
-        "source_ids": [
-          "index_micron_news_20260927"
-        ],
-        "reason": "Micron 官方新闻入口无新的 Sanand、Idaho ID1、Tongluo 或 Singapore HBM packaging 里程碑。",
-        "processed_at": null
-      },
-      {
-        "key": "technology:processes",
-        "status": "unchanged",
-        "finding": "unchanged",
-        "checked_at": "2026-09-28T00:15:57.674Z",
-        "attempted_at": "2026-09-28T00:18:00Z",
-        "latest_disclosure": {
-          "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Results-for-the-Third-Quarter-of-Fiscal-2026/default.aspx",
-          "published_at": "2026-06-24"
-        },
-        "source_ids": [
-          "index_micron_news_20260927"
-        ],
-        "reason": "Micron 官方入口未披露新的 1-gamma/1-delta、G9 后继节点、位元密度、采用率、良率或爬坡数据。",
-        "processed_at": null
-      },
-      {
-        "key": "technology:products",
-        "status": "unchanged",
-        "finding": "unchanged",
-        "checked_at": "2026-09-28T00:15:58.198Z",
-        "attempted_at": "2026-09-28T00:18:00Z",
-        "latest_disclosure": {
-          "url": "https://investors.micron.com/news/press-release/2026/Micron-Advances-Memory-Innovation-With-the-Worlds-First-Ultra-Dense-Module-for-Next-Generation-Servers/default.aspx",
-          "published_at": "2026-09-15"
-        },
-        "source_ids": [
-          "index_micron_news_20260927",
-          "index_samsung_news_20260927",
-          "index_skhynix_news_20260927"
-        ],
-        "reason": "三家公司官方入口均未出现新的可比 DDR5 RDIMM、HBM4/HBM4E 容量、速率、验证/量产阶段或同基准功耗披露。",
-        "processed_at": null
+        "reason": "已逐一检查全部 12 个新闻入口；发现新的行业、基础设施、AI 产品与应用动态，未发现新财报或指引修订。",
+        "processed_at": "2026-09-23T23:54:02.833Z"
       }
     ],
     "calendar": [
