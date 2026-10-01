@@ -100,3 +100,35 @@
 .update-companies li{display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:6px 0;border-bottom:1px solid var(--line)}
 .update-companies li:last-child{border-bottom:0}.update-companies li span:last-child{text-align:right}
 @media(max-width:599px){#update-details-body{grid-template-columns:minmax(0,1fr)}.update-row{grid-column:1/-1}.update-summary{padding:8px 11px}.update-times{gap:8px}.update-companies li{flex-wrap:wrap}}
+/* Compact evidence rows: label, value and source on one line; notes and locations sit in the metric's details. */
+.ledger-row{display:grid;grid-template-columns:minmax(0,1fr);gap:4px 16px;padding-top:13px;padding-bottom:13px}
+.ledger-label{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px}
+.ledger-label .row-period{flex-basis:100%;margin-top:0}
+.ledger-value .numbers{margin-top:0}
+.ledger-row>.source-links{margin-top:0}
+.row-basis{list-style:none;margin:0;padding:0 21px 6px}
+.row-basis li{padding:10px 0;border-top:1px solid #edf0e9;font-size:12px}
+.row-basis li:first-child{border-top:0}
+.row-basis b{font-weight:600}
+.row-basis .source-location{font-size:11px;color:#7c857c;margin-top:3px}
+.quote-line.quote-line{border-top:0;margin:0 0 14px;padding-top:0}
+.quote-change{color:var(--ink)}
+.event.event-pending{background:var(--amber-bg)}
+.event.event-pending .micro{color:var(--amber)}
+.group-total{padding:18px 21px;margin-bottom:14px}
+.group-total h3{font-size:15px}
+.group-total .row-note{margin-top:6px}
+.group-parts{list-style:none;margin:10px 0 0;padding:0}
+.group-parts li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0 12px;padding:7px 0;border-top:1px solid #edf0e9;font-size:12px;align-items:baseline}
+.group-parts li span{grid-column:1;grid-row:2;color:var(--muted);font-size:11px}
+.group-parts li strong{grid-column:2;grid-row:1/3;font-variant-numeric:tabular-nums;font-size:14px}
+.group-parts a{color:var(--green);text-decoration:none}
+.news-hidden{margin-top:10px}
+@media(min-width:700px){
+ .ledger-row{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr) minmax(0,.7fr);align-items:center}
+ .ledger-row>.source-links{justify-content:flex-end;text-align:right}
+ .row-basis{padding:0 27px 8px}
+ .group-total{padding:22px 27px}
+}
+@media(max-width:359px){.row-basis{padding:0 16px 6px}.group-total{padding:16px}}
+.evidence-details .ledger-row+.row-basis{border-top:1px solid var(--line);padding-top:6px}
