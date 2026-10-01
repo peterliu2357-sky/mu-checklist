@@ -13,6 +13,8 @@ for(const width of [320,390,860])test(`cycle tab signals and sections at ${width
   await expect(page.locator('#cycle-demand .group-total')).toContainText('本页计算');
   await expect(page.locator('#panel-ecosystem .group-total')).toHaveCount(0);
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  await expect(page.locator('#supply')).not.toContainText('美光对 DRAM');
+  await expect(page.locator('#company-outlook')).toContainText('美光对 DRAM');
   await page.locator('.cycle-signal[data-metric="inventory"]').click();
   await expect(page.locator('#panel-business')).toBeVisible();
   await expect(page.locator('#inventory')).toBeInViewport();
