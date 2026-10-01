@@ -1083,6 +1083,22 @@
         "direct"
       ]
     },
+    "mu.contract.ddr5_spot": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "accounting_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "entity": "industry",
+      "measurement": "contract",
+      "unit": "USD",
+      "scope": "DDR5 16Gb (2Gx8) 4800/5600 现货",
+      "temporal_basis": "as_disclosed",
+      "evidence_types": [
+        "direct"
+      ]
+    },
     "mu.supply.dram_balance": {
       "version": 1,
       "active": true,
@@ -1276,6 +1292,54 @@
       "nature": "actual_or_observation",
       "evidence_types": [
         "unavailable"
+      ]
+    },
+    "mu.demand.nanya_revenue": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "accounting_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "entity": "industry",
+      "measurement": "end_consumption_proxy",
+      "unit": "TWDb",
+      "scope": "南亚科单月营收（与上月比较）",
+      "temporal_basis": "calendar_month",
+      "evidence_types": [
+        "proxy"
+      ]
+    },
+    "mu.demand.korea_semi_exports": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "accounting_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "entity": "industry",
+      "measurement": "end_consumption_proxy",
+      "unit": "USDm",
+      "scope": "韩国半导体单月出口额（与上年同月比较）",
+      "temporal_basis": "calendar_month",
+      "evidence_types": [
+        "proxy"
+      ]
+    },
+    "mu.demand.korea_memory_exports": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "accounting_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "entity": "industry",
+      "measurement": "end_consumption_proxy",
+      "unit": "USDm",
+      "scope": "韩国存储芯片单月出口额（与上年同月比较）",
+      "temporal_basis": "calendar_month",
+      "evidence_types": [
+        "proxy"
       ]
     },
     "guidance.revenue": {
@@ -2206,6 +2270,22 @@
         "direct"
       ]
     },
+    "eco.samsung.inventory": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "accounting_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "entity": "samsung",
+      "measurement": "inventory",
+      "unit": "KRWt",
+      "scope": "集团合并期末存货（非存储部门口径）",
+      "temporal_basis": "period_end",
+      "evidence_types": [
+        "direct"
+      ]
+    },
     "outlook.samsung.demand": {
       "version": 1,
       "active": true,
@@ -2282,6 +2362,38 @@
       "accounting_basis": "as_disclosed",
       "temporal_basis": "quarter",
       "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.skhynix.inventory": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "accounting_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "entity": "skhynix",
+      "measurement": "inventory",
+      "unit": "KRWt",
+      "scope": "集团期末存货",
+      "temporal_basis": "period_end",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "eco.skhynix.capex": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "accounting_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "entity": "skhynix",
+      "measurement": "capex",
+      "unit": "KRWt",
+      "scope": "集团现金资本开支（购置有形资产）",
+      "temporal_basis": "quarter",
       "evidence_types": [
         "direct"
       ]
@@ -3344,6 +3456,23 @@
     ],
     "tech_sk_hbm4e": [
       "tech.skhynix_hbm4e"
+    ],
+    "dram_spot": [
+      "mu.contract.ddr5_spot"
+    ],
+    "nanya_monthly": [
+      "mu.demand.nanya_revenue"
+    ],
+    "korea_trade": [
+      "mu.demand.korea_semi_exports",
+      "mu.demand.korea_memory_exports"
+    ],
+    "eco_samsung_balance": [
+      "eco.samsung.inventory"
+    ],
+    "eco_skhynix_statements": [
+      "eco.skhynix.inventory",
+      "eco.skhynix.capex"
     ]
   },
   "calculations": [
@@ -3609,7 +3738,8 @@
         "cadence": "twice_weekly",
         "entry_urls": [
           "https://www.trendforce.com/presscenter/",
-          "https://insights.trendforce.com/"
+          "https://insights.trendforce.com/",
+          "https://www.dramexchange.com/"
         ]
       },
       "news": {
@@ -3718,6 +3848,16 @@
         "entry_url": "https://investor.tsmc.com/english/monthly-revenue",
         "period_basis": "calendar_month",
         "note": "Revenue is an indirect demand observation; keep monthly and quarterly periods separate."
+      },
+      "nanya": {
+        "entry_url": "https://www.nanya.com/en/IR/",
+        "period_basis": "calendar_month",
+        "note": "Commodity-DRAM maker monthly revenue (Taiwan monthly filing, around the 10th). Revenue is an indirect pricing and demand observation, not Micron data."
+      },
+      "korea_trade": {
+        "entry_url": "https://www.motie.go.kr/",
+        "period_basis": "calendar_month",
+        "note": "MOTIE monthly export release (semiconductor total and memory). Korea Customs 1st–20th preliminary data is a separate partial-month observation."
       }
     }
   },
