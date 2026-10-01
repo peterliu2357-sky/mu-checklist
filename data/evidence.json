@@ -3589,5 +3589,2842 @@
     "mode": "verified",
     "record_hash": "9803fa7087df28d0a0c6b33aed03d73e414d0fdaef976b88b8f9af9f01d94f83",
     "id": "e-3e5e2ad23753ed9be045d6077ecf06f2b0f7099846fb6e102e01a2a81c2bbc25"
+  },
+  "e-12533c713d938cf6950244867cb4c6ed90b4c5257584f6c3479659da37113e23": {
+    "measurement": "event",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "event.next_earnings",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "next",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:41.717Z",
+        "reviewed_at": "2026-10-01T22:07:41.717Z",
+        "status": "read",
+        "locator": "Investor Webcast",
+        "excerpt": "Micron will host a conference call on Wednesday, September 30, 2026 at 2:30 p.m. Mountain Time to discuss its fourth-quarter and full-year financial results"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "dd699ac2748bd9a08c22f963747147305c52e9759f3748ec936222cf25c6d62d",
+    "id": "e-12533c713d938cf6950244867cb4c6ed90b4c5257584f6c3479659da37113e23"
+  },
+  "e-4d49932e748622ba9a5c98b1c7430ff0f9476327a989443fccc089b4c6f9dc34": {
+    "measurement": "asp",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "DRAM 售价环比",
+    "values": {
+      "current": "十几百分比高段增长",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "technology",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=7",
+        "sha256": "2821d4ccaae50b40dcd28cd4e766c69c509e73d666e4109d5907c7205a03b700",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:42.341Z",
+        "reviewed_at": "2026-10-01T22:07:42.341Z",
+        "status": "read",
+        "locator": "第 7 页 · DRAM",
+        "excerpt": "Prices increased high-teens percentage range, driven by tight DRAM industry conditions."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "7be7bea049a6e01c77d727bc27fc967d383a083743976543f155a1623a46da2b",
+    "id": "e-4d49932e748622ba9a5c98b1c7430ff0f9476327a989443fccc089b4c6f9dc34"
+  },
+  "e-ac7a62a1319998c0ccd7960a9b55826a27863e2509965b43c5d6835c184ef291": {
+    "measurement": "asp",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "NAND 售价环比",
+    "values": {
+      "current": "约 30% 增长",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "technology",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=7",
+        "sha256": "2821d4ccaae50b40dcd28cd4e766c69c509e73d666e4109d5907c7205a03b700",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:42.341Z",
+        "reviewed_at": "2026-10-01T22:07:42.341Z",
+        "status": "read",
+        "locator": "第 7 页 · NAND",
+        "excerpt": "Prices increased approximately 30%, driven by tight NAND industry conditions."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "4ee17f832ec411089755102dd15b1ada8315a35a263c0f0e52293a22b4df2a6a",
+    "id": "e-ac7a62a1319998c0ccd7960a9b55826a27863e2509965b43c5d6835c184ef291"
+  },
+  "e-a82dad06922f41989862379b442cbccf9288d9e8cbf76fc392636acf57164353": {
+    "measurement": "bit_shipments",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "DRAM 位元出货环比",
+    "values": {
+      "current": "中个位数增长",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "technology",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=7",
+        "sha256": "2821d4ccaae50b40dcd28cd4e766c69c509e73d666e4109d5907c7205a03b700",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:42.341Z",
+        "reviewed_at": "2026-10-01T22:07:42.341Z",
+        "status": "read",
+        "locator": "第 7 页 · DRAM",
+        "excerpt": "Bit shipments were up mid-single-digit percentage range."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "585d0dc26e280529b08900dd3092b6244c729abba6890cfdaa9e6b52710a4bab",
+    "id": "e-a82dad06922f41989862379b442cbccf9288d9e8cbf76fc392636acf57164353"
+  },
+  "e-641bfc9e7e16a25aa4cbf6b46d6df1a781d1f0e7eb06e299cb7b73f7689ec769": {
+    "measurement": "bit_shipments",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "NAND 位元出货环比",
+    "values": {
+      "current": "约 10% 增长",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "technology",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=7",
+        "sha256": "2821d4ccaae50b40dcd28cd4e766c69c509e73d666e4109d5907c7205a03b700",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:42.341Z",
+        "reviewed_at": "2026-10-01T22:07:42.341Z",
+        "status": "read",
+        "locator": "第 7 页 · NAND",
+        "excerpt": "Bit shipments increased approximately 10%."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "0fe5b5ddf96a18d337fa8bb7e1a5afbeba4d453cce8f59f561d95b0f1ff3cf62",
+    "id": "e-641bfc9e7e16a25aa4cbf6b46d6df1a781d1f0e7eb06e299cb7b73f7689ec769"
+  },
+  "e-e68a4187166d6015ed1d35e4a52a0a92ecd59b2edfa70932a40f73cc1e46fcfd": {
+    "measurement": "bit_shipments",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "手机与客户端位元出货",
+    "values": {
+      "current": "环比减少",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "technology",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=7",
+        "sha256": "2821d4ccaae50b40dcd28cd4e766c69c509e73d666e4109d5907c7205a03b700",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:42.341Z",
+        "reviewed_at": "2026-10-01T22:07:42.341Z",
+        "status": "read",
+        "locator": "第 7 页 · MCBU",
+        "excerpt": "MCBU revenue was up 14% sequentially, driven by higher pricing, partially offset by lower bit shipments."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "21451c4206a4135e88a5af1d472cbd4d9eff11835c87530a403e7fd192b250c0",
+    "id": "e-e68a4187166d6015ed1d35e4a52a0a92ecd59b2edfa70932a40f73cc1e46fcfd"
+  },
+  "e-1a3a92fa0b08f335404745c08772b0b280b340243a6656613120a974de3a785f": {
+    "measurement": "inventory",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "point_in_time",
+    "accounting_basis": "as_disclosed",
+    "scope": "产成品",
+    "values": {
+      "current": null,
+      "previous": 621,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "previous",
+        "value": 621,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026-05-28 期末",
+        "locator": "FQ3 10-Q 第 13 页 · Note 6 · May 28, 2026",
+        "source_id": "q3"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "fq4_balance_sheet",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:40.718Z",
+        "reviewed_at": "2026-10-01T22:07:40.718Z",
+        "status": "read",
+        "locator": "Consolidated Balance Sheets",
+        "excerpt": "Receivables | 36,197 | 31,025 … Inventories | 10,372 | 8,567 (September 3, 2026 | May 28, 2026). The release gives totals only; no inventory components or trade receivables."
+      },
+      {
+        "source_id": "q3",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/0000723125-26-000015.pdf#page=13",
+        "sha256": "79ef98b3cdc1ffc608b02635ef1fa5e9ed07298bf24f7bb717b03a06bda5e2cd",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:47.169Z",
+        "reviewed_at": "2026-10-01T22:07:47.169Z",
+        "status": "read",
+        "locator": "第 13 页 · Note 6. Inventories",
+        "excerpt": "Finished goods $ 621 (As of May 28, 2026 column)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "2e09f8e159ff2d6e0c5edb93f70bc494f86053f4fe6958a845fafbbc3047bd8a",
+    "id": "e-1a3a92fa0b08f335404745c08772b0b280b340243a6656613120a974de3a785f"
+  },
+  "e-7eb32039f2e4270cdfb175d5bf3b7c0b22b99e584a1e96c75e95bf1971aa9e1c": {
+    "measurement": "inventory",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "point_in_time",
+    "accounting_basis": "as_disclosed",
+    "scope": "总库存",
+    "values": {
+      "current": 10372,
+      "previous": 8567,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 10372,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026-09-03 期末",
+        "locator": "Consolidated Balance Sheets · Inventories · September 3, 2026",
+        "source_id": "fq4_balance_sheet"
+      },
+      {
+        "field": "previous",
+        "value": 8567,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026-05-28 期末",
+        "locator": "Consolidated Balance Sheets · Inventories · May 28, 2026",
+        "source_id": "fq4_balance_sheet"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "fq4_balance_sheet",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:40.718Z",
+        "reviewed_at": "2026-10-01T22:07:40.718Z",
+        "status": "read",
+        "locator": "Consolidated Balance Sheets",
+        "excerpt": "Inventories | 10,372 | 8,567 | 8,355 (September 3, 2026 | May 28, 2026 | August 28, 2025, in millions)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "6b6f3246125ed51b30d723b494a351bf5338b8abc27b8c5b430b958d9e30e42c",
+    "id": "e-7eb32039f2e4270cdfb175d5bf3b7c0b22b99e584a1e96c75e95bf1971aa9e1c"
+  },
+  "e-179796d2d2b8d05fd6b6df4c2517ce2fb512efd08f55e9aa520fb1320d6839ea": {
+    "measurement": "inventory",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "point_in_time",
+    "accounting_basis": "as_disclosed",
+    "scope": "在制品",
+    "values": {
+      "current": null,
+      "previous": 6960,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "previous",
+        "value": 6960,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026-05-28 期末",
+        "locator": "FQ3 10-Q 第 13 页 · Note 6 · May 28, 2026",
+        "source_id": "q3"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "fq4_balance_sheet",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:40.718Z",
+        "reviewed_at": "2026-10-01T22:07:40.718Z",
+        "status": "read",
+        "locator": "Consolidated Balance Sheets",
+        "excerpt": "Receivables | 36,197 | 31,025 … Inventories | 10,372 | 8,567 (September 3, 2026 | May 28, 2026). The release gives totals only; no inventory components or trade receivables."
+      },
+      {
+        "source_id": "q3",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/0000723125-26-000015.pdf#page=13",
+        "sha256": "79ef98b3cdc1ffc608b02635ef1fa5e9ed07298bf24f7bb717b03a06bda5e2cd",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:47.169Z",
+        "reviewed_at": "2026-10-01T22:07:47.169Z",
+        "status": "read",
+        "locator": "第 13 页 · Note 6. Inventories",
+        "excerpt": "Work in process 6,960 (As of May 28, 2026 column)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "8f25a01fe11ee781d45796938b8dac1f894ad221e26e25111f9b36d030aa56a9",
+    "id": "e-179796d2d2b8d05fd6b6df4c2517ce2fb512efd08f55e9aa520fb1320d6839ea"
+  },
+  "e-3d92e7b419f56e92557bdd63781a6aeeaa5be48679d949909daaa1adcdb54c1a": {
+    "measurement": "inventory",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "point_in_time",
+    "accounting_basis": "as_disclosed",
+    "scope": "原材料",
+    "values": {
+      "current": null,
+      "previous": 986,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "previous",
+        "value": 986,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026-05-28 期末",
+        "locator": "FQ3 10-Q 第 13 页 · Note 6 · May 28, 2026",
+        "source_id": "q3"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "fq4_balance_sheet",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:40.718Z",
+        "reviewed_at": "2026-10-01T22:07:40.718Z",
+        "status": "read",
+        "locator": "Consolidated Balance Sheets",
+        "excerpt": "Receivables | 36,197 | 31,025 … Inventories | 10,372 | 8,567 (September 3, 2026 | May 28, 2026). The release gives totals only; no inventory components or trade receivables."
+      },
+      {
+        "source_id": "q3",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/0000723125-26-000015.pdf#page=13",
+        "sha256": "79ef98b3cdc1ffc608b02635ef1fa5e9ed07298bf24f7bb717b03a06bda5e2cd",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:47.169Z",
+        "reviewed_at": "2026-10-01T22:07:47.169Z",
+        "status": "read",
+        "locator": "第 13 页 · Note 6. Inventories",
+        "excerpt": "Raw materials and supplies 986 (As of May 28, 2026 column)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "2ea3a534780ae668a2f84e9a62aaff074ab871b5d75cd0532cf4db800cf076b5",
+    "id": "e-3d92e7b419f56e92557bdd63781a6aeeaa5be48679d949909daaa1adcdb54c1a"
+  },
+  "e-5e69f0c6f67ba367e4b1b1299e96d03b7adff8078acdc23b5ccac9bf13f13403": {
+    "measurement": "inventory",
+    "unit": "days",
+    "definition_version": 1,
+    "temporal_basis": "period_end",
+    "accounting_basis": "as_disclosed",
+    "scope": "库存天数",
+    "values": {
+      "current": 129,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 129,
+        "scale": 1,
+        "source_unit": "days",
+        "period": "FQ4 期末",
+        "locator": "讲稿第 8 页 · DIO",
+        "source_id": "inventory_days"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "inventory_days",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=8",
+        "sha256": "2821d4ccaae50b40dcd28cd4e766c69c509e73d666e4109d5907c7205a03b700",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:43.380Z",
+        "reviewed_at": "2026-10-01T22:07:43.380Z",
+        "status": "read",
+        "locator": "第 8 页 · Inventory",
+        "excerpt": "Ending inventory for fiscal Q4 was $10.4 billion, with days of inventory (DIO) at 129, an increase of nine days sequentially."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "ee45eeeef54e2cac67967f4cec6aaf872991a9603f97acd8b9da6f93fbbe2e5d",
+    "id": "e-5e69f0c6f67ba367e4b1b1299e96d03b7adff8078acdc23b5ccac9bf13f13403"
+  },
+  "e-3bd9d9747c2c53d3b1d59b980e6ac30f048b1fe87d5d96982da50c7fed722927": {
+    "measurement": "inventory",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "point_in_time",
+    "accounting_basis": "as_disclosed",
+    "scope": "贸易应收款",
+    "values": {
+      "current": null,
+      "previous": 26894,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "previous",
+        "value": 26894,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026-05-28 期末",
+        "locator": "FQ3 10-Q 第 13 页 · Note 5 · Trade receivables",
+        "source_id": "q3"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "fq4_balance_sheet",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:40.718Z",
+        "reviewed_at": "2026-10-01T22:07:40.718Z",
+        "status": "read",
+        "locator": "Consolidated Balance Sheets",
+        "excerpt": "Receivables | 36,197 | 31,025 … Inventories | 10,372 | 8,567 (September 3, 2026 | May 28, 2026). The release gives totals only; no inventory components or trade receivables."
+      },
+      {
+        "source_id": "q3",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/0000723125-26-000015.pdf#page=13",
+        "sha256": "79ef98b3cdc1ffc608b02635ef1fa5e9ed07298bf24f7bb717b03a06bda5e2cd",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:47.169Z",
+        "reviewed_at": "2026-10-01T22:07:47.169Z",
+        "status": "read",
+        "locator": "第 13 页 · Note 5. Receivables",
+        "excerpt": "Trade receivables $ 26,894 (As of May 28, 2026 column)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "4bb4e2934dd29a705a17b995f1f68deb0bc2841559d1fc558e32e026b3d20230",
+    "id": "e-3bd9d9747c2c53d3b1d59b980e6ac30f048b1fe87d5d96982da50c7fed722927"
+  },
+  "e-a0768f7b53f19540c066757f4c2c2233573633b7082ec421ccf9b913f72b743c": {
+    "mode": "calculated",
+    "record_hash": "f9041a17369a0c218251d5b2a69cc71944593cb07a388a2dac8d26afbbf6b49a",
+    "inputs": [
+      "4bb4e2934dd29a705a17b995f1f68deb0bc2841559d1fc558e32e026b3d20230",
+      "306c3a9c0d18d4a0a038c0bab2b97d3a35eb2c508339e3ca0d23b18f52b9d82e"
+    ],
+    "formula": "ratio_pct",
+    "id": "e-a0768f7b53f19540c066757f4c2c2233573633b7082ec421ccf9b913f72b743c"
+  },
+  "e-fc09840675bbcaef68b7d7988461c760776ac91db39cefd24ea7af1418a7164b": {
+    "measurement": "revenue",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "总收入",
+    "values": {
+      "current": 54229,
+      "previous": 41456,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 54229,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FQ4-26（截至 2026-09-03 的季度）",
+        "locator": "Quarterly Financial Results · Revenue · FQ4-26",
+        "source_id": "financial"
+      },
+      {
+        "field": "previous",
+        "value": 41456,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FQ3-26（截至 2026-05-28 的季度）",
+        "locator": "Quarterly Financial Results · Revenue · FQ3-26",
+        "source_id": "financial"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "financial",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:38.615Z",
+        "reviewed_at": "2026-10-01T22:07:38.615Z",
+        "status": "read",
+        "locator": "Quarterly Financial Results",
+        "excerpt": "Revenue | $ 54,229 | $ 41,456 | $ 11,315 (FQ4-26 | FQ3-26 | FQ4-25, in millions)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "306c3a9c0d18d4a0a038c0bab2b97d3a35eb2c508339e3ca0d23b18f52b9d82e",
+    "id": "e-fc09840675bbcaef68b7d7988461c760776ac91db39cefd24ea7af1418a7164b"
+  },
+  "e-4c89510caffbbf60c6e736d357e9a6475e521ba3fa130dfcef52436a197f7803": {
+    "measurement": "revenue",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "DRAM 收入",
+    "values": {
+      "current": 39800,
+      "previous": 31328,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 39.8,
+        "scale": 1000,
+        "source_unit": "USD billions",
+        "period": "FQ4-26（截至 2026-09-03 的季度）",
+        "locator": "讲稿第 7 页 · DRAM revenue",
+        "source_id": "technology_revenue"
+      },
+      {
+        "field": "previous",
+        "value": 31328,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FQ3-26（截至 2026-05-28 的季度）",
+        "locator": "FQ3 业绩材料第 33 页 · DRAM · FQ3-26",
+        "source_id": "technology_revenue_prior"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "technology_revenue",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=7",
+        "sha256": "2821d4ccaae50b40dcd28cd4e766c69c509e73d666e4109d5907c7205a03b700",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:42.900Z",
+        "reviewed_at": "2026-10-01T22:07:42.900Z",
+        "status": "read",
+        "locator": "第 7 页 · DRAM",
+        "excerpt": "Fiscal Q4 DRAM revenue was a record $39.8 billion, up 343% year over year, and represented 73% of total revenue. Sequentially, DRAM revenue increased 27%."
+      },
+      {
+        "source_id": "technology_revenue_prior",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf#page=33",
+        "sha256": "29468a786fa4a9c7728735ea8e3ad5853bb1375a297c636e86e6a4dd3b155929",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:45.500Z",
+        "reviewed_at": "2026-10-01T22:07:45.500Z",
+        "status": "read",
+        "locator": "第 33 页 · Revenue by technology",
+        "excerpt": "DRAM $31,328 76% (FQ3-26, amounts in millions)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "1a5e12fec4ded6ff06e4947bcf15c68bb576613af909ec5b0d6f8dba9cf909b1",
+    "id": "e-4c89510caffbbf60c6e736d357e9a6475e521ba3fa130dfcef52436a197f7803"
+  },
+  "e-1caa7fb51abe8fb801ea7306c69f350971cc5bc950cdb6afec06388c4f3e1a64": {
+    "measurement": "revenue",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "NAND 收入",
+    "values": {
+      "current": 14100,
+      "previous": 9943,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 14.1,
+        "scale": 1000,
+        "source_unit": "USD billions",
+        "period": "FQ4-26（截至 2026-09-03 的季度）",
+        "locator": "讲稿第 7 页 · NAND revenue",
+        "source_id": "technology_revenue"
+      },
+      {
+        "field": "previous",
+        "value": 9943,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FQ3-26（截至 2026-05-28 的季度）",
+        "locator": "FQ3 业绩材料第 33 页 · NAND · FQ3-26",
+        "source_id": "technology_revenue_prior"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "technology_revenue",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=7",
+        "sha256": "2821d4ccaae50b40dcd28cd4e766c69c509e73d666e4109d5907c7205a03b700",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:42.900Z",
+        "reviewed_at": "2026-10-01T22:07:42.900Z",
+        "status": "read",
+        "locator": "第 7 页 · NAND",
+        "excerpt": "Fiscal Q4 NAND revenue was a record $14.1 billion, up 526% year over year, and represented 26% of total revenue. Sequentially, NAND revenue increased 42%."
+      },
+      {
+        "source_id": "technology_revenue_prior",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf#page=33",
+        "sha256": "29468a786fa4a9c7728735ea8e3ad5853bb1375a297c636e86e6a4dd3b155929",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:45.500Z",
+        "reviewed_at": "2026-10-01T22:07:45.500Z",
+        "status": "read",
+        "locator": "第 33 页 · Revenue by technology",
+        "excerpt": "NAND 9,943 24% (FQ3-26, amounts in millions)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "156f13cd09332ed2ced711c70858a7141a644ce12cb10010d7b459e981904568",
+    "id": "e-1caa7fb51abe8fb801ea7306c69f350971cc5bc950cdb6afec06388c4f3e1a64"
+  },
+  "e-f63e5700a8ae4f73917753f2fed6ba597fa0fecfd2d3ac76bcc7d9b9749cd6ec": {
+    "measurement": "revenue",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "云内存收入 CMBU",
+    "values": {
+      "current": 16283,
+      "previous": 13769,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 16283,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FQ4-26（截至 2026-09-03 的季度）",
+        "locator": "Quarterly Business Unit Financial Results · Cloud Memory Business Unit · FQ4-26",
+        "source_id": "business"
+      },
+      {
+        "field": "previous",
+        "value": 13769,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FQ3-26（截至 2026-05-28 的季度）",
+        "locator": "Quarterly Business Unit Financial Results · Cloud Memory Business Unit · FQ3-26",
+        "source_id": "business"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "business",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:39.146Z",
+        "reviewed_at": "2026-10-01T22:07:39.146Z",
+        "status": "read",
+        "locator": "Quarterly Business Unit Financial Results",
+        "excerpt": "Cloud Memory Business Unit | Revenue | $ 16,283 | $ 13,769 (FQ4-26 | FQ3-26)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "89c98f4e0e0aaaaadac67ea376a6fae0bc77301bb9d55ae4148225cca5790bd8",
+    "id": "e-f63e5700a8ae4f73917753f2fed6ba597fa0fecfd2d3ac76bcc7d9b9749cd6ec"
+  },
+  "e-422feebe4c83c476f3b88f237afe5bd84767243dcf42502421bb8f16c9a5fd5d": {
+    "measurement": "revenue",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "核心数据中心收入 CDBU",
+    "values": {
+      "current": 18002,
+      "previous": 11524,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 18002,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FQ4-26（截至 2026-09-03 的季度）",
+        "locator": "Quarterly Business Unit Financial Results · Core Data Center Business Unit · FQ4-26",
+        "source_id": "business"
+      },
+      {
+        "field": "previous",
+        "value": 11524,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FQ3-26（截至 2026-05-28 的季度）",
+        "locator": "Quarterly Business Unit Financial Results · Core Data Center Business Unit · FQ3-26",
+        "source_id": "business"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "business",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:39.146Z",
+        "reviewed_at": "2026-10-01T22:07:39.146Z",
+        "status": "read",
+        "locator": "Quarterly Business Unit Financial Results",
+        "excerpt": "Core Data Center Business Unit | Revenue | $ 18,002 | $ 11,524 (FQ4-26 | FQ3-26)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "53ccc83363d22377ff7d23b1400626170e36ddcb3e67e3c45005e8dc08782d81",
+    "id": "e-422feebe4c83c476f3b88f237afe5bd84767243dcf42502421bb8f16c9a5fd5d"
+  },
+  "e-2e25a6c2b818f23d92fec8e720717fb6f548b436b515e488af8ac25c0afccac7": {
+    "mode": "calculated",
+    "record_hash": "8b720cd31a4abc7481e9ed618d3028b5016ebe81f1f20b3da340935841f7cb3f",
+    "inputs": [
+      "89c98f4e0e0aaaaadac67ea376a6fae0bc77301bb9d55ae4148225cca5790bd8",
+      "53ccc83363d22377ff7d23b1400626170e36ddcb3e67e3c45005e8dc08782d81",
+      "306c3a9c0d18d4a0a038c0bab2b97d3a35eb2c508339e3ca0d23b18f52b9d82e"
+    ],
+    "formula": "sum_ratio_pct",
+    "id": "e-2e25a6c2b818f23d92fec8e720717fb6f548b436b515e488af8ac25c0afccac7"
+  },
+  "e-83cbd5aad8c65679a1a1a5ab8edee1a24c7930a9464ff39d8735fa0ac879df44": {
+    "measurement": "revenue",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "手机与客户端收入 MCBU",
+    "values": {
+      "current": 13114,
+      "previous": 11521,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 13114,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FQ4-26（截至 2026-09-03 的季度）",
+        "locator": "Quarterly Business Unit Financial Results · Mobile and Client Business Unit · FQ4-26",
+        "source_id": "business"
+      },
+      {
+        "field": "previous",
+        "value": 11521,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FQ3-26（截至 2026-05-28 的季度）",
+        "locator": "Quarterly Business Unit Financial Results · Mobile and Client Business Unit · FQ3-26",
+        "source_id": "business"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "business",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:39.146Z",
+        "reviewed_at": "2026-10-01T22:07:39.146Z",
+        "status": "read",
+        "locator": "Quarterly Business Unit Financial Results",
+        "excerpt": "Mobile and Client Business Unit | Revenue | $ 13,114 | $ 11,521 (FQ4-26 | FQ3-26)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "d715abeb20f48ffdb889cbd266efcd248ac02961ce54fbbbaa6ee1cc1d34f00c",
+    "id": "e-83cbd5aad8c65679a1a1a5ab8edee1a24c7930a9464ff39d8735fa0ac879df44"
+  },
+  "e-aeb4b72999281751c29e028333bcb8f5ebc56e7fe689bc0273033a0206604bfc": {
+    "measurement": "revenue",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "汽车与嵌入式收入 AEBU",
+    "values": {
+      "current": 6824,
+      "previous": 4634,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 6824,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FQ4-26（截至 2026-09-03 的季度）",
+        "locator": "Quarterly Business Unit Financial Results · Automotive and Embedded Business Unit · FQ4-26",
+        "source_id": "business"
+      },
+      {
+        "field": "previous",
+        "value": 4634,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FQ3-26（截至 2026-05-28 的季度）",
+        "locator": "Quarterly Business Unit Financial Results · Automotive and Embedded Business Unit · FQ3-26",
+        "source_id": "business"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "business",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:39.146Z",
+        "reviewed_at": "2026-10-01T22:07:39.146Z",
+        "status": "read",
+        "locator": "Quarterly Business Unit Financial Results",
+        "excerpt": "Automotive and Embedded Business Unit | Revenue | $ 6,824 | $ 4,634 (FQ4-26 | FQ3-26)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "cd131bcd4ef81b8711e7d723feb517ea4c6aab465233f0827c9b292ab054a0f5",
+    "id": "e-aeb4b72999281751c29e028333bcb8f5ebc56e7fe689bc0273033a0206604bfc"
+  },
+  "e-f4eb881e5f4d5f391b42e70252f7387c5f71eccc29309a34c2db883a6ffd14e5": {
+    "measurement": "revenue",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "non_gaap",
+    "scope": "非 GAAP 每股盈利",
+    "values": {
+      "current": 33.42,
+      "previous": 25.11,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 33.42,
+        "scale": 1,
+        "source_unit": "USD per share",
+        "period": "FQ4-26（截至 2026-09-03 的季度）",
+        "locator": "Non-GAAP diluted EPS · 4th Qtr.",
+        "source_id": "cash_table"
+      },
+      {
+        "field": "previous",
+        "value": 25.11,
+        "scale": 1,
+        "source_unit": "USD per share",
+        "period": "FQ3-26（截至 2026-05-28 的季度）",
+        "locator": "Non-GAAP diluted EPS · 3rd Qtr.",
+        "source_id": "cash_table"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "cash_table",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:39.640Z",
+        "reviewed_at": "2026-10-01T22:07:39.640Z",
+        "status": "read",
+        "locator": "Reconciliation of GAAP to Non-GAAP Measures",
+        "excerpt": "Non-GAAP diluted earnings per share | $ 33.42 | $ 25.11 | $ 3.03 (4th Qtr. 2026 | 3rd Qtr. 2026 | 4th Qtr. 2025)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "9636948d9e234a34905747b6cfd12d04eed2e66be1aea9e2749f0420eb2f6eee",
+    "id": "e-f4eb881e5f4d5f391b42e70252f7387c5f71eccc29309a34c2db883a6ffd14e5"
+  },
+  "e-b3b2e597458ab6e14948404a7d7e3e918ff3162934fa6cb678a749310c3f9527": {
+    "measurement": "revenue",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "gaap",
+    "scope": "GAAP 每股盈利",
+    "values": {
+      "current": 32.87,
+      "previous": 24.67,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 32.87,
+        "scale": 1,
+        "source_unit": "USD per share",
+        "period": "FQ4-26（截至 2026-09-03 的季度）",
+        "locator": "GAAP diluted EPS · 4th Qtr.",
+        "source_id": "cash_table"
+      },
+      {
+        "field": "previous",
+        "value": 24.67,
+        "scale": 1,
+        "source_unit": "USD per share",
+        "period": "FQ3-26（截至 2026-05-28 的季度）",
+        "locator": "GAAP diluted EPS · 3rd Qtr.",
+        "source_id": "cash_table"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "cash_table",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:39.640Z",
+        "reviewed_at": "2026-10-01T22:07:39.640Z",
+        "status": "read",
+        "locator": "Reconciliation of GAAP to Non-GAAP Measures",
+        "excerpt": "GAAP diluted earnings per share | $ 32.87 | $ 24.67 | $ 2.83 (4th Qtr. 2026 | 3rd Qtr. 2026 | 4th Qtr. 2025)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "a36631698bb3d2d47def7955ef6011140eedf73a79c59b88124c759fdd7e82b2",
+    "id": "e-b3b2e597458ab6e14948404a7d7e3e918ff3162934fa6cb678a749310c3f9527"
+  },
+  "e-ab4b74cceebb829ac55e7bad9e607851f3ed432d1aba36b7d0282d5f3080df83": {
+    "measurement": "margin",
+    "unit": "pct",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "non_gaap",
+    "scope": "非 GAAP 毛利率",
+    "values": {
+      "current": 87,
+      "previous": 84.9,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 87,
+        "scale": 1,
+        "source_unit": "percent",
+        "period": "FQ4-26（截至 2026-09-03 的季度）",
+        "locator": "Non-GAAP Percent of revenue · FQ4-26",
+        "source_id": "financial"
+      },
+      {
+        "field": "previous",
+        "value": 84.9,
+        "scale": 1,
+        "source_unit": "percent",
+        "period": "FQ3-26（截至 2026-05-28 的季度）",
+        "locator": "Non-GAAP Percent of revenue · FQ3-26",
+        "source_id": "financial"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "financial",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:38.615Z",
+        "reviewed_at": "2026-10-01T22:07:38.615Z",
+        "status": "read",
+        "locator": "Quarterly Financial Results · Non-GAAP",
+        "excerpt": "Gross margin | 47,204 | 35,199 … Percent of revenue | 87.0 % | 84.9 % (Non-GAAP, FQ4-26 | FQ3-26)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "9ea63788a1175b3013136aff6019cf31058e622b50d6403450caff4c0e303d54",
+    "id": "e-ab4b74cceebb829ac55e7bad9e607851f3ed432d1aba36b7d0282d5f3080df83"
+  },
+  "e-40a54f3c44827793141fed50423726ef3095d17a7f72c7f092d35d22ae3a0730": {
+    "measurement": "margin",
+    "unit": "pct",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "gaap",
+    "scope": "GAAP 毛利率",
+    "values": {
+      "current": 86.8,
+      "previous": 84.6,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 86.8,
+        "scale": 1,
+        "source_unit": "percent",
+        "period": "FQ4-26（截至 2026-09-03 的季度）",
+        "locator": "GAAP Percent of revenue · FQ4-26",
+        "source_id": "financial"
+      },
+      {
+        "field": "previous",
+        "value": 84.6,
+        "scale": 1,
+        "source_unit": "percent",
+        "period": "FQ3-26（截至 2026-05-28 的季度）",
+        "locator": "GAAP Percent of revenue · FQ3-26",
+        "source_id": "financial"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "financial",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:38.615Z",
+        "reviewed_at": "2026-10-01T22:07:38.615Z",
+        "status": "read",
+        "locator": "Quarterly Financial Results · GAAP",
+        "excerpt": "Gross margin | 47,047 | 35,056 … Percent of revenue | 86.8 % | 84.6 % (GAAP, FQ4-26 | FQ3-26)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "d10048a1d39759b508bc920b3f9a1b7e7a9277369c3f8f4a7133894501e273cf",
+    "id": "e-40a54f3c44827793141fed50423726ef3095d17a7f72c7f092d35d22ae3a0730"
+  },
+  "e-683c0bd9739e5c2d9828828e7be3fa6aa17182e62407f1e4cbf5cdbdd15400a3": {
+    "measurement": "revenue",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "收入",
+    "values": {
+      "current": 54229,
+      "previous": 41456,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 54229,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FQ4-26（截至 2026-09-03 的季度）",
+        "locator": "Quarterly Financial Results · Revenue · FQ4-26",
+        "source_id": "financial"
+      },
+      {
+        "field": "previous",
+        "value": 41456,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FQ3-26（截至 2026-05-28 的季度）",
+        "locator": "Quarterly Financial Results · Revenue · FQ3-26",
+        "source_id": "financial"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "financial",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:38.615Z",
+        "reviewed_at": "2026-10-01T22:07:38.615Z",
+        "status": "read",
+        "locator": "Quarterly Financial Results",
+        "excerpt": "Revenue | $ 54,229 | $ 41,456 (FQ4-26 | FQ3-26, in millions)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "5a592c398842b6886037e6ad7ba5e245cd65bad53dcc6477b2b9db9a73a1079d",
+    "id": "e-683c0bd9739e5c2d9828828e7be3fa6aa17182e62407f1e4cbf5cdbdd15400a3"
+  },
+  "e-aed54bf59917e1d1663c93ebf5eaaba7735da2c1a6a4f9f5cda7a522ae5ef6a3": {
+    "measurement": "margin",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "gaap",
+    "scope": "GAAP 销售成本",
+    "values": {
+      "current": 7182,
+      "previous": 6400,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 7182,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FQ4-26（截至 2026-09-03 的季度）",
+        "locator": "Cost of goods sold · 4th Qtr.",
+        "source_id": "financial"
+      },
+      {
+        "field": "previous",
+        "value": 6400,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FQ3-26（截至 2026-05-28 的季度）",
+        "locator": "Cost of goods sold · 3rd Qtr.",
+        "source_id": "financial"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "financial",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:38.615Z",
+        "reviewed_at": "2026-10-01T22:07:38.615Z",
+        "status": "read",
+        "locator": "Consolidated Statements of Operations",
+        "excerpt": "Cost of goods sold | 7,182 | 6,400 | 6,261 (4th Qtr. 2026 | 3rd Qtr. 2026 | 4th Qtr. 2025)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "8dc354cc1cb4557b2aeb28cd28c7c5b6a49d256232140c7ca5847081958c6ae2",
+    "id": "e-aed54bf59917e1d1663c93ebf5eaaba7735da2c1a6a4f9f5cda7a522ae5ef6a3"
+  },
+  "e-e6f5e6a5cf48d9005387064700f9a5ed11395ced2c5f5d7057a3b5af133cb535": {
+    "measurement": "margin",
+    "unit": "pct",
+    "definition_version": 1,
+    "temporal_basis": "forecast_quarter",
+    "accounting_basis": "non_gaap",
+    "scope": "下季非 GAAP 毛利率指引",
+    "values": {
+      "current": 86.25,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 86.25,
+        "scale": 1,
+        "source_unit": "percent",
+        "period": "FQ1-27 指引",
+        "locator": "Business Outlook · Gross margin · Non-GAAP",
+        "source_id": "guidance"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "guidance",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:41.233Z",
+        "reviewed_at": "2026-10-01T22:07:41.233Z",
+        "status": "read",
+        "locator": "Business Outlook",
+        "excerpt": "FQ1-27 … Gross margin | Approximately 85.95% | Approximately 86.25% (GAAP | Non-GAAP Outlook)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "39d8ec056497251c48c2db06cfa69577b9774f9545bb8938c948a386db102241",
+    "id": "e-e6f5e6a5cf48d9005387064700f9a5ed11395ced2c5f5d7057a3b5af133cb535"
+  },
+  "e-b4acda84afdc4959ad8f5fce5a0c098fd110835bb730316dbce13a0fe95c7611": {
+    "measurement": "margin",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "同组合每位元成本变化",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "technology",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=7",
+        "sha256": "2821d4ccaae50b40dcd28cd4e766c69c509e73d666e4109d5907c7205a03b700",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:42.341Z",
+        "reviewed_at": "2026-10-01T22:07:42.341Z",
+        "status": "read",
+        "locator": "第 7 页 · Gross margin",
+        "excerpt": "Consolidated gross margin for fiscal Q4 was 87.0%, up 210 basis points sequentially. This improvement was driven primarily by higher pricing and strong execution, partially offset by mix."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "f77b43b4ea1e7711b3205886df49c02a426dc6c004aa39e2d76d21b3dbe17c73",
+    "id": "e-b4acda84afdc4959ad8f5fce5a0c098fd110835bb730316dbce13a0fe95c7611"
+  },
+  "e-ea471ddac103a981c6df05056635f918aa49e5e89ffb020936167ebb4a987f9e": {
+    "measurement": "cash",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "调整后自由现金流",
+    "values": {
+      "current": 33199,
+      "previous": 18304,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 33199,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FQ4-26（截至 2026-09-03 的季度）",
+        "locator": "Reconciliation of GAAP to Non-GAAP Measures, Continued · Adjusted free cash flow · 4th Qtr.",
+        "source_id": "cash_table"
+      },
+      {
+        "field": "previous",
+        "value": 18304,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FQ3-26（截至 2026-05-28 的季度）",
+        "locator": "Reconciliation of GAAP to Non-GAAP Measures, Continued · Adjusted free cash flow · 3rd Qtr.",
+        "source_id": "cash_table"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "cash_table",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:39.640Z",
+        "reviewed_at": "2026-10-01T22:07:39.640Z",
+        "status": "read",
+        "locator": "Reconciliation of GAAP to Non-GAAP Measures, Continued",
+        "excerpt": "Adjusted free cash flow | 33,199 | 18,304 (4th Qtr. 2026 | 3rd Qtr. 2026, in millions)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "08041b06b4cd0808f7dca0f80ad3b442207a0f695a0e34fe4225a3cc82ffa492",
+    "id": "e-ea471ddac103a981c6df05056635f918aa49e5e89ffb020936167ebb4a987f9e"
+  },
+  "e-3ea0f33febd0e8245d6c77bfdbbc193f93cd3956e86bedeb3648565f1d202609": {
+    "measurement": "cash",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "经营现金流",
+    "values": {
+      "current": 43973,
+      "previous": 25388,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 43973,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FQ4-26（截至 2026-09-03 的季度）",
+        "locator": "Reconciliation of GAAP to Non-GAAP Measures, Continued · GAAP net cash provided by operating activities · 4th Qtr.",
+        "source_id": "cash_table"
+      },
+      {
+        "field": "previous",
+        "value": 25388,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FQ3-26（截至 2026-05-28 的季度）",
+        "locator": "Reconciliation of GAAP to Non-GAAP Measures, Continued · GAAP net cash provided by operating activities · 3rd Qtr.",
+        "source_id": "cash_table"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "cash_table",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:39.640Z",
+        "reviewed_at": "2026-10-01T22:07:39.640Z",
+        "status": "read",
+        "locator": "Reconciliation of GAAP to Non-GAAP Measures, Continued",
+        "excerpt": "GAAP net cash provided by operating activities | 43,973 | 25,388 (4th Qtr. 2026 | 3rd Qtr. 2026, in millions)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "8a201b00493a2311a062559483b1db76f85c5fb9b3712d98ad1b502f9c234015",
+    "id": "e-3ea0f33febd0e8245d6c77bfdbbc193f93cd3956e86bedeb3648565f1d202609"
+  },
+  "e-62422c96e673ef047a58674a55e30cf2761c761d4e681617e93e2bc78bc3c32e": {
+    "measurement": "cash",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "设备购置现金流出",
+    "values": {
+      "current": 11110,
+      "previous": 7826,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 11110,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FQ4-26（截至 2026-09-03 的季度）",
+        "locator": "Reconciliation of GAAP to Non-GAAP Measures, Continued · Expenditures for property, plant, and equipment · 4th Qtr.（原文以括号表示流出）",
+        "source_id": "cash_table"
+      },
+      {
+        "field": "previous",
+        "value": 7826,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FQ3-26（截至 2026-05-28 的季度）",
+        "locator": "Reconciliation of GAAP to Non-GAAP Measures, Continued · Expenditures for property, plant, and equipment · 3rd Qtr.",
+        "source_id": "cash_table"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "cash_table",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:39.640Z",
+        "reviewed_at": "2026-10-01T22:07:39.640Z",
+        "status": "read",
+        "locator": "Reconciliation of GAAP to Non-GAAP Measures, Continued",
+        "excerpt": "Expenditures for property, plant, and equipment | (11,110) | (7,826) (4th Qtr. 2026 | 3rd Qtr. 2026, in millions)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "a2dc600a28e7336cf10291a31ea8460da425d94488c321589f2450b0c308c4ef",
+    "id": "e-62422c96e673ef047a58674a55e30cf2761c761d4e681617e93e2bc78bc3c32e"
+  },
+  "e-ee0319d1dd5f45ffed2c4dfd3fa223aa39e761ec306ae642049911de4f85248b": {
+    "measurement": "cash",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "收到的政府补助",
+    "values": {
+      "current": 327,
+      "previous": 733,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 327,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FQ4-26（截至 2026-09-03 的季度）",
+        "locator": "Reconciliation of GAAP to Non-GAAP Measures, Continued · Proceeds from government incentives · 4th Qtr.",
+        "source_id": "cash_table"
+      },
+      {
+        "field": "previous",
+        "value": 733,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FQ3-26（截至 2026-05-28 的季度）",
+        "locator": "Reconciliation of GAAP to Non-GAAP Measures, Continued · Proceeds from government incentives · 3rd Qtr.",
+        "source_id": "cash_table"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "cash_table",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:39.640Z",
+        "reviewed_at": "2026-10-01T22:07:39.640Z",
+        "status": "read",
+        "locator": "Reconciliation of GAAP to Non-GAAP Measures, Continued",
+        "excerpt": "Proceeds from government incentives | 327 | 733 (4th Qtr. 2026 | 3rd Qtr. 2026, in millions)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "24a26c46c81703a3773581da9fad202a327b4a8341c5c6671f935d547a5bfaab",
+    "id": "e-ee0319d1dd5f45ffed2c4dfd3fa223aa39e761ec306ae642049911de4f85248b"
+  },
+  "e-f692cd9b49f7c6f2fbb37818e1e84fa4640d76405c51a74e2b19749916b927d3": {
+    "measurement": "cash",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "资产出售收入",
+    "values": {
+      "current": 9,
+      "previous": 9,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 9,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FQ4-26（截至 2026-09-03 的季度）",
+        "locator": "Reconciliation of GAAP to Non-GAAP Measures, Continued · Proceeds from sales of property, plant, and equipment · 4th Qtr.",
+        "source_id": "cash_table"
+      },
+      {
+        "field": "previous",
+        "value": 9,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FQ3-26（截至 2026-05-28 的季度）",
+        "locator": "Reconciliation of GAAP to Non-GAAP Measures, Continued · Proceeds from sales of property, plant, and equipment · 3rd Qtr.",
+        "source_id": "cash_table"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "cash_table",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:39.640Z",
+        "reviewed_at": "2026-10-01T22:07:39.640Z",
+        "status": "read",
+        "locator": "Reconciliation of GAAP to Non-GAAP Measures, Continued",
+        "excerpt": "Proceeds from sales of property, plant, and equipment | 9 | 9 (4th Qtr. 2026 | 3rd Qtr. 2026, in millions)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "99011e969ef5ad8264fd0de2b6f37e8b0f751b2fa6247a2e06bf0411580171dc",
+    "id": "e-f692cd9b49f7c6f2fbb37818e1e84fa4640d76405c51a74e2b19749916b927d3"
+  },
+  "e-9bfdbfb8f958a5cc431ac7d9ed83cc840593f72a2514ced4979983c5e5c3bd07": {
+    "mode": "calculated",
+    "record_hash": "cbb973ade3203e97ee639366680ddd7fdf7ab6a72aee846a97eb40d2f4a7ea57",
+    "inputs": [
+      "8a201b00493a2311a062559483b1db76f85c5fb9b3712d98ad1b502f9c234015",
+      "a2dc600a28e7336cf10291a31ea8460da425d94488c321589f2450b0c308c4ef"
+    ],
+    "formula": "difference",
+    "id": "e-9bfdbfb8f958a5cc431ac7d9ed83cc840593f72a2514ced4979983c5e5c3bd07"
+  },
+  "e-13b1452aa0a90733a5730a8b310f263cb48db06615b4e5cc271e13205199a0f9": {
+    "mode": "calculated",
+    "record_hash": "fff1e1820ccfc6d519a01d0ea1aa357be8a8a919fbb8f791e6660ab8c418f89c",
+    "inputs": [
+      "8a201b00493a2311a062559483b1db76f85c5fb9b3712d98ad1b502f9c234015",
+      "515a2e7bb811e680de39b75de2589c80c3d0f6c8c042d5407898081706d4165c"
+    ],
+    "formula": "ratio_pct",
+    "id": "e-13b1452aa0a90733a5730a8b310f263cb48db06615b4e5cc271e13205199a0f9"
+  },
+  "e-2258dff8dcbf7c7406790a3168c61d10f57aec7c0bcdf31991e83f41dd8b8218": {
+    "measurement": "capex",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "净资本开支",
+    "values": {
+      "current": 10774,
+      "previous": 7084,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 10774,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FQ4-26（截至 2026-09-03 的季度）",
+        "locator": "Reconciliation of GAAP to Non-GAAP Measures, Continued · Investments in capital expenditures, net · 4th Qtr.（原文以括号表示流出）",
+        "source_id": "cash_table"
+      },
+      {
+        "field": "previous",
+        "value": 7084,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FQ3-26（截至 2026-05-28 的季度）",
+        "locator": "Reconciliation of GAAP to Non-GAAP Measures, Continued · Investments in capital expenditures, net · 3rd Qtr.",
+        "source_id": "cash_table"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "cash_table",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:39.640Z",
+        "reviewed_at": "2026-10-01T22:07:39.640Z",
+        "status": "read",
+        "locator": "Reconciliation of GAAP to Non-GAAP Measures, Continued",
+        "excerpt": "Investments in capital expenditures, net | (10,774) | (7,084) (4th Qtr. 2026 | 3rd Qtr. 2026, in millions)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "09ef051dfd78949cef1a82174644a4fc882e805d2ddb4f40a760c8042096c36d",
+    "id": "e-2258dff8dcbf7c7406790a3168c61d10f57aec7c0bcdf31991e83f41dd8b8218"
+  },
+  "e-bcf1cc477886ffc05bf7c2939598a51b7fcdb70605d510eb06a47be5131bb4f5": {
+    "mode": "calculated",
+    "record_hash": "db888ad74a51b8fa8e914b45802b5d8d7ea6e89710699b315f6f36629354de51",
+    "inputs": [
+      "09ef051dfd78949cef1a82174644a4fc882e805d2ddb4f40a760c8042096c36d",
+      "306c3a9c0d18d4a0a038c0bab2b97d3a35eb2c508339e3ca0d23b18f52b9d82e"
+    ],
+    "formula": "ratio_pct",
+    "id": "e-bcf1cc477886ffc05bf7c2939598a51b7fcdb70605d510eb06a47be5131bb4f5"
+  },
+  "e-ae7b149d81d61f32e09bed243571c2b54f801a8e6c4ff8060af34498047afe7f": {
+    "mode": "calculated",
+    "record_hash": "beffb915d965b55b714cce409f7e710255e08928975e5b25d74091fafc96808a",
+    "inputs": [
+      "8a201b00493a2311a062559483b1db76f85c5fb9b3712d98ad1b502f9c234015",
+      "09ef051dfd78949cef1a82174644a4fc882e805d2ddb4f40a760c8042096c36d"
+    ],
+    "formula": "ratio",
+    "id": "e-ae7b149d81d61f32e09bed243571c2b54f801a8e6c4ff8060af34498047afe7f"
+  },
+  "e-f6a6bf8eee6926d35c698cc009d5ea4faabb68b0351d70e963a32461981680bd": {
+    "measurement": "capex",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "forecast_quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "下一季净资本开支",
+    "values": {
+      "current": 11500,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 11.5,
+        "scale": 1000,
+        "source_unit": "USD billions",
+        "period": "FY2027 FQ1 计划",
+        "locator": "讲稿第 10 页 · fiscal Q1 capex",
+        "source_id": "capex_plan"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "capex_plan",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=10",
+        "sha256": "2821d4ccaae50b40dcd28cd4e766c69c509e73d666e4109d5907c7205a03b700",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:43.901Z",
+        "reviewed_at": "2026-10-01T22:07:43.901Z",
+        "status": "read",
+        "locator": "第 10 页 · Capex",
+        "excerpt": "In fiscal Q1, we project capex of around $11.5 billion and anticipate first-half fiscal 2027 capex to be approximately $25 billion."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "662fa4168c3873706fa232a94e502ac4283ccb5750dd829fd44aa2f204ea2b61",
+    "id": "e-f6a6bf8eee6926d35c698cc009d5ea4faabb68b0351d70e963a32461981680bd"
+  },
+  "e-30bda9e9697b8199532cbb1f7c576b9a8e887ef1459a8d21d209566db0ab9910": {
+    "measurement": "capex",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "FY2027 季度开支",
+    "values": {
+      "current": "上半财年约 250 亿美元；下半财年更高",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "capex_plan",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=10",
+        "sha256": "2821d4ccaae50b40dcd28cd4e766c69c509e73d666e4109d5907c7205a03b700",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:43.901Z",
+        "reviewed_at": "2026-10-01T22:07:43.901Z",
+        "status": "read",
+        "locator": "第 10 页 · Capex",
+        "excerpt": "anticipate first-half fiscal 2027 capex to be approximately $25 billion. We project capex to be higher in the second half of fiscal 2027."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "3bd140f0dd9283c8fac6c201f8a9e030e9cba5349ae95f88840c1cf47f5a3223",
+    "id": "e-30bda9e9697b8199532cbb1f7c576b9a8e887ef1459a8d21d209566db0ab9910"
+  },
+  "e-7bd7607ca53fdc706d0e13c35e0bb29cb2617267f3dd01ea312f1a40f5aa8835": {
+    "mode": "calculated",
+    "record_hash": "8994d4bbb61e02d8e7ba7195ed8a73593095cf4299492931bb5d9635e9e7f8ce",
+    "inputs": [
+      "9fd0270fed7bdc1d5882e1d5acba5afba486f1d029f96976bd75c4b9551bdaf5",
+      "2830f4c70b1e5f650d2a94f754a436dbbf232f678762bebb393392346db1cd2a",
+      "4103094f856bea607a6c23550c8c6e10ff0667d60bde421adcdd30139b9d6b7b",
+      "74d9b46164283763d34bb4c1707b397acc4086a8d5e8f13cea7f72c85be76fd0"
+    ],
+    "formula": "net_cash",
+    "id": "e-7bd7607ca53fdc706d0e13c35e0bb29cb2617267f3dd01ea312f1a40f5aa8835"
+  },
+  "e-9efa7fdc1be3305e89f70dc4b9c24063c7b10d02d1ad10a87284a753a8c02c9c": {
+    "measurement": "orders",
+    "unit": "份",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "已签战略协议",
+    "values": {
+      "current": 26,
+      "previous": 16,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 26,
+        "scale": 1,
+        "source_unit": "agreements",
+        "period": "截至 2026-09-30",
+        "locator": "讲稿第 3 页 · signed 26 SCAs",
+        "source_id": "orders"
+      },
+      {
+        "field": "previous",
+        "value": 16,
+        "scale": 1,
+        "source_unit": "agreements",
+        "period": "截至 2026-06-24",
+        "locator": "FQ3 讲稿第 7 页 · 16 strategic customer agreements",
+        "source_id": "orders_cash_prior"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "orders",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=3",
+        "sha256": "2821d4ccaae50b40dcd28cd4e766c69c509e73d666e4109d5907c7205a03b700",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:44.390Z",
+        "reviewed_at": "2026-10-01T22:07:44.390Z",
+        "status": "read",
+        "locator": "第 3 页 · Strategic customer agreements update",
+        "excerpt": "To date, we have signed 26 SCAs"
+      },
+      {
+        "source_id": "orders_cash_prior",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf#page=7",
+        "sha256": "a3ce62b84a059e35fae80c2bfd5c89f9af334193fd6aceff698fc3008e7d4c27",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:46.076Z",
+        "reviewed_at": "2026-10-01T22:07:46.076Z",
+        "status": "read",
+        "locator": "第 7 页",
+        "excerpt": "As mentioned, we have entered into 16 strategic customer agreements."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "d80ad44fc784dad9389fd97165f42bb8651ffa5d3c4e27478e7615f00f7441a7",
+    "id": "e-9efa7fdc1be3305e89f70dc4b9c24063c7b10d02d1ad10a87284a753a8c02c9c"
+  },
+  "e-608d292d2ebce6e21b04ba3e30eaa6a4ce24632cfd4facc98588c526d3acc18a": {
+    "measurement": "orders",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "多年覆盖量",
+    "values": {
+      "current": "超过 2030 年前收入的 35%（公司估计）",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "orders",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=3",
+        "sha256": "2821d4ccaae50b40dcd28cd4e766c69c509e73d666e4109d5907c7205a03b700",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:44.390Z",
+        "reviewed_at": "2026-10-01T22:07:44.390Z",
+        "status": "read",
+        "locator": "第 3 页 · Strategic customer agreements update",
+        "excerpt": "Micron’s strategic customer agreements … To date, we have signed 26 SCAs, which we currently estimate to be over 35% of our revenue through 2030."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "441f795b6833e35ce099f5397291e4cd658424320010149cd6ea7ca3c23496f7",
+    "id": "e-608d292d2ebce6e21b04ba3e30eaa6a4ce24632cfd4facc98588c526d3acc18a"
+  },
+  "e-88c1250cf9fba063ab034cea912c6db1f28c6340324dc83c0e529dd5d5ef2aaf": {
+    "measurement": "orders",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "财季末 RPO",
+    "values": {
+      "current": null,
+      "previous": 5000,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "previous",
+        "value": 5,
+        "scale": 1000,
+        "source_unit": "USD billions",
+        "period": "2026-05-28",
+        "locator": "FQ3 10-Q 第 21 页 · Note 14 · approximately $5 billion",
+        "source_id": "q3_orders"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "fq4_balance_sheet",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:40.718Z",
+        "reviewed_at": "2026-10-01T22:07:40.718Z",
+        "status": "read",
+        "locator": "Consolidated Balance Sheets",
+        "excerpt": "The release contains no remaining performance obligations disclosure for September 3, 2026."
+      },
+      {
+        "source_id": "q3_orders",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/0000723125-26-000015.pdf#page=21",
+        "sha256": "79ef98b3cdc1ffc608b02635ef1fa5e9ed07298bf24f7bb717b03a06bda5e2cd",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:47.772Z",
+        "reviewed_at": "2026-10-01T22:07:47.772Z",
+        "status": "read",
+        "locator": "第 21 页 · Note 14",
+        "excerpt": "As of May 28, 2026, the transaction price allocated to our remaining performance obligations was approximately $5 billion, of which $422 million has been recognized as contract liabilities."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "911422e16362313e417f00c1735f74047a8ce9ae283485c47073f4b596c81d23",
+    "id": "e-88c1250cf9fba063ab034cea912c6db1f28c6340324dc83c0e529dd5d5ef2aaf"
+  },
+  "e-eb7c7a41ea4078c6ac214b15fa6faef51b4bc2adcaaf3f881d258987b57942b0": {
+    "measurement": "orders",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "含季后协议的 RPO",
+    "values": {
+      "current": 150000,
+      "previous": 100000,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 150,
+        "scale": 1000,
+        "source_unit": "USD billions",
+        "period": "截至 2026-09-30",
+        "locator": "讲稿第 6 页 · RPO approximately $150 billion",
+        "source_id": "orders_cash"
+      },
+      {
+        "field": "previous",
+        "value": 100,
+        "scale": 1000,
+        "source_unit": "USD billions",
+        "period": "截至 2026-06-24",
+        "locator": "FQ3 讲稿第 7 页 · RPO approximately $100 billion",
+        "source_id": "orders_cash_prior"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "orders_cash",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=6",
+        "sha256": "2821d4ccaae50b40dcd28cd4e766c69c509e73d666e4109d5907c7205a03b700",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:44.968Z",
+        "reviewed_at": "2026-10-01T22:07:44.968Z",
+        "status": "read",
+        "locator": "第 6 页 · RPO",
+        "excerpt": "To date we have signed 26 SCAs in total, and our remaining performance obligations, or RPO, is approximately $150 billion."
+      },
+      {
+        "source_id": "orders_cash_prior",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf#page=7",
+        "sha256": "a3ce62b84a059e35fae80c2bfd5c89f9af334193fd6aceff698fc3008e7d4c27",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:46.076Z",
+        "reviewed_at": "2026-10-01T22:07:46.076Z",
+        "status": "read",
+        "locator": "第 7 页",
+        "excerpt": "For the SCAs that we have entered into so far, including ones executed after the end of FQ3, RPO is approximately $100 billion."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "42297adf704892908c6ab1c3d66174bac4b9a3d7edce069a015f030a93f9dcb9",
+    "id": "e-eb7c7a41ea4078c6ac214b15fa6faef51b4bc2adcaaf3f881d258987b57942b0"
+  },
+  "e-65a5686d160f7730b7dc23a8c248917541484770d54f8d57b89fa69a23819ddf": {
+    "measurement": "orders",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "期末已确认合同负债",
+    "values": {
+      "current": null,
+      "previous": 422,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "previous",
+        "value": 422,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026-05-28",
+        "locator": "FQ3 10-Q 第 21 页 · Note 14 · $422 million",
+        "source_id": "q3_orders"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "fq4_balance_sheet",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:40.718Z",
+        "reviewed_at": "2026-10-01T22:07:40.718Z",
+        "status": "read",
+        "locator": "Consolidated Balance Sheets",
+        "excerpt": "Noncurrent customer contract liabilities | 12,895 | 568 | 142 (September 3, 2026 | May 28, 2026 | August 28, 2025). Current portion and the note total are not disclosed in the release."
+      },
+      {
+        "source_id": "q3_orders",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/0000723125-26-000015.pdf#page=21",
+        "sha256": "79ef98b3cdc1ffc608b02635ef1fa5e9ed07298bf24f7bb717b03a06bda5e2cd",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:47.772Z",
+        "reviewed_at": "2026-10-01T22:07:47.772Z",
+        "status": "read",
+        "locator": "第 21 页 · Note 14",
+        "excerpt": "As of May 28, 2026, the transaction price allocated to our remaining performance obligations was approximately $5 billion, of which $422 million has been recognized as contract liabilities."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "3549c5af1d88b469d83cf946be87e5068f9b43adcb589642c61efad0fb78dda8",
+    "id": "e-65a5686d160f7730b7dc23a8c248917541484770d54f8d57b89fa69a23819ddf"
+  },
+  "e-90fe879483376bdd369903334ccf3010669a2f11041663973f33b80dff774be8": {
+    "measurement": "orders",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "预计现金保证金",
+    "values": {
+      "current": 32000,
+      "previous": 22000,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 32,
+        "scale": 1000,
+        "source_unit": "USD billions",
+        "period": "截至 2026-09-30",
+        "locator": "讲稿第 3 页 · financial commitments $32 billion",
+        "source_id": "orders"
+      },
+      {
+        "field": "previous",
+        "value": 22,
+        "scale": 1000,
+        "source_unit": "USD billions",
+        "period": "截至 2026-06-24",
+        "locator": "FQ3 讲稿第 7 页 · $22 billion",
+        "source_id": "orders_cash_prior"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "orders",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=3",
+        "sha256": "2821d4ccaae50b40dcd28cd4e766c69c509e73d666e4109d5907c7205a03b700",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:44.390Z",
+        "reviewed_at": "2026-10-01T22:07:44.390Z",
+        "status": "read",
+        "locator": "第 3 页",
+        "excerpt": "For the 26 signed SCAs and extensions, financial commitments from customers have increased to $32 billion, the vast majority of which are cash deposits."
+      },
+      {
+        "source_id": "orders_cash_prior",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf#page=7",
+        "sha256": "a3ce62b84a059e35fae80c2bfd5c89f9af334193fd6aceff698fc3008e7d4c27",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:46.076Z",
+        "reviewed_at": "2026-10-01T22:07:46.076Z",
+        "status": "read",
+        "locator": "第 7 页",
+        "excerpt": "we project to receive cash deposits and related financial commitments of $22 billion under the SCAs we have signed so far. The overwhelming majority of these commitments, approximately $18 billion, will be in the form of cash deposits."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "de2b0077ace3074680d453bcd1e98307c38d4964deef61c7918820edeafff0c5",
+    "id": "e-90fe879483376bdd369903334ccf3010669a2f11041663973f33b80dff774be8"
+  },
+  "e-77c6d51d3cdae33cac9afec92ef854bf82d3a134ef9efe7599a54f826a0b24ef": {
+    "measurement": "orders",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "合同量价约束",
+    "values": {
+      "current": "全部为 take-or-pay；约四分之三有定价框架",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "orders",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=3",
+        "sha256": "2821d4ccaae50b40dcd28cd4e766c69c509e73d666e4109d5907c7205a03b700",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:44.390Z",
+        "reviewed_at": "2026-10-01T22:07:44.390Z",
+        "status": "read",
+        "locator": "第 3 页 · Strategic customer agreements update",
+        "excerpt": "multi-year take-or-pay agreements … Three-quarters of this estimated revenue has a defined pricing framework, a majority of which have pricing bands with floor and ceiling prices. The remaining quarter … has pricing negotiated periodically based on market prices."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "bec11fe125e8f5c97a4a7cad50862fcc3e84f5fb831cdbe2b8ea26c3a21221d9",
+    "id": "e-77c6d51d3cdae33cac9afec92ef854bf82d3a134ef9efe7599a54f826a0b24ef"
+  },
+  "e-4360c2d12987a93a40c53749742ca833c37053115f12f1c8425a137afe2126ba": {
+    "measurement": "revenue",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "HBM4 累计已实现收入",
+    "values": {
+      "current": "超过 10 亿美元",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "hbm_product",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf#page=4",
+        "sha256": "a3ce62b84a059e35fae80c2bfd5c89f9af334193fd6aceff698fc3008e7d4c27",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:46.602Z",
+        "reviewed_at": "2026-10-01T22:07:46.602Z",
+        "status": "read",
+        "locator": "第 4 页 · Technology and product leadership",
+        "excerpt": "HBM4 12-high volume ramp is tracking twice as fast as HBM3E 12-high, and we have already shipped over $1 billion in HBM4 revenue. We expect to reach mature yields on HBM4 12-high significantly faster than HBM3E 12-high."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "d5e3179a0fe0858e236fb3c0de907e12cf998d4a3860f14bbcf059d9b628b7e2",
+    "id": "e-4360c2d12987a93a40c53749742ca833c37053115f12f1c8425a137afe2126ba"
+  },
+  "e-82e9a89bca6a05929b5fc6be201a0c2d685bc4822d5486b971b3c21adfdd8071": {
+    "measurement": "revenue",
+    "unit": "pct",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "HBM 营收份额（转引）",
+    "values": {
+      "current": 18,
+      "previous": 21,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 18,
+        "scale": 1,
+        "source_unit": "percent",
+        "period": "2026 Q2",
+        "locator": "媒体正文 Micron 段 · 18%",
+        "source_id": "hbm_secondary"
+      },
+      {
+        "field": "previous",
+        "value": 21,
+        "scale": 1,
+        "source_unit": "percent",
+        "period": "2026 Q1",
+        "locator": "媒体正文 Micron 段 · 21%",
+        "source_id": "hbm_secondary"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "hbm_secondary",
+        "url": "https://en.fnnews.com/news/202609031610354859",
+        "sha256": "41753fef6b9e293160ac432a85bc013fc467c89ae412c203f4abbf79de5eed93",
+        "access": "secondary",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:48.393Z",
+        "reviewed_at": "2026-10-01T22:07:48.393Z",
+        "status": "read",
+        "locator": "Micron 段",
+        "excerpt": "Micron Technology, which ranked third, saw its share edge down to 18% from 21% in the previous quarter. (Citing Counterpoint Research, revenue basis)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "3171f05f540c674120365b73dd5563bb5939e67de8d3ff3abbb73e235c1ffc82",
+    "id": "e-82e9a89bca6a05929b5fc6be201a0c2d685bc4822d5486b971b3c21adfdd8071"
+  },
+  "e-830c22a9ec491cc0dd9e2ecee5d88e20ce93aac1f041ea2bced36906f2e63a9c": {
+    "measurement": "hbm",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "量产良率 / HBM 单独毛利率",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "hbm_product",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf#page=4",
+        "sha256": "a3ce62b84a059e35fae80c2bfd5c89f9af334193fd6aceff698fc3008e7d4c27",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:46.602Z",
+        "reviewed_at": "2026-10-01T22:07:46.602Z",
+        "status": "read",
+        "locator": "第 4 页 · Technology and product leadership",
+        "excerpt": "HBM4 12-high volume ramp is tracking twice as fast as HBM3E 12-high, and we have already shipped over $1 billion in HBM4 revenue. We expect to reach mature yields on HBM4 12-high significantly faster than HBM3E 12-high."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "6326a8a2952a794c39067f380b46767b63613d5c7dbc6aa3b4b2efdb65355309",
+    "id": "e-830c22a9ec491cc0dd9e2ecee5d88e20ce93aac1f041ea2bced36906f2e63a9c"
+  },
+  "e-c7079ac5260d959e8caaaf32c197baffe23577af87484f26f83e6587b4481984": {
+    "measurement": "revenue",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "forecast_quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "收入",
+    "values": {
+      "current": 61500,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 61.5,
+        "scale": 1000,
+        "source_unit": "USD billions",
+        "period": "FQ1-27 指引中值",
+        "locator": "Business Outlook · Revenue",
+        "source_id": "guidance"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "guidance",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:41.233Z",
+        "reviewed_at": "2026-10-01T22:07:41.233Z",
+        "status": "read",
+        "locator": "Business Outlook",
+        "excerpt": "FQ1-27 … Revenue | $61.5 billion ± $1.5 billion | $61.5 billion ± $1.5 billion"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "78e1cb8a9a1fe322940a52e5b05e6390aabf45b2aab9783574f9574ecab973e7",
+    "id": "e-c7079ac5260d959e8caaaf32c197baffe23577af87484f26f83e6587b4481984"
+  },
+  "e-60dbf67aa3b8aa5340cf48ed0aaf2856ef8280870f806def4835d4554f8b49db": {
+    "measurement": "guidance",
+    "unit": "pct",
+    "definition_version": 1,
+    "temporal_basis": "forecast_quarter",
+    "accounting_basis": "non_gaap",
+    "scope": "非 GAAP 毛利率",
+    "values": {
+      "current": 86.25,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 86.25,
+        "scale": 1,
+        "source_unit": "percent",
+        "period": "FQ1-27 指引",
+        "locator": "Business Outlook · Gross margin · Non-GAAP",
+        "source_id": "guidance"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "guidance",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:41.233Z",
+        "reviewed_at": "2026-10-01T22:07:41.233Z",
+        "status": "read",
+        "locator": "Business Outlook",
+        "excerpt": "Gross margin | Approximately 85.95% | Approximately 86.25% (GAAP | Non-GAAP Outlook)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "7ad55344bb02a010db5d3321ace4cee1c9c663e176ed73fe83b5ccf9314cf3a3",
+    "id": "e-60dbf67aa3b8aa5340cf48ed0aaf2856ef8280870f806def4835d4554f8b49db"
+  },
+  "e-5ae98a2f7339b937c60f7369c938b9ea558c8d4379f4e5556ee2f84bc7fd9b97": {
+    "measurement": "guidance",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "forecast_quarter",
+    "accounting_basis": "non_gaap",
+    "scope": "非 GAAP EPS",
+    "values": {
+      "current": 38.15,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 38.15,
+        "scale": 1,
+        "source_unit": "USD per share",
+        "period": "FQ1-27 指引中值",
+        "locator": "Business Outlook · Diluted EPS · Non-GAAP",
+        "source_id": "guidance"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "guidance",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:41.233Z",
+        "reviewed_at": "2026-10-01T22:07:41.233Z",
+        "status": "read",
+        "locator": "Business Outlook",
+        "excerpt": "Diluted earnings per share | $37.84 ± $1.00 | $38.15 ± $1.00 (GAAP | Non-GAAP Outlook)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "131689e2d5c5bad2583f24f62ef044a65f1f672b95128cf721a50e91f68a6ece",
+    "id": "e-5ae98a2f7339b937c60f7369c938b9ea558c8d4379f4e5556ee2f84bc7fd9b97"
+  },
+  "e-c0e0c66f0d0015c307022f133367f3e5e87e2b3c9489b7ea7ddf8aa483721a21": {
+    "measurement": "supporting",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "gaap",
+    "scope": "GAAP 净利润",
+    "values": {
+      "current": 37701,
+      "previous": 28243,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 37701,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FQ4-26（截至 2026-09-03 的季度）",
+        "locator": "Net income · 4th Qtr.",
+        "source_id": "financial"
+      },
+      {
+        "field": "previous",
+        "value": 28243,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FQ3-26（截至 2026-05-28 的季度）",
+        "locator": "Net income · 3rd Qtr.",
+        "source_id": "financial"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "financial",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:38.615Z",
+        "reviewed_at": "2026-10-01T22:07:38.615Z",
+        "status": "read",
+        "locator": "Consolidated Statements of Operations",
+        "excerpt": "Net income | $ 37,701 | $ 28,243 | $ 3,201 (4th Qtr. 2026 | 3rd Qtr. 2026 | 4th Qtr. 2025)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "515a2e7bb811e680de39b75de2589c80c3d0f6c8c042d5407898081706d4165c",
+    "id": "e-c0e0c66f0d0015c307022f133367f3e5e87e2b3c9489b7ea7ddf8aa483721a21"
+  },
+  "e-2e44fab1e84dc9e8ff3cdb02a70f26df87e06f7cc8b572b166291e42c3b56ca9": {
+    "measurement": "supporting",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "point_in_time",
+    "accounting_basis": "as_disclosed",
+    "scope": "现金及现金等价物",
+    "values": {
+      "current": 38364,
+      "previous": 24995,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 38364,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026-09-03 期末",
+        "locator": "Consolidated Balance Sheets · Cash and equivalents",
+        "source_id": "cash_balance"
+      },
+      {
+        "field": "previous",
+        "value": 24995,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026-05-28 期末",
+        "locator": "Consolidated Balance Sheets · Cash and equivalents",
+        "source_id": "cash_balance"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "cash_balance",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:40.207Z",
+        "reviewed_at": "2026-10-01T22:07:40.207Z",
+        "status": "read",
+        "locator": "Consolidated Balance Sheets",
+        "excerpt": "Cash and equivalents | 38,364 | 24,995 (September 3, 2026 / May 28, 2026 列, in millions)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "9fd0270fed7bdc1d5882e1d5acba5afba486f1d029f96976bd75c4b9551bdaf5",
+    "id": "e-2e44fab1e84dc9e8ff3cdb02a70f26df87e06f7cc8b572b166291e42c3b56ca9"
+  },
+  "e-1284b3e4899b8c1ad67405a03ec65e5a355b8abe3e61ab83cd3b9b787e826dba": {
+    "measurement": "supporting",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "point_in_time",
+    "accounting_basis": "as_disclosed",
+    "scope": "短期投资",
+    "values": {
+      "current": 5070,
+      "previous": 1027,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 5070,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026-09-03 期末",
+        "locator": "Consolidated Balance Sheets · Short-term investments",
+        "source_id": "cash_balance"
+      },
+      {
+        "field": "previous",
+        "value": 1027,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026-05-28 期末",
+        "locator": "Consolidated Balance Sheets · Short-term investments",
+        "source_id": "cash_balance"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "cash_balance",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:40.207Z",
+        "reviewed_at": "2026-10-01T22:07:40.207Z",
+        "status": "read",
+        "locator": "Consolidated Balance Sheets",
+        "excerpt": "Short-term investments | 5,070 | 1,027 (September 3, 2026 / May 28, 2026 列, in millions)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "2830f4c70b1e5f650d2a94f754a436dbbf232f678762bebb393392346db1cd2a",
+    "id": "e-1284b3e4899b8c1ad67405a03ec65e5a355b8abe3e61ab83cd3b9b787e826dba"
+  },
+  "e-7a097fcf977625d9a14d735c5201118a3d59dedb80f24cdb678cd2b262f9f718": {
+    "measurement": "supporting",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "point_in_time",
+    "accounting_basis": "as_disclosed",
+    "scope": "长期投资",
+    "values": {
+      "current": 30019,
+      "previous": 4106,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 30019,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026-09-03 期末",
+        "locator": "Consolidated Balance Sheets · Long-term marketable investments",
+        "source_id": "cash_balance"
+      },
+      {
+        "field": "previous",
+        "value": 4106,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026-05-28 期末",
+        "locator": "Consolidated Balance Sheets · Long-term marketable investments",
+        "source_id": "cash_balance"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "cash_balance",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:40.207Z",
+        "reviewed_at": "2026-10-01T22:07:40.207Z",
+        "status": "read",
+        "locator": "Consolidated Balance Sheets",
+        "excerpt": "Long-term marketable investments | 30,019 | 4,106 (September 3, 2026 / May 28, 2026 列, in millions)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "4103094f856bea607a6c23550c8c6e10ff0667d60bde421adcdd30139b9d6b7b",
+    "id": "e-7a097fcf977625d9a14d735c5201118a3d59dedb80f24cdb678cd2b262f9f718"
+  },
+  "e-89f499b473fd8d1465a18b2dbd297c07c5d49a2729f7e22c2774ec50675f9018": {
+    "measurement": "supporting",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "point_in_time",
+    "accounting_basis": "as_disclosed",
+    "scope": "债务",
+    "values": {
+      "current": 5179,
+      "previous": 5722,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 5179,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026-09-03 期末",
+        "locator": "Consolidated Balance Sheets · Current debt 491 + Long-term debt 4,688 之和",
+        "source_id": "cash_balance"
+      },
+      {
+        "field": "previous",
+        "value": 5722,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026-05-28 期末",
+        "locator": "Consolidated Balance Sheets · Current debt 582 + Long-term debt 5,140 之和",
+        "source_id": "cash_balance"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-01T22:08:30Z"
+    },
+    "documents": [
+      {
+        "source_id": "cash_balance",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T22:07:40.207Z",
+        "reviewed_at": "2026-10-01T22:07:40.207Z",
+        "status": "read",
+        "locator": "Consolidated Balance Sheets",
+        "excerpt": "Current debt | 491 | 582 … Long-term debt | 4,688 | 5,140 (September 3, 2026 / May 28, 2026 列, in millions)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "74d9b46164283763d34bb4c1707b397acc4086a8d5e8f13cea7f72c85be76fd0",
+    "id": "e-89f499b473fd8d1465a18b2dbd297c07c5d49a2729f7e22c2774ec50675f9018"
   }
 }

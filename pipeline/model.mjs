@@ -134,13 +134,16 @@ export function compute(op,values) {
   }
 }
 
+export const pendingInput=(payload,field)=>payload?.[field]===null&&payload?.evidence_type==='unavailable';
+
 export function calculate(document,catalog,supporting={}) {
   const output=clone(document),byId=new Map(entries(output,catalog).map(e=>[e.metric_id,e.payload]));
   for(const [id,payload] of Object.entries(supporting))byId.set(id,payload);
   for(const rule of orderedCalculations(catalog.calculations)) for(const field of ['current','previous']) {
     const target=byId.get(rule.target);
     if(!target) throw new Error(`Missing formula target ${rule.target}`);
-    target[field]=compute(rule.op,rule.inputs.map(id=>byId.get(id)?.[field]));
+    // An input explicitly awaiting its filing leaves the derived value pending instead of guessing.
+    target[field]=rule.inputs.some(id=>pendingInput(byId.get(id),field))?null:compute(rule.op,rule.inputs.map(id=>byId.get(id)?.[field]));
   }
   return output;
 }

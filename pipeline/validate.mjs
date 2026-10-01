@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import Ajv from 'ajv';
 import {fileURLToPath} from 'node:url';
-import {activeRecords,entries,materialize,makeRecord,recordHash,hash,stable,compute,orderedCalculations,numericInputs} from './model.mjs';
+import {activeRecords,entries,materialize,makeRecord,recordHash,hash,stable,compute,orderedCalculations,numericInputs,pendingInput} from './model.mjs';
 import {coverageKeys,validateUpdates,validateUpdateTransition} from './updates.mjs';
 import {validateTechnology,validateTechnologyTransition} from './technology.mjs';
 
@@ -137,6 +137,11 @@ export function validateLedger(ledger,catalog,evidence,legacy) {
   }
   const value=(id,field)=>byMetric.get(id)?.payload[field];
   for(const rule of [...catalog.calculations,...catalog.reconciliations])for(const field of ['current','previous']) {
+    if(rule.inputs.some(id=>pendingInput(byMetric.get(id)?.payload,field))){
+      // Totals disclosed before their components keep the total; formulas wait for every input.
+      if(catalog.calculations.includes(rule)&&value(rule.target,field)!==null)add('RECONCILIATION',`${rule.target}.${field}`,'A formula with a pending input must remain pending');
+      continue;
+    }
     try {
       const expected=compute(rule.op,rule.inputs.map(id=>value(id,field))),actual=value(rule.target,field);
       if(!finite(actual)||Math.abs(actual-expected)>Math.max(1,Math.abs(expected))*1e-10)add('RECONCILIATION',`${rule.target}.${field}`,`Expected ${expected}; received ${actual}`);

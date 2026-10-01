@@ -38,7 +38,14 @@ test('dangling overview references fail',()=>has(validateDocument(mutation(c=>c.
 test('guidance requires sequential quarter references',()=>has(validateDocument(mutation(c=>c.guidance[0].actuals[0].period='FY2025 Q4'),catalog),'GUIDANCE_PERIOD'));
 test('guidance percent and percentage-point arithmetic are distinct',()=>{assert(Math.abs(core.guidanceComparison(baseline.guidance[0],baseline).value-20.6098031648)<1e-8);assert(Math.abs(core.guidanceComparison(baseline.guidance[1],baseline).value-1.1)<1e-8);});
 test('stable IDs survive display label edits',()=>{const c=clone(baseline);row(c,'revenue','total').label='集团营收';assert.equal(core.guidanceActuals(c.guidance[0],c)[1].value,41456);});
-test('inventory reconciliation rejects a one-dollar-in-millions mistake',()=>{const c=recordDocument(mutation(c=>row(c,'inventory','total').current++),catalog,ledger);has(validateLedger(c,catalog,evidence,legacy),'RECONCILIATION');});
+test('inventory reconciliation rejects a one-dollar-in-millions mistake',()=>{const c=recordDocument(mutation(c=>row(c,'inventory','total').previous++),catalog,ledger);has(validateLedger(c,catalog,evidence,legacy),'RECONCILIATION');});
+test('a component awaiting its filing leaves dependent formulas pending',()=>{
+  const c=mutation(c=>{const r=row(c,'inventory','receivables');r.current=null;r.evidence_type='unavailable';});
+  const got=calculate(c,catalog,supporting);assert.equal(row(got,'inventory','receivables_revenue').current,null);assert(Number.isFinite(row(got,'inventory','receivables_revenue').previous));
+  const forced=recordDocument(mutation(c=>{row(c,'inventory','receivables').current=null;row(c,'inventory','receivables').evidence_type='unavailable';row(c,'inventory','receivables_revenue').current=50;}),catalog,ledger);
+  assert(validateLedger(forced,catalog,evidence,legacy).some(x=>x.code==='RECONCILIATION'&&x.path==='mu.inventory.receivables_revenue.current'));
+});
+test('an unlabeled missing component still breaks the formula',()=>assert.throws(()=>calculate(mutation(c=>{const r=row(c,'inventory','receivables');r.current=null;r.evidence_type='direct';}),catalog,supporting),/numeric/));
 test('changed records cannot borrow legacy evidence',()=>{const c=recordDocument(mutation(c=>row(c,'inventory','total').current++),catalog,ledger),r=activeRecords(c).find(r=>r.metric_id==='mu.inventory.total');r.evidence_ids=activeRecords(ledger).find(old=>old.metric_id===r.metric_id).evidence_ids;has(validateLedger(c,catalog,evidence,legacy),'EVIDENCE_BINDING');});
 test('missing new evidence blocks publication',()=>{const c=recordDocument(mutation(c=>c.ecosystem.companies[0].metrics[0].current++),catalog,ledger);has(validateLedger(c,catalog,evidence,legacy),'EVIDENCE_REQUIRED');});
 test('record content hashes detect in-place edits',()=>{const c=clone(ledger),r=activeRecords(c)[0];r.payload.current='changed';has(validateLedger(c,catalog,evidence,legacy),'RECORD_HASH');});
@@ -61,7 +68,7 @@ test('partial run retains the old full-success timestamp',()=>{const m=manifest(
 test('failure does not erase previously verified values',()=>{const before=hash(ledger),m=manifest('ecosystem');m.coverage[0].status='failed';const proposal=clone(d);proposal.ecosystem.companies[0].metrics[0].current=0;const r=buildCandidate({previousLedger:ledger,previousEvidence:evidence,proposal,supporting,evidenceInput:{},manifest:m,catalog,legacy});has(r.issues,'FAILED_SCOPE_CHANGED');assert.equal(hash(ledger),before);});
 test('unchecked source date cannot be advanced',()=>{const c=clone(d);c.sources.financial.checked_at=at;has(validateTransition(d,c,manifest('source_audit'),catalog),'UNREAD_DATE');});
 test('partial scope cannot claim full success',()=>{const c=clone(d);c.last_successful_check_at=at;has(validateTransition(d,c,manifest('ecosystem'),catalog),'FALSE_FRESHNESS');});
-test('new quarter needs a complete report bundle',()=>{const c=clone(d);c.financial_period='FY2026 Q4';has(validateTransition(d,c,manifest('micron'),catalog),'REPORT_BUNDLE');});
+test('new quarter needs a complete report bundle',()=>{const c=clone(d);c.financial_period='FY2027 Q1';has(validateTransition(d,c,manifest('micron'),catalog),'REPORT_BUNDLE');});
 test('candidate replay is deterministic with a fixed run clock',()=>{const input={previousLedger:ledger,previousEvidence:evidence,proposal:d,supporting,evidenceInput:{},manifest:manifest('full'),catalog,legacy};assert.equal(stable(buildCandidate(input)),stable(buildCandidate(input)));});
 test('concurrent base-data change invalidates an old plan',()=>{const m=manifest('full');m.base_sha256='b'.repeat(64);assert.throws(()=>buildCandidate({previousLedger:ledger,previousEvidence:evidence,proposal:d,supporting,evidenceInput:{},manifest:m,catalog,legacy}),/BASE_CHANGED/);});
 test('unreviewed coverage cannot claim successful discovery',()=>{const m=manifest('ecosystem');m.coverage[0].status='verified';has(validateTransition(d,d,m,catalog),'DISCOVERY');});
