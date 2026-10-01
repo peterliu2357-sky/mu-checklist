@@ -99,3 +99,12 @@ test('a mismatched update receipt never labels the current facts as newly update
   await expect(page.locator('#update-details-body')).toContainText('更新时间记录暂不可用');
   await expect(page.locator('.fact-card')).toHaveCount(8);
 });
+test('a released report waiting for entry is not listed as upcoming',async({page})=>{
+  const d=withNews();d.monitoring={version:1,policy:{},checks:[],calendar:[{id:'mu_next',company_id:'micron',title:'美光下一季财报',period:'FY2026 Q4',scheduled_at:'2026-09-30T16:30:00-04:00',review_after:'2026-10-01T20:30:00Z',confirmation:'confirmed',source_ids:[d.quote.source_id],location:'x',kind:'公司日程',evidence_type:'direct'}]};
+  await page.clock.setFixedTime(new Date('2026-10-01T12:00:00Z'));
+  await page.route('**/data/monitor.json?*',r=>r.fulfill({json:d}));
+  await page.goto('/');await expect(page.locator('#loading')).toBeHidden();
+  await expect(page.locator('.event-pending')).toContainText('已发布 · 本页待录入');
+  await page.locator('.calendar-details summary').click();
+  await expect(page.locator('.calendar-company').first()).toContainText('已于 2026-09-30 发布，待录入');
+});

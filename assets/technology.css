@@ -77,3 +77,4 @@
  .tech-highlights article{padding:14px 16px;gap:12px}
  .tech-highlights .micro{flex-basis:70px;font-size:10px}
 }
+.tech-gaps{margin:0 20px;padding:10px 0 12px;border-top:1px solid #edf0e9;font-size:12px;color:var(--muted)}
