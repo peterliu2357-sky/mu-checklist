@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
-if [[ "${RUN_KIND:-}" == schedule ]] && [[ "$(TZ=America/New_York date +%H)" != 18 ]]; then
+# GitHub often starts scheduled runs hours late. Accept any start from 18:00 ET to midnight ET
+# (the adapter needs the same market date); the second DST cron then finds no newer close.
+et_hour=$((10#$(TZ=America/New_York date +%H)))
+if [[ "${RUN_KIND:-}" == schedule ]] && (( et_hour < 18 )); then
+  echo "Scheduled start at ${et_hour}:00 ET is before 18:00 ET; skipping."
   exit 0
 fi
 base_commit=$(git rev-parse HEAD)
