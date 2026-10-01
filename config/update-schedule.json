@@ -1,7 +1,7 @@
 {
   "version": 1,
   "display_timezone": "America/Los_Angeles",
-  "verified_at": "2026-09-24T06:12:02.496Z",
+  "verified_at": "2026-10-01T21:04:09.143Z",
   "completion_grace_minutes": 120,
   "research": {
     "enabled": true,
@@ -31,12 +31,12 @@
   },
   "earnings": {
     "enabled": true,
-    "run_at": "2026-10-01T20:30:00Z",
+    "run_at": "2026-10-16T06:00:00Z",
     "events": [
       {
-        "id": "micron_fy2026_q4",
-        "company_id": "micron",
-        "review_after": "2026-10-01T20:30:00Z"
+        "id": "tsmc_2026_q3",
+        "company_id": "tsmc",
+        "review_after": "2026-10-16T06:00:00Z"
       }
     ]
   }

@@ -2,8 +2,8 @@
   "format_version": 1,
   "document": {
     "schema_version": 2,
-    "revision": "2026-09-28-b0c8ef174b",
-    "updated_at": "2026-09-28T00:28:00Z",
+    "revision": "2026-10-01-80c0dffdbe",
+    "updated_at": "2026-10-01T21:04:09.439Z",
     "last_successful_check_at": "2026-09-20T23:50:00Z",
     "last_attempt_at": "2026-09-20T23:50:00Z",
     "financial_period": "FY2026 Q3",
@@ -1084,6 +1084,15 @@
         "checked_at": "2026-09-24",
         "locator": "正文：12层48GB、16Gbps、Advanced MR-MUF、能效及热阻",
         "type": "公司原始披露"
+      },
+      "index_mu_sec_20261001": {
+        "label": "Micron SEC 申报目录",
+        "short_label": "SEC 申报目录",
+        "url": "https://data.sec.gov/submissions/CIK0000723125.json",
+        "published_at": null,
+        "checked_at": "2026-10-01",
+        "type": "监管机构官方入口",
+        "locator": "filings.recent：form、filingDate、reportDate、accessionNumber、primaryDocument；2026-10-01 查询。"
       }
     },
     "metrics": [
@@ -1480,6 +1489,12 @@
       "产业链指引和管理层展望按原披露日期及目标期间记录，文字为中文摘要；同比由原始金额计算，百分点与百分比区分。"
     ],
     "check_log": [
+      {
+        "at": "2026-10-01T21:04:09.439Z",
+        "status": "success",
+        "scope": "discovery",
+        "text": "美光 FY2026 10-K 补查：SEC 暂未列出新年报，附注明细继续待核；已发布财报仍为 FQ3，保留 FQ4 待处理状态及原有事实。"
+      },
       {
         "at": "2026-09-28T00:28:00Z",
         "status": "success",
@@ -2059,6 +2074,22 @@
             "index_skhynix_news_20260927"
           ],
           "reason": "三家公司官方入口均未出现新的可比 DDR5 RDIMM、HBM4/HBM4E 容量、速率、验证/量产阶段或同基准功耗披露。",
+          "processed_at": null
+        },
+        {
+          "key": "company:micron",
+          "status": "verified",
+          "finding": "new_disclosure",
+          "checked_at": "2026-10-01T21:04:09.143Z",
+          "attempted_at": "2026-10-01T21:04:09.439Z",
+          "latest_disclosure": {
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/mu-20260930.htm",
+            "published_at": "2026-09-30"
+          },
+          "source_ids": [
+            "index_mu_sec_20261001"
+          ],
+          "reason": "2026-10-01 已读取 SEC 申报目录：最新财务申报为 09-30 的 8-K，尚未列出 FY2026 10-K；最近 10-K 为 FY2025（2025-10-03）。FQ4 产成品、在制品、原材料、贸易应收及收入比、季末 RPO 和完整合同负债待 10-K 补核。当前发布记录仍为 FQ3，保留 FQ4 待处理标记；本次不重复导入新闻稿。",
           "processed_at": null
         }
       ],
