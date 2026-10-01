@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "revision": "2026-10-01-7f1707245f",
-  "updated_at": "2026-10-01T23:13:44.787Z",
+  "revision": "2026-10-01-307800bd64",
+  "updated_at": "2026-10-01T22:43:54.439Z",
   "last_successful_check_at": "2026-09-20T23:50:00Z",
   "last_attempt_at": "2026-09-20T23:50:00Z",
   "financial_period": "FY2026 Q4",
@@ -2382,12 +2382,6 @@
     "产业链指引和管理层展望按原披露日期及目标期间记录，文字为中文摘要；同比由原始金额计算，百分点与百分比区分。"
   ],
   "check_log": [
-    {
-      "at": "2026-10-01T23:13:44.787Z",
-      "status": "success",
-      "scope": "micron",
-      "text": "美光季度走势回填：按各季新闻稿、10-Q、讲稿与 FQ4-26 业绩材料，补入 FY2025 Q1 至 FY2026 Q2 的收入、DRAM 收入、非 GAAP 毛利率、库存天数与净资本开支；最新财报仍为 FY2026 Q4，现有数值不变。"
-    },
     {
       "at": "2026-10-01T22:43:54.439Z",
       "status": "success",
@@ -8362,90 +8356,6 @@
   "series": {
     "mu.revenue.total": [
       {
-        "financial_period": "FY2025 Q1",
-        "period_end": "2024-11-28",
-        "value": 8709,
-        "unit": "USDm",
-        "sources": [
-          {
-            "id": "mu_fy2025_q1_release",
-            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312524000046/a2025q1ex991-pressrelease.htm",
-            "published_at": "2024-12-18"
-          }
-        ],
-        "record_id": "069cdf0e9e07955e9abdad9e8f0b06da622ed6239acd4c37ec0e60131f30fba4"
-      },
-      {
-        "financial_period": "FY2025 Q2",
-        "period_end": "2025-02-27",
-        "value": 8053,
-        "unit": "USDm",
-        "sources": [
-          {
-            "id": "mu_fy2025_q2_release",
-            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000006/a2025q2ex991-pressrelease.htm",
-            "published_at": "2025-03-20"
-          }
-        ],
-        "record_id": "bb02d8f28e8e36833f42fd2e8fd730cc5b32bd65ff8e3dc76285a814c06929df"
-      },
-      {
-        "financial_period": "FY2025 Q3",
-        "period_end": "2025-05-29",
-        "value": 9301,
-        "unit": "USDm",
-        "sources": [
-          {
-            "id": "mu_fy2025_q3_release",
-            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000019/a2025q3ex991-pressrelease.htm",
-            "published_at": "2025-06-25"
-          }
-        ],
-        "record_id": "6c5b95a9deb6ec42328a45cb230bdc38721a8da357a0d5604c534a23ce9cb15d"
-      },
-      {
-        "financial_period": "FY2025 Q4",
-        "period_end": "2025-08-28",
-        "value": 11315,
-        "unit": "USDm",
-        "sources": [
-          {
-            "id": "mu_fy2025_q4_release",
-            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000024/a2025q4ex991-pressrelease.htm",
-            "published_at": "2025-09-23"
-          }
-        ],
-        "record_id": "a41e23e6be4ad07f983b485730f304fd796e5a2e4bd82030d8d95e6956dbd3a6"
-      },
-      {
-        "financial_period": "FY2026 Q1",
-        "period_end": "2025-11-27",
-        "value": 13643,
-        "unit": "USDm",
-        "sources": [
-          {
-            "id": "mu_fy2026_q1_release",
-            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000044/a2026q1ex991-pressrelease.htm",
-            "published_at": "2025-12-17"
-          }
-        ],
-        "record_id": "191dab3b101570503205d98e1f4294308d491c7601bdd2ff97d7804ad776145b"
-      },
-      {
-        "financial_period": "FY2026 Q2",
-        "period_end": "2026-02-26",
-        "value": 23860,
-        "unit": "USDm",
-        "sources": [
-          {
-            "id": "mu_fy2026_q2_release",
-            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000004/a2026q2ex991-pressrelease.htm",
-            "published_at": "2026-03-18"
-          }
-        ],
-        "record_id": "3501b8e458af3799cc455bbb7931848b8dad33972ca710930dc405ffd8c3222b"
-      },
-      {
         "financial_period": "FY2026 Q3",
         "period_end": "2026-05-28",
         "value": 41456,
@@ -8461,90 +8371,6 @@
       }
     ],
     "mu.revenue.dram": [
-      {
-        "financial_period": "FY2025 Q1",
-        "period_end": "2024-11-28",
-        "value": 6400,
-        "unit": "USDm",
-        "sources": [
-          {
-            "id": "mu_fy2025_q1_10q",
-            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312524000047/mu-20241128.htm",
-            "published_at": "2024-12-19"
-          }
-        ],
-        "record_id": "c3e423abb0d04f4138a5fc50fe4dba0fce8d0d62d8d3c63094d572562fe395cc"
-      },
-      {
-        "financial_period": "FY2025 Q2",
-        "period_end": "2025-02-27",
-        "value": 6123,
-        "unit": "USDm",
-        "sources": [
-          {
-            "id": "mu_fy2025_q2_10q",
-            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000009/mu-20250227.htm",
-            "published_at": "2025-03-21"
-          }
-        ],
-        "record_id": "56aa7499e4816dcb25cc84bb9849e4b74c2acd10bf3779e697e19015d541fdeb"
-      },
-      {
-        "financial_period": "FY2025 Q3",
-        "period_end": "2025-05-29",
-        "value": 7071,
-        "unit": "USDm",
-        "sources": [
-          {
-            "id": "mu_fy2025_q3_10q",
-            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000021/mu-20250529.htm",
-            "published_at": "2025-06-26"
-          }
-        ],
-        "record_id": "e815f5ae95705791af55452ddf6b9dc31eb244200b13620f30d0171cca31dc23"
-      },
-      {
-        "financial_period": "FY2025 Q4",
-        "period_end": "2025-08-28",
-        "value": 8984,
-        "unit": "USDm",
-        "sources": [
-          {
-            "id": "mu_fy2026_q4_deck",
-            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-26-Earnings-Deck.pdf#page=35",
-            "published_at": "2026-09-30"
-          }
-        ],
-        "record_id": "296890cfc3630f4256d9e80fa514fff4402d92a2cde122afe58d1cad88b4b1d0"
-      },
-      {
-        "financial_period": "FY2026 Q1",
-        "period_end": "2025-11-27",
-        "value": 10812,
-        "unit": "USDm",
-        "sources": [
-          {
-            "id": "mu_fy2026_q1_10q",
-            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000046/mu-20251127.htm",
-            "published_at": "2025-12-18"
-          }
-        ],
-        "record_id": "e93469d34e6f9cf6d7153c73ef5696d510d9123fc1ef7209eee6c955829a2940"
-      },
-      {
-        "financial_period": "FY2026 Q2",
-        "period_end": "2026-02-26",
-        "value": 18768,
-        "unit": "USDm",
-        "sources": [
-          {
-            "id": "mu_fy2026_q2_10q",
-            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000006/mu-20260226.htm",
-            "published_at": "2026-03-19"
-          }
-        ],
-        "record_id": "b880ea761d9b04bf894f1f6792497057dc308a067869e2e4e9cbb2453076018b"
-      },
       {
         "financial_period": "FY2026 Q3",
         "period_end": "2026-05-28",
@@ -8562,90 +8388,6 @@
     ],
     "mu.margin.nongaap": [
       {
-        "financial_period": "FY2025 Q1",
-        "period_end": "2024-11-28",
-        "value": 39.5,
-        "unit": "pct",
-        "sources": [
-          {
-            "id": "mu_fy2025_q1_release",
-            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312524000046/a2025q1ex991-pressrelease.htm",
-            "published_at": "2024-12-18"
-          }
-        ],
-        "record_id": "ba9a1b296bf85420e17fe7c005941b05fcd09fa3eee2c905b9cf644ba07ce951"
-      },
-      {
-        "financial_period": "FY2025 Q2",
-        "period_end": "2025-02-27",
-        "value": 37.9,
-        "unit": "pct",
-        "sources": [
-          {
-            "id": "mu_fy2025_q2_release",
-            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000006/a2025q2ex991-pressrelease.htm",
-            "published_at": "2025-03-20"
-          }
-        ],
-        "record_id": "974a2f91a4b97a0094f7f7fc36c28d173e364ddc9696646afdba4f49f7643b2e"
-      },
-      {
-        "financial_period": "FY2025 Q3",
-        "period_end": "2025-05-29",
-        "value": 39,
-        "unit": "pct",
-        "sources": [
-          {
-            "id": "mu_fy2025_q3_release",
-            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000019/a2025q3ex991-pressrelease.htm",
-            "published_at": "2025-06-25"
-          }
-        ],
-        "record_id": "c27d14a2fa6193c2d871c36a679ba6ea5c31b26645d487c765800e8679572e7c"
-      },
-      {
-        "financial_period": "FY2025 Q4",
-        "period_end": "2025-08-28",
-        "value": 45.7,
-        "unit": "pct",
-        "sources": [
-          {
-            "id": "mu_fy2025_q4_release",
-            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000024/a2025q4ex991-pressrelease.htm",
-            "published_at": "2025-09-23"
-          }
-        ],
-        "record_id": "d895571c42b7f21077f0a1f3bc1d445dbf746b265a79ae9f486706d14d34dfab"
-      },
-      {
-        "financial_period": "FY2026 Q1",
-        "period_end": "2025-11-27",
-        "value": 56.8,
-        "unit": "pct",
-        "sources": [
-          {
-            "id": "mu_fy2026_q1_release",
-            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000044/a2026q1ex991-pressrelease.htm",
-            "published_at": "2025-12-17"
-          }
-        ],
-        "record_id": "dbba86ee00d75bbe997294e9c60789fed8f687d659b504fa22bb0dbd1c567a9a"
-      },
-      {
-        "financial_period": "FY2026 Q2",
-        "period_end": "2026-02-26",
-        "value": 74.9,
-        "unit": "pct",
-        "sources": [
-          {
-            "id": "mu_fy2026_q2_release",
-            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000004/a2026q2ex991-pressrelease.htm",
-            "published_at": "2026-03-18"
-          }
-        ],
-        "record_id": "d6d99f994970388636a5c9266760d13d3776c9cd00375c78c4c6082f3b6ae762"
-      },
-      {
         "financial_period": "FY2026 Q3",
         "period_end": "2026-05-28",
         "value": 84.9,
@@ -8662,90 +8404,6 @@
     ],
     "mu.inventory.days": [
       {
-        "financial_period": "FY2025 Q1",
-        "period_end": "2024-11-28",
-        "value": 149,
-        "unit": "days",
-        "sources": [
-          {
-            "id": "mu_fy2025_q1_remarks",
-            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q1/FY25-Q1-Prepared-Remarks.pdf#page=9",
-            "published_at": "2024-12-18"
-          }
-        ],
-        "record_id": "008f2c32add36c443e007126cb43db027666507335db0d9e6d5c1e4cdc16680c"
-      },
-      {
-        "financial_period": "FY2025 Q2",
-        "period_end": "2025-02-27",
-        "value": 158,
-        "unit": "days",
-        "sources": [
-          {
-            "id": "mu_fy2025_q2_remarks",
-            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q2/Micron_FY25_Q2_Prepared_Remarks_2-1.pdf#page=9",
-            "published_at": "2025-03-20"
-          }
-        ],
-        "record_id": "4f4d9391fad5a48df40d266f4796b634e5cbb899e3cab3d7f7ed9c37a1897292"
-      },
-      {
-        "financial_period": "FY2025 Q3",
-        "period_end": "2025-05-29",
-        "value": 139,
-        "unit": "days",
-        "sources": [
-          {
-            "id": "mu_fy2025_q3_remarks",
-            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q3/Micron_FY25_Q3_Prepared_Remarks.pdf#page=8",
-            "published_at": "2025-06-25"
-          }
-        ],
-        "record_id": "1658cd91890115a04b8df9b26c18c6766df97eb3678cc8a3273c02ec46e8d096"
-      },
-      {
-        "financial_period": "FY2025 Q4",
-        "period_end": "2025-08-28",
-        "value": 124,
-        "unit": "days",
-        "sources": [
-          {
-            "id": "mu_fy2025_q4_remarks",
-            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q4/Q4-2025-Prepared-Remarks-1.pdf#page=9",
-            "published_at": "2025-09-23"
-          }
-        ],
-        "record_id": "d9ba3ff614cb93bbbb6fc1ce485e14cac678c92b46b939bb94d5d662b2ff7bab"
-      },
-      {
-        "financial_period": "FY2026 Q1",
-        "period_end": "2025-11-27",
-        "value": 126,
-        "unit": "days",
-        "sources": [
-          {
-            "id": "mu_fy2026_q1_remarks",
-            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q1/Micron_Q1-2026-Prepared-Remarks.pdf#page=8",
-            "published_at": "2025-12-17"
-          }
-        ],
-        "record_id": "6d581e324cb7fc5410f3096969080b9be5e6eb37ef46f85e7216c1c1445e99fe"
-      },
-      {
-        "financial_period": "FY2026 Q2",
-        "period_end": "2026-02-26",
-        "value": 123,
-        "unit": "days",
-        "sources": [
-          {
-            "id": "mu_fy2026_q2_remarks",
-            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q2/Q2-2026-Prepared-Remarks.pdf#page=8",
-            "published_at": "2026-03-18"
-          }
-        ],
-        "record_id": "e37b43e4b28ad0405e64c21db7bfcd99bfa25c8c69ace03e5173fae757524519"
-      },
-      {
         "financial_period": "FY2026 Q3",
         "period_end": "2026-05-28",
         "value": 120,
@@ -8761,90 +8419,6 @@
       }
     ],
     "mu.capex.net": [
-      {
-        "financial_period": "FY2025 Q1",
-        "period_end": "2024-11-28",
-        "value": 3132,
-        "unit": "USDm",
-        "sources": [
-          {
-            "id": "mu_fy2025_q1_release",
-            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312524000046/a2025q1ex991-pressrelease.htm",
-            "published_at": "2024-12-18"
-          }
-        ],
-        "record_id": "9385809e3e7089e59bbca93a598ac04bbfa6b688f175f75e55c0f19e7c4bbec9"
-      },
-      {
-        "financial_period": "FY2025 Q2",
-        "period_end": "2025-02-27",
-        "value": 3085,
-        "unit": "USDm",
-        "sources": [
-          {
-            "id": "mu_fy2025_q2_release",
-            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000006/a2025q2ex991-pressrelease.htm",
-            "published_at": "2025-03-20"
-          }
-        ],
-        "record_id": "8519d4b955502788ce89df776b7c92235c109c9f5b448b5c8c481ccfbae3fac7"
-      },
-      {
-        "financial_period": "FY2025 Q3",
-        "period_end": "2025-05-29",
-        "value": 2660,
-        "unit": "USDm",
-        "sources": [
-          {
-            "id": "mu_fy2025_q3_release",
-            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000019/a2025q3ex991-pressrelease.htm",
-            "published_at": "2025-06-25"
-          }
-        ],
-        "record_id": "39f7439c16f6d077709dabc4162763ce659d0c83d315c7df4b5724ddf6dee9d1"
-      },
-      {
-        "financial_period": "FY2025 Q4",
-        "period_end": "2025-08-28",
-        "value": 4927,
-        "unit": "USDm",
-        "sources": [
-          {
-            "id": "mu_fy2025_q4_release",
-            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000024/a2025q4ex991-pressrelease.htm",
-            "published_at": "2025-09-23"
-          }
-        ],
-        "record_id": "35659d0048fb719d0256ab596f5c77757d7e041786d9f4982dc1ab40f5f4d34b"
-      },
-      {
-        "financial_period": "FY2026 Q1",
-        "period_end": "2025-11-27",
-        "value": 4505,
-        "unit": "USDm",
-        "sources": [
-          {
-            "id": "mu_fy2026_q1_release",
-            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000044/a2026q1ex991-pressrelease.htm",
-            "published_at": "2025-12-17"
-          }
-        ],
-        "record_id": "d0b6b5d92fe933b7fabfdb7ab24227e0a99bb9184ba3adf09564b00cc8ef75a3"
-      },
-      {
-        "financial_period": "FY2026 Q2",
-        "period_end": "2026-02-26",
-        "value": 5004,
-        "unit": "USDm",
-        "sources": [
-          {
-            "id": "mu_fy2026_q2_release",
-            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000004/a2026q2ex991-pressrelease.htm",
-            "published_at": "2026-03-18"
-          }
-        ],
-        "record_id": "88bef512dda3735b50aef9a1a78711e89992142dda4ca7b920a2a2f0671f8884"
-      },
       {
         "financial_period": "FY2026 Q3",
         "period_end": "2026-05-28",

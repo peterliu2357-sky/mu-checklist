@@ -2,8 +2,8 @@
   "format_version": 1,
   "document": {
     "schema_version": 2,
-    "revision": "2026-10-01-307800bd64",
-    "updated_at": "2026-10-01T22:43:54.439Z",
+    "revision": "2026-10-01-7f1707245f",
+    "updated_at": "2026-10-01T23:13:44.787Z",
     "last_successful_check_at": "2026-09-20T23:50:00Z",
     "last_attempt_at": "2026-09-20T23:50:00Z",
     "financial_period": "FY2026 Q4",
@@ -1514,6 +1514,12 @@
       "产业链指引和管理层展望按原披露日期及目标期间记录，文字为中文摘要；同比由原始金额计算，百分点与百分比区分。"
     ],
     "check_log": [
+      {
+        "at": "2026-10-01T23:13:44.787Z",
+        "status": "success",
+        "scope": "micron",
+        "text": "美光季度走势回填：按各季新闻稿、10-Q、讲稿与 FQ4-26 业绩材料，补入 FY2025 Q1 至 FY2026 Q2 的收入、DRAM 收入、非 GAAP 毛利率、库存天数与净资本开支；最新财报仍为 FY2026 Q4，现有数值不变。"
+      },
       {
         "at": "2026-10-01T22:43:54.439Z",
         "status": "success",
@@ -14530,6 +14536,1236 @@
         "e-89f499b473fd8d1465a18b2dbd297c07c5d49a2729f7e22c2774ec50675f9018"
       ],
       "id": "74d9b46164283763d34bb4c1707b397acc4086a8d5e8f13cea7f72c85be76fd0"
+    },
+    "069cdf0e9e07955e9abdad9e8f0b06da622ed6239acd4c37ec0e60131f30fba4": {
+      "metric_id": "mu.revenue.total",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "financial_period": "FY2025 Q1",
+        "period_end": "2024-11-28",
+        "measurement": "revenue",
+        "unit": "USDm",
+        "scope": "总收入",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "mu_fy2025_q1_release",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312524000046/a2025q1ex991-pressrelease.htm",
+            "published_at": "2024-12-18"
+          }
+        ]
+      },
+      "payload": {
+        "label": "总收入",
+        "current": 8709,
+        "unit": "USDm",
+        "period": "FY2025 FQ1",
+        "location": "FQ1-25 新闻稿 Consolidated Statements of Operations · Revenue。",
+        "id": "total",
+        "previous": null,
+        "source_ids": [
+          "mu_fy2025_q1_release"
+        ],
+        "kind": "实际",
+        "change": null,
+        "evidence_type": "direct",
+        "note": ""
+      },
+      "evidence_ids": [
+        "e-785eca3d72bf768580dad4c7e59181da5951019640a2b0f4d1ca80b68798e4bc"
+      ],
+      "id": "069cdf0e9e07955e9abdad9e8f0b06da622ed6239acd4c37ec0e60131f30fba4"
+    },
+    "bb02d8f28e8e36833f42fd2e8fd730cc5b32bd65ff8e3dc76285a814c06929df": {
+      "metric_id": "mu.revenue.total",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "financial_period": "FY2025 Q2",
+        "period_end": "2025-02-27",
+        "measurement": "revenue",
+        "unit": "USDm",
+        "scope": "总收入",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "mu_fy2025_q2_release",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000006/a2025q2ex991-pressrelease.htm",
+            "published_at": "2025-03-20"
+          }
+        ]
+      },
+      "payload": {
+        "label": "总收入",
+        "current": 8053,
+        "unit": "USDm",
+        "period": "FY2025 FQ2",
+        "location": "FQ2-25 新闻稿 Consolidated Statements of Operations · Revenue。",
+        "id": "total",
+        "previous": null,
+        "source_ids": [
+          "mu_fy2025_q2_release"
+        ],
+        "kind": "实际",
+        "change": null,
+        "evidence_type": "direct",
+        "note": ""
+      },
+      "evidence_ids": [
+        "e-a8400ee41b3b17b81b870ed1824d2c03497edb0482887bf8bbd4b702e686219a"
+      ],
+      "id": "bb02d8f28e8e36833f42fd2e8fd730cc5b32bd65ff8e3dc76285a814c06929df"
+    },
+    "6c5b95a9deb6ec42328a45cb230bdc38721a8da357a0d5604c534a23ce9cb15d": {
+      "metric_id": "mu.revenue.total",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "financial_period": "FY2025 Q3",
+        "period_end": "2025-05-29",
+        "measurement": "revenue",
+        "unit": "USDm",
+        "scope": "总收入",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "mu_fy2025_q3_release",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000019/a2025q3ex991-pressrelease.htm",
+            "published_at": "2025-06-25"
+          }
+        ]
+      },
+      "payload": {
+        "label": "总收入",
+        "current": 9301,
+        "unit": "USDm",
+        "period": "FY2025 FQ3",
+        "location": "FQ3-25 新闻稿 Consolidated Statements of Operations · Revenue。",
+        "id": "total",
+        "previous": null,
+        "source_ids": [
+          "mu_fy2025_q3_release"
+        ],
+        "kind": "实际",
+        "change": null,
+        "evidence_type": "direct",
+        "note": ""
+      },
+      "evidence_ids": [
+        "e-361d87b7568f7009310c9aa9fbdbe9b827ffd756a6967af75790ad558704c442"
+      ],
+      "id": "6c5b95a9deb6ec42328a45cb230bdc38721a8da357a0d5604c534a23ce9cb15d"
+    },
+    "a41e23e6be4ad07f983b485730f304fd796e5a2e4bd82030d8d95e6956dbd3a6": {
+      "metric_id": "mu.revenue.total",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "financial_period": "FY2025 Q4",
+        "period_end": "2025-08-28",
+        "measurement": "revenue",
+        "unit": "USDm",
+        "scope": "总收入",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "mu_fy2025_q4_release",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000024/a2025q4ex991-pressrelease.htm",
+            "published_at": "2025-09-23"
+          }
+        ]
+      },
+      "payload": {
+        "label": "总收入",
+        "current": 11315,
+        "unit": "USDm",
+        "period": "FY2025 FQ4",
+        "location": "FQ4-25 新闻稿 Consolidated Statements of Operations · Revenue。",
+        "id": "total",
+        "previous": null,
+        "source_ids": [
+          "mu_fy2025_q4_release"
+        ],
+        "kind": "实际",
+        "change": null,
+        "evidence_type": "direct",
+        "note": ""
+      },
+      "evidence_ids": [
+        "e-8ecd03240bd78b47934cc515a7c0daaa5a6ba62ae6452d2d549a7f118f776dae"
+      ],
+      "id": "a41e23e6be4ad07f983b485730f304fd796e5a2e4bd82030d8d95e6956dbd3a6"
+    },
+    "191dab3b101570503205d98e1f4294308d491c7601bdd2ff97d7804ad776145b": {
+      "metric_id": "mu.revenue.total",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "financial_period": "FY2026 Q1",
+        "period_end": "2025-11-27",
+        "measurement": "revenue",
+        "unit": "USDm",
+        "scope": "总收入",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "mu_fy2026_q1_release",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000044/a2026q1ex991-pressrelease.htm",
+            "published_at": "2025-12-17"
+          }
+        ]
+      },
+      "payload": {
+        "label": "总收入",
+        "current": 13643,
+        "unit": "USDm",
+        "period": "FY2026 FQ1",
+        "location": "FQ1-26 新闻稿 Consolidated Statements of Operations · Revenue。",
+        "id": "total",
+        "previous": null,
+        "source_ids": [
+          "mu_fy2026_q1_release"
+        ],
+        "kind": "实际",
+        "change": null,
+        "evidence_type": "direct",
+        "note": ""
+      },
+      "evidence_ids": [
+        "e-c5fb68ab3f614832cb92177001490152d8dfe7f0d09c4c6ad4a0a004b348f8a1"
+      ],
+      "id": "191dab3b101570503205d98e1f4294308d491c7601bdd2ff97d7804ad776145b"
+    },
+    "3501b8e458af3799cc455bbb7931848b8dad33972ca710930dc405ffd8c3222b": {
+      "metric_id": "mu.revenue.total",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "financial_period": "FY2026 Q2",
+        "period_end": "2026-02-26",
+        "measurement": "revenue",
+        "unit": "USDm",
+        "scope": "总收入",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "mu_fy2026_q2_release",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000004/a2026q2ex991-pressrelease.htm",
+            "published_at": "2026-03-18"
+          }
+        ]
+      },
+      "payload": {
+        "label": "总收入",
+        "current": 23860,
+        "unit": "USDm",
+        "period": "FY2026 FQ2",
+        "location": "FQ2-26 新闻稿 Consolidated Statements of Operations · Revenue。",
+        "id": "total",
+        "previous": null,
+        "source_ids": [
+          "mu_fy2026_q2_release"
+        ],
+        "kind": "实际",
+        "change": null,
+        "evidence_type": "direct",
+        "note": ""
+      },
+      "evidence_ids": [
+        "e-d81efc82057fc29eba55cf4e3ffa2ff1f64ecb68524ffb8fcb2667a2ae316e99"
+      ],
+      "id": "3501b8e458af3799cc455bbb7931848b8dad33972ca710930dc405ffd8c3222b"
+    },
+    "ba9a1b296bf85420e17fe7c005941b05fcd09fa3eee2c905b9cf644ba07ce951": {
+      "metric_id": "mu.margin.nongaap",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "financial_period": "FY2025 Q1",
+        "period_end": "2024-11-28",
+        "measurement": "margin",
+        "unit": "pct",
+        "scope": "非 GAAP 毛利率",
+        "accounting_basis": "non_gaap",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "mu_fy2025_q1_release",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312524000046/a2025q1ex991-pressrelease.htm",
+            "published_at": "2024-12-18"
+          }
+        ]
+      },
+      "payload": {
+        "label": "非 GAAP 毛利率",
+        "current": 39.5,
+        "unit": "pct",
+        "period": "FY2025 FQ1",
+        "location": "FQ1-25 新闻稿 Quarterly Financial Results · Non-GAAP · percent of revenue。",
+        "id": "nongaap",
+        "previous": null,
+        "source_ids": [
+          "mu_fy2025_q1_release"
+        ],
+        "kind": "实际",
+        "change": null,
+        "evidence_type": "direct",
+        "note": ""
+      },
+      "evidence_ids": [
+        "e-6069fac684c2239a867d4883dbbb396fba21427f5f4f68215d89fb733c85fae1"
+      ],
+      "id": "ba9a1b296bf85420e17fe7c005941b05fcd09fa3eee2c905b9cf644ba07ce951"
+    },
+    "974a2f91a4b97a0094f7f7fc36c28d173e364ddc9696646afdba4f49f7643b2e": {
+      "metric_id": "mu.margin.nongaap",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "financial_period": "FY2025 Q2",
+        "period_end": "2025-02-27",
+        "measurement": "margin",
+        "unit": "pct",
+        "scope": "非 GAAP 毛利率",
+        "accounting_basis": "non_gaap",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "mu_fy2025_q2_release",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000006/a2025q2ex991-pressrelease.htm",
+            "published_at": "2025-03-20"
+          }
+        ]
+      },
+      "payload": {
+        "label": "非 GAAP 毛利率",
+        "current": 37.9,
+        "unit": "pct",
+        "period": "FY2025 FQ2",
+        "location": "FQ2-25 新闻稿 Quarterly Financial Results · Non-GAAP · percent of revenue。",
+        "id": "nongaap",
+        "previous": null,
+        "source_ids": [
+          "mu_fy2025_q2_release"
+        ],
+        "kind": "实际",
+        "change": null,
+        "evidence_type": "direct",
+        "note": ""
+      },
+      "evidence_ids": [
+        "e-7025d9e10cf9d31209f47b8c59edc7a6271e6bca9424a52bf38162a1d43915ad"
+      ],
+      "id": "974a2f91a4b97a0094f7f7fc36c28d173e364ddc9696646afdba4f49f7643b2e"
+    },
+    "c27d14a2fa6193c2d871c36a679ba6ea5c31b26645d487c765800e8679572e7c": {
+      "metric_id": "mu.margin.nongaap",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "financial_period": "FY2025 Q3",
+        "period_end": "2025-05-29",
+        "measurement": "margin",
+        "unit": "pct",
+        "scope": "非 GAAP 毛利率",
+        "accounting_basis": "non_gaap",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "mu_fy2025_q3_release",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000019/a2025q3ex991-pressrelease.htm",
+            "published_at": "2025-06-25"
+          }
+        ]
+      },
+      "payload": {
+        "label": "非 GAAP 毛利率",
+        "current": 39,
+        "unit": "pct",
+        "period": "FY2025 FQ3",
+        "location": "FQ3-25 新闻稿 Quarterly Financial Results · Non-GAAP · percent of revenue。",
+        "id": "nongaap",
+        "previous": null,
+        "source_ids": [
+          "mu_fy2025_q3_release"
+        ],
+        "kind": "实际",
+        "change": null,
+        "evidence_type": "direct",
+        "note": ""
+      },
+      "evidence_ids": [
+        "e-47d2b9c9d1c1fd71ead14054c17930908126c19c6eafdc1c1f6c65be441669e6"
+      ],
+      "id": "c27d14a2fa6193c2d871c36a679ba6ea5c31b26645d487c765800e8679572e7c"
+    },
+    "d895571c42b7f21077f0a1f3bc1d445dbf746b265a79ae9f486706d14d34dfab": {
+      "metric_id": "mu.margin.nongaap",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "financial_period": "FY2025 Q4",
+        "period_end": "2025-08-28",
+        "measurement": "margin",
+        "unit": "pct",
+        "scope": "非 GAAP 毛利率",
+        "accounting_basis": "non_gaap",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "mu_fy2025_q4_release",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000024/a2025q4ex991-pressrelease.htm",
+            "published_at": "2025-09-23"
+          }
+        ]
+      },
+      "payload": {
+        "label": "非 GAAP 毛利率",
+        "current": 45.7,
+        "unit": "pct",
+        "period": "FY2025 FQ4",
+        "location": "FQ4-25 新闻稿 Quarterly Financial Results · Non-GAAP · percent of revenue。",
+        "id": "nongaap",
+        "previous": null,
+        "source_ids": [
+          "mu_fy2025_q4_release"
+        ],
+        "kind": "实际",
+        "change": null,
+        "evidence_type": "direct",
+        "note": ""
+      },
+      "evidence_ids": [
+        "e-44dc3fb3aab01ae8bc5c47d874369bdad61d678bb0226efeaf697ea62c3371f1"
+      ],
+      "id": "d895571c42b7f21077f0a1f3bc1d445dbf746b265a79ae9f486706d14d34dfab"
+    },
+    "dbba86ee00d75bbe997294e9c60789fed8f687d659b504fa22bb0dbd1c567a9a": {
+      "metric_id": "mu.margin.nongaap",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "financial_period": "FY2026 Q1",
+        "period_end": "2025-11-27",
+        "measurement": "margin",
+        "unit": "pct",
+        "scope": "非 GAAP 毛利率",
+        "accounting_basis": "non_gaap",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "mu_fy2026_q1_release",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000044/a2026q1ex991-pressrelease.htm",
+            "published_at": "2025-12-17"
+          }
+        ]
+      },
+      "payload": {
+        "label": "非 GAAP 毛利率",
+        "current": 56.8,
+        "unit": "pct",
+        "period": "FY2026 FQ1",
+        "location": "FQ1-26 新闻稿 Quarterly Financial Results · Non-GAAP · percent of revenue。",
+        "id": "nongaap",
+        "previous": null,
+        "source_ids": [
+          "mu_fy2026_q1_release"
+        ],
+        "kind": "实际",
+        "change": null,
+        "evidence_type": "direct",
+        "note": ""
+      },
+      "evidence_ids": [
+        "e-2a550b407d5c6db888db0cffc83a64f4ca495644ed574f0f4211abfe6fe31ce7"
+      ],
+      "id": "dbba86ee00d75bbe997294e9c60789fed8f687d659b504fa22bb0dbd1c567a9a"
+    },
+    "d6d99f994970388636a5c9266760d13d3776c9cd00375c78c4c6082f3b6ae762": {
+      "metric_id": "mu.margin.nongaap",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "financial_period": "FY2026 Q2",
+        "period_end": "2026-02-26",
+        "measurement": "margin",
+        "unit": "pct",
+        "scope": "非 GAAP 毛利率",
+        "accounting_basis": "non_gaap",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "mu_fy2026_q2_release",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000004/a2026q2ex991-pressrelease.htm",
+            "published_at": "2026-03-18"
+          }
+        ]
+      },
+      "payload": {
+        "label": "非 GAAP 毛利率",
+        "current": 74.9,
+        "unit": "pct",
+        "period": "FY2026 FQ2",
+        "location": "FQ2-26 新闻稿 Quarterly Financial Results · Non-GAAP · percent of revenue。",
+        "id": "nongaap",
+        "previous": null,
+        "source_ids": [
+          "mu_fy2026_q2_release"
+        ],
+        "kind": "实际",
+        "change": null,
+        "evidence_type": "direct",
+        "note": ""
+      },
+      "evidence_ids": [
+        "e-6f87a2180bd308d96d6309912918b09d42cc7baf79ffd46a5eef6cffeb86e614"
+      ],
+      "id": "d6d99f994970388636a5c9266760d13d3776c9cd00375c78c4c6082f3b6ae762"
+    },
+    "9385809e3e7089e59bbca93a598ac04bbfa6b688f175f75e55c0f19e7c4bbec9": {
+      "metric_id": "mu.capex.net",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "financial_period": "FY2025 Q1",
+        "period_end": "2024-11-28",
+        "measurement": "capex",
+        "unit": "USDm",
+        "scope": "净资本开支",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "mu_fy2025_q1_release",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312524000046/a2025q1ex991-pressrelease.htm",
+            "published_at": "2024-12-18"
+          }
+        ]
+      },
+      "payload": {
+        "label": "净资本开支",
+        "current": 3132,
+        "unit": "USDm",
+        "period": "FY2025 FQ1",
+        "location": "FQ1-25 新闻稿 Reconciliation of GAAP to Non-GAAP Measures · Investments in capital expenditures, net。",
+        "id": "net",
+        "previous": null,
+        "source_ids": [
+          "mu_fy2025_q1_release"
+        ],
+        "kind": "实际",
+        "change": null,
+        "evidence_type": "direct",
+        "note": ""
+      },
+      "evidence_ids": [
+        "e-97af4fdab60a8381c885f76921a9330cd98b1018a19488caa2de408a1ce53225"
+      ],
+      "id": "9385809e3e7089e59bbca93a598ac04bbfa6b688f175f75e55c0f19e7c4bbec9"
+    },
+    "8519d4b955502788ce89df776b7c92235c109c9f5b448b5c8c481ccfbae3fac7": {
+      "metric_id": "mu.capex.net",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "financial_period": "FY2025 Q2",
+        "period_end": "2025-02-27",
+        "measurement": "capex",
+        "unit": "USDm",
+        "scope": "净资本开支",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "mu_fy2025_q2_release",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000006/a2025q2ex991-pressrelease.htm",
+            "published_at": "2025-03-20"
+          }
+        ]
+      },
+      "payload": {
+        "label": "净资本开支",
+        "current": 3085,
+        "unit": "USDm",
+        "period": "FY2025 FQ2",
+        "location": "FQ2-25 新闻稿 Reconciliation of GAAP to Non-GAAP Measures · Investments in capital expenditures, net。",
+        "id": "net",
+        "previous": null,
+        "source_ids": [
+          "mu_fy2025_q2_release"
+        ],
+        "kind": "实际",
+        "change": null,
+        "evidence_type": "direct",
+        "note": ""
+      },
+      "evidence_ids": [
+        "e-f51dbdacfb10d4197557ee374b8ffb5fe5a819e6922fd714d8cafa6ab522d148"
+      ],
+      "id": "8519d4b955502788ce89df776b7c92235c109c9f5b448b5c8c481ccfbae3fac7"
+    },
+    "39f7439c16f6d077709dabc4162763ce659d0c83d315c7df4b5724ddf6dee9d1": {
+      "metric_id": "mu.capex.net",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "financial_period": "FY2025 Q3",
+        "period_end": "2025-05-29",
+        "measurement": "capex",
+        "unit": "USDm",
+        "scope": "净资本开支",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "mu_fy2025_q3_release",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000019/a2025q3ex991-pressrelease.htm",
+            "published_at": "2025-06-25"
+          }
+        ]
+      },
+      "payload": {
+        "label": "净资本开支",
+        "current": 2660,
+        "unit": "USDm",
+        "period": "FY2025 FQ3",
+        "location": "FQ3-25 新闻稿 Reconciliation of GAAP to Non-GAAP Measures · Investments in capital expenditures, net。",
+        "id": "net",
+        "previous": null,
+        "source_ids": [
+          "mu_fy2025_q3_release"
+        ],
+        "kind": "实际",
+        "change": null,
+        "evidence_type": "direct",
+        "note": ""
+      },
+      "evidence_ids": [
+        "e-04f4f5be7f9d9014667c19952d2e8c2fffd812cc8aa2ce6053037483c51e0144"
+      ],
+      "id": "39f7439c16f6d077709dabc4162763ce659d0c83d315c7df4b5724ddf6dee9d1"
+    },
+    "35659d0048fb719d0256ab596f5c77757d7e041786d9f4982dc1ab40f5f4d34b": {
+      "metric_id": "mu.capex.net",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "financial_period": "FY2025 Q4",
+        "period_end": "2025-08-28",
+        "measurement": "capex",
+        "unit": "USDm",
+        "scope": "净资本开支",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "mu_fy2025_q4_release",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000024/a2025q4ex991-pressrelease.htm",
+            "published_at": "2025-09-23"
+          }
+        ]
+      },
+      "payload": {
+        "label": "净资本开支",
+        "current": 4927,
+        "unit": "USDm",
+        "period": "FY2025 FQ4",
+        "location": "FQ4-25 新闻稿 Reconciliation of GAAP to Non-GAAP Measures · Investments in capital expenditures, net。",
+        "id": "net",
+        "previous": null,
+        "source_ids": [
+          "mu_fy2025_q4_release"
+        ],
+        "kind": "实际",
+        "change": null,
+        "evidence_type": "direct",
+        "note": ""
+      },
+      "evidence_ids": [
+        "e-a403963a02aad632daaeaa6e3528ea388b576cb35ded2e8feb6bb682465c9027"
+      ],
+      "id": "35659d0048fb719d0256ab596f5c77757d7e041786d9f4982dc1ab40f5f4d34b"
+    },
+    "d0b6b5d92fe933b7fabfdb7ab24227e0a99bb9184ba3adf09564b00cc8ef75a3": {
+      "metric_id": "mu.capex.net",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "financial_period": "FY2026 Q1",
+        "period_end": "2025-11-27",
+        "measurement": "capex",
+        "unit": "USDm",
+        "scope": "净资本开支",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "mu_fy2026_q1_release",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000044/a2026q1ex991-pressrelease.htm",
+            "published_at": "2025-12-17"
+          }
+        ]
+      },
+      "payload": {
+        "label": "净资本开支",
+        "current": 4505,
+        "unit": "USDm",
+        "period": "FY2026 FQ1",
+        "location": "FQ1-26 新闻稿 Reconciliation of GAAP to Non-GAAP Measures · Investments in capital expenditures, net。",
+        "id": "net",
+        "previous": null,
+        "source_ids": [
+          "mu_fy2026_q1_release"
+        ],
+        "kind": "实际",
+        "change": null,
+        "evidence_type": "direct",
+        "note": ""
+      },
+      "evidence_ids": [
+        "e-7d8e02f8acf85fd07db9a6e9c90e0ad4c8bd16b303a6138bef5e0d13803f2cde"
+      ],
+      "id": "d0b6b5d92fe933b7fabfdb7ab24227e0a99bb9184ba3adf09564b00cc8ef75a3"
+    },
+    "88bef512dda3735b50aef9a1a78711e89992142dda4ca7b920a2a2f0671f8884": {
+      "metric_id": "mu.capex.net",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "financial_period": "FY2026 Q2",
+        "period_end": "2026-02-26",
+        "measurement": "capex",
+        "unit": "USDm",
+        "scope": "净资本开支",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "mu_fy2026_q2_release",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000004/a2026q2ex991-pressrelease.htm",
+            "published_at": "2026-03-18"
+          }
+        ]
+      },
+      "payload": {
+        "label": "净资本开支",
+        "current": 5004,
+        "unit": "USDm",
+        "period": "FY2026 FQ2",
+        "location": "FQ2-26 新闻稿 Reconciliation of GAAP to Non-GAAP Measures · Investments in capital expenditures, net。",
+        "id": "net",
+        "previous": null,
+        "source_ids": [
+          "mu_fy2026_q2_release"
+        ],
+        "kind": "实际",
+        "change": null,
+        "evidence_type": "direct",
+        "note": ""
+      },
+      "evidence_ids": [
+        "e-a51d5d071a03dfdf439ee8d3c5af5234eef3907884971d263755adb8fab75b2a"
+      ],
+      "id": "88bef512dda3735b50aef9a1a78711e89992142dda4ca7b920a2a2f0671f8884"
+    },
+    "008f2c32add36c443e007126cb43db027666507335db0d9e6d5c1e4cdc16680c": {
+      "metric_id": "mu.inventory.days",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "financial_period": "FY2025 Q1",
+        "period_end": "2024-11-28",
+        "measurement": "inventory",
+        "unit": "days",
+        "scope": "库存天数",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "period_end",
+        "sources": [
+          {
+            "id": "mu_fy2025_q1_remarks",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q1/FY25-Q1-Prepared-Remarks.pdf#page=9",
+            "published_at": "2024-12-18"
+          }
+        ]
+      },
+      "payload": {
+        "label": "库存天数",
+        "current": 149,
+        "unit": "days",
+        "period": "FY2025 FQ1 期末",
+        "location": "FQ1-25 讲稿第 9 页 · Inventory · days。",
+        "id": "days",
+        "previous": null,
+        "source_ids": [
+          "mu_fy2025_q1_remarks"
+        ],
+        "kind": "实际",
+        "change": null,
+        "evidence_type": "direct",
+        "note": ""
+      },
+      "evidence_ids": [
+        "e-e59911c01d65e1cd4c6557c1aa18b7abd991dc32ab3096c24c5331e0736fae61"
+      ],
+      "id": "008f2c32add36c443e007126cb43db027666507335db0d9e6d5c1e4cdc16680c"
+    },
+    "4f4d9391fad5a48df40d266f4796b634e5cbb899e3cab3d7f7ed9c37a1897292": {
+      "metric_id": "mu.inventory.days",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "financial_period": "FY2025 Q2",
+        "period_end": "2025-02-27",
+        "measurement": "inventory",
+        "unit": "days",
+        "scope": "库存天数",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "period_end",
+        "sources": [
+          {
+            "id": "mu_fy2025_q2_remarks",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q2/Micron_FY25_Q2_Prepared_Remarks_2-1.pdf#page=9",
+            "published_at": "2025-03-20"
+          }
+        ]
+      },
+      "payload": {
+        "label": "库存天数",
+        "current": 158,
+        "unit": "days",
+        "period": "FY2025 FQ2 期末",
+        "location": "FQ2-25 讲稿第 9 页 · Inventory · days。",
+        "id": "days",
+        "previous": null,
+        "source_ids": [
+          "mu_fy2025_q2_remarks"
+        ],
+        "kind": "实际",
+        "change": null,
+        "evidence_type": "direct",
+        "note": ""
+      },
+      "evidence_ids": [
+        "e-6073aaf634b36730822fab8143ac68ce7e7894c9392bd19fb7aae4095157bb86"
+      ],
+      "id": "4f4d9391fad5a48df40d266f4796b634e5cbb899e3cab3d7f7ed9c37a1897292"
+    },
+    "1658cd91890115a04b8df9b26c18c6766df97eb3678cc8a3273c02ec46e8d096": {
+      "metric_id": "mu.inventory.days",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "financial_period": "FY2025 Q3",
+        "period_end": "2025-05-29",
+        "measurement": "inventory",
+        "unit": "days",
+        "scope": "库存天数",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "period_end",
+        "sources": [
+          {
+            "id": "mu_fy2025_q3_remarks",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q3/Micron_FY25_Q3_Prepared_Remarks.pdf#page=8",
+            "published_at": "2025-06-25"
+          }
+        ]
+      },
+      "payload": {
+        "label": "库存天数",
+        "current": 139,
+        "unit": "days",
+        "period": "FY2025 FQ3 期末",
+        "location": "FQ3-25 讲稿第 8 页 · Inventory · days。",
+        "id": "days",
+        "previous": null,
+        "source_ids": [
+          "mu_fy2025_q3_remarks"
+        ],
+        "kind": "实际",
+        "change": null,
+        "evidence_type": "direct",
+        "note": ""
+      },
+      "evidence_ids": [
+        "e-b128666dda739ee73c485c4495f949c741ca753e574350c98b2068a011a07e89"
+      ],
+      "id": "1658cd91890115a04b8df9b26c18c6766df97eb3678cc8a3273c02ec46e8d096"
+    },
+    "d9ba3ff614cb93bbbb6fc1ce485e14cac678c92b46b939bb94d5d662b2ff7bab": {
+      "metric_id": "mu.inventory.days",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "financial_period": "FY2025 Q4",
+        "period_end": "2025-08-28",
+        "measurement": "inventory",
+        "unit": "days",
+        "scope": "库存天数",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "period_end",
+        "sources": [
+          {
+            "id": "mu_fy2025_q4_remarks",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q4/Q4-2025-Prepared-Remarks-1.pdf#page=9",
+            "published_at": "2025-09-23"
+          }
+        ]
+      },
+      "payload": {
+        "label": "库存天数",
+        "current": 124,
+        "unit": "days",
+        "period": "FY2025 FQ4 期末",
+        "location": "FQ4-25 讲稿第 9 页 · Inventory · days。",
+        "id": "days",
+        "previous": null,
+        "source_ids": [
+          "mu_fy2025_q4_remarks"
+        ],
+        "kind": "实际",
+        "change": null,
+        "evidence_type": "direct",
+        "note": ""
+      },
+      "evidence_ids": [
+        "e-e5b6f5c9b7a5f3189971040eed9f0c34a059393d345f7a510c74da84db89ccb5"
+      ],
+      "id": "d9ba3ff614cb93bbbb6fc1ce485e14cac678c92b46b939bb94d5d662b2ff7bab"
+    },
+    "6d581e324cb7fc5410f3096969080b9be5e6eb37ef46f85e7216c1c1445e99fe": {
+      "metric_id": "mu.inventory.days",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "financial_period": "FY2026 Q1",
+        "period_end": "2025-11-27",
+        "measurement": "inventory",
+        "unit": "days",
+        "scope": "库存天数",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "period_end",
+        "sources": [
+          {
+            "id": "mu_fy2026_q1_remarks",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q1/Micron_Q1-2026-Prepared-Remarks.pdf#page=8",
+            "published_at": "2025-12-17"
+          }
+        ]
+      },
+      "payload": {
+        "label": "库存天数",
+        "current": 126,
+        "unit": "days",
+        "period": "FY2026 FQ1 期末",
+        "location": "FQ1-26 讲稿第 8 页 · Inventory · days。",
+        "id": "days",
+        "previous": null,
+        "source_ids": [
+          "mu_fy2026_q1_remarks"
+        ],
+        "kind": "实际",
+        "change": null,
+        "evidence_type": "direct",
+        "note": ""
+      },
+      "evidence_ids": [
+        "e-e906a2ecbe667b2f50f02803f4c314deba14247674bbb90aef9b1b7c8b5eb6f6"
+      ],
+      "id": "6d581e324cb7fc5410f3096969080b9be5e6eb37ef46f85e7216c1c1445e99fe"
+    },
+    "e37b43e4b28ad0405e64c21db7bfcd99bfa25c8c69ace03e5173fae757524519": {
+      "metric_id": "mu.inventory.days",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "financial_period": "FY2026 Q2",
+        "period_end": "2026-02-26",
+        "measurement": "inventory",
+        "unit": "days",
+        "scope": "库存天数",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "period_end",
+        "sources": [
+          {
+            "id": "mu_fy2026_q2_remarks",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q2/Q2-2026-Prepared-Remarks.pdf#page=8",
+            "published_at": "2026-03-18"
+          }
+        ]
+      },
+      "payload": {
+        "label": "库存天数",
+        "current": 123,
+        "unit": "days",
+        "period": "FY2026 FQ2 期末",
+        "location": "FQ2-26 讲稿第 8 页 · Inventory · days。",
+        "id": "days",
+        "previous": null,
+        "source_ids": [
+          "mu_fy2026_q2_remarks"
+        ],
+        "kind": "实际",
+        "change": null,
+        "evidence_type": "direct",
+        "note": ""
+      },
+      "evidence_ids": [
+        "e-cc632ecfd1fbb61c303c8f820040fbaf9fed41e1e1386a8c28515ac01da065ad"
+      ],
+      "id": "e37b43e4b28ad0405e64c21db7bfcd99bfa25c8c69ace03e5173fae757524519"
+    },
+    "c3e423abb0d04f4138a5fc50fe4dba0fce8d0d62d8d3c63094d572562fe395cc": {
+      "metric_id": "mu.revenue.dram",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "financial_period": "FY2025 Q1",
+        "period_end": "2024-11-28",
+        "measurement": "revenue",
+        "unit": "USDm",
+        "scope": "DRAM 收入",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "mu_fy2025_q1_10q",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312524000047/mu-20241128.htm",
+            "published_at": "2024-12-19"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DRAM 收入",
+        "current": 6400,
+        "unit": "USDm",
+        "period": "FY2025 FQ1",
+        "location": "FQ1-25 10-Q 附注 Revenue and Customer Contract Liabilities · Revenue by Technology · DRAM。",
+        "id": "dram",
+        "previous": null,
+        "source_ids": [
+          "mu_fy2025_q1_10q"
+        ],
+        "kind": "实际",
+        "change": null,
+        "evidence_type": "direct",
+        "note": ""
+      },
+      "evidence_ids": [
+        "e-5c153cf100fee0b0277c49d16ef2b302415f814feced3beb0d22463442d0b973"
+      ],
+      "id": "c3e423abb0d04f4138a5fc50fe4dba0fce8d0d62d8d3c63094d572562fe395cc"
+    },
+    "56aa7499e4816dcb25cc84bb9849e4b74c2acd10bf3779e697e19015d541fdeb": {
+      "metric_id": "mu.revenue.dram",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "financial_period": "FY2025 Q2",
+        "period_end": "2025-02-27",
+        "measurement": "revenue",
+        "unit": "USDm",
+        "scope": "DRAM 收入",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "mu_fy2025_q2_10q",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000009/mu-20250227.htm",
+            "published_at": "2025-03-21"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DRAM 收入",
+        "current": 6123,
+        "unit": "USDm",
+        "period": "FY2025 FQ2",
+        "location": "FQ2-25 10-Q 附注 Revenue and Customer Contract Liabilities · Revenue by Technology · DRAM。",
+        "id": "dram",
+        "previous": null,
+        "source_ids": [
+          "mu_fy2025_q2_10q"
+        ],
+        "kind": "实际",
+        "change": null,
+        "evidence_type": "direct",
+        "note": ""
+      },
+      "evidence_ids": [
+        "e-6dcae89bf6e5cccbb620df5635be3d442dbc6e92838fd52afcd7c243d66dfb0c"
+      ],
+      "id": "56aa7499e4816dcb25cc84bb9849e4b74c2acd10bf3779e697e19015d541fdeb"
+    },
+    "e815f5ae95705791af55452ddf6b9dc31eb244200b13620f30d0171cca31dc23": {
+      "metric_id": "mu.revenue.dram",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "financial_period": "FY2025 Q3",
+        "period_end": "2025-05-29",
+        "measurement": "revenue",
+        "unit": "USDm",
+        "scope": "DRAM 收入",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "mu_fy2025_q3_10q",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000021/mu-20250529.htm",
+            "published_at": "2025-06-26"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DRAM 收入",
+        "current": 7071,
+        "unit": "USDm",
+        "period": "FY2025 FQ3",
+        "location": "FQ3-25 10-Q 附注 Revenue and Customer Contract Liabilities · Revenue by Technology · DRAM。",
+        "id": "dram",
+        "previous": null,
+        "source_ids": [
+          "mu_fy2025_q3_10q"
+        ],
+        "kind": "实际",
+        "change": null,
+        "evidence_type": "direct",
+        "note": ""
+      },
+      "evidence_ids": [
+        "e-2309af983a19723a0ba8702a6c157bbfbaff11018cd7a6d8546f8c58e64871f1"
+      ],
+      "id": "e815f5ae95705791af55452ddf6b9dc31eb244200b13620f30d0171cca31dc23"
+    },
+    "296890cfc3630f4256d9e80fa514fff4402d92a2cde122afe58d1cad88b4b1d0": {
+      "metric_id": "mu.revenue.dram",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "financial_period": "FY2025 Q4",
+        "period_end": "2025-08-28",
+        "measurement": "revenue",
+        "unit": "USDm",
+        "scope": "DRAM 收入",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "mu_fy2026_q4_deck",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-26-Earnings-Deck.pdf#page=35",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DRAM 收入",
+        "current": 8984,
+        "unit": "USDm",
+        "period": "FY2025 FQ4",
+        "location": "FQ4-26 业绩材料第 35 页 · Revenue by Technology · DRAM · FQ4-25 列。",
+        "id": "dram",
+        "previous": null,
+        "source_ids": [
+          "mu_fy2026_q4_deck"
+        ],
+        "kind": "实际",
+        "change": null,
+        "evidence_type": "direct",
+        "note": ""
+      },
+      "evidence_ids": [
+        "e-9f156c1779d95a1e1d164ed1d1d26007eb950a384debede7cf3c2d57896c9ad2"
+      ],
+      "id": "296890cfc3630f4256d9e80fa514fff4402d92a2cde122afe58d1cad88b4b1d0"
+    },
+    "e93469d34e6f9cf6d7153c73ef5696d510d9123fc1ef7209eee6c955829a2940": {
+      "metric_id": "mu.revenue.dram",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "financial_period": "FY2026 Q1",
+        "period_end": "2025-11-27",
+        "measurement": "revenue",
+        "unit": "USDm",
+        "scope": "DRAM 收入",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "mu_fy2026_q1_10q",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000046/mu-20251127.htm",
+            "published_at": "2025-12-18"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DRAM 收入",
+        "current": 10812,
+        "unit": "USDm",
+        "period": "FY2026 FQ1",
+        "location": "FQ1-26 10-Q 附注 Revenue and Customer Contract Liabilities · Revenue by Technology · DRAM。",
+        "id": "dram",
+        "previous": null,
+        "source_ids": [
+          "mu_fy2026_q1_10q"
+        ],
+        "kind": "实际",
+        "change": null,
+        "evidence_type": "direct",
+        "note": ""
+      },
+      "evidence_ids": [
+        "e-a60fc2cfa5b1d257cc0ce665cde2b554e144e7a629e47815877c0c5e82038e5f"
+      ],
+      "id": "e93469d34e6f9cf6d7153c73ef5696d510d9123fc1ef7209eee6c955829a2940"
+    },
+    "b880ea761d9b04bf894f1f6792497057dc308a067869e2e4e9cbb2453076018b": {
+      "metric_id": "mu.revenue.dram",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "financial_period": "FY2026 Q2",
+        "period_end": "2026-02-26",
+        "measurement": "revenue",
+        "unit": "USDm",
+        "scope": "DRAM 收入",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "mu_fy2026_q2_10q",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000006/mu-20260226.htm",
+            "published_at": "2026-03-19"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DRAM 收入",
+        "current": 18768,
+        "unit": "USDm",
+        "period": "FY2026 FQ2",
+        "location": "FQ2-26 10-Q 附注 Revenue and Customer Contract Liabilities · Revenue by Technology · DRAM。",
+        "id": "dram",
+        "previous": null,
+        "source_ids": [
+          "mu_fy2026_q2_10q"
+        ],
+        "kind": "实际",
+        "change": null,
+        "evidence_type": "direct",
+        "note": ""
+      },
+      "evidence_ids": [
+        "e-c28369d1c14a28bcf7172f123d2023d9455108b22752c6030a1b02f2a1f6479f"
+      ],
+      "id": "b880ea761d9b04bf894f1f6792497057dc308a067869e2e4e9cbb2453076018b"
     }
   },
   "supporting": {
@@ -14541,19 +15777,49 @@
   },
   "series": {
     "mu.revenue.total": {
-      "FY2026 Q3": "7fed8ce2eb6f884238ab5f0e0981a9f206673e3c16afc4feeaaeef744b82e486"
+      "FY2026 Q3": "7fed8ce2eb6f884238ab5f0e0981a9f206673e3c16afc4feeaaeef744b82e486",
+      "FY2025 Q1": "069cdf0e9e07955e9abdad9e8f0b06da622ed6239acd4c37ec0e60131f30fba4",
+      "FY2025 Q2": "bb02d8f28e8e36833f42fd2e8fd730cc5b32bd65ff8e3dc76285a814c06929df",
+      "FY2025 Q3": "6c5b95a9deb6ec42328a45cb230bdc38721a8da357a0d5604c534a23ce9cb15d",
+      "FY2025 Q4": "a41e23e6be4ad07f983b485730f304fd796e5a2e4bd82030d8d95e6956dbd3a6",
+      "FY2026 Q1": "191dab3b101570503205d98e1f4294308d491c7601bdd2ff97d7804ad776145b",
+      "FY2026 Q2": "3501b8e458af3799cc455bbb7931848b8dad33972ca710930dc405ffd8c3222b"
     },
     "mu.revenue.dram": {
-      "FY2026 Q3": "a867e0fa1ca4c10301d60b201ebb0061414fd49f0c1f1446efee7e906b75264d"
+      "FY2026 Q3": "a867e0fa1ca4c10301d60b201ebb0061414fd49f0c1f1446efee7e906b75264d",
+      "FY2025 Q1": "c3e423abb0d04f4138a5fc50fe4dba0fce8d0d62d8d3c63094d572562fe395cc",
+      "FY2025 Q2": "56aa7499e4816dcb25cc84bb9849e4b74c2acd10bf3779e697e19015d541fdeb",
+      "FY2025 Q3": "e815f5ae95705791af55452ddf6b9dc31eb244200b13620f30d0171cca31dc23",
+      "FY2025 Q4": "296890cfc3630f4256d9e80fa514fff4402d92a2cde122afe58d1cad88b4b1d0",
+      "FY2026 Q1": "e93469d34e6f9cf6d7153c73ef5696d510d9123fc1ef7209eee6c955829a2940",
+      "FY2026 Q2": "b880ea761d9b04bf894f1f6792497057dc308a067869e2e4e9cbb2453076018b"
     },
     "mu.margin.nongaap": {
-      "FY2026 Q3": "c3be7b49a44ab3ef41b633d6ce75e51c3015f40fd7567827d6341ec62ba5f992"
+      "FY2026 Q3": "c3be7b49a44ab3ef41b633d6ce75e51c3015f40fd7567827d6341ec62ba5f992",
+      "FY2025 Q1": "ba9a1b296bf85420e17fe7c005941b05fcd09fa3eee2c905b9cf644ba07ce951",
+      "FY2025 Q2": "974a2f91a4b97a0094f7f7fc36c28d173e364ddc9696646afdba4f49f7643b2e",
+      "FY2025 Q3": "c27d14a2fa6193c2d871c36a679ba6ea5c31b26645d487c765800e8679572e7c",
+      "FY2025 Q4": "d895571c42b7f21077f0a1f3bc1d445dbf746b265a79ae9f486706d14d34dfab",
+      "FY2026 Q1": "dbba86ee00d75bbe997294e9c60789fed8f687d659b504fa22bb0dbd1c567a9a",
+      "FY2026 Q2": "d6d99f994970388636a5c9266760d13d3776c9cd00375c78c4c6082f3b6ae762"
     },
     "mu.inventory.days": {
-      "FY2026 Q3": "95a61a68a55d7b376a5556f21dd0c38e7fde76b81088f01451caf57594f792d3"
+      "FY2026 Q3": "95a61a68a55d7b376a5556f21dd0c38e7fde76b81088f01451caf57594f792d3",
+      "FY2025 Q1": "008f2c32add36c443e007126cb43db027666507335db0d9e6d5c1e4cdc16680c",
+      "FY2025 Q2": "4f4d9391fad5a48df40d266f4796b634e5cbb899e3cab3d7f7ed9c37a1897292",
+      "FY2025 Q3": "1658cd91890115a04b8df9b26c18c6766df97eb3678cc8a3273c02ec46e8d096",
+      "FY2025 Q4": "d9ba3ff614cb93bbbb6fc1ce485e14cac678c92b46b939bb94d5d662b2ff7bab",
+      "FY2026 Q1": "6d581e324cb7fc5410f3096969080b9be5e6eb37ef46f85e7216c1c1445e99fe",
+      "FY2026 Q2": "e37b43e4b28ad0405e64c21db7bfcd99bfa25c8c69ace03e5173fae757524519"
     },
     "mu.capex.net": {
-      "FY2026 Q3": "7b9e28eed4b715b67e868edce16125c43a471be199e4d123d5d22088d40eb0aa"
+      "FY2026 Q3": "7b9e28eed4b715b67e868edce16125c43a471be199e4d123d5d22088d40eb0aa",
+      "FY2025 Q1": "9385809e3e7089e59bbca93a598ac04bbfa6b688f175f75e55c0f19e7c4bbec9",
+      "FY2025 Q2": "8519d4b955502788ce89df776b7c92235c109c9f5b448b5c8c481ccfbae3fac7",
+      "FY2025 Q3": "39f7439c16f6d077709dabc4162763ce659d0c83d315c7df4b5724ddf6dee9d1",
+      "FY2025 Q4": "35659d0048fb719d0256ab596f5c77757d7e041786d9f4982dc1ab40f5f4d34b",
+      "FY2026 Q1": "d0b6b5d92fe933b7fabfdb7ab24227e0a99bb9184ba3adf09564b00cc8ef75a3",
+      "FY2026 Q2": "88bef512dda3735b50aef9a1a78711e89992142dda4ca7b920a2a2f0671f8884"
     }
   }
 }

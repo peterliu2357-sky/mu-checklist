@@ -1,0 +1,288 @@
+{
+  "version": 1,
+  "scope": "micron",
+  "base_commit": "d34408686aa3e4ce5790e52d4c1370a0bdb868c8",
+  "base_revision": "2026-10-01-307800bd64",
+  "base_sha256": "9c23e19b92c3ae60478b565049b548fa268022761d446933022b800eef0fc304",
+  "catalog_sha256": "a00837c5e5d981e27988e5111417eae281ba0e2c36536ad968cbf62e3fcfcacd",
+  "created_at": "2026-10-01T23:12:23.541Z",
+  "completed_at": "2026-10-01T23:13:44.787Z",
+  "state": "verified",
+  "targets": null,
+  "coverage": [
+    {
+      "key": "micron",
+      "status": "unchanged",
+      "evidence": [
+        "financial"
+      ],
+      "reviewed_at": "2026-10-01T23:13:36.611Z",
+      "latest_disclosure": {
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "published_at": "2026-09-30"
+      },
+      "reason": "SEC 申报列表中最新美光财报仍为 2026-09-30 的 FY2026 Q4 8-K；当前事实不变。本次另按各季新闻稿、10-Q、讲稿与 FQ4-26 业绩材料回填 FY2025 Q1 至 FY2026 Q2 的趋势点。"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "mu_fy2025_q1_release",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312524000046/a2025q1ex991-pressrelease.htm",
+      "sha256": "d2dfb81ab8db61eb6a8b243ed4191f6ddae33b35fd9940955033c14029bc2699",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T23:13:05.428Z",
+      "reviewed_at": "2026-10-01T23:13:05.428Z",
+      "status": "read"
+    },
+    {
+      "source_id": "mu_fy2025_q1_remarks",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q1/FY25-Q1-Prepared-Remarks.pdf#page=9",
+      "sha256": "655d4dbc5cdc77a09cef46efc11a62fbc85bd3909fc44f861e4a93fd05942cff",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T23:13:05.725Z",
+      "reviewed_at": "2026-10-01T23:13:05.725Z",
+      "status": "read"
+    },
+    {
+      "source_id": "mu_fy2025_q1_10q",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312524000047/mu-20241128.htm",
+      "sha256": "c1fc01e499ff74d38231e58ff44905a181a750918f72623619b017d1ff9c9b63",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T23:13:06.032Z",
+      "reviewed_at": "2026-10-01T23:13:06.032Z",
+      "status": "read"
+    },
+    {
+      "source_id": "mu_fy2025_q2_release",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000006/a2025q2ex991-pressrelease.htm",
+      "sha256": "3ffae41f5ffad581e1f5f8223cd2540ba3619986ce8159bd054b64cc99e2c695",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T23:13:06.351Z",
+      "reviewed_at": "2026-10-01T23:13:06.351Z",
+      "status": "read"
+    },
+    {
+      "source_id": "mu_fy2025_q2_remarks",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q2/Micron_FY25_Q2_Prepared_Remarks_2-1.pdf#page=9",
+      "sha256": "947e90d70dc160899267aa8f89335027d9de3e64ef6d5f7a0265c592e70c44a8",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T23:13:06.650Z",
+      "reviewed_at": "2026-10-01T23:13:06.650Z",
+      "status": "read"
+    },
+    {
+      "source_id": "mu_fy2025_q2_10q",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000009/mu-20250227.htm",
+      "sha256": "4057b7920c37759a6c1074dab10e7ef7ef18c7821d9363f6885faa9de8d3c4ac",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T23:13:06.949Z",
+      "reviewed_at": "2026-10-01T23:13:06.949Z",
+      "status": "read"
+    },
+    {
+      "source_id": "mu_fy2025_q3_release",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000019/a2025q3ex991-pressrelease.htm",
+      "sha256": "8ee399aeea24a7915f7a0a98dcc1cf64b462e4be7013c46b209a30ff7fcb8627",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T23:13:07.256Z",
+      "reviewed_at": "2026-10-01T23:13:07.256Z",
+      "status": "read"
+    },
+    {
+      "source_id": "mu_fy2025_q3_remarks",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q3/Micron_FY25_Q3_Prepared_Remarks.pdf#page=8",
+      "sha256": "77931fd02fb266dddca1214867cbc57fbf6172c1dbd36d4845e9d1c1506e63db",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T23:13:07.596Z",
+      "reviewed_at": "2026-10-01T23:13:07.596Z",
+      "status": "read"
+    },
+    {
+      "source_id": "mu_fy2025_q3_10q",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000021/mu-20250529.htm",
+      "sha256": "d3e3c51b7932f7255674ac0d50b3481a3211cbc7055e573a0466e235a091aa07",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T23:13:07.978Z",
+      "reviewed_at": "2026-10-01T23:13:07.978Z",
+      "status": "read"
+    },
+    {
+      "source_id": "mu_fy2025_q4_release",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000024/a2025q4ex991-pressrelease.htm",
+      "sha256": "37af789d70da86079ffe5fd598d2b27fc47913df56beb799b8d12f3120c39e9b",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T23:13:08.302Z",
+      "reviewed_at": "2026-10-01T23:13:08.302Z",
+      "status": "read"
+    },
+    {
+      "source_id": "mu_fy2025_q4_remarks",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q4/Q4-2025-Prepared-Remarks-1.pdf#page=9",
+      "sha256": "ba2c603b5458275df6faffb733748270b7146a50f790c1035dfbfa8acad2288a",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T23:13:08.608Z",
+      "reviewed_at": "2026-10-01T23:13:08.608Z",
+      "status": "read"
+    },
+    {
+      "source_id": "mu_fy2026_q4_deck",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-26-Earnings-Deck.pdf#page=35",
+      "sha256": "9709c4542924271b3e6a5124f9d1a5fc1fee7b18d574098c60b91c14c85d04b6",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T23:13:08.912Z",
+      "reviewed_at": "2026-10-01T23:13:08.912Z",
+      "status": "read"
+    },
+    {
+      "source_id": "mu_fy2026_q1_release",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000044/a2026q1ex991-pressrelease.htm",
+      "sha256": "0e523c3b33a2a34b99f076d8a3e4785863bac0d7045ae8bbb062d068214db74a",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T23:13:09.218Z",
+      "reviewed_at": "2026-10-01T23:13:09.218Z",
+      "status": "read"
+    },
+    {
+      "source_id": "mu_fy2026_q1_remarks",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q1/Micron_Q1-2026-Prepared-Remarks.pdf#page=8",
+      "sha256": "265dfb771eaff47b1951365ee96d6e92ddd2116ac2dcd581543c038991b96722",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T23:13:09.516Z",
+      "reviewed_at": "2026-10-01T23:13:09.516Z",
+      "status": "read"
+    },
+    {
+      "source_id": "mu_fy2026_q1_10q",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000046/mu-20251127.htm",
+      "sha256": "9f1885db989afd0cb5840cc8bbaaffb9782286f8e510e87563afc250c3fa4e5c",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T23:13:09.853Z",
+      "reviewed_at": "2026-10-01T23:13:09.853Z",
+      "status": "read"
+    },
+    {
+      "source_id": "mu_fy2026_q2_release",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000004/a2026q2ex991-pressrelease.htm",
+      "sha256": "cd9bc09ab46519644b13092cf5c577f03427b9516dafe76a628471a8d524c773",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T23:13:10.205Z",
+      "reviewed_at": "2026-10-01T23:13:10.205Z",
+      "status": "read"
+    },
+    {
+      "source_id": "mu_fy2026_q2_remarks",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q2/Q2-2026-Prepared-Remarks.pdf#page=8",
+      "sha256": "084f27ab5a07aa33200e4e5709ccfab6127b6f28b139960f5dfee7d19df32db9",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T23:13:10.507Z",
+      "reviewed_at": "2026-10-01T23:13:10.507Z",
+      "status": "read"
+    },
+    {
+      "source_id": "mu_fy2026_q2_10q",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000006/mu-20260226.htm",
+      "sha256": "06f67b9c53f347501f5111e01b52b174d34d8ad62cbd2cd64ba84b82ee9772c2",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T23:13:10.843Z",
+      "reviewed_at": "2026-10-01T23:13:10.843Z",
+      "status": "read"
+    },
+    {
+      "source_id": "financial",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+      "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T23:13:36.611Z",
+      "reviewed_at": "2026-10-01T23:13:36.611Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [],
+  "publication_corrections": [],
+  "technology_reviews": [
+    {
+      "id": "sanand",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "idaho_id1",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "tongluo",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "singapore_hbm",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "dram_1gamma",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "nand_g9",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "micron_rdimm512",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "micron_rdimm256",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "micron_hbm4",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "micron_hbm4e",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    }
+  ],
+  "summary": "美光季度走势回填：按各季新闻稿、10-Q、讲稿与 FQ4-26 业绩材料，补入 FY2025 Q1 至 FY2026 Q2 的收入、DRAM 收入、非 GAAP 毛利率、库存天数与净资本开支；最新财报仍为 FY2026 Q4，现有数值不变。",
+  "result": "success",
+  "artifact_sha256": "c5582a7f1f1b4b9bfcbc1d5db4ca013086e7491abc4b8c3a4b0726d53b185b2c",
+  "ledger_sha256": "eae5407b09470e642631703bb927b56ac266aa8c876e6b8bcdee816008bb8dc9",
+  "evidence_sha256": "eb45fc0afa864786fa0fb143c391c8c140604b686b824035ac3c6fea5f030ef5"
+}
