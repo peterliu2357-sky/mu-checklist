@@ -49,6 +49,8 @@ After calendar changes or report processing, inspect `schedule --mode earnings`.
 
 The initial calendar confirms Micron's FY2026 Q4 call. Other companies display “date to be confirmed” until their official calendar is reviewed. Company coverage comes from the catalog, so adding a company extends calendar maintenance without a weekly financial sweep.
 
+Micron FY2026 filing supplement remains pending after the October 1, 2026 SEC index review. Until resolved, Wednesday/Sunday maintenance also performs targeted `company:micron` discovery for the FY2026 10-K, even if the earnings release has already been processed. Check finished goods, work in process, raw materials, trade receivables and their revenue ratio, quarter-end RPO and complete contract liabilities. Preserve prior facts and dates until the filing is read; total receivables cannot substitute for trade receivables. Do not create another standalone retry or expand this supplement into an all-company financial sweep.
+
 ## Freshness shown to readers
 
 - The header's collapsed “last update” is the latest successful release that changed published facts, quotes or news. It is derived from the immutable release chain and content differences, never the JSON file write time or an unchanged discovery. The expanded times keep quote, industry, all-source news discovery and each company's last review separate. A news import is not an all-source news check.

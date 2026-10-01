@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "scope": "discovery",
+  "base_commit": "429197fe68524dc1d7a89e6e87aa237220b72784",
+  "base_revision": "2026-09-28-b0c8ef174b",
+  "base_sha256": "0c7855fc36e89892741675b9c0b29db38f7c6610ba0313f597045e4dcea64109",
+  "catalog_sha256": "88d7e8a6a49b2c5a9384b898b8eb5b93237db47b3a9463c7ce62453c673d4a52",
+  "created_at": "2026-10-01T21:03:33.914Z",
+  "completed_at": "2026-10-01T21:04:09.439Z",
+  "state": "verified",
+  "targets": [
+    "company:micron"
+  ],
+  "coverage": [
+    {
+      "key": "company:micron",
+      "status": "verified",
+      "evidence": [
+        "index_mu_sec_20261001"
+      ],
+      "reviewed_at": "2026-10-01T21:04:09.143Z",
+      "latest_disclosure": {
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/mu-20260930.htm",
+        "published_at": "2026-09-30"
+      },
+      "reason": "2026-10-01 已读取 SEC 申报目录：最新财务申报为 09-30 的 8-K，尚未列出 FY2026 10-K；最近 10-K 为 FY2025（2025-10-03）。FQ4 产成品、在制品、原材料、贸易应收及收入比、季末 RPO 和完整合同负债待 10-K 补核。当前发布记录仍为 FQ3，保留 FQ4 待处理标记；本次不重复导入新闻稿。",
+      "finding": "new_disclosure"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "index_mu_sec_20261001",
+      "url": "https://data.sec.gov/submissions/CIK0000723125.json",
+      "sha256": "83464fc76e40c9d2d0faf9fd523aa3be973f526fc4d5efb7f74ab20948d6fa75",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T21:03:34.253Z",
+      "reviewed_at": "2026-10-01T21:03:34.253Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [],
+  "publication_corrections": [],
+  "technology_reviews": [
+    {
+      "id": "sanand",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "idaho_id1",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "tongluo",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "singapore_hbm",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "dram_1gamma",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "nand_g9",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "micron_rdimm512",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "micron_rdimm256",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "micron_hbm4",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "micron_hbm4e",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    }
+  ],
+  "summary": "美光 FY2026 10-K 补查：SEC 暂未列出新年报，附注明细继续待核；已发布财报仍为 FQ3，保留 FQ4 待处理状态及原有事实。",
+  "result": "success",
+  "artifact_sha256": "74193e4d2f7c2290cb1804d45c56dd07705992d4b6c5d966cbd49beb8ba418e0",
+  "ledger_sha256": "2d57db2a2928d9677fee21343205f1873181c5bda6c63964d16f9038257dc4ae",
+  "evidence_sha256": "81ae840cfe9f8b479935b09b0e3f12b6f7baefede46a476d3ce772fe5a41e686"
+}
