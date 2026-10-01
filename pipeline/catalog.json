@@ -212,7 +212,8 @@
       "temporal_basis": "point_in_time",
       "nature": "actual_or_observation",
       "evidence_types": [
-        "direct"
+        "direct",
+        "unavailable"
       ]
     },
     "mu.inventory.total": {
@@ -244,7 +245,8 @@
       "temporal_basis": "point_in_time",
       "nature": "actual_or_observation",
       "evidence_types": [
-        "direct"
+        "direct",
+        "unavailable"
       ]
     },
     "mu.inventory.raw_materials": {
@@ -260,7 +262,8 @@
       "temporal_basis": "point_in_time",
       "nature": "actual_or_observation",
       "evidence_types": [
-        "direct"
+        "direct",
+        "unavailable"
       ]
     },
     "mu.inventory.days": {
@@ -292,7 +295,8 @@
       "temporal_basis": "point_in_time",
       "nature": "actual_or_observation",
       "evidence_types": [
-        "direct"
+        "direct",
+        "unavailable"
       ]
     },
     "mu.inventory.receivables_revenue": {
@@ -308,7 +312,8 @@
       "temporal_basis": "period_end",
       "nature": "actual_or_observation",
       "evidence_types": [
-        "calculated"
+        "calculated",
+        "unavailable"
       ]
     },
     "mu.revenue.total": {
@@ -820,7 +825,8 @@
       "temporal_basis": "as_disclosed",
       "nature": "actual_or_observation",
       "evidence_types": [
-        "direct"
+        "direct",
+        "unavailable"
       ]
     },
     "mu.orders.rpo_post_quarter": {
@@ -852,7 +858,8 @@
       "temporal_basis": "as_disclosed",
       "nature": "actual_or_observation",
       "evidence_types": [
-        "direct"
+        "direct",
+        "unavailable"
       ]
     },
     "mu.orders.deposits_forecast": {
@@ -2976,7 +2983,9 @@
       "mu.asp.dram",
       "mu.asp.nand",
       "mu.volume.dram_bits",
-      "mu.volume.nand_bits"
+      "mu.volume.nand_bits",
+      "mu.volume.mobile_bits",
+      "mu.margin.bit_cost"
     ],
     "mobile_bits": [
       "mu.volume.mobile_bits",
@@ -3062,7 +3071,9 @@
     ],
     "orders": [
       "mu.orders.agreements",
-      "mu.orders.coverage"
+      "mu.orders.coverage",
+      "mu.orders.terms",
+      "mu.orders.deposits_forecast"
     ],
     "q3_orders": [
       "mu.orders.rpo_quarter_end",
@@ -3344,6 +3355,25 @@
     ],
     "tech_sk_hbm4e": [
       "tech.skhynix_hbm4e"
+    ],
+    "fq4_balance_sheet": [
+      "mu.inventory.finished_goods",
+      "mu.inventory.total",
+      "mu.inventory.work_in_process",
+      "mu.inventory.raw_materials",
+      "mu.inventory.receivables",
+      "mu.inventory.receivables_revenue",
+      "mu.orders.rpo_quarter_end",
+      "mu.orders.contract_liability"
+    ],
+    "technology_revenue_prior": [
+      "mu.revenue.dram",
+      "mu.revenue.nand"
+    ],
+    "orders_cash_prior": [
+      "mu.orders.agreements",
+      "mu.orders.rpo_post_quarter",
+      "mu.orders.deposits_forecast"
     ]
   },
   "calculations": [

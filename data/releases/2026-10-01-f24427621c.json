@@ -1,0 +1,338 @@
+{
+  "version": 1,
+  "scope": "micron",
+  "base_commit": "2fd36dd340cc31841d305c6d960206ce85cb75f0",
+  "base_revision": "2026-10-01-80c0dffdbe",
+  "base_sha256": "74193e4d2f7c2290cb1804d45c56dd07705992d4b6c5d966cbd49beb8ba418e0",
+  "catalog_sha256": "ba2bc895468bd25e40718c7f3a36d8261917e9075aa3fe673e7eca55f09ab8d3",
+  "created_at": "2026-10-01T22:07:24.453Z",
+  "completed_at": "2026-10-01T22:09:31.689Z",
+  "state": "verified",
+  "targets": null,
+  "coverage": [
+    {
+      "key": "micron",
+      "status": "verified",
+      "evidence": [
+        "financial",
+        "business",
+        "cash_table",
+        "cash_balance",
+        "fq4_balance_sheet",
+        "guidance",
+        "next",
+        "technology",
+        "technology_revenue",
+        "inventory_days",
+        "capex_plan",
+        "orders",
+        "orders_cash",
+        "technology_revenue_prior",
+        "orders_cash_prior",
+        "hbm_product",
+        "q3",
+        "q3_orders",
+        "hbm_secondary"
+      ],
+      "reviewed_at": "2026-10-01T22:08:30Z",
+      "latest_disclosure": {
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/mu-20260930.htm",
+        "published_at": "2026-09-30"
+      },
+      "reason": "已读取 09-30 8-K 附件 99.1 新闻稿与 FQ4 电话会讲稿，并复读 FQ3 10-Q、讲稿、业绩材料作为上期对照。FQ4 业绩材料未能取得，DRAM/NAND 收入采用讲稿约数。产成品、在制品、原材料、贸易应收及收入比、季末 RPO、完整合同负债仅在 10-K 附注披露，SEC 截至 2026-10-01 尚未列出 FY2026 10-K，这些行标为待 10-K。"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "financial",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+      "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T22:07:38.615Z",
+      "reviewed_at": "2026-10-01T22:07:38.615Z",
+      "status": "read"
+    },
+    {
+      "source_id": "business",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+      "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T22:07:39.146Z",
+      "reviewed_at": "2026-10-01T22:07:39.146Z",
+      "status": "read"
+    },
+    {
+      "source_id": "cash_table",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+      "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T22:07:39.640Z",
+      "reviewed_at": "2026-10-01T22:07:39.640Z",
+      "status": "read"
+    },
+    {
+      "source_id": "cash_balance",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+      "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T22:07:40.207Z",
+      "reviewed_at": "2026-10-01T22:07:40.207Z",
+      "status": "read"
+    },
+    {
+      "source_id": "fq4_balance_sheet",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+      "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T22:07:40.718Z",
+      "reviewed_at": "2026-10-01T22:07:40.718Z",
+      "status": "read"
+    },
+    {
+      "source_id": "guidance",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+      "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T22:07:41.233Z",
+      "reviewed_at": "2026-10-01T22:07:41.233Z",
+      "status": "read"
+    },
+    {
+      "source_id": "next",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+      "sha256": "5dad1ce5c2dd8958dad947ab1f12a1015bfcc29c7e8a29e48379e983f425120e",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T22:07:41.717Z",
+      "reviewed_at": "2026-10-01T22:07:41.717Z",
+      "status": "read"
+    },
+    {
+      "source_id": "technology",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=7",
+      "sha256": "2821d4ccaae50b40dcd28cd4e766c69c509e73d666e4109d5907c7205a03b700",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T22:07:42.341Z",
+      "reviewed_at": "2026-10-01T22:07:42.341Z",
+      "status": "read"
+    },
+    {
+      "source_id": "technology_revenue",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=7",
+      "sha256": "2821d4ccaae50b40dcd28cd4e766c69c509e73d666e4109d5907c7205a03b700",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T22:07:42.900Z",
+      "reviewed_at": "2026-10-01T22:07:42.900Z",
+      "status": "read"
+    },
+    {
+      "source_id": "inventory_days",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=8",
+      "sha256": "2821d4ccaae50b40dcd28cd4e766c69c509e73d666e4109d5907c7205a03b700",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T22:07:43.380Z",
+      "reviewed_at": "2026-10-01T22:07:43.380Z",
+      "status": "read"
+    },
+    {
+      "source_id": "capex_plan",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=10",
+      "sha256": "2821d4ccaae50b40dcd28cd4e766c69c509e73d666e4109d5907c7205a03b700",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T22:07:43.901Z",
+      "reviewed_at": "2026-10-01T22:07:43.901Z",
+      "status": "read"
+    },
+    {
+      "source_id": "orders",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=3",
+      "sha256": "2821d4ccaae50b40dcd28cd4e766c69c509e73d666e4109d5907c7205a03b700",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T22:07:44.390Z",
+      "reviewed_at": "2026-10-01T22:07:44.390Z",
+      "status": "read"
+    },
+    {
+      "source_id": "orders_cash",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=6",
+      "sha256": "2821d4ccaae50b40dcd28cd4e766c69c509e73d666e4109d5907c7205a03b700",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T22:07:44.968Z",
+      "reviewed_at": "2026-10-01T22:07:44.968Z",
+      "status": "read"
+    },
+    {
+      "source_id": "technology_revenue_prior",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf#page=33",
+      "sha256": "29468a786fa4a9c7728735ea8e3ad5853bb1375a297c636e86e6a4dd3b155929",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T22:07:45.500Z",
+      "reviewed_at": "2026-10-01T22:07:45.500Z",
+      "status": "read"
+    },
+    {
+      "source_id": "orders_cash_prior",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf#page=7",
+      "sha256": "a3ce62b84a059e35fae80c2bfd5c89f9af334193fd6aceff698fc3008e7d4c27",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T22:07:46.076Z",
+      "reviewed_at": "2026-10-01T22:07:46.076Z",
+      "status": "read"
+    },
+    {
+      "source_id": "hbm_product",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf#page=4",
+      "sha256": "a3ce62b84a059e35fae80c2bfd5c89f9af334193fd6aceff698fc3008e7d4c27",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T22:07:46.602Z",
+      "reviewed_at": "2026-10-01T22:07:46.602Z",
+      "status": "read"
+    },
+    {
+      "source_id": "q3",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/0000723125-26-000015.pdf#page=13",
+      "sha256": "79ef98b3cdc1ffc608b02635ef1fa5e9ed07298bf24f7bb717b03a06bda5e2cd",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T22:07:47.169Z",
+      "reviewed_at": "2026-10-01T22:07:47.169Z",
+      "status": "read"
+    },
+    {
+      "source_id": "q3_orders",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/0000723125-26-000015.pdf#page=21",
+      "sha256": "79ef98b3cdc1ffc608b02635ef1fa5e9ed07298bf24f7bb717b03a06bda5e2cd",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T22:07:47.772Z",
+      "reviewed_at": "2026-10-01T22:07:47.772Z",
+      "status": "read"
+    },
+    {
+      "source_id": "hbm_secondary",
+      "url": "https://en.fnnews.com/news/202609031610354859",
+      "sha256": "41753fef6b9e293160ac432a85bc013fc467c89ae412c203f4abbf79de5eed93",
+      "access": "secondary",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-01T22:07:48.393Z",
+      "reviewed_at": "2026-10-01T22:07:48.393Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [
+    "micron"
+  ],
+  "publication_corrections": [],
+  "technology_reviews": [
+    {
+      "id": "sanand",
+      "status": "unchanged",
+      "evidence": [
+        "orders",
+        "financial"
+      ],
+      "reason": "FQ4 新闻稿与讲稿未提及 Sanand，保留 02-28 记录。"
+    },
+    {
+      "id": "idaho_id1",
+      "status": "unchanged",
+      "evidence": [
+        "orders",
+        "financial"
+      ],
+      "reason": "讲稿 p2：ID1 仍预计 2027 年中开始晶圆产出，与现有记录一致。"
+    },
+    {
+      "id": "tongluo",
+      "status": "unchanged",
+      "evidence": [
+        "orders",
+        "financial"
+      ],
+      "reason": "讲稿 p3：铜锣仍预计 2027 年中形成实质产品出货，与现有记录一致。"
+    },
+    {
+      "id": "singapore_hbm",
+      "status": "unchanged",
+      "evidence": [
+        "orders",
+        "financial"
+      ],
+      "reason": "讲稿 p3：洁净室准备快于计划，首批产出预计 2027 年初；与现有 2027 年上半年计划相符，未披露产能数值，本次不改写技术记录。"
+    },
+    {
+      "id": "dram_1gamma",
+      "status": "unchanged",
+      "evidence": [
+        "orders",
+        "financial"
+      ],
+      "reason": "讲稿 p2：1γ 为最大生产节点，下一代节点仍预计 2027 年下半年量产；未披露产出占比、良率或位元增幅。"
+    },
+    {
+      "id": "nand_g9",
+      "status": "unchanged",
+      "evidence": [
+        "orders",
+        "financial"
+      ],
+      "reason": "讲稿 p2：G9 为最大生产节点，下一代节点仍预计 2027 年下半年量产；未披露新的规格或占比。"
+    },
+    {
+      "id": "micron_rdimm512",
+      "status": "unchanged",
+      "evidence": [
+        "orders",
+        "financial"
+      ],
+      "reason": "新闻稿产品要点：512GB RDIMM 已开始送样，最高 9,200 MT/s，与 09-15 记录一致。"
+    },
+    {
+      "id": "micron_rdimm256",
+      "status": "unchanged",
+      "evidence": [
+        "orders",
+        "financial"
+      ],
+      "reason": "新闻稿提及 1γ 8,800 MT/s 服务器 RDIMM 完成多家客户验证，但未指明 256GB 型号，保留原记录。"
+    },
+    {
+      "id": "micron_hbm4",
+      "status": "unchanged",
+      "evidence": [
+        "orders",
+        "financial"
+      ],
+      "reason": "讲稿 p4：HBM4 爬坡执行良好，未披露新的容量、速率、功耗或收入数值。"
+    },
+    {
+      "id": "micron_hbm4e",
+      "status": "unchanged",
+      "evidence": [
+        "orders",
+        "financial"
+      ],
+      "reason": "讲稿 p4：与 NVIDIA 合作首个定制 HBM4E（NVHBM），未披露容量、层数、速率或量产时间，保留原记录。"
+    }
+  ],
+  "summary": "美光 FY2026 Q4：按 09-30 新闻稿与讲稿更新收入、毛利率、现金流、资本开支、长单与 FQ1 指引；库存构成、贸易应收、季末 RPO 与完整合同负债待 FY2026 10-K。",
+  "result": "success",
+  "artifact_sha256": "377cd7a26515f6e9a83f7dc0536544d3bb8d8b32d1f48bbb4a9c60b887389be8",
+  "ledger_sha256": "19e1db4648ff4d7c121d287eeb5308795fadede960f0118b5e5eb9347af01c26",
+  "evidence_sha256": "6c76fe409dbf8b6d0952ca4ca14512a4a00093bff1ec7ca959c5c4221e0a59d1"
+}
