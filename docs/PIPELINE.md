@@ -93,6 +93,14 @@ npm run monitor -- verify-live --url https://peterliu2357-sky.github.io/mu-check
 
 Confirm both deployment success and the full live data hash. A successful research run, successful Git commit and successful deployment are separate outcomes. For rollback, revert the coherent release commit, preserving original facts/check dates; do not stamp rolled-back facts as newly checked. Historical snapshots are not overwritten.
 
+## Past-quarter series
+
+`catalog.series.metrics` lists the Micron metrics drawn as trend lines. `ledger.series` maps each metric and financial quarter to one evidenced record; `data/monitor.json` publishes them as `series` (oldest first). The live quarter is never stored there: the UI appends it from the metric row.
+
+- A quarter rollover adds the outgoing quarter's active record automatically.
+- To backfill, put points in the run's `history.json` as `{metric_id: {"FY2025 Q4": point}}`. A point is either `{record_id}` for a record already in the ledger (allowed in a `maintenance` run) or `{period_end, sources:[{id,url,published_at}], payload}` for a new reading (needs a `micron`, `full` or `batch` run). Capture each past filing under its `sources[].id`, then `evidence-draft --metric ID --period "FY2025 Q4"`; the evidence key is `ID@FY2025 Q4`.
+- Points are append-only, must be numeric and sourced, and cannot repeat a quarter or use the live one.
+
 ## UI-only work
 
 Edit rendering/style files, run `npm test`, `npm run test:ui`, and `npm run build`. Do not create a research run or edit ledger/evidence/check dates. The build refreshes the embedded fallback from the same verified facts. Interface tests mock local data, so layout work does not depend on financial websites or trigger collection.
