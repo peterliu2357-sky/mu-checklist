@@ -48,7 +48,7 @@
     const digits=unit==='pct'?1:unit==='days'||unit==='份'?0:unit==='USD'&&Math.abs(value*100-Math.round(value*100))>0.00001?3:2;
     return num(unit==='USDm'?value/100:value,digits);
   }
-  function unitName(unit) {return {USDm:'亿美元',pct:'%',USD:'美元',days:'天',multiple:'倍'}[unit]||unit;}
+  function unitName(unit) {return {USDm:'亿美元',pct:'%',USD:'美元',days:'天',multiple:'倍',TWDb:'十亿新台币',KRWt:'万亿韩元'}[unit]||unit;}
   function numberLine(row,compact=false) {
     const previous=row.previous!==null&&row.previous!==undefined;
     const current=row.current!==null&&row.current!==undefined;
