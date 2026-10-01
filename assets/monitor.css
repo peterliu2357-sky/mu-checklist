@@ -132,3 +132,15 @@
 }
 @media(max-width:359px){.row-basis{padding:0 16px 6px}.group-total{padding:16px}}
 .evidence-details .ledger-row+.row-basis{border-top:1px solid var(--line);padding-top:6px}
+/* 周期 tab: signal row of latest readings, each linking to its stored row. */
+.signal-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:8px}
+.cycle-signal{display:flex;flex-direction:column;gap:3px;padding:14px 14px 13px;color:inherit;text-decoration:none;min-width:0}
+.cycle-signal:hover{border-color:#c9d6c9}
+.signal-label{font-size:12px;font-weight:600;color:var(--ink)}
+.signal-value{font-size:19px;font-weight:650;letter-spacing:-.3px;line-height:1.35;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+.signal-value .unit{font-size:11px;font-weight:500;margin-left:3px;color:var(--muted)}
+.cycle-signal .row-period{margin-top:0}
+.cycle-signal .tag-group{margin-top:4px}
+.cycle-section{scroll-margin-top:80px}
+@media(min-width:700px){.signal-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.cycle-signal{padding:17px 18px}}
+@media(max-width:359px){.signal-grid{gap:8px}.cycle-signal{padding:12px 11px}.signal-value{font-size:17px}}
