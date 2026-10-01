@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "scope": "maintenance",
+  "base_commit": "ecda3a57e3c2eddd36831ca57974e8de80404f3a",
+  "base_revision": "2026-10-01-f24427621c",
+  "base_sha256": "377cd7a26515f6e9a83f7dc0536544d3bb8d8b32d1f48bbb4a9c60b887389be8",
+  "catalog_sha256": "a00837c5e5d981e27988e5111417eae281ba0e2c36536ad968cbf62e3fcfcacd",
+  "created_at": "2026-10-01T22:43:53.887Z",
+  "completed_at": "2026-10-01T22:43:54.439Z",
+  "state": "verified",
+  "targets": null,
+  "coverage": [],
+  "reads": [],
+  "report_bundle": [],
+  "publication_corrections": [],
+  "technology_reviews": [],
+  "summary": "季度走势：以账本中已有的 FY2026 Q3 核实记录建立美光收入、DRAM 收入、非 GAAP 毛利率、库存天数与净资本开支的历史点；未新增数值。",
+  "result": "success",
+  "artifact_sha256": "9c23e19b92c3ae60478b565049b548fa268022761d446933022b800eef0fc304",
+  "ledger_sha256": "f7c0be2c62e0ab56d852cc128607167e5a7e4d617460108fc93cf760d5348e62",
+  "evidence_sha256": "6c76fe409dbf8b6d0952ca4ca14512a4a00093bff1ec7ca959c5c4221e0a59d1"
+}

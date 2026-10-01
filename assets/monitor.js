@@ -102,9 +102,22 @@
     if(!items.length) return '';
     return `<section class="card metric company-outlook" id="company-outlook"><div class="metric-top"><h3>美光展望</h3><p class="definition">公司对行业供需的表述，属预测，不是实际数据。</p></div>${items.map(({row})=>evidence(row)).join('')}<details class="evidence-details"><summary>口径与原文位置</summary><ul class="row-basis">${items.map(({row})=>rowBasis(row)).join('')}</ul></details></section>`;
   }
+  // Past quarters from data.series plus the live quarter from the row itself; each number is stored once.
+  function trendPoints(metric,row) {
+    const past=data.series?.[`mu.${metric.id}.${row.id}`];
+    if(!past?.length||typeof row.current!=='number') return [];
+    return [...past.map(p=>({period:p.financial_period,value:p.value})),{period:data.financial_period,value:row.current}].slice(-8);
+  }
+  function sparkline(points,unit) {
+    if(points.length<2) return '';
+    const w=200,h=36,pad=5,values=points.map(p=>p.value),min=Math.min(...values),max=Math.max(...values),span=max-min||1;
+    const xy=points.map((p,i)=>[pad+i*(w-2*pad)/(points.length-1),h-pad-(p.value-min)/span*(h-2*pad)]);
+    const label=points.map(p=>`${p.period} ${formatted(p.value,unit)}${unitName(unit)}`).join('；');
+    return `<figure class="sparkline"><svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" role="img" aria-label="${esc(label)}"><polyline points="${xy.map(([x,y])=>`${x.toFixed(1)},${y.toFixed(1)}`).join(' ')}" fill="none" vector-effect="non-scaling-stroke"/>${xy.map(([x,y],i)=>`<g><circle class="hit" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="9"/><circle class="dot${i===xy.length-1?' last':''}" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${i===xy.length-1?4:2.5}"/><title>${esc(points[i].period)}：${formatted(points[i].value,unit)}${esc(unitName(unit))}</title></g>`).join('')}</svg><figcaption><span>${esc(points[0].period)}</span><span>${esc(points.at(-1).period)}</span></figcaption></figure>`;
+  }
   function cycleSignal({metric,row}) {
     const value=typeof row.current==='number'?`${formatted(row.current,row.unit)}${row.unit?`<span class="unit">${esc(unitName(row.unit))}</span>`:''}`:esc(row.current);
-    return `<a class="card cycle-signal" href="#${esc(metric.id)}" data-metric="${esc(metric.id)}"><span class="signal-label">${metric.category==='business'?'美光':''}${esc(row.label)}</span><strong class="signal-value">${value}</strong>${rowChange(row)?`<span class="change-line">${esc(rowChange(row))}</span>`:''}<span class="row-period">${esc(row.period)}</span><span class="tag-group">${tags(row)}</span></a>`;
+    return `<a class="card cycle-signal" href="#${esc(metric.id)}" data-metric="${esc(metric.id)}"><span class="signal-label">${metric.category==='business'?(/^[A-Za-z]/.test(row.label)?'美光 ':'美光'):''}${esc(row.label)}</span><strong class="signal-value">${value}</strong>${rowChange(row)?`<span class="change-line">${esc(rowChange(row))}</span>`:''}<span class="row-period">${esc(row.period)}</span>${sparkline(trendPoints(metric,row),row.unit)}<span class="tag-group">${tags(row)}</span></a>`;
   }
   function capexSignal() {
     const group=data.ecosystem.groups.find(g=>g.id==='cloud'),companies=data.ecosystem.companies.filter(c=>c.group==='cloud'),total=companies.length>1?groupTotal(companies,'capex'):null;
