@@ -1,6 +1,15 @@
 #!/usr/bin/env bash
 set -euo pipefail
-if [[ "${RUN_KIND:-}" == schedule ]] && [[ "$(TZ=America/New_York date +%H)" != 18 ]]; then
+# GitHub often starts scheduled runs hours late. Accept starts from 18:00 to 22:59 ET; the
+# adapter needs the same market date, so the cutoff leaves an hour before midnight.
+et_hour=$((10#$(TZ=America/New_York date +%H)))
+if [[ "${RUN_KIND:-}" == schedule ]] && (( et_hour < 18 || et_hour >= 23 )); then
+  echo "Scheduled start at ${et_hour}:00 ET is outside 18:00-22:59 ET; skipping."
+  exit 0
+fi
+# Under EDT both cron entries pass the guard; leave an unmerged candidate to its own checks.
+if [[ "${RUN_KIND:-}" == schedule ]] && [[ -n "$(gh pr list --state open --json headRefName --jq '.[] | select(.headRefName | startswith("data/regular-close-")) | .headRefName')" ]]; then
+  echo 'A regular-close candidate PR is already open; skipping.'
   exit 0
 fi
 base_commit=$(git rev-parse HEAD)
