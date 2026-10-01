@@ -142,3 +142,15 @@ schema_version 仍为 2，新增必填 `ecosystem`；已有美光指标与财季
 - 更新同一公司财报时同步实绩、前期、指引与口径，不把过期目标期留作当前展望。历史保存在 `data/history/`，不覆盖旧快照。
 
 新增验证：`validateEcosystem`、币种/单位换算、同比分母、亏损及零基数、百分点、引用完整性、分组与公司深链接、指引展开、320/390 px 无横向溢出。既有美光三季指引对照须继续有效。
+
+## 周期指标（已登记，待首次取数）
+
+以下定义已在 `pipeline/catalog.json` 登记为 `required:false`，取得首次经核实的读数后再加入候选行；没有行时不影响现有覆盖要求。网站 周期 页从这些记录读取，不另存一份数字。
+
+- `mu.contract.ddr5_spot`：DRAMeXchange 现货表 DDR5 16Gb (2Gx8) 4800/5600 的 Session Average。来源 ID `dram_spot`，入口已加入 `industry` 查新目标。与 DDR4 1Gx8 现货分开，不互相替代。合同价实际成交及现货溢价，需先读取合同价表确认具体规格，再登记同规格定义及计算。
+- `mu.demand.nanya_revenue`：南亚科单月营收（十亿新台币），与上月比较。商品型 DRAM 售价与需求的间接指标，标 proxy；不是美光数据。来源 ID `nanya_monthly`。
+- `mu.demand.korea_semi_exports` / `mu.demand.korea_memory_exports`：韩国产业通商资源部月度出口发布中的半导体总额与存储芯片金额（百万美元），与上年同月比较。海关 1–20 日初值是不完整月份，不能当作整月值。来源 ID `korea_trade`。
+- `eco.skhynix.inventory` / `eco.skhynix.capex`：SK 海力士期末存货与现金资本开支（购置有形资产），取自季度财务报表或 IR 资料；新闻稿没有披露时保留缺口。来源 ID `eco_skhynix_statements`。
+- `eco.samsung.inventory`：三星集团合并期末存货。不能改标为存储部门存货。来源 ID `eco_samsung_balance`。
+
+产业链公司的存货沿用该部分同比口径（本期末 vs 上年同期末）。月度指标保留自然月期间，不与季度合计混用。
