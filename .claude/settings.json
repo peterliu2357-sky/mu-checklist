@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:abc.xyz)",
+      "WebFetch(domain:about.fb.com)",
+      "WebFetch(domain:aws.amazon.com)",
+      "WebFetch(domain:blog.google)",
+      "WebFetch(domain:blogs.microsoft.com)",
+      "WebFetch(domain:blogs.nvidia.com)",
+      "WebFetch(domain:data.sec.gov)",
+      "WebFetch(domain:dramexchange.com)",
+      "WebFetch(domain:emops.twse.com.tw)",
+      "WebFetch(domain:insights.trendforce.com)",
+      "WebFetch(domain:investor.atmeta.com)",
+      "WebFetch(domain:investor.nvidia.com)",
+      "WebFetch(domain:investor.oracle.com)",
+      "WebFetch(domain:investor.tsmc.com)",
+      "WebFetch(domain:investors.micron.com)",
+      "WebFetch(domain:ir.aboutamazon.com)",
+      "WebFetch(domain:mops.twse.com.tw)",
+      "WebFetch(domain:news.samsung.com)",
+      "WebFetch(domain:news.skhynix.com)",
+      "WebFetch(domain:nvidianews.nvidia.com)",
+      "WebFetch(domain:pr.tsmc.com)",
+      "WebFetch(domain:s25.q4cdn.com)",
+      "WebFetch(domain:sec.gov)",
+      "WebFetch(domain:semiconductor.samsung.com)",
+      "WebFetch(domain:stockanalysis.com)",
+      "WebFetch(domain:trendforce.com)",
+      "WebFetch(domain:www.dramexchange.com)",
+      "WebFetch(domain:www.microsoft.com)",
+      "WebFetch(domain:www.nanya.com)",
+      "WebFetch(domain:www.oracle.com)",
+      "WebFetch(domain:www.samsung.com)",
+      "WebFetch(domain:www.sec.gov)",
+      "WebFetch(domain:www.skhynix.com)",
+      "WebFetch(domain:www.trendforce.cn)",
+      "WebFetch(domain:www.trendforce.com)"
+    ]
+  }
+}
