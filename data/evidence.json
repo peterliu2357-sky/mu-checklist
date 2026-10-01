@@ -6426,5 +6426,1415 @@
     "mode": "verified",
     "record_hash": "74d9b46164283763d34bb4c1707b397acc4086a8d5e8f13cea7f72c85be76fd0",
     "id": "e-89f499b473fd8d1465a18b2dbd297c07c5d49a2729f7e22c2774ec50675f9018"
+  },
+  "e-785eca3d72bf768580dad4c7e59181da5951019640a2b0f4d1ca80b68798e4bc": {
+    "measurement": "revenue",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "总收入",
+    "values": {
+      "current": 8709,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 8709,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "locator": "Consolidated Statements of Operations · Revenue · FQ1-25",
+        "period": "FQ1-25（截至 2024-11-28 的季度）",
+        "source_id": "mu_fy2025_q1_release"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the series point",
+      "at": "2026-10-01T23:13:10.942Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2025_q1_release",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312524000046/a2025q1ex991-pressrelease.htm",
+        "sha256": "d2dfb81ab8db61eb6a8b243ed4191f6ddae33b35fd9940955033c14029bc2699",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T23:13:05.428Z",
+        "reviewed_at": "2026-10-01T23:13:05.428Z",
+        "status": "read",
+        "locator": "Consolidated Statements of Operations · Revenue · FQ1-25",
+        "excerpt": "Revenue | $ | 8,709 (FQ1-25, in millions)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "069cdf0e9e07955e9abdad9e8f0b06da622ed6239acd4c37ec0e60131f30fba4",
+    "id": "e-785eca3d72bf768580dad4c7e59181da5951019640a2b0f4d1ca80b68798e4bc"
+  },
+  "e-a8400ee41b3b17b81b870ed1824d2c03497edb0482887bf8bbd4b702e686219a": {
+    "measurement": "revenue",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "总收入",
+    "values": {
+      "current": 8053,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 8053,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "locator": "Consolidated Statements of Operations · Revenue · FQ2-25",
+        "period": "FQ2-25（截至 2025-02-27 的季度）",
+        "source_id": "mu_fy2025_q2_release"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the series point",
+      "at": "2026-10-01T23:13:10.942Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2025_q2_release",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000006/a2025q2ex991-pressrelease.htm",
+        "sha256": "3ffae41f5ffad581e1f5f8223cd2540ba3619986ce8159bd054b64cc99e2c695",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T23:13:06.351Z",
+        "reviewed_at": "2026-10-01T23:13:06.351Z",
+        "status": "read",
+        "locator": "Consolidated Statements of Operations · Revenue · FQ2-25",
+        "excerpt": "Revenue | $ | 8,053 (FQ2-25, in millions)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "bb02d8f28e8e36833f42fd2e8fd730cc5b32bd65ff8e3dc76285a814c06929df",
+    "id": "e-a8400ee41b3b17b81b870ed1824d2c03497edb0482887bf8bbd4b702e686219a"
+  },
+  "e-361d87b7568f7009310c9aa9fbdbe9b827ffd756a6967af75790ad558704c442": {
+    "measurement": "revenue",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "总收入",
+    "values": {
+      "current": 9301,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 9301,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "locator": "Consolidated Statements of Operations · Revenue · FQ3-25",
+        "period": "FQ3-25（截至 2025-05-29 的季度）",
+        "source_id": "mu_fy2025_q3_release"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the series point",
+      "at": "2026-10-01T23:13:10.942Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2025_q3_release",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000019/a2025q3ex991-pressrelease.htm",
+        "sha256": "8ee399aeea24a7915f7a0a98dcc1cf64b462e4be7013c46b209a30ff7fcb8627",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T23:13:07.256Z",
+        "reviewed_at": "2026-10-01T23:13:07.256Z",
+        "status": "read",
+        "locator": "Consolidated Statements of Operations · Revenue · FQ3-25",
+        "excerpt": "Revenue | $ | 9,301 (FQ3-25, in millions)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "6c5b95a9deb6ec42328a45cb230bdc38721a8da357a0d5604c534a23ce9cb15d",
+    "id": "e-361d87b7568f7009310c9aa9fbdbe9b827ffd756a6967af75790ad558704c442"
+  },
+  "e-8ecd03240bd78b47934cc515a7c0daaa5a6ba62ae6452d2d549a7f118f776dae": {
+    "measurement": "revenue",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "总收入",
+    "values": {
+      "current": 11315,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 11315,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "locator": "Consolidated Statements of Operations · Revenue · FQ4-25",
+        "period": "FQ4-25（截至 2025-08-28 的季度）",
+        "source_id": "mu_fy2025_q4_release"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the series point",
+      "at": "2026-10-01T23:13:10.942Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2025_q4_release",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000024/a2025q4ex991-pressrelease.htm",
+        "sha256": "37af789d70da86079ffe5fd598d2b27fc47913df56beb799b8d12f3120c39e9b",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T23:13:08.302Z",
+        "reviewed_at": "2026-10-01T23:13:08.302Z",
+        "status": "read",
+        "locator": "Consolidated Statements of Operations · Revenue · FQ4-25",
+        "excerpt": "Revenue | $ | 11,315 (FQ4-25, in millions)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "a41e23e6be4ad07f983b485730f304fd796e5a2e4bd82030d8d95e6956dbd3a6",
+    "id": "e-8ecd03240bd78b47934cc515a7c0daaa5a6ba62ae6452d2d549a7f118f776dae"
+  },
+  "e-c5fb68ab3f614832cb92177001490152d8dfe7f0d09c4c6ad4a0a004b348f8a1": {
+    "measurement": "revenue",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "总收入",
+    "values": {
+      "current": 13643,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 13643,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "locator": "Consolidated Statements of Operations · Revenue · FQ1-26",
+        "period": "FQ1-26（截至 2025-11-27 的季度）",
+        "source_id": "mu_fy2026_q1_release"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the series point",
+      "at": "2026-10-01T23:13:10.942Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2026_q1_release",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000044/a2026q1ex991-pressrelease.htm",
+        "sha256": "0e523c3b33a2a34b99f076d8a3e4785863bac0d7045ae8bbb062d068214db74a",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T23:13:09.218Z",
+        "reviewed_at": "2026-10-01T23:13:09.218Z",
+        "status": "read",
+        "locator": "Consolidated Statements of Operations · Revenue · FQ1-26",
+        "excerpt": "Revenue | $ | 13,643 (FQ1-26, in millions)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "191dab3b101570503205d98e1f4294308d491c7601bdd2ff97d7804ad776145b",
+    "id": "e-c5fb68ab3f614832cb92177001490152d8dfe7f0d09c4c6ad4a0a004b348f8a1"
+  },
+  "e-d81efc82057fc29eba55cf4e3ffa2ff1f64ecb68524ffb8fcb2667a2ae316e99": {
+    "measurement": "revenue",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "总收入",
+    "values": {
+      "current": 23860,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 23860,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "locator": "Consolidated Statements of Operations · Revenue · FQ2-26",
+        "period": "FQ2-26（截至 2026-02-26 的季度）",
+        "source_id": "mu_fy2026_q2_release"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the series point",
+      "at": "2026-10-01T23:13:10.942Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2026_q2_release",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000004/a2026q2ex991-pressrelease.htm",
+        "sha256": "cd9bc09ab46519644b13092cf5c577f03427b9516dafe76a628471a8d524c773",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T23:13:10.205Z",
+        "reviewed_at": "2026-10-01T23:13:10.205Z",
+        "status": "read",
+        "locator": "Consolidated Statements of Operations · Revenue · FQ2-26",
+        "excerpt": "Revenue | $ | 23,860 (FQ2-26, in millions)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "3501b8e458af3799cc455bbb7931848b8dad33972ca710930dc405ffd8c3222b",
+    "id": "e-d81efc82057fc29eba55cf4e3ffa2ff1f64ecb68524ffb8fcb2667a2ae316e99"
+  },
+  "e-6069fac684c2239a867d4883dbbb396fba21427f5f4f68215d89fb733c85fae1": {
+    "measurement": "margin",
+    "unit": "pct",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "non_gaap",
+    "scope": "非 GAAP 毛利率",
+    "values": {
+      "current": 39.5,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 39.5,
+        "scale": 1,
+        "source_unit": "percent",
+        "locator": "Quarterly Financial Results · Non-GAAP · Gross margin percent of revenue · FQ1-25",
+        "period": "FQ1-25（截至 2024-11-28 的季度）",
+        "source_id": "mu_fy2025_q1_release"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the series point",
+      "at": "2026-10-01T23:13:10.942Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2025_q1_release",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312524000046/a2025q1ex991-pressrelease.htm",
+        "sha256": "d2dfb81ab8db61eb6a8b243ed4191f6ddae33b35fd9940955033c14029bc2699",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T23:13:05.428Z",
+        "reviewed_at": "2026-10-01T23:13:05.428Z",
+        "status": "read",
+        "locator": "Quarterly Financial Results · Non-GAAP · Gross margin percent of revenue · FQ1-25",
+        "excerpt": "Non-GAAP gross margin $3,441 million; percent of revenue 39.5% (FQ1-25)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "ba9a1b296bf85420e17fe7c005941b05fcd09fa3eee2c905b9cf644ba07ce951",
+    "id": "e-6069fac684c2239a867d4883dbbb396fba21427f5f4f68215d89fb733c85fae1"
+  },
+  "e-7025d9e10cf9d31209f47b8c59edc7a6271e6bca9424a52bf38162a1d43915ad": {
+    "measurement": "margin",
+    "unit": "pct",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "non_gaap",
+    "scope": "非 GAAP 毛利率",
+    "values": {
+      "current": 37.9,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 37.9,
+        "scale": 1,
+        "source_unit": "percent",
+        "locator": "Quarterly Financial Results · Non-GAAP · Gross margin percent of revenue · FQ2-25",
+        "period": "FQ2-25（截至 2025-02-27 的季度）",
+        "source_id": "mu_fy2025_q2_release"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the series point",
+      "at": "2026-10-01T23:13:10.942Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2025_q2_release",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000006/a2025q2ex991-pressrelease.htm",
+        "sha256": "3ffae41f5ffad581e1f5f8223cd2540ba3619986ce8159bd054b64cc99e2c695",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T23:13:06.351Z",
+        "reviewed_at": "2026-10-01T23:13:06.351Z",
+        "status": "read",
+        "locator": "Quarterly Financial Results · Non-GAAP · Gross margin percent of revenue · FQ2-25",
+        "excerpt": "Non-GAAP gross margin $3,053 million; percent of revenue 37.9% (FQ2-25)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "974a2f91a4b97a0094f7f7fc36c28d173e364ddc9696646afdba4f49f7643b2e",
+    "id": "e-7025d9e10cf9d31209f47b8c59edc7a6271e6bca9424a52bf38162a1d43915ad"
+  },
+  "e-47d2b9c9d1c1fd71ead14054c17930908126c19c6eafdc1c1f6c65be441669e6": {
+    "measurement": "margin",
+    "unit": "pct",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "non_gaap",
+    "scope": "非 GAAP 毛利率",
+    "values": {
+      "current": 39,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 39,
+        "scale": 1,
+        "source_unit": "percent",
+        "locator": "Quarterly Financial Results · Non-GAAP · Gross margin percent of revenue · FQ3-25",
+        "period": "FQ3-25（截至 2025-05-29 的季度）",
+        "source_id": "mu_fy2025_q3_release"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the series point",
+      "at": "2026-10-01T23:13:10.942Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2025_q3_release",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000019/a2025q3ex991-pressrelease.htm",
+        "sha256": "8ee399aeea24a7915f7a0a98dcc1cf64b462e4be7013c46b209a30ff7fcb8627",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T23:13:07.256Z",
+        "reviewed_at": "2026-10-01T23:13:07.256Z",
+        "status": "read",
+        "locator": "Quarterly Financial Results · Non-GAAP · Gross margin percent of revenue · FQ3-25",
+        "excerpt": "Non-GAAP gross margin $3,623 million; percent of revenue 39.0% (FQ3-25)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "c27d14a2fa6193c2d871c36a679ba6ea5c31b26645d487c765800e8679572e7c",
+    "id": "e-47d2b9c9d1c1fd71ead14054c17930908126c19c6eafdc1c1f6c65be441669e6"
+  },
+  "e-44dc3fb3aab01ae8bc5c47d874369bdad61d678bb0226efeaf697ea62c3371f1": {
+    "measurement": "margin",
+    "unit": "pct",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "non_gaap",
+    "scope": "非 GAAP 毛利率",
+    "values": {
+      "current": 45.7,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 45.7,
+        "scale": 1,
+        "source_unit": "percent",
+        "locator": "Quarterly Financial Results · Non-GAAP · Gross margin percent of revenue · FQ4-25",
+        "period": "FQ4-25（截至 2025-08-28 的季度）",
+        "source_id": "mu_fy2025_q4_release"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the series point",
+      "at": "2026-10-01T23:13:10.942Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2025_q4_release",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000024/a2025q4ex991-pressrelease.htm",
+        "sha256": "37af789d70da86079ffe5fd598d2b27fc47913df56beb799b8d12f3120c39e9b",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T23:13:08.302Z",
+        "reviewed_at": "2026-10-01T23:13:08.302Z",
+        "status": "read",
+        "locator": "Quarterly Financial Results · Non-GAAP · Gross margin percent of revenue · FQ4-25",
+        "excerpt": "Non-GAAP gross margin $5,169 million; percent of revenue 45.7% (FQ4-25)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "d895571c42b7f21077f0a1f3bc1d445dbf746b265a79ae9f486706d14d34dfab",
+    "id": "e-44dc3fb3aab01ae8bc5c47d874369bdad61d678bb0226efeaf697ea62c3371f1"
+  },
+  "e-2a550b407d5c6db888db0cffc83a64f4ca495644ed574f0f4211abfe6fe31ce7": {
+    "measurement": "margin",
+    "unit": "pct",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "non_gaap",
+    "scope": "非 GAAP 毛利率",
+    "values": {
+      "current": 56.8,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 56.8,
+        "scale": 1,
+        "source_unit": "percent",
+        "locator": "Quarterly Financial Results · Non-GAAP · Gross margin percent of revenue · FQ1-26",
+        "period": "FQ1-26（截至 2025-11-27 的季度）",
+        "source_id": "mu_fy2026_q1_release"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the series point",
+      "at": "2026-10-01T23:13:10.942Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2026_q1_release",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000044/a2026q1ex991-pressrelease.htm",
+        "sha256": "0e523c3b33a2a34b99f076d8a3e4785863bac0d7045ae8bbb062d068214db74a",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T23:13:09.218Z",
+        "reviewed_at": "2026-10-01T23:13:09.218Z",
+        "status": "read",
+        "locator": "Quarterly Financial Results · Non-GAAP · Gross margin percent of revenue · FQ1-26",
+        "excerpt": "Non-GAAP gross margin $7,753 million; percent of revenue 56.8% (FQ1-26)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "dbba86ee00d75bbe997294e9c60789fed8f687d659b504fa22bb0dbd1c567a9a",
+    "id": "e-2a550b407d5c6db888db0cffc83a64f4ca495644ed574f0f4211abfe6fe31ce7"
+  },
+  "e-6f87a2180bd308d96d6309912918b09d42cc7baf79ffd46a5eef6cffeb86e614": {
+    "measurement": "margin",
+    "unit": "pct",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "non_gaap",
+    "scope": "非 GAAP 毛利率",
+    "values": {
+      "current": 74.9,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 74.9,
+        "scale": 1,
+        "source_unit": "percent",
+        "locator": "Quarterly Financial Results · Non-GAAP · Gross margin percent of revenue · FQ2-26",
+        "period": "FQ2-26（截至 2026-02-26 的季度）",
+        "source_id": "mu_fy2026_q2_release"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the series point",
+      "at": "2026-10-01T23:13:10.942Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2026_q2_release",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000004/a2026q2ex991-pressrelease.htm",
+        "sha256": "cd9bc09ab46519644b13092cf5c577f03427b9516dafe76a628471a8d524c773",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T23:13:10.205Z",
+        "reviewed_at": "2026-10-01T23:13:10.205Z",
+        "status": "read",
+        "locator": "Quarterly Financial Results · Non-GAAP · Gross margin percent of revenue · FQ2-26",
+        "excerpt": "Non-GAAP gross margin $17,876 million; percent of revenue 74.9% (FQ2-26)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "d6d99f994970388636a5c9266760d13d3776c9cd00375c78c4c6082f3b6ae762",
+    "id": "e-6f87a2180bd308d96d6309912918b09d42cc7baf79ffd46a5eef6cffeb86e614"
+  },
+  "e-97af4fdab60a8381c885f76921a9330cd98b1018a19488caa2de408a1ce53225": {
+    "measurement": "capex",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "净资本开支",
+    "values": {
+      "current": 3132,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 3132,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "locator": "Reconciliation of GAAP to Non-GAAP Measures, Continued · Investments in capital expenditures, net · FQ1-25（原文以括号表示流出）",
+        "period": "FQ1-25（截至 2024-11-28 的季度）",
+        "source_id": "mu_fy2025_q1_release"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the series point",
+      "at": "2026-10-01T23:13:10.942Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2025_q1_release",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312524000046/a2025q1ex991-pressrelease.htm",
+        "sha256": "d2dfb81ab8db61eb6a8b243ed4191f6ddae33b35fd9940955033c14029bc2699",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T23:13:05.428Z",
+        "reviewed_at": "2026-10-01T23:13:05.428Z",
+        "status": "read",
+        "locator": "Reconciliation of GAAP to Non-GAAP Measures, Continued · Investments in capital expenditures, net · FQ1-25（原文以括号表示流出）",
+        "excerpt": "Investments in capital expenditures, net | (3,132) (FQ1-25, in millions)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "9385809e3e7089e59bbca93a598ac04bbfa6b688f175f75e55c0f19e7c4bbec9",
+    "id": "e-97af4fdab60a8381c885f76921a9330cd98b1018a19488caa2de408a1ce53225"
+  },
+  "e-f51dbdacfb10d4197557ee374b8ffb5fe5a819e6922fd714d8cafa6ab522d148": {
+    "measurement": "capex",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "净资本开支",
+    "values": {
+      "current": 3085,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 3085,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "locator": "Reconciliation of GAAP to Non-GAAP Measures, Continued · Investments in capital expenditures, net · FQ2-25（原文以括号表示流出）",
+        "period": "FQ2-25（截至 2025-02-27 的季度）",
+        "source_id": "mu_fy2025_q2_release"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the series point",
+      "at": "2026-10-01T23:13:10.942Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2025_q2_release",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000006/a2025q2ex991-pressrelease.htm",
+        "sha256": "3ffae41f5ffad581e1f5f8223cd2540ba3619986ce8159bd054b64cc99e2c695",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T23:13:06.351Z",
+        "reviewed_at": "2026-10-01T23:13:06.351Z",
+        "status": "read",
+        "locator": "Reconciliation of GAAP to Non-GAAP Measures, Continued · Investments in capital expenditures, net · FQ2-25（原文以括号表示流出）",
+        "excerpt": "Investments in capital expenditures, net | (3,085) (FQ2-25, in millions)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "8519d4b955502788ce89df776b7c92235c109c9f5b448b5c8c481ccfbae3fac7",
+    "id": "e-f51dbdacfb10d4197557ee374b8ffb5fe5a819e6922fd714d8cafa6ab522d148"
+  },
+  "e-04f4f5be7f9d9014667c19952d2e8c2fffd812cc8aa2ce6053037483c51e0144": {
+    "measurement": "capex",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "净资本开支",
+    "values": {
+      "current": 2660,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 2660,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "locator": "Reconciliation of GAAP to Non-GAAP Measures, Continued · Investments in capital expenditures, net · FQ3-25（原文以括号表示流出）",
+        "period": "FQ3-25（截至 2025-05-29 的季度）",
+        "source_id": "mu_fy2025_q3_release"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the series point",
+      "at": "2026-10-01T23:13:10.942Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2025_q3_release",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000019/a2025q3ex991-pressrelease.htm",
+        "sha256": "8ee399aeea24a7915f7a0a98dcc1cf64b462e4be7013c46b209a30ff7fcb8627",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T23:13:07.256Z",
+        "reviewed_at": "2026-10-01T23:13:07.256Z",
+        "status": "read",
+        "locator": "Reconciliation of GAAP to Non-GAAP Measures, Continued · Investments in capital expenditures, net · FQ3-25（原文以括号表示流出）",
+        "excerpt": "Investments in capital expenditures, net | (2,660) (FQ3-25, in millions)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "39f7439c16f6d077709dabc4162763ce659d0c83d315c7df4b5724ddf6dee9d1",
+    "id": "e-04f4f5be7f9d9014667c19952d2e8c2fffd812cc8aa2ce6053037483c51e0144"
+  },
+  "e-a403963a02aad632daaeaa6e3528ea388b576cb35ded2e8feb6bb682465c9027": {
+    "measurement": "capex",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "净资本开支",
+    "values": {
+      "current": 4927,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 4927,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "locator": "Reconciliation of GAAP to Non-GAAP Measures, Continued · Investments in capital expenditures, net · FQ4-25（原文以括号表示流出）",
+        "period": "FQ4-25（截至 2025-08-28 的季度）",
+        "source_id": "mu_fy2025_q4_release"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the series point",
+      "at": "2026-10-01T23:13:10.942Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2025_q4_release",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000024/a2025q4ex991-pressrelease.htm",
+        "sha256": "37af789d70da86079ffe5fd598d2b27fc47913df56beb799b8d12f3120c39e9b",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T23:13:08.302Z",
+        "reviewed_at": "2026-10-01T23:13:08.302Z",
+        "status": "read",
+        "locator": "Reconciliation of GAAP to Non-GAAP Measures, Continued · Investments in capital expenditures, net · FQ4-25（原文以括号表示流出）",
+        "excerpt": "Investments in capital expenditures, net | (4,927) (FQ4-25, in millions)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "35659d0048fb719d0256ab596f5c77757d7e041786d9f4982dc1ab40f5f4d34b",
+    "id": "e-a403963a02aad632daaeaa6e3528ea388b576cb35ded2e8feb6bb682465c9027"
+  },
+  "e-7d8e02f8acf85fd07db9a6e9c90e0ad4c8bd16b303a6138bef5e0d13803f2cde": {
+    "measurement": "capex",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "净资本开支",
+    "values": {
+      "current": 4505,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 4505,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "locator": "Reconciliation of GAAP to Non-GAAP Measures, Continued · Investments in capital expenditures, net · FQ1-26（原文以括号表示流出）",
+        "period": "FQ1-26（截至 2025-11-27 的季度）",
+        "source_id": "mu_fy2026_q1_release"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the series point",
+      "at": "2026-10-01T23:13:10.942Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2026_q1_release",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000044/a2026q1ex991-pressrelease.htm",
+        "sha256": "0e523c3b33a2a34b99f076d8a3e4785863bac0d7045ae8bbb062d068214db74a",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T23:13:09.218Z",
+        "reviewed_at": "2026-10-01T23:13:09.218Z",
+        "status": "read",
+        "locator": "Reconciliation of GAAP to Non-GAAP Measures, Continued · Investments in capital expenditures, net · FQ1-26（原文以括号表示流出）",
+        "excerpt": "Investments in capital expenditures, net | (4,505) (FQ1-26, in millions)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "d0b6b5d92fe933b7fabfdb7ab24227e0a99bb9184ba3adf09564b00cc8ef75a3",
+    "id": "e-7d8e02f8acf85fd07db9a6e9c90e0ad4c8bd16b303a6138bef5e0d13803f2cde"
+  },
+  "e-a51d5d071a03dfdf439ee8d3c5af5234eef3907884971d263755adb8fab75b2a": {
+    "measurement": "capex",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "净资本开支",
+    "values": {
+      "current": 5004,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 5004,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "locator": "Reconciliation of GAAP to Non-GAAP Measures, Continued · Investments in capital expenditures, net · FQ2-26（原文以括号表示流出）",
+        "period": "FQ2-26（截至 2026-02-26 的季度）",
+        "source_id": "mu_fy2026_q2_release"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the series point",
+      "at": "2026-10-01T23:13:10.942Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2026_q2_release",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000004/a2026q2ex991-pressrelease.htm",
+        "sha256": "cd9bc09ab46519644b13092cf5c577f03427b9516dafe76a628471a8d524c773",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T23:13:10.205Z",
+        "reviewed_at": "2026-10-01T23:13:10.205Z",
+        "status": "read",
+        "locator": "Reconciliation of GAAP to Non-GAAP Measures, Continued · Investments in capital expenditures, net · FQ2-26（原文以括号表示流出）",
+        "excerpt": "Investments in capital expenditures, net | (5,004) (FQ2-26, in millions)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "88bef512dda3735b50aef9a1a78711e89992142dda4ca7b920a2a2f0671f8884",
+    "id": "e-a51d5d071a03dfdf439ee8d3c5af5234eef3907884971d263755adb8fab75b2a"
+  },
+  "e-e59911c01d65e1cd4c6557c1aa18b7abd991dc32ab3096c24c5331e0736fae61": {
+    "measurement": "inventory",
+    "unit": "days",
+    "definition_version": 1,
+    "temporal_basis": "period_end",
+    "accounting_basis": "as_disclosed",
+    "scope": "库存天数",
+    "values": {
+      "current": 149,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 149,
+        "scale": 1,
+        "source_unit": "days",
+        "locator": "讲稿第 9 页 · Inventory",
+        "period": "FQ1-25（截至 2024-11-28 的季度）",
+        "source_id": "mu_fy2025_q1_remarks"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the series point",
+      "at": "2026-10-01T23:13:10.942Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2025_q1_remarks",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q1/FY25-Q1-Prepared-Remarks.pdf#page=9",
+        "sha256": "655d4dbc5cdc77a09cef46efc11a62fbc85bd3909fc44f861e4a93fd05942cff",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T23:13:05.725Z",
+        "reviewed_at": "2026-10-01T23:13:05.725Z",
+        "status": "read",
+        "locator": "讲稿第 9 页 · Inventory",
+        "excerpt": "Our fiscal Q1 ending inventory was $8.7 billion or 149 days, a decline of nine days from the prior quarter and driven by DRAM."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "008f2c32add36c443e007126cb43db027666507335db0d9e6d5c1e4cdc16680c",
+    "id": "e-e59911c01d65e1cd4c6557c1aa18b7abd991dc32ab3096c24c5331e0736fae61"
+  },
+  "e-6073aaf634b36730822fab8143ac68ce7e7894c9392bd19fb7aae4095157bb86": {
+    "measurement": "inventory",
+    "unit": "days",
+    "definition_version": 1,
+    "temporal_basis": "period_end",
+    "accounting_basis": "as_disclosed",
+    "scope": "库存天数",
+    "values": {
+      "current": 158,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 158,
+        "scale": 1,
+        "source_unit": "days",
+        "locator": "讲稿第 9 页 · Inventory",
+        "period": "FQ2-25（截至 2025-02-27 的季度）",
+        "source_id": "mu_fy2025_q2_remarks"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the series point",
+      "at": "2026-10-01T23:13:10.942Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2025_q2_remarks",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q2/Micron_FY25_Q2_Prepared_Remarks_2-1.pdf#page=9",
+        "sha256": "947e90d70dc160899267aa8f89335027d9de3e64ef6d5f7a0265c592e70c44a8",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T23:13:06.650Z",
+        "reviewed_at": "2026-10-01T23:13:06.650Z",
+        "status": "read",
+        "locator": "讲稿第 9 页 · Inventory",
+        "excerpt": "Our fiscal Q2 ending inventory was $9.0 billion or 158 days, up as communicated previously, and an increase of nine days from the prior quarter."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "4f4d9391fad5a48df40d266f4796b634e5cbb899e3cab3d7f7ed9c37a1897292",
+    "id": "e-6073aaf634b36730822fab8143ac68ce7e7894c9392bd19fb7aae4095157bb86"
+  },
+  "e-b128666dda739ee73c485c4495f949c741ca753e574350c98b2068a011a07e89": {
+    "measurement": "inventory",
+    "unit": "days",
+    "definition_version": 1,
+    "temporal_basis": "period_end",
+    "accounting_basis": "as_disclosed",
+    "scope": "库存天数",
+    "values": {
+      "current": 139,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 139,
+        "scale": 1,
+        "source_unit": "days",
+        "locator": "讲稿第 8 页 · Inventory",
+        "period": "FQ3-25（截至 2025-05-29 的季度）",
+        "source_id": "mu_fy2025_q3_remarks"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the series point",
+      "at": "2026-10-01T23:13:10.942Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2025_q3_remarks",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q3/Micron_FY25_Q3_Prepared_Remarks.pdf#page=8",
+        "sha256": "77931fd02fb266dddca1214867cbc57fbf6172c1dbd36d4845e9d1c1506e63db",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T23:13:07.596Z",
+        "reviewed_at": "2026-10-01T23:13:07.596Z",
+        "status": "read",
+        "locator": "讲稿第 8 页 · Inventory",
+        "excerpt": "Ending inventory for fiscal Q3 was $8.7 billion, or 139 days. Inventory was down $280 million sequentially, and inventory days were down 19 days sequentially."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "1658cd91890115a04b8df9b26c18c6766df97eb3678cc8a3273c02ec46e8d096",
+    "id": "e-b128666dda739ee73c485c4495f949c741ca753e574350c98b2068a011a07e89"
+  },
+  "e-e5b6f5c9b7a5f3189971040eed9f0c34a059393d345f7a510c74da84db89ccb5": {
+    "measurement": "inventory",
+    "unit": "days",
+    "definition_version": 1,
+    "temporal_basis": "period_end",
+    "accounting_basis": "as_disclosed",
+    "scope": "库存天数",
+    "values": {
+      "current": 124,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 124,
+        "scale": 1,
+        "source_unit": "days",
+        "locator": "讲稿第 9 页 · Inventory",
+        "period": "FQ4-25（截至 2025-08-28 的季度）",
+        "source_id": "mu_fy2025_q4_remarks"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the series point",
+      "at": "2026-10-01T23:13:10.942Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2025_q4_remarks",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q4/Q4-2025-Prepared-Remarks-1.pdf#page=9",
+        "sha256": "ba2c603b5458275df6faffb733748270b7146a50f790c1035dfbfa8acad2288a",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T23:13:08.608Z",
+        "reviewed_at": "2026-10-01T23:13:08.608Z",
+        "status": "read",
+        "locator": "讲稿第 9 页 · Inventory",
+        "excerpt": "Ending inventory for fiscal Q4 was $8.4 billion, or 124 days. Inventory was down $372 million sequentially, and inventory days down 15 days, driven by strong sequential bit shipment growth in DRAM."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "d9ba3ff614cb93bbbb6fc1ce485e14cac678c92b46b939bb94d5d662b2ff7bab",
+    "id": "e-e5b6f5c9b7a5f3189971040eed9f0c34a059393d345f7a510c74da84db89ccb5"
+  },
+  "e-e906a2ecbe667b2f50f02803f4c314deba14247674bbb90aef9b1b7c8b5eb6f6": {
+    "measurement": "inventory",
+    "unit": "days",
+    "definition_version": 1,
+    "temporal_basis": "period_end",
+    "accounting_basis": "as_disclosed",
+    "scope": "库存天数",
+    "values": {
+      "current": 126,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 126,
+        "scale": 1,
+        "source_unit": "days",
+        "locator": "讲稿第 8 页 · Inventory",
+        "period": "FQ1-26（截至 2025-11-27 的季度）",
+        "source_id": "mu_fy2026_q1_remarks"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the series point",
+      "at": "2026-10-01T23:13:10.942Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2026_q1_remarks",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q1/Micron_Q1-2026-Prepared-Remarks.pdf#page=8",
+        "sha256": "265dfb771eaff47b1951365ee96d6e92ddd2116ac2dcd581543c038991b96722",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T23:13:09.516Z",
+        "reviewed_at": "2026-10-01T23:13:09.516Z",
+        "status": "read",
+        "locator": "讲稿第 8 页 · Inventory",
+        "excerpt": "Ending inventory for fiscal Q1 was $8.2 billion, down $150 million sequentially, with days of inventory at 126."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "6d581e324cb7fc5410f3096969080b9be5e6eb37ef46f85e7216c1c1445e99fe",
+    "id": "e-e906a2ecbe667b2f50f02803f4c314deba14247674bbb90aef9b1b7c8b5eb6f6"
+  },
+  "e-cc632ecfd1fbb61c303c8f820040fbaf9fed41e1e1386a8c28515ac01da065ad": {
+    "measurement": "inventory",
+    "unit": "days",
+    "definition_version": 1,
+    "temporal_basis": "period_end",
+    "accounting_basis": "as_disclosed",
+    "scope": "库存天数",
+    "values": {
+      "current": 123,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 123,
+        "scale": 1,
+        "source_unit": "days",
+        "locator": "讲稿第 8 页 · Inventory",
+        "period": "FQ2-26（截至 2026-02-26 的季度）",
+        "source_id": "mu_fy2026_q2_remarks"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the series point",
+      "at": "2026-10-01T23:13:10.942Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2026_q2_remarks",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q2/Q2-2026-Prepared-Remarks.pdf#page=8",
+        "sha256": "084f27ab5a07aa33200e4e5709ccfab6127b6f28b139960f5dfee7d19df32db9",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T23:13:10.507Z",
+        "reviewed_at": "2026-10-01T23:13:10.507Z",
+        "status": "read",
+        "locator": "讲稿第 8 页 · Inventory",
+        "excerpt": "Ending inventory for fiscal Q2 was $8.3 billion, up $62 million sequentially with days of inventory at 123."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "e37b43e4b28ad0405e64c21db7bfcd99bfa25c8c69ace03e5173fae757524519",
+    "id": "e-cc632ecfd1fbb61c303c8f820040fbaf9fed41e1e1386a8c28515ac01da065ad"
+  },
+  "e-5c153cf100fee0b0277c49d16ef2b302415f814feced3beb0d22463442d0b973": {
+    "measurement": "revenue",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "DRAM 收入",
+    "values": {
+      "current": 6400,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 6400,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "locator": "Notes · Revenue and Customer Contract Liabilities · Revenue by Technology · DRAM · Three months ended November 28, 2024",
+        "period": "FQ1-25（截至 2024-11-28 的季度）",
+        "source_id": "mu_fy2025_q1_10q"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the series point",
+      "at": "2026-10-01T23:13:10.942Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2025_q1_10q",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312524000047/mu-20241128.htm",
+        "sha256": "c1fc01e499ff74d38231e58ff44905a181a750918f72623619b017d1ff9c9b63",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T23:13:06.032Z",
+        "reviewed_at": "2026-10-01T23:13:06.032Z",
+        "status": "read",
+        "locator": "Notes · Revenue and Customer Contract Liabilities · Revenue by Technology · DRAM · Three months ended November 28, 2024",
+        "excerpt": "Revenue by Technology | Three months ended November 28, 2024 | DRAM | $ | 6,400 (in millions)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "c3e423abb0d04f4138a5fc50fe4dba0fce8d0d62d8d3c63094d572562fe395cc",
+    "id": "e-5c153cf100fee0b0277c49d16ef2b302415f814feced3beb0d22463442d0b973"
+  },
+  "e-6dcae89bf6e5cccbb620df5635be3d442dbc6e92838fd52afcd7c243d66dfb0c": {
+    "measurement": "revenue",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "DRAM 收入",
+    "values": {
+      "current": 6123,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 6123,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "locator": "Notes · Revenue and Customer Contract Liabilities · Revenue by Technology · DRAM · Quarter ended February 27, 2025",
+        "period": "FQ2-25（截至 2025-02-27 的季度）",
+        "source_id": "mu_fy2025_q2_10q"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the series point",
+      "at": "2026-10-01T23:13:10.942Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2025_q2_10q",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000009/mu-20250227.htm",
+        "sha256": "4057b7920c37759a6c1074dab10e7ef7ef18c7821d9363f6885faa9de8d3c4ac",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T23:13:06.949Z",
+        "reviewed_at": "2026-10-01T23:13:06.949Z",
+        "status": "read",
+        "locator": "Notes · Revenue and Customer Contract Liabilities · Revenue by Technology · DRAM · Quarter ended February 27, 2025",
+        "excerpt": "Revenue by Technology | Quarter ended February 27, 2025 | DRAM | $ | 6,123 (in millions)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "56aa7499e4816dcb25cc84bb9849e4b74c2acd10bf3779e697e19015d541fdeb",
+    "id": "e-6dcae89bf6e5cccbb620df5635be3d442dbc6e92838fd52afcd7c243d66dfb0c"
+  },
+  "e-2309af983a19723a0ba8702a6c157bbfbaff11018cd7a6d8546f8c58e64871f1": {
+    "measurement": "revenue",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "DRAM 收入",
+    "values": {
+      "current": 7071,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 7071,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "locator": "Notes · Revenue and Customer Contract Liabilities · Revenue by Technology · DRAM · Quarter ended May 29, 2025",
+        "period": "FQ3-25（截至 2025-05-29 的季度）",
+        "source_id": "mu_fy2025_q3_10q"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the series point",
+      "at": "2026-10-01T23:13:10.942Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2025_q3_10q",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000021/mu-20250529.htm",
+        "sha256": "d3e3c51b7932f7255674ac0d50b3481a3211cbc7055e573a0466e235a091aa07",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T23:13:07.978Z",
+        "reviewed_at": "2026-10-01T23:13:07.978Z",
+        "status": "read",
+        "locator": "Notes · Revenue and Customer Contract Liabilities · Revenue by Technology · DRAM · Quarter ended May 29, 2025",
+        "excerpt": "Revenue by Technology | Quarter ended May 29, 2025 | DRAM | $ | 7,071 (in millions)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "e815f5ae95705791af55452ddf6b9dc31eb244200b13620f30d0171cca31dc23",
+    "id": "e-2309af983a19723a0ba8702a6c157bbfbaff11018cd7a6d8546f8c58e64871f1"
+  },
+  "e-9f156c1779d95a1e1d164ed1d1d26007eb950a384debede7cf3c2d57896c9ad2": {
+    "measurement": "revenue",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "DRAM 收入",
+    "values": {
+      "current": 8984,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 8984,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "locator": "业绩材料第 35 页 · Revenue by Technology · DRAM · FQ4-25 列",
+        "period": "FQ4-25（截至 2025-08-28 的季度）",
+        "source_id": "mu_fy2026_q4_deck"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the series point",
+      "at": "2026-10-01T23:13:10.942Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2026_q4_deck",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-26-Earnings-Deck.pdf#page=35",
+        "sha256": "9709c4542924271b3e6a5124f9d1a5fc1fee7b18d574098c60b91c14c85d04b6",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T23:13:08.912Z",
+        "reviewed_at": "2026-10-01T23:13:08.912Z",
+        "status": "read",
+        "locator": "业绩材料第 35 页 · Revenue by Technology · DRAM · FQ4-25 列",
+        "excerpt": "Revenue by Technology · DRAM $39,771 (FQ4-26) $31,328 (FQ3-26) $8,984 (FQ4-25), amounts in millions"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "296890cfc3630f4256d9e80fa514fff4402d92a2cde122afe58d1cad88b4b1d0",
+    "id": "e-9f156c1779d95a1e1d164ed1d1d26007eb950a384debede7cf3c2d57896c9ad2"
+  },
+  "e-a60fc2cfa5b1d257cc0ce665cde2b554e144e7a629e47815877c0c5e82038e5f": {
+    "measurement": "revenue",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "DRAM 收入",
+    "values": {
+      "current": 10812,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 10812,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "locator": "Notes · Revenue and Customer Contract Liabilities · Revenue by Technology · DRAM · Three months ended November 27, 2025",
+        "period": "FQ1-26（截至 2025-11-27 的季度）",
+        "source_id": "mu_fy2026_q1_10q"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the series point",
+      "at": "2026-10-01T23:13:10.942Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2026_q1_10q",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000046/mu-20251127.htm",
+        "sha256": "9f1885db989afd0cb5840cc8bbaaffb9782286f8e510e87563afc250c3fa4e5c",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T23:13:09.853Z",
+        "reviewed_at": "2026-10-01T23:13:09.853Z",
+        "status": "read",
+        "locator": "Notes · Revenue and Customer Contract Liabilities · Revenue by Technology · DRAM · Three months ended November 27, 2025",
+        "excerpt": "Revenue by Technology | Three months ended November 27, 2025 | DRAM | $ | 10,812 (in millions)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "e93469d34e6f9cf6d7153c73ef5696d510d9123fc1ef7209eee6c955829a2940",
+    "id": "e-a60fc2cfa5b1d257cc0ce665cde2b554e144e7a629e47815877c0c5e82038e5f"
+  },
+  "e-c28369d1c14a28bcf7172f123d2023d9455108b22752c6030a1b02f2a1f6479f": {
+    "measurement": "revenue",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "DRAM 收入",
+    "values": {
+      "current": 18768,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 18768,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "locator": "Notes · Revenue and Customer Contract Liabilities · Revenue by Technology · DRAM · Quarter ended February 26, 2026",
+        "period": "FQ2-26（截至 2026-02-26 的季度）",
+        "source_id": "mu_fy2026_q2_10q"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, period and column to the series point",
+      "at": "2026-10-01T23:13:10.942Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2026_q2_10q",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000006/mu-20260226.htm",
+        "sha256": "06f67b9c53f347501f5111e01b52b174d34d8ad62cbd2cd64ba84b82ee9772c2",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-01T23:13:10.843Z",
+        "reviewed_at": "2026-10-01T23:13:10.843Z",
+        "status": "read",
+        "locator": "Notes · Revenue and Customer Contract Liabilities · Revenue by Technology · DRAM · Quarter ended February 26, 2026",
+        "excerpt": "Revenue by Technology | Quarter ended February 26, 2026 | DRAM | $ | 18,768 (in millions)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "b880ea761d9b04bf894f1f6792497057dc308a067869e2e4e9cbb2453076018b",
+    "id": "e-c28369d1c14a28bcf7172f123d2023d9455108b22752c6030a1b02f2a1f6479f"
   }
 }
