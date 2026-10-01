@@ -2,8 +2,8 @@
   "format_version": 1,
   "document": {
     "schema_version": 2,
-    "revision": "2026-10-01-f24427621c",
-    "updated_at": "2026-10-01T22:09:31.689Z",
+    "revision": "2026-10-01-307800bd64",
+    "updated_at": "2026-10-01T22:43:54.439Z",
     "last_successful_check_at": "2026-09-20T23:50:00Z",
     "last_attempt_at": "2026-09-20T23:50:00Z",
     "financial_period": "FY2026 Q4",
@@ -1514,6 +1514,12 @@
       "产业链指引和管理层展望按原披露日期及目标期间记录，文字为中文摘要；同比由原始金额计算，百分点与百分比区分。"
     ],
     "check_log": [
+      {
+        "at": "2026-10-01T22:43:54.439Z",
+        "status": "success",
+        "scope": "maintenance",
+        "text": "季度走势：以账本中已有的 FY2026 Q3 核实记录建立美光收入、DRAM 收入、非 GAAP 毛利率、库存天数与净资本开支的历史点；未新增数值。"
+      },
       {
         "at": "2026-10-01T22:09:31.689Z",
         "status": "success",
@@ -14532,5 +14538,22 @@
     "input.micron.short_investments": "2830f4c70b1e5f650d2a94f754a436dbbf232f678762bebb393392346db1cd2a",
     "input.micron.long_investments": "4103094f856bea607a6c23550c8c6e10ff0667d60bde421adcdd30139b9d6b7b",
     "input.micron.debt": "74d9b46164283763d34bb4c1707b397acc4086a8d5e8f13cea7f72c85be76fd0"
+  },
+  "series": {
+    "mu.revenue.total": {
+      "FY2026 Q3": "7fed8ce2eb6f884238ab5f0e0981a9f206673e3c16afc4feeaaeef744b82e486"
+    },
+    "mu.revenue.dram": {
+      "FY2026 Q3": "a867e0fa1ca4c10301d60b201ebb0061414fd49f0c1f1446efee7e906b75264d"
+    },
+    "mu.margin.nongaap": {
+      "FY2026 Q3": "c3be7b49a44ab3ef41b633d6ce75e51c3015f40fd7567827d6341ec62ba5f992"
+    },
+    "mu.inventory.days": {
+      "FY2026 Q3": "95a61a68a55d7b376a5556f21dd0c38e7fde76b81088f01451caf57594f792d3"
+    },
+    "mu.capex.net": {
+      "FY2026 Q3": "7b9e28eed4b715b67e868edce16125c43a471be199e4d123d5d22088d40eb0aa"
+    }
   }
 }

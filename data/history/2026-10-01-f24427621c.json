@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "revision": "2026-10-01-307800bd64",
-  "updated_at": "2026-10-01T22:43:54.439Z",
+  "revision": "2026-10-01-f24427621c",
+  "updated_at": "2026-10-01T22:09:31.689Z",
   "last_successful_check_at": "2026-09-20T23:50:00Z",
   "last_attempt_at": "2026-09-20T23:50:00Z",
   "financial_period": "FY2026 Q4",
@@ -2382,12 +2382,6 @@
     "产业链指引和管理层展望按原披露日期及目标期间记录，文字为中文摘要；同比由原始金额计算，百分点与百分比区分。"
   ],
   "check_log": [
-    {
-      "at": "2026-10-01T22:43:54.439Z",
-      "status": "success",
-      "scope": "maintenance",
-      "text": "季度走势：以账本中已有的 FY2026 Q3 核实记录建立美光收入、DRAM 收入、非 GAAP 毛利率、库存天数与净资本开支的历史点；未新增数值。"
-    },
     {
       "at": "2026-10-01T22:09:31.689Z",
       "status": "success",
@@ -8352,87 +8346,5 @@
         }
       ]
     }
-  },
-  "series": {
-    "mu.revenue.total": [
-      {
-        "financial_period": "FY2026 Q3",
-        "period_end": "2026-05-28",
-        "value": 41456,
-        "unit": "USDm",
-        "sources": [
-          {
-            "id": "financial",
-            "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Results-for-the-Third-Quarter-of-Fiscal-2026/default.aspx",
-            "published_at": "2026-06-24"
-          }
-        ],
-        "record_id": "7fed8ce2eb6f884238ab5f0e0981a9f206673e3c16afc4feeaaeef744b82e486"
-      }
-    ],
-    "mu.revenue.dram": [
-      {
-        "financial_period": "FY2026 Q3",
-        "period_end": "2026-05-28",
-        "value": 31328,
-        "unit": "USDm",
-        "sources": [
-          {
-            "id": "technology_revenue",
-            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf#page=33",
-            "published_at": "2026-06-24"
-          }
-        ],
-        "record_id": "a867e0fa1ca4c10301d60b201ebb0061414fd49f0c1f1446efee7e906b75264d"
-      }
-    ],
-    "mu.margin.nongaap": [
-      {
-        "financial_period": "FY2026 Q3",
-        "period_end": "2026-05-28",
-        "value": 84.9,
-        "unit": "pct",
-        "sources": [
-          {
-            "id": "financial",
-            "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Results-for-the-Third-Quarter-of-Fiscal-2026/default.aspx",
-            "published_at": "2026-06-24"
-          }
-        ],
-        "record_id": "c3be7b49a44ab3ef41b633d6ce75e51c3015f40fd7567827d6341ec62ba5f992"
-      }
-    ],
-    "mu.inventory.days": [
-      {
-        "financial_period": "FY2026 Q3",
-        "period_end": "2026-05-28",
-        "value": 120,
-        "unit": "days",
-        "sources": [
-          {
-            "id": "inventory_days",
-            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf#page=9",
-            "published_at": "2026-06-24"
-          }
-        ],
-        "record_id": "95a61a68a55d7b376a5556f21dd0c38e7fde76b81088f01451caf57594f792d3"
-      }
-    ],
-    "mu.capex.net": [
-      {
-        "financial_period": "FY2026 Q3",
-        "period_end": "2026-05-28",
-        "value": 7084,
-        "unit": "USDm",
-        "sources": [
-          {
-            "id": "cash_table",
-            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf#page=41",
-            "published_at": "2026-06-24"
-          }
-        ],
-        "record_id": "7b9e28eed4b715b67e868edce16125c43a471be199e4d123d5d22088d40eb0aa"
-      }
-    ]
   }
 }
