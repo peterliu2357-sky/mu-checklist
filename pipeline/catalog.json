@@ -3376,6 +3376,11 @@
       "mu.orders.deposits_forecast"
     ]
   },
+  "series": {
+    "description": "Micron quarterly metrics kept as past-quarter points for trend lines; the live quarter stays in its metric row.",
+    "window": 8,
+    "metrics": ["mu.revenue.total", "mu.revenue.dram", "mu.margin.nongaap", "mu.inventory.days", "mu.capex.net"]
+  },
   "calculations": [
     {
       "target": "mu.inventory.receivables_revenue",

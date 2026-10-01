@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import Ajv from 'ajv';
 import {fileURLToPath} from 'node:url';
-import {activeRecords,entries,materialize,makeRecord,recordHash,hash,stable,compute,orderedCalculations,numericInputs,pendingInput} from './model.mjs';
+import {activeRecords,seriesRecords,entries,materialize,makeRecord,recordHash,hash,stable,compute,orderedCalculations,numericInputs,pendingInput} from './model.mjs';
 import {coverageKeys,validateUpdates,validateUpdateTransition} from './updates.mjs';
 import {validateTechnology,validateTechnologyTransition} from './technology.mjs';
 
@@ -95,10 +95,10 @@ export function validateLedger(ledger,catalog,evidence,legacy) {
     const expected=makeRecord(entry,document,catalog),actual=byMetric.get(entry.metric_id);
     if(!actual||expected.id!==actual.id)add('CONTEXT_BINDING',entry.metric_id,'Record context or source identity does not match the published period/definition');
   }
-  for(const r of active) {
+  function checkRecord(r,{series=false}={}) {
     if(recordHash(r)!==r.id)add('RECORD_HASH',r.metric_id,'Record content was altered without a new identity');
     const def=catalog.definitions[r.metric_id];
-    if(!def||r.definition_version!==def.version){add('DEFINITION_VERSION',r.metric_id,'Record uses a different definition version');continue;}
+    if(!def||r.definition_version!==def.version){add('DEFINITION_VERSION',r.metric_id,'Record uses a different definition version');return;}
     if(!r.evidence_ids.length)add('EVIDENCE_REQUIRED',r.metric_id,'Record has no evidence');
     for(const id of r.evidence_ids) {
       const e=evidence[id];
@@ -109,6 +109,7 @@ export function validateLedger(ledger,catalog,evidence,legacy) {
         continue;
       }
       if(e.mode==='calculated') {
+        if(series){add('SERIES_EVIDENCE',r.metric_id,'Series points must be sourced, not calculated');continue;}
         const rule=catalog.calculations.find(x=>x.target===r.metric_id);
         if(!rule||!equal(e.inputs,rule.inputs.map(id=>byMetric.get(id)?.id)))add('FORMULA_LINEAGE',r.metric_id,'Calculated evidence must reference the active formula inputs');
         continue;
@@ -121,7 +122,7 @@ export function validateLedger(ledger,catalog,evidence,legacy) {
       for(const doc of e.documents) {
         if(!/^[a-f0-9]{64}$/.test(doc.sha256||'')||!date(doc.accessed_at)||!doc.locator||!doc.excerpt?.trim()||doc.excerpt.length>1500)add('SOURCE_CAPTURE',r.metric_id,'Capture needs content hash, read time, locator and concise excerpt');
         if(!['full','abstract','secondary'].includes(doc.access))add('ACCESS',r.metric_id,'Declare which source content was actually read');
-        if(doc.url!==document.sources[doc.source_id]?.url)add('SOURCE_URL',r.metric_id,'Evidence URL differs from the published source');
+        if(doc.url!==(series?r.context.sources?.find(x=>x.id===doc.source_id)?.url:document.sources[doc.source_id]?.url))add('SOURCE_URL',r.metric_id,'Evidence URL differs from the published source');
         if(doc.access==='abstract'&&!/摘要/.test((r.payload.note||'')+' '+(document.sources[doc.source_id]?.type||'')))add('ABSTRACT',r.metric_id,'Public abstract access must be visible to readers');
         if(doc.access==='secondary'&&r.payload.evidence_type!=='secondary')add('SECONDARY',r.metric_id,'Secondary reporting cannot be relabeled direct');
       }
@@ -134,6 +135,19 @@ export function validateLedger(ledger,catalog,evidence,legacy) {
         else if(Math.abs(input.value*input.scale-value)>Math.max(1,Math.abs(value))*1e-10||source_ids&&!source_ids.includes(input.source_id))add('NORMALIZATION',`${r.metric_id}.${field}`,'Raw value, source and scale must produce the published value');
       }
     }
+  }
+  for(const r of active)checkRecord(r);
+  // Past-quarter points: one sourced record per tracked metric and earlier quarter.
+  const tracked=new Set(catalog.series?.metrics||[]),ends=new Map();
+  for(const {metric_id,financial_period,record:r,id} of seriesRecords(ledger)) {
+    const path=`series.${metric_id}.${financial_period}`;
+    if(!r){add('SERIES_RECORD',path,`Missing record ${id}`);continue;}
+    if(!tracked.has(metric_id)||r.metric_id!==metric_id)add('SERIES_METRIC',path,'Series must use a tracked metric and its own records');
+    if(r.context.entity!=='micron'||r.context.financial_period!==financial_period||!date(r.context.period_end))add('SERIES_PERIOD',path,'Series record context must name its own quarter and period end');
+    else if(financial_period===document.financial_period||Date.parse(r.context.period_end)>=Date.parse(document.financial_as_of))add('SERIES_PERIOD',path,'The live quarter belongs in its metric row, not the series');
+    if(typeof r.payload.current!=='number')add('SERIES_VALUE',path,'Series points need a numeric current value');
+    const seen=ends.get(metric_id)||new Set();if(seen.has(r.context.period_end))add('SERIES_PERIOD',path,'Duplicate quarter in series');seen.add(r.context.period_end);ends.set(metric_id,seen);
+    checkRecord(r,{series:true});
   }
   const value=(id,field)=>byMetric.get(id)?.payload[field];
   for(const rule of [...catalog.calculations,...catalog.reconciliations])for(const field of ['current','previous']) {

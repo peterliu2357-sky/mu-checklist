@@ -1596,6 +1596,70 @@
         "highlights"
       ],
       "additionalProperties": false
+    },
+    "series": {
+      "type": "object",
+      "description": "Past-quarter points for tracked Micron metrics, oldest first; the live quarter stays in its metric row.",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "financial_period",
+            "period_end",
+            "value",
+            "unit",
+            "sources",
+            "record_id"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "financial_period": {
+              "type": "string",
+              "pattern": "^FY\\d{4} Q[1-4]$"
+            },
+            "period_end": {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            },
+            "value": {
+              "type": "number"
+            },
+            "unit": {
+              "type": "string"
+            },
+            "record_id": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "sources": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "url"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "type": "string",
+                    "pattern": "^https://"
+                  },
+                  "published_at": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "required": [

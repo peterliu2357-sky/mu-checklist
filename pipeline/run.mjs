@@ -1,4 +1,4 @@
-import {clone,hash,stable,materialize,recordDocument,makeRecord,activeRecords,calculate} from './model.mjs';
+import {clone,hash,stable,materialize,recordDocument,makeRecord,activeRecords,calculate,recordHash} from './model.mjs';
 import {validateLedger,validateTransition} from './validate.mjs';
 import {coverageKeys,deriveDiscovery} from './updates.mjs';
 import {technologyTargets,technologyReviews} from './technology.mjs';
@@ -12,7 +12,7 @@ export function createManifest({scope='full',base_commit,document,catalog,at,tar
 
 function changedCompany(old,next){return stable({...old,checked_at:null})!==stable({...next,checked_at:null});}
 function issue(code,path,message){return {code,path,message};}
-export function buildCandidate({previousLedger,previousEvidence,proposal,supporting,evidenceInput,manifest,catalog,legacy}) {
+export function buildCandidate({previousLedger,previousEvidence,proposal,supporting,history={},evidenceInput,manifest,catalog,legacy}) {
   const previous=materialize(previousLedger),run=clone(manifest),at=run.completed_at;
   if(!at||!Number.isFinite(Date.parse(at)))throw new Error('completed_at must be fixed before building');
   if(hash(previous)!==run.base_sha256)throw new Error('BASE_CHANGED: run was prepared against different data');
@@ -51,6 +51,36 @@ export function buildCandidate({previousLedger,previousEvidence,proposal,support
     const record=makeRecord({metric_id:id,payload,context:{entity:'micron',financial_period:next.financial_period,period_end:next.financial_as_of}},next,catalog);
     record.evidence_ids=previousLedger.records[record.id]?.evidence_ids||[];ledger.records[record.id]=record;ledger.supporting[id]=record.id;
   }
+  const uncaptured=doc=>{const read=run.reads.find(r=>r.source_id===doc.source_id&&r.status==='read');return !read||read.sha256!==doc.sha256||read.url!==doc.url||read.access!==doc.access||read.accessed_at!==doc.accessed_at||!read.reviewed_at;};
+  const tracked=catalog.series?.metrics||[],setPoint=(metric_id,period,id)=>{ledger.series??={};(ledger.series[metric_id]??={})[period]=id;};
+  // A quarter rollover keeps the outgoing quarter's record as a past-quarter point, so trend lines grow without re-entry.
+  if(next.financial_period!==previous.financial_period){
+    const outgoing=new Map(activeRecords(previousLedger).map(r=>[r.metric_id,r]));
+    for(const metric_id of tracked){const r=outgoing.get(metric_id);if(r?.context.financial_period&&r.context.financial_period!==next.financial_period&&typeof r.payload.current==='number')setPoint(metric_id,r.context.financial_period,r.id);}
+  }
+  // Backfilled quarters reuse an existing evidenced record or add a new one with its own reviewed evidence.
+  for(const [metric_id,periods] of Object.entries(history))for(const [period,point] of Object.entries(periods)){
+    const key=`${metric_id}@${period}`,def=catalog.definitions[metric_id];
+    if(!tracked.includes(metric_id)||!def){add('SERIES_METRIC',key,'Only catalog series metrics can hold past-quarter points');continue;}
+    // Reusing an already-evidenced record adds no new fact, so a maintenance run may do it; new points need a Micron-scoped run.
+    if(!(point.record_id&&run.scope==='maintenance')&&!inScope(metric_id)){add('SCOPE',key,'Series point is outside this run scope');continue;}
+    let record=point.record_id?previousLedger.records[point.record_id]:null;
+    if(point.record_id&&!record){add('SERIES_RECORD',key,'Referenced record does not exist');continue;}
+    if(!record){
+      record={metric_id,definition_version:def.version,context:{entity:'micron',financial_period:period,period_end:point.period_end,measurement:def.measurement,unit:def.unit,scope:def.scope,accounting_basis:def.accounting_basis,temporal_basis:def.temporal_basis,sources:clone(point.sources||[])},payload:clone(point.payload),evidence_ids:[]};
+      record.id=recordHash(record);
+      const old=previousLedger.records[record.id],input=evidenceInput[key];
+      if(old)record.evidence_ids=clone(old.evidence_ids);
+      else if(!input)add('EVIDENCE_REQUIRED',key,'New series points require reviewed evidence');
+      else{
+        const e={...clone(input),mode:'verified',record_hash:record.id};
+        if((e.documents||[]).some(uncaptured))add('UNCAPTURED_SOURCE',key,'Evidence must match the content, URL, access level and time of a source captured and reviewed during this run');
+        e.id=`e-${hash(e)}`;evidence[e.id]=e;record.evidence_ids=[e.id];
+      }
+      ledger.records[record.id]=record;
+    }
+    setPoint(metric_id,period,record.id);
+  }
   const current=activeRecords(ledger),byId=new Map(current.map(r=>[r.metric_id,r]));
   for(const record of current) {
     const old=previousLedger.records[record.id],input=evidenceInput[record.metric_id];
@@ -61,7 +91,7 @@ export function buildCandidate({previousLedger,previousEvidence,proposal,support
     if(calculation)e={mode:'calculated',record_hash:record.id,inputs:calculation.inputs.map(id=>byId.get(id)?.id),formula:calculation.op};
     else if(input){
       e={...clone(input),mode:'verified',record_hash:record.id};
-      for(const doc of e.documents||[]){const read=run.reads.find(r=>r.source_id===doc.source_id&&r.status==='read');if(!read||read.sha256!==doc.sha256||read.url!==doc.url||read.access!==doc.access||read.accessed_at!==doc.accessed_at||!read.reviewed_at)add('UNCAPTURED_SOURCE',record.metric_id,'Evidence must match the content, URL, access level and time of a source captured and reviewed during this run');}
+      for(const doc of e.documents||[])if(uncaptured(doc))add('UNCAPTURED_SOURCE',record.metric_id,'Evidence must match the content, URL, access level and time of a source captured and reviewed during this run');
     }else{add('EVIDENCE_REQUIRED',record.metric_id,'New or changed records require reviewed evidence');continue;}
     e.id=`e-${hash(e)}`;evidence[e.id]=e;record.evidence_ids=[...new Set([...(old?.evidence_ids||[]),e.id])];
   }

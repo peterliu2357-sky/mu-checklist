@@ -18,6 +18,9 @@ const write=(p,v)=>{fs.mkdirSync(path.dirname(p),{recursive:true});const temp=p+
 const git=(...args)=>execFileSync('git',args,{encoding:'utf8'}).trim();
 const state=()=>({ledger:read('data/ledger.json'),evidence:read('data/evidence.json'),catalog:read('pipeline/catalog.json'),legacy:read('pipeline/legacy-baseline.json')});
 const report=issues=>{console.log(JSON.stringify({ok:issues.length===0,issues},null,2));if(issues.length)process.exitCode=1;};
+const historyFile=dir=>fs.existsSync(path.join(dir,'history.json'))?read(path.join(dir,'history.json')):{};
+// Past-quarter filings are cited by their series points rather than the live source list.
+const historySource=(dir,id)=>Object.values(historyFile(dir)).flatMap(periods=>Object.values(periods)).flatMap(p=>p.sources||[]).find(s=>s.id===id);
 const runDir=()=>{const value=flag('run');if(!value)throw new Error('--run is required');const p=path.resolve(value);if(!p.startsWith(path.join(root,'.monitor')+path.sep))throw new Error('Runs must live inside .monitor/');return p;};
 
 try {
@@ -61,10 +64,11 @@ try {
     const s=state(),d=materialize(s.ledger),at=flag('at',new Date().toISOString());
     const manifest=createManifest({scope:flag('scope','full'),targets:flag('targets')?.split(','),base_commit:git('rev-parse','HEAD'),document:d,catalog:s.catalog,at});
     write(path.join(dir,'manifest.json'),manifest);write(path.join(dir,'proposal.json'),d);write(path.join(dir,'evidence.json'),{});
+    write(path.join(dir,'history.json'),{});
     write(path.join(dir,'supporting.json'),Object.fromEntries(Object.entries(s.ledger.supporting).map(([id,ref])=>[id,s.ledger.records[ref].payload])));
     console.log(JSON.stringify({run:dir,scope:manifest.scope,coverage:manifest.coverage.map(c=>c.key),next:'Read sources, complete evidence.json and manifest.json, then build.'},null,2));
   }else if(['fetch','capture'].includes(command)){
-    const dir=runDir(),manifest=read(path.join(dir,'manifest.json')),proposal=read(path.join(dir,'proposal.json')),id=flag('source'),source=proposal.sources[id];
+    const dir=runDir(),manifest=read(path.join(dir,'manifest.json')),proposal=read(path.join(dir,'proposal.json')),id=flag('source'),source=proposal.sources[id]||historySource(dir,id);
     if(!source)throw new Error('Unknown source; register it in the candidate and catalog first');
     const at=new Date().toISOString();
     try{
@@ -73,12 +77,13 @@ try {
       manifest.reads=manifest.reads.filter(r=>r.source_id!==id);manifest.reads.push(capture);manifest.state='collecting';write(path.join(dir,'manifest.json'),manifest);console.log(JSON.stringify(capture,null,2));
     }catch(error){manifest.state='partial';manifest.reads.push({source_id:id,url:source.url,status:'failed',attempted_at:at,error:error.message});write(path.join(dir,'manifest.json'),manifest);throw error;}
   }else if(command==='evidence-draft'){
-    const dir=runDir(),metric=flag('metric'),s=state(),proposal=read(path.join(dir,'proposal.json')),manifest=read(path.join(dir,'manifest.json'));
-    const row=entries(proposal,s.catalog).find(x=>x.metric_id===metric)?.payload||read(path.join(dir,'supporting.json'))[metric],def=s.catalog.definitions[metric];
+    const dir=runDir(),metric=flag('metric'),period=flag('period'),s=state(),proposal=read(path.join(dir,'proposal.json')),manifest=read(path.join(dir,'manifest.json'));
+    const row=period?historyFile(dir)[metric]?.[period]?.payload:entries(proposal,s.catalog).find(x=>x.metric_id===metric)?.payload||read(path.join(dir,'supporting.json'))[metric],def=s.catalog.definitions[metric];
     if(!row||!def)throw new Error('Unknown metric identity');
-    const output=read(path.join(dir,'evidence.json'));if(output[metric])throw new Error('Evidence draft already exists; edit it without overwriting completed work');
+    const key=period?`${metric}@${period}`:metric;
+    const output=read(path.join(dir,'evidence.json'));if(output[key])throw new Error('Evidence draft already exists; edit it without overwriting completed work');
     const ids=row.source_ids||(row.source_id?[row.source_id]:[]);
-    output[metric]={measurement:def.measurement,unit:def.unit,definition_version:def.version,temporal_basis:def.temporal_basis,accounting_basis:def.accounting_basis,scope:def.scope,
+    output[key]={measurement:def.measurement,unit:def.unit,definition_version:def.version,temporal_basis:def.temporal_basis,accounting_basis:def.accounting_basis,scope:def.scope,
       values:{current:row.current??null,previous:row.previous??null,value:row.value??null,summary:row.summary??null},
       raw_inputs:numericInputs(row).map(({field,source_ids})=>({field,value:null,scale:null,source_unit:'',period:'',locator:'',source_id:source_ids?.[0]||ids[0]})),
       review:{confirmed:false,method:'',at:null},documents:ids.map(source_id=>({...manifest.reads.find(r=>r.source_id===source_id),source_id,locator:'',excerpt:''}))};
@@ -86,7 +91,7 @@ try {
   }else if(command==='build'){
     const dir=runDir(),s=state(),manifest=read(path.join(dir,'manifest.json'));
     manifest.completed_at=manifest.completed_at||flag('at',new Date().toISOString());
-    const result=buildCandidate({previousLedger:s.ledger,previousEvidence:s.evidence,proposal:read(path.join(dir,'proposal.json')),supporting:read(path.join(dir,'supporting.json')),evidenceInput:read(path.join(dir,'evidence.json')),manifest,catalog:s.catalog,legacy:s.legacy});
+    const result=buildCandidate({previousLedger:s.ledger,previousEvidence:s.evidence,proposal:read(path.join(dir,'proposal.json')),supporting:read(path.join(dir,'supporting.json')),history:historyFile(dir),evidenceInput:read(path.join(dir,'evidence.json')),manifest,catalog:s.catalog,legacy:s.legacy});
     result.issues.push(...await verifyCaptures(dir,manifest.reads.filter(r=>r.status!=='failed')));
     result.receipt.state=result.issues.length?'blocked':'verified';
     for(const [name,value]of Object.entries({candidate:result.document,ledger:result.ledger,evidence:result.evidence,receipt:result.receipt,report:{ok:!result.issues.length,issues:result.issues}}))write(path.join(dir,'build',name+'.json'),value);

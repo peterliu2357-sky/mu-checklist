@@ -92,11 +92,27 @@ export function materialize(ledger) {
       result.technology.history[item.id]=Object.values(ledger.records).filter(r=>r.metric_id==='tech.'+item.id).map(r=>({record_id:r.id,payload:clone(r.payload),sources:clone(r.context.sources)})).reverse().slice(0,5);
     }
   }
+  // Past quarters of tracked Micron metrics, oldest first. The live quarter stays in its metric row, so it is not repeated here.
+  if(ledger.series)result.series={};
+  for(const [metric_id,periods] of Object.entries(ledger.series||{})){
+    result.series[metric_id]=Object.entries(periods).map(([financial_period,id])=>{
+      const r=ledger.records[id];
+      if(!r) throw new Error(`Missing series record ${id}`);
+      return {financial_period,period_end:r.context.period_end,value:r.payload.current,unit:r.payload.unit,sources:clone(r.context.sources||[]),record_id:id};
+    }).sort((a,b)=>a.period_end.localeCompare(b.period_end));
+  }
   return result;
+}
+
+// Records behind past-quarter series points; kept apart from active records because one metric has many periods.
+export function seriesRecords(ledger) {
+  return Object.entries(ledger.series||{}).flatMap(([metric_id,periods])=>Object.entries(periods).map(([financial_period,id])=>({metric_id,financial_period,record:ledger.records[id],id})));
 }
 
 export function recordDocument(document,catalog,previous=null,evidenceByMetric={}) {
   const ledger={format_version:1,document:clone(document),records:clone(previous?.records||{}),supporting:clone(previous?.supporting||{})};
+  if(previous?.series)ledger.series=clone(previous.series);
+  delete ledger.document.series;
   if(ledger.document.news)delete ledger.document.news.fact_records;
   if(ledger.document.technology)delete ledger.document.technology.history;
   for(const entry of entries(ledger.document,catalog)) {
