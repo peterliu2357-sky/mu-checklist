@@ -2,15 +2,15 @@
   "format_version": 1,
   "document": {
     "schema_version": 2,
-    "revision": "2026-10-01-80c0dffdbe",
-    "updated_at": "2026-10-01T21:04:09.439Z",
+    "revision": "2026-10-01-f24427621c",
+    "updated_at": "2026-10-01T22:09:31.689Z",
     "last_successful_check_at": "2026-09-20T23:50:00Z",
     "last_attempt_at": "2026-09-20T23:50:00Z",
-    "financial_period": "FY2026 Q3",
-    "financial_as_of": "2026-05-28",
-    "financial_published_at": "2026-06-24",
-    "next_earnings_at": "2026-09-30T16:30:00-04:00",
-    "expected_report_review_by": "2026-10-02T00:30:00Z",
+    "financial_period": "FY2026 Q4",
+    "financial_as_of": "2026-09-03",
+    "financial_published_at": "2026-09-30",
+    "next_earnings_at": null,
+    "expected_report_review_by": null,
     "automation": {
       "enabled": true,
       "cadence": "周日综合巡检 · 周三行业与动态",
@@ -43,8 +43,8 @@
         },
         {
           "metric_id": "inventory",
-          "row_label": "产成品",
-          "row_id": "finished_goods"
+          "row_label": "库存天数",
+          "row_id": "days"
         },
         {
           "metric_id": "inventory",
@@ -71,10 +71,15 @@
     },
     "events": [
       {
-        "record_ref": "e564fcde1028f4caa4c1c8c77b080178430e14cd0394c65762d28f6d08715259"
+        "record_ref": "dd699ac2748bd9a08c22f963747147305c52e9759f3748ec936222cf25c6d62d"
       }
     ],
     "changes": [
+      {
+        "date": "2026-10-01",
+        "title": "更新至 FY2026 Q4",
+        "text": "按 09-30 新闻稿与电话会讲稿更新收入、毛利率、现金流、指引与长单；库存构成、贸易应收、季末 RPO 和完整合同负债待 FY2026 10-K。"
+      },
       {
         "date": "2026-09-22",
         "title": "按资料类型更新，新增 AI 动态",
@@ -333,19 +338,10 @@
         "label": "美光 FQ3 10-Q · 存货附注 · 第 13 页",
         "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/0000723125-26-000015.pdf#page=13",
         "published_at": "2026-06-25",
-        "checked_at": "2026-09-20",
+        "checked_at": "2026-10-01",
         "type": "原始资料",
         "short_label": "FQ3 10-Q p13",
         "locator": "第 13 页 · Note 5 应收 / Note 6 存货；本期列为 2026-05-28"
-      },
-      "q2": {
-        "label": "美光 FQ2 10-Q · Note 6 存货",
-        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000006/mu-20260226.htm",
-        "published_at": "2026-03-19",
-        "checked_at": "2026-09-20",
-        "type": "原始资料",
-        "short_label": "FQ2 10-Q Note 5–6",
-        "locator": "Note 5 应收 / Note 6 存货；本期列为 2026-02-26"
       },
       "contract": {
         "label": "TrendForce 合同价预测 · 07-03",
@@ -387,19 +383,19 @@
         "label": "Financial News 转引 Counterpoint · 09-03",
         "url": "https://en.fnnews.com/news/202609031610354859",
         "published_at": "2026-09-03",
-        "checked_at": "2026-09-20",
+        "checked_at": "2026-10-01",
         "type": "媒体转引，原表未读",
         "short_label": "Financial News · 转引",
         "locator": "正文 Micron 段；按收入计算的份额"
       },
       "next": {
-        "label": "美光 FQ4 财报日程 · 09-30",
-        "url": "https://investors.micron.com/events-and-presentations/event-details/2026/Microns-Fourth-Quarter-2026-Financial-Call/default.aspx",
-        "published_at": null,
-        "checked_at": "2026-09-20",
-        "type": "原始资料",
-        "short_label": "财报日程",
-        "locator": "活动时间（美国东部时间）"
+        "label": "美光 FY2026 Q4 财报新闻稿（SEC 8-K 附件 99.1）",
+        "short_label": "财报 · 电话会时间",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "locator": "Investor Webcast：September 30, 2026 2:30 p.m. Mountain Time",
+        "published_at": "2026-09-30",
+        "checked_at": "2026-10-01",
+        "type": "公司披露"
       },
       "supply": {
         "label": "TrendForce · 2027 年供需展望 · 07-30",
@@ -414,18 +410,18 @@
         "label": "美光 FQ3 10-Q · 长单与 RPO · 第 21 页",
         "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/0000723125-26-000015.pdf#page=21",
         "published_at": "2026-06-25",
-        "checked_at": "2026-09-20",
+        "checked_at": "2026-10-01",
         "type": "原始资料",
         "short_label": "FQ3 10-Q p21",
         "locator": "第 21 页 · Note 14 Revenue and Customer Concentrations"
       },
       "orders": {
-        "label": "美光战略客户协议",
-        "short_label": "客户协议 p2–3",
-        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf#page=3",
-        "locator": "第 2–3 页 · Business model transformation and strategic customer agreements",
-        "published_at": "2026-06-24",
-        "checked_at": "2026-09-20",
+        "label": "美光 FY2026 Q4 电话会讲稿",
+        "short_label": "客户协议 p3",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=3",
+        "locator": "第 3 页 · Strategic customer agreements update",
+        "published_at": "2026-09-30",
+        "checked_at": "2026-10-01",
         "type": "公司披露"
       },
       "hbm_product": {
@@ -434,7 +430,7 @@
         "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf#page=4",
         "locator": "第 4 页 · Technology and product leadership",
         "published_at": "2026-06-24",
-        "checked_at": "2026-09-20",
+        "checked_at": "2026-10-01",
         "type": "公司披露"
       },
       "mobile": {
@@ -447,21 +443,21 @@
         "locator": "公开摘要 / Key Highlights；未读取付费全文"
       },
       "financial": {
-        "label": "美光 FQ3 财报 · 利润表与季度比较",
+        "label": "美光 FY2026 Q4 财报新闻稿（SEC 8-K 附件 99.1）",
         "short_label": "财报 · 季度比较",
-        "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Results-for-the-Third-Quarter-of-Fiscal-2026/default.aspx",
-        "locator": "Quarterly financial summary / Consolidated statements of operations",
-        "published_at": "2026-06-24",
-        "checked_at": "2026-09-20",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "locator": "Quarterly Financial Results；Consolidated Statements of Operations（FQ4-26 / FQ3-26 列）",
+        "published_at": "2026-09-30",
+        "checked_at": "2026-10-01",
         "type": "公司披露"
       },
       "business": {
-        "label": "美光 FQ3 业绩材料 · 部门收入",
-        "short_label": "部门收入 p23",
-        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf#page=23",
-        "locator": "第 23 页 · Quarterly business unit financial results",
-        "published_at": "2026-06-24",
-        "checked_at": "2026-09-20",
+        "label": "美光 FY2026 Q4 财报新闻稿（SEC 8-K 附件 99.1）",
+        "short_label": "财报 · 部门收入",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "locator": "Quarterly Business Unit Financial Results（FQ4-26 / FQ3-26 列）",
+        "published_at": "2026-09-30",
+        "checked_at": "2026-10-01",
         "type": "公司披露"
       },
       "price": {
@@ -474,12 +470,12 @@
         "locator": "At close · 2026-09-21；Historical data · 2026-09-18"
       },
       "technology": {
-        "label": "美光 FQ3 业绩材料 · 位元出货与 ASP",
-        "short_label": "业绩材料 p22",
-        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf#page=22",
-        "locator": "第 22 页 · Performance by technology",
-        "published_at": "2026-06-24",
-        "checked_at": "2026-09-20",
+        "label": "美光 FY2026 Q4 电话会讲稿",
+        "short_label": "讲稿 p7",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=7",
+        "locator": "第 7 页 · Revenue / DRAM / NAND / Gross margin / MCBU",
+        "published_at": "2026-09-30",
+        "checked_at": "2026-10-01",
         "type": "公司披露"
       },
       "mobile_bits": {
@@ -492,48 +488,48 @@
         "type": "公司披露"
       },
       "technology_revenue": {
-        "label": "美光 FQ3 业绩材料 · 分产品收入",
-        "short_label": "产品收入 p33",
-        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf#page=33",
-        "locator": "第 33 页 · Revenue by technology",
-        "published_at": "2026-06-24",
-        "checked_at": "2026-09-20",
+        "label": "美光 FY2026 Q4 电话会讲稿",
+        "short_label": "产品收入 p7",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=7",
+        "locator": "第 7 页 · DRAM / NAND revenue",
+        "published_at": "2026-09-30",
+        "checked_at": "2026-10-01",
         "type": "公司披露"
       },
       "cash_table": {
-        "label": "美光 FQ3 业绩材料 · 单季现金流与 EPS",
-        "short_label": "现金流 / EPS p41",
-        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf#page=41",
-        "locator": "第 41 页 · GAAP / Non-GAAP 调节表（FQ3、FQ2 单季）",
-        "published_at": "2026-06-24",
-        "checked_at": "2026-09-20",
+        "label": "美光 FY2026 Q4 财报新闻稿（SEC 8-K 附件 99.1）",
+        "short_label": "财报 · 现金流与 EPS 调节",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "locator": "Reconciliation of GAAP to Non-GAAP Measures 及其 Continued 表（单季列）",
+        "published_at": "2026-09-30",
+        "checked_at": "2026-10-01",
         "type": "公司披露"
       },
       "cash_balance": {
-        "label": "美光 FQ3 业绩材料 · 现金与债务",
-        "short_label": "现金与债务 p42",
-        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf#page=42",
-        "locator": "第 42 页 · Cash, investments and debt",
-        "published_at": "2026-06-24",
-        "checked_at": "2026-09-20",
+        "label": "美光 FY2026 Q4 财报新闻稿（SEC 8-K 附件 99.1）",
+        "short_label": "财报 · 资产负债表",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "locator": "Consolidated Balance Sheets（September 3, 2026 / May 28, 2026 列）",
+        "published_at": "2026-09-30",
+        "checked_at": "2026-10-01",
         "type": "公司披露"
       },
       "guidance": {
-        "label": "美光 FQ4 指引",
-        "short_label": "下季指引 p28",
-        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf#page=28",
-        "locator": "第 28 页 · FQ4-26 guidance",
-        "published_at": "2026-06-24",
-        "checked_at": "2026-09-20",
+        "label": "美光 FY2026 Q4 财报新闻稿（SEC 8-K 附件 99.1）",
+        "short_label": "财报 · 下季指引",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "locator": "Business Outlook；Reconciliation of GAAP to Non-GAAP Outlook",
+        "published_at": "2026-09-30",
+        "checked_at": "2026-10-01",
         "type": "公司披露"
       },
       "capex_plan": {
-        "label": "美光资本开支计划",
-        "short_label": "开支计划 p29",
-        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf#page=29",
-        "locator": "第 29 页 · Outlook",
-        "published_at": "2026-06-24",
-        "checked_at": "2026-09-20",
+        "label": "美光 FY2026 Q4 电话会讲稿",
+        "short_label": "开支计划 p10",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=10",
+        "locator": "第 10 页 · Capex outlook",
+        "published_at": "2026-09-30",
+        "checked_at": "2026-10-01",
         "type": "公司披露"
       },
       "supply_plans": {
@@ -564,21 +560,21 @@
         "type": "公司披露"
       },
       "inventory_days": {
-        "label": "美光库存天数披露",
-        "short_label": "库存说明 p9",
-        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf#page=9",
-        "locator": "第 9 页 · Inventory",
-        "published_at": "2026-06-24",
-        "checked_at": "2026-09-20",
+        "label": "美光 FY2026 Q4 电话会讲稿",
+        "short_label": "库存说明 p8",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=8",
+        "locator": "第 8 页 · Inventory",
+        "published_at": "2026-09-30",
+        "checked_at": "2026-10-01",
         "type": "公司披露"
       },
       "orders_cash": {
-        "label": "美光季后 RPO 与保证金预计",
-        "short_label": "合同说明 p7",
-        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf#page=7",
-        "locator": "第 7 页 · SCAs / RPO / customer deposits",
-        "published_at": "2026-06-24",
-        "checked_at": "2026-09-20",
+        "label": "美光 FY2026 Q4 电话会讲稿",
+        "short_label": "RPO 说明 p6",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=6",
+        "locator": "第 6 页 · RPO",
+        "published_at": "2026-09-30",
+        "checked_at": "2026-10-01",
         "type": "公司披露"
       },
       "hbm_highlights": {
@@ -1093,6 +1089,33 @@
         "checked_at": "2026-10-01",
         "type": "监管机构官方入口",
         "locator": "filings.recent：form、filingDate、reportDate、accessionNumber、primaryDocument；2026-10-01 查询。"
+      },
+      "fq4_balance_sheet": {
+        "label": "美光 FY2026 Q4 财报新闻稿（SEC 8-K 附件 99.1）",
+        "short_label": "财报 · 资产负债表（无附注明细）",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "locator": "Consolidated Balance Sheets：只列 Receivables、Inventories 合计和非流动客户合同负债；库存构成、贸易应收、RPO 待 10-K 附注",
+        "published_at": "2026-09-30",
+        "checked_at": "2026-10-01",
+        "type": "公司披露"
+      },
+      "technology_revenue_prior": {
+        "label": "美光 FY2026 Q3 业绩材料",
+        "short_label": "FQ3 产品收入 p33",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf#page=33",
+        "locator": "第 33 页 · Revenue by technology · FQ3-26 列",
+        "published_at": "2026-06-24",
+        "checked_at": "2026-10-01",
+        "type": "公司披露"
+      },
+      "orders_cash_prior": {
+        "label": "美光 FY2026 Q3 电话会讲稿",
+        "short_label": "FQ3 合同说明 p7",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf#page=7",
+        "locator": "第 7 页 · SCAs、RPO 与保证金",
+        "published_at": "2026-06-24",
+        "checked_at": "2026-10-01",
+        "type": "公司披露"
       }
     },
     "metrics": [
@@ -1102,20 +1125,20 @@
         "category": "business",
         "rows": [
           {
-            "record_ref": "0c679da3e7c9f9204bb97bd7d9060744a63d3621fe19e3118f4aa483ddbcf1c8"
+            "record_ref": "7be7bea049a6e01c77d727bc27fc967d383a083743976543f155a1623a46da2b"
           },
           {
-            "record_ref": "bd9116bf4e8bfd8bcccbf90b5e2ad69edbe9ade937fa86ab6cc7c0a1cae1323a"
+            "record_ref": "4ee17f832ec411089755102dd15b1ada8315a35a263c0f0e52293a22b4df2a6a"
           }
         ],
         "limits": [
           "公司未披露精确 ASP 点值及同规格价格序列。"
         ],
-        "period": "FY2026 Q3 · 截至 05-28",
-        "checked_at": "2026-09-20",
-        "next_review": "2026-09-30",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "checked_at": "2026-10-01",
+        "next_review": "FY2027 Q1 财报（日期待公布）",
         "definition": "公司披露的当季实现售价环比变化。",
-        "interpretation": "当季平均售价上涨，反映了产品价格与销售组合的共同变化。"
+        "interpretation": "DRAM 与 NAND 售价继续环比上涨，NAND 涨幅更大；涨幅较 FQ3 收窄。"
       },
       {
         "id": "volume",
@@ -1123,23 +1146,23 @@
         "category": "business",
         "rows": [
           {
-            "record_ref": "e8e558c63e1c98f6e73799c4f0ed0057a1cc9a88bf47d68d9479187b10a9e90a"
+            "record_ref": "585d0dc26e280529b08900dd3092b6244c729abba6890cfdaa9e6b52710a4bab"
           },
           {
-            "record_ref": "439569a9800fa3ef267f8a6638476c7e71efd5c24fd9862d60f62bf2b7e5ac60"
+            "record_ref": "0fe5b5ddf96a18d337fa8bb7e1a5afbeba4d453cce8f59f561d95b0f1ff3cf62"
           },
           {
-            "record_ref": "826ae94ac3188409f8c8faa82b32318fb884a6ad6206521a62f687d1557a246b"
+            "record_ref": "21451c4206a4135e88a5af1d472cbd4d9eff11835c87530a403e7fd192b250c0"
           }
         ],
         "limits": [
           "公司披露定性环比增幅，未公布精确百分比和绝对位元数。"
         ],
-        "period": "FY2026 Q3 · 截至 05-28",
-        "checked_at": "2026-09-20",
-        "next_review": "2026-09-30",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "checked_at": "2026-10-01",
+        "next_review": "FY2027 Q1 财报（日期待公布）",
         "definition": "按位元计量的存储容量出货。",
-        "interpretation": "DRAM、NAND 的交付容量环比增加，手机与客户端位元出货减少。"
+        "interpretation": "DRAM、NAND 交付容量环比增加，NAND 增幅更大；手机与客户端部门位元出货减少。"
       },
       {
         "id": "inventory",
@@ -1147,35 +1170,36 @@
         "category": "business",
         "rows": [
           {
-            "record_ref": "bcc66f0de49e11328f2580da3e2f5962f6a4714700ebc50da9953d7be8815505"
+            "record_ref": "2e09f8e159ff2d6e0c5edb93f70bc494f86053f4fe6958a845fafbbc3047bd8a"
           },
           {
-            "record_ref": "177c60ea5e192b2c350f4484324cde2bf089abf4549f6b1b8cc30130b17eb8bb"
+            "record_ref": "6b6f3246125ed51b30d723b494a351bf5338b8abc27b8c5b430b958d9e30e42c"
           },
           {
-            "record_ref": "24eee9f9dff534e7457c932d937e4ce3aecadda5740fc55f5747c035868bcfe1"
+            "record_ref": "8f25a01fe11ee781d45796938b8dac1f894ad221e26e25111f9b36d030aa56a9"
           },
           {
-            "record_ref": "cadaca70cd8d4f3f21d481017c14c0d6d9bc79c97c7315a9cf484b13f5ddeba9"
+            "record_ref": "2ea3a534780ae668a2f84e9a62aaff074ab871b5d75cd0532cf4db800cf076b5"
           },
           {
-            "record_ref": "95a61a68a55d7b376a5556f21dd0c38e7fde76b81088f01451caf57594f792d3"
+            "record_ref": "ee45eeeef54e2cac67967f4cec6aaf872991a9603f97acd8b9da6f93fbbe2e5d"
           },
           {
-            "record_ref": "6059b0360c7c2ff35cdcade0f7d8d168b1395cac846321ff379fd758c9e7d4ae"
+            "record_ref": "4bb4e2934dd29a705a17b995f1f68deb0bc2841559d1fc558e32e026b3d20230"
           },
           {
-            "record_ref": "e3667a7680c8e54d42a21b0c1c32fdfa35cd3b0f16a050ddaa385a8a814304dd"
+            "record_ref": "f9041a17369a0c218251d5b2a69cc71944593cb07a388a2dac8d26afbbf6b49a"
           }
         ],
         "limits": [
-          "库存账面值同时受成本、产品结构和生产节奏影响。"
+          "库存账面值同时受成本、产品结构和生产节奏影响。",
+          "FQ4 产成品、在制品、原材料与贸易应收只在 FY2026 10-K 附注披露；新闻稿资产负债表的应收合计含其他应收，不能替代。"
         ],
-        "period": "FY2026 Q3 · 截至 05-28",
-        "checked_at": "2026-09-20",
-        "next_review": "2026-09-30",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "checked_at": "2026-10-01",
+        "next_review": "FY2027 Q1 财报（日期待公布）",
         "definition": "库存为期末账面价值；应收为贸易应收款，不含补助等其他应收。",
-        "interpretation": "产成品账面价值下降，是成品积压压力减轻的一个信号。结合售价上涨，可作为供需偏紧的间接佐证。"
+        "interpretation": "期末库存账面值增加，库存天数升至 129 天；公司称增加含节点停产前备货及计入库存的制造激励薪酬。构成与贸易应收待年报附注。"
       },
       {
         "id": "revenue",
@@ -1183,44 +1207,44 @@
         "category": "business",
         "rows": [
           {
-            "record_ref": "7fed8ce2eb6f884238ab5f0e0981a9f206673e3c16afc4feeaaeef744b82e486"
+            "record_ref": "306c3a9c0d18d4a0a038c0bab2b97d3a35eb2c508339e3ca0d23b18f52b9d82e"
           },
           {
-            "record_ref": "a867e0fa1ca4c10301d60b201ebb0061414fd49f0c1f1446efee7e906b75264d"
+            "record_ref": "1a5e12fec4ded6ff06e4947bcf15c68bb576613af909ec5b0d6f8dba9cf909b1"
           },
           {
-            "record_ref": "0b78b37d226283e880820a0638899caa1114e04e5cf1f012367854f6599258ab"
+            "record_ref": "156f13cd09332ed2ced711c70858a7141a644ce12cb10010d7b459e981904568"
           },
           {
-            "record_ref": "3fa66c34c3084737f42acfc11578c5be5115f5e4fa61f46dbd3f4b0f74ec3a41"
+            "record_ref": "89c98f4e0e0aaaaadac67ea376a6fae0bc77301bb9d55ae4148225cca5790bd8"
           },
           {
-            "record_ref": "05dd299e39a671a4a3441e47e3e9e74ba656f0c733d0398543d7d397d99be96f"
+            "record_ref": "53ccc83363d22377ff7d23b1400626170e36ddcb3e67e3c45005e8dc08782d81"
           },
           {
-            "record_ref": "ed2bdf9282dd9aa91f76be017e8c85790af4f37da191bd94c37b197eaeed56a6"
+            "record_ref": "8b720cd31a4abc7481e9ed618d3028b5016ebe81f1f20b3da340935841f7cb3f"
           },
           {
-            "record_ref": "081fd7bb79d46a41ceaad503f3dc6aaf2ef140bdad54ef5238a8911f9a6f63a6"
+            "record_ref": "d715abeb20f48ffdb889cbd266efcd248ac02961ce54fbbbaa6ee1cc1d34f00c"
           },
           {
-            "record_ref": "c36bfa585a4865b944f34c0f131d9f96f089380387e41418b1d32dfd267761d5"
+            "record_ref": "cd131bcd4ef81b8711e7d723feb517ea4c6aab465233f0827c9b292ab054a0f5"
           },
           {
-            "record_ref": "1606b4d6d53865c7c2c2ae5194a1122414e2ca2e3db39cea6e979025552f294d"
+            "record_ref": "9636948d9e234a34905747b6cfd12d04eed2e66be1aea9e2749f0420eb2f6eee"
           },
           {
-            "record_ref": "a1d3726a10b05fa79a152a7866ca62d7fee46f5a347562690d4391d7b4fa2de2"
+            "record_ref": "a36631698bb3d2d47def7955ef6011140eedf73a79c59b88124c759fdd7e82b2"
           }
         ],
         "limits": [
           "公司财季与行业自然季度的覆盖期间不同。"
         ],
-        "period": "FY2026 Q3 · 截至 05-28",
-        "checked_at": "2026-09-20",
-        "next_review": "2026-09-30",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "checked_at": "2026-10-01",
+        "next_review": "FY2027 Q1 财报（日期待公布）",
         "definition": "收入、业务构成与每股盈利。",
-        "interpretation": "数据中心两部门的收入占比提高。收入变化同时反映售价、交付容量与产品组合。"
+        "interpretation": "四个部门收入均创新高，数据中心两部门占比升至 63%。收入变化同时反映售价、交付容量与产品组合。"
       },
       {
         "id": "margin",
@@ -1228,32 +1252,32 @@
         "category": "business",
         "rows": [
           {
-            "record_ref": "c3be7b49a44ab3ef41b633d6ce75e51c3015f40fd7567827d6341ec62ba5f992"
+            "record_ref": "9ea63788a1175b3013136aff6019cf31058e622b50d6403450caff4c0e303d54"
           },
           {
-            "record_ref": "d74b78f4fe786b9f8c2a87150b8d7e3d1e0b16a4b3a420f213b0bba544f6f2be"
+            "record_ref": "d10048a1d39759b508bc920b3f9a1b7e7a9277369c3f8f4a7133894501e273cf"
           },
           {
-            "record_ref": "e81a5b509728a4f077369761bfd0b0bde38c16b8d647ce767d96fcce1d16e2b8"
+            "record_ref": "5a592c398842b6886037e6ad7ba5e245cd65bad53dcc6477b2b9db9a73a1079d"
           },
           {
-            "record_ref": "39951fca60fa8cf40c66b9f18cd057c974ec1dd427430c2dab057a54db778216"
+            "record_ref": "8dc354cc1cb4557b2aeb28cd28c7c5b6a49d256232140c7ca5847081958c6ae2"
           },
           {
-            "record_ref": "971f62e93d3c207f447237b1d32466b409b57f071ed5fefca7b0dc7adcc3173a"
+            "record_ref": "39d8ec056497251c48c2db06cfa69577b9774f9545bb8938c948a386db102241"
           },
           {
-            "record_ref": "cf6545480f1c2e6c7dbe6a764f798929f53a26fb7cb60b49964e139ac506a177"
+            "record_ref": "f77b43b4ea1e7711b3205886df49c02a426dc6c004aa39e2d76d21b3dbe17c73"
           }
         ],
         "limits": [
           "同组合每位元成本的可比数据尚未披露。"
         ],
-        "period": "FY2026 Q3 · 截至 05-28",
-        "checked_at": "2026-09-20",
-        "next_review": "2026-09-30",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "checked_at": "2026-10-01",
+        "next_review": "FY2027 Q1 财报（日期待公布）",
         "definition": "GAAP 和非 GAAP 分列。",
-        "interpretation": "两种口径的毛利率均提高。管理层将改善主要归因于售价，产品组合也有贡献。",
+        "interpretation": "两种口径的毛利率均提高。管理层将改善主要归因于售价和执行，产品组合部分抵消。",
         "interpretation_sources": [
           "technology",
           "financial"
@@ -1265,35 +1289,35 @@
         "category": "business",
         "rows": [
           {
-            "record_ref": "f5df8f1aa8ddbf44d7884bfa26c6dd294b2f600943b1fb55238614698df7ce9e"
+            "record_ref": "08041b06b4cd0808f7dca0f80ad3b442207a0f695a0e34fe4225a3cc82ffa492"
           },
           {
-            "record_ref": "17f041bd763b3d68c53f244e88a967cbca5aa66c4575cf432e925df8a45b786a"
+            "record_ref": "8a201b00493a2311a062559483b1db76f85c5fb9b3712d98ad1b502f9c234015"
           },
           {
-            "record_ref": "b9a99d94d5495e45a03231c479ea753da19b30951bb2e61d342a5c11c3cf809b"
+            "record_ref": "a2dc600a28e7336cf10291a31ea8460da425d94488c321589f2450b0c308c4ef"
           },
           {
-            "record_ref": "ed7bd9f77075af7c0ce587d5dd4a7cc654fb8cb2044762f38ea042e07a266188"
+            "record_ref": "24a26c46c81703a3773581da9fad202a327b4a8341c5c6671f935d547a5bfaab"
           },
           {
-            "record_ref": "afa4c56fffa02e2fee7e4e41ab0ac57ffc53966ee5bade6f7c23eea2564f672d"
+            "record_ref": "99011e969ef5ad8264fd0de2b6f37e8b0f751b2fa6247a2e06bf0411580171dc"
           },
           {
-            "record_ref": "e22e9ce83d379880e9cae09b5c92cf9899a61f0ef715525d76596cc07bb98640"
+            "record_ref": "cbb973ade3203e97ee639366680ddd7fdf7ab6a72aee846a97eb40d2f4a7ea57"
           },
           {
-            "record_ref": "1e0c01b4d6f26ff750ae5bba8ce7684111800f0ccd6daec21ac47260d4e8402a"
+            "record_ref": "fff1e1820ccfc6d519a01d0ea1aa357be8a8a919fbb8f791e6660ab8c418f89c"
           }
         ],
         "limits": [
           "经营现金流受应收、应付及其他营运资金变化影响。"
         ],
-        "period": "FY2026 Q3 · 截至 05-28",
-        "checked_at": "2026-09-20",
-        "next_review": "2026-09-30",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "checked_at": "2026-10-01",
+        "next_review": "FY2027 Q1 财报（日期待公布）",
         "definition": "单个财季的现金流。",
-        "interpretation": "调整后自由现金流增加，政府补助减少；经营现金流减设备购置支出的余额也提高。"
+        "interpretation": "经营现金流和调整后自由现金流增加；政府补助减少。客户保证金计入筹资活动，不进入自由现金流。"
       },
       {
         "id": "capex",
@@ -1301,32 +1325,32 @@
         "category": "business",
         "rows": [
           {
-            "record_ref": "7b9e28eed4b715b67e868edce16125c43a471be199e4d123d5d22088d40eb0aa"
+            "record_ref": "09ef051dfd78949cef1a82174644a4fc882e805d2ddb4f40a760c8042096c36d"
           },
           {
-            "record_ref": "abd5f806fbb140633133c9a1c79897bc125e92fb3aa56f0d436989a7d73db54f"
+            "record_ref": "db888ad74a51b8fa8e914b45802b5d8d7ea6e89710699b315f6f36629354de51"
           },
           {
-            "record_ref": "c193065fc08e7c57a1bc526eb1ada6b25a5f32d1b721967019fa30c28288764c"
+            "record_ref": "beffb915d965b55b714cce409f7e710255e08928975e5b25d74091fafc96808a"
           },
           {
-            "record_ref": "82b97b7ec3fbdc503c183035b657736d0f0cd0b86558f8b4aaea85d3d88086ad"
+            "record_ref": "662fa4168c3873706fa232a94e502ac4283ccb5750dd829fd44aa2f204ea2b61"
           },
           {
-            "record_ref": "1acaabd13868938fcb074881d0cacc9192bd5781b45159747627de9f663e8e1f"
+            "record_ref": "3bd140f0dd9283c8fac6c201f8a9e030e9cba5349ae95f88840c1cf47f5a3223"
           },
           {
-            "record_ref": "eb9a8bbebd4da7ac215374acdcfbb87416a32505f29b3bdf7a03fb07923ef08c"
+            "record_ref": "8994d4bbb61e02d8e7ba7195ed8a73593095cf4299492931bb5d9635e9e7f8ce"
           }
         ],
         "limits": [
           "净资本开支已扣除政府补助和资产出售收入。"
         ],
-        "period": "FY2026 Q3 · 截至 05-28",
-        "checked_at": "2026-09-20",
-        "next_review": "2026-09-30",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "checked_at": "2026-10-01",
+        "next_review": "FY2027 Q1 财报（日期待公布）",
         "definition": "资本开支、现金流覆盖与净现金。",
-        "interpretation": "净资本开支增加，当季经营现金流对净开支的覆盖倍数也提高。"
+        "interpretation": "净资本开支增加，当季经营现金流对净开支的覆盖倍数也提高；公司计划 FY2027 资本开支高于原计划。"
       },
       {
         "id": "orders",
@@ -1334,35 +1358,36 @@
         "category": "business",
         "rows": [
           {
-            "record_ref": "58777f0a3be950f0affcdfb16052346226b322e4d17ced427d2c3ba190d6a0b4"
+            "record_ref": "d80ad44fc784dad9389fd97165f42bb8651ffa5d3c4e27478e7615f00f7441a7"
           },
           {
-            "record_ref": "5d5bd5a0cd6b3e0b6b810a6df1911c03a26120b2eacf022dfa0df27ba1708e0e"
+            "record_ref": "441f795b6833e35ce099f5397291e4cd658424320010149cd6ea7ca3c23496f7"
           },
           {
-            "record_ref": "98dedb55d75dfc22d9f86a6042c1d816a916c49112fa948f225189bdcbe62de8"
+            "record_ref": "911422e16362313e417f00c1735f74047a8ce9ae283485c47073f4b596c81d23"
           },
           {
-            "record_ref": "8a67afc40526c014c5814e5b9aa1bacaa7dee0b31d0f1e591dfcf7c97635d11f"
+            "record_ref": "42297adf704892908c6ab1c3d66174bac4b9a3d7edce069a015f030a93f9dcb9"
           },
           {
-            "record_ref": "6da25c0f70d4006845b920c78d3350be7844af4c08cbc0736dd6290a0df8d8e7"
+            "record_ref": "3549c5af1d88b469d83cf946be87e5068f9b43adcb589642c61efad0fb78dda8"
           },
           {
-            "record_ref": "c35e6a308d8d4489982d4ed9488043b7e199816087054866e175bf018e5e30c7"
+            "record_ref": "de2b0077ace3074680d453bcd1e98307c38d4964deef61c7918820edeafff0c5"
           },
           {
-            "record_ref": "223ac3b9a7f06575032414ad41b5890bf0f8f57d6fa71bf05cba97577cea6de6"
+            "record_ref": "bec11fe125e8f5c97a4a7cad50862fcc3e84f5fb831cdbe2b8ea26c3a21221d9"
           }
         ],
         "limits": [
-          "RPO 按部分合同的最低采购量和最低定价计算。"
+          "RPO 按部分合同的最低采购量和最低定价计算。",
+          "FQ4 季末 RPO 与完整合同负债在 FY2026 10-K 附注披露。"
         ],
-        "period": "合同截至 06-24；财务期末 05-28",
-        "checked_at": "2026-09-20",
-        "next_review": "2026-09-30",
+        "period": "合同截至 09-30；财务期末 09-03",
+        "checked_at": "2026-10-01",
+        "next_review": "FY2027 Q1 财报（日期待公布）",
         "definition": "战略客户协议、待履约金额与保证金。",
-        "interpretation": "合同负债反映期末余额；预计现金保证金属于后续收款安排。"
+        "interpretation": "已签战略协议增至 26 份，含季后协议的 RPO 约 1,500 亿美元。期末合同负债与季末 RPO 待年报附注。"
       },
       {
         "id": "hbm",
@@ -1370,20 +1395,20 @@
         "category": "business",
         "rows": [
           {
-            "record_ref": "777dd77c6b248f9a7ee7beada90f857d777176720e00fab8eca8cdc97281df20"
+            "record_ref": "d5e3179a0fe0858e236fb3c0de907e12cf998d4a3860f14bbcf059d9b628b7e2"
           },
           {
-            "record_ref": "e0fd5153cc693ebda9f5a2fbed5c68eae4337be02fb0eea09df81e70a33b6871"
+            "record_ref": "3171f05f540c674120365b73dd5563bb5939e67de8d3ff3abbb73e235c1ffc82"
           },
           {
-            "record_ref": "0cb09fbd3184525d469e77d663a01d13ed441bd23f5f3a6616b070600782ecb5"
+            "record_ref": "6326a8a2952a794c39067f380b46767b63613d5c7dbc6aa3b4b2efdb65355309"
           }
         ],
         "limits": [
           "份额采用媒体转引，Counterpoint 原始表格待核实。"
         ],
         "period": "HBM 披露 06-24；份额转引 09-03；DDR5 进展 09-15",
-        "checked_at": "2026-09-20",
+        "checked_at": "2026-10-01",
         "next_review": "2026-09-30",
         "definition": "HBM 收入、交付阶段与服务器内存产品进度。",
         "interpretation": "HBM4 已进入商业交付；512GB DDR5 RDIMM 仍处于验证阶段，量产时间为公司计划。"
@@ -1490,6 +1515,12 @@
     ],
     "check_log": [
       {
+        "at": "2026-10-01T22:09:31.689Z",
+        "status": "success",
+        "scope": "micron",
+        "text": "美光 FY2026 Q4：按 09-30 新闻稿与讲稿更新收入、毛利率、现金流、资本开支、长单与 FQ1 指引；库存构成、贸易应收、季末 RPO 与完整合同负债待 FY2026 10-K。"
+      },
+      {
         "at": "2026-10-01T21:04:09.439Z",
         "status": "success",
         "scope": "discovery",
@@ -1575,13 +1606,13 @@
     ],
     "guidance": [
       {
-        "record_ref": "a7c3e4687479ae77411e6d6fa88b226ca2137ec449055be3fb85b595683d408f"
+        "record_ref": "78e1cb8a9a1fe322940a52e5b05e6390aabf45b2aab9783574f9574ecab973e7"
       },
       {
-        "record_ref": "a8cb8b9b542647c4f661230af4e466a1ee3b47df94724397838d6faecc672661"
+        "record_ref": "7ad55344bb02a010db5d3321ace4cee1c9c663e176ed73fe83b5ccf9314cf3a3"
       },
       {
-        "record_ref": "49037b69411768f5400037ab1c93865ec7b67ebbc40b8e998e1cf027c3311bbf"
+        "record_ref": "131689e2d5c5bad2583f24f62ef044a65f1f672b95128cf721a50e91f68a6ece"
       }
     ],
     "last_source_audit_at": "2026-09-20T23:50:00Z",
@@ -2090,7 +2121,7 @@
             "index_mu_sec_20261001"
           ],
           "reason": "2026-10-01 已读取 SEC 申报目录：最新财务申报为 09-30 的 8-K，尚未列出 FY2026 10-K；最近 10-K 为 FY2025（2025-10-03）。FQ4 产成品、在制品、原材料、贸易应收及收入比、季末 RPO 和完整合同负债待 10-K 补核。当前发布记录仍为 FQ3，保留 FQ4 待处理标记；本次不重复导入新闻稿。",
-          "processed_at": null
+          "processed_at": "2026-10-01T22:09:31.689Z"
         }
       ],
       "calendar": [
@@ -11844,13 +11875,2662 @@
         "e-3e5e2ad23753ed9be045d6077ecf06f2b0f7099846fb6e102e01a2a81c2bbc25"
       ],
       "id": "9803fa7087df28d0a0c6b33aed03d73e414d0fdaef976b88b8f9af9f01d94f83"
+    },
+    "7be7bea049a6e01c77d727bc27fc967d383a083743976543f155a1623a46da2b": {
+      "metric_id": "mu.asp.dram",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "asp",
+        "unit": "",
+        "scope": "DRAM 售价环比",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter_change",
+        "sources": [
+          {
+            "id": "technology",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=7",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DRAM 售价环比",
+        "current": "十几百分比高段增长",
+        "previous": null,
+        "unit": "",
+        "source_ids": [
+          "technology"
+        ],
+        "kind": "公司披露",
+        "note": "原文：high-teens percentage range。",
+        "period": "FQ4 环比",
+        "change": null,
+        "location": "讲稿第 7 页 · DRAM · Prices。",
+        "evidence_type": "direct",
+        "id": "dram"
+      },
+      "evidence_ids": [
+        "e-4d49932e748622ba9a5c98b1c7430ff0f9476327a989443fccc089b4c6f9dc34"
+      ],
+      "id": "7be7bea049a6e01c77d727bc27fc967d383a083743976543f155a1623a46da2b"
+    },
+    "4ee17f832ec411089755102dd15b1ada8315a35a263c0f0e52293a22b4df2a6a": {
+      "metric_id": "mu.asp.nand",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "asp",
+        "unit": "",
+        "scope": "NAND 售价环比",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter_change",
+        "sources": [
+          {
+            "id": "technology",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=7",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "NAND 售价环比",
+        "current": "约 30% 增长",
+        "previous": null,
+        "unit": "",
+        "source_ids": [
+          "technology"
+        ],
+        "kind": "公司披露",
+        "note": "原文：approximately 30%。",
+        "period": "FQ4 环比",
+        "change": null,
+        "location": "讲稿第 7 页 · NAND · Prices。",
+        "evidence_type": "direct",
+        "id": "nand"
+      },
+      "evidence_ids": [
+        "e-ac7a62a1319998c0ccd7960a9b55826a27863e2509965b43c5d6835c184ef291"
+      ],
+      "id": "4ee17f832ec411089755102dd15b1ada8315a35a263c0f0e52293a22b4df2a6a"
+    },
+    "585d0dc26e280529b08900dd3092b6244c729abba6890cfdaa9e6b52710a4bab": {
+      "metric_id": "mu.volume.dram_bits",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "bit_shipments",
+        "unit": "",
+        "scope": "DRAM 位元出货环比",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter_change",
+        "sources": [
+          {
+            "id": "technology",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=7",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DRAM 位元出货环比",
+        "current": "中个位数增长",
+        "previous": null,
+        "unit": "",
+        "source_ids": [
+          "technology"
+        ],
+        "kind": "公司披露",
+        "period": "FY2026 FQ4 环比",
+        "note": "",
+        "change": null,
+        "location": "讲稿第 7 页 · DRAM · Bit shipments；原文 mid-single-digit percentage range。",
+        "evidence_type": "direct",
+        "id": "dram_bits"
+      },
+      "evidence_ids": [
+        "e-a82dad06922f41989862379b442cbccf9288d9e8cbf76fc392636acf57164353"
+      ],
+      "id": "585d0dc26e280529b08900dd3092b6244c729abba6890cfdaa9e6b52710a4bab"
+    },
+    "0fe5b5ddf96a18d337fa8bb7e1a5afbeba4d453cce8f59f561d95b0f1ff3cf62": {
+      "metric_id": "mu.volume.nand_bits",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "bit_shipments",
+        "unit": "",
+        "scope": "NAND 位元出货环比",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter_change",
+        "sources": [
+          {
+            "id": "technology",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=7",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "NAND 位元出货环比",
+        "current": "约 10% 增长",
+        "previous": null,
+        "unit": "",
+        "source_ids": [
+          "technology"
+        ],
+        "kind": "公司披露",
+        "period": "FY2026 FQ4 环比",
+        "note": "",
+        "change": null,
+        "location": "讲稿第 7 页 · NAND · Bit shipments；原文 approximately 10%。",
+        "evidence_type": "direct",
+        "id": "nand_bits"
+      },
+      "evidence_ids": [
+        "e-641bfc9e7e16a25aa4cbf6b46d6df1a781d1f0e7eb06e299cb7b73f7689ec769"
+      ],
+      "id": "0fe5b5ddf96a18d337fa8bb7e1a5afbeba4d453cce8f59f561d95b0f1ff3cf62"
+    },
+    "21451c4206a4135e88a5af1d472cbd4d9eff11835c87530a403e7fd192b250c0": {
+      "metric_id": "mu.volume.mobile_bits",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "bit_shipments",
+        "unit": "",
+        "scope": "手机与客户端位元出货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter_change",
+        "sources": [
+          {
+            "id": "technology",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=7",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "手机与客户端位元出货",
+        "current": "环比减少",
+        "previous": null,
+        "unit": "",
+        "source_ids": [
+          "technology"
+        ],
+        "kind": "公司披露",
+        "period": "FY2026 FQ4 环比",
+        "note": "",
+        "change": null,
+        "location": "讲稿第 7 页 · MCBU · partially offset by lower bit shipments。",
+        "evidence_type": "direct",
+        "id": "mobile_bits"
+      },
+      "evidence_ids": [
+        "e-e68a4187166d6015ed1d35e4a52a0a92ecd59b2edfa70932a40f73cc1e46fcfd"
+      ],
+      "id": "21451c4206a4135e88a5af1d472cbd4d9eff11835c87530a403e7fd192b250c0"
+    },
+    "2e09f8e159ff2d6e0c5edb93f70bc494f86053f4fe6958a845fafbbc3047bd8a": {
+      "metric_id": "mu.inventory.finished_goods",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "inventory",
+        "unit": "USDm",
+        "scope": "产成品",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "point_in_time",
+        "sources": [
+          {
+            "id": "fq4_balance_sheet",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          },
+          {
+            "id": "q3",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/0000723125-26-000015.pdf#page=13",
+            "published_at": "2026-06-25"
+          }
+        ]
+      },
+      "payload": {
+        "label": "产成品",
+        "current": null,
+        "previous": 621,
+        "unit": "USDm",
+        "source_ids": [
+          "fq4_balance_sheet",
+          "q3"
+        ],
+        "kind": "待 10-K",
+        "note": "FQ4 构成待 FY2026 10-K Note；上期为 FQ3 10-Q 当前财季列。",
+        "period": "FY2026 FQ3 → FQ4",
+        "change": null,
+        "location": "本期：新闻稿资产负债表只列 Inventories 合计；上期：FQ3 10-Q p13 Note 6。",
+        "evidence_type": "unavailable",
+        "id": "finished_goods"
+      },
+      "evidence_ids": [
+        "e-1a3a92fa0b08f335404745c08772b0b280b340243a6656613120a974de3a785f"
+      ],
+      "id": "2e09f8e159ff2d6e0c5edb93f70bc494f86053f4fe6958a845fafbbc3047bd8a"
+    },
+    "6b6f3246125ed51b30d723b494a351bf5338b8abc27b8c5b430b958d9e30e42c": {
+      "metric_id": "mu.inventory.total",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "inventory",
+        "unit": "USDm",
+        "scope": "总库存",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "point_in_time",
+        "sources": [
+          {
+            "id": "fq4_balance_sheet",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "总库存",
+        "current": 10372,
+        "previous": 8567,
+        "unit": "USDm",
+        "source_ids": [
+          "fq4_balance_sheet"
+        ],
+        "kind": "实际",
+        "note": "资产负债表 Inventories 两期列。",
+        "period": "FY2026 FQ3 → FQ4",
+        "change": null,
+        "location": "新闻稿 Consolidated Balance Sheets · Inventories · September 3, 2026 / May 28, 2026。",
+        "evidence_type": "direct",
+        "id": "total"
+      },
+      "evidence_ids": [
+        "e-7eb32039f2e4270cdfb175d5bf3b7c0b22b99e584a1e96c75e95bf1971aa9e1c"
+      ],
+      "id": "6b6f3246125ed51b30d723b494a351bf5338b8abc27b8c5b430b958d9e30e42c"
+    },
+    "8f25a01fe11ee781d45796938b8dac1f894ad221e26e25111f9b36d030aa56a9": {
+      "metric_id": "mu.inventory.work_in_process",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "inventory",
+        "unit": "USDm",
+        "scope": "在制品",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "point_in_time",
+        "sources": [
+          {
+            "id": "fq4_balance_sheet",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          },
+          {
+            "id": "q3",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/0000723125-26-000015.pdf#page=13",
+            "published_at": "2026-06-25"
+          }
+        ]
+      },
+      "payload": {
+        "label": "在制品",
+        "current": null,
+        "previous": 6960,
+        "unit": "USDm",
+        "source_ids": [
+          "fq4_balance_sheet",
+          "q3"
+        ],
+        "kind": "待 10-K",
+        "note": "FQ4 构成待 FY2026 10-K Note；上期为 FQ3 10-Q 当前财季列。",
+        "period": "FY2026 FQ3 → FQ4",
+        "change": null,
+        "location": "本期：新闻稿资产负债表只列 Inventories 合计；上期：FQ3 10-Q p13 Note 6。",
+        "evidence_type": "unavailable",
+        "id": "work_in_process"
+      },
+      "evidence_ids": [
+        "e-179796d2d2b8d05fd6b6df4c2517ce2fb512efd08f55e9aa520fb1320d6839ea"
+      ],
+      "id": "8f25a01fe11ee781d45796938b8dac1f894ad221e26e25111f9b36d030aa56a9"
+    },
+    "2ea3a534780ae668a2f84e9a62aaff074ab871b5d75cd0532cf4db800cf076b5": {
+      "metric_id": "mu.inventory.raw_materials",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "inventory",
+        "unit": "USDm",
+        "scope": "原材料",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "point_in_time",
+        "sources": [
+          {
+            "id": "fq4_balance_sheet",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          },
+          {
+            "id": "q3",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/0000723125-26-000015.pdf#page=13",
+            "published_at": "2026-06-25"
+          }
+        ]
+      },
+      "payload": {
+        "label": "原材料",
+        "current": null,
+        "previous": 986,
+        "unit": "USDm",
+        "source_ids": [
+          "fq4_balance_sheet",
+          "q3"
+        ],
+        "kind": "待 10-K",
+        "note": "FQ4 构成待 FY2026 10-K Note；上期为 FQ3 10-Q 当前财季列。",
+        "period": "FY2026 FQ3 → FQ4",
+        "change": null,
+        "location": "本期：新闻稿资产负债表只列 Inventories 合计；上期：FQ3 10-Q p13 Note 6。",
+        "evidence_type": "unavailable",
+        "id": "raw_materials"
+      },
+      "evidence_ids": [
+        "e-3d92e7b419f56e92557bdd63781a6aeeaa5be48679d949909daaa1adcdb54c1a"
+      ],
+      "id": "2ea3a534780ae668a2f84e9a62aaff074ab871b5d75cd0532cf4db800cf076b5"
+    },
+    "ee45eeeef54e2cac67967f4cec6aaf872991a9603f97acd8b9da6f93fbbe2e5d": {
+      "metric_id": "mu.inventory.days",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "inventory",
+        "unit": "days",
+        "scope": "库存天数",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "period_end",
+        "sources": [
+          {
+            "id": "inventory_days",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=8",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "库存天数",
+        "current": 129,
+        "previous": null,
+        "unit": "days",
+        "source_ids": [
+          "inventory_days"
+        ],
+        "kind": "实际",
+        "note": "讲稿称较上季增加 9 天。",
+        "period": "FQ4 期末",
+        "change": null,
+        "location": "讲稿第 8 页 · Inventory · days of inventory (DIO)。",
+        "evidence_type": "direct",
+        "id": "days"
+      },
+      "evidence_ids": [
+        "e-5e69f0c6f67ba367e4b1b1299e96d03b7adff8078acdc23b5ccac9bf13f13403"
+      ],
+      "id": "ee45eeeef54e2cac67967f4cec6aaf872991a9603f97acd8b9da6f93fbbe2e5d"
+    },
+    "4bb4e2934dd29a705a17b995f1f68deb0bc2841559d1fc558e32e026b3d20230": {
+      "metric_id": "mu.inventory.receivables",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "inventory",
+        "unit": "USDm",
+        "scope": "贸易应收款",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "point_in_time",
+        "sources": [
+          {
+            "id": "fq4_balance_sheet",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          },
+          {
+            "id": "q3",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/0000723125-26-000015.pdf#page=13",
+            "published_at": "2026-06-25"
+          }
+        ]
+      },
+      "payload": {
+        "label": "贸易应收款",
+        "current": null,
+        "previous": 26894,
+        "unit": "USDm",
+        "source_ids": [
+          "fq4_balance_sheet",
+          "q3"
+        ],
+        "kind": "待 10-K",
+        "note": "新闻稿资产负债表 Receivables 36,197 含非贸易应收；FQ4 贸易应收待 10-K Note。",
+        "period": "FY2026 FQ3 → FQ4",
+        "change": null,
+        "location": "本期：新闻稿资产负债表无贸易应收拆分；上期：FQ3 10-Q p13 Note 5。",
+        "evidence_type": "unavailable",
+        "id": "receivables"
+      },
+      "evidence_ids": [
+        "e-3bd9d9747c2c53d3b1d59b980e6ac30f048b1fe87d5d96982da50c7fed722927"
+      ],
+      "id": "4bb4e2934dd29a705a17b995f1f68deb0bc2841559d1fc558e32e026b3d20230"
+    },
+    "f9041a17369a0c218251d5b2a69cc71944593cb07a388a2dac8d26afbbf6b49a": {
+      "metric_id": "mu.inventory.receivables_revenue",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "revenue",
+        "unit": "pct",
+        "scope": "期末贸易应收 / 季收入",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "period_end",
+        "sources": [
+          {
+            "id": "fq4_balance_sheet",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          },
+          {
+            "id": "q3",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/0000723125-26-000015.pdf#page=13",
+            "published_at": "2026-06-25"
+          },
+          {
+            "id": "financial",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "期末贸易应收 / 季收入",
+        "current": null,
+        "previous": 64.87360092628329,
+        "unit": "pct",
+        "source_ids": [
+          "fq4_balance_sheet",
+          "q3",
+          "financial"
+        ],
+        "kind": "计算 · 待 10-K",
+        "note": "贸易应收÷当季收入：FQ3 26,894÷41,456（百万美元）；FQ4 待贸易应收。",
+        "period": "FY2026 FQ3 → FQ4",
+        "change": null,
+        "location": "贸易应收：FQ3 10-Q Note 5（FQ4 待 10-K）；收入：财报季度比较。",
+        "evidence_type": "unavailable",
+        "id": "receivables_revenue"
+      },
+      "evidence_ids": [
+        "e-a0768f7b53f19540c066757f4c2c2233573633b7082ec421ccf9b913f72b743c"
+      ],
+      "id": "f9041a17369a0c218251d5b2a69cc71944593cb07a388a2dac8d26afbbf6b49a"
+    },
+    "306c3a9c0d18d4a0a038c0bab2b97d3a35eb2c508339e3ca0d23b18f52b9d82e": {
+      "metric_id": "mu.revenue.total",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "revenue",
+        "unit": "USDm",
+        "scope": "总收入",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "financial",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "总收入",
+        "current": 54229,
+        "previous": 41456,
+        "unit": "USDm",
+        "source_ids": [
+          "financial"
+        ],
+        "kind": "实际",
+        "note": "",
+        "period": "FY2026 FQ3 → FQ4",
+        "change": null,
+        "evidence_type": "direct",
+        "location": "新闻稿 Quarterly Financial Results · Revenue · FQ4-26 / FQ3-26。",
+        "id": "total"
+      },
+      "evidence_ids": [
+        "e-fc09840675bbcaef68b7d7988461c760776ac91db39cefd24ea7af1418a7164b"
+      ],
+      "id": "306c3a9c0d18d4a0a038c0bab2b97d3a35eb2c508339e3ca0d23b18f52b9d82e"
+    },
+    "1a5e12fec4ded6ff06e4947bcf15c68bb576613af909ec5b0d6f8dba9cf909b1": {
+      "metric_id": "mu.revenue.dram",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "revenue",
+        "unit": "USDm",
+        "scope": "DRAM 收入",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "technology_revenue",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=7",
+            "published_at": "2026-09-30"
+          },
+          {
+            "id": "technology_revenue_prior",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf#page=33",
+            "published_at": "2026-06-24"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DRAM 收入",
+        "current": 39800,
+        "previous": 31328,
+        "unit": "USDm",
+        "source_ids": [
+          "technology_revenue",
+          "technology_revenue_prior"
+        ],
+        "kind": "实际",
+        "period": "FY2026 FQ3 → FQ4",
+        "note": "本期为讲稿 398 亿美元约数，上期为业绩材料精确值。",
+        "change": null,
+        "location": "本期：讲稿第 7 页 · DRAM revenue；上期：FQ3 业绩材料第 33 页 · DRAM。",
+        "evidence_type": "direct",
+        "id": "dram"
+      },
+      "evidence_ids": [
+        "e-4c89510caffbbf60c6e736d357e9a6475e521ba3fa130dfcef52436a197f7803"
+      ],
+      "id": "1a5e12fec4ded6ff06e4947bcf15c68bb576613af909ec5b0d6f8dba9cf909b1"
+    },
+    "156f13cd09332ed2ced711c70858a7141a644ce12cb10010d7b459e981904568": {
+      "metric_id": "mu.revenue.nand",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "revenue",
+        "unit": "USDm",
+        "scope": "NAND 收入",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "technology_revenue",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=7",
+            "published_at": "2026-09-30"
+          },
+          {
+            "id": "technology_revenue_prior",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf#page=33",
+            "published_at": "2026-06-24"
+          }
+        ]
+      },
+      "payload": {
+        "label": "NAND 收入",
+        "current": 14100,
+        "previous": 9943,
+        "unit": "USDm",
+        "source_ids": [
+          "technology_revenue",
+          "technology_revenue_prior"
+        ],
+        "kind": "实际",
+        "period": "FY2026 FQ3 → FQ4",
+        "note": "本期为讲稿 141 亿美元约数，上期为业绩材料精确值。",
+        "change": null,
+        "location": "本期：讲稿第 7 页 · NAND revenue；上期：FQ3 业绩材料第 33 页 · NAND。",
+        "evidence_type": "direct",
+        "id": "nand"
+      },
+      "evidence_ids": [
+        "e-1caa7fb51abe8fb801ea7306c69f350971cc5bc950cdb6afec06388c4f3e1a64"
+      ],
+      "id": "156f13cd09332ed2ced711c70858a7141a644ce12cb10010d7b459e981904568"
+    },
+    "89c98f4e0e0aaaaadac67ea376a6fae0bc77301bb9d55ae4148225cca5790bd8": {
+      "metric_id": "mu.revenue.cmbu",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "revenue",
+        "unit": "USDm",
+        "scope": "云内存收入 CMBU",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "business",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "云内存收入 CMBU",
+        "current": 16283,
+        "previous": 13769,
+        "unit": "USDm",
+        "source_ids": [
+          "business"
+        ],
+        "kind": "实际",
+        "note": "",
+        "period": "FY2026 FQ3 → FQ4",
+        "change": null,
+        "evidence_type": "direct",
+        "location": "新闻稿 Quarterly Business Unit Financial Results · Cloud Memory Business Unit · Revenue。",
+        "id": "cmbu"
+      },
+      "evidence_ids": [
+        "e-f63e5700a8ae4f73917753f2fed6ba597fa0fecfd2d3ac76bcc7d9b9749cd6ec"
+      ],
+      "id": "89c98f4e0e0aaaaadac67ea376a6fae0bc77301bb9d55ae4148225cca5790bd8"
+    },
+    "53ccc83363d22377ff7d23b1400626170e36ddcb3e67e3c45005e8dc08782d81": {
+      "metric_id": "mu.revenue.cdbu",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "revenue",
+        "unit": "USDm",
+        "scope": "核心数据中心收入 CDBU",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "business",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "核心数据中心收入 CDBU",
+        "current": 18002,
+        "previous": 11524,
+        "unit": "USDm",
+        "source_ids": [
+          "business"
+        ],
+        "kind": "实际",
+        "note": "",
+        "period": "FY2026 FQ3 → FQ4",
+        "change": null,
+        "evidence_type": "direct",
+        "location": "新闻稿 Quarterly Business Unit Financial Results · Core Data Center Business Unit · Revenue。",
+        "id": "cdbu"
+      },
+      "evidence_ids": [
+        "e-422feebe4c83c476f3b88f237afe5bd84767243dcf42502421bb8f16c9a5fd5d"
+      ],
+      "id": "53ccc83363d22377ff7d23b1400626170e36ddcb3e67e3c45005e8dc08782d81"
+    },
+    "8b720cd31a4abc7481e9ed618d3028b5016ebe81f1f20b3da340935841f7cb3f": {
+      "metric_id": "mu.revenue.datacenter_share",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "revenue",
+        "unit": "pct",
+        "scope": "CMBU + CDBU 占总收入",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "business",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          },
+          {
+            "id": "financial",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "CMBU + CDBU 占总收入",
+        "current": 63.22262995814047,
+        "previous": 61.01167502894636,
+        "unit": "pct",
+        "source_ids": [
+          "business",
+          "financial"
+        ],
+        "kind": "计算",
+        "note": "(CMBU+CDBU)÷总收入：FQ4 (16,283+18,002)÷54,229；FQ3 (13,769+11,524)÷41,456。",
+        "period": "FY2026 FQ3 → FQ4",
+        "change": null,
+        "evidence_type": "calculated",
+        "location": "新闻稿部门收入表；Quarterly Financial Results。",
+        "id": "datacenter_share"
+      },
+      "evidence_ids": [
+        "e-2e25a6c2b818f23d92fec8e720717fb6f548b436b515e488af8ac25c0afccac7"
+      ],
+      "id": "8b720cd31a4abc7481e9ed618d3028b5016ebe81f1f20b3da340935841f7cb3f"
+    },
+    "d715abeb20f48ffdb889cbd266efcd248ac02961ce54fbbbaa6ee1cc1d34f00c": {
+      "metric_id": "mu.revenue.mcbu",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "revenue",
+        "unit": "USDm",
+        "scope": "手机与客户端收入 MCBU",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "business",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "手机与客户端收入 MCBU",
+        "current": 13114,
+        "previous": 11521,
+        "unit": "USDm",
+        "source_ids": [
+          "business"
+        ],
+        "kind": "实际",
+        "period": "FY2026 FQ3 → FQ4",
+        "note": "",
+        "change": null,
+        "location": "新闻稿 Quarterly Business Unit Financial Results · Mobile and Client Business Unit · Revenue。",
+        "evidence_type": "direct",
+        "id": "mcbu"
+      },
+      "evidence_ids": [
+        "e-83cbd5aad8c65679a1a1a5ab8edee1a24c7930a9464ff39d8735fa0ac879df44"
+      ],
+      "id": "d715abeb20f48ffdb889cbd266efcd248ac02961ce54fbbbaa6ee1cc1d34f00c"
+    },
+    "cd131bcd4ef81b8711e7d723feb517ea4c6aab465233f0827c9b292ab054a0f5": {
+      "metric_id": "mu.revenue.aebu",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "revenue",
+        "unit": "USDm",
+        "scope": "汽车与嵌入式收入 AEBU",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "business",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "汽车与嵌入式收入 AEBU",
+        "current": 6824,
+        "previous": 4634,
+        "unit": "USDm",
+        "source_ids": [
+          "business"
+        ],
+        "kind": "实际",
+        "period": "FY2026 FQ3 → FQ4",
+        "note": "",
+        "change": null,
+        "location": "新闻稿 Quarterly Business Unit Financial Results · Automotive and Embedded Business Unit · Revenue。",
+        "evidence_type": "direct",
+        "id": "aebu"
+      },
+      "evidence_ids": [
+        "e-aeb4b72999281751c29e028333bcb8f5ebc56e7fe689bc0273033a0206604bfc"
+      ],
+      "id": "cd131bcd4ef81b8711e7d723feb517ea4c6aab465233f0827c9b292ab054a0f5"
+    },
+    "9636948d9e234a34905747b6cfd12d04eed2e66be1aea9e2749f0420eb2f6eee": {
+      "metric_id": "mu.revenue.eps_nongaap",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "revenue",
+        "unit": "USD",
+        "scope": "非 GAAP 每股盈利",
+        "accounting_basis": "non_gaap",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "cash_table",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "非 GAAP 每股盈利",
+        "current": 33.42,
+        "previous": 25.11,
+        "unit": "USD",
+        "source_ids": [
+          "cash_table"
+        ],
+        "kind": "实际",
+        "period": "FY2026 FQ3 → FQ4",
+        "note": "",
+        "change": null,
+        "location": "新闻稿 Reconciliation · Non-GAAP diluted earnings per share。",
+        "evidence_type": "direct",
+        "id": "eps_nongaap"
+      },
+      "evidence_ids": [
+        "e-f4eb881e5f4d5f391b42e70252f7387c5f71eccc29309a34c2db883a6ffd14e5"
+      ],
+      "id": "9636948d9e234a34905747b6cfd12d04eed2e66be1aea9e2749f0420eb2f6eee"
+    },
+    "a36631698bb3d2d47def7955ef6011140eedf73a79c59b88124c759fdd7e82b2": {
+      "metric_id": "mu.revenue.eps_gaap",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "revenue",
+        "unit": "USD",
+        "scope": "GAAP 每股盈利",
+        "accounting_basis": "gaap",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "cash_table",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "GAAP 每股盈利",
+        "current": 32.87,
+        "previous": 24.67,
+        "unit": "USD",
+        "source_ids": [
+          "cash_table"
+        ],
+        "kind": "实际",
+        "period": "FY2026 FQ3 → FQ4",
+        "note": "",
+        "change": null,
+        "location": "新闻稿 Consolidated Statements of Operations · Diluted earnings per share。",
+        "evidence_type": "direct",
+        "id": "eps_gaap"
+      },
+      "evidence_ids": [
+        "e-b3b2e597458ab6e14948404a7d7e3e918ff3162934fa6cb678a749310c3f9527"
+      ],
+      "id": "a36631698bb3d2d47def7955ef6011140eedf73a79c59b88124c759fdd7e82b2"
+    },
+    "9ea63788a1175b3013136aff6019cf31058e622b50d6403450caff4c0e303d54": {
+      "metric_id": "mu.margin.nongaap",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "margin",
+        "unit": "pct",
+        "scope": "非 GAAP 毛利率",
+        "accounting_basis": "non_gaap",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "financial",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "非 GAAP 毛利率",
+        "current": 87,
+        "previous": 84.9,
+        "unit": "pct",
+        "source_ids": [
+          "financial"
+        ],
+        "kind": "实际",
+        "note": "",
+        "period": "FY2026 FQ3 → FQ4",
+        "change": null,
+        "location": "新闻稿 Quarterly Financial Results / 利润表；FQ4-26 → FQ3-26。",
+        "evidence_type": "direct",
+        "id": "nongaap"
+      },
+      "evidence_ids": [
+        "e-ab4b74cceebb829ac55e7bad9e607851f3ed432d1aba36b7d0282d5f3080df83"
+      ],
+      "id": "9ea63788a1175b3013136aff6019cf31058e622b50d6403450caff4c0e303d54"
+    },
+    "d10048a1d39759b508bc920b3f9a1b7e7a9277369c3f8f4a7133894501e273cf": {
+      "metric_id": "mu.margin.gaap",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "margin",
+        "unit": "pct",
+        "scope": "GAAP 毛利率",
+        "accounting_basis": "gaap",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "financial",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "GAAP 毛利率",
+        "current": 86.8,
+        "previous": 84.6,
+        "unit": "pct",
+        "source_ids": [
+          "financial"
+        ],
+        "kind": "实际",
+        "note": "",
+        "period": "FY2026 FQ3 → FQ4",
+        "change": null,
+        "location": "新闻稿 Quarterly Financial Results / 利润表；FQ4-26 → FQ3-26。",
+        "evidence_type": "direct",
+        "id": "gaap"
+      },
+      "evidence_ids": [
+        "e-40a54f3c44827793141fed50423726ef3095d17a7f72c7f092d35d22ae3a0730"
+      ],
+      "id": "d10048a1d39759b508bc920b3f9a1b7e7a9277369c3f8f4a7133894501e273cf"
+    },
+    "5a592c398842b6886037e6ad7ba5e245cd65bad53dcc6477b2b9db9a73a1079d": {
+      "metric_id": "mu.margin.revenue",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "revenue",
+        "unit": "USDm",
+        "scope": "收入",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "financial",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "收入",
+        "current": 54229,
+        "previous": 41456,
+        "unit": "USDm",
+        "source_ids": [
+          "financial"
+        ],
+        "kind": "实际",
+        "note": "",
+        "period": "FY2026 FQ3 → FQ4",
+        "change": null,
+        "location": "新闻稿 Quarterly Financial Results / 利润表；FQ4-26 → FQ3-26。",
+        "evidence_type": "direct",
+        "id": "revenue"
+      },
+      "evidence_ids": [
+        "e-683c0bd9739e5c2d9828828e7be3fa6aa17182e62407f1e4cbf5cdbdd15400a3"
+      ],
+      "id": "5a592c398842b6886037e6ad7ba5e245cd65bad53dcc6477b2b9db9a73a1079d"
+    },
+    "8dc354cc1cb4557b2aeb28cd28c7c5b6a49d256232140c7ca5847081958c6ae2": {
+      "metric_id": "mu.margin.cogs",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "margin",
+        "unit": "USDm",
+        "scope": "GAAP 销售成本",
+        "accounting_basis": "gaap",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "financial",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "GAAP 销售成本",
+        "current": 7182,
+        "previous": 6400,
+        "unit": "USDm",
+        "source_ids": [
+          "financial"
+        ],
+        "kind": "实际",
+        "note": "",
+        "period": "FY2026 FQ3 → FQ4",
+        "change": null,
+        "location": "新闻稿 Consolidated Statements of Operations · Cost of goods sold。",
+        "evidence_type": "direct",
+        "id": "cogs"
+      },
+      "evidence_ids": [
+        "e-aed54bf59917e1d1663c93ebf5eaaba7735da2c1a6a4f9f5cda7a522ae5ef6a3"
+      ],
+      "id": "8dc354cc1cb4557b2aeb28cd28c7c5b6a49d256232140c7ca5847081958c6ae2"
+    },
+    "39d8ec056497251c48c2db06cfa69577b9774f9545bb8938c948a386db102241": {
+      "metric_id": "mu.margin.guidance",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "margin",
+        "unit": "pct",
+        "scope": "下季非 GAAP 毛利率指引",
+        "accounting_basis": "non_gaap",
+        "temporal_basis": "forecast_quarter",
+        "sources": [
+          {
+            "id": "guidance",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "下季非 GAAP 毛利率指引",
+        "current": 86.25,
+        "previous": null,
+        "unit": "pct",
+        "source_ids": [
+          "guidance"
+        ],
+        "kind": "公司指引",
+        "note": "原文：approximately 86.25%。",
+        "period": "FY2027 Q1",
+        "change": null,
+        "location": "新闻稿 Business Outlook · Gross margin · Non-GAAP。",
+        "evidence_type": "direct",
+        "id": "guidance"
+      },
+      "evidence_ids": [
+        "e-e6f5e6a5cf48d9005387064700f9a5ed11395ced2c5f5d7057a3b5af133cb535"
+      ],
+      "id": "39d8ec056497251c48c2db06cfa69577b9774f9545bb8938c948a386db102241"
+    },
+    "f77b43b4ea1e7711b3205886df49c02a426dc6c004aa39e2d76d21b3dbe17c73": {
+      "metric_id": "mu.margin.bit_cost",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "margin",
+        "unit": "",
+        "scope": "同组合每位元成本变化",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "technology",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=7",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "同组合每位元成本变化",
+        "current": null,
+        "previous": null,
+        "unit": "",
+        "source_ids": [
+          "technology"
+        ],
+        "kind": "缺失",
+        "note": "未取得可比较的量化值。",
+        "period": "FQ4 环比",
+        "change": null,
+        "location": "讲稿第 7 页 Gross margin 段只给价格、执行和组合的定性归因。",
+        "evidence_type": "unavailable",
+        "id": "bit_cost"
+      },
+      "evidence_ids": [
+        "e-b4acda84afdc4959ad8f5fce5a0c098fd110835bb730316dbce13a0fe95c7611"
+      ],
+      "id": "f77b43b4ea1e7711b3205886df49c02a426dc6c004aa39e2d76d21b3dbe17c73"
+    },
+    "08041b06b4cd0808f7dca0f80ad3b442207a0f695a0e34fe4225a3cc82ffa492": {
+      "metric_id": "mu.cash.adjusted_fcf",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "cash",
+        "unit": "USDm",
+        "scope": "调整后自由现金流",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "cash_table",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "调整后自由现金流",
+        "current": 33199,
+        "previous": 18304,
+        "unit": "USDm",
+        "source_ids": [
+          "cash_table"
+        ],
+        "kind": "实际",
+        "note": "",
+        "period": "FY2026 FQ3 → FQ4",
+        "change": null,
+        "location": "新闻稿 Reconciliation Continued · 单季现金流调节表 · FQ4-26 / FQ3-26。",
+        "evidence_type": "direct",
+        "id": "adjusted_fcf"
+      },
+      "evidence_ids": [
+        "e-ea471ddac103a981c6df05056635f918aa49e5e89ffb020936167ebb4a987f9e"
+      ],
+      "id": "08041b06b4cd0808f7dca0f80ad3b442207a0f695a0e34fe4225a3cc82ffa492"
+    },
+    "8a201b00493a2311a062559483b1db76f85c5fb9b3712d98ad1b502f9c234015": {
+      "metric_id": "mu.cash.operating",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "cash",
+        "unit": "USDm",
+        "scope": "经营现金流",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "cash_table",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "经营现金流",
+        "current": 43973,
+        "previous": 25388,
+        "unit": "USDm",
+        "source_ids": [
+          "cash_table"
+        ],
+        "kind": "实际",
+        "note": "",
+        "period": "FY2026 FQ3 → FQ4",
+        "change": null,
+        "location": "新闻稿 Reconciliation Continued · 单季现金流调节表 · FQ4-26 / FQ3-26。",
+        "evidence_type": "direct",
+        "id": "operating"
+      },
+      "evidence_ids": [
+        "e-3ea0f33febd0e8245d6c77bfdbbc193f93cd3956e86bedeb3648565f1d202609"
+      ],
+      "id": "8a201b00493a2311a062559483b1db76f85c5fb9b3712d98ad1b502f9c234015"
+    },
+    "a2dc600a28e7336cf10291a31ea8460da425d94488c321589f2450b0c308c4ef": {
+      "metric_id": "mu.cash.ppe",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "cash",
+        "unit": "USDm",
+        "scope": "设备购置现金流出",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "cash_table",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "设备购置现金流出",
+        "current": 11110,
+        "previous": 7826,
+        "unit": "USDm",
+        "source_ids": [
+          "cash_table"
+        ],
+        "kind": "实际",
+        "note": "",
+        "period": "FY2026 FQ3 → FQ4",
+        "change": null,
+        "location": "新闻稿 Reconciliation Continued · 单季现金流调节表 · FQ4-26 / FQ3-26。",
+        "evidence_type": "direct",
+        "id": "ppe"
+      },
+      "evidence_ids": [
+        "e-62422c96e673ef047a58674a55e30cf2761c761d4e681617e93e2bc78bc3c32e"
+      ],
+      "id": "a2dc600a28e7336cf10291a31ea8460da425d94488c321589f2450b0c308c4ef"
+    },
+    "24a26c46c81703a3773581da9fad202a327b4a8341c5c6671f935d547a5bfaab": {
+      "metric_id": "mu.cash.grants",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "cash",
+        "unit": "USDm",
+        "scope": "收到的政府补助",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "cash_table",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "收到的政府补助",
+        "current": 327,
+        "previous": 733,
+        "unit": "USDm",
+        "source_ids": [
+          "cash_table"
+        ],
+        "kind": "实际",
+        "note": "",
+        "period": "FY2026 FQ3 → FQ4",
+        "change": null,
+        "location": "新闻稿 Reconciliation Continued · 单季现金流调节表 · FQ4-26 / FQ3-26。",
+        "evidence_type": "direct",
+        "id": "grants"
+      },
+      "evidence_ids": [
+        "e-ee0319d1dd5f45ffed2c4dfd3fa223aa39e761ec306ae642049911de4f85248b"
+      ],
+      "id": "24a26c46c81703a3773581da9fad202a327b4a8341c5c6671f935d547a5bfaab"
+    },
+    "99011e969ef5ad8264fd0de2b6f37e8b0f751b2fa6247a2e06bf0411580171dc": {
+      "metric_id": "mu.cash.disposals",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "cash",
+        "unit": "USDm",
+        "scope": "资产出售收入",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "cash_table",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "资产出售收入",
+        "current": 9,
+        "previous": 9,
+        "unit": "USDm",
+        "source_ids": [
+          "cash_table"
+        ],
+        "kind": "实际",
+        "note": "",
+        "period": "FY2026 FQ3 → FQ4",
+        "change": null,
+        "location": "新闻稿 Reconciliation Continued · 单季现金流调节表 · FQ4-26 / FQ3-26。",
+        "evidence_type": "direct",
+        "id": "disposals"
+      },
+      "evidence_ids": [
+        "e-f692cd9b49f7c6f2fbb37818e1e84fa4640d76405c51a74e2b19749916b927d3"
+      ],
+      "id": "99011e969ef5ad8264fd0de2b6f37e8b0f751b2fa6247a2e06bf0411580171dc"
+    },
+    "cbb973ade3203e97ee639366680ddd7fdf7ab6a72aee846a97eb40d2f4a7ea57": {
+      "metric_id": "mu.cash.gross_fcf",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "cash",
+        "unit": "USDm",
+        "scope": "经营现金流 − 设备购置",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "cash_table",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "经营现金流 − 设备购置",
+        "current": 32863,
+        "previous": 17562,
+        "unit": "USDm",
+        "source_ids": [
+          "cash_table"
+        ],
+        "kind": "计算",
+        "note": "FQ4 43,973−11,110；FQ3 25,388−7,826（百万美元）。",
+        "period": "FY2026 FQ3 → FQ4",
+        "change": null,
+        "location": "新闻稿 Reconciliation Continued · 单季现金流调节表 · FQ4-26 / FQ3-26。",
+        "evidence_type": "calculated",
+        "id": "gross_fcf"
+      },
+      "evidence_ids": [
+        "e-9bfdbfb8f958a5cc431ac7d9ed83cc840593f72a2514ced4979983c5e5c3bd07"
+      ],
+      "id": "cbb973ade3203e97ee639366680ddd7fdf7ab6a72aee846a97eb40d2f4a7ea57"
+    },
+    "fff1e1820ccfc6d519a01d0ea1aa357be8a8a919fbb8f791e6660ab8c418f89c": {
+      "metric_id": "mu.cash.profit_conversion",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "operating_profit",
+        "unit": "pct",
+        "scope": "经营现金流 / GAAP 净利润",
+        "accounting_basis": "gaap",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "cash_table",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          },
+          {
+            "id": "financial",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "经营现金流 / GAAP 净利润",
+        "current": 116.63616349698947,
+        "previous": 89.89130049923875,
+        "unit": "pct",
+        "source_ids": [
+          "cash_table",
+          "financial"
+        ],
+        "kind": "计算",
+        "note": "FQ4 43,973÷37,701；FQ3 25,388÷28,243（百万美元）。",
+        "period": "FY2026 FQ3 → FQ4",
+        "change": null,
+        "location": "经营现金流：新闻稿现金流调节表；净利润：利润表。",
+        "evidence_type": "calculated",
+        "id": "profit_conversion"
+      },
+      "evidence_ids": [
+        "e-13b1452aa0a90733a5730a8b310f263cb48db06615b4e5cc271e13205199a0f9"
+      ],
+      "id": "fff1e1820ccfc6d519a01d0ea1aa357be8a8a919fbb8f791e6660ab8c418f89c"
+    },
+    "09ef051dfd78949cef1a82174644a4fc882e805d2ddb4f40a760c8042096c36d": {
+      "metric_id": "mu.capex.net",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "capex",
+        "unit": "USDm",
+        "scope": "净资本开支",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "cash_table",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "净资本开支",
+        "current": 10774,
+        "previous": 7084,
+        "unit": "USDm",
+        "source_ids": [
+          "cash_table"
+        ],
+        "kind": "实际",
+        "note": "设备购置支出 − 政府补助 − 资产出售收入。",
+        "period": "FY2026 FQ3 → FQ4",
+        "change": null,
+        "location": "新闻稿 Reconciliation Continued · Investments in capital expenditures, net。",
+        "evidence_type": "direct",
+        "id": "net"
+      },
+      "evidence_ids": [
+        "e-2258dff8dcbf7c7406790a3168c61d10f57aec7c0bcdf31991e83f41dd8b8218"
+      ],
+      "id": "09ef051dfd78949cef1a82174644a4fc882e805d2ddb4f40a760c8042096c36d"
+    },
+    "db888ad74a51b8fa8e914b45802b5d8d7ea6e89710699b315f6f36629354de51": {
+      "metric_id": "mu.capex.revenue_ratio",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "revenue",
+        "unit": "pct",
+        "scope": "净资本开支 / 收入",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "cash_table",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          },
+          {
+            "id": "financial",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "净资本开支 / 收入",
+        "current": 19.86759851739844,
+        "previous": 17.087996912389038,
+        "unit": "pct",
+        "source_ids": [
+          "cash_table",
+          "financial"
+        ],
+        "kind": "计算",
+        "note": "FQ4 10,774÷54,229；FQ3 7,084÷41,456（百万美元）。",
+        "period": "FY2026 FQ3 → FQ4",
+        "change": null,
+        "location": "净开支：新闻稿现金流调节表；收入：财报季度比较。",
+        "evidence_type": "calculated",
+        "id": "revenue_ratio"
+      },
+      "evidence_ids": [
+        "e-bcf1cc477886ffc05bf7c2939598a51b7fcdb70605d510eb06a47be5131bb4f5"
+      ],
+      "id": "db888ad74a51b8fa8e914b45802b5d8d7ea6e89710699b315f6f36629354de51"
+    },
+    "beffb915d965b55b714cce409f7e710255e08928975e5b25d74091fafc96808a": {
+      "metric_id": "mu.capex.coverage",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "capex",
+        "unit": "multiple",
+        "scope": "经营现金流 / 净开支",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "cash_table",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "经营现金流 / 净开支",
+        "current": 4.081399665862261,
+        "previous": 3.5838509316770186,
+        "unit": "multiple",
+        "source_ids": [
+          "cash_table"
+        ],
+        "kind": "计算",
+        "note": "FQ4 43,973÷10,774；FQ3 25,388÷7,084。",
+        "period": "FY2026 FQ3 → FQ4",
+        "change": null,
+        "location": "新闻稿现金流调节表 · 同季经营现金流与净资本开支。",
+        "evidence_type": "calculated",
+        "id": "coverage"
+      },
+      "evidence_ids": [
+        "e-ae7b149d81d61f32e09bed243571c2b54f801a8e6c4ff8060af34498047afe7f"
+      ],
+      "id": "beffb915d965b55b714cce409f7e710255e08928975e5b25d74091fafc96808a"
+    },
+    "662fa4168c3873706fa232a94e502ac4283ccb5750dd829fd44aa2f204ea2b61": {
+      "metric_id": "mu.capex.guidance",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "capex",
+        "unit": "USDm",
+        "scope": "下一季净资本开支",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "forecast_quarter",
+        "sources": [
+          {
+            "id": "capex_plan",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=10",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "下一季净资本开支",
+        "current": 11500,
+        "previous": null,
+        "unit": "USDm",
+        "source_ids": [
+          "capex_plan"
+        ],
+        "kind": "公司指引",
+        "note": "原文：around $11.5 billion；净额口径，已扣除预计政府补助。",
+        "period": "FY2027 Q1",
+        "change": null,
+        "location": "讲稿第 10 页 · fiscal Q1 capex。",
+        "evidence_type": "direct",
+        "id": "guidance"
+      },
+      "evidence_ids": [
+        "e-f6a6bf8eee6926d35c698cc009d5ea4faabb68b0351d70e963a32461981680bd"
+      ],
+      "id": "662fa4168c3873706fa232a94e502ac4283ccb5750dd829fd44aa2f204ea2b61"
+    },
+    "3bd140f0dd9283c8fac6c201f8a9e030e9cba5349ae95f88840c1cf47f5a3223": {
+      "metric_id": "mu.capex.next_year",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "capex",
+        "unit": "",
+        "scope": "FY2027 季度开支",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "capex_plan",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=10",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "FY2027 资本开支",
+        "current": "上半财年约 250 亿美元；下半财年更高",
+        "previous": null,
+        "unit": "",
+        "source_ids": [
+          "capex_plan"
+        ],
+        "kind": "公司指引",
+        "note": "原文：first-half fiscal 2027 capex approximately $25 billion；higher in the second half。",
+        "period": "FY2027",
+        "change": null,
+        "location": "讲稿第 10 页 · Capex outlook。",
+        "evidence_type": "direct",
+        "id": "next_year"
+      },
+      "evidence_ids": [
+        "e-30bda9e9697b8199532cbb1f7c576b9a8e887ef1459a8d21d209566db0ab9910"
+      ],
+      "id": "3bd140f0dd9283c8fac6c201f8a9e030e9cba5349ae95f88840c1cf47f5a3223"
+    },
+    "8994d4bbb61e02d8e7ba7195ed8a73593095cf4299492931bb5d9635e9e7f8ce": {
+      "metric_id": "mu.capex.net_cash",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2026 Q4 · 截至 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "capex",
+        "unit": "USDm",
+        "scope": "净现金（现金投资减债务）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "point_in_time",
+        "sources": [
+          {
+            "id": "cash_balance",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "净现金（现金投资减债务）",
+        "current": 68274,
+        "previous": 24406,
+        "unit": "USDm",
+        "source_ids": [
+          "cash_balance"
+        ],
+        "kind": "计算",
+        "note": "FQ4 (38,364+5,070+30,019)−5,179；FQ3 (24,995+1,027+4,106)−5,722（百万美元）；不含受限现金。",
+        "period": "FY2026 FQ3 → FQ4",
+        "change": null,
+        "location": "新闻稿 Consolidated Balance Sheets · 现金、短长期投资及当期与长期债务。",
+        "evidence_type": "calculated",
+        "id": "net_cash"
+      },
+      "evidence_ids": [
+        "e-7bd7607ca53fdc706d0e13c35e0bb29cb2617267f3dd01ea312f1a40f5aa8835"
+      ],
+      "id": "8994d4bbb61e02d8e7ba7195ed8a73593095cf4299492931bb5d9635e9e7f8ce"
+    },
+    "d80ad44fc784dad9389fd97165f42bb8651ffa5d3c4e27478e7615f00f7441a7": {
+      "metric_id": "mu.orders.agreements",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "合同截至 09-30；财务期末 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "orders",
+        "unit": "份",
+        "scope": "已签战略协议",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "orders",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=3",
+            "published_at": "2026-09-30"
+          },
+          {
+            "id": "orders_cash_prior",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf#page=7",
+            "published_at": "2026-06-24"
+          }
+        ]
+      },
+      "payload": {
+        "label": "已签战略协议",
+        "current": 26,
+        "previous": 16,
+        "unit": "份",
+        "source_ids": [
+          "orders",
+          "orders_cash_prior"
+        ],
+        "kind": "实际",
+        "note": "",
+        "period": "截至 06-24 → 09-30",
+        "change": null,
+        "location": "本期：讲稿第 3 页 · signed 26 SCAs；上期：FQ3 讲稿第 7 页 · 16 strategic customer agreements。",
+        "evidence_type": "direct",
+        "id": "agreements"
+      },
+      "evidence_ids": [
+        "e-9efa7fdc1be3305e89f70dc4b9c24063c7b10d02d1ad10a87284a753a8c02c9c"
+      ],
+      "id": "d80ad44fc784dad9389fd97165f42bb8651ffa5d3c4e27478e7615f00f7441a7"
+    },
+    "441f795b6833e35ce099f5397291e4cd658424320010149cd6ea7ca3c23496f7": {
+      "metric_id": "mu.orders.coverage",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "合同截至 09-30；财务期末 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "orders",
+        "unit": "",
+        "scope": "多年覆盖量",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "orders",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=3",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "协议收入覆盖",
+        "current": "超过 2030 年前收入的 35%（公司估计）",
+        "previous": null,
+        "unit": "",
+        "source_ids": [
+          "orders"
+        ],
+        "kind": "公司披露",
+        "note": "口径为收入占比，与 FQ3 按 DRAM/NAND 位元列示的覆盖量不同。",
+        "period": "至 2030 年",
+        "change": null,
+        "location": "讲稿第 3 页 · over 35% of our revenue through 2030。",
+        "evidence_type": "direct",
+        "id": "coverage"
+      },
+      "evidence_ids": [
+        "e-608d292d2ebce6e21b04ba3e30eaa6a4ce24632cfd4facc98588c526d3acc18a"
+      ],
+      "id": "441f795b6833e35ce099f5397291e4cd658424320010149cd6ea7ca3c23496f7"
+    },
+    "911422e16362313e417f00c1735f74047a8ce9ae283485c47073f4b596c81d23": {
+      "metric_id": "mu.orders.rpo_quarter_end",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "合同截至 09-30；财务期末 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "orders",
+        "unit": "USDm",
+        "scope": "财季末 RPO",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "fq4_balance_sheet",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          },
+          {
+            "id": "q3_orders",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/0000723125-26-000015.pdf#page=21",
+            "published_at": "2026-06-25"
+          }
+        ]
+      },
+      "payload": {
+        "label": "财季末 RPO",
+        "current": null,
+        "previous": 5000,
+        "unit": "USDm",
+        "source_ids": [
+          "fq4_balance_sheet",
+          "q3_orders"
+        ],
+        "kind": "待 10-K",
+        "note": "上期为约数。",
+        "period": "截至 05-28 → 09-03",
+        "change": null,
+        "location": "本期：新闻稿未披露，待 FY2026 10-K Note；上期：FQ3 10-Q 第 21 页 · Note 14。",
+        "evidence_type": "unavailable",
+        "id": "rpo_quarter_end"
+      },
+      "evidence_ids": [
+        "e-88c1250cf9fba063ab034cea912c6db1f28c6340324dc83c0e529dd5d5ef2aaf"
+      ],
+      "id": "911422e16362313e417f00c1735f74047a8ce9ae283485c47073f4b596c81d23"
+    },
+    "42297adf704892908c6ab1c3d66174bac4b9a3d7edce069a015f030a93f9dcb9": {
+      "metric_id": "mu.orders.rpo_post_quarter",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "合同截至 09-30；财务期末 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "orders",
+        "unit": "USDm",
+        "scope": "含季后协议的 RPO",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "orders_cash",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=6",
+            "published_at": "2026-09-30"
+          },
+          {
+            "id": "orders_cash_prior",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf#page=7",
+            "published_at": "2026-06-24"
+          }
+        ]
+      },
+      "payload": {
+        "label": "含季后协议的 RPO",
+        "current": 150000,
+        "previous": 100000,
+        "unit": "USDm",
+        "source_ids": [
+          "orders_cash",
+          "orders_cash_prior"
+        ],
+        "kind": "公司披露",
+        "note": "两期均为约数；只含已确定定价框架的协议。",
+        "period": "截至 06-24 → 09-30",
+        "change": null,
+        "location": "本期：讲稿第 6 页 · RPO is approximately $150 billion；上期：FQ3 讲稿第 7 页。",
+        "evidence_type": "direct",
+        "id": "rpo_post_quarter"
+      },
+      "evidence_ids": [
+        "e-eb7c7a41ea4078c6ac214b15fa6faef51b4bc2adcaaf3f881d258987b57942b0"
+      ],
+      "id": "42297adf704892908c6ab1c3d66174bac4b9a3d7edce069a015f030a93f9dcb9"
+    },
+    "3549c5af1d88b469d83cf946be87e5068f9b43adcb589642c61efad0fb78dda8": {
+      "metric_id": "mu.orders.contract_liability",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "合同截至 09-30；财务期末 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "orders",
+        "unit": "USDm",
+        "scope": "期末已确认合同负债",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "fq4_balance_sheet",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          },
+          {
+            "id": "q3_orders",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/0000723125-26-000015.pdf#page=21",
+            "published_at": "2026-06-25"
+          }
+        ]
+      },
+      "payload": {
+        "label": "期末已确认合同负债",
+        "current": null,
+        "previous": 422,
+        "unit": "USDm",
+        "source_ids": [
+          "fq4_balance_sheet",
+          "q3_orders"
+        ],
+        "kind": "待 10-K",
+        "period": "截至 05-28 → 09-03",
+        "note": "新闻稿资产负债表列示非流动客户合同负债 12,895（百万美元），讲稿称期末客户保证金 127 亿美元；完整合同负债待 10-K Note。",
+        "change": null,
+        "location": "本期：新闻稿 Consolidated Balance Sheets · Noncurrent customer contract liabilities；上期：FQ3 10-Q 第 21 页 · Note 14。",
+        "evidence_type": "unavailable",
+        "id": "contract_liability"
+      },
+      "evidence_ids": [
+        "e-65a5686d160f7730b7dc23a8c248917541484770d54f8d57b89fa69a23819ddf"
+      ],
+      "id": "3549c5af1d88b469d83cf946be87e5068f9b43adcb589642c61efad0fb78dda8"
+    },
+    "de2b0077ace3074680d453bcd1e98307c38d4964deef61c7918820edeafff0c5": {
+      "metric_id": "mu.orders.deposits_forecast",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "合同截至 09-30；财务期末 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "orders",
+        "unit": "USDm",
+        "scope": "预计现金保证金",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "orders",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=3",
+            "published_at": "2026-09-30"
+          },
+          {
+            "id": "orders_cash_prior",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf#page=7",
+            "published_at": "2026-06-24"
+          }
+        ]
+      },
+      "payload": {
+        "label": "协议保证金及相关财务承诺",
+        "current": 32000,
+        "previous": 22000,
+        "unit": "USDm",
+        "source_ids": [
+          "orders",
+          "orders_cash_prior"
+        ],
+        "kind": "公司指引",
+        "note": "多数为现金保证金；FQ3 时其中约 180 亿美元为现金保证金。",
+        "period": "截至 06-24 → 09-30",
+        "change": null,
+        "location": "本期：讲稿第 3 页 · financial commitments increased to $32 billion；上期：FQ3 讲稿第 7 页 · $22 billion。",
+        "evidence_type": "direct",
+        "id": "deposits_forecast"
+      },
+      "evidence_ids": [
+        "e-90fe879483376bdd369903334ccf3010669a2f11041663973f33b80dff774be8"
+      ],
+      "id": "de2b0077ace3074680d453bcd1e98307c38d4964deef61c7918820edeafff0c5"
+    },
+    "bec11fe125e8f5c97a4a7cad50862fcc3e84f5fb831cdbe2b8ea26c3a21221d9": {
+      "metric_id": "mu.orders.terms",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "合同截至 09-30；财务期末 09-03",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "orders",
+        "unit": "",
+        "scope": "合同量价约束",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "orders",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=3",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "合同量价约束",
+        "current": "全部为 take-or-pay；约四分之三有定价框架",
+        "previous": null,
+        "unit": "",
+        "source_ids": [
+          "orders"
+        ],
+        "kind": "公司披露",
+        "note": "有定价框架的部分多数设价格上下限，其余约四分之一按市场价定期协商。",
+        "period": "已签 26 份协议",
+        "change": null,
+        "location": "讲稿第 3 页 · Strategic customer agreements update。",
+        "evidence_type": "direct",
+        "id": "terms"
+      },
+      "evidence_ids": [
+        "e-77c6d51d3cdae33cac9afec92ef854bf82d3a134ef9efe7599a54f826a0b24ef"
+      ],
+      "id": "bec11fe125e8f5c97a4a7cad50862fcc3e84f5fb831cdbe2b8ea26c3a21221d9"
+    },
+    "d5e3179a0fe0858e236fb3c0de907e12cf998d4a3860f14bbcf059d9b628b7e2": {
+      "metric_id": "mu.hbm.hbm4_revenue",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "HBM 披露 06-24；份额转引 09-03；DDR5 进展 09-15",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "revenue",
+        "unit": "",
+        "scope": "HBM4 累计已实现收入",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "hbm_product",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf#page=4",
+            "published_at": "2026-06-24"
+          }
+        ]
+      },
+      "payload": {
+        "label": "HBM4 累计已实现收入",
+        "current": "超过 10 亿美元",
+        "previous": null,
+        "unit": "",
+        "source_ids": [
+          "hbm_product"
+        ],
+        "kind": "公司披露",
+        "note": "",
+        "period": "截至 06-24 披露",
+        "change": null,
+        "location": "管理层说明第 4 页 · Technology and product leadership。",
+        "evidence_type": "direct",
+        "id": "hbm4_revenue"
+      },
+      "evidence_ids": [
+        "e-4360c2d12987a93a40c53749742ca833c37053115f12f1c8425a137afe2126ba"
+      ],
+      "id": "d5e3179a0fe0858e236fb3c0de907e12cf998d4a3860f14bbcf059d9b628b7e2"
+    },
+    "3171f05f540c674120365b73dd5563bb5939e67de8d3ff3abbb73e235c1ffc82": {
+      "metric_id": "mu.hbm.revenue_share",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "HBM 披露 06-24；份额转引 09-03；DDR5 进展 09-15",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "revenue",
+        "unit": "pct",
+        "scope": "HBM 营收份额（转引）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "hbm_secondary",
+            "url": "https://en.fnnews.com/news/202609031610354859",
+            "published_at": "2026-09-03"
+          }
+        ]
+      },
+      "payload": {
+        "label": "HBM 营收份额（转引）",
+        "current": 18,
+        "previous": 21,
+        "unit": "pct",
+        "source_ids": [
+          "hbm_secondary"
+        ],
+        "kind": "转引",
+        "note": "Counterpoint 原表未读取。",
+        "period": "2026 Q1 → Q2",
+        "change": null,
+        "location": "媒体正文 Micron 段；2026 自然年 Q1 → Q2。",
+        "evidence_type": "secondary",
+        "id": "revenue_share"
+      },
+      "evidence_ids": [
+        "e-82e9a89bca6a05929b5fc6be201a0c2d685bc4822d5486b971b3c21adfdd8071"
+      ],
+      "id": "3171f05f540c674120365b73dd5563bb5939e67de8d3ff3abbb73e235c1ffc82"
+    },
+    "6326a8a2952a794c39067f380b46767b63613d5c7dbc6aa3b4b2efdb65355309": {
+      "metric_id": "mu.hbm.yield",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "HBM 披露 06-24；份额转引 09-03；DDR5 进展 09-15",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "hbm",
+        "unit": "",
+        "scope": "量产良率 / HBM 单独毛利率",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "hbm_product",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf#page=4",
+            "published_at": "2026-06-24"
+          }
+        ]
+      },
+      "payload": {
+        "label": "量产良率 / HBM 单独毛利率",
+        "current": null,
+        "previous": null,
+        "unit": "",
+        "source_ids": [
+          "hbm_product"
+        ],
+        "kind": "缺失",
+        "note": "只有定性进展，未披露可比较数字。",
+        "period": "截至本次核查",
+        "change": null,
+        "location": "本次查阅的管理层说明只含定性良率进度。",
+        "evidence_type": "unavailable",
+        "id": "yield"
+      },
+      "evidence_ids": [
+        "e-830c22a9ec491cc0dd9e2ecee5d88e20ce93aac1f041ea2bced36906f2e63a9c"
+      ],
+      "id": "6326a8a2952a794c39067f380b46767b63613d5c7dbc6aa3b4b2efdb65355309"
+    },
+    "78e1cb8a9a1fe322940a52e5b05e6390aabf45b2aab9783574f9574ecab973e7": {
+      "metric_id": "guidance.revenue",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2027 Q1",
+        "financial_period": "FY2026 Q4",
+        "measurement": "revenue",
+        "unit": "USDm",
+        "scope": "收入",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "forecast_quarter",
+        "sources": [
+          {
+            "id": "guidance",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "收入",
+        "current": 61500,
+        "previous": null,
+        "unit": "USDm",
+        "source_ids": [
+          "guidance"
+        ],
+        "kind": "公司指引",
+        "period": "FY2027 Q1",
+        "note": "",
+        "change": null,
+        "location": "新闻稿 Business Outlook · Revenue。",
+        "evidence_type": "direct",
+        "tolerance": 1500,
+        "approximate": false,
+        "actuals": [
+          {
+            "period": "FY2026 Q3",
+            "metric_id": "revenue",
+            "row_label": "总收入",
+            "field": "previous",
+            "row_id": "total"
+          },
+          {
+            "period": "FY2026 Q4",
+            "metric_id": "revenue",
+            "row_label": "总收入",
+            "field": "current",
+            "row_id": "total"
+          }
+        ],
+        "id": "revenue"
+      },
+      "evidence_ids": [
+        "e-c7079ac5260d959e8caaaf32c197baffe23577af87484f26f83e6587b4481984"
+      ],
+      "id": "78e1cb8a9a1fe322940a52e5b05e6390aabf45b2aab9783574f9574ecab973e7"
+    },
+    "7ad55344bb02a010db5d3321ace4cee1c9c663e176ed73fe83b5ccf9314cf3a3": {
+      "metric_id": "guidance.margin_nongaap",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2027 Q1",
+        "financial_period": "FY2026 Q4",
+        "measurement": "guidance",
+        "unit": "pct",
+        "scope": "非 GAAP 毛利率",
+        "accounting_basis": "non_gaap",
+        "temporal_basis": "forecast_quarter",
+        "sources": [
+          {
+            "id": "guidance",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "非 GAAP 毛利率",
+        "current": 86.25,
+        "previous": null,
+        "unit": "pct",
+        "source_ids": [
+          "guidance"
+        ],
+        "kind": "公司指引",
+        "period": "FY2027 Q1",
+        "note": "",
+        "change": null,
+        "location": "新闻稿 Business Outlook · Gross margin · Non-GAAP。",
+        "evidence_type": "direct",
+        "tolerance": null,
+        "approximate": true,
+        "actuals": [
+          {
+            "period": "FY2026 Q3",
+            "metric_id": "margin",
+            "row_label": "非 GAAP 毛利率",
+            "field": "previous",
+            "row_id": "nongaap"
+          },
+          {
+            "period": "FY2026 Q4",
+            "metric_id": "margin",
+            "row_label": "非 GAAP 毛利率",
+            "field": "current",
+            "row_id": "nongaap"
+          }
+        ],
+        "id": "margin_nongaap"
+      },
+      "evidence_ids": [
+        "e-60dbf67aa3b8aa5340cf48ed0aaf2856ef8280870f806def4835d4554f8b49db"
+      ],
+      "id": "7ad55344bb02a010db5d3321ace4cee1c9c663e176ed73fe83b5ccf9314cf3a3"
+    },
+    "131689e2d5c5bad2583f24f62ef044a65f1f672b95128cf721a50e91f68a6ece": {
+      "metric_id": "guidance.eps_nongaap",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "FY2027 Q1",
+        "financial_period": "FY2026 Q4",
+        "measurement": "guidance",
+        "unit": "USD",
+        "scope": "非 GAAP EPS",
+        "accounting_basis": "non_gaap",
+        "temporal_basis": "forecast_quarter",
+        "sources": [
+          {
+            "id": "guidance",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "非 GAAP EPS",
+        "current": 38.15,
+        "previous": null,
+        "unit": "USD",
+        "source_ids": [
+          "guidance"
+        ],
+        "kind": "公司指引",
+        "period": "FY2027 Q1",
+        "note": "",
+        "change": null,
+        "location": "新闻稿 Business Outlook · Diluted earnings per share · Non-GAAP。",
+        "evidence_type": "direct",
+        "tolerance": 1,
+        "approximate": false,
+        "actuals": [
+          {
+            "period": "FY2026 Q3",
+            "metric_id": "revenue",
+            "row_label": "非 GAAP 每股盈利",
+            "field": "previous",
+            "row_id": "eps_nongaap"
+          },
+          {
+            "period": "FY2026 Q4",
+            "metric_id": "revenue",
+            "row_label": "非 GAAP 每股盈利",
+            "field": "current",
+            "row_id": "eps_nongaap"
+          }
+        ],
+        "id": "eps_nongaap"
+      },
+      "evidence_ids": [
+        "e-5ae98a2f7339b937c60f7369c938b9ea558c8d4379f4e5556ee2f84bc7fd9b97"
+      ],
+      "id": "131689e2d5c5bad2583f24f62ef044a65f1f672b95128cf721a50e91f68a6ece"
+    },
+    "dd699ac2748bd9a08c22f963747147305c52e9759f3748ec936222cf25c6d62d": {
+      "metric_id": "event.next_earnings",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "measurement": "event",
+        "unit": "",
+        "scope": "event.next_earnings",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "next",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "date": "2026-09-30",
+        "title": "美光 FY2026 Q4 财报",
+        "source_id": "next",
+        "id": "next_earnings"
+      },
+      "evidence_ids": [
+        "e-12533c713d938cf6950244867cb4c6ed90b4c5257584f6c3479659da37113e23"
+      ],
+      "id": "dd699ac2748bd9a08c22f963747147305c52e9759f3748ec936222cf25c6d62d"
+    },
+    "515a2e7bb811e680de39b75de2589c80c3d0f6c8c042d5407898081706d4165c": {
+      "metric_id": "input.micron.net_income",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "supporting",
+        "unit": "USDm",
+        "scope": "GAAP 净利润",
+        "accounting_basis": "gaap",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "financial",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "id": "net_income",
+        "label": "GAAP 净利润",
+        "current": 37701,
+        "previous": 28243,
+        "unit": "USDm",
+        "source_ids": [
+          "financial"
+        ],
+        "kind": "实际",
+        "note": "",
+        "period": "FY2026 Q4 / Q3",
+        "change": null,
+        "location": "新闻稿 Consolidated Statements of Operations · Net income",
+        "evidence_type": "direct"
+      },
+      "evidence_ids": [
+        "e-c0e0c66f0d0015c307022f133367f3e5e87e2b3c9489b7ea7ddf8aa483721a21"
+      ],
+      "id": "515a2e7bb811e680de39b75de2589c80c3d0f6c8c042d5407898081706d4165c"
+    },
+    "9fd0270fed7bdc1d5882e1d5acba5afba486f1d029f96976bd75c4b9551bdaf5": {
+      "metric_id": "input.micron.cash",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "supporting",
+        "unit": "USDm",
+        "scope": "现金及现金等价物",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "point_in_time",
+        "sources": [
+          {
+            "id": "cash_balance",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "id": "cash",
+        "label": "现金及现金等价物",
+        "current": 38364,
+        "previous": 24995,
+        "unit": "USDm",
+        "source_ids": [
+          "cash_balance"
+        ],
+        "kind": "实际",
+        "note": "",
+        "period": "FY2026 Q4 / Q3",
+        "change": null,
+        "location": "新闻稿 Consolidated Balance Sheets · Cash and equivalents",
+        "evidence_type": "direct"
+      },
+      "evidence_ids": [
+        "e-2e44fab1e84dc9e8ff3cdb02a70f26df87e06f7cc8b572b166291e42c3b56ca9"
+      ],
+      "id": "9fd0270fed7bdc1d5882e1d5acba5afba486f1d029f96976bd75c4b9551bdaf5"
+    },
+    "2830f4c70b1e5f650d2a94f754a436dbbf232f678762bebb393392346db1cd2a": {
+      "metric_id": "input.micron.short_investments",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "supporting",
+        "unit": "USDm",
+        "scope": "短期投资",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "point_in_time",
+        "sources": [
+          {
+            "id": "cash_balance",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "id": "short_investments",
+        "label": "短期投资",
+        "current": 5070,
+        "previous": 1027,
+        "unit": "USDm",
+        "source_ids": [
+          "cash_balance"
+        ],
+        "kind": "实际",
+        "note": "",
+        "period": "FY2026 Q4 / Q3",
+        "change": null,
+        "location": "新闻稿 Consolidated Balance Sheets · Short-term investments",
+        "evidence_type": "direct"
+      },
+      "evidence_ids": [
+        "e-1284b3e4899b8c1ad67405a03ec65e5a355b8abe3e61ab83cd3b9b787e826dba"
+      ],
+      "id": "2830f4c70b1e5f650d2a94f754a436dbbf232f678762bebb393392346db1cd2a"
+    },
+    "4103094f856bea607a6c23550c8c6e10ff0667d60bde421adcdd30139b9d6b7b": {
+      "metric_id": "input.micron.long_investments",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "supporting",
+        "unit": "USDm",
+        "scope": "长期投资",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "point_in_time",
+        "sources": [
+          {
+            "id": "cash_balance",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "id": "long_investments",
+        "label": "长期投资",
+        "current": 30019,
+        "previous": 4106,
+        "unit": "USDm",
+        "source_ids": [
+          "cash_balance"
+        ],
+        "kind": "实际",
+        "note": "",
+        "period": "FY2026 Q4 / Q3",
+        "change": null,
+        "location": "新闻稿 Consolidated Balance Sheets · Long-term marketable investments",
+        "evidence_type": "direct"
+      },
+      "evidence_ids": [
+        "e-7a097fcf977625d9a14d735c5201118a3d59dedb80f24cdb678cd2b262f9f718"
+      ],
+      "id": "4103094f856bea607a6c23550c8c6e10ff0667d60bde421adcdd30139b9d6b7b"
+    },
+    "74d9b46164283763d34bb4c1707b397acc4086a8d5e8f13cea7f72c85be76fd0": {
+      "metric_id": "input.micron.debt",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "financial_period": "FY2026 Q4",
+        "period_end": "2026-09-03",
+        "measurement": "supporting",
+        "unit": "USDm",
+        "scope": "债务",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "point_in_time",
+        "sources": [
+          {
+            "id": "cash_balance",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "id": "debt",
+        "label": "债务",
+        "current": 5179,
+        "previous": 5722,
+        "unit": "USDm",
+        "source_ids": [
+          "cash_balance"
+        ],
+        "kind": "实际",
+        "note": "",
+        "period": "FY2026 Q4 / Q3",
+        "change": null,
+        "location": "新闻稿 Consolidated Balance Sheets · Current debt + Long-term debt",
+        "evidence_type": "direct"
+      },
+      "evidence_ids": [
+        "e-89f499b473fd8d1465a18b2dbd297c07c5d49a2729f7e22c2774ec50675f9018"
+      ],
+      "id": "74d9b46164283763d34bb4c1707b397acc4086a8d5e8f13cea7f72c85be76fd0"
     }
   },
   "supporting": {
-    "input.micron.net_income": "1c12c6e84b1c25eb93a67690a0514cad647a17a8c1b51c920cf3e3ded4fa3830",
-    "input.micron.cash": "3ed1866a4d6a4dc4352f13adfe6702b0c9540c20d3834d7fb63c42c8963614c7",
-    "input.micron.short_investments": "70d4093b3e07f24f9011971b26ccb68be97a82f7d171ef08d06f0b7c26f3167f",
-    "input.micron.long_investments": "4cc4d027363ba4007511f2b1330c7c06204800f33d52bbd3ac8c71caf68bcdac",
-    "input.micron.debt": "2ef8b9334edb8957557fdd32f0b929d4a4af3bedd6a16e9cc1ff2af39d63009d"
+    "input.micron.net_income": "515a2e7bb811e680de39b75de2589c80c3d0f6c8c042d5407898081706d4165c",
+    "input.micron.cash": "9fd0270fed7bdc1d5882e1d5acba5afba486f1d029f96976bd75c4b9551bdaf5",
+    "input.micron.short_investments": "2830f4c70b1e5f650d2a94f754a436dbbf232f678762bebb393392346db1cd2a",
+    "input.micron.long_investments": "4103094f856bea607a6c23550c8c6e10ff0667d60bde421adcdd30139b9d6b7b",
+    "input.micron.debt": "74d9b46164283763d34bb4c1707b397acc4086a8d5e8f13cea7f72c85be76fd0"
   }
 }
