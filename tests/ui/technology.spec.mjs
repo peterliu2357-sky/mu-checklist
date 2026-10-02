@@ -43,10 +43,6 @@ for(const width of [320,390,860])test(`manufacturing and HBM progress at ${width
   await page.goto('/#tech-micron_rdimm256');
   await expect(page.locator('#panel-business #tech-micron_rdimm256')).toBeVisible();
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
-  await page.goto('/#news-mu_rdimm_20260915');
-  await page.locator('#news-mu_rdimm_20260915 [data-tech-link]').click();
-  await expect(page.locator('#tech-micron_rdimm512')).toBeVisible();
-  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
   expect(errors).toEqual([]);
 });
 test('technology content survives the offline fallback',async({page},testInfo)=>{

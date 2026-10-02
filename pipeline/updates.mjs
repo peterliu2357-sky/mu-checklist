@@ -12,7 +12,7 @@ export function coverageKeys(scope,catalog,targets) {
   if(scope==='discovery') {
     const all=Object.keys(catalog.monitoring?.targets||{});
     if(targets?.some(k=>!all.includes(k)))throw new Error('Unknown discovery target');
-    return targets?.length?[...new Set(targets)]:all;
+    return targets?.length?[...new Set(targets)]:all.filter(k=>catalog.monitoring.targets[k].cadence!=='retired');
   }
   if(scope.startsWith('company:')) {
     if(!catalog.required_companies.includes(scope.slice(8)))throw new Error('Unknown company');
@@ -35,7 +35,8 @@ export function updatePlan(document,catalog,{mode='weekly',company,now=new Date(
     ...pending.map(e=>'company:'+e.company_id),
     ...checks.filter(c=>c.key.startsWith('company:')&&c.finding==='new_disclosure'&&!c.processed_at).map(c=>c.key)
   ]);
-  const targets=Object.keys(catalog.monitoring.targets);
+  // Retired targets keep their past checks and records but are no longer scheduled.
+  const targets=Object.keys(catalog.monitoring.targets).filter(k=>catalog.monitoring.targets[k].cadence!=='retired');
   const keys=targets.filter(k=>company?k==='company:'+company:mode==='manual'||due.has(k)||mode!=='earnings'&&catalog.monitoring.targets[k].cadence==='twice_weekly');
   const newer=checks.filter(c=>c.finding==='new_disclosure'&&!c.processed_at&&keys.includes(c.key));
   const financial=[...new Set([...pending.filter(e=>keys.includes('company:'+e.company_id)).map(e=>e.company_id),...newer.filter(c=>c.key.startsWith('company:')).map(c=>c.key.slice(8))])];
@@ -43,7 +44,7 @@ export function updatePlan(document,catalog,{mode='weekly',company,now=new Date(
   // Missing dates need calendar maintenance, not another read of unchanged reports.
   const calendarTargets=mode==='weekly'&&!company?targets.filter(k=>k.startsWith('company:')).map(k=>k.slice(8)).filter(id=>!events.some(e=>e.company_id===id&&e.confirmation==='confirmed'&&outstanding(e))):[];
   const related=id=>[...new Set(Object.values(catalog.technology?.items||{}).filter(i=>i.company_id===id).map(i=>'technology:'+({facility:'facilities',process:'processes',product:'products'})[i.type]))];
-  return {mode,as_of:now,discovery_targets:keys,calendar_targets:calendarTargets,financial_candidates:financial.map(id=>({company:id,scope:id==='micron'?'micron':'company:'+id,related_technology_targets:related(id),action:'Read newly published or revised documents; review tracked technology items; preserve old facts until the report bundle passes.'})),technology_candidates:newer.filter(c=>c.key.startsWith('technology:')).map(c=>({scope:c.key,latest_disclosure:c.latest_disclosure})),news:mode!=='earnings'&&!company,next_event_run_at:future[0]?.review_after||null,next_event_companies:future.filter(e=>e.review_after===future[0]?.review_after).map(e=>e.company_id)};
+  return {mode,as_of:now,discovery_targets:keys,calendar_targets:calendarTargets,financial_candidates:financial.map(id=>({company:id,scope:id==='micron'?'micron':'company:'+id,related_technology_targets:related(id),action:'Read newly published or revised documents; review tracked technology items; preserve old facts until the report bundle passes.'})),technology_candidates:newer.filter(c=>c.key.startsWith('technology:')).map(c=>({scope:c.key,latest_disclosure:c.latest_disclosure})),next_event_run_at:future[0]?.review_after||null,next_event_companies:future.filter(e=>e.review_after===future[0]?.review_after).map(e=>e.company_id)};
 }
 
 export function validateUpdates(d,catalog,ledger) {

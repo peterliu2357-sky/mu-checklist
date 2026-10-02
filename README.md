@@ -2,7 +2,7 @@
 
 [查看网站](https://peterliu2357-sky.github.io/mu-checklist/)
 
-财报、位元出货、库存、价格及九家产业链公司的数据监控，附 AI 动态与披露日程。财报按已确认日程和新披露定向更新；周日、周三检查行业与动态，周日补查未确认的财报日期。实绩、预测、计算与证据类型分开展示，优先适配手机。
+财报、位元出货、库存、价格及九家产业链公司的数据监控，附披露日程。财报按已确认日程和新披露定向更新；周日、周三检查行业与技术进展，周日补查未确认的财报日期。实绩、预测、计算与证据类型分开展示，优先适配手机。
 
 ## Development
 
@@ -22,7 +22,7 @@ Node 22 or later. Browser dependencies are required only for UI tests, not data 
 
 - [Agent entry point](AGENTS.md)
 - [Data pipeline and recovery](docs/PIPELINE.md)
-- [Update cadence, company calendar and AI news](docs/CADENCE.md)
+- [Update cadence and company calendar](docs/CADENCE.md)
 - [Business and source rules](MONITORING.md)
 - [Architecture and extension guide](docs/ARCHITECTURE.md)
 - [Deployment settings](docs/DEPLOYMENT.md)

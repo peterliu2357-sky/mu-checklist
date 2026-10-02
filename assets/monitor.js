@@ -8,7 +8,7 @@
   const updateTimes=globalThis.MonitorUpdateTimes;
   const technology=globalThis.TechnologyUI;
   const agent=globalThis.MonitorOutlook;
-  let data,outlook=null,updateStatus,savedData=false,updatePanelState,ecosystemGroup='cloud',newsCategory='related',newsCompany='all',newsDays=30;
+  let data,outlook=null,updateStatus,savedData=false,updatePanelState,ecosystemGroup='cloud';
   function updateTime(value,short=false){return value?`<time datetime="${esc(value)}">${esc(updateTimes.format(value,short))}</time>`:'暂无记录';}
   function renderUpdatePanel(){
     if(!data)return;
@@ -18,8 +18,8 @@
     const health=document.getElementById('update-health');
     health.textContent=savedData?'备用记录':!v.available?'时间待确认':v.warnings.length?'部分待更新':'';health.hidden=!health.textContent;
     if(!v.available){document.getElementById('update-details-body').innerHTML='<p class="update-note">更新时间记录暂不可用，数据日期以各项资料为准。</p>';return;}
-    const last=(r)=>r.last_checked_at?updateTime(r.last_checked_at):(r.key==='news'||r.key.startsWith('technology:'))?'暂无完整查新记录':'暂无核查记录';
-    const rows=v.rows.map(r=>`<article class="update-row" data-update-key="${esc(r.key)}"><h3>${esc(r.label)}</h3><dl class="update-times"><div><dt>${(r.key==='news'||r.key.startsWith('technology:'))?'上次全部来源查新':'上次核查'}</dt><dd>${last(r)}</dd></div><div><dt>下次计划启动</dt><dd>${r.next_at?`约 ${updateTime(r.next_at)}`:esc(r.next_label)}</dd></div></dl>${r.key==='quote'?`<p class="update-note">行情交易日 ${esc(updateCore.marketDate(Date.parse(data.quote.as_of)))}</p>`:''}${(r.key==='news'||r.key.startsWith('technology:'))&&r.last_content_update_at?`<p class="update-note">最近收录 ${updateTime(r.last_content_update_at)}</p>`:''}<p class="update-note">${esc(r.rule)}</p>${r.warning?`<p class="update-issue">${esc(r.warning)}</p>`:''}</article>`).join('');
+    const last=(r)=>r.last_checked_at?updateTime(r.last_checked_at):r.key.startsWith('technology:')?'暂无完整查新记录':'暂无核查记录';
+    const rows=v.rows.map(r=>`<article class="update-row" data-update-key="${esc(r.key)}"><h3>${esc(r.label)}</h3><dl class="update-times"><div><dt>${r.key.startsWith('technology:')?'上次全部来源查新':'上次核查'}</dt><dd>${last(r)}</dd></div><div><dt>下次计划启动</dt><dd>${r.next_at?`约 ${updateTime(r.next_at)}`:esc(r.next_label)}</dd></div></dl>${r.key==='quote'?`<p class="update-note">行情交易日 ${esc(updateCore.marketDate(Date.parse(data.quote.as_of)))}</p>`:''}${r.key.startsWith('technology:')&&r.last_content_update_at?`<p class="update-note">最近收录 ${updateTime(r.last_content_update_at)}</p>`:''}<p class="update-note">${esc(r.rule)}</p>${r.warning?`<p class="update-issue">${esc(r.warning)}</p>`:''}</article>`).join('');
     const finances=v.financial.map(f=>`约 ${updateTime(f.at)} · ${esc(f.label)}`).join('<br>');
     const financialWarnings=v.warnings.filter(w=>!v.rows.some(r=>r.warning&&(w===r.warning||w===r.label+'：'+r.warning)));
     const companyChecks=v.companies.map(c=>`<li><span>${esc(c.name)}</span><span>${c.last_checked_at?updateTime(c.last_checked_at):'暂无核查记录'}</span></li>`).join('');
@@ -147,17 +147,6 @@
     const eventCard=e=>`<article class="card event${released(e)?' event-pending':''}"><p class="micro">${released(e)?'已发布 · 本页待录入':e.confirmation==='confirmed'?'已确认':Date.parse(e.scheduled_at)<=now?'预计日期已过 · 待确认':'预计'} · ${esc(e.period)}</p><h3>${esc(e.title)}</h3><p>${date(e.scheduled_at,true)}</p><div class="source-links">${e.source_ids.map(id=>sourceLink(id)).join('')}</div></article>`;
     return `${[...pending,...upcoming].map(eventCard).join('')}<details class="card calendar-details"><summary>查看 ${companies.length} 家公司披露日程</summary><div>${companies.map(c=>{const state=states.find(s=>s.key==='company:'+c.id),next=upcoming.find(e=>e.company_id===c.id),waiting=pending.find(e=>e.company_id===c.id);return `<article class="calendar-company"><h3>${esc(c.name)}</h3><p>${esc(c.period)} · 披露 ${esc(c.published_at)}</p>${waiting?`<p>${esc(waiting.period)} 已于 ${date(waiting.scheduled_at)} 发布，待录入</p>`:''}<p>${next?`下次：${date(next.scheduled_at,true)}`:waiting?'':'下次披露日期待确认'}</p><p class="micro">${esc(state.check_kind)} ${checkDate(state.checked_at)}</p></article>`;}).join('')}</div></details>`;
   }
-  function newsCard(item){
-    const n=data.news,companyNames=item.companies.map(id=>n.entities[id]||id).join(' · ');
-    const facts=item.fact_refs.map(ref=>n.fact_records[ref.record_id]).filter(Boolean);
-    return `<article class="card news-card" id="news-${esc(item.id)}"><div class="news-byline"><time datetime="${esc(item.published_at)}">${date(item.published_at)}</time><span>${esc(n.categories[item.category])}</span></div><h3>${esc(item.title)}</h3><p class="news-companies">${esc(companyNames)}</p><div class="tag-group">${tags(item)}</div><p class="news-summary">${esc(item.summary)}</p>${facts.map(record=>{const row=record.payload;return `<div class="news-fact"><p class="row-label">${esc(row.label)}</p><div class="tag-group">${tags(row)}</div>${numberLine(row)}<p class="row-period">${esc(row.period||record.context.period)}</p><div class="source-links">${record.context.sources.map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">原始数据 ↗</a>`).join('')}</div></div>`;}).join('')}${item.technology_refs?.length?`<p class="news-tracking">${item.technology_refs.map(id=>`<a href="#tech-${esc(id)}" data-tech-link="tech-${esc(id)}">查看当前技术进展 →</a>`).join('')}</p>`:''}<p class="row-period">${esc(item.period)}</p><div class="source-links">${item.source_ids.map(id=>sourceLink(id)).join('')}</div><details class="news-details"><summary>原文位置与口径</summary><p>${esc(item.location)}</p>${item.note?`<p>${esc(item.note)}</p>`:''}${item.interpretation?`<p>${esc(item.interpretation)}</p>`:''}${item.updated_at.slice(0,10)!==item.published_at.slice(0,10)?`<p class="micro">更新 ${date(item.updated_at)}</p>`:''}</details></article>`;
-  }
-  function news(){
-    const n=data.news||{items:[],categories:{},entities:{}},items=updateCore.filterNews(data,{category:newsCategory,company:newsCompany,days:newsDays});
-    const state=updateCore.states(data).find(s=>s.key==='news');
-    const hidden=newsCategory==='related'?updateCore.filterNews(data,{category:'applications',company:newsCompany,days:newsDays}).length:0;
-    return `<div class="data-heading"><h2>AI 动态</h2><span>${items.length} 条</span></div><p class="section-intro">内存供需、客户投入与 AI 产品进展。</p>${panelWarnings('news')}<div class="news-filters"><label>类别<select id="news-category"><option value="related" ${newsCategory==='related'?'selected':''}>内存相关（不含 AI 应用）</option><option value="all" ${newsCategory==='all'?'selected':''}>全部类别</option>${Object.entries(n.categories).map(([id,name])=>`<option value="${esc(id)}" ${id===newsCategory?'selected':''}>${esc(name)}</option>`).join('')}</select></label><label>公司<select id="news-company"><option value="all">全部公司</option>${Object.entries(n.entities).filter(([id])=>n.items.some(item=>item.companies.includes(id))).map(([id,name])=>`<option value="${esc(id)}" ${id===newsCompany?'selected':''}>${esc(name)}</option>`).join('')}</select></label><label>期间<select id="news-days"><option value="30" ${newsDays===30?'selected':''}>近 30 天</option><option value="all" ${newsDays===null?'selected':''}>全部记录</option></select></label></div>${hidden?`<p class="micro news-hidden">另有 ${hidden} 条 AI 产品与应用动态，在“类别”中选择“全部类别”查看。</p>`:''}<p class="micro news-check">${state.checked_at?`最近查新 ${checkDate(state.checked_at)}`:'按各条原文日期收录'} · 周日、周三检查新资料</p><div id="news-list">${items.length?items.map(newsCard).join(''):'<p class="empty">这个筛选范围暂无已核实的动态。</p>'}</div>`;
-  }
   function quoteLine() {
     const q=data.quote,change=Number.isFinite(q.previous_close)&&q.previous_close>0?rowChange({current:q.price,previous:q.previous_close,unit:'USD'}):'';
     return `<div class="quote-line"><span>MU 常规收盘</span><strong>$${num(q.price)}</strong>${change?`<span class="quote-change">较前一交易日 ${esc(change)}</span>`:''}<span>${date(q.as_of)}</span>${sourceLink(q.source_id)}</div>`;
@@ -184,14 +173,13 @@
   }
   function show(panel,updateHash=true) {
     if(panel==='cycle'||panel?.startsWith('cycle-')) panel='industry';
-    if(!['overview','business','industry','ecosystem','news','updates'].includes(panel)) panel='overview';
+    if(!['overview','business','industry','ecosystem','updates'].includes(panel)) panel='overview';
     document.querySelectorAll('.panel').forEach(el=>el.hidden=el.id!==`panel-${panel}`);
     document.querySelectorAll('.nav button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.panel===panel)));
     if(updateHash) history.replaceState(null,'',`#${panel}`);
   }
   function navigateHash(scroll=true) {
     const key=location.hash.slice(1),metric=data.metrics.find(m=>m.id===(key==='valuation'?'revenue':key));
-    if(key.startsWith('news-')&&data.news?.items.some(n=>'news-'+n.id===key)){newsCategory='all';newsCompany='all';newsDays=null;document.getElementById('panel-news').innerHTML=news();show('news',false);if(scroll)document.getElementById(key)?.scrollIntoView({block:'start'});return;}
     const techItem=technology.select(data,key);
     if(techItem||['manufacturing','factories','processes','products','hbm-progress','product-comparison'].includes(key)){
       // The old 同类产品对照 anchor now lands on the HBM row in 周期.
@@ -226,7 +214,6 @@
     }
     document.getElementById('panel-updates').innerHTML=updates();
     document.getElementById('panel-ecosystem').innerHTML=panelWarnings('ecosystem')+ecosystem();
-    document.getElementById('panel-news').innerHTML=news();
     document.getElementById('refresh-data').addEventListener('click',()=>load(true));
     navigateHash(false);document.getElementById('loading').hidden=true;
   }
@@ -259,7 +246,6 @@
     event.preventDefault();history.replaceState(null,'',`#${link.dataset.metric||link.dataset.panelLink}`);navigateHash();
     if(link.dataset.panelLink) window.scrollTo({top:0,behavior:'instant'});
   });
-  document.addEventListener('change',event=>{const id=event.target.id;if(!['news-category','news-company','news-days'].includes(id))return;if(id==='news-category')newsCategory=event.target.value;if(id==='news-company')newsCompany=event.target.value;if(id==='news-days')newsDays=event.target.value==='all'?null:30;document.getElementById('panel-news').innerHTML=news();document.getElementById(id)?.focus();});
   window.addEventListener('hashchange',()=>navigateHash());
   setInterval(renderUpdatePanel,60000);
   load().then(()=>navigateHash());

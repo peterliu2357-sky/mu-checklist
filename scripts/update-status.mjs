@@ -77,7 +77,7 @@ export function buildUpdateStatus(document,snapshots,receipts,schedule){
     const key=keyFor(c.key);attempt(key,c.attempted_at,c.status);
     if(!key.startsWith('company:'))checked(key,c.checked_at);
   }
-  ensure('news');ensure('industry');
+  ensure('industry');
   if(document.technology)for(const topic of ['facilities','processes','products'])ensure('technology:'+topic);
   return {version:1,data_revision:document.revision,data_sha256:hash(document),last_data_update_at:lastDataUpdateAt,last_data_keys:lastDataKeys,checks,schedule};
 }

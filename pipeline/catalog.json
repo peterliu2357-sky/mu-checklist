@@ -3779,7 +3779,7 @@
       },
       "news": {
         "label": "AI 动态",
-        "cadence": "twice_weekly",
+        "cadence": "retired",
         "entry_urls": [
           "https://www.trendforce.com/presscenter/",
           "https://insights.trendforce.com/",
