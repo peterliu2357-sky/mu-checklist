@@ -3826,7 +3826,7 @@
         ]
       },
       "technology:products": {
-        "label": "同类产品",
+        "label": "产品进度",
         "cadence": "twice_weekly",
         "entry_urls": [
           "https://investors.micron.com/news/default.aspx",

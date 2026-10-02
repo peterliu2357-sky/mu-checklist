@@ -38,6 +38,8 @@ for(const width of [320,390,860])test(`manufacturing and HBM progress at ${width
   await page.locator('#manufacturing [data-tech-link="tech-micron_hbm4"]').click();
   await expect(page.locator('#panel-industry')).toBeVisible();
   await expect(page.locator('#tech-micron_hbm4')).toBeVisible();
+  await page.goto('/#tech-samsung_rdimm');
+  await expect(page.locator('#panel-business #manufacturing')).toBeInViewport();
   await page.goto('/#tech-micron_rdimm256');
   await expect(page.locator('#panel-business #tech-micron_rdimm256')).toBeVisible();
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);

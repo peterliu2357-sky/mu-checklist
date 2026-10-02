@@ -67,7 +67,7 @@
   }
   function metricCard(metric,index,{skip=()=>false}={}) {
     metric={...metric,rows:metric.rows.filter(r=>!skip(metric,r))};
-    return `<article class="card metric" id="${esc(metric.id)}"><div class="metric-top"><div class="metric-heading"><h3><span class="metric-number">${String(index+1).padStart(2,'0')}</span>${esc(metric.title)}</h3></div><p class="micro">${esc(metric.period)}</p><p class="definition">${esc(metric.definition)}</p></div>${metric.rows.slice(0,4).map(evidence).join('')}<details class="evidence-details"><summary>${metric.rows.length>4?`展开其余 ${metric.rows.length-4} 项数据与原文位置`:'口径与原文位置'}</summary>${metric.rows.slice(4).map(evidence).join('')}<ul class="row-basis">${metric.rows.map(rowBasis).join('')}</ul><div class="review"><h4>口径与缺失数据</h4><ul>${metric.limits.map(s=>`<li>${esc(s)}</li>`).join('')}</ul><p class="micro">引用审校 ${esc(metric.checked_at)} UTC · 下次更新 ${esc(metric.next_review)}</p></div></details><div class="interpretation"><h4>简要解读</h4><p>${esc(metric.interpretation)}</p>${data.technology&&['supply','hbm'].includes(metric.id)?`<a class="detail-link" data-tech-link="${metric.id==='supply'?'manufacturing':'product-comparison'}" href="#${metric.id==='supply'?'manufacturing':'product-comparison'}">${metric.id==='supply'?'工厂产能与制程进展':'DDR5 / HBM 技术对照'} →</a>`:''}${metric.interpretation_sources?.length?`<div class="source-links">${metric.interpretation_sources.map(id=>sourceLink(id)).join('')}</div>`:''}</div></article>`;
+    return `<article class="card metric" id="${esc(metric.id)}"><div class="metric-top"><div class="metric-heading"><h3><span class="metric-number">${String(index+1).padStart(2,'0')}</span>${esc(metric.title)}</h3></div><p class="micro">${esc(metric.period)}</p><p class="definition">${esc(metric.definition)}</p></div>${metric.rows.slice(0,4).map(evidence).join('')}<details class="evidence-details"><summary>${metric.rows.length>4?`展开其余 ${metric.rows.length-4} 项数据与原文位置`:'口径与原文位置'}</summary>${metric.rows.slice(4).map(evidence).join('')}<ul class="row-basis">${metric.rows.map(rowBasis).join('')}</ul><div class="review"><h4>口径与缺失数据</h4><ul>${metric.limits.map(s=>`<li>${esc(s)}</li>`).join('')}</ul><p class="micro">引用审校 ${esc(metric.checked_at)} UTC · 下次更新 ${esc(metric.next_review)}</p></div></details><div class="interpretation"><h4>简要解读</h4><p>${esc(metric.interpretation)}</p>${data.technology&&['supply','hbm'].includes(metric.id)?`<a class="detail-link" data-tech-link="${metric.id==='supply'?'manufacturing':'hbm-progress'}" href="#${metric.id==='supply'?'manufacturing':'hbm-progress'}">${metric.id==='supply'?'工厂产能与制程进展':'HBM 三家进度'} →</a>`:''}${metric.interpretation_sources?.length?`<div class="source-links">${metric.interpretation_sources.map(id=>sourceLink(id)).join('')}</div>`:''}</div></article>`;
   }
   function factCard(card) {
     const metric=data.metrics.find(m=>m.id===card.metric_id),row=metric.rows.find(r=>card.row_id?r.id===card.row_id:r.label===card.row_label);
@@ -197,7 +197,8 @@
       // The old 同类产品对照 anchor now lands on the HBM row in 周期.
       const target=key==='product-comparison'?'hbm-progress':key,hbm=['hbm-progress','product-comparison'].includes(key)||(techItem&&technology.place(techItem)==='industry');
       show(hbm?'industry':'business',false);
-      const el=document.getElementById(target);
+      // Products without a card of their own (peer DDR5) fall back to the manufacturing section.
+      const el=document.getElementById(target)||(techItem?document.getElementById('manufacturing'):null);
       if(el?.closest('#hbm-specs'))document.getElementById('hbm-specs').open=true;
       if(scroll)el?.scrollIntoView({block:'start'});return;
     }
