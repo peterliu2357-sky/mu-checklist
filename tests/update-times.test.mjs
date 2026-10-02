@@ -33,7 +33,7 @@ test('a source reviewed early on the scheduled day has no false missed-run alert
   const s={version:1,data_revision:d.revision,last_data_update_at:'2026-09-23T23:54:02Z',checks:{quote:{last_checked_at:'2026-09-23T22:00:00Z'},industry:{last_checked_at:'2026-09-23T23:52:00Z'},news:{last_checked_at:'2026-09-23T23:47:00Z'}},schedule:{...schedule,earnings:{enabled:false,events:[]}}};
   const v=times.view(d,s,Date.parse('2026-09-24T05:00:00Z'));
   assert.equal(v.available,true);
-  assert.equal(v.rows.find(x=>x.key==='news').warning,'');
+  assert(!v.rows.some(x=>x.key==='news'));
   assert.equal(v.rows.find(x=>x.key==='industry').warning,'');
   assert.equal(v.next.at,'2026-09-24T22:10:00.000Z');
   assert.equal(times.view({...d,revision:'other'},s).available,false);
