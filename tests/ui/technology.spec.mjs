@@ -1,7 +1,7 @@
 import {test,expect} from '@playwright/test';
 import fs from 'node:fs';
 const data=JSON.parse(fs.readFileSync(new URL('../../data/monitor.json',import.meta.url)));
-for(const width of [320,390,860])test(`manufacturing and product comparison at ${width}px`,async({page},testInfo)=>{
+for(const width of [320,390,860])test(`manufacturing and HBM progress at ${width}px`,async({page},testInfo)=>{
   const errors=[];page.on('pageerror',e=>errors.push(e.message));
   await page.setViewportSize({width,height:900});
   await page.route('**/data/monitor.json?*',r=>r.fulfill({json:data}));
@@ -19,18 +19,29 @@ for(const width of [320,390,860])test(`manufacturing and product comparison at $
   await page.goto('/#tech-dram_1gamma');
   await expect(page.locator('#tech-dram_1gamma')).toBeVisible();
   await page.goto('/#ecosystem');
-  await expect(page.locator('#product-comparison')).toBeVisible();
-  await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
-  await page.screenshot({path:testInfo.outputPath('ecosystem-page-top.png')});
-  await page.locator('#product-comparison').screenshot({path:testInfo.outputPath('ddr5-comparison.png')});
-  await page.locator('#tech-micron-model').selectOption('micron_rdimm256');
-  await expect(page.locator('#tech-micron_rdimm256')).toBeVisible();
-  await page.locator('#tech-family').selectOption('hbm4e');
-  await expect(page.locator('.tech-table')).toContainText('HBM4E');
-  if(width<600){await page.locator('#tech-peer').selectOption('skhynix');await expect(page.locator('#tech-skhynix_hbm4e')).toBeVisible();await expect(page.locator('#tech-samsung_hbm4e')).toBeHidden();}
-  else await expect(page.locator('#tech-samsung_hbm4e')).toBeVisible();
+  await expect(page.locator('#panel-ecosystem')).toBeVisible();
+  await expect(page.locator('#panel-ecosystem')).not.toContainText('同类产品对照');
+  await page.goto('/#product-comparison');
+  await expect(page.locator('#cycle-supply #hbm-progress')).toBeVisible();
+  const table=page.locator('#hbm-progress .hbm-table');
+  await expect(table.locator('tbody tr')).toHaveCount(2);
+  await expect(table.locator('thead')).toContainText('SK 海力士');
+  await expect(table).not.toContainText('功耗');
+  await page.locator('#hbm-progress').screenshot({path:testInfo.outputPath('hbm-progress.png')});
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  await table.locator('[data-tech-link="tech-skhynix_hbm4e"]').click();
+  await expect(page.locator('#hbm-specs')).toHaveAttribute('open','');
+  await expect(page.locator('#tech-skhynix_hbm4e')).toBeVisible();
   await page.locator('#tech-skhynix_hbm4e .tech-evidence summary').click();
   await expect(page.locator('#tech-skhynix_hbm4e .tech-evidence[open]')).toContainText('基准');
+  await page.goto('/#business');
+  await page.locator('#manufacturing [data-tech-link="tech-micron_hbm4"]').click();
+  await expect(page.locator('#panel-industry')).toBeVisible();
+  await expect(page.locator('#tech-micron_hbm4')).toBeVisible();
+  await page.goto('/#tech-samsung_rdimm');
+  await expect(page.locator('#panel-business #manufacturing')).toBeInViewport();
+  await page.goto('/#tech-micron_rdimm256');
+  await expect(page.locator('#panel-business #tech-micron_rdimm256')).toBeVisible();
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
   await page.goto('/#news-mu_rdimm_20260915');
   await page.locator('#news-mu_rdimm_20260915 [data-tech-link]').click();
