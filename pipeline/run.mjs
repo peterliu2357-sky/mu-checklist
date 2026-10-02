@@ -6,6 +6,9 @@ import {technologyTargets,technologyReviews} from './technology.mjs';
 export const scopeKeys=(scope,catalog,targets)=>scope==='maintenance'?[]:coverageKeys(scope,catalog,targets);
 export function createManifest({scope='full',base_commit,document,catalog,at,targets}) {
   if(!['full','micron','industry','quote','ecosystem','source_audit','discovery','news','calendar','maintenance','batch','technology',...technologyTargets(catalog)].includes(scope)&&!scope.startsWith('company:'))throw new Error('Unknown scope');
+  // Retired targets stay readable in old receipts but cannot start new collection.
+  const retired=Object.keys(catalog.monitoring?.targets||{}).filter(k=>catalog.monitoring.targets[k].cadence==='retired');
+  if(retired.includes(scope)||scopeKeys(scope,catalog,targets).some(k=>retired.includes(k)))throw new Error('Retired target: '+[scope,...(targets||[])].filter(k=>retired.includes(k)).join(','));
   return {version:1,scope,base_commit,base_revision:document.revision,base_sha256:hash(document),catalog_sha256:hash(catalog),created_at:at,completed_at:null,state:'planned',
     targets:targets||null,coverage:scopeKeys(scope,catalog,targets).map(key=>({key,status:'pending',evidence:[],reviewed_at:null,latest_disclosure:null,reason:''})),reads:[],report_bundle:[],publication_corrections:[],technology_reviews:technologyReviews(document,scopeKeys(scope,catalog,targets).filter(k=>k==='micron'||k.startsWith('company:')).map(k=>k==='micron'?'micron':k.slice(8)))};
 }
