@@ -127,11 +127,11 @@
   }
   function cycle() {
     const sections=cycleLayout(data);
-    return `<div class="data-heading"><h2>周期跟踪</h2></div><p class="section-intro">价格、供给与需求的行业资料。行业估计、报价与预测分别标识；美光自身财务见“公司”。</p><div class="section-heading"><h2>周期信号</h2><span class="small">各项最新读数 · 点击查看来源</span></div><div class="signal-grid">${cycleSignals(data).map(cycleSignal).join('')}${capexSignal()}</div>${sections.map(s=>`<section class="cycle-section" id="cycle-${esc(s.id)}" aria-label="${esc(s.title)}"><div class="section-heading"><h2>${esc(s.title)}</h2></div>${s.metrics.map(m=>metricCard(m,data.metrics.indexOf(m),{skip:isCompanyRow})).join('')}${s.id==='demand'?data.ecosystem.groups.map(groupCapex).join(''):''}</section>`).join('')}`;
+    return `<div class="data-heading"><h2>周期跟踪</h2></div><p class="section-intro">价格、供给与需求的行业资料。行业估计、报价与预测分别标识；美光自身财务见“公司”。</p><div class="section-heading"><h2>周期信号</h2><span class="small">各项最新读数 · 点击查看来源</span></div><div class="signal-grid">${cycleSignals(data).map(cycleSignal).join('')}${capexSignal()}</div>${sections.map(s=>`<section class="cycle-section" id="cycle-${esc(s.id)}" aria-label="${esc(s.title)}"><div class="section-heading"><h2>${esc(s.title)}</h2></div>${s.metrics.map(m=>metricCard(m,data.metrics.indexOf(m),{skip:isCompanyRow})).join('')}${s.id==='supply'?technology.hbmProgress(data):''}${s.id==='demand'?data.ecosystem.groups.map(groupCapex).join(''):''}</section>`).join('')}`;
   }
   function ecosystem() {
     const e=data.ecosystem;
-    return `${technology.comparison(data)}<div class="data-heading"><h2>产业链跟踪</h2><span>${e.companies.length} 家公司</span></div><p class="section-intro">客户投入、算力建设与存储供给。</p><div class="ecosystem-tabs" role="group" aria-label="产业链分组">${e.groups.map(g=>`<button type="button" data-ecosystem-group="${esc(g.id)}" aria-pressed="${g.id===ecosystemGroup}">${esc(g.title)}<span>${e.companies.filter(c=>c.group===g.id).length}</span></button>`).join('')}</div>${e.groups.map(g=>`<section class="ecosystem-group" id="ecosystem-${esc(g.id)}" aria-label="${esc(g.title)}" ${g.id===ecosystemGroup?'':'hidden'}><p class="group-description">${esc(g.description)}</p><nav class="company-jumps" aria-label="${esc(g.title)}公司跳转">${e.companies.filter(c=>c.group===g.id).map(c=>`<a href="#partner-${esc(c.id)}" data-partner="${esc(c.id)}">${esc(c.name.split(' / ')[0])}</a>`).join('')}</nav>${e.companies.filter(c=>c.group===g.id).map(partnerCard).join('')}</section>`).join('')}<p class="ecosystem-footnote">资本开支涵盖设备、网络与厂房等投入；内存采购未单独披露。产业链资料核查 ${checkDate(e.checked_at)}。</p>`;
+    return `<div class="data-heading"><h2>产业链跟踪</h2><span>${e.companies.length} 家公司</span></div><p class="section-intro">客户投入、算力建设与存储供给。</p><div class="ecosystem-tabs" role="group" aria-label="产业链分组">${e.groups.map(g=>`<button type="button" data-ecosystem-group="${esc(g.id)}" aria-pressed="${g.id===ecosystemGroup}">${esc(g.title)}<span>${e.companies.filter(c=>c.group===g.id).length}</span></button>`).join('')}</div>${e.groups.map(g=>`<section class="ecosystem-group" id="ecosystem-${esc(g.id)}" aria-label="${esc(g.title)}" ${g.id===ecosystemGroup?'':'hidden'}><p class="group-description">${esc(g.description)}</p><nav class="company-jumps" aria-label="${esc(g.title)}公司跳转">${e.companies.filter(c=>c.group===g.id).map(c=>`<a href="#partner-${esc(c.id)}" data-partner="${esc(c.id)}">${esc(c.name.split(' / ')[0])}</a>`).join('')}</nav>${e.companies.filter(c=>c.group===g.id).map(partnerCard).join('')}</section>`).join('')}<p class="ecosystem-footnote">资本开支涵盖设备、网络与厂房等投入；内存采购未单独披露。产业链资料核查 ${checkDate(e.checked_at)}。</p>`;
   }
   function selectEcosystemGroup(group) {
     if(!data.ecosystem.groups.some(g=>g.id===group)) return;
@@ -193,11 +193,13 @@
     const key=location.hash.slice(1),metric=data.metrics.find(m=>m.id===(key==='valuation'?'revenue':key));
     if(key.startsWith('news-')&&data.news?.items.some(n=>'news-'+n.id===key)){newsCategory='all';newsCompany='all';newsDays=null;document.getElementById('panel-news').innerHTML=news();show('news',false);if(scroll)document.getElementById(key)?.scrollIntoView({block:'start'});return;}
     const techItem=technology.select(data,key);
-    if(techItem||['manufacturing','factories','processes','product-comparison'].includes(key)){
-      const product=techItem?.type==='product'||key==='product-comparison';
-      if(product&&data.technology)document.getElementById('product-comparison').outerHTML=technology.comparison(data);
-      show(product?'ecosystem':'business',false);
-      if(scroll)document.getElementById(key)?.scrollIntoView({block:'start'});return;
+    if(techItem||['manufacturing','factories','processes','products','hbm-progress','product-comparison'].includes(key)){
+      // The old 同类产品对照 anchor now lands on the HBM row in 周期.
+      const target=key==='product-comparison'?'hbm-progress':key,hbm=['hbm-progress','product-comparison'].includes(key)||(techItem&&technology.place(techItem)==='industry');
+      show(hbm?'industry':'business',false);
+      const el=document.getElementById(target);
+      if(el?.closest('#hbm-specs'))document.getElementById('hbm-specs').open=true;
+      if(scroll)el?.scrollIntoView({block:'start'});return;
     }
     const partner=data.ecosystem.companies.find(c=>`partner-${c.id}`===key);
     if(partner) {show('ecosystem',false);selectEcosystemGroup(partner.group);if(scroll)document.getElementById(key)?.scrollIntoView({behavior:'instant',block:'start'});return;}
@@ -256,7 +258,7 @@
     event.preventDefault();history.replaceState(null,'',`#${link.dataset.metric||link.dataset.panelLink}`);navigateHash();
     if(link.dataset.panelLink) window.scrollTo({top:0,behavior:'instant'});
   });
-  document.addEventListener('change',event=>{const id=event.target.id;if(['tech-family','tech-peer','tech-micron-model'].includes(id)){technology.change(id,event.target.value);document.getElementById('product-comparison').outerHTML=technology.comparison(data);document.getElementById(id)?.focus();return;}if(!['news-category','news-company','news-days'].includes(id))return;if(id==='news-category')newsCategory=event.target.value;if(id==='news-company')newsCompany=event.target.value;if(id==='news-days')newsDays=event.target.value==='all'?null:30;document.getElementById('panel-news').innerHTML=news();document.getElementById(id)?.focus();});
+  document.addEventListener('change',event=>{const id=event.target.id;if(!['news-category','news-company','news-days'].includes(id))return;if(id==='news-category')newsCategory=event.target.value;if(id==='news-company')newsCompany=event.target.value;if(id==='news-days')newsDays=event.target.value==='all'?null:30;document.getElementById('panel-news').innerHTML=news();document.getElementById(id)?.focus();});
   window.addEventListener('hashchange',()=>navigateHash());
   setInterval(renderUpdatePanel,60000);
   load().then(()=>navigateHash());

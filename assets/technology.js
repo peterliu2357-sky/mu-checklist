@@ -1,7 +1,6 @@
 (function(){
   'use strict';
   const core=globalThis.MonitorTechnology;
-  let group='ddr5_rdimm',peer='samsung',micronModel='micron_rdimm512';
   const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const link=(id,text)=>`<a href="#${esc(id)}" data-tech-link="${esc(id)}">${esc(text)} →</a>`;
   const stage=i=>`<span class="tech-stage">${esc(core.stages[i.stage])}</span>`;
@@ -29,24 +28,28 @@
   }
   function manufacturing(data){
     const items=data.technology?.items;if(!items)return '';
-    const hbm=items.filter(i=>i.type==='product'&&i.company_id==='micron'&&i.family.startsWith('hbm'));
-    return `<section id="manufacturing" class="tech-section"><div class="data-heading"><h2>美光制造与技术</h2></div><p class="section-intro">重点制造项目、制程效率与下一里程碑。各条保留原披露日期。</p><nav class="tech-jumps" aria-label="制造与技术跳转">${link('factories','工厂与产能')}${link('processes','制程换代')}${link('product-comparison','同类产品')}</nav><h3 id="factories" class="tech-subheading">工厂与产能</h3>${warnings(data,'facilities')}<div class="tech-grid">${items.filter(i=>i.type==='facility').map(i=>card(data,i)).join('')}</div><h3 id="processes" class="tech-subheading">制程换代</h3>${warnings(data,'processes')}<div class="tech-grid">${items.filter(i=>i.type==='process').map(i=>card(data,i)).join('')}</div><article class="card tech-hbm"><h3>HBM 代际与封装</h3><div>${hbm.map(i=>`<p>${link('tech-'+i.id,i.name)} ${stage(i)}<span class="micro"> ${esc(i.as_of)}</span></p>`).join('')}</div><p class="tech-note">DRAM 制程、堆叠封装和产品代际共同跟踪。</p></article></section>`;
+    const hbm=items.filter(i=>i.type==='product'&&i.company_id==='micron'&&i.family.startsWith('hbm')),ddr5=items.filter(i=>i.type==='product'&&i.company_id==='micron'&&!i.family.startsWith('hbm'));
+    return `<section id="manufacturing" class="tech-section"><div class="data-heading"><h2>美光制造与技术</h2></div><p class="section-intro">重点制造项目、制程效率与下一里程碑。各条保留原披露日期。</p><nav class="tech-jumps" aria-label="制造与技术跳转">${link('factories','工厂与产能')}${link('processes','制程换代')}${link('products','DDR5 产品')}${link('hbm-progress','HBM 三家进度')}</nav><h3 id="factories" class="tech-subheading">工厂与产能</h3>${warnings(data,'facilities')}<div class="tech-grid">${items.filter(i=>i.type==='facility').map(i=>card(data,i)).join('')}</div><h3 id="processes" class="tech-subheading">制程换代</h3>${warnings(data,'processes')}<div class="tech-grid">${items.filter(i=>i.type==='process').map(i=>card(data,i)).join('')}</div><article class="card tech-hbm"><h3>HBM 代际与封装</h3><div>${hbm.map(i=>`<p>${link('tech-'+i.id,i.name)} ${stage(i)}<span class="micro"> ${esc(i.as_of)}</span></p>`).join('')}</div><p class="tech-note">DRAM 制程、堆叠封装和产品代际共同跟踪；三家对照见“周期”。</p></article>${ddr5.length?`<h3 id="products" class="tech-subheading">DDR5 产品</h3>${warnings(data,'products')}<div class="tech-product-details">${ddr5.map(i=>product(data,i)).join('')}</div>`:''}</section>`;
   }
   function highlights(data){
     if(!data.technology)return '';
     return `<div class="section-heading"><h2>制造与技术进展</h2></div><section class="card tech-highlights">${data.technology.highlights.map(id=>data.technology.items.find(i=>i.id===id)).map(i=>`<article><div><h3>${link('tech-'+i.id,i.name)}</h3><p>${esc(i.summary)}</p></div><p class="micro">${esc(i.as_of)}<br>${esc(core.stages[i.stage])}</p></article>`).join('')}</section>`;
   }
-  function comparison(data){
-    const items=data.technology?.items;if(!items)return '';
-    const cols=core.comparison(items,group,peer),models=items.filter(i=>i.type==='product'&&i.family===group&&i.company_id==='micron');
-    cols[0].item=models.find(i=>i.id===micronModel)||models[0];
-    const mobile=c=>c.mobile?'':' tech-desktop';
-    const row=(label,render)=>`<tr><th scope="row">${label}</th>${cols.map(c=>`<td class="${mobile(c)}">${c.item?render(c.item):'暂无可核实披露'}</td>`).join('')}</tr>`;
-    const rows=[row('产品 / 阶段',i=>`<strong>${esc(i.name)}</strong>${stage(i)}<p class="micro">${date(i)}</p>`),...['capacity','speed',...(group==='ddr5_rdimm'?[]:['stack','bandwidth']),'process','next_milestone','power'].map(id=>row(({capacity:group==='ddr5_rdimm'?'单模块容量':'单堆栈容量',speed:group==='ddr5_rdimm'?'速率':'单针速率',stack:'堆叠',bandwidth:'带宽',process:'制程 / 封装',next_milestone:'后续里程碑',power:'绝对功耗'})[id],i=>field(core.fact(i,id)))),row('厂商自比',i=>{const f=core.fact(i,'power_change');return f?`<p class="micro">${esc(f.label)}</p>${field(f)}`:'未披露';})].join('');
-    const powerComparable=cols.slice(1).filter(c=>c.mobile).some(c=>core.comparablePower(cols[0].item,c.item));
-    return `<section id="product-comparison" class="tech-section"><div class="data-heading"><h2>同类产品对照</h2></div><p class="section-intro">规格与商业化阶段并列；容量按模块或堆栈记录，GB 与裸片 Gb 分别标识。</p>${warnings(data,'products')}<div class="tech-controls"><label>产品类型<select id="tech-family">${Object.entries(core.groups).map(([id,label])=>`<option value="${id}" ${group===id?'selected':''}>${label}</option>`).join('')}</select></label>${models.length>1?`<label>美光规格<select id="tech-micron-model">${models.map(i=>`<option value="${esc(i.id)}" ${cols[0].item?.id===i.id?'selected':''}>${esc(i.name)}</option>`).join('')}</select></label>`:''}<label class="tech-peer-control">对照公司<select id="tech-peer"><option value="samsung" ${peer==='samsung'?'selected':''}>三星</option><option value="skhynix" ${peer==='skhynix'?'selected':''}>SK 海力士</option></select></label></div><p class="tech-comparison-note">${powerComparable?'已有匹配测试条件的绝对功耗记录，详细条件见下方。':'跨厂商功耗：缺少相同平台、容量、速率与负载下的完整测试。厂商自比栏保留各自基准。'}</p><div class="card tech-table-wrap"><table class="tech-table"><caption class="sr-only">${esc(core.groups[group])} 产品规格及进展对照</caption><thead><tr><th scope="col">指标</th>${cols.map(c=>`<th scope="col" class="${mobile(c)}">${esc(core.companies[c.company])}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div><div class="tech-product-details">${cols.filter(c=>c.item).map(c=>`<article class="card tech-product ${mobile(c)}" id="tech-${esc(c.item.id)}"><header><h3>${esc(core.companies[c.company])} · ${esc(c.item.name)}</h3><p>${esc(c.item.summary)}</p>${sources(data,c.item.source_ids)}</header>${details(data,c.item)}</article>`).join('')}</div></section>`;
+  function product(data,i){
+    return `<article class="card tech-product" id="tech-${esc(i.id)}"><header><h3>${esc(core.companies[i.company_id])} · ${esc(i.name)}</h3><p class="micro">${stage(i)} ${date(i)}</p><p>${esc(i.summary)}</p>${sources(data,i.source_ids)}</header>${details(data,i)}</article>`;
   }
-  function select(data,id){const i=data.technology?.items.find(i=>'tech-'+i.id===id);if(i?.type==='product'){group=i.family;if(i.company_id==='micron')micronModel=i.id;else peer=i.company_id;}return i;}
-  function change(id,value){if(id==='tech-family')group=value;if(id==='tech-peer')peer=value;if(id==='tech-micron-model')micronModel=value;}
-  globalThis.TechnologyUI={manufacturing,highlights,comparison,select,change};
+  // HBM stage per maker sits under 供给 on the cycle tab; specs stay one click away.
+  const hbmFamilies=['hbm4','hbm4e'],makers=['micron','samsung','skhynix'];
+  const isHbm=i=>i?.type==='product'&&hbmFamilies.includes(i.family);
+  function hbmProgress(data){
+    const items=data.technology?.items;if(!items)return '';
+    const hbm=items.filter(isHbm);if(!hbm.length)return '';
+    const cell=i=>i?`<a href="#tech-${esc(i.id)}" data-tech-link="tech-${esc(i.id)}">${stage(i)}</a><p class="micro">${esc(i.as_of)}</p>`:'<span class="muted">暂无披露</span>';
+    const rows=hbmFamilies.map(f=>`<tr><th scope="row">${esc(core.groups[f])}</th>${makers.map(c=>`<td>${cell(hbm.find(i=>i.family===f&&i.company_id===c))}</td>`).join('')}</tr>`).join('');
+    return `<section id="hbm-progress" class="tech-section hbm-progress"><h3 class="tech-subheading">HBM 三家进度</h3><p class="section-intro">三家厂商各代 HBM 的最新披露阶段与日期；点击查看规格与来源。</p>${warnings(data,'products')}<div class="card tech-table-wrap"><table class="tech-table hbm-table"><caption class="sr-only">HBM 各代三家厂商阶段</caption><thead><tr><th scope="col">代际</th>${makers.map(c=>`<th scope="col">${esc(core.companies[c])}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div><details id="hbm-specs" class="hbm-specs"><summary>规格、测试条件与来源</summary><div class="tech-product-details">${hbmFamilies.flatMap(f=>makers.map(c=>hbm.find(i=>i.family===f&&i.company_id===c))).filter(Boolean).map(i=>product(data,i)).join('')}</div></details></section>`;
+  }
+  // Where a product lives: HBM on the cycle tab, Micron's other products on the company tab.
+  function place(item){return isHbm(item)?'industry':'business';}
+  function select(data,id){return data.technology?.items.find(i=>'tech-'+i.id===id);}
+  globalThis.TechnologyUI={manufacturing,highlights,hbmProgress,place,select};
 })();
