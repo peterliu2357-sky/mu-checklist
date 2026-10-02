@@ -10,7 +10,8 @@ This public repository is a facts-first Micron monitor. Read this file, `MONITOR
    Both routine plans also include the three `technology:*` targets. Read `docs/TECHNOLOGY.md`: factory, process and product updates require topic coverage; new Micron/Samsung/SK hynix reports require a reviewed result for every tracked item. Do not reduce scheduler targets to a fixed industry/news list.
 4. Read original sources and identify the latest disclosure, not merely the previously linked report. Capture what was actually read. Fill the candidate, evidence drafts and run coverage as described in the pipeline guide.
 5. `build` is a dry run. Resolve errors before `apply`. A failed/partial run keeps old facts and successful-check dates. A valid failure receipt may be published to explain the failed attempt.
-6. Validate the applied files, run regression/mobile tests, publish them atomically, then verify deployment and the complete live data hash.
+6. Refresh the agent analysis (`data/outlook.json`) against the data you are about to publish; see "Agent analysis" in `MONITORING.md`. Every Sunday and Wednesday run does this, even when no facts changed.
+7. Validate the applied files, run regression/mobile tests, publish them atomically, then verify deployment and the complete live data hash.
 
 ## Boundaries
 
@@ -29,6 +30,6 @@ Repository checks are `Monitor checks and Pages / Data and UI contracts`. GitHub
 
 ## Content and notification policy
 
-Facts, periods, comparable prior values and direct links come first. Keep forecasts, indirect evidence, secondary reports and gaps explicit. Preserve company/segment, currency/unit, quarter/YTD, GAAP/non-GAAP, quarter-end/post-quarter, and regular-close/after-hours distinctions. No investment scores, buy/sell opinions, valuation scenarios, private holdings, costs, conversations, credentials, or automation/task identifiers in this repository.
+The one exception to "no opinions" is the agent analysis on 总览 (`data/outlook.json`): a business-outlook stance (整体向好 / 整体偏弱 / 待更多数据) with a cited analysis, written only from data already on the site. It never contains trading advice, price targets or valuation. Facts, periods, comparable prior values and direct links come first. Keep forecasts, indirect evidence, secondary reports and gaps explicit. Preserve company/segment, currency/unit, quarter/YTD, GAAP/non-GAAP, quarter-end/post-quarter, and regular-close/after-hours distinctions. No investment scores, buy/sell opinions, valuation scenarios, private holdings, costs, conversations, credentials, or automation/task identifiers in this repository.
 
 Notify in Chinese only for substantive new facts, report updates or failures; don't create noise for unchanged data or routine price changes. Do not change unrelated automations. Full source correspondence still requires reading the cited original; a passing type check does not prove the source's meaning.

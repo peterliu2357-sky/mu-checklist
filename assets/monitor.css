@@ -154,3 +154,29 @@
 .sparkline g:hover .dot{r:4.5}
 .sparkline figcaption{display:flex;justify-content:space-between;font-size:10px;color:var(--muted);margin-top:2px}
 @media(min-width:700px){.signal-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+/* Agent analysis: one collapsed header line on 总览; the full analysis opens below it. */
+.agent-outlook{margin-bottom:22px}
+.agent-outlook>summary{list-style:none;display:block;padding:15px 18px;min-height:48px;cursor:pointer}
+.agent-outlook>summary::-webkit-details-marker{display:none}
+.ao-head{display:flex;align-items:center;flex-wrap:wrap;gap:6px 9px}
+.ao-label{font-size:12px;font-weight:700;color:var(--ink);letter-spacing:.3px}
+.ao-stance{font-size:12px;font-weight:650;padding:2px 8px;border-radius:6px;line-height:1.7}
+.ao-stance.positive{color:var(--green);background:var(--green-bg)}
+.ao-stance.wait{color:var(--amber);background:var(--amber-bg)}
+.ao-stance.negative{color:#9c4627;background:#f8e9e2}
+.ao-date{font-size:11px;color:var(--muted)}
+.ao-chevron{margin-left:auto;color:var(--green);font-size:16px;transition:transform .15s}
+.agent-outlook[open] .ao-chevron{transform:rotate(180deg)}
+.ao-summary{display:block;margin-top:7px;font-size:14px;line-height:1.8;color:#3f544a}
+.ao-value{font-weight:650;color:var(--ink);font-variant-numeric:tabular-nums}
+.ao-body{border-top:1px solid var(--line);padding:4px 18px 16px}
+.ao-section h3{font-size:14px;margin:14px 0 4px}
+.ao-section ul{list-style:none;margin:0;padding:0}
+.ao-section li{padding:8px 0;border-top:1px solid #edf0e9}
+.ao-section li:first-child{border-top:0}
+.ao-section p{font-size:13px;line-height:1.85;color:#40554c;overflow-wrap:anywhere}
+.ao-refs{display:block;font-size:11px;line-height:1.7;color:var(--muted);margin-top:3px;overflow-wrap:anywhere}
+.ao-refs a{color:var(--muted);text-decoration:underline;text-decoration-color:#cad7cc;text-underline-offset:2px}
+.ao-note{font-size:11px;line-height:1.8;color:var(--muted);margin-top:14px;padding-top:10px;border-top:1px solid var(--line)}
+@media(min-width:700px){.agent-outlook>summary{padding:17px 27px}.ao-body{padding:4px 27px 18px}}
+@media(prefers-reduced-motion:reduce){.ao-chevron{transition:none}}

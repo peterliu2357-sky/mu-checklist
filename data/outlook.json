@@ -1,0 +1,514 @@
+{
+  "format_version": 1,
+  "stance": "positive",
+  "summary": "基本面整体向好：收入、毛利率和下季指引仍在上升，长约与云厂商投入支撑需求；但售价涨幅收窄、库存天数回升，是需要紧盯的早期转折信号。",
+  "summary_refs": [
+    "mu.revenue.total",
+    "mu.margin.nongaap",
+    "guidance.revenue",
+    "mu.orders.rpo_post_quarter",
+    "mu.asp.dram",
+    "mu.inventory.days"
+  ],
+  "sections": [
+    {
+      "id": "earnings",
+      "title": "收入与利润",
+      "points": [
+        {
+          "text": "FY2026 Q4 总收入 {{mu.revenue.total}}，环比 {{mu.revenue.total|change}}；一年前的 FY2025 Q4 为 {{series.mu.revenue.total@FY2025 Q4}}。",
+          "refs": [
+            "mu.revenue.total",
+            "series.mu.revenue.total@FY2025 Q4"
+          ]
+        },
+        {
+          "text": "非 GAAP 毛利率由 FY2025 Q2 的 {{series.mu.margin.nongaap@FY2025 Q2}} 逐季上升至本季 {{mu.margin.nongaap}}。",
+          "refs": [
+            "series.mu.margin.nongaap@FY2025 Q2",
+            "series.mu.margin.nongaap@FY2025 Q3",
+            "series.mu.margin.nongaap@FY2025 Q4",
+            "series.mu.margin.nongaap@FY2026 Q1",
+            "series.mu.margin.nongaap@FY2026 Q2",
+            "series.mu.margin.nongaap@FY2026 Q3",
+            "mu.margin.nongaap"
+          ]
+        },
+        {
+          "text": "FY2027 Q1 指引继续高于本季：收入 {{guidance.revenue}}，非 GAAP EPS {{guidance.eps_nongaap}}（本季 {{mu.revenue.eps_nongaap}}）。",
+          "refs": [
+            "guidance.revenue",
+            "guidance.eps_nongaap",
+            "mu.revenue.eps_nongaap",
+            "mu.revenue.total"
+          ]
+        },
+        {
+          "text": "现金创造强：经营现金流 {{mu.cash.operating}}，调整后自由现金流 {{mu.cash.adjusted_fcf}}，净现金升至 {{mu.capex.net_cash}}。",
+          "refs": [
+            "mu.cash.operating",
+            "mu.cash.adjusted_fcf",
+            "mu.capex.net_cash"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "demand",
+      "title": "需求与订单",
+      "points": [
+        {
+          "text": "数据中心两个部门（CMBU + CDBU）占收入 {{mu.revenue.datacenter_share}}；CDBU 环比 {{mu.revenue.cdbu|change}}，是增长最快的部门。",
+          "refs": [
+            "mu.revenue.datacenter_share",
+            "mu.revenue.cdbu",
+            "mu.revenue.cmbu",
+            "mu.revenue.mcbu",
+            "mu.revenue.aebu"
+          ]
+        },
+        {
+          "text": "已签战略协议增至 {{mu.orders.agreements}}，含季后协议的 RPO 为 {{mu.orders.rpo_post_quarter}}（公司披露，非季末数）。合同条款：{{mu.orders.terms}}；协议收入覆盖：{{mu.orders.coverage}}。",
+          "refs": [
+            "mu.orders.agreements",
+            "mu.orders.rpo_post_quarter",
+            "mu.orders.terms",
+            "mu.orders.coverage"
+          ]
+        },
+        {
+          "text": "主要云厂商最近一季现金资本开支同比大增：Microsoft {{eco.microsoft.capex|change}}，Amazon {{eco.amazon.capex|change}}，Alphabet {{eco.alphabet.capex|change}}，Meta {{eco.meta.capex|change}}，Oracle {{eco.oracle.capex|change}}；Alphabet 把全年资本开支指引上调至 {{outlook.alphabet.capex}}。",
+          "refs": [
+            "eco.microsoft.capex",
+            "eco.amazon.capex",
+            "eco.alphabet.capex",
+            "eco.meta.capex",
+            "eco.oracle.capex",
+            "outlook.alphabet.capex"
+          ]
+        },
+        {
+          "text": "英伟达数据中心收入同比 {{eco.nvidia.datacenter|change}}；Microsoft 与 Oracle 管理层都表示 AI 云需求仍快于供给，三星预计服务器 DRAM、企业 SSD 与 HBM 需求加速。",
+          "refs": [
+            "eco.nvidia.datacenter",
+            "outlook.microsoft.demand",
+            "outlook.oracle.demand",
+            "outlook.samsung.demand"
+          ]
+        },
+        {
+          "text": "企业 SSD 交付周期为 {{mu.demand.essd_lead_time}}，说明交付仍受约束；这是间接指标，不等于美光的出货量。",
+          "refs": [
+            "mu.demand.essd_lead_time"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pricing",
+      "title": "价格与供给",
+      "points": [
+        {
+          "text": "本季 DRAM 售价环比{{mu.asp.dram}}，NAND 售价环比{{mu.asp.nand}}；行业对 2026 Q3 普通型 DRAM 合同价的预测为 {{mu.contract.dram_forecast}}。",
+          "refs": [
+            "mu.asp.dram",
+            "mu.asp.nand",
+            "mu.contract.dram_forecast"
+          ]
+        },
+        {
+          "text": "TrendForce 预测 2026 年 DRAM 供需充足率为 {{mu.supply.dram_balance}}；美光自己的展望是{{mu.supply.micron_outlook}}。两者都是预测，尚未实现。",
+          "refs": [
+            "mu.supply.dram_balance",
+            "mu.supply.micron_outlook"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "turning",
+      "title": "需要紧盯的转折信号",
+      "points": [
+        {
+          "text": "库存天数由 FY2026 Q3 的 {{series.mu.inventory.days@FY2026 Q3}} 回升至 {{mu.inventory.days}}，总库存环比 {{mu.inventory.total|change}}。此前自 FY2025 Q2 的 {{series.mu.inventory.days@FY2025 Q2}} 起总体下降；公司称增加部分来自节点停产前备货，构成要等年报附注。",
+          "refs": [
+            "series.mu.inventory.days@FY2026 Q3",
+            "mu.inventory.days",
+            "mu.inventory.total",
+            "series.mu.inventory.days@FY2025 Q2",
+            "series.mu.inventory.days@FY2025 Q3",
+            "series.mu.inventory.days@FY2025 Q4",
+            "series.mu.inventory.days@FY2026 Q1",
+            "series.mu.inventory.days@FY2026 Q2"
+          ]
+        },
+        {
+          "text": "售价仍在上涨，但站内记录显示 DRAM、NAND 涨幅较 FQ3 收窄；NAND 合同价趋势为「{{mu.contract.nand_trend}}」，DDR4 现货 {{mu.contract.ddr4_spot|change}}。",
+          "refs": [
+            "mu.asp.dram",
+            "mu.asp.nand",
+            "mu.contract.nand_trend",
+            "mu.contract.ddr4_spot"
+          ]
+        },
+        {
+          "text": "下季毛利率指引 {{guidance.margin_nongaap}}，略低于本季 {{mu.margin.nongaap}}；若兑现，将是 FY2025 Q2 以来首次环比下降。",
+          "refs": [
+            "guidance.margin_nongaap",
+            "mu.margin.nongaap",
+            "series.mu.margin.nongaap@FY2025 Q1",
+            "series.mu.margin.nongaap@FY2025 Q2"
+          ]
+        },
+        {
+          "text": "消费端偏弱：手机与客户端位元出货{{mu.volume.mobile_bits}}，手机客户方面{{mu.demand.mobile_inventory_proxy}}；三星也预计手机与 PC 需求部分放缓，TrendForce 的 NAND 展望为「{{mu.supply.nand_outlook}}」。",
+          "refs": [
+            "mu.volume.mobile_bits",
+            "mu.demand.mobile_inventory_proxy",
+            "outlook.samsung.demand",
+            "mu.supply.nand_outlook"
+          ]
+        },
+        {
+          "text": "供给在扩张：美光净资本开支 {{mu.capex.net}}，占收入 {{mu.capex.revenue_ratio}}，FY2027 计划{{mu.capex.next_year}}；SK 海力士计划加快新产线量产、2027 年初开放龙仁一期洁净室，三星计划扩大 HBM4 与 DDR5 供给。这些产能何时落地，是判断供需何时转松的关键。",
+          "refs": [
+            "mu.capex.net",
+            "mu.capex.revenue_ratio",
+            "mu.capex.next_year",
+            "outlook.skhynix.capacity",
+            "outlook.samsung.products"
+          ]
+        },
+        {
+          "text": "HBM 营收份额（媒体转引）由 {{mu.hbm.revenue_share|previous}} 降至 {{mu.hbm.revenue_share}}。",
+          "refs": [
+            "mu.hbm.revenue_share"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gaps",
+      "title": "还无法判断的部分",
+      "points": [
+        {
+          "text": "客户实际内存库存、同组合每位元成本和 HBM 良率尚未取得；库存构成、季末 RPO 与合同负债要等年报附注。缺少这些数据，无法区分终端真实消耗与客户提前备货。",
+          "refs": [
+            "mu.demand.customer_inventory",
+            "mu.margin.bit_cost",
+            "mu.hbm.yield",
+            "mu.inventory.finished_goods",
+            "mu.orders.rpo_quarter_end",
+            "mu.orders.contract_liability"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "title": "什么会改变判断",
+      "points": [
+        {
+          "text": "转向「待更多数据」：下季库存天数继续上升、售价涨幅进一步收窄、合同价预测转为持平或下跌，或客户库存数据显示备货偏高。",
+          "refs": [
+            "mu.inventory.days",
+            "mu.asp.dram",
+            "mu.contract.dram_forecast",
+            "mu.demand.customer_inventory"
+          ]
+        },
+        {
+          "text": "维持「整体向好」：FY2027 Q1 收入达到指引，长约与 RPO 继续增加，云厂商资本开支指引维持或上调。",
+          "refs": [
+            "guidance.revenue",
+            "mu.orders.rpo_post_quarter",
+            "outlook.microsoft.annual_capex",
+            "outlook.meta.capex",
+            "outlook.alphabet.capex"
+          ]
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-10-02T00:34:22.822Z",
+  "data_revision": "2026-10-01-7f1707245f",
+  "financial_period": "FY2026 Q4",
+  "cited": {
+    "mu.revenue.total": {
+      "current": 54229,
+      "previous": 41456
+    },
+    "mu.margin.nongaap": {
+      "current": 87,
+      "previous": 84.9
+    },
+    "guidance.revenue": {
+      "current": 61500,
+      "previous": null
+    },
+    "mu.orders.rpo_post_quarter": {
+      "current": 150000,
+      "previous": 100000
+    },
+    "mu.asp.dram": {
+      "current": "十几百分比高段增长",
+      "previous": null
+    },
+    "mu.inventory.days": {
+      "current": 129,
+      "previous": null
+    },
+    "series.mu.revenue.total@FY2025 Q4": {
+      "current": 11315,
+      "previous": null
+    },
+    "series.mu.margin.nongaap@FY2025 Q2": {
+      "current": 37.9,
+      "previous": null
+    },
+    "series.mu.margin.nongaap@FY2025 Q3": {
+      "current": 39,
+      "previous": null
+    },
+    "series.mu.margin.nongaap@FY2025 Q4": {
+      "current": 45.7,
+      "previous": null
+    },
+    "series.mu.margin.nongaap@FY2026 Q1": {
+      "current": 56.8,
+      "previous": null
+    },
+    "series.mu.margin.nongaap@FY2026 Q2": {
+      "current": 74.9,
+      "previous": null
+    },
+    "series.mu.margin.nongaap@FY2026 Q3": {
+      "current": 84.9,
+      "previous": null
+    },
+    "guidance.eps_nongaap": {
+      "current": 38.15,
+      "previous": null
+    },
+    "mu.revenue.eps_nongaap": {
+      "current": 33.42,
+      "previous": 25.11
+    },
+    "mu.cash.operating": {
+      "current": 43973,
+      "previous": 25388
+    },
+    "mu.cash.adjusted_fcf": {
+      "current": 33199,
+      "previous": 18304
+    },
+    "mu.capex.net_cash": {
+      "current": 68274,
+      "previous": 24406
+    },
+    "mu.revenue.datacenter_share": {
+      "current": 63.22262995814047,
+      "previous": 61.01167502894636
+    },
+    "mu.revenue.cdbu": {
+      "current": 18002,
+      "previous": 11524
+    },
+    "mu.revenue.cmbu": {
+      "current": 16283,
+      "previous": 13769
+    },
+    "mu.revenue.mcbu": {
+      "current": 13114,
+      "previous": 11521
+    },
+    "mu.revenue.aebu": {
+      "current": 6824,
+      "previous": 4634
+    },
+    "mu.orders.agreements": {
+      "current": 26,
+      "previous": 16
+    },
+    "mu.orders.terms": {
+      "current": "全部为 take-or-pay；约四分之三有定价框架",
+      "previous": null
+    },
+    "mu.orders.coverage": {
+      "current": "超过 2030 年前收入的 35%（公司估计）",
+      "previous": null
+    },
+    "eco.microsoft.capex": {
+      "current": 35802,
+      "previous": 17079
+    },
+    "eco.amazon.capex": {
+      "current": 54208,
+      "previous": 32183
+    },
+    "eco.alphabet.capex": {
+      "current": 44924,
+      "previous": 22446
+    },
+    "eco.meta.capex": {
+      "current": 30116,
+      "previous": 16538
+    },
+    "eco.oracle.capex": {
+      "current": 28499,
+      "previous": 8502
+    },
+    "outlook.alphabet.capex": {
+      "current": "1,950–2,050 亿美元",
+      "previous": null
+    },
+    "eco.nvidia.datacenter": {
+      "current": 89000,
+      "previous": 41100
+    },
+    "outlook.microsoft.demand": {
+      "current": "客户需求仍超过供给，预计上半年 Azure 增长加速；FY2027 资本开支继续同比增加。",
+      "previous": null
+    },
+    "outlook.oracle.demand": {
+      "current": "公司称 AI 训练与推理需求的增长仍快于供给。",
+      "previous": null
+    },
+    "outlook.samsung.demand": {
+      "current": "预计服务器 DRAM、企业 SSD 与 HBM 需求加速，供给仍偏紧；手机与 PC 需求部分放缓。",
+      "previous": null
+    },
+    "mu.demand.essd_lead_time": {
+      "current": "16 周（均衡基准 8 周）",
+      "previous": null
+    },
+    "mu.asp.nand": {
+      "current": "约 30% 增长",
+      "previous": null
+    },
+    "mu.contract.dram_forecast": {
+      "current": "+13% 至 +18%",
+      "previous": null
+    },
+    "mu.supply.dram_balance": {
+      "current": "约 −1% 至 −2%",
+      "previous": null
+    },
+    "mu.supply.micron_outlook": {
+      "current": "紧张延续至 2027 年之后",
+      "previous": null
+    },
+    "series.mu.inventory.days@FY2026 Q3": {
+      "current": 120,
+      "previous": null
+    },
+    "mu.inventory.total": {
+      "current": 10372,
+      "previous": 8567
+    },
+    "series.mu.inventory.days@FY2025 Q2": {
+      "current": 158,
+      "previous": null
+    },
+    "series.mu.inventory.days@FY2025 Q3": {
+      "current": 139,
+      "previous": null
+    },
+    "series.mu.inventory.days@FY2025 Q4": {
+      "current": 124,
+      "previous": null
+    },
+    "series.mu.inventory.days@FY2026 Q1": {
+      "current": 126,
+      "previous": null
+    },
+    "series.mu.inventory.days@FY2026 Q2": {
+      "current": 123,
+      "previous": null
+    },
+    "mu.contract.nand_trend": {
+      "current": "涨幅收敛",
+      "previous": null
+    },
+    "mu.contract.ddr4_spot": {
+      "current": 45.893,
+      "previous": 46.036
+    },
+    "guidance.margin_nongaap": {
+      "current": 86.25,
+      "previous": null
+    },
+    "series.mu.margin.nongaap@FY2025 Q1": {
+      "current": 39.5,
+      "previous": null
+    },
+    "mu.volume.mobile_bits": {
+      "current": "环比减少",
+      "previous": null
+    },
+    "mu.demand.mobile_inventory_proxy": {
+      "current": "公开摘要提示库存增加与提前采购",
+      "previous": null
+    },
+    "mu.supply.nand_outlook": {
+      "current": "企业 SSD 偏强；消费级存储承压",
+      "previous": null
+    },
+    "mu.capex.net": {
+      "current": 10774,
+      "previous": 7084
+    },
+    "mu.capex.revenue_ratio": {
+      "current": 19.86759851739844,
+      "previous": 17.087996912389038
+    },
+    "mu.capex.next_year": {
+      "current": "上半财年约 250 亿美元；下半财年更高",
+      "previous": null
+    },
+    "outlook.skhynix.capacity": {
+      "current": "加快 M15X 量产；龙仁一期洁净室计划于 2027 年初开放，随后扩产。项目按客户需求与投资效率分阶段推进。",
+      "previous": null
+    },
+    "outlook.samsung.products": {
+      "current": "计划扩大 HBM4、DDR5、SOCAMM2 等高附加值产品供给。",
+      "previous": null
+    },
+    "mu.hbm.revenue_share": {
+      "current": 18,
+      "previous": 21
+    },
+    "mu.demand.customer_inventory": {
+      "current": null,
+      "previous": null
+    },
+    "mu.margin.bit_cost": {
+      "current": null,
+      "previous": null
+    },
+    "mu.hbm.yield": {
+      "current": null,
+      "previous": null
+    },
+    "mu.inventory.finished_goods": {
+      "current": null,
+      "previous": 621
+    },
+    "mu.orders.rpo_quarter_end": {
+      "current": null,
+      "previous": 5000
+    },
+    "mu.orders.contract_liability": {
+      "current": null,
+      "previous": 422
+    },
+    "outlook.microsoft.annual_capex": {
+      "current": "约 1,750 亿美元",
+      "previous": null
+    },
+    "outlook.meta.capex": {
+      "current": "1,300–1,450 亿美元",
+      "previous": null
+    }
+  }
+}

@@ -14,6 +14,18 @@
 
 本仓库公开：不要上传用户持仓、成本、私人聊天、凭据或自动任务 ID；不执行交易。
 
+## Agent 分析（总览）
+
+总览顶部的「Agent 分析」是本站唯一的观点内容，存放在 `data/outlook.json`，与事实账本分开：
+
+- `stance` 只能是 `positive`（整体向好）、`negative`（整体偏弱）或 `wait`（待更多数据），说的是美光业务基本面与周期位置，不是股票判断。不得写买卖、目标价、估值或评级；校验会拒绝这类用语。
+- `summary` 是一句话结论（不超过 120 字）；`sections[].points[]` 是完整分析，默认折叠。
+- 只能依据本站已发布的数据。每条 point 的 `refs` 必须引用站内指标：`mu.<指标>.<行>`、`guidance.<id>`、`eco.<公司>.<行>`、`outlook.<公司>.<行>` 或 `series.<指标>@FY2026 Q3`。可用 ID 及当前值由 `npm run monitor -- outlook-context` 列出。
+- 正文不写数字。数字一律用 `{{ref}}`、`{{ref|previous}}` 或 `{{ref|change}}` 插入，页面按站内数据显示；仅允许财季、年份和产品型号（FY2026 Q4、2027 年、HBM4、DDR5）。
+- 写完后运行 `npm run monitor -- outlook-stamp`：记录所引用的数值、数据版本与生成时间。之后任何被引用数值或财季变化，`npm run verify` 会报 `OUTLOOK_STALE`，必须重读并改写后再次 stamp。不能只重新 stamp 而不重读分析。
+- 每次周日、周三例行核查（以及财报更新）在 apply 之后、提交之前刷新分析：先看 `outlook-context`，检查结论、转折信号与「什么会改变判断」是否仍成立；需要时改写 stance 与正文，然后 stamp，并与数据发布放在同一提交。数据未变时也重读，确认后重新 stamp 以更新生成日期。
+- 只改分析不算数据核查，不推进任何核查日期。
+
 ## 文件
 
 - `data/ledger.json`：规范化事实记录与当前文档引用；`data/evidence.json`：对应证据。只能通过候选流程生成。
