@@ -1,0 +1,32 @@
+import {test,expect} from '@playwright/test';
+import fs from 'node:fs';
+const data=JSON.parse(fs.readFileSync(new URL('../../data/monitor.json',import.meta.url)));
+const outlook=JSON.parse(fs.readFileSync(new URL('../../data/outlook.json',import.meta.url)));
+for(const width of [320,390,860])test(`agent analysis is one collapsed line on 总览 at ${width}px`,async({page})=>{
+  const errors=[];page.on('pageerror',e=>errors.push(e.message));
+  await page.setViewportSize({width,height:900});
+  await page.route('**/data/monitor.json?*',r=>r.fulfill({json:data}));
+  await page.route('**/data/outlook.json?*',r=>r.fulfill({json:outlook}));
+  await page.goto('/');
+  const box=page.locator('#panel-overview #agent-outlook');
+  await expect(box).toBeVisible();
+  await expect(box).not.toHaveAttribute('open','');
+  await expect(box.locator('.ao-stance')).toHaveText('整体向好');
+  await expect(box.locator('.ao-body')).toBeHidden();
+  await box.locator('summary').click();
+  await expect(box.locator('.ao-section')).toHaveCount(outlook.sections.length);
+  await expect(box.locator('.ao-section').first()).toContainText('542.29 亿美元');
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  await page.screenshot({path:test.info().outputPath(`outlook-${width}.png`),fullPage:false});
+  await box.locator('.ao-refs a[href="#inventory"]').first().click();
+  await expect(page.locator('#panel-business')).toBeVisible();
+  expect(errors).toEqual([]);
+});
+test('an analysis whose cited values no longer match the data is not shown',async({page})=>{
+  const d=structuredClone(data);d.metrics.find(m=>m.id==='inventory').rows.find(r=>r.id==='days').current=140;
+  await page.route('**/data/monitor.json?*',r=>r.fulfill({json:d}));
+  await page.route('**/data/outlook.json?*',r=>r.fulfill({json:outlook}));
+  await page.goto('/');
+  await expect(page.locator('.fact-card').first()).toBeVisible();
+  await expect(page.locator('#agent-outlook')).toHaveCount(0);
+});

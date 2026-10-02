@@ -7,7 +7,8 @@
   const updateCore=globalThis.MonitorUpdates;
   const updateTimes=globalThis.MonitorUpdateTimes;
   const technology=globalThis.TechnologyUI;
-  let data,updateStatus,savedData=false,updatePanelState,ecosystemGroup='cloud',newsCategory='related',newsCompany='all',newsDays=30;
+  const agent=globalThis.MonitorOutlook;
+  let data,outlook=null,updateStatus,savedData=false,updatePanelState,ecosystemGroup='cloud',newsCategory='related',newsCompany='all',newsDays=30;
   function updateTime(value,short=false){return value?`<time datetime="${esc(value)}">${esc(updateTimes.format(value,short))}</time>`:'暂无记录';}
   function renderUpdatePanel(){
     if(!data)return;
@@ -161,8 +162,22 @@
     const q=data.quote,change=Number.isFinite(q.previous_close)&&q.previous_close>0?rowChange({current:q.price,previous:q.previous_close,unit:'USD'}):'';
     return `<div class="quote-line"><span>MU 常规收盘</span><strong>$${num(q.price)}</strong>${change?`<span class="quote-change">较前一交易日 ${esc(change)}</span>`:''}<span>${date(q.as_of)}</span>${sourceLink(q.source_id)}</div>`;
   }
+  // Stored agent analysis: rendered only when every citation resolves to the facts loaded on this page.
+  function agentOutlook() {
+    if(!agent||!outlook||agent.validate(outlook,data).length) return '';
+    const text=value=>agent.segments(value,data).map(s=>s.text!==undefined?esc(s.text):`<b class="ao-value">${esc(s.value)}</b>`).join('');
+    // Past-quarter points of one metric collapse into a single period range.
+    const refs=ids=>{
+      const links=[],series=new Map();
+      for(const id of ids){const item=agent.resolve(data,id);if(id.startsWith('series.')){const key=id.slice(7).split('@')[0];if(!series.has(key)){series.set(key,[]);links.push(key);}series.get(key).push(item);}else links.push(item);}
+      const html=links.map(x=>{if(typeof x!=='string')return `<a href="${esc(x.href)}">${esc(x.label)}</a>`;const items=series.get(x).sort((a,b)=>a.period.localeCompare(b.period)),name=agent.resolve(data,x).label,first=items[0].period,last=items[items.length-1].period;return `<a href="${esc(items[0].href)}">${esc(name)} · ${esc(first===last?first:first+' 至 '+last)}</a>`;});
+      return `<span class="ao-refs">依据：${html.join('<span aria-hidden="true">、</span>')}</span>`;
+    };
+    const sections=outlook.sections.map(s=>`<section class="ao-section"><h3>${esc(s.title)}</h3><ul>${s.points.map(p=>`<li><p>${text(p.text)}</p>${refs(p.refs)}</li>`).join('')}</ul></section>`).join('');
+    return `<details class="card agent-outlook" id="agent-outlook"><summary><span class="ao-head"><span class="ao-label">Agent 分析</span><span class="ao-stance ${esc(outlook.stance)}">${esc(agent.stances[outlook.stance])}</span><span class="ao-date">${esc(date(outlook.generated_at))} 生成</span><span class="ao-chevron" aria-hidden="true">⌄</span></span><span class="ao-summary">${text(outlook.summary)}</span></summary><div class="ao-body">${sections}<p class="ao-note">由 AI agent 仅根据本站已发布的数据撰写，每条结论列出引用的指标，数字随站内数据显示；不构成投资建议。依据 ${esc(outlook.financial_period)} 财报及截至生成日的行业与产业链数据。</p></div></details>`;
+  }
   function overview() {
-    return `<div class="data-heading"><h2>关键数据</h2><span>${esc(data.financial_period)}</span></div><p class="section-intro">财季截至 ${esc(data.financial_as_of)} · 发布 ${esc(data.financial_published_at)}</p>${quoteLine()}<div class="fact-grid">${data.overview.fact_cards.map(factCard).join('')}</div><a class="all-data" href="#business" data-panel-link="business">查看全部公司数据 →</a><a class="all-data" href="#industry" data-panel-link="industry">查看周期信号：价格、供给与需求 →</a>${technology.highlights(data)}<div class="section-heading"><h2>下一季公司指引</h2><span class="small">预测 · 尚未实现</span></div><section class="card guidance-card">${data.guidance.map(guidanceRow).join('')}</section><a class="all-data" href="#ecosystem" data-panel-link="ecosystem">查看产业链数据与指引 →</a><div class="section-heading"><h2>披露日程</h2></div>${calendarView()}<div class="section-heading"><h2>尚未取得的数据</h2></div><ul class="gap-list">${data.overview.gaps.map(g=>`<li>${esc(g)}</li>`).join('')}</ul>`;
+    return `${agentOutlook()}<div class="data-heading"><h2>关键数据</h2><span>${esc(data.financial_period)}</span></div><p class="section-intro">财季截至 ${esc(data.financial_as_of)} · 发布 ${esc(data.financial_published_at)}</p>${quoteLine()}<div class="fact-grid">${data.overview.fact_cards.map(factCard).join('')}</div><a class="all-data" href="#business" data-panel-link="business">查看全部公司数据 →</a><a class="all-data" href="#industry" data-panel-link="industry">查看周期信号：价格、供给与需求 →</a>${technology.highlights(data)}<div class="section-heading"><h2>下一季公司指引</h2><span class="small">预测 · 尚未实现</span></div><section class="card guidance-card">${data.guidance.map(guidanceRow).join('')}</section><a class="all-data" href="#ecosystem" data-panel-link="ecosystem">查看产业链数据与指引 →</a><div class="section-heading"><h2>披露日程</h2></div>${calendarView()}<div class="section-heading"><h2>尚未取得的数据</h2></div><ul class="gap-list">${data.overview.gaps.map(g=>`<li>${esc(g)}</li>`).join('')}</ul>`;
   }
   function updates() {
     return `<section class="card update-status"><div class="line"><span>最近全量原文核查</span><strong>${checkDate(data.last_successful_check_at,true)}</strong></div><div class="line"><span>最近引用审校</span><strong>${checkDate(data.last_source_audit_at,true)}</strong></div><div class="line"><span>财报覆盖期间</span><strong>${esc(data.financial_period)}<br><span>截至 ${esc(data.financial_as_of)}</span></strong></div><div class="line"><span>持续核查</span><strong>${data.automation.enabled?esc(data.automation.cadence):'尚未启用'}</strong></div><p>${esc(data.automation.note)} 核查日不等于原始发布日期，引用审校也不等于行情更新。核查时间用 UTC；交易与活动时间用 ET。</p><button class="button" id="refresh-data" style="margin-top:14px">载入最新记录</button><p id="refresh-state" role="status"></p></section><div class="section-heading"><h2>证据标记</h2></div><div class="provenance-key"><p><b>直接披露</b>：来源明确给出这个指标。</p><p><b>本页计算</b>：由已列明输入及公式计算。</p><p><b>间接指标</b>：用于侧面观察另一变量，不能替代其直接数据。</p><p><b>媒体转引</b>：已核对转引报道，未读取原始表格。</p><p><b>未取得</b>：暂无可核实数值。</p><p>“直接披露”标明证据来源；是否为实际、估计或预测，以旁边的类型标签为准。</p></div><div class="section-heading"><h2>数据来源</h2></div><div class="source-directory">${Object.entries(data.sources).map(([id,s])=>`<div class="source-entry">${sourceLink(id,true)}<p>${esc(s.locator||'')}<br>${esc(s.type)} · 发布 ${esc(s.published_at||'未标注')} · 核查 ${esc(s.checked_at)} UTC</p></div>`).join('')}</div><div class="section-heading"><h2>修订记录</h2></div><ol class="timeline">${data.changes.slice(0,5).map(c=>`<li><time>${esc(c.date)}</time><h3>${esc(c.title)}</h3><p>${esc(c.text)}</p></li>`).join('')}</ol><div class="section-heading"><h2>核查记录</h2></div><ol class="timeline">${data.check_log.slice(0,7).map(c=>`<li><time>${checkDate(c.at,true)} · ${esc(({full:'全量原文',micron:'美光财报',industry:'行业资料',quote:'常规收盘',ecosystem:'产业链财报',source_audit:'引用审校',discovery:'公告查新',news:'AI 动态',calendar:'披露日程',maintenance:'更新规则',batch:'定向更新'})[c.scope]||c.scope)} · ${c.status==='success'?'完成':c.status==='failed'?'未完成':'部分完成'}</time><p>${esc(c.text)}</p></li>`).join('')}</ol><div class="section-heading"><h2>口径说明</h2></div><ul class="method">${data.methodology.map(s=>`<li>${esc(s)}</li>`).join('')}</ul>`;
@@ -217,16 +232,16 @@
     if(refresh&&feedback) feedback.textContent='正在载入已发布的记录…';
     try {
       const read=async file=>{const response=await fetch(`${file}?t=${Date.now()}`,{cache:'no-store'});if(!response.ok)throw new Error('HTTP '+response.status);return response.json();};
-      const [documentResult,statusResult]=await Promise.allSettled([read('data/monitor.json'),read('data/update-status.json')]);
+      const [documentResult,statusResult,outlookResult]=await Promise.allSettled([read('data/monitor.json'),read('data/update-status.json'),read('data/outlook.json')]);
       if(documentResult.status!=='fulfilled')throw documentResult.reason;
       const next=documentResult.value;
       if(!validate(next)) throw new Error('Invalid data');
-      data=next;updateStatus=statusResult.status==='fulfilled'&&updateTimes.matches(next,statusResult.value)?statusResult.value:null;savedData=false;
+      data=next;outlook=outlookResult.status==='fulfilled'?outlookResult.value:outlook||JSON.parse(document.getElementById('fallback-outlook')?.textContent||'null');updateStatus=statusResult.status==='fulfilled'&&updateTimes.matches(next,statusResult.value)?statusResult.value:null;savedData=false;
       render();
       if(refresh) document.getElementById('refresh-state').textContent=`已载入 ${checkDate(data.updated_at,true)} 发布的记录${updateStatus?'。':'；更新时间记录暂不可用。'}`;
     } catch(error) {
       savedData=true;
-      if(!data) {data=JSON.parse(document.getElementById('fallback-data').textContent);const fallback=JSON.parse(document.getElementById('fallback-update-status').textContent);updateStatus=updateTimes.matches(data,fallback)?fallback:null;render(true);}
+      if(!data) {data=JSON.parse(document.getElementById('fallback-data').textContent);outlook=JSON.parse(document.getElementById('fallback-outlook')?.textContent||'null');const fallback=JSON.parse(document.getElementById('fallback-update-status').textContent);updateStatus=updateTimes.matches(data,fallback)?fallback:null;render(true);}
       else {renderUpdatePanel();document.getElementById('freshness').innerHTML=`<div class="banner" role="alert">最新记录载入失败，保留 ${checkDate(data.updated_at,true)} 的资料。</div>`;if(feedback)feedback.textContent='载入失败，请稍后重试。';}
     }
   }

@@ -10,6 +10,7 @@ import {createManifest,buildCandidate} from '../pipeline/run.mjs';
 import {fetchSource,saveCapture,verifyCaptures} from '../pipeline/acquire.mjs';
 import {validateEvolution} from '../pipeline/evolution.mjs';
 import {readUpdateStatus} from './update-status.mjs';
+import {validateOutlook,outlookContext,stampOutlook} from '../pipeline/outlook.mjs';
 
 const root=fileURLToPath(new URL('../',import.meta.url));process.chdir(root);
 const args=process.argv.slice(2),command=args.shift()||'help',flag=(name,fallback)=>{const i=args.indexOf('--'+name);return i<0?fallback:args[i+1];};
@@ -24,13 +25,14 @@ const historySource=(dir,id)=>Object.values(historyFile(dir)).flatMap(periods=>O
 const runDir=()=>{const value=flag('run');if(!value)throw new Error('--run is required');const p=path.resolve(value);if(!p.startsWith(path.join(root,'.monitor')+path.sep))throw new Error('Runs must live inside .monitor/');return p;};
 
 try {
-  if(command==='help')console.log(`mu-checklist data pipeline\n\n  npm ci\n  npm run verify\n  npm test\n  npm run test:ui\n  npm run monitor -- plan --scope full --run .monitor/runs/example\n  npm run monitor -- fetch --run .monitor/runs/example --source SOURCE_ID\n  npm run monitor -- capture --run .monitor/runs/example --source SOURCE_ID --file /path/to/read-source --access full --reviewed\n  npm run monitor -- evidence-draft --run .monitor/runs/example --metric METRIC_ID\n  npm run monitor -- build --run .monitor/runs/example\n  npm run monitor -- status --run .monitor/runs/example\n  npm run monitor -- apply --run .monitor/runs/example\n  npm run monitor -- verify-live --url https://peterliu2357-sky.github.io/mu-checklist/\n\nRead AGENTS.md and docs/PIPELINE.md before a data update. Planning and building never publish.`);
+  if(command==='help')console.log(`mu-checklist data pipeline\n\n  npm ci\n  npm run verify\n  npm test\n  npm run test:ui\n  npm run monitor -- plan --scope full --run .monitor/runs/example\n  npm run monitor -- fetch --run .monitor/runs/example --source SOURCE_ID\n  npm run monitor -- capture --run .monitor/runs/example --source SOURCE_ID --file /path/to/read-source --access full --reviewed\n  npm run monitor -- evidence-draft --run .monitor/runs/example --metric METRIC_ID\n  npm run monitor -- build --run .monitor/runs/example\n  npm run monitor -- status --run .monitor/runs/example\n  npm run monitor -- apply --run .monitor/runs/example\n  npm run monitor -- verify-live --url https://peterliu2357-sky.github.io/mu-checklist/\n  npm run monitor -- outlook-context\n  npm run monitor -- outlook-stamp\n\nRead AGENTS.md and docs/PIPELINE.md before a data update. Planning and building never publish.`);
   else if(command==='schedule') {
     const s=state();console.log(JSON.stringify(updatePlan(materialize(s.ledger),s.catalog,{mode:flag('mode','weekly'),company:flag('company'),now:flag('at',new Date().toISOString())}),null,2));
   }
   else if(command==='verify') {
     const {ledger,evidence,catalog,legacy}=state(),issues=validateLedger(ledger,catalog,evidence,legacy),d=materialize(ledger);
     if(stable(d)!==stable(read('data/monitor.json')))issues.push({code:'GENERATED_FILE',path:'data/monitor.json',message:'Published data differs from canonical records'});
+    issues.push(...validateOutlook(read('data/outlook.json'),d));
     const base=flag('base');
     if(base){
       if(!/^[a-f0-9]{40}$/.test(base))throw new Error('--base must be a full Git commit SHA');
@@ -59,6 +61,11 @@ try {
       }
     }
     report(issues);
+  }else if(command==='outlook-context'){
+    const s=state(),d=materialize(s.ledger);console.log(JSON.stringify({financial_period:d.financial_period,data_revision:d.revision,refs:outlookContext(d,s.catalog)},null,2));
+  }else if(command==='outlook-stamp'){
+    const d=materialize(read('data/ledger.json')),next=stampOutlook(read('data/outlook.json'),d,flag('at',new Date().toISOString()));
+    write('data/outlook.json',next);report(validateOutlook(next,d));
   }else if(command==='plan'){
     const dir=runDir();if(fs.existsSync(path.join(dir,'manifest.json')))throw new Error('Run already exists; resume it or choose a new directory');
     const s=state(),d=materialize(s.ledger),at=flag('at',new Date().toISOString());
@@ -117,10 +124,11 @@ try {
     const base=flag('url');if(!base?.startsWith('https://'))throw new Error('--url must be the HTTPS site URL');
     const expected=read('data/monitor.json'),status=readUpdateStatus(expected);
     const get=async file=>{const response=await fetch(new URL(`${file}?revision=${encodeURIComponent(expected.revision)}`,base),{signal:AbortSignal.timeout(20000),cache:'no-store'});if(!response.ok)throw new Error(`Live ${file} HTTP ${response.status}`);return response.json();};
-    const [live,liveStatus,release]=await Promise.all([get('data/monitor.json'),get('data/update-status.json'),get('release.json')]);
+    const [live,liveStatus,release,liveOutlook]=await Promise.all([get('data/monitor.json'),get('data/update-status.json'),get('release.json'),get('data/outlook.json')]);
     if(hash(live)!==hash(expected))throw new Error(`Live data mismatch: ${live.revision}`);
     if(hash(liveStatus)!==hash(status)||liveStatus.data_revision!==live.revision)throw new Error('Live update schedule or check times mismatch');
     if(release.data_sha256!==hash(expected)||release.update_status_sha256!==hash(status))throw new Error('Live release manifest mismatch');
-    console.log(`Verified live revision ${live.revision}, data hash, update times, and schedule.`);
+    if(hash(liveOutlook)!==hash(read('data/outlook.json'))||release.outlook_sha256!==hash(liveOutlook))throw new Error('Live agent analysis mismatch');
+    console.log(`Verified live revision ${live.revision}, data hash, agent analysis, update times, and schedule.`);
   }else throw new Error(`Unknown command ${command}`);
 }catch(error){console.error(error.message);process.exitCode=1;}
