@@ -68,7 +68,7 @@
           ]
         },
         {
-          "text": "已签战略协议增至 {{mu.orders.agreements}}，含季后协议的 RPO 为 {{mu.orders.rpo_post_quarter}}（公司披露，非季末数）。合同条款：{{mu.orders.terms}}；协议收入覆盖：{{mu.orders.coverage}}。",
+          "text": "已签战略协议增至 {{mu.orders.agreements}}，含季后协议的 RPO 约 {{mu.orders.rpo_post_quarter}}（公司披露，非季末数）。合同条款：{{mu.orders.terms}}；协议收入覆盖：{{mu.orders.coverage}}。",
           "refs": [
             "mu.orders.agreements",
             "mu.orders.rpo_post_quarter",
@@ -88,7 +88,7 @@
           ]
         },
         {
-          "text": "英伟达数据中心收入同比 {{eco.nvidia.datacenter|change}}；Microsoft 与 Oracle 管理层都表示 AI 云需求仍快于供给，三星预计服务器 DRAM、企业 SSD 与 HBM 需求加速。",
+          "text": "英伟达数据中心收入同比 {{eco.nvidia.datacenter|change}}；Microsoft 管理层称客户需求仍超过供给，Oracle 称 AI 需求增长仍快于供给，三星预计服务器 DRAM、企业 SSD 与 HBM 需求加速。",
           "refs": [
             "eco.nvidia.datacenter",
             "outlook.microsoft.demand",
@@ -230,7 +230,7 @@
       ]
     }
   ],
-  "generated_at": "2026-10-02T00:42:47.869Z",
+  "generated_at": "2026-10-02T00:46:51.156Z",
   "data_revision": "2026-10-01-7f1707245f",
   "financial_period": "FY2026 Q4",
   "cited": {
