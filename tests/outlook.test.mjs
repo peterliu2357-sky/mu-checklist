@@ -36,3 +36,14 @@ test('stance is limited and trading language is rejected',()=>{
   has(validateOutlook({...outlook,stance:'buy'},d),'OUTLOOK_STANCE');
   has(validateOutlook(stampOutlook(withPoint('建议买入。',['mu.revenue.total']),d,d.updated_at),d),'OUTLOOK_ADVICE');
 });
+test('titles, unusual digits, malformed tokens and empty fields are rejected',()=>{
+  const titled=clone(outlook);titled.sections[0].title='目标价 美元';has(validateOutlook(titled,d),'OUTLOOK_TITLE');
+  for(const text of ['增长 ٣٠ 倍。','增长 𝟑𝟎%。','增长 ³⁰%。','公元 1500 年。'])has(validateOutlook(stampOutlook(withPoint(text,['mu.revenue.total']),d,d.updated_at),d),'OUTLOOK_NUMBER');
+  has(validateOutlook(stampOutlook(withPoint('收入 {{mu.revenue.total|Change}}。',['mu.revenue.total']),d,d.updated_at),d),'OUTLOOK_TOKEN');
+  has(validateOutlook(stampOutlook(withPoint('指引 {{guidance.revenue|change}}。',['guidance.revenue']),d,d.updated_at),d),'OUTLOOK_TOKEN');
+  has(validateOutlook(stampOutlook(withPoint('库存 {{mu.inventory.days|previous}}。',['mu.inventory.days']),d,d.updated_at),d),'OUTLOOK_TOKEN');
+});
+test('a changed prior guidance or reported change also makes the analysis stale',()=>{
+  const next=clone(d);next.ecosystem.companies.find(c=>c.id==='alphabet').outlook.find(o=>o.id==='capex').prior_guidance='2,100 亿美元';
+  has(validateOutlook(outlook,next),'OUTLOOK_STALE');
+});

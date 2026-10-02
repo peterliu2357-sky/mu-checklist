@@ -130,7 +130,7 @@
       "title": "需要紧盯的转折信号",
       "points": [
         {
-          "text": "库存天数由 FY2026 Q3 的 {{series.mu.inventory.days@FY2026 Q3}} 回升至 {{mu.inventory.days}}，总库存环比 {{mu.inventory.total|change}}。此前自 FY2025 Q2 的 {{series.mu.inventory.days@FY2025 Q2}} 起总体下降；公司称增加部分来自节点停产前备货，构成要等年报附注。",
+          "text": "库存天数由 FY2026 Q3 的 {{series.mu.inventory.days@FY2026 Q3}} 回升至 {{mu.inventory.days}}，总库存环比 {{mu.inventory.total|change}}。此前自 FY2025 Q2 的 {{series.mu.inventory.days@FY2025 Q2}} 起总体下降；公司称增加含节点停产前备货及计入库存的制造激励薪酬，构成要等年报附注。",
           "refs": [
             "series.mu.inventory.days@FY2026 Q3",
             "mu.inventory.days",
@@ -143,7 +143,7 @@
           ]
         },
         {
-          "text": "售价仍在上涨，但站内记录显示 DRAM、NAND 涨幅较 FQ3 收窄；NAND 合同价趋势为「{{mu.contract.nand_trend}}」，DDR4 现货 {{mu.contract.ddr4_spot|change}}。",
+          "text": "售价仍在上涨，但本站售价卡片的解读指出 DRAM、NAND 涨幅较 FQ3 收窄（FQ3 售价数值本站未列出）；NAND 合同价趋势为「{{mu.contract.nand_trend}}」，DDR4 现货 {{mu.contract.ddr4_spot|change}}。",
           "refs": [
             "mu.asp.dram",
             "mu.asp.nand",
@@ -230,25 +230,29 @@
       ]
     }
   ],
-  "generated_at": "2026-10-02T00:34:22.822Z",
+  "generated_at": "2026-10-02T00:42:47.869Z",
   "data_revision": "2026-10-01-7f1707245f",
   "financial_period": "FY2026 Q4",
   "cited": {
     "mu.revenue.total": {
       "current": 54229,
-      "previous": 41456
+      "previous": 41456,
+      "change": "+30.8%"
     },
     "mu.margin.nongaap": {
       "current": 87,
-      "previous": 84.9
+      "previous": 84.9,
+      "change": "+2.1 个百分点"
     },
     "guidance.revenue": {
       "current": 61500,
-      "previous": null
+      "previous": null,
+      "display": "615 ± 15 亿美元"
     },
     "mu.orders.rpo_post_quarter": {
       "current": 150000,
-      "previous": 100000
+      "previous": 100000,
+      "change": "+50.0%"
     },
     "mu.asp.dram": {
       "current": "十几百分比高段增长",
@@ -288,47 +292,58 @@
     },
     "guidance.eps_nongaap": {
       "current": 38.15,
-      "previous": null
+      "previous": null,
+      "display": "38.15 ± 1 美元"
     },
     "mu.revenue.eps_nongaap": {
       "current": 33.42,
-      "previous": 25.11
+      "previous": 25.11,
+      "change": "+33.1%"
     },
     "mu.cash.operating": {
       "current": 43973,
-      "previous": 25388
+      "previous": 25388,
+      "change": "+73.2%"
     },
     "mu.cash.adjusted_fcf": {
       "current": 33199,
-      "previous": 18304
+      "previous": 18304,
+      "change": "+81.4%"
     },
     "mu.capex.net_cash": {
       "current": 68274,
-      "previous": 24406
+      "previous": 24406,
+      "change": "+179.7%"
     },
     "mu.revenue.datacenter_share": {
       "current": 63.22262995814047,
-      "previous": 61.01167502894636
+      "previous": 61.01167502894636,
+      "change": "+2.2 个百分点"
     },
     "mu.revenue.cdbu": {
       "current": 18002,
-      "previous": 11524
+      "previous": 11524,
+      "change": "+56.2%"
     },
     "mu.revenue.cmbu": {
       "current": 16283,
-      "previous": 13769
+      "previous": 13769,
+      "change": "+18.3%"
     },
     "mu.revenue.mcbu": {
       "current": 13114,
-      "previous": 11521
+      "previous": 11521,
+      "change": "+13.8%"
     },
     "mu.revenue.aebu": {
       "current": 6824,
-      "previous": 4634
+      "previous": 4634,
+      "change": "+47.3%"
     },
     "mu.orders.agreements": {
       "current": 26,
-      "previous": 16
+      "previous": 16,
+      "change": "+62.5%"
     },
     "mu.orders.terms": {
       "current": "全部为 take-or-pay；约四分之三有定价框架",
@@ -340,43 +355,65 @@
     },
     "eco.microsoft.capex": {
       "current": 35802,
-      "previous": 17079
+      "previous": 17079,
+      "change": "+109.6%"
     },
     "eco.amazon.capex": {
       "current": 54208,
-      "previous": 32183
+      "previous": 32183,
+      "change": "+68.4%"
     },
     "eco.alphabet.capex": {
       "current": 44924,
-      "previous": 22446
+      "previous": 22446,
+      "change": "+100.1%"
     },
     "eco.meta.capex": {
       "current": 30116,
-      "previous": 16538
+      "previous": 16538,
+      "change": "+82.1%"
     },
     "eco.oracle.capex": {
       "current": 28499,
-      "previous": 8502
+      "previous": 8502,
+      "change": "+235.2%"
     },
     "outlook.alphabet.capex": {
       "current": "1,950–2,050 亿美元",
-      "previous": null
+      "previous": null,
+      "detail": [
+        "提高预算以加快交付算力。",
+        "1,800–1,900 亿美元"
+      ]
     },
     "eco.nvidia.datacenter": {
       "current": 89000,
-      "previous": 41100
+      "previous": 41100,
+      "change": "+117%（报告值）"
     },
     "outlook.microsoft.demand": {
       "current": "客户需求仍超过供给，预计上半年 Azure 增长加速；FY2027 资本开支继续同比增加。",
-      "previous": null
+      "previous": null,
+      "detail": [
+        "客户需求仍超过供给，预计上半年 Azure 增长加速；FY2027 资本开支继续同比增加。",
+        ""
+      ]
     },
     "outlook.oracle.demand": {
       "current": "公司称 AI 训练与推理需求的增长仍快于供给。",
-      "previous": null
+      "previous": null,
+      "detail": [
+        "公司称 AI 训练与推理需求的增长仍快于供给。",
+        ""
+      ]
     },
     "outlook.samsung.demand": {
       "current": "预计服务器 DRAM、企业 SSD 与 HBM 需求加速，供给仍偏紧；手机与 PC 需求部分放缓。",
-      "previous": null
+      "previous": null,
+      "detail": [
+        "预计服务器 DRAM、企业 SSD 与 HBM 需求加速，供给仍偏紧；手机与 PC 需求部分放缓。",
+        ""
+      ]
     },
     "mu.demand.essd_lead_time": {
       "current": "16 周（均衡基准 8 周）",
@@ -404,7 +441,8 @@
     },
     "mu.inventory.total": {
       "current": 10372,
-      "previous": 8567
+      "previous": 8567,
+      "change": "+21.1%"
     },
     "series.mu.inventory.days@FY2025 Q2": {
       "current": 158,
@@ -432,11 +470,13 @@
     },
     "mu.contract.ddr4_spot": {
       "current": 45.893,
-      "previous": 46.036
+      "previous": 46.036,
+      "change": "日变动 −0.31%（由报价计算）"
     },
     "guidance.margin_nongaap": {
       "current": 86.25,
-      "previous": null
+      "previous": null,
+      "display": "约 86.25%"
     },
     "series.mu.margin.nongaap@FY2025 Q1": {
       "current": 39.5,
@@ -456,11 +496,13 @@
     },
     "mu.capex.net": {
       "current": 10774,
-      "previous": 7084
+      "previous": 7084,
+      "change": "+52.1%"
     },
     "mu.capex.revenue_ratio": {
       "current": 19.86759851739844,
-      "previous": 17.087996912389038
+      "previous": 17.087996912389038,
+      "change": "+2.8 个百分点"
     },
     "mu.capex.next_year": {
       "current": "上半财年约 250 亿美元；下半财年更高",
@@ -468,15 +510,24 @@
     },
     "outlook.skhynix.capacity": {
       "current": "加快 M15X 量产；龙仁一期洁净室计划于 2027 年初开放，随后扩产。项目按客户需求与投资效率分阶段推进。",
-      "previous": null
+      "previous": null,
+      "detail": [
+        "加快 M15X 量产；龙仁一期洁净室计划于 2027 年初开放，随后扩产。项目按客户需求与投资效率分阶段推进。",
+        ""
+      ]
     },
     "outlook.samsung.products": {
       "current": "计划扩大 HBM4、DDR5、SOCAMM2 等高附加值产品供给。",
-      "previous": null
+      "previous": null,
+      "detail": [
+        "计划扩大 HBM4、DDR5、SOCAMM2 等高附加值产品供给。",
+        ""
+      ]
     },
     "mu.hbm.revenue_share": {
       "current": 18,
-      "previous": 21
+      "previous": 21,
+      "change": "−3.0 个百分点"
     },
     "mu.demand.customer_inventory": {
       "current": null,
@@ -504,11 +555,19 @@
     },
     "outlook.microsoft.annual_capex": {
       "current": "约 1,750 亿美元",
-      "previous": null
+      "previous": null,
+      "detail": [
+        "部分租赁转为经营租赁，调低资本开支列报值；底层投资预期维持不变。",
+        ""
+      ]
     },
     "outlook.meta.capex": {
       "current": "1,300–1,450 亿美元",
-      "previous": null
+      "previous": null,
+      "detail": [
+        "包含融资租赁本金支付。",
+        "1,250–1,450 亿美元"
+      ]
     }
   }
 }

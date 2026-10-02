@@ -170,7 +170,7 @@
     const refs=ids=>{
       const links=[],series=new Map();
       for(const id of ids){const item=agent.resolve(data,id);if(id.startsWith('series.')){const key=id.slice(7).split('@')[0];if(!series.has(key)){series.set(key,[]);links.push(key);}series.get(key).push(item);}else links.push(item);}
-      const html=links.map(x=>{if(typeof x!=='string')return `<a href="${esc(x.href)}">${esc(x.label)}</a>`;const items=series.get(x),name=agent.resolve(data,x).label,first=items[0].period,last=items[items.length-1].period;return `<a href="${esc(items[0].href)}">${esc(name)} · ${esc(first===last?first:first+' 至 '+last)}</a>`;});
+      const html=links.map(x=>{if(typeof x!=='string')return `<a href="${esc(x.href)}">${esc(x.label)}</a>`;const items=series.get(x).sort((a,b)=>a.period.localeCompare(b.period)),name=agent.resolve(data,x).label,first=items[0].period,last=items[items.length-1].period;return `<a href="${esc(items[0].href)}">${esc(name)} · ${esc(first===last?first:first+' 至 '+last)}</a>`;});
       return `<span class="ao-refs">依据：${html.join('<span aria-hidden="true">、</span>')}</span>`;
     };
     const sections=outlook.sections.map(s=>`<section class="ao-section"><h3>${esc(s.title)}</h3><ul>${s.points.map(p=>`<li><p>${text(p.text)}</p>${refs(p.refs)}</li>`).join('')}</ul></section>`).join('');
@@ -236,7 +236,7 @@
       if(documentResult.status!=='fulfilled')throw documentResult.reason;
       const next=documentResult.value;
       if(!validate(next)) throw new Error('Invalid data');
-      data=next;outlook=outlookResult.status==='fulfilled'?outlookResult.value:null;updateStatus=statusResult.status==='fulfilled'&&updateTimes.matches(next,statusResult.value)?statusResult.value:null;savedData=false;
+      data=next;outlook=outlookResult.status==='fulfilled'?outlookResult.value:outlook||JSON.parse(document.getElementById('fallback-outlook')?.textContent||'null');updateStatus=statusResult.status==='fulfilled'&&updateTimes.matches(next,statusResult.value)?statusResult.value:null;savedData=false;
       render();
       if(refresh) document.getElementById('refresh-state').textContent=`已载入 ${checkDate(data.updated_at,true)} 发布的记录${updateStatus?'。':'；更新时间记录暂不可用。'}`;
     } catch(error) {
