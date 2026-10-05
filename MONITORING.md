@@ -159,7 +159,7 @@ schema_version 仍为 2，新增必填 `ecosystem`；已有美光指标与财季
 
 以下定义已在 `pipeline/catalog.json` 登记为 `required:false`，取得首次经核实的读数后再加入候选行；没有行时不影响现有覆盖要求。网站 周期 页从这些记录读取，不另存一份数字。
 
-- `mu.contract.ddr5_spot`：DRAMeXchange 现货表 DDR5 16Gb (2Gx8) 4800/5600 的 Session Average。来源 ID `dram_spot`，入口已加入 `industry` 查新目标。与 DDR4 1Gx8 现货分开，不互相替代。合同价实际成交及现货溢价，需先读取合同价表确认具体规格，再登记同规格定义及计算。
+- `mu.contract.ddr5_spot`：DRAMeXchange 现货表 DDR5 16Gb (2Gx8) 4800/5600 的 Session Average。来源 ID `dram_spot`，入口已加入 `industry` 查新目标。与 DDR4 1Gx8 现货分开，不互相替代；DDR4 1Gx8 3200 行可引用同一张 DRAMeXchange 表（同一来源 ID `dram_spot`，各取本规格的 Session Average）。合同价实际成交及现货溢价，需先读取合同价表确认具体规格，再登记同规格定义及计算。
 - `mu.demand.nanya_revenue`：南亚科单月营收（十亿新台币），与上月比较。商品型 DRAM 售价与需求的间接指标，标 proxy；不是美光数据。来源 ID `nanya_monthly`。
 - `mu.demand.korea_semi_exports` / `mu.demand.korea_memory_exports`：韩国产业通商资源部月度出口发布中的半导体总额与存储芯片金额（百万美元），与上年同月比较。海关 1–20 日初值是不完整月份，不能当作整月值。来源 ID `korea_trade`。
 - `eco.skhynix.inventory` / `eco.skhynix.capex`：SK 海力士期末存货与现金资本开支（购置有形资产），取自季度财务报表或 IR 资料；新闻稿没有披露时保留缺口。来源 ID `eco_skhynix_statements`。
