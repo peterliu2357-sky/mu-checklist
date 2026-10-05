@@ -2,8 +2,8 @@
   "format_version": 1,
   "document": {
     "schema_version": 2,
-    "revision": "2026-10-01-7f1707245f",
-    "updated_at": "2026-10-01T23:13:44.787Z",
+    "revision": "2026-10-05-3eed106a2e",
+    "updated_at": "2026-10-05T00:15:30.271Z",
     "last_successful_check_at": "2026-09-20T23:50:00Z",
     "last_attempt_at": "2026-09-20T23:50:00Z",
     "financial_period": "FY2026 Q4",
@@ -1116,6 +1116,69 @@
         "published_at": "2026-06-24",
         "checked_at": "2026-10-01",
         "type": "公司披露"
+      },
+      "index_tf_press_20261004": {
+        "label": "TrendForce Press Center 入口",
+        "short_label": "TrendForce 新闻稿",
+        "url": "https://www.trendforce.com/presscenter/",
+        "published_at": null,
+        "checked_at": "2026-10-05",
+        "type": "行业官方入口",
+        "locator": "Press Releases 列表（最新至 09-30）。"
+      },
+      "index_tf_insights_20261004": {
+        "label": "TrendForce Insights 入口",
+        "short_label": "TrendForce Insights",
+        "url": "https://insights.trendforce.com/",
+        "published_at": null,
+        "checked_at": "2026-10-05",
+        "type": "行业官方入口",
+        "locator": "文章归档（最新至 10-02）。"
+      },
+      "index_dramx_20261004": {
+        "label": "DRAMeXchange 首页报价",
+        "short_label": "DRAMeXchange",
+        "url": "https://www.dramexchange.com/",
+        "published_at": null,
+        "checked_at": "2026-10-05",
+        "type": "行业官方入口",
+        "locator": "DRAM Spot Price · Last Update Oct.2 2026 18:10 (GMT+8)。"
+      },
+      "index_micron_news_20261004": {
+        "label": "Micron 新闻稿入口",
+        "short_label": "Micron 新闻稿",
+        "url": "https://investors.micron.com/news/default.aspx",
+        "published_at": null,
+        "checked_at": "2026-10-05",
+        "type": "公司官方入口",
+        "locator": "Press releases 列表（最新至 09-30）。"
+      },
+      "index_samsung_news_20261004": {
+        "label": "Samsung Newsroom 入口",
+        "short_label": "Samsung Newsroom",
+        "url": "https://news.samsung.com/global/",
+        "published_at": null,
+        "checked_at": "2026-10-05",
+        "type": "公司官方入口",
+        "locator": "Latest news（最新至 10-01）。"
+      },
+      "index_skhynix_news_20261004": {
+        "label": "SK hynix Newsroom 入口",
+        "short_label": "SK hynix Newsroom",
+        "url": "https://news.skhynix.com/en/",
+        "published_at": null,
+        "checked_at": "2026-10-05",
+        "type": "公司官方入口",
+        "locator": "Latest news（最新至 10-02）。"
+      },
+      "index_mu_sec_20261004": {
+        "label": "Micron SEC 申报目录",
+        "short_label": "SEC 申报目录",
+        "url": "https://data.sec.gov/submissions/CIK0000723125.json",
+        "published_at": null,
+        "checked_at": "2026-10-05",
+        "type": "监管机构官方入口",
+        "locator": "filings.recent：form、filingDate、reportDate；2026-10-05 UTC 查询。"
       }
     },
     "metrics": [
@@ -1514,6 +1577,12 @@
       "产业链指引和管理层展望按原披露日期及目标期间记录，文字为中文摘要；同比由原始金额计算，百分点与百分比区分。"
     ],
     "check_log": [
+      {
+        "at": "2026-10-05T00:15:30.271Z",
+        "status": "success",
+        "scope": "discovery",
+        "text": "核查范围：discovery；完成 5 / 5 项。"
+      },
       {
         "at": "2026-10-01T23:13:44.787Z",
         "status": "success",
@@ -2026,23 +2095,6 @@
       },
       "checks": [
         {
-          "key": "industry",
-          "status": "unchanged",
-          "finding": "unchanged",
-          "checked_at": "2026-09-28T00:15:57.491Z",
-          "attempted_at": "2026-09-28T00:18:00Z",
-          "latest_disclosure": {
-            "url": "https://www.trendforce.com/presscenter/",
-            "published_at": "2026-09-24"
-          },
-          "source_ids": [
-            "index_tf_press_20260927",
-            "index_tf_insights_20260927"
-          ],
-          "reason": "已检查两项行业入口；09-24 同规格 DDR4 日度均价小幅变动，无新的合同价、供需预测或 NAND 指标需要改写。",
-          "processed_at": null
-        },
-        {
           "key": "news",
           "status": "verified",
           "finding": "new_disclosure",
@@ -2070,69 +2122,87 @@
           "processed_at": "2026-09-28T00:25:00Z"
         },
         {
+          "key": "industry",
+          "status": "verified",
+          "finding": "new_disclosure",
+          "checked_at": "2026-10-05T00:15:15.785Z",
+          "attempted_at": "2026-10-05T00:15:30.271Z",
+          "latest_disclosure": {
+            "url": "https://www.trendforce.com/presscenter/news/20260930-13258.html",
+            "published_at": "2026-09-30"
+          },
+          "source_ids": [
+            "index_tf_press_20261004",
+            "index_tf_insights_20261004",
+            "index_dramx_20261004"
+          ],
+          "reason": "已检查三项行业入口：TrendForce 09-30 发布 4Q26 合同价展望（普通型 DRAM、NAND 环比区间更新），09-29 发布 2027 年 HBM 价格展望；DRAMeXchange 10-02 现货报价含 DDR5 16Gb。另行以 industry 范围导入。",
+          "processed_at": null
+        },
+        {
           "key": "technology:facilities",
           "status": "unchanged",
           "finding": "unchanged",
-          "checked_at": "2026-09-28T00:15:57.674Z",
-          "attempted_at": "2026-09-28T00:18:00Z",
+          "checked_at": "2026-10-05T00:15:16.151Z",
+          "attempted_at": "2026-10-05T00:15:30.271Z",
           "latest_disclosure": {
-            "url": "https://investors.micron.com/news/press-release/2026/Micron-Celebrates-Opening-of-Indias-First-Semiconductor-Assembly-and-Test-Facility-02-28-2026/default.aspx",
-            "published_at": "2026-02-28"
+            "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Fiscal-Fourth-Quarter-and-Full-Year-2026-Results/default.aspx",
+            "published_at": "2026-09-30"
           },
           "source_ids": [
-            "index_micron_news_20260927"
+            "index_micron_news_20261004"
           ],
-          "reason": "Micron 官方新闻入口无新的 Sanand、Idaho ID1、Tongluo 或 Singapore HBM packaging 里程碑。",
+          "reason": "Micron 官方新闻入口最新为 09-30 FQ4 财报（已于 10-01 处理），之后无新的 Sanand、Idaho ID1、Tongluo 或 Singapore HBM packaging 里程碑。",
           "processed_at": null
         },
         {
           "key": "technology:processes",
           "status": "unchanged",
           "finding": "unchanged",
-          "checked_at": "2026-09-28T00:15:57.674Z",
-          "attempted_at": "2026-09-28T00:18:00Z",
+          "checked_at": "2026-10-05T00:15:16.151Z",
+          "attempted_at": "2026-10-05T00:15:30.271Z",
           "latest_disclosure": {
-            "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Results-for-the-Third-Quarter-of-Fiscal-2026/default.aspx",
-            "published_at": "2026-06-24"
+            "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Fiscal-Fourth-Quarter-and-Full-Year-2026-Results/default.aspx",
+            "published_at": "2026-09-30"
           },
           "source_ids": [
-            "index_micron_news_20260927"
+            "index_micron_news_20261004"
           ],
-          "reason": "Micron 官方入口未披露新的 1-gamma/1-delta、G9 后继节点、位元密度、采用率、良率或爬坡数据。",
+          "reason": "Micron 官方入口 09-30 之后无新的 1-gamma/1-delta、G9 后继节点、位元密度、采用率、良率或爬坡披露。",
           "processed_at": null
         },
         {
           "key": "technology:products",
           "status": "unchanged",
           "finding": "unchanged",
-          "checked_at": "2026-09-28T00:15:58.198Z",
-          "attempted_at": "2026-09-28T00:18:00Z",
+          "checked_at": "2026-10-05T00:15:16.900Z",
+          "attempted_at": "2026-10-05T00:15:30.271Z",
           "latest_disclosure": {
-            "url": "https://investors.micron.com/news/press-release/2026/Micron-Advances-Memory-Innovation-With-the-Worlds-First-Ultra-Dense-Module-for-Next-Generation-Servers/default.aspx",
-            "published_at": "2026-09-15"
+            "url": "https://news.skhynix.com/en/tsmc-oip-conference-2026/",
+            "published_at": "2026-09-28"
           },
           "source_ids": [
-            "index_micron_news_20260927",
-            "index_samsung_news_20260927",
-            "index_skhynix_news_20260927"
+            "index_micron_news_20261004",
+            "index_samsung_news_20261004",
+            "index_skhynix_news_20261004"
           ],
-          "reason": "三家公司官方入口均未出现新的可比 DDR5 RDIMM、HBM4/HBM4E 容量、速率、验证/量产阶段或同基准功耗披露。",
+          "reason": "三家官方入口无新的 DDR5 RDIMM、HBM4/HBM4E 阶段或规格变化；SK hynix TSMC OIP 展会回顾重述已量产的 12 层 36GB HBM4，Samsung Newsroom 无存储产品发布。",
           "processed_at": null
         },
         {
           "key": "company:micron",
           "status": "verified",
           "finding": "new_disclosure",
-          "checked_at": "2026-10-01T21:04:09.143Z",
-          "attempted_at": "2026-10-01T21:04:09.439Z",
+          "checked_at": "2026-10-05T00:15:17.284Z",
+          "attempted_at": "2026-10-05T00:15:30.271Z",
           "latest_disclosure": {
             "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/mu-20260930.htm",
             "published_at": "2026-09-30"
           },
           "source_ids": [
-            "index_mu_sec_20261001"
+            "index_mu_sec_20261004"
           ],
-          "reason": "2026-10-01 已读取 SEC 申报目录：最新财务申报为 09-30 的 8-K，尚未列出 FY2026 10-K；最近 10-K 为 FY2025（2025-10-03）。FQ4 产成品、在制品、原材料、贸易应收及收入比、季末 RPO 和完整合同负债待 10-K 补核。当前发布记录仍为 FQ3，保留 FQ4 待处理标记；本次不重复导入新闻稿。",
+          "reason": "已读取 SEC 申报目录：09-30 8-K 之后仅有 10-02 的 Form 4，尚未列出 FY2026 10-K。库存构成、贸易应收及收入比、季末 RPO 和完整合同负债继续待 10-K 补核。",
           "processed_at": "2026-10-01T22:09:31.689Z"
         }
       ],
