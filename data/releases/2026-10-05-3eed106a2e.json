@@ -1,0 +1,231 @@
+{
+  "version": 1,
+  "scope": "discovery",
+  "base_commit": "e50937b55b5b891b56ecc27d57176b1ea31171ec",
+  "base_revision": "2026-10-01-7f1707245f",
+  "base_sha256": "c5582a7f1f1b4b9bfcbc1d5db4ca013086e7491abc4b8c3a4b0726d53b185b2c",
+  "catalog_sha256": "115941a6df960c8b7e9f4c21cd87bbab4d85e04cb3f5908699b6f16d6aa56576",
+  "created_at": "2026-10-05T00:04:51.313Z",
+  "completed_at": "2026-10-05T00:15:30.271Z",
+  "state": "verified",
+  "targets": [
+    "industry",
+    "technology:facilities",
+    "technology:processes",
+    "technology:products",
+    "company:micron"
+  ],
+  "coverage": [
+    {
+      "key": "industry",
+      "status": "verified",
+      "evidence": [
+        "index_tf_press_20261004",
+        "index_tf_insights_20261004",
+        "index_dramx_20261004"
+      ],
+      "reviewed_at": "2026-10-05T00:15:15.785Z",
+      "latest_disclosure": {
+        "url": "https://www.trendforce.com/presscenter/news/20260930-13258.html",
+        "published_at": "2026-09-30"
+      },
+      "reason": "已检查三项行业入口：TrendForce 09-30 发布 4Q26 合同价展望（普通型 DRAM、NAND 环比区间更新），09-29 发布 2027 年 HBM 价格展望；DRAMeXchange 10-02 现货报价含 DDR5 16Gb。另行以 industry 范围导入。",
+      "finding": "new_disclosure"
+    },
+    {
+      "key": "technology:facilities",
+      "status": "unchanged",
+      "evidence": [
+        "index_micron_news_20261004"
+      ],
+      "reviewed_at": "2026-10-05T00:15:16.151Z",
+      "latest_disclosure": {
+        "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Fiscal-Fourth-Quarter-and-Full-Year-2026-Results/default.aspx",
+        "published_at": "2026-09-30"
+      },
+      "reason": "Micron 官方新闻入口最新为 09-30 FQ4 财报（已于 10-01 处理），之后无新的 Sanand、Idaho ID1、Tongluo 或 Singapore HBM packaging 里程碑。"
+    },
+    {
+      "key": "technology:processes",
+      "status": "unchanged",
+      "evidence": [
+        "index_micron_news_20261004"
+      ],
+      "reviewed_at": "2026-10-05T00:15:16.151Z",
+      "latest_disclosure": {
+        "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Fiscal-Fourth-Quarter-and-Full-Year-2026-Results/default.aspx",
+        "published_at": "2026-09-30"
+      },
+      "reason": "Micron 官方入口 09-30 之后无新的 1-gamma/1-delta、G9 后继节点、位元密度、采用率、良率或爬坡披露。"
+    },
+    {
+      "key": "technology:products",
+      "status": "unchanged",
+      "evidence": [
+        "index_micron_news_20261004",
+        "index_samsung_news_20261004",
+        "index_skhynix_news_20261004"
+      ],
+      "reviewed_at": "2026-10-05T00:15:16.900Z",
+      "latest_disclosure": {
+        "url": "https://news.skhynix.com/en/tsmc-oip-conference-2026/",
+        "published_at": "2026-09-28"
+      },
+      "reason": "三家官方入口无新的 DDR5 RDIMM、HBM4/HBM4E 阶段或规格变化；SK hynix TSMC OIP 展会回顾重述已量产的 12 层 36GB HBM4，Samsung Newsroom 无存储产品发布。"
+    },
+    {
+      "key": "company:micron",
+      "status": "verified",
+      "evidence": [
+        "index_mu_sec_20261004"
+      ],
+      "reviewed_at": "2026-10-05T00:15:17.284Z",
+      "latest_disclosure": {
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/mu-20260930.htm",
+        "published_at": "2026-09-30"
+      },
+      "reason": "已读取 SEC 申报目录：09-30 8-K 之后仅有 10-02 的 Form 4，尚未列出 FY2026 10-K。库存构成、贸易应收及收入比、季末 RPO 和完整合同负债继续待 10-K 补核。",
+      "finding": "new_disclosure"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "index_tf_press_20261004",
+      "url": "https://www.trendforce.com/presscenter/",
+      "sha256": "e4ea75d4dab5680da1ab21096dfea43c6905c415338837173b11b63d31451c4c",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-05T00:15:15.021Z",
+      "reviewed_at": "2026-10-05T00:15:15.021Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_tf_insights_20261004",
+      "url": "https://insights.trendforce.com/",
+      "sha256": "f2dc68bdb863fd80980f87005dc00f3eb0d93191cf922a6f3038e600e9795c6d",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-05T00:15:15.409Z",
+      "reviewed_at": "2026-10-05T00:15:15.409Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_dramx_20261004",
+      "url": "https://www.dramexchange.com/",
+      "sha256": "3a24f0f8341490a52b8dced20829548e96f2f4a37f18f3c70c352813b304df94",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-05T00:15:15.785Z",
+      "reviewed_at": "2026-10-05T00:15:15.785Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_micron_news_20261004",
+      "url": "https://investors.micron.com/news/default.aspx",
+      "sha256": "6115e251bf8cedf1ef125e39b85888559edbd2c10aff5452e2e52af1517b9952",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-10-05T00:15:16.151Z",
+      "reviewed_at": "2026-10-05T00:15:16.151Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_samsung_news_20261004",
+      "url": "https://news.samsung.com/global/",
+      "sha256": "9f722dbe1291dd17026543144580737579dfa44f991172cfdcf47f64432d9f44",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-05T00:15:16.512Z",
+      "reviewed_at": "2026-10-05T00:15:16.512Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_skhynix_news_20261004",
+      "url": "https://news.skhynix.com/en/",
+      "sha256": "e000cedaf3f6147adeeef34be1b83738b08f1efcd9b0ed6d454b713e32f456e2",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-05T00:15:16.900Z",
+      "reviewed_at": "2026-10-05T00:15:16.900Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_mu_sec_20261004",
+      "url": "https://data.sec.gov/submissions/CIK0000723125.json",
+      "sha256": "3164701495da663e7f87476f9bcf8898d6dd4ca6a7677dc1ddf5c7a59542c40b",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-05T00:15:17.284Z",
+      "reviewed_at": "2026-10-05T00:15:17.284Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [],
+  "publication_corrections": [],
+  "technology_reviews": [
+    {
+      "id": "sanand",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "idaho_id1",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "tongluo",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "singapore_hbm",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "dram_1gamma",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "nand_g9",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "micron_rdimm512",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "micron_rdimm256",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "micron_hbm4",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "micron_hbm4e",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    }
+  ],
+  "result": "success",
+  "artifact_sha256": "4d49a9c828fa1b9da3e149855eb3827af9f2bc78a6b78c1c368cb42eddec10ed",
+  "ledger_sha256": "6ae10b079961b3ddc5d48b3f01da2b8404b35d64964b0a91f97a6fa63ad418b3",
+  "evidence_sha256": "eb45fc0afa864786fa0fb143c391c8c140604b686b824035ac3c6fea5f030ef5"
+}
