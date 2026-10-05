@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "scope": "industry",
+  "base_commit": "d12c7637845da6c4c9162bf24984258e74943c57",
+  "base_revision": "2026-10-05-3eed106a2e",
+  "base_sha256": "4d49a9c828fa1b9da3e149855eb3827af9f2bc78a6b78c1c368cb42eddec10ed",
+  "catalog_sha256": "f301afb2c33375626bb253804c240dd6c90bb7b289f2b24b0f01ac0d4e64fc53",
+  "created_at": "2026-10-05T00:29:13.662Z",
+  "completed_at": "2026-10-05T00:29:34.586Z",
+  "state": "verified",
+  "targets": null,
+  "coverage": [
+    {
+      "key": "industry",
+      "status": "verified",
+      "evidence": [
+        "dram",
+        "contract",
+        "dram_spot",
+        "korea_trade",
+        "nanya_monthly"
+      ],
+      "reviewed_at": "2026-10-05T00:29:31.722Z",
+      "latest_disclosure": {
+        "url": "https://www.dramexchange.com/",
+        "published_at": "2026-10-02"
+      },
+      "reason": "导入 TrendForce 09-30 4Q26 合同价区间（DRAM、NAND）、DRAMeXchange 10-02 DDR4/DDR5 现货、韩国 9 月出口（半导体、存储）与南亚科 7 月营收；NAND 趋势、TLC 现货、供需与 SSD 行未见新的同口径原文，保持不变。"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "dram",
+      "url": "https://www.trendforce.com/presscenter/news/20260930-13258.html",
+      "sha256": "ae1d860da96359ffd5a2ddda545e4195d96abb6807466f1e75f7e0c587880d2c",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-05T00:29:30.332Z",
+      "reviewed_at": "2026-10-05T00:29:30.332Z",
+      "status": "read"
+    },
+    {
+      "source_id": "contract",
+      "url": "https://www.trendforce.com/presscenter/news/20260930-13258.html",
+      "sha256": "ae1d860da96359ffd5a2ddda545e4195d96abb6807466f1e75f7e0c587880d2c",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-05T00:29:30.644Z",
+      "reviewed_at": "2026-10-05T00:29:30.644Z",
+      "status": "read"
+    },
+    {
+      "source_id": "dram_spot",
+      "url": "https://www.dramexchange.com/",
+      "sha256": "3a24f0f8341490a52b8dced20829548e96f2f4a37f18f3c70c352813b304df94",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-05T00:29:31.021Z",
+      "reviewed_at": "2026-10-05T00:29:31.021Z",
+      "status": "read"
+    },
+    {
+      "source_id": "korea_trade",
+      "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172254/view",
+      "sha256": "93080268eb8401eddbc70ddbbf03d443c5cd4ff5fd750bf3199817303dc6e17a",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-10-05T00:29:31.352Z",
+      "reviewed_at": "2026-10-05T00:29:31.352Z",
+      "status": "read"
+    },
+    {
+      "source_id": "nanya_monthly",
+      "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
+      "sha256": "058ad901ef1ffb283eab0cffdcca43fe418d9077c95608de780d2258944b3c6b",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-05T00:29:31.722Z",
+      "reviewed_at": "2026-10-05T00:29:31.722Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [],
+  "publication_corrections": [],
+  "technology_reviews": [],
+  "result": "success",
+  "artifact_sha256": "17ad3ce3320a82641e15fefae9ba94821a20a37d7bc6d3ffab1d3e77943c9e83",
+  "ledger_sha256": "4dbc2d0a296cc11ad78983bf03f19a3d5eae67b370723bc5f894523a4e0c83f5",
+  "evidence_sha256": "d55bf15183e76803937d3fe9583b6536cbbd328ecf8b29b738484659e3fe53ea"
+}
