@@ -103,7 +103,7 @@
           ]
         },
         {
-          "text": "出口与同业营收大幅高于比较期：韩国最新月度存储芯片出口额 {{mu.demand.korea_memory_exports}}，上年同月 {{mu.demand.korea_memory_exports|previous}}；半导体出口合计同比 {{mu.demand.korea_semi_exports|change}}。南亚科最新月营收 {{mu.demand.nanya_revenue}}，前月 {{mu.demand.nanya_revenue|previous}}。这些是售价与数量共同推动的间接指标，官方称出口增长来自出货量扩大、固定价格上涨及季末效应，两者作用无法拆分，也不等于美光出货或终端消耗。",
+          "text": "出口大幅高于上年同月，同业营收维持高位：韩国最新月度存储芯片出口额 {{mu.demand.korea_memory_exports}}，上年同月 {{mu.demand.korea_memory_exports|previous}}；半导体出口合计同比 {{mu.demand.korea_semi_exports|change}}。南亚科最新月营收 {{mu.demand.nanya_revenue}}，前月 {{mu.demand.nanya_revenue|previous}}，环比小幅增加。这些是售价与数量共同推动的间接指标，官方称出口增长来自出货量扩大、固定价格上涨及季末效应，两者作用无法拆分，也不等于美光出货或终端消耗。",
           "refs": [
             "mu.demand.korea_memory_exports",
             "mu.demand.korea_semi_exports",
@@ -152,7 +152,7 @@
           ]
         },
         {
-          "text": "售价仍在上涨，但涨幅在收窄：本站售价卡片的解读指出 DRAM、NAND 涨幅较 FQ3 收窄（FQ3 售价数值本站未列出），TrendForce 也预计 2026 Q4 普通型 DRAM 合同价为 {{mu.contract.dram_forecast}}，并称涨幅将较上季收敛（上季预测值本站未列出）；NAND 方面，2026 Q3 公开摘要曾称「{{mu.contract.nand_trend}}」，而 2026 Q4 预测为 {{mu.contract.nand_forecast}}。现货近期持平：DDR4 {{mu.contract.ddr4_spot|change}}，DDR5 {{mu.contract.ddr5_spot|change}}。",
+          "text": "售价仍在上涨，但涨幅在收窄：本站售价卡片的解读指出 DRAM、NAND 涨幅较 FQ3 收窄（FQ3 售价数值本站未列出），TrendForce 也预计 2026 Q4 普通型 DRAM 合同价为 {{mu.contract.dram_forecast}}，并称涨幅将较上季收敛（上季预测值本站未列出）；NAND 方面，2026 Q3 公开摘要曾称「{{mu.contract.nand_trend}}」，而 2026 Q4 预测为 {{mu.contract.nand_forecast}}。DRAM 现货近期持平：DDR4 {{mu.contract.ddr4_spot|change}}，DDR5 {{mu.contract.ddr5_spot|change}}；DDR4 最新 {{mu.contract.ddr4_spot}}，仍高于趋势线起点的 {{series.mu.contract.ddr4_spot@2026-06-23}}。NAND 现货偏弱：TLC 晶圆最新 {{mu.contract.tlc_spot}}，低于近期高点 {{series.mu.contract.tlc_spot@2026-08-17}}。",
           "refs": [
             "mu.asp.dram",
             "mu.asp.nand",
@@ -160,7 +160,10 @@
             "mu.contract.nand_trend",
             "mu.contract.nand_forecast",
             "mu.contract.ddr4_spot",
-            "mu.contract.ddr5_spot"
+            "mu.contract.ddr5_spot",
+            "mu.contract.tlc_spot",
+            "series.mu.contract.ddr4_spot@2026-06-23",
+            "series.mu.contract.tlc_spot@2026-08-17"
           ]
         },
         {
@@ -242,8 +245,8 @@
       ]
     }
   ],
-  "generated_at": "2026-10-05T00:32:04.131Z",
-  "data_revision": "2026-10-05-66c293a7da",
+  "generated_at": "2026-10-07T17:40:05.645Z",
+  "data_revision": "2026-10-07-bf98b452cd",
   "financial_period": "FY2026 Q4",
   "cited": {
     "mu.revenue.total": {
@@ -442,9 +445,9 @@
       "change": "同比 +262.8%（官方披露）"
     },
     "mu.demand.nanya_revenue": {
-      "current": 43.867609,
-      "previous": 29.388309,
-      "change": "环比 +49.3%（官方表披露）"
+      "current": 44.690268,
+      "previous": 43.867609,
+      "change": "环比 +1.9%（官方表披露）"
     },
     "mu.asp.nand": {
       "current": "约 30% 增长",
@@ -500,14 +503,27 @@
       "previous": null
     },
     "mu.contract.ddr4_spot": {
-      "current": 46.321,
+      "current": 46.32,
       "previous": null,
-      "change": "日变动 0.00%（DRAMeXchange 披露）"
+      "change": "周变动 0.00%（报告值）"
     },
     "mu.contract.ddr5_spot": {
-      "current": 58,
+      "current": 58.4,
       "previous": null,
-      "change": "日变动 +0.12%（DRAMeXchange 披露）"
+      "change": "日变动 +0.40%（DRAMeXchange 披露）"
+    },
+    "mu.contract.tlc_spot": {
+      "current": 18.833,
+      "previous": null,
+      "change": "周变动 −2.90%（报告值）"
+    },
+    "series.mu.contract.ddr4_spot@2026-06-23": {
+      "current": 35.9,
+      "previous": null
+    },
+    "series.mu.contract.tlc_spot@2026-08-17": {
+      "current": 21.208,
+      "previous": null
     },
     "guidance.margin_nongaap": {
       "current": 86.25,

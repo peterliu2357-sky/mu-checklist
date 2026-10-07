@@ -57,7 +57,9 @@ test('a quarter rollover keeps the outgoing quarter as a series point',()=>{
 // Industry readings: the live row carries as_of and the reading it replaces becomes a dated point.
 const DDR4='mu.contract.ddr4_spot';
 function ledgerWithLiveDate(as_of){
+  // Independent of published history: the fixture clears DDR4's points and dates readings in 2027.
   const l=clone(ledger),old=activeRecords(l).find(r=>r.metric_id===DDR4),r=clone(old);
+  if(l.series)delete l.series[DDR4];
   r.payload.as_of=as_of;r.id=recordHash(r);l.records[r.id]=r;
   const rows=l.document.metrics.find(m=>m.id==='contract').rows,i=rows.findIndex(x=>x.record_ref===old.id);rows[i]={record_ref:r.id};
   return {ledger:l,live:r};
@@ -67,46 +69,46 @@ const industryRun=(base,proposal,extra={})=>{const m={...createManifest({scope:'
 const seriesIssues=issues=>issues.filter(i=>i.code.startsWith('SERIES')||i.code==='OBSERVATION_DATE');
 
 test('a newer industry reading keeps the replaced one as a dated point',()=>{
-  const {ledger:base,live}=ledgerWithLiveDate('2026-09-29');
-  const r=industryRun(base,proposalWith(base,{current:46.5,as_of:'2026-10-06'}));
-  assert.equal(r.ledger.series[DDR4]['2026-09-29'],live.id);
-  assert.deepEqual(r.document.series[DDR4].map(p=>[p.as_of,p.value]),[['2026-09-29',live.payload.current]]);
+  const {ledger:base,live}=ledgerWithLiveDate('2027-09-29');
+  const r=industryRun(base,proposalWith(base,{current:46.5,as_of:'2027-10-06'}));
+  assert.equal(r.ledger.series[DDR4]['2027-09-29'],live.id);
+  assert.deepEqual(r.document.series[DDR4].map(p=>[p.as_of,p.value]),[['2027-09-29',live.payload.current]]);
   assert.deepEqual(seriesIssues(r.issues),[]);
 });
 test('a same-date correction replaces the live reading without adding a point',()=>{
-  const {ledger:base}=ledgerWithLiveDate('2026-09-29');
+  const {ledger:base}=ledgerWithLiveDate('2027-09-29');
   const r=industryRun(base,proposalWith(base,{current:46.4}));
   assert.equal(r.ledger.series?.[DDR4],undefined);
 });
 test('a new industry reading must say which date it describes',()=>{
-  has(industryRun(ledger,proposalWith(ledger,{current:46.5})).issues,'OBSERVATION_DATE');
+  has(industryRun(ledger,proposalWith(ledger,{current:46.5,as_of:undefined})).issues,'OBSERVATION_DATE');
   has(industryRun(ledger,proposalWith(ledger,{current:46.5,as_of:'Oct 6'})).issues,'OBSERVATION_DATE');
 });
 test('a backfilled industry point needs evidence and must predate the live reading',()=>{
-  const {ledger:base}=ledgerWithLiveDate('2026-09-29'),def=catalog.definitions[DDR4];
-  const source={id:'tf_spot_0922',url:'https://example.com/spot-0923',published_at:'2026-09-23'};
+  const {ledger:base}=ledgerWithLiveDate('2027-09-29'),def=catalog.definitions[DDR4];
+  const source={id:'tf_spot_0922',url:'https://example.com/spot-0923',published_at:'2027-09-23'};
   const payload=as_of=>({label:'DDR4 1Gx8 3200 现货',current:46.04,previous:null,unit:'USD',source_ids:[source.id],kind:'行业报价',note:'',period:'截至 09-22',as_of,change:null,location:'Example locator',evidence_type:'direct',id:'ddr4_spot'});
   const m={...createManifest({scope:'industry',base_commit:'a'.repeat(40),document:materialize(base),catalog,at}),completed_at:at};
   const captured={source_id:source.id,url:source.url,sha256:'b'.repeat(64),access:'full',accessed_at:at,reviewed_at:at,status:'read'};m.reads=[captured];
   const input={measurement:def.measurement,unit:def.unit,definition_version:def.version,temporal_basis:def.temporal_basis,accounting_basis:def.accounting_basis,scope:def.scope,values:{current:46.04,previous:null,value:null,summary:null},
-    raw_inputs:[{field:'current',value:46.04,scale:1,source_unit:'USD',period:'2026-09-22',locator:'Example locator',source_id:source.id}],review:{confirmed:true,method:'fixture review',at},documents:[{...captured,locator:'Example locator',excerpt:'Synthetic test fixture, not a real report.'}]};
+    raw_inputs:[{field:'current',value:46.04,scale:1,source_unit:'USD',period:'2027-09-22',locator:'Example locator',source_id:source.id}],review:{confirmed:true,method:'fixture review',at},documents:[{...captured,locator:'Example locator',excerpt:'Synthetic test fixture, not a real report.'}]};
   const build=(key,evidenceInput)=>buildCandidate({previousLedger:base,previousEvidence:evidence,proposal:materialize(base),supporting,history:{[DDR4]:{[key]:{sources:[source],payload:payload(key)}}},evidenceInput,manifest:m,catalog,legacy});
-  has(build('2026-09-22',{}).issues,'EVIDENCE_REQUIRED');
-  const ok=build('2026-09-22',{[`${DDR4}@2026-09-22`]:input});
+  has(build('2027-09-22',{}).issues,'EVIDENCE_REQUIRED');
+  const ok=build('2027-09-22',{[`${DDR4}@2027-09-22`]:input});
   // The fixture's dated live row reuses the old row's evidence, so only that binding is expected to fail.
   assert.deepEqual(ok.issues.filter(i=>i.code!=='EVIDENCE_BINDING'),[]);
   assert.equal(ok.document.series[DDR4][0].sources[0].url,source.url);
-  has(build('2026-09-29',{[`${DDR4}@2026-09-29`]:input}).issues,'SERIES_PERIOD');
-  has(build('2026-09',{[`${DDR4}@2026-09`]:input}).issues,'SERIES_PERIOD');
+  has(build('2027-09-29',{[`${DDR4}@2027-09-29`]:input}).issues,'SERIES_PERIOD');
+  has(build('2027-09',{[`${DDR4}@2027-09`]:input}).issues,'SERIES_PERIOD');
 });
 test('a new industry reading cannot go back in time or switch date format',()=>{
-  const {ledger:base}=ledgerWithLiveDate('2026-09-29');
-  has(industryRun(base,proposalWith(base,{current:46.5,as_of:'2026-09-22'})).issues,'OBSERVATION_DATE');
-  has(industryRun(base,proposalWith(base,{current:46.5,as_of:'2026-10'})).issues,'OBSERVATION_DATE');
+  const {ledger:base}=ledgerWithLiveDate('2027-09-29');
+  has(industryRun(base,proposalWith(base,{current:46.5,as_of:'2027-09-22'})).issues,'OBSERVATION_DATE');
+  has(industryRun(base,proposalWith(base,{current:46.5,as_of:'2027-10'})).issues,'OBSERVATION_DATE');
 });
 test('a published industry point cannot be replaced',()=>{
-  const {ledger:base,live}=ledgerWithLiveDate('2026-09-29'),first=industryRun(base,proposalWith(base,{current:46.5,as_of:'2026-10-06'})),next=clone(first.ledger);
-  next.series[DDR4]['2026-09-29']=activeRecords(first.ledger).find(r=>r.metric_id===DDR4).id;
+  const {ledger:base,live}=ledgerWithLiveDate('2027-09-29'),first=industryRun(base,proposalWith(base,{current:46.5,as_of:'2027-10-06'})),next=clone(first.ledger);
+  next.series[DDR4]['2027-09-29']=activeRecords(first.ledger).find(r=>r.metric_id===DDR4).id;
   has(validateEvolution({oldCatalog:catalog,catalog,oldLedger:first.ledger,ledger:next,oldEvidence:first.evidence,evidence:first.evidence,oldLegacy:legacy,legacy}),'SERIES_HISTORY');
-  assert.equal(first.ledger.series[DDR4]['2026-09-29'],live.id);
+  assert.equal(first.ledger.series[DDR4]['2027-09-29'],live.id);
 });

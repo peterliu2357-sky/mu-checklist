@@ -2,8 +2,8 @@
   "format_version": 1,
   "document": {
     "schema_version": 2,
-    "revision": "2026-10-07-2970469775",
-    "updated_at": "2026-10-07T17:15:26.327Z",
+    "revision": "2026-10-07-bf98b452cd",
+    "updated_at": "2026-10-07T17:39:48.612Z",
     "last_successful_check_at": "2026-09-20T23:50:00Z",
     "last_attempt_at": "2026-09-20T23:50:00Z",
     "financial_period": "FY2026 Q4",
@@ -362,13 +362,13 @@
         "locator": "首段：4Q26 普通型 DRAM 合同价环比；第二段：NAND Flash 合同价环比。"
       },
       "spot": {
-        "label": "TrendForce 现货与需求周报 · 09-16",
-        "url": "https://www.trendforce.com/news/2026/09/16/insights-memory-spot-price-update-dram-spot-cools-as-ddr5-inquiries-slow-2gx8-ddr4-prices-retreat/",
-        "published_at": "2026-09-16",
-        "checked_at": "2026-09-23",
+        "label": "TrendForce 现货周报 · 10-07",
+        "url": "https://www.trendforce.com/news/2026/10/07/insights-memory-spot-price-update-dram-spot-largely-sideways-as-holidays-month-end-effects-weigh/",
+        "published_at": "2026-10-07",
+        "checked_at": "2026-10-07",
         "type": "行业报价",
-        "short_label": "TrendForce · 现货周报",
-        "locator": "DRAM Spot Price / NAND Flash Spot Price"
+        "short_label": "TrendForce · 10-07 现货周报",
+        "locator": "DRAM Spot Price / NAND Flash Spot Price（周均价与注明日期）"
       },
       "ssd": {
         "label": "TrendForce 企业级 SSD 报告 · 09-01",
@@ -1182,30 +1182,30 @@
       },
       "dram_spot": {
         "label": "DRAMeXchange DRAM 现货报价",
-        "short_label": "10-02 · DRAM 现货",
+        "short_label": "10-07 · DRAM 现货",
         "url": "https://www.dramexchange.com/",
-        "published_at": "2026-10-02",
-        "checked_at": "2026-10-05",
+        "published_at": "2026-10-07",
+        "checked_at": "2026-10-07",
         "type": "原始行业报价",
-        "locator": "DRAM Spot Price · Last Update Oct.2 2026 18:10 (GMT+8) · Session Average / Session Change。"
+        "locator": "DRAM Spot Price · Last Update Oct.7 2026 18:10 (GMT+8) · Session Average / Session Change。"
       },
       "korea_trade": {
         "label": "韩国产业通商部 2026 年 9 月进出口动向",
         "short_label": "10-01 · 韩国 9 月出口",
         "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172254/view",
         "published_at": "2026-10-01",
-        "checked_at": "2026-10-05",
+        "checked_at": "2026-10-07",
         "type": "政府官方统计发布",
         "locator": "附件 PDF 第 11 页「20대 주요 수출 품목」表（반도체）；第 12 页품목별 상세（메모리/시스템 반도체 수출액）。"
       },
       "nanya_monthly": {
         "label": "南亚科月营收（官方 IR）",
-        "short_label": "南亚科 7 月营收",
+        "short_label": "南亚科 8 月营收",
         "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
         "published_at": null,
-        "checked_at": "2026-10-05",
+        "checked_at": "2026-10-07",
         "type": "公司官方入口",
-        "locator": "Consolidated Monthly Revenue 表 · 2026 · July / June（千元新台币）。"
+        "locator": "Consolidated Monthly Revenue 表 · 2026 · August / July（千元新台币）。"
       },
       "calendar_index_microsoft_20261007": {
         "label": "Microsoft Investor 首页",
@@ -1599,13 +1599,13 @@
             "record_ref": "40de271190fdbaefbc39b029976f71b8a847bb4fb536ea4479c3126f3bf38a72"
           },
           {
-            "record_ref": "1434657cce82b1809a7f7416ba199cb0666dff5fe7120926dce551092336d71d"
+            "record_ref": "d27728850c5cd56a2846a3d4442bc26ebf5a427a8368610cb1982576d2469acd"
           },
           {
-            "record_ref": "7d850ba61a41582ed4dbff694fa2a2c6358922113d0c3825c5b356477919cdd8"
+            "record_ref": "3af90fff5340ed1edd7e2958d7dffed3efbd252703d69fbdfc8f1369fefd4d70"
           },
           {
-            "record_ref": "7b3bde84fde97a67093f263f4aa85bd62e279a708e8b68c42991004754ffd579"
+            "record_ref": "0199b1a5c27c7107e4f755370075f549c1a294ddc3d5a8b7d7c7600ad329f606"
           }
         ],
         "limits": [
@@ -1615,7 +1615,7 @@
         "checked_at": "2026-10-05",
         "next_review": "每周",
         "definition": "行业合同价预测与现货报价。",
-        "interpretation": "TrendForce 09-30 预计 4Q26 普通型 DRAM 合同价仍上涨但涨幅较三季度收敛，NAND 合同价涨幅区间高于 DRAM。10-02 的 DDR4 与 DDR5 现货均价与前一交易时段基本持平。"
+        "interpretation": "TrendForce 09-30 预计 4Q26 普通型 DRAM 合同价仍上涨但涨幅较三季度收敛，NAND 合同价涨幅区间高于 DRAM。DDR4 现货周均价 10-06 与上周持平，06-23 以来整体上行；512Gb TLC 晶圆现货 8 月中以来连续回落。"
       },
       {
         "id": "supply",
@@ -1665,13 +1665,13 @@
             "record_ref": "0e33faa23504fb168d843f6ea27bdfec0b13293991f6b0ef720e6dca831ca074"
           },
           {
-            "record_ref": "ce1127d089b2b408a6a5ecf8af98c870745359ad496dbc37f8a44643ed7b854c"
+            "record_ref": "99277b4e582878383d71c3556d293197b01a9c78f3ffbada2f961c82a3a62871"
           },
           {
-            "record_ref": "9c3092472122459d3f9634fb3f4f81b287a99faf14b7d92bdfa24fb331806662"
+            "record_ref": "2834bffdd184f5ba244ff3245299b87d338ef7a70915657d7fa20dbac12ddb30"
           },
           {
-            "record_ref": "b425854c962dda27650312b7e451d7358fe9df21d02afa30bec4bd368cc80cba"
+            "record_ref": "93ab7b711fc6f45a55f57f6c1e3e1fe6c5220afc6289f305f3d2fdd018ba534b"
           }
         ],
         "limits": [
@@ -1683,7 +1683,7 @@
         "checked_at": "2026-10-05",
         "next_review": "每周",
         "definition": "用于观察终端需求的间接指标。",
-        "interpretation": "企业 SSD 交付周期为 16 周，而 TrendForce 给出的均衡基准为 8 周，说明交付仍受约束。韩国 9 月存储芯片出口额与南亚科 7 月营收均大幅高于比较期；官方称出口增长来自出货量扩大、固定价格上涨及季末效应，价格与数量的作用不能拆分。这些都不是美光采购量，客户实际库存与消耗量仍待补充。"
+        "interpretation": "企业 SSD 交付周期为 16 周，而 TrendForce 给出的均衡基准为 8 周，说明交付仍受约束。韩国 9 月存储芯片出口额大幅高于上年同月；南亚科 8 月营收较 7 月小幅增加（环比 +1.9%），维持在 7 月跳升后的高位。官方称出口增长来自出货量扩大、固定价格上涨及季末效应，价格与数量的作用不能拆分。这些都不是美光采购量，客户实际库存与消耗量仍待补充。"
       }
     ],
     "methodology": [
@@ -1698,6 +1698,12 @@
       "产业链指引和管理层展望按原披露日期及目标期间记录，文字为中文摘要；同比由原始金额计算，百分点与百分比区分。"
     ],
     "check_log": [
+      {
+        "at": "2026-10-07T17:39:48.612Z",
+        "status": "failed",
+        "scope": "industry",
+        "text": "补录周期趋势历史：DDR4/TLC 现货周均价（06-22 起）、南亚科月营收（2025-09 起）、韩国半导体出口（2026-07 起），并更新现货、南亚科 8 月营收与韩国出口行的读数日期。"
+      },
       {
         "at": "2026-10-07T17:15:26.327Z",
         "status": "success",
@@ -16291,6 +16297,1892 @@
         "e-54fdb71871768b1673c4aea7d52f87bb86d3aefd61337dce296330113d4e0cd9"
       ],
       "id": "dc3c502612841ee9445520ad1d2ca93f4778ddaabe6d0a1062cb3a7b648e893e"
+    },
+    "d27728850c5cd56a2846a3d4442bc26ebf5a427a8368610cb1982576d2469acd": {
+      "metric_id": "mu.contract.ddr4_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "DRAM 报价至 09-23；NAND 报价至 09-14；报告至 09-16",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "DDR4 1Gx8 3200 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "spot",
+            "url": "https://www.trendforce.com/news/2026/10/07/insights-memory-spot-price-update-dram-spot-largely-sideways-as-holidays-month-end-effects-weigh/",
+            "published_at": "2026-10-07"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DDR4 1Gx8 3200 现货",
+        "current": 46.32,
+        "previous": null,
+        "unit": "USD",
+        "source_ids": [
+          "spot"
+        ],
+        "kind": "行业报价",
+        "note": "TrendForce 每周现货报告的周均价；趋势线各点同一口径。",
+        "period": "截至 10-06",
+        "change": "周变动 0.00%（报告值）",
+        "location": "TrendForce 10-07 现货周报 · DRAM Spot Price。",
+        "evidence_type": "direct",
+        "id": "ddr4_spot",
+        "as_of": "2026-10-06"
+      },
+      "evidence_ids": [
+        "e-c16159e1de5ae99a0a34aff9f15a4c04548811140dd8fd2b6ff79860b9b5a2d6"
+      ],
+      "id": "d27728850c5cd56a2846a3d4442bc26ebf5a427a8368610cb1982576d2469acd"
+    },
+    "3af90fff5340ed1edd7e2958d7dffed3efbd252703d69fbdfc8f1369fefd4d70": {
+      "metric_id": "mu.contract.ddr5_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "DRAM 报价至 09-23；NAND 报价至 09-14；报告至 09-16",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "DDR5 16Gb (2Gx8) 4800/5600 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "dram_spot",
+            "url": "https://www.dramexchange.com/",
+            "published_at": "2026-10-07"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DDR5 16Gb (2Gx8) 4800/5600 现货",
+        "current": 58.4,
+        "previous": null,
+        "unit": "USD",
+        "source_ids": [
+          "dram_spot"
+        ],
+        "kind": "行业报价",
+        "note": "与 DDR4 1Gx8 现货是不同规格，不互相替代。",
+        "period": "截至 10-07",
+        "change": "日变动 +0.40%（DRAMeXchange 披露）",
+        "location": "DRAMeXchange · DRAM Spot Price · DDR5 16Gb (2Gx8) 4800/5600 · Session Average，Last Update Oct.7 2026 18:10 (GMT+8)。",
+        "evidence_type": "direct",
+        "id": "ddr5_spot",
+        "as_of": "2026-10-07"
+      },
+      "evidence_ids": [
+        "e-23181516a335fe34ad260be9a2c608b7645986f8e7a560b562cc2a534e3c5580"
+      ],
+      "id": "3af90fff5340ed1edd7e2958d7dffed3efbd252703d69fbdfc8f1369fefd4d70"
+    },
+    "0199b1a5c27c7107e4f755370075f549c1a294ddc3d5a8b7d7c7600ad329f606": {
+      "metric_id": "mu.contract.tlc_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "DRAM 报价至 09-23；NAND 报价至 09-14；报告至 09-16",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "512Gb TLC 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "spot",
+            "url": "https://www.trendforce.com/news/2026/10/07/insights-memory-spot-price-update-dram-spot-largely-sideways-as-holidays-month-end-effects-weigh/",
+            "published_at": "2026-10-07"
+          }
+        ]
+      },
+      "payload": {
+        "label": "512Gb TLC 现货",
+        "current": 18.833,
+        "previous": null,
+        "unit": "USD",
+        "source_ids": [
+          "spot"
+        ],
+        "kind": "行业报价",
+        "note": "",
+        "period": "截至 10-05",
+        "change": "周变动 −2.90%（报告值）",
+        "location": "TrendForce 10-07 现货周报 · NAND Flash Spot Price。",
+        "evidence_type": "direct",
+        "id": "tlc_spot",
+        "as_of": "2026-10-05"
+      },
+      "evidence_ids": [
+        "e-c13efce7107a549ad5842b5334c1ffbf080af73f35090fe672f9918ef62a24ec"
+      ],
+      "id": "0199b1a5c27c7107e4f755370075f549c1a294ddc3d5a8b7d7c7600ad329f606"
+    },
+    "99277b4e582878383d71c3556d293197b01a9c78f3ffbada2f961c82a3a62871": {
+      "metric_id": "mu.demand.nanya_revenue",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "行业资料至 09-21",
+        "measurement": "end_consumption_proxy",
+        "unit": "TWDb",
+        "scope": "南亚科单月营收（与上月比较）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "nanya_monthly",
+            "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "南亚科单月营收",
+        "current": 44.690268,
+        "previous": 43.867609,
+        "unit": "TWDb",
+        "source_ids": [
+          "nanya_monthly"
+        ],
+        "kind": "公司披露",
+        "note": "商品型 DRAM 售价与需求的间接指标，不是美光数据；未经审计。",
+        "period": "2026 年 8 月 vs 7 月",
+        "change": "环比 +1.9%（官方表披露）",
+        "location": "南亚科 IR · Consolidated Monthly Revenue · 2026 August / July。",
+        "evidence_type": "proxy",
+        "id": "nanya_revenue",
+        "as_of": "2026-08"
+      },
+      "evidence_ids": [
+        "e-d9bb4f07911b611bdc5e78cbad88fb62825428e12e0a474a9b3286dd8bf6e87c"
+      ],
+      "id": "99277b4e582878383d71c3556d293197b01a9c78f3ffbada2f961c82a3a62871"
+    },
+    "2834bffdd184f5ba244ff3245299b87d338ef7a70915657d7fa20dbac12ddb30": {
+      "metric_id": "mu.demand.korea_semi_exports",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "行业资料至 09-21",
+        "measurement": "end_consumption_proxy",
+        "unit": "USDm",
+        "scope": "韩国半导体单月出口额（与上年同月比较）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "korea_trade",
+            "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172254/view",
+            "published_at": "2026-10-01"
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国半导体单月出口额",
+        "current": 60295,
+        "previous": 16621,
+        "unit": "USDm",
+        "source_ids": [
+          "korea_trade"
+        ],
+        "kind": "官方统计",
+        "note": "整月值（非海关 1–20 日初值）；受价格、数量和汇率共同影响，不是美光出货。",
+        "period": "2026 年 9 月 vs 2025 年 9 月",
+        "change": "同比 +262.8%（官方披露）",
+        "location": "产业通商部 9 月进出口动向 · 附件 PDF 第 11 页20 大品目表 · 반도체。",
+        "evidence_type": "proxy",
+        "id": "korea_semi_exports",
+        "as_of": "2026-09"
+      },
+      "evidence_ids": [
+        "e-937747d3a0a09afdf5c9e3fe4e552793a0874616ce29cc1ea7914274523d1d10"
+      ],
+      "id": "2834bffdd184f5ba244ff3245299b87d338ef7a70915657d7fa20dbac12ddb30"
+    },
+    "93ab7b711fc6f45a55f57f6c1e3e1fe6c5220afc6289f305f3d2fdd018ba534b": {
+      "metric_id": "mu.demand.korea_memory_exports",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "行业资料至 09-21",
+        "measurement": "end_consumption_proxy",
+        "unit": "USDm",
+        "scope": "韩国存储芯片单月出口额（与上年同月比较）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "korea_trade",
+            "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172254/view",
+            "published_at": "2026-10-01"
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国存储芯片单月出口额",
+        "current": 54070,
+        "previous": 11790,
+        "unit": "USDm",
+        "source_ids": [
+          "korea_trade"
+        ],
+        "kind": "官方统计",
+        "note": "原文以亿美元列示（540.7 / 117.9）；整月值。受价格与数量共同影响。",
+        "period": "2026 年 9 月 vs 2025 年 9 月",
+        "change": "同比 +358.6%（官方披露）",
+        "location": "产业通商部 9 月进出口动向 · 附件 PDF 第 12 页· 메모리/시스템 반도체 수출액。",
+        "evidence_type": "proxy",
+        "id": "korea_memory_exports",
+        "as_of": "2026-09"
+      },
+      "evidence_ids": [
+        "e-458d035117071bb0178b9bd4a6fef0c53569685756e0cd704815e2be43c2bca3"
+      ],
+      "id": "93ab7b711fc6f45a55f57f6c1e3e1fe6c5220afc6289f305f3d2fdd018ba534b"
+    },
+    "6447b1ecd464eee56cd7baf4db45697386b26298be7cad0193f169e5d2e4be7b": {
+      "metric_id": "mu.contract.ddr4_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-06-23",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "DDR4 1Gx8 3200 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "tf_spot_0624",
+            "url": "https://www.trendforce.com/news/2026/06/24/insights-memory-spot-price-update-dram-buyers-resist-higher-quotes-as-mainstream-ddr4-prices-gain-0-28/",
+            "published_at": "2026-06-24"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DDR4 1Gx8 3200 现货",
+        "current": 35.9,
+        "previous": null,
+        "unit": "USD",
+        "kind": "行业报价",
+        "note": "",
+        "period": "截至 06-23",
+        "change": null,
+        "location": "TrendForce 06-24 现货周报 · DRAM Spot Price。",
+        "evidence_type": "direct",
+        "id": "ddr4_spot",
+        "source_ids": [
+          "tf_spot_0624"
+        ],
+        "as_of": "2026-06-23"
+      },
+      "evidence_ids": [
+        "e-4930eb4dbed25df0b407cb1f38ab6d937007ee1f1729e4083ecb1dad36ae2e2c"
+      ],
+      "id": "6447b1ecd464eee56cd7baf4db45697386b26298be7cad0193f169e5d2e4be7b"
+    },
+    "5e758ed683b3a870255cbdb42880ba20f91138d16b0b24f593edd77c1f01659e": {
+      "metric_id": "mu.contract.ddr4_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-06-30",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "DDR4 1Gx8 3200 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "tf_spot_0701",
+            "url": "https://www.trendforce.com/news/2026/07/01/insights-memory-spot-price-update-dram-spot-prices-see-gains-in-low-density-ddr4-and-ddr3-amid-sideways-market/",
+            "published_at": "2026-07-01"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DDR4 1Gx8 3200 现货",
+        "current": 36,
+        "previous": null,
+        "unit": "USD",
+        "kind": "行业报价",
+        "note": "",
+        "period": "截至 06-30",
+        "change": null,
+        "location": "TrendForce 07-01 现货周报 · DRAM Spot Price。",
+        "evidence_type": "direct",
+        "id": "ddr4_spot",
+        "source_ids": [
+          "tf_spot_0701"
+        ],
+        "as_of": "2026-06-30"
+      },
+      "evidence_ids": [
+        "e-0288361ff43e1b594fb06fd77fcb3af08657fe8e234ef98370e5c5885a943b3e"
+      ],
+      "id": "5e758ed683b3a870255cbdb42880ba20f91138d16b0b24f593edd77c1f01659e"
+    },
+    "65688b0e169a107c7ef6f30bdddcd006ea8a28a4efef50a189e6abafa16c04c4": {
+      "metric_id": "mu.contract.ddr4_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-07-07",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "DDR4 1Gx8 3200 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "tf_spot_0708",
+            "url": "https://www.trendforce.com/news/2026/07/08/insights-memory-spot-price-update-dram-spot-trading-remains-subdued-with-ddr3-and-4gb-ddr4-prices-edging-higher/",
+            "published_at": "2026-07-08"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DDR4 1Gx8 3200 现货",
+        "current": 37.14,
+        "previous": null,
+        "unit": "USD",
+        "kind": "行业报价",
+        "note": "",
+        "period": "截至 07-07",
+        "change": null,
+        "location": "TrendForce 07-08 现货周报 · DRAM Spot Price。",
+        "evidence_type": "direct",
+        "id": "ddr4_spot",
+        "source_ids": [
+          "tf_spot_0708"
+        ],
+        "as_of": "2026-07-07"
+      },
+      "evidence_ids": [
+        "e-59306a774238a7e3695c6362b803f58b7b56a2f404b2cb8b02684cc3ee5b7293"
+      ],
+      "id": "65688b0e169a107c7ef6f30bdddcd006ea8a28a4efef50a189e6abafa16c04c4"
+    },
+    "e55447a0abb68e9fa37cac6666820f2b5db89ab370ac0d24794f1a395495fc72": {
+      "metric_id": "mu.contract.ddr4_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-07-15",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "DDR4 1Gx8 3200 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "tf_spot_0722",
+            "url": "https://www.trendforce.com/news/2026/07/22/insights-memory-spot-price-update-dram-spot-market-edges-higher-as-branded-ddr4-demand-supports-prices/",
+            "published_at": "2026-07-22"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DDR4 1Gx8 3200 现货",
+        "current": 39.8,
+        "previous": null,
+        "unit": "USD",
+        "kind": "行业报价",
+        "note": "取自 07-22 周报中“上周”报价。",
+        "period": "截至 07-15",
+        "change": null,
+        "location": "TrendForce 07-22 现货周报 · DRAM Spot Price。",
+        "evidence_type": "direct",
+        "id": "ddr4_spot",
+        "source_ids": [
+          "tf_spot_0722"
+        ],
+        "as_of": "2026-07-15"
+      },
+      "evidence_ids": [
+        "e-3f85261056307889525647a7b28e33c93de3fd1126374ed738efae0930f3ace4"
+      ],
+      "id": "e55447a0abb68e9fa37cac6666820f2b5db89ab370ac0d24794f1a395495fc72"
+    },
+    "04c48b0dae01abaed98be74ea63083721238bae5b712aaac5575f31e29643708": {
+      "metric_id": "mu.contract.ddr4_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-07-21",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "DDR4 1Gx8 3200 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "tf_spot_0722",
+            "url": "https://www.trendforce.com/news/2026/07/22/insights-memory-spot-price-update-dram-spot-market-edges-higher-as-branded-ddr4-demand-supports-prices/",
+            "published_at": "2026-07-22"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DDR4 1Gx8 3200 现货",
+        "current": 41.1,
+        "previous": null,
+        "unit": "USD",
+        "kind": "行业报价",
+        "note": "",
+        "period": "截至 07-21",
+        "change": null,
+        "location": "TrendForce 07-22 现货周报 · DRAM Spot Price。",
+        "evidence_type": "direct",
+        "id": "ddr4_spot",
+        "source_ids": [
+          "tf_spot_0722"
+        ],
+        "as_of": "2026-07-21"
+      },
+      "evidence_ids": [
+        "e-02800b8174aa971b71f4f45a923905defcb35bcc293628301cfec7fb17e16ac4"
+      ],
+      "id": "04c48b0dae01abaed98be74ea63083721238bae5b712aaac5575f31e29643708"
+    },
+    "0388e2719b6d8038c875b72cf528f5c0352b8a2de5d6b304bc9719c1afab3603": {
+      "metric_id": "mu.contract.ddr4_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-07-28",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "DDR4 1Gx8 3200 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "tf_spot_0729",
+            "url": "https://www.trendforce.com/news/2026/07/29/insights-memory-spot-price-update-dram-spot-prices-rise-slightly-as-ddr3-ddr4-and-ddr5-inquiries-pick-up/",
+            "published_at": "2026-07-29"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DDR4 1Gx8 3200 现货",
+        "current": 42.08,
+        "previous": null,
+        "unit": "USD",
+        "kind": "行业报价",
+        "note": "",
+        "period": "截至 07-28",
+        "change": null,
+        "location": "TrendForce 07-29 现货周报 · DRAM Spot Price。",
+        "evidence_type": "direct",
+        "id": "ddr4_spot",
+        "source_ids": [
+          "tf_spot_0729"
+        ],
+        "as_of": "2026-07-28"
+      },
+      "evidence_ids": [
+        "e-0c8c45a6b461dca7350b48bfd5edc1066613e202aedf2889ef801808e9f9c259"
+      ],
+      "id": "0388e2719b6d8038c875b72cf528f5c0352b8a2de5d6b304bc9719c1afab3603"
+    },
+    "db0be8128b342d6c5a79d7a4f6bdc47387a326e0b63f3b47a50f6d569df709f1": {
+      "metric_id": "mu.contract.ddr4_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-08-04",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "DDR4 1Gx8 3200 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "tf_spot_0805",
+            "url": "https://www.trendforce.com/news/2026/08/05/insights-memory-spot-price-update-dram-spot-price-gains-slow-while-ddr4-and-ddr3-continue-uptrend/",
+            "published_at": "2026-08-05"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DDR4 1Gx8 3200 现货",
+        "current": 42.11,
+        "previous": null,
+        "unit": "USD",
+        "kind": "行业报价",
+        "note": "",
+        "period": "截至 08-04",
+        "change": null,
+        "location": "TrendForce 08-05 现货周报 · DRAM Spot Price。",
+        "evidence_type": "direct",
+        "id": "ddr4_spot",
+        "source_ids": [
+          "tf_spot_0805"
+        ],
+        "as_of": "2026-08-04"
+      },
+      "evidence_ids": [
+        "e-d757be560f850f1cf78f286d2293c3527f122a44748a8660a64eca80a3a0f7a8"
+      ],
+      "id": "db0be8128b342d6c5a79d7a4f6bdc47387a326e0b63f3b47a50f6d569df709f1"
+    },
+    "4926f9ba4f90630895f02c2c3d1bb0218d3a1af0a1a8359e36ccdd565573eee9": {
+      "metric_id": "mu.contract.ddr4_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-08-10",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "DDR4 1Gx8 3200 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "tf_spot_0812",
+            "url": "https://www.trendforce.com/news/2026/08/12/insights-memory-spot-price-update-dram-spot-trading-stays-subdued-as-pricing-gap-persists-ddr4-up-0-93/",
+            "published_at": "2026-08-12"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DDR4 1Gx8 3200 现货",
+        "current": 42.5,
+        "previous": null,
+        "unit": "USD",
+        "kind": "行业报价",
+        "note": "",
+        "period": "截至 08-10",
+        "change": null,
+        "location": "TrendForce 08-12 现货周报 · DRAM Spot Price。",
+        "evidence_type": "direct",
+        "id": "ddr4_spot",
+        "source_ids": [
+          "tf_spot_0812"
+        ],
+        "as_of": "2026-08-10"
+      },
+      "evidence_ids": [
+        "e-8ba4456978b269d37226c6261f9947ff7b9a0301767c0fb25b8d6957fd598046"
+      ],
+      "id": "4926f9ba4f90630895f02c2c3d1bb0218d3a1af0a1a8359e36ccdd565573eee9"
+    },
+    "4f09d53129802f9fb28498fc5845d135012d25de569e45fbae64573c4c011457": {
+      "metric_id": "mu.contract.ddr4_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-08-18",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "DDR4 1Gx8 3200 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "tf_spot_0819",
+            "url": "https://www.trendforce.com/news/2026/08/19/insights-memory-spot-price-update-3q-dram-spot-volumes-seen-staying-low-ddr4-prices-up-0-67-this-week/",
+            "published_at": "2026-08-19"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DDR4 1Gx8 3200 现货",
+        "current": 42.9,
+        "previous": null,
+        "unit": "USD",
+        "kind": "行业报价",
+        "note": "",
+        "period": "截至 08-18",
+        "change": null,
+        "location": "TrendForce 08-19 现货周报 · DRAM Spot Price。",
+        "evidence_type": "direct",
+        "id": "ddr4_spot",
+        "source_ids": [
+          "tf_spot_0819"
+        ],
+        "as_of": "2026-08-18"
+      },
+      "evidence_ids": [
+        "e-5a3371907853cd7db1af541faced26be35935bf833344fb06ad4516dcb6bf171"
+      ],
+      "id": "4f09d53129802f9fb28498fc5845d135012d25de569e45fbae64573c4c011457"
+    },
+    "2cc91998672214f217b160091268fad0ea2eeb23283e3fecb58ae832926b50b5": {
+      "metric_id": "mu.contract.ddr4_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-08-26",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "DDR4 1Gx8 3200 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "tf_spot_0902",
+            "url": "https://www.trendforce.com/news/2026/09/02/insights-memory-spot-price-update-ddr5-ddr4-demand-weakens-but-firm-supplier-quotes-support-elevated-prices/",
+            "published_at": "2026-09-02"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DDR4 1Gx8 3200 现货",
+        "current": 43.64,
+        "previous": null,
+        "unit": "USD",
+        "kind": "行业报价",
+        "note": "取自 09-02 周报中“上周”报价。",
+        "period": "截至 08-26",
+        "change": null,
+        "location": "TrendForce 09-02 现货周报 · DRAM Spot Price。",
+        "evidence_type": "direct",
+        "id": "ddr4_spot",
+        "source_ids": [
+          "tf_spot_0902"
+        ],
+        "as_of": "2026-08-26"
+      },
+      "evidence_ids": [
+        "e-c7559d3f92948eb2c824f89a3227b638702d7a4c8b84cda1f0da392fa6ea0a9c"
+      ],
+      "id": "2cc91998672214f217b160091268fad0ea2eeb23283e3fecb58ae832926b50b5"
+    },
+    "6068d297110b7e0e6c9da75da6f5a13bf3516b8f18ccb966c5e945127af1ba47": {
+      "metric_id": "mu.contract.ddr4_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-09-01",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "DDR4 1Gx8 3200 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "tf_spot_0902",
+            "url": "https://www.trendforce.com/news/2026/09/02/insights-memory-spot-price-update-ddr5-ddr4-demand-weakens-but-firm-supplier-quotes-support-elevated-prices/",
+            "published_at": "2026-09-02"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DDR4 1Gx8 3200 现货",
+        "current": 44.54,
+        "previous": null,
+        "unit": "USD",
+        "kind": "行业报价",
+        "note": "",
+        "period": "截至 09-01",
+        "change": null,
+        "location": "TrendForce 09-02 现货周报 · DRAM Spot Price。",
+        "evidence_type": "direct",
+        "id": "ddr4_spot",
+        "source_ids": [
+          "tf_spot_0902"
+        ],
+        "as_of": "2026-09-01"
+      },
+      "evidence_ids": [
+        "e-ff61e30d15df32a9577a5f7a2942bdd96a3e989b643e634b61a1ced52ee61d59"
+      ],
+      "id": "6068d297110b7e0e6c9da75da6f5a13bf3516b8f18ccb966c5e945127af1ba47"
+    },
+    "39a52d2c769170729f2144ca86227415797a7dfb39f92fb16027dace07552a39": {
+      "metric_id": "mu.contract.ddr4_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-09-08",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "DDR4 1Gx8 3200 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "tf_spot_0909",
+            "url": "https://www.trendforce.com/news/2026/09/09/insights-memory-spot-price-update-ddr4-mainstream-prices-rise-1-78-on-2gx8-orders-ddr5-demand-remains-limited/",
+            "published_at": "2026-09-09"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DDR4 1Gx8 3200 现货",
+        "current": 45.36,
+        "previous": null,
+        "unit": "USD",
+        "kind": "行业报价",
+        "note": "",
+        "period": "截至 09-08",
+        "change": null,
+        "location": "TrendForce 09-09 现货周报 · DRAM Spot Price。",
+        "evidence_type": "direct",
+        "id": "ddr4_spot",
+        "source_ids": [
+          "tf_spot_0909"
+        ],
+        "as_of": "2026-09-08"
+      },
+      "evidence_ids": [
+        "e-c7ec536776ccdf8c2d01af8f617439122f913328d11018fb540bfd167aa6aed8"
+      ],
+      "id": "39a52d2c769170729f2144ca86227415797a7dfb39f92fb16027dace07552a39"
+    },
+    "29b6c90fc442a2e68d8fca34546ea2a84676370a78099e92f79b3d6355f3ef5f": {
+      "metric_id": "mu.contract.ddr4_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-09-15",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "DDR4 1Gx8 3200 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "tf_spot_0916",
+            "url": "https://www.trendforce.com/news/2026/09/16/insights-memory-spot-price-update-dram-spot-cools-as-ddr5-inquiries-slow-2gx8-ddr4-prices-retreat/",
+            "published_at": "2026-09-16"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DDR4 1Gx8 3200 现货",
+        "current": 45.54,
+        "previous": null,
+        "unit": "USD",
+        "kind": "行业报价",
+        "note": "",
+        "period": "截至 09-15",
+        "change": null,
+        "location": "TrendForce 09-16 现货周报 · DRAM Spot Price。",
+        "evidence_type": "direct",
+        "id": "ddr4_spot",
+        "source_ids": [
+          "tf_spot_0916"
+        ],
+        "as_of": "2026-09-15"
+      },
+      "evidence_ids": [
+        "e-5f5e0f27c4c7e90d17f865876b8a4514d55244f34da7d249579b61edbe288a82"
+      ],
+      "id": "29b6c90fc442a2e68d8fca34546ea2a84676370a78099e92f79b3d6355f3ef5f"
+    },
+    "eaad545f16b03dd6334bdb66ea2335a6926e8f5db630ce3297341869e562dc6b": {
+      "metric_id": "mu.contract.ddr4_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-09-22",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "DDR4 1Gx8 3200 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "tf_spot_0923",
+            "url": "https://www.trendforce.com/news/2026/09/23/insights-memory-spot-price-update-dram-spot-prices-hold-cautious-tone-ddr4-2gx8-drops-3-6/",
+            "published_at": "2026-09-23"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DDR4 1Gx8 3200 现货",
+        "current": 46.04,
+        "previous": null,
+        "unit": "USD",
+        "kind": "行业报价",
+        "note": "",
+        "period": "截至 09-22",
+        "change": null,
+        "location": "TrendForce 09-23 现货周报 · DRAM Spot Price。",
+        "evidence_type": "direct",
+        "id": "ddr4_spot",
+        "source_ids": [
+          "tf_spot_0923"
+        ],
+        "as_of": "2026-09-22"
+      },
+      "evidence_ids": [
+        "e-b7275c55fe4fc1877207242c6bd089b42ea416e890b440bdee118cc45c799dd3"
+      ],
+      "id": "eaad545f16b03dd6334bdb66ea2335a6926e8f5db630ce3297341869e562dc6b"
+    },
+    "673e9939e94a56906505dc5c2f89d1d714dd363bb5086c8c4eb05b945d8912f4": {
+      "metric_id": "mu.contract.ddr4_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-09-29",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "DDR4 1Gx8 3200 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "tf_spot_0930",
+            "url": "https://www.trendforce.com/news/2026/09/30/insights-memory-spot-price-update-dram-market-quiet-amid-holidays-nand-buying-stays-weak/",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DDR4 1Gx8 3200 现货",
+        "current": 46.32,
+        "previous": null,
+        "unit": "USD",
+        "kind": "行业报价",
+        "note": "",
+        "period": "截至 09-29",
+        "change": null,
+        "location": "TrendForce 09-30 现货周报 · DRAM Spot Price。",
+        "evidence_type": "direct",
+        "id": "ddr4_spot",
+        "source_ids": [
+          "tf_spot_0930"
+        ],
+        "as_of": "2026-09-29"
+      },
+      "evidence_ids": [
+        "e-56f679b3b17661b0036a1f1f34dd82a309e49add45c3e9476b28da65370500f2"
+      ],
+      "id": "673e9939e94a56906505dc5c2f89d1d714dd363bb5086c8c4eb05b945d8912f4"
+    },
+    "d48aa64fbea278fc0e0aca5f77a195fdc1a501d7cab0c32b721323441b56515a": {
+      "metric_id": "mu.contract.tlc_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-06-22",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "512Gb TLC 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "tf_spot_0624",
+            "url": "https://www.trendforce.com/news/2026/06/24/insights-memory-spot-price-update-dram-buyers-resist-higher-quotes-as-mainstream-ddr4-prices-gain-0-28/",
+            "published_at": "2026-06-24"
+          }
+        ]
+      },
+      "payload": {
+        "label": "512Gb TLC 现货",
+        "current": 20.069,
+        "previous": null,
+        "unit": "USD",
+        "kind": "行业报价",
+        "note": "",
+        "period": "截至 06-22",
+        "change": null,
+        "location": "TrendForce 06-24 现货周报 · NAND Flash Spot Price。",
+        "evidence_type": "direct",
+        "id": "tlc_spot",
+        "source_ids": [
+          "tf_spot_0624"
+        ],
+        "as_of": "2026-06-22"
+      },
+      "evidence_ids": [
+        "e-1efc10a39c782fa5f8fd08a6462dc2a9eba620152afd177fd22341385418bea0"
+      ],
+      "id": "d48aa64fbea278fc0e0aca5f77a195fdc1a501d7cab0c32b721323441b56515a"
+    },
+    "7b166ecdd2262908892333ebd0ac68d7ca5552509c3d19f062ab51160fcdcb0a": {
+      "metric_id": "mu.contract.tlc_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-06-29",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "512Gb TLC 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "tf_spot_0701",
+            "url": "https://www.trendforce.com/news/2026/07/01/insights-memory-spot-price-update-dram-spot-prices-see-gains-in-low-density-ddr4-and-ddr3-amid-sideways-market/",
+            "published_at": "2026-07-01"
+          }
+        ]
+      },
+      "payload": {
+        "label": "512Gb TLC 现货",
+        "current": 19.862,
+        "previous": null,
+        "unit": "USD",
+        "kind": "行业报价",
+        "note": "",
+        "period": "截至 06-29",
+        "change": null,
+        "location": "TrendForce 07-01 现货周报 · NAND Flash Spot Price。",
+        "evidence_type": "direct",
+        "id": "tlc_spot",
+        "source_ids": [
+          "tf_spot_0701"
+        ],
+        "as_of": "2026-06-29"
+      },
+      "evidence_ids": [
+        "e-71be1b1bed9af5c2bba852eff01a41074efed0511306ffe14ce4478b11ff929f"
+      ],
+      "id": "7b166ecdd2262908892333ebd0ac68d7ca5552509c3d19f062ab51160fcdcb0a"
+    },
+    "a06da8ac135f5be89b7b1d12b467ae31977f6cb8af18aa018680a983cc64993a": {
+      "metric_id": "mu.contract.tlc_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-07-06",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "512Gb TLC 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "tf_spot_0708",
+            "url": "https://www.trendforce.com/news/2026/07/08/insights-memory-spot-price-update-dram-spot-trading-remains-subdued-with-ddr3-and-4gb-ddr4-prices-edging-higher/",
+            "published_at": "2026-07-08"
+          }
+        ]
+      },
+      "payload": {
+        "label": "512Gb TLC 现货",
+        "current": 19.293,
+        "previous": null,
+        "unit": "USD",
+        "kind": "行业报价",
+        "note": "",
+        "period": "截至 07-06",
+        "change": null,
+        "location": "TrendForce 07-08 现货周报 · NAND Flash Spot Price。",
+        "evidence_type": "direct",
+        "id": "tlc_spot",
+        "source_ids": [
+          "tf_spot_0708"
+        ],
+        "as_of": "2026-07-06"
+      },
+      "evidence_ids": [
+        "e-2c7c510ec5dd1e6d5401a120fe25cc24d39408a062088ca591e5f7d742604ebb"
+      ],
+      "id": "a06da8ac135f5be89b7b1d12b467ae31977f6cb8af18aa018680a983cc64993a"
+    },
+    "323f0fefeffefcbfef102e4f496d07a48b4a5f164f97f7df5fe080d605c9a34f": {
+      "metric_id": "mu.contract.tlc_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-07-20",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "512Gb TLC 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "tf_spot_0722",
+            "url": "https://www.trendforce.com/news/2026/07/22/insights-memory-spot-price-update-dram-spot-market-edges-higher-as-branded-ddr4-demand-supports-prices/",
+            "published_at": "2026-07-22"
+          }
+        ]
+      },
+      "payload": {
+        "label": "512Gb TLC 现货",
+        "current": 18.931,
+        "previous": null,
+        "unit": "USD",
+        "kind": "行业报价",
+        "note": "",
+        "period": "截至 07-20",
+        "change": null,
+        "location": "TrendForce 07-22 现货周报 · NAND Flash Spot Price。",
+        "evidence_type": "direct",
+        "id": "tlc_spot",
+        "source_ids": [
+          "tf_spot_0722"
+        ],
+        "as_of": "2026-07-20"
+      },
+      "evidence_ids": [
+        "e-32af9cbcc7850c80bf9cdf98c4e3499b1aa59e8aaa9fc7ade416d455e0583ce4"
+      ],
+      "id": "323f0fefeffefcbfef102e4f496d07a48b4a5f164f97f7df5fe080d605c9a34f"
+    },
+    "a1ccc06242b2cf13d8f543f7a737a23318e5bc5557cdfad9fe70a1db004efd8a": {
+      "metric_id": "mu.contract.tlc_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-07-27",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "512Gb TLC 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "tf_spot_0729",
+            "url": "https://www.trendforce.com/news/2026/07/29/insights-memory-spot-price-update-dram-spot-prices-rise-slightly-as-ddr3-ddr4-and-ddr5-inquiries-pick-up/",
+            "published_at": "2026-07-29"
+          }
+        ]
+      },
+      "payload": {
+        "label": "512Gb TLC 现货",
+        "current": 19.25,
+        "previous": null,
+        "unit": "USD",
+        "kind": "行业报价",
+        "note": "",
+        "period": "截至 07-27",
+        "change": null,
+        "location": "TrendForce 07-29 现货周报 · NAND Flash Spot Price。",
+        "evidence_type": "direct",
+        "id": "tlc_spot",
+        "source_ids": [
+          "tf_spot_0729"
+        ],
+        "as_of": "2026-07-27"
+      },
+      "evidence_ids": [
+        "e-ca1a8821cfe7f5b5fcb7da26cfe871ae98e30b76026f03478213b0cb9b4a0c55"
+      ],
+      "id": "a1ccc06242b2cf13d8f543f7a737a23318e5bc5557cdfad9fe70a1db004efd8a"
+    },
+    "4d24441288d9e20d5d5a2bc4e2c4d84bb417d07664858b9ec193060d5ce3c630": {
+      "metric_id": "mu.contract.tlc_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-08-09",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "512Gb TLC 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "tf_spot_0812",
+            "url": "https://www.trendforce.com/news/2026/08/12/insights-memory-spot-price-update-dram-spot-trading-stays-subdued-as-pricing-gap-persists-ddr4-up-0-93/",
+            "published_at": "2026-08-12"
+          }
+        ]
+      },
+      "payload": {
+        "label": "512Gb TLC 现货",
+        "current": 21.125,
+        "previous": null,
+        "unit": "USD",
+        "kind": "行业报价",
+        "note": "",
+        "period": "截至 08-09",
+        "change": null,
+        "location": "TrendForce 08-12 现货周报 · NAND Flash Spot Price。",
+        "evidence_type": "direct",
+        "id": "tlc_spot",
+        "source_ids": [
+          "tf_spot_0812"
+        ],
+        "as_of": "2026-08-09"
+      },
+      "evidence_ids": [
+        "e-e91ce4196b1fa114506f9226b7cd19a1a62e7e270ac72b443e4333e5d79b4970"
+      ],
+      "id": "4d24441288d9e20d5d5a2bc4e2c4d84bb417d07664858b9ec193060d5ce3c630"
+    },
+    "073271147fa8597e88cf1a82eb2df2539595abca72dbaeb200d376a80ceb83d9": {
+      "metric_id": "mu.contract.tlc_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-08-17",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "512Gb TLC 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "tf_spot_0819",
+            "url": "https://www.trendforce.com/news/2026/08/19/insights-memory-spot-price-update-3q-dram-spot-volumes-seen-staying-low-ddr4-prices-up-0-67-this-week/",
+            "published_at": "2026-08-19"
+          }
+        ]
+      },
+      "payload": {
+        "label": "512Gb TLC 现货",
+        "current": 21.208,
+        "previous": null,
+        "unit": "USD",
+        "kind": "行业报价",
+        "note": "",
+        "period": "截至 08-17",
+        "change": null,
+        "location": "TrendForce 08-19 现货周报 · NAND Flash Spot Price。",
+        "evidence_type": "direct",
+        "id": "tlc_spot",
+        "source_ids": [
+          "tf_spot_0819"
+        ],
+        "as_of": "2026-08-17"
+      },
+      "evidence_ids": [
+        "e-d87d46c1b5c6bc9cf42398055ddead492ea08fcda10fb79f6da5d1b4770aa088"
+      ],
+      "id": "073271147fa8597e88cf1a82eb2df2539595abca72dbaeb200d376a80ceb83d9"
+    },
+    "f55c684307e1ebcf9c7fe8c43b0046373bd5b7f53f512dbb9cd816d59fd3c9b4": {
+      "metric_id": "mu.contract.tlc_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-08-31",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "512Gb TLC 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "tf_spot_0902",
+            "url": "https://www.trendforce.com/news/2026/09/02/insights-memory-spot-price-update-ddr5-ddr4-demand-weakens-but-firm-supplier-quotes-support-elevated-prices/",
+            "published_at": "2026-09-02"
+          }
+        ]
+      },
+      "payload": {
+        "label": "512Gb TLC 现货",
+        "current": 20.708,
+        "previous": null,
+        "unit": "USD",
+        "kind": "行业报价",
+        "note": "",
+        "period": "截至 08-31",
+        "change": null,
+        "location": "TrendForce 09-02 现货周报 · NAND Flash Spot Price。",
+        "evidence_type": "direct",
+        "id": "tlc_spot",
+        "source_ids": [
+          "tf_spot_0902"
+        ],
+        "as_of": "2026-08-31"
+      },
+      "evidence_ids": [
+        "e-a5927ce2613be70e3b21956db231ed2be0657142dbba9c18cdfe953d69158744"
+      ],
+      "id": "f55c684307e1ebcf9c7fe8c43b0046373bd5b7f53f512dbb9cd816d59fd3c9b4"
+    },
+    "7e61097a349d06df93f39c398cef9a21a01b84802e4e7bcebd7720aa327bc43e": {
+      "metric_id": "mu.contract.tlc_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-09-07",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "512Gb TLC 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "tf_spot_0909",
+            "url": "https://www.trendforce.com/news/2026/09/09/insights-memory-spot-price-update-ddr4-mainstream-prices-rise-1-78-on-2gx8-orders-ddr5-demand-remains-limited/",
+            "published_at": "2026-09-09"
+          }
+        ]
+      },
+      "payload": {
+        "label": "512Gb TLC 现货",
+        "current": 20.146,
+        "previous": null,
+        "unit": "USD",
+        "kind": "行业报价",
+        "note": "",
+        "period": "截至 09-07",
+        "change": null,
+        "location": "TrendForce 09-09 现货周报 · NAND Flash Spot Price。",
+        "evidence_type": "direct",
+        "id": "tlc_spot",
+        "source_ids": [
+          "tf_spot_0909"
+        ],
+        "as_of": "2026-09-07"
+      },
+      "evidence_ids": [
+        "e-122053889925aac172355f8c6e1f77955823b29bb1d2c240dbc4b051049c2fe7"
+      ],
+      "id": "7e61097a349d06df93f39c398cef9a21a01b84802e4e7bcebd7720aa327bc43e"
+    },
+    "ebd3965e4a402b2e6c99a1382d9df0d7d07380a54466037d02a18ce11e931cae": {
+      "metric_id": "mu.contract.tlc_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-09-14",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "512Gb TLC 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "tf_spot_0916",
+            "url": "https://www.trendforce.com/news/2026/09/16/insights-memory-spot-price-update-dram-spot-cools-as-ddr5-inquiries-slow-2gx8-ddr4-prices-retreat/",
+            "published_at": "2026-09-16"
+          }
+        ]
+      },
+      "payload": {
+        "label": "512Gb TLC 现货",
+        "current": 20.083,
+        "previous": null,
+        "unit": "USD",
+        "kind": "行业报价",
+        "note": "",
+        "period": "截至 09-14",
+        "change": null,
+        "location": "TrendForce 09-16 现货周报 · NAND Flash Spot Price。",
+        "evidence_type": "direct",
+        "id": "tlc_spot",
+        "source_ids": [
+          "tf_spot_0916"
+        ],
+        "as_of": "2026-09-14"
+      },
+      "evidence_ids": [
+        "e-2ce1e0a1b90f5978dfada02140cf9da386d97d80bc5d43b9bd107f56b8adc259"
+      ],
+      "id": "ebd3965e4a402b2e6c99a1382d9df0d7d07380a54466037d02a18ce11e931cae"
+    },
+    "eeade1b897d2247b31f6213c077c2c2a7b3eb850bf5d32ea4034f8cb67006f6c": {
+      "metric_id": "mu.contract.tlc_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-09-21",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "512Gb TLC 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "tf_spot_0923",
+            "url": "https://www.trendforce.com/news/2026/09/23/insights-memory-spot-price-update-dram-spot-prices-hold-cautious-tone-ddr4-2gx8-drops-3-6/",
+            "published_at": "2026-09-23"
+          }
+        ]
+      },
+      "payload": {
+        "label": "512Gb TLC 现货",
+        "current": 19.883,
+        "previous": null,
+        "unit": "USD",
+        "kind": "行业报价",
+        "note": "",
+        "period": "截至 09-21",
+        "change": null,
+        "location": "TrendForce 09-23 现货周报 · NAND Flash Spot Price。",
+        "evidence_type": "direct",
+        "id": "tlc_spot",
+        "source_ids": [
+          "tf_spot_0923"
+        ],
+        "as_of": "2026-09-21"
+      },
+      "evidence_ids": [
+        "e-81481f15e96040ad66ad594d848c36ca5495aedc2dd6a4d0b27e38f359610096"
+      ],
+      "id": "eeade1b897d2247b31f6213c077c2c2a7b3eb850bf5d32ea4034f8cb67006f6c"
+    },
+    "d8131e14335d950d07bac089c6017a4e8529424dcfab10371ac0431252a138b2": {
+      "metric_id": "mu.contract.tlc_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-09-28",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "512Gb TLC 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "tf_spot_0930",
+            "url": "https://www.trendforce.com/news/2026/09/30/insights-memory-spot-price-update-dram-market-quiet-amid-holidays-nand-buying-stays-weak/",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "512Gb TLC 现货",
+        "current": 19.396,
+        "previous": null,
+        "unit": "USD",
+        "kind": "行业报价",
+        "note": "",
+        "period": "截至 09-28",
+        "change": null,
+        "location": "TrendForce 09-30 现货周报 · NAND Flash Spot Price。",
+        "evidence_type": "direct",
+        "id": "tlc_spot",
+        "source_ids": [
+          "tf_spot_0930"
+        ],
+        "as_of": "2026-09-28"
+      },
+      "evidence_ids": [
+        "e-0ba2b589785c36fb084905cdb604a0341cbf47f338c9ad551cb376d8c678be7f"
+      ],
+      "id": "d8131e14335d950d07bac089c6017a4e8529424dcfab10371ac0431252a138b2"
+    },
+    "5045d427f88ece1cf8fc8f963f984320a996f41e9a3551b2c481151c5d401827": {
+      "metric_id": "mu.demand.nanya_revenue",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2025-09",
+        "measurement": "end_consumption_proxy",
+        "unit": "TWDb",
+        "scope": "南亚科单月营收（与上月比较）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "nanya_monthly_2025",
+            "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue?Year=2025",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "南亚科单月营收",
+        "current": 6.66414,
+        "previous": null,
+        "unit": "TWDb",
+        "kind": "公司披露",
+        "note": "商品型 DRAM 售价与需求的间接指标，不是美光数据；未经审计。",
+        "period": "2025 年 9 月",
+        "change": null,
+        "location": "南亚科 IR · Consolidated Monthly Revenue · 2025 · September。",
+        "evidence_type": "proxy",
+        "id": "nanya_revenue",
+        "source_ids": [
+          "nanya_monthly_2025"
+        ],
+        "as_of": "2025-09"
+      },
+      "evidence_ids": [
+        "e-fd480d096fd080ae7dc3371e6dac217edabde1189379f95ef5e6c28603a50239"
+      ],
+      "id": "5045d427f88ece1cf8fc8f963f984320a996f41e9a3551b2c481151c5d401827"
+    },
+    "a17d628dd0587d176d1749a052bd47e882814ae5b7c1b3384921334a6a8e9a2b": {
+      "metric_id": "mu.demand.nanya_revenue",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2025-10",
+        "measurement": "end_consumption_proxy",
+        "unit": "TWDb",
+        "scope": "南亚科单月营收（与上月比较）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "nanya_monthly_2025",
+            "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue?Year=2025",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "南亚科单月营收",
+        "current": 7.907729,
+        "previous": null,
+        "unit": "TWDb",
+        "kind": "公司披露",
+        "note": "商品型 DRAM 售价与需求的间接指标，不是美光数据；未经审计。",
+        "period": "2025 年 10 月",
+        "change": null,
+        "location": "南亚科 IR · Consolidated Monthly Revenue · 2025 · October。",
+        "evidence_type": "proxy",
+        "id": "nanya_revenue",
+        "source_ids": [
+          "nanya_monthly_2025"
+        ],
+        "as_of": "2025-10"
+      },
+      "evidence_ids": [
+        "e-4e86e1ae6971d2bf21b26f5d97dcbbc117c36a62cd481c888df76950c1d5b7b9"
+      ],
+      "id": "a17d628dd0587d176d1749a052bd47e882814ae5b7c1b3384921334a6a8e9a2b"
+    },
+    "aa35c61c615abc221a6390b2ffda25821f1d82aae828d3cc044e3c9715f6a45e": {
+      "metric_id": "mu.demand.nanya_revenue",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2025-11",
+        "measurement": "end_consumption_proxy",
+        "unit": "TWDb",
+        "scope": "南亚科单月营收（与上月比较）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "nanya_monthly_2025",
+            "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue?Year=2025",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "南亚科单月营收",
+        "current": 10.168737,
+        "previous": null,
+        "unit": "TWDb",
+        "kind": "公司披露",
+        "note": "商品型 DRAM 售价与需求的间接指标，不是美光数据；未经审计。",
+        "period": "2025 年 11 月",
+        "change": null,
+        "location": "南亚科 IR · Consolidated Monthly Revenue · 2025 · November。",
+        "evidence_type": "proxy",
+        "id": "nanya_revenue",
+        "source_ids": [
+          "nanya_monthly_2025"
+        ],
+        "as_of": "2025-11"
+      },
+      "evidence_ids": [
+        "e-9d2ef4b950f866253f9e9803771a2886418a0cc2241a4c0f9b01669ea2f1fc71"
+      ],
+      "id": "aa35c61c615abc221a6390b2ffda25821f1d82aae828d3cc044e3c9715f6a45e"
+    },
+    "7fa2927b42bd91ceb0bc19d8046d9f82778ac71c5b05cd770b409dfbe70d3e78": {
+      "metric_id": "mu.demand.nanya_revenue",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2025-12",
+        "measurement": "end_consumption_proxy",
+        "unit": "TWDb",
+        "scope": "南亚科单月营收（与上月比较）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "nanya_monthly_2025",
+            "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue?Year=2025",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "南亚科单月营收",
+        "current": 12.017152,
+        "previous": null,
+        "unit": "TWDb",
+        "kind": "公司披露",
+        "note": "商品型 DRAM 售价与需求的间接指标，不是美光数据；未经审计。",
+        "period": "2025 年 12 月",
+        "change": null,
+        "location": "南亚科 IR · Consolidated Monthly Revenue · 2025 · December。",
+        "evidence_type": "proxy",
+        "id": "nanya_revenue",
+        "source_ids": [
+          "nanya_monthly_2025"
+        ],
+        "as_of": "2025-12"
+      },
+      "evidence_ids": [
+        "e-98db3178d70e8ebbf82a342e78d9b3403f3a6eedf3e0abbcd24cdc0f6703736d"
+      ],
+      "id": "7fa2927b42bd91ceb0bc19d8046d9f82778ac71c5b05cd770b409dfbe70d3e78"
+    },
+    "94b97c5adc06f5c5da0d1d8a3d63a09a2febd526f34ce8fcfd96ca037d77d6b3": {
+      "metric_id": "mu.demand.nanya_revenue",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-01",
+        "measurement": "end_consumption_proxy",
+        "unit": "TWDb",
+        "scope": "南亚科单月营收（与上月比较）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "nanya_monthly",
+            "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "南亚科单月营收",
+        "current": 15.309988,
+        "previous": null,
+        "unit": "TWDb",
+        "kind": "公司披露",
+        "note": "商品型 DRAM 售价与需求的间接指标，不是美光数据；未经审计。",
+        "period": "2026 年 1 月",
+        "change": null,
+        "location": "南亚科 IR · Consolidated Monthly Revenue · 2026 · January。",
+        "evidence_type": "proxy",
+        "id": "nanya_revenue",
+        "source_ids": [
+          "nanya_monthly"
+        ],
+        "as_of": "2026-01"
+      },
+      "evidence_ids": [
+        "e-2ead7cb7882ad4e1e22894fb0edeba6b203514ce632d0e0a9d2bda2a2ca65607"
+      ],
+      "id": "94b97c5adc06f5c5da0d1d8a3d63a09a2febd526f34ce8fcfd96ca037d77d6b3"
+    },
+    "409ca09e69d94d2d11306d6d0c3f1420682c1f33a4630e0e0bb239684aa93718": {
+      "metric_id": "mu.demand.nanya_revenue",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-02",
+        "measurement": "end_consumption_proxy",
+        "unit": "TWDb",
+        "scope": "南亚科单月营收（与上月比较）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "nanya_monthly",
+            "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "南亚科单月营收",
+        "current": 15.607184,
+        "previous": null,
+        "unit": "TWDb",
+        "kind": "公司披露",
+        "note": "商品型 DRAM 售价与需求的间接指标，不是美光数据；未经审计。",
+        "period": "2026 年 2 月",
+        "change": null,
+        "location": "南亚科 IR · Consolidated Monthly Revenue · 2026 · February。",
+        "evidence_type": "proxy",
+        "id": "nanya_revenue",
+        "source_ids": [
+          "nanya_monthly"
+        ],
+        "as_of": "2026-02"
+      },
+      "evidence_ids": [
+        "e-6352a89e9a4a28ba0543d8bdfab074a2866099f78fd9dd30937da57ed2d6c947"
+      ],
+      "id": "409ca09e69d94d2d11306d6d0c3f1420682c1f33a4630e0e0bb239684aa93718"
+    },
+    "c90e6bf4932106a6f9fdcde473cdeec7ddcf7f5ea9d8d0b65f8664ef89f81755": {
+      "metric_id": "mu.demand.nanya_revenue",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-03",
+        "measurement": "end_consumption_proxy",
+        "unit": "TWDb",
+        "scope": "南亚科单月营收（与上月比较）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "nanya_monthly",
+            "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "南亚科单月营收",
+        "current": 18.16976,
+        "previous": null,
+        "unit": "TWDb",
+        "kind": "公司披露",
+        "note": "商品型 DRAM 售价与需求的间接指标，不是美光数据；未经审计。",
+        "period": "2026 年 3 月",
+        "change": null,
+        "location": "南亚科 IR · Consolidated Monthly Revenue · 2026 · March。",
+        "evidence_type": "proxy",
+        "id": "nanya_revenue",
+        "source_ids": [
+          "nanya_monthly"
+        ],
+        "as_of": "2026-03"
+      },
+      "evidence_ids": [
+        "e-612b0cf4bb20b969076f8c15b63f1e1d1ff4cb4d9c9736529d4f6462ef8f6cb4"
+      ],
+      "id": "c90e6bf4932106a6f9fdcde473cdeec7ddcf7f5ea9d8d0b65f8664ef89f81755"
+    },
+    "2c61847e848fb9e035f3a7abba6ccc2a5275dddcd219bba2bc9e064977dec99d": {
+      "metric_id": "mu.demand.nanya_revenue",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-04",
+        "measurement": "end_consumption_proxy",
+        "unit": "TWDb",
+        "scope": "南亚科单月营收（与上月比较）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "nanya_monthly",
+            "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "南亚科单月营收",
+        "current": 25.491201,
+        "previous": null,
+        "unit": "TWDb",
+        "kind": "公司披露",
+        "note": "商品型 DRAM 售价与需求的间接指标，不是美光数据；未经审计。",
+        "period": "2026 年 4 月",
+        "change": null,
+        "location": "南亚科 IR · Consolidated Monthly Revenue · 2026 · April。",
+        "evidence_type": "proxy",
+        "id": "nanya_revenue",
+        "source_ids": [
+          "nanya_monthly"
+        ],
+        "as_of": "2026-04"
+      },
+      "evidence_ids": [
+        "e-b5e7b7612d44c5883b60951a3fdce23d6d5e01dfc2366548e4e25b4d54af06d2"
+      ],
+      "id": "2c61847e848fb9e035f3a7abba6ccc2a5275dddcd219bba2bc9e064977dec99d"
+    },
+    "be67a005c8fefe38445542b85dbf66b5cacf216677398945bcc790d132dda749": {
+      "metric_id": "mu.demand.nanya_revenue",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-05",
+        "measurement": "end_consumption_proxy",
+        "unit": "TWDb",
+        "scope": "南亚科单月营收（与上月比较）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "nanya_monthly",
+            "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "南亚科单月营收",
+        "current": 27.669563,
+        "previous": null,
+        "unit": "TWDb",
+        "kind": "公司披露",
+        "note": "商品型 DRAM 售价与需求的间接指标，不是美光数据；未经审计。",
+        "period": "2026 年 5 月",
+        "change": null,
+        "location": "南亚科 IR · Consolidated Monthly Revenue · 2026 · May。",
+        "evidence_type": "proxy",
+        "id": "nanya_revenue",
+        "source_ids": [
+          "nanya_monthly"
+        ],
+        "as_of": "2026-05"
+      },
+      "evidence_ids": [
+        "e-c728b2de0ba9c6bd46ee46e3ecf3b85d059f89f6664fcd614104bfa79c35f525"
+      ],
+      "id": "be67a005c8fefe38445542b85dbf66b5cacf216677398945bcc790d132dda749"
+    },
+    "65f521f0a193e76ad65ef8a70276de2e3a76e2f8d08d3efc870c8bc156a067e8": {
+      "metric_id": "mu.demand.nanya_revenue",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-06",
+        "measurement": "end_consumption_proxy",
+        "unit": "TWDb",
+        "scope": "南亚科单月营收（与上月比较）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "nanya_monthly",
+            "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "南亚科单月营收",
+        "current": 29.388309,
+        "previous": null,
+        "unit": "TWDb",
+        "kind": "公司披露",
+        "note": "商品型 DRAM 售价与需求的间接指标，不是美光数据；未经审计。",
+        "period": "2026 年 6 月",
+        "change": null,
+        "location": "南亚科 IR · Consolidated Monthly Revenue · 2026 · June。",
+        "evidence_type": "proxy",
+        "id": "nanya_revenue",
+        "source_ids": [
+          "nanya_monthly"
+        ],
+        "as_of": "2026-06"
+      },
+      "evidence_ids": [
+        "e-cf0fa49b7e399844587d7bd61bf7614fefdcf2e2feac6fcd26d672bf85a23074"
+      ],
+      "id": "65f521f0a193e76ad65ef8a70276de2e3a76e2f8d08d3efc870c8bc156a067e8"
+    },
+    "b8307104dc5a3ca027dec112a093ee7090bf4170976c723fbd65fe0ec324c3aa": {
+      "metric_id": "mu.demand.nanya_revenue",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-07",
+        "measurement": "end_consumption_proxy",
+        "unit": "TWDb",
+        "scope": "南亚科单月营收（与上月比较）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "nanya_monthly",
+            "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "南亚科单月营收",
+        "current": 43.867609,
+        "previous": null,
+        "unit": "TWDb",
+        "kind": "公司披露",
+        "note": "商品型 DRAM 售价与需求的间接指标，不是美光数据；未经审计。",
+        "period": "2026 年 7 月",
+        "change": null,
+        "location": "南亚科 IR · Consolidated Monthly Revenue · 2026 · July。",
+        "evidence_type": "proxy",
+        "id": "nanya_revenue",
+        "source_ids": [
+          "nanya_monthly"
+        ],
+        "as_of": "2026-07"
+      },
+      "evidence_ids": [
+        "e-da800031786ad12b7a5500b517a7b904745bed847c0cf2266a1e28e5679c74fe"
+      ],
+      "id": "b8307104dc5a3ca027dec112a093ee7090bf4170976c723fbd65fe0ec324c3aa"
+    },
+    "809fdc9372eb2cec5f53e179fbd7765cc257786b9cc600f2b09d3ec74aa4ced9": {
+      "metric_id": "mu.demand.korea_semi_exports",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-07",
+        "measurement": "end_consumption_proxy",
+        "unit": "USDm",
+        "scope": "韩国半导体单月出口额（与上年同月比较）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "korea_trade",
+            "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172254/view",
+            "published_at": "2026-10-01"
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国半导体单月出口额",
+        "current": 41007,
+        "previous": null,
+        "unit": "USDm",
+        "kind": "官方统计",
+        "note": "整月值，取自 9 月发布的 20 大品目表；受价格、数量和汇率共同影响，不是美光出货。",
+        "period": "2026 年 7 月",
+        "change": null,
+        "location": "产业通商部 9 月进出口动向 · 附件 PDF 第 11 页20 大品目表 · 반도체。",
+        "evidence_type": "proxy",
+        "id": "korea_semi_exports",
+        "source_ids": [
+          "korea_trade"
+        ],
+        "as_of": "2026-07"
+      },
+      "evidence_ids": [
+        "e-1d5c46c22ba97215e10f4a81a5320449a7880d7168c849de0be08a92226eccca"
+      ],
+      "id": "809fdc9372eb2cec5f53e179fbd7765cc257786b9cc600f2b09d3ec74aa4ced9"
+    },
+    "553b9d6638de7eb3f1d8c1b786aaa3ceb29e6a09cf9bc8067eeaad452977673b": {
+      "metric_id": "mu.demand.korea_semi_exports",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-08",
+        "measurement": "end_consumption_proxy",
+        "unit": "USDm",
+        "scope": "韩国半导体单月出口额（与上年同月比较）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "korea_trade",
+            "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172254/view",
+            "published_at": "2026-10-01"
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国半导体单月出口额",
+        "current": 46653,
+        "previous": null,
+        "unit": "USDm",
+        "kind": "官方统计",
+        "note": "整月值，取自 9 月发布的 20 大品目表；受价格、数量和汇率共同影响，不是美光出货。",
+        "period": "2026 年 8 月",
+        "change": null,
+        "location": "产业通商部 9 月进出口动向 · 附件 PDF 第 11 页20 大品目表 · 반도체。",
+        "evidence_type": "proxy",
+        "id": "korea_semi_exports",
+        "source_ids": [
+          "korea_trade"
+        ],
+        "as_of": "2026-08"
+      },
+      "evidence_ids": [
+        "e-aa446c48f42790aaf98e8f09621d5e04545cf4df49d8a4799d37b6f5283e47e8"
+      ],
+      "id": "553b9d6638de7eb3f1d8c1b786aaa3ceb29e6a09cf9bc8067eeaad452977673b"
     }
   },
   "supporting": {
@@ -16345,6 +18237,54 @@
       "FY2025 Q4": "35659d0048fb719d0256ab596f5c77757d7e041786d9f4982dc1ab40f5f4d34b",
       "FY2026 Q1": "d0b6b5d92fe933b7fabfdb7ab24227e0a99bb9184ba3adf09564b00cc8ef75a3",
       "FY2026 Q2": "88bef512dda3735b50aef9a1a78711e89992142dda4ca7b920a2a2f0671f8884"
+    },
+    "mu.contract.ddr4_spot": {
+      "2026-06-23": "6447b1ecd464eee56cd7baf4db45697386b26298be7cad0193f169e5d2e4be7b",
+      "2026-06-30": "5e758ed683b3a870255cbdb42880ba20f91138d16b0b24f593edd77c1f01659e",
+      "2026-07-07": "65688b0e169a107c7ef6f30bdddcd006ea8a28a4efef50a189e6abafa16c04c4",
+      "2026-07-15": "e55447a0abb68e9fa37cac6666820f2b5db89ab370ac0d24794f1a395495fc72",
+      "2026-07-21": "04c48b0dae01abaed98be74ea63083721238bae5b712aaac5575f31e29643708",
+      "2026-07-28": "0388e2719b6d8038c875b72cf528f5c0352b8a2de5d6b304bc9719c1afab3603",
+      "2026-08-04": "db0be8128b342d6c5a79d7a4f6bdc47387a326e0b63f3b47a50f6d569df709f1",
+      "2026-08-10": "4926f9ba4f90630895f02c2c3d1bb0218d3a1af0a1a8359e36ccdd565573eee9",
+      "2026-08-18": "4f09d53129802f9fb28498fc5845d135012d25de569e45fbae64573c4c011457",
+      "2026-08-26": "2cc91998672214f217b160091268fad0ea2eeb23283e3fecb58ae832926b50b5",
+      "2026-09-01": "6068d297110b7e0e6c9da75da6f5a13bf3516b8f18ccb966c5e945127af1ba47",
+      "2026-09-08": "39a52d2c769170729f2144ca86227415797a7dfb39f92fb16027dace07552a39",
+      "2026-09-15": "29b6c90fc442a2e68d8fca34546ea2a84676370a78099e92f79b3d6355f3ef5f",
+      "2026-09-22": "eaad545f16b03dd6334bdb66ea2335a6926e8f5db630ce3297341869e562dc6b",
+      "2026-09-29": "673e9939e94a56906505dc5c2f89d1d714dd363bb5086c8c4eb05b945d8912f4"
+    },
+    "mu.contract.tlc_spot": {
+      "2026-06-22": "d48aa64fbea278fc0e0aca5f77a195fdc1a501d7cab0c32b721323441b56515a",
+      "2026-06-29": "7b166ecdd2262908892333ebd0ac68d7ca5552509c3d19f062ab51160fcdcb0a",
+      "2026-07-06": "a06da8ac135f5be89b7b1d12b467ae31977f6cb8af18aa018680a983cc64993a",
+      "2026-07-20": "323f0fefeffefcbfef102e4f496d07a48b4a5f164f97f7df5fe080d605c9a34f",
+      "2026-07-27": "a1ccc06242b2cf13d8f543f7a737a23318e5bc5557cdfad9fe70a1db004efd8a",
+      "2026-08-09": "4d24441288d9e20d5d5a2bc4e2c4d84bb417d07664858b9ec193060d5ce3c630",
+      "2026-08-17": "073271147fa8597e88cf1a82eb2df2539595abca72dbaeb200d376a80ceb83d9",
+      "2026-08-31": "f55c684307e1ebcf9c7fe8c43b0046373bd5b7f53f512dbb9cd816d59fd3c9b4",
+      "2026-09-07": "7e61097a349d06df93f39c398cef9a21a01b84802e4e7bcebd7720aa327bc43e",
+      "2026-09-14": "ebd3965e4a402b2e6c99a1382d9df0d7d07380a54466037d02a18ce11e931cae",
+      "2026-09-21": "eeade1b897d2247b31f6213c077c2c2a7b3eb850bf5d32ea4034f8cb67006f6c",
+      "2026-09-28": "d8131e14335d950d07bac089c6017a4e8529424dcfab10371ac0431252a138b2"
+    },
+    "mu.demand.nanya_revenue": {
+      "2025-09": "5045d427f88ece1cf8fc8f963f984320a996f41e9a3551b2c481151c5d401827",
+      "2025-10": "a17d628dd0587d176d1749a052bd47e882814ae5b7c1b3384921334a6a8e9a2b",
+      "2025-11": "aa35c61c615abc221a6390b2ffda25821f1d82aae828d3cc044e3c9715f6a45e",
+      "2025-12": "7fa2927b42bd91ceb0bc19d8046d9f82778ac71c5b05cd770b409dfbe70d3e78",
+      "2026-01": "94b97c5adc06f5c5da0d1d8a3d63a09a2febd526f34ce8fcfd96ca037d77d6b3",
+      "2026-02": "409ca09e69d94d2d11306d6d0c3f1420682c1f33a4630e0e0bb239684aa93718",
+      "2026-03": "c90e6bf4932106a6f9fdcde473cdeec7ddcf7f5ea9d8d0b65f8664ef89f81755",
+      "2026-04": "2c61847e848fb9e035f3a7abba6ccc2a5275dddcd219bba2bc9e064977dec99d",
+      "2026-05": "be67a005c8fefe38445542b85dbf66b5cacf216677398945bcc790d132dda749",
+      "2026-06": "65f521f0a193e76ad65ef8a70276de2e3a76e2f8d08d3efc870c8bc156a067e8",
+      "2026-07": "b8307104dc5a3ca027dec112a093ee7090bf4170976c723fbd65fe0ec324c3aa"
+    },
+    "mu.demand.korea_semi_exports": {
+      "2026-07": "809fdc9372eb2cec5f53e179fbd7765cc257786b9cc600f2b09d3ec74aa4ced9",
+      "2026-08": "553b9d6638de7eb3f1d8c1b786aaa3ceb29e6a09cf9bc8067eeaad452977673b"
     }
   }
 }
