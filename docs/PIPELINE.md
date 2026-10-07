@@ -93,13 +93,15 @@ npm run monitor -- verify-live --url https://peterliu2357-sky.github.io/mu-check
 
 Confirm both deployment success and the full live data hash. A successful research run, successful Git commit and successful deployment are separate outcomes. For rollback, revert the coherent release commit, preserving original facts/check dates; do not stamp rolled-back facts as newly checked. Historical snapshots are not overwritten.
 
-## Past-quarter series
+## Past series points
 
 `catalog.series.metrics` lists the Micron metrics drawn as trend lines. `ledger.series` maps each metric and financial quarter to one evidenced record; `data/monitor.json` publishes them as `series` (oldest first). The live quarter is never stored there: the UI appends it from the metric row.
 
 - A quarter rollover adds the outgoing quarter's active record automatically.
 - To backfill, put points in the run's `history.json` as `{metric_id: {"FY2025 Q4": point}}`. A point is either `{record_id}` for a record already in the ledger (allowed in a `maintenance` run) or `{period_end, sources:[{id,url,published_at}], payload}` for a new reading (needs a `micron`, `full` or `batch` run). Capture each past filing under its `sources[].id`, then `evidence-draft --metric ID --period "FY2025 Q4"`; the evidence key is `ID@FY2025 Q4`.
 - Points are append-only, must be numeric and sourced, and cannot repeat a quarter or use the live one.
+
+Industry readings listed in `catalog.series.observations` (spot prices, Nanya monthly revenue, Korea exports) use the same store, keyed by `as_of` instead of a quarter: the reading's own date (`YYYY-MM-DD`) or month (`YYYY-MM`). Their live row must carry `as_of`. When a run replaces the row with a later `as_of`, the outgoing record becomes a point automatically; a correction with the same `as_of` adds nothing. Backfilled readings go in `history.json` keyed by `as_of`, with `payload.as_of` equal to the key, in an `industry` run. They must be earlier than the live reading and use its date format. Source and basis rules are in `MONITORING.md` ("周期趋势点").
 
 ## Agent analysis
 

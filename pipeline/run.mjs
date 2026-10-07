@@ -1,4 +1,4 @@
-import {clone,hash,stable,materialize,recordDocument,makeRecord,activeRecords,calculate,recordHash} from './model.mjs';
+import {clone,hash,stable,materialize,recordDocument,makeRecord,activeRecords,calculate,recordHash,isObservationDate} from './model.mjs';
 import {validateLedger,validateTransition} from './validate.mjs';
 import {coverageKeys,deriveDiscovery} from './updates.mjs';
 import {technologyTargets,technologyReviews} from './technology.mjs';
@@ -55,22 +55,34 @@ export function buildCandidate({previousLedger,previousEvidence,proposal,support
     record.evidence_ids=previousLedger.records[record.id]?.evidence_ids||[];ledger.records[record.id]=record;ledger.supporting[id]=record.id;
   }
   const uncaptured=doc=>{const read=run.reads.find(r=>r.source_id===doc.source_id&&r.status==='read');return !read||read.sha256!==doc.sha256||read.url!==doc.url||read.access!==doc.access||read.accessed_at!==doc.accessed_at||!read.reviewed_at;};
-  const tracked=catalog.series?.metrics||[],setPoint=(metric_id,period,id)=>{ledger.series??={};(ledger.series[metric_id]??={})[period]=id;};
+  const tracked=catalog.series?.metrics||[],observed=catalog.series?.observations?.metrics||[],setPoint=(metric_id,period,id)=>{ledger.series??={};(ledger.series[metric_id]??={})[period]=id;};
   // A quarter rollover keeps the outgoing quarter's record as a past-quarter point, so trend lines grow without re-entry.
   if(next.financial_period!==previous.financial_period){
     const outgoing=new Map(activeRecords(previousLedger).map(r=>[r.metric_id,r]));
     for(const metric_id of tracked){const r=outgoing.get(metric_id);if(r?.context.financial_period&&r.context.financial_period!==next.financial_period&&typeof r.payload.current==='number')setPoint(metric_id,r.context.financial_period,r.id);}
   }
-  // Backfilled quarters reuse an existing evidenced record or add a new one with its own reviewed evidence.
+  // A newer industry reading keeps the one it replaces as a dated point; a same-date correction does not.
+  {
+    const outgoing=new Map(activeRecords(previousLedger).map(r=>[r.metric_id,r])),incoming=new Map(activeRecords(ledger).map(r=>[r.metric_id,r]));
+    for(const metric_id of observed){
+      const old=outgoing.get(metric_id),now=incoming.get(metric_id);
+      if(!now||old?.id===now.id)continue;
+      if(!isObservationDate(now.payload.as_of)){add('OBSERVATION_DATE',metric_id,'A new industry reading needs as_of: the date (YYYY-MM-DD) or month (YYYY-MM) it describes');continue;}
+      const key=old?.payload.as_of;
+      if(isObservationDate(key)&&key.length===now.payload.as_of.length&&key<now.payload.as_of&&typeof old.payload.current==='number'&&!ledger.series?.[metric_id]?.[key])setPoint(metric_id,key,old.id);
+    }
+  }
+  // Backfilled points reuse an existing evidenced record or add a new one with its own reviewed evidence.
   for(const [metric_id,periods] of Object.entries(history))for(const [period,point] of Object.entries(periods)){
-    const key=`${metric_id}@${period}`,def=catalog.definitions[metric_id];
-    if(!tracked.includes(metric_id)||!def){add('SERIES_METRIC',key,'Only catalog series metrics can hold past-quarter points');continue;}
-    // Reusing an already-evidenced record adds no new fact, so a maintenance run may do it; new points need a Micron-scoped run.
+    const key=`${metric_id}@${period}`,def=catalog.definitions[metric_id],industry=observed.includes(metric_id);
+    if(!(tracked.includes(metric_id)||industry)||!def){add('SERIES_METRIC',key,'Only catalog series metrics can hold past points');continue;}
+    // Reusing an already-evidenced record adds no new fact, so a maintenance run may do it; new points need a run scoped to the metric.
     if(!(point.record_id&&run.scope==='maintenance')&&!inScope(metric_id)){add('SCOPE',key,'Series point is outside this run scope');continue;}
     let record=point.record_id?previousLedger.records[point.record_id]:null;
     if(point.record_id&&!record){add('SERIES_RECORD',key,'Referenced record does not exist');continue;}
     if(!record){
-      record={metric_id,definition_version:def.version,context:{entity:'micron',financial_period:period,period_end:point.period_end,measurement:def.measurement,unit:def.unit,scope:def.scope,accounting_basis:def.accounting_basis,temporal_basis:def.temporal_basis,sources:clone(point.sources||[])},payload:clone(point.payload),evidence_ids:[]};
+      const context=industry?{entity:'industry',as_of:period}:{entity:'micron',financial_period:period,period_end:point.period_end};
+      record={metric_id,definition_version:def.version,context:{...context,measurement:def.measurement,unit:def.unit,scope:def.scope,accounting_basis:def.accounting_basis,temporal_basis:def.temporal_basis,sources:clone(point.sources||[])},payload:clone(point.payload),evidence_ids:[]};
       record.id=recordHash(record);
       const old=previousLedger.records[record.id],input=evidenceInput[key];
       if(old)record.evidence_ids=clone(old.evidence_ids);

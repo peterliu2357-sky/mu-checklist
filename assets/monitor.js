@@ -59,15 +59,16 @@
     const kind=/预测|指引|计划/.test(row.kind)?'forecast':row.evidence_type==='unavailable'?'missing':'';
     return `<span class="kind ${kind}">${esc(row.kind)}</span>${row.evidence_type==='direct'?'':`<span class="basis ${esc(row.evidence_type)}">${provenance[row.evidence_type]}</span>`}`;
   }
-  function evidence(row) {
-    return `<div class="evidence-row ledger-row"><div class="ledger-label"><span class="row-label">${esc(row.label)}</span><span class="tag-group">${tags(row)}</span><p class="row-period">${esc(row.period)}</p></div><div class="ledger-value">${numberLine(row)}</div><div class="source-links">${row.source_ids.map(id=>sourceLink(id)).join('')}</div></div>`;
+  function evidence(row,metric) {
+    const trend=metric?.category==='industry'?sparkline(trendPoints(metric,row),row.unit):'';
+    return `<div class="evidence-row ledger-row"><div class="ledger-label"><span class="row-label">${esc(row.label)}</span><span class="tag-group">${tags(row)}</span><p class="row-period">${esc(row.period)}</p></div><div class="ledger-value">${numberLine(row)}${trend}</div><div class="source-links">${row.source_ids.map(id=>sourceLink(id)).join('')}</div></div>`;
   }
   function rowBasis(row) {
     return `<li><b>${esc(row.label)}</b>${row.note?`<p class="row-note">${esc(row.note)}</p>`:''}<p class="source-location">定位：${esc(row.location)} · ${provenance[row.evidence_type]}</p></li>`;
   }
   function metricCard(metric,index,{skip=()=>false}={}) {
     metric={...metric,rows:metric.rows.filter(r=>!skip(metric,r))};
-    return `<article class="card metric" id="${esc(metric.id)}"><div class="metric-top"><div class="metric-heading"><h3><span class="metric-number">${String(index+1).padStart(2,'0')}</span>${esc(metric.title)}</h3></div><p class="micro">${esc(metric.period)}</p><p class="definition">${esc(metric.definition)}</p></div>${metric.rows.slice(0,4).map(evidence).join('')}<details class="evidence-details"><summary>${metric.rows.length>4?`展开其余 ${metric.rows.length-4} 项数据与原文位置`:'口径与原文位置'}</summary>${metric.rows.slice(4).map(evidence).join('')}<ul class="row-basis">${metric.rows.map(rowBasis).join('')}</ul><div class="review"><h4>口径与缺失数据</h4><ul>${metric.limits.map(s=>`<li>${esc(s)}</li>`).join('')}</ul><p class="micro">引用审校 ${esc(metric.checked_at)} UTC · 下次更新 ${esc(metric.next_review)}</p></div></details><div class="interpretation"><h4>简要解读</h4><p>${esc(metric.interpretation)}</p>${data.technology&&['supply','hbm'].includes(metric.id)?`<a class="detail-link" data-tech-link="${metric.id==='supply'?'manufacturing':'hbm-progress'}" href="#${metric.id==='supply'?'manufacturing':'hbm-progress'}">${metric.id==='supply'?'工厂产能与制程进展':'HBM 三家进度'} →</a>`:''}${metric.interpretation_sources?.length?`<div class="source-links">${metric.interpretation_sources.map(id=>sourceLink(id)).join('')}</div>`:''}</div></article>`;
+    return `<article class="card metric" id="${esc(metric.id)}"><div class="metric-top"><div class="metric-heading"><h3><span class="metric-number">${String(index+1).padStart(2,'0')}</span>${esc(metric.title)}</h3></div><p class="micro">${esc(metric.period)}</p><p class="definition">${esc(metric.definition)}</p></div>${metric.rows.slice(0,4).map(r=>evidence(r,metric)).join('')}<details class="evidence-details"><summary>${metric.rows.length>4?`展开其余 ${metric.rows.length-4} 项数据与原文位置`:'口径与原文位置'}</summary>${metric.rows.slice(4).map(r=>evidence(r,metric)).join('')}<ul class="row-basis">${metric.rows.map(rowBasis).join('')}</ul><div class="review"><h4>口径与缺失数据</h4><ul>${metric.limits.map(s=>`<li>${esc(s)}</li>`).join('')}</ul><p class="micro">引用审校 ${esc(metric.checked_at)} UTC · 下次更新 ${esc(metric.next_review)}</p></div></details><div class="interpretation"><h4>简要解读</h4><p>${esc(metric.interpretation)}</p>${data.technology&&['supply','hbm'].includes(metric.id)?`<a class="detail-link" data-tech-link="${metric.id==='supply'?'manufacturing':'hbm-progress'}" href="#${metric.id==='supply'?'manufacturing':'hbm-progress'}">${metric.id==='supply'?'工厂产能与制程进展':'HBM 三家进度'} →</a>`:''}${metric.interpretation_sources?.length?`<div class="source-links">${metric.interpretation_sources.map(id=>sourceLink(id)).join('')}</div>`:''}</div></article>`;
   }
   function factCard(card) {
     const metric=data.metrics.find(m=>m.id===card.metric_id),row=metric.rows.find(r=>card.row_id?r.id===card.row_id:r.label===card.row_label);
@@ -103,11 +104,14 @@
     if(!items.length) return '';
     return `<section class="card metric company-outlook" id="company-outlook"><div class="metric-top"><h3>美光展望</h3><p class="definition">公司对行业供需的表述，属预测，不是实际数据。</p></div>${items.map(({row})=>evidence(row)).join('')}<details class="evidence-details"><summary>口径与原文位置</summary><ul class="row-basis">${items.map(({row})=>rowBasis(row)).join('')}</ul></details></section>`;
   }
-  // Past quarters from data.series plus the live quarter from the row itself; each number is stored once.
+  // Past points from data.series plus the live reading from the row itself; each number is stored once.
+  // Micron quarters show the last 8; dated industry readings (as_of) show the last 16.
   function trendPoints(metric,row) {
     const past=data.series?.[`mu.${metric.id}.${row.id}`];
     if(!past?.length||typeof row.current!=='number') return [];
-    return [...past.map(p=>({period:p.financial_period,value:p.value})),{period:data.financial_period,value:row.current}].slice(-8);
+    if(past[0].financial_period) return [...past.map(p=>({period:p.financial_period,value:p.value})),{period:data.financial_period,value:row.current}].slice(-8);
+    const label=as_of=>as_of.length===10?as_of.slice(5):as_of;
+    return [...past.map(p=>({period:label(p.as_of),value:p.value})),{period:row.as_of?label(row.as_of):'最新',value:row.current}].slice(-16);
   }
   function sparkline(points,unit) {
     if(points.length<2) return '';
