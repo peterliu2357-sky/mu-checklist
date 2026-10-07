@@ -1,0 +1,135 @@
+{
+  "version": 1,
+  "scope": "calendar",
+  "base_commit": "3c36f8733289bc0b0da8692bce95986216247f58",
+  "base_revision": "2026-10-05-66c293a7da",
+  "base_sha256": "b1a8beb1cdf3b869ca49cdd81ff025ac28b0b3a90b18eae579faf15a28d6209b",
+  "catalog_sha256": "81250eab8785f1b4beda4523464a8bfba0860268a8e00b20b255258774e37876",
+  "created_at": "2026-10-07T17:14:40.975Z",
+  "completed_at": "2026-10-07T17:15:26.327Z",
+  "state": "verified",
+  "targets": null,
+  "coverage": [
+    {
+      "key": "calendar",
+      "status": "verified",
+      "evidence": [
+        "calendar_alphabet_20261028",
+        "calendar_index_microsoft_20261007",
+        "calendar_index_amazon_20261007",
+        "calendar_index_meta_20261007",
+        "calendar_index_oracle_20261007",
+        "calendar_index_micron_20261007",
+        "calendar_index_nvidia_20261007",
+        "calendar_index_samsung_20261007",
+        "calendar_index_skhynix_20261007"
+      ],
+      "reviewed_at": "2026-10-07T17:15:12.304Z",
+      "latest_disclosure": {
+        "url": "https://abc.xyz/investor/news/news-details/2026/Alphabet-Announces-Date-of-Third-Quarter-2026-Financial-Results-Conference-Call-2026-8tpGZsLS6v/default.aspx",
+        "published_at": "2026-10-06"
+      },
+      "reason": "九家目标公司官方日程均已检查：Alphabet 已公告 10 月 28 日召开 2026 Q3 业绩电话会；Microsoft、Amazon、Meta、Oracle、NVIDIA、Samsung、SK hynix 与美光尚未公布下一财报日期，保持待确认；未发现漏处理的财报。"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "calendar_alphabet_20261028",
+      "url": "https://abc.xyz/investor/news/news-details/2026/Alphabet-Announces-Date-of-Third-Quarter-2026-Financial-Results-Conference-Call-2026-8tpGZsLS6v/default.aspx",
+      "sha256": "7ab2c69132f8b60d6c53360691e5699b2464dd68a7c53105ea3999b432392e41",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-07T17:15:09.711Z",
+      "reviewed_at": "2026-10-07T17:15:09.711Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_microsoft_20261007",
+      "url": "https://www.microsoft.com/en-us/investor/default",
+      "sha256": "05f7f480a17bb189f9a88f23b53ab8435a91e947e969b01157e8a46d0a8e66d4",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-07T17:15:10.047Z",
+      "reviewed_at": "2026-10-07T17:15:10.047Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_amazon_20261007",
+      "url": "https://ir.aboutamazon.com/feed/Event.svc/GetEventList?apiKey=BF185719B0464B3CB809D23926182246&LanguageId=1&eventSelection=0&eventDateFilter=0&includeFinancialReports=true&includePresentations=true&includePressReleases=true&sortOperator=1&pageSize=-1&pageNumber=0&tagList=&includeTags=true&year=-1&excludeSelection=1",
+      "sha256": "9c5e8a2fd54f020fae53deb425972c8cd63ca9c4dea8173882079754805ee763",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-07T17:15:10.340Z",
+      "reviewed_at": "2026-10-07T17:15:10.340Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_meta_20261007",
+      "url": "https://investor.atmeta.com/feed/Event.svc/GetEventList?apiKey=F37D4FC40D0E4774887D6827E95013D5&eventSelection=0&eventDateFilter=0&includeFinancialReports=true&includePresentations=true&includePressReleases=true&sortOperator=1&pageSize=-1&tagList=&includeTags=true&year=-1&excludeSelection=0",
+      "sha256": "6447e602d2fe19a0029145c094f97e1c80196c120a4be48ffcfb285358fc325c",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-07T17:15:10.680Z",
+      "reviewed_at": "2026-10-07T17:15:10.680Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_oracle_20261007",
+      "url": "https://investor.oracle.com/feed/Event.svc/GetEventList?apiKey=BF185719B0464B3CB809D23926182246&LanguageId=1&eventSelection=0&eventDateFilter=0&includeFinancialReports=true&includePresentations=true&includePressReleases=true&sortOperator=1&pageSize=-1&pageNumber=0&tagList=&includeTags=true&year=-1&excludeSelection=1",
+      "sha256": "82ce64cb7efb7b8647e07570671d95856efa6ebe68606d07d1717360b48c7e86",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-07T17:15:11.012Z",
+      "reviewed_at": "2026-10-07T17:15:11.012Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_micron_20261007",
+      "url": "https://investors.micron.com/feed/Event.svc/GetEventList?LanguageId=1&eventSelection=0&eventDateFilter=0&includeFinancialReports=false&includePresentations=false&includePressReleases=false&sortOperator=1&pageSize=-1&pageNumber=0&tagList=&includeTags=true&year=-1&excludeSelection=1",
+      "sha256": "5f24b260e4299b966f12709b5dba65ae0432d23e8ea11e776ef32b7ed76a2962",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-07T17:15:11.331Z",
+      "reviewed_at": "2026-10-07T17:15:11.331Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_nvidia_20261007",
+      "url": "https://investor.nvidia.com/events-and-presentations/events-and-presentations/default.aspx",
+      "sha256": "6157452bbfffa850c68be34eac90a77eae365fb2aef10401903cf644a4df5950",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-10-07T17:15:11.650Z",
+      "reviewed_at": "2026-10-07T17:15:11.650Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_samsung_20261007",
+      "url": "https://www.samsung.com/global/ir/ir-events-presentations/events/",
+      "sha256": "b57d37943d5706d0a029322e7f4140443bc92d0465706410e9f44c506b89ed20",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-07T17:15:11.996Z",
+      "reviewed_at": "2026-10-07T17:15:11.996Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_skhynix_20261007",
+      "url": "https://news.skhynix.com/en/?s=earnings+conference+call",
+      "sha256": "ca3c5c7c71825a9159fcf5336600deacd02ea8d10bbb4f7c60ae105cc082b790",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-07T17:15:12.304Z",
+      "reviewed_at": "2026-10-07T17:15:12.304Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [],
+  "publication_corrections": [],
+  "technology_reviews": [],
+  "summary": "新增 Alphabet 2026 Q3 已确认财报日程；其余八家公司官方日程尚未公布，保持待确认。",
+  "result": "success",
+  "artifact_sha256": "50c4aeff2276a1fa3ae2fe47801698bc397909a70b81c4d9f115f9457c74977d",
+  "ledger_sha256": "e0a0c0c2091375712e4662ba263d72dd27512558e4dfe0176144e50eaf1395cc",
+  "evidence_sha256": "935b9bfff3921f8dfe8bd6864823133311f617c02ec77142e9ac2e5a75943070"
+}
