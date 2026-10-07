@@ -8172,5 +8172,42 @@
     "mode": "verified",
     "record_hash": "b425854c962dda27650312b7e451d7358fe9df21d02afa30bec4bd368cc80cba",
     "id": "e-e87375bf0ba366612a9362c5b5997c220969661384079f800b8b2373cf3a9cb1"
+  },
+  "e-54fdb71871768b1673c4aea7d52f87bb86d3aefd61337dce296330113d4e0cd9": {
+    "measurement": "disclosure_calendar",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "calendar.alphabet_2026_q3",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "manual review of official Alphabet investor relations press release",
+      "at": "2026-10-07T17:15:09.711Z"
+    },
+    "documents": [
+      {
+        "source_id": "calendar_alphabet_20261028",
+        "url": "https://abc.xyz/investor/news/news-details/2026/Alphabet-Announces-Date-of-Third-Quarter-2026-Financial-Results-Conference-Call-2026-8tpGZsLS6v/default.aspx",
+        "sha256": "7ab2c69132f8b60d6c53360691e5699b2464dd68a7c53105ea3999b432392e41",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:15:09.711Z",
+        "reviewed_at": "2026-10-07T17:15:09.711Z",
+        "status": "read",
+        "locator": "Press release dated October 6, 2026 · first paragraph。",
+        "excerpt": "Alphabet will hold its quarterly conference call to discuss third quarter 2026 financial results on Wednesday, October 28, at 1:30pm Pacific Time (4:30pm Eastern Time)."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "dc3c502612841ee9445520ad1d2ca93f4778ddaabe6d0a1062cb3a7b648e893e",
+    "id": "e-54fdb71871768b1673c4aea7d52f87bb86d3aefd61337dce296330113d4e0cd9"
   }
 }

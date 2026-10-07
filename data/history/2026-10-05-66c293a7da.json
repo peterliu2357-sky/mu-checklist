@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "revision": "2026-10-07-2970469775",
-  "updated_at": "2026-10-07T17:15:26.327Z",
+  "revision": "2026-10-05-66c293a7da",
+  "updated_at": "2026-10-05T00:32:03.049Z",
   "last_successful_check_at": "2026-09-20T23:50:00Z",
   "last_attempt_at": "2026-09-20T23:50:00Z",
   "financial_period": "FY2026 Q4",
@@ -1212,87 +1212,6 @@
       "checked_at": "2026-10-05",
       "type": "公司官方入口",
       "locator": "Consolidated Monthly Revenue 表 · 2026 · July / June（千元新台币）。"
-    },
-    "calendar_index_microsoft_20261007": {
-      "label": "Microsoft Investor 首页",
-      "short_label": "Microsoft Investor",
-      "url": "https://www.microsoft.com/en-us/investor/default",
-      "published_at": null,
-      "checked_at": "2026-10-07",
-      "type": "公司日程入口",
-      "locator": "Know the next earnings release date：The next earnings release will be announced soon。"
-    },
-    "calendar_index_amazon_20261007": {
-      "label": "Amazon IR 活动列表",
-      "short_label": "Amazon IR Events",
-      "url": "https://ir.aboutamazon.com/feed/Event.svc/GetEventList?apiKey=BF185719B0464B3CB809D23926182246&LanguageId=1&eventSelection=0&eventDateFilter=0&includeFinancialReports=true&includePresentations=true&includePressReleases=true&sortOperator=1&pageSize=-1&pageNumber=0&tagList=&includeTags=true&year=-1&excludeSelection=1",
-      "published_at": null,
-      "checked_at": "2026-10-07",
-      "type": "公司日程入口",
-      "locator": "活动列表最新为 Q2 2026 Earnings Conference Call（2026-07-30），无 Q3 2026 场次。"
-    },
-    "calendar_index_meta_20261007": {
-      "label": "Meta IR 活动列表",
-      "short_label": "Meta IR Events",
-      "url": "https://investor.atmeta.com/feed/Event.svc/GetEventList?apiKey=F37D4FC40D0E4774887D6827E95013D5&eventSelection=0&eventDateFilter=0&includeFinancialReports=true&includePresentations=true&includePressReleases=true&sortOperator=1&pageSize=-1&tagList=&includeTags=true&year=-1&excludeSelection=0",
-      "published_at": null,
-      "checked_at": "2026-10-07",
-      "type": "公司日程入口",
-      "locator": "活动列表最新财报为 Q2 2026 Earnings Call（2026-07-29），无 Q3 2026 场次。"
-    },
-    "calendar_index_oracle_20261007": {
-      "label": "Oracle IR 活动列表",
-      "short_label": "Oracle IR Events",
-      "url": "https://investor.oracle.com/feed/Event.svc/GetEventList?apiKey=BF185719B0464B3CB809D23926182246&LanguageId=1&eventSelection=0&eventDateFilter=0&includeFinancialReports=true&includePresentations=true&includePressReleases=true&sortOperator=1&pageSize=-1&pageNumber=0&tagList=&includeTags=true&year=-1&excludeSelection=1",
-      "published_at": null,
-      "checked_at": "2026-10-07",
-      "type": "公司日程入口",
-      "locator": "活动列表最新为 Q1 FY27 Earnings（2026-09-10），无 Q2 FY27 场次。"
-    },
-    "calendar_index_micron_20261007": {
-      "label": "美光 IR 活动列表",
-      "short_label": "Micron IR Events",
-      "url": "https://investors.micron.com/feed/Event.svc/GetEventList?LanguageId=1&eventSelection=0&eventDateFilter=0&includeFinancialReports=false&includePresentations=false&includePressReleases=false&sortOperator=1&pageSize=-1&pageNumber=0&tagList=&includeTags=true&year=-1&excludeSelection=1",
-      "published_at": null,
-      "checked_at": "2026-10-07",
-      "type": "公司日程入口",
-      "locator": "活动列表最新为 Fourth Quarter 2026 Financial Call（2026-09-30），无 FY2027 Q1 场次。"
-    },
-    "calendar_index_nvidia_20261007": {
-      "label": "NVIDIA 活动与演示",
-      "short_label": "NVIDIA Events",
-      "url": "https://investor.nvidia.com/events-and-presentations/events-and-presentations/default.aspx",
-      "published_at": null,
-      "checked_at": "2026-10-07",
-      "type": "公司日程入口",
-      "locator": "Upcoming Events 无场次；最新财报活动为 2nd Quarter FY27 Financial Results（2026-08-26）。"
-    },
-    "calendar_index_samsung_20261007": {
-      "label": "Samsung IR 活动",
-      "short_label": "Samsung IR Events",
-      "url": "https://www.samsung.com/global/ir/ir-events-presentations/events/",
-      "published_at": null,
-      "checked_at": "2026-10-07",
-      "type": "公司日程入口",
-      "locator": "Upcoming 仅 2Q26 Overseas NDR；最新财报活动为 2Q26 Earnings Conference Call（2026-07-30）。"
-    },
-    "calendar_index_skhynix_20261007": {
-      "label": "SK hynix Newsroom 财报会议邀请检索",
-      "short_label": "SK hynix Newsroom",
-      "url": "https://news.skhynix.com/en/?s=earnings+conference+call",
-      "published_at": null,
-      "checked_at": "2026-10-07",
-      "type": "公司日程入口",
-      "locator": "检索结果最新为 Q2 2026 Earnings Conference Call Invitation，无 Q3 2026 邀请。"
-    },
-    "calendar_alphabet_20261028": {
-      "label": "Alphabet 2026 Q3 财报电话会日期公告",
-      "short_label": "Alphabet 财报日程",
-      "url": "https://abc.xyz/investor/news/news-details/2026/Alphabet-Announces-Date-of-Third-Quarter-2026-Financial-Results-Conference-Call-2026-8tpGZsLS6v/default.aspx",
-      "published_at": "2026-10-06",
-      "checked_at": "2026-10-07",
-      "type": "公司日程",
-      "locator": "公告正文：Wednesday, October 28, at 1:30pm Pacific Time (4:30pm Eastern Time)。"
     }
   },
   "metrics": [
@@ -2617,12 +2536,6 @@
     "产业链指引和管理层展望按原披露日期及目标期间记录，文字为中文摘要；同比由原始金额计算，百分点与百分比区分。"
   ],
   "check_log": [
-    {
-      "at": "2026-10-07T17:15:26.327Z",
-      "status": "success",
-      "scope": "calendar",
-      "text": "新增 Alphabet 2026 Q3 已确认财报日程；其余八家公司官方日程尚未公布，保持待确认。"
-    },
     {
       "at": "2026-10-05T00:32:03.049Z",
       "status": "success",
@@ -4123,21 +4036,6 @@
           "calendar_tsmc_20261015"
         ],
         "location": "Financial Calendar · October 15, 2026 · TSMC 3Q'26 Results；02:00 ET / 14:00 Taiwan。",
-        "kind": "公司日程",
-        "evidence_type": "direct"
-      },
-      {
-        "id": "alphabet_2026_q3",
-        "company_id": "alphabet",
-        "title": "Alphabet 2026 Q3 财报",
-        "period": "2026 Q3",
-        "scheduled_at": "2026-10-28T16:30:00-04:00",
-        "review_after": "2026-10-29T20:30:00Z",
-        "confirmation": "confirmed",
-        "source_ids": [
-          "calendar_alphabet_20261028"
-        ],
-        "location": "公告：October 28, 1:30pm PT / 4:30pm ET 召开 2026 Q3 业绩电话会；业绩稿在电话会前发布。",
         "kind": "公司日程",
         "evidence_type": "direct"
       }
