@@ -7,7 +7,7 @@
   const updateCore=globalThis.MonitorUpdates;
   const updateTimes=globalThis.MonitorUpdateTimes;
   const technology=globalThis.TechnologyUI;
-  const agent=globalThis.MonitorOutlook;
+  const agent=globalThis.MonitorOutlook,series=globalThis.MonitorSeries;
   let data,outlook=null,updateStatus,savedData=false,updatePanelState,ecosystemGroup='cloud';
   function updateTime(value,short=false){return value?`<time datetime="${esc(value)}">${esc(updateTimes.format(value,short))}</time>`:'暂无记录';}
   function renderUpdatePanel(){
@@ -104,14 +104,8 @@
     if(!items.length) return '';
     return `<section class="card metric company-outlook" id="company-outlook"><div class="metric-top"><h3>美光展望</h3><p class="definition">公司对行业供需的表述，属预测，不是实际数据。</p></div>${items.map(({row})=>evidence(row)).join('')}<details class="evidence-details"><summary>口径与原文位置</summary><ul class="row-basis">${items.map(({row})=>rowBasis(row)).join('')}</ul></details></section>`;
   }
-  // Past points from data.series plus the live reading from the row itself; each number is stored once.
-  // Micron quarters show the last 8; dated industry readings (as_of) show the last 16.
   function trendPoints(metric,row) {
-    const past=data.series?.[`mu.${metric.id}.${row.id}`];
-    if(!past?.length||typeof row.current!=='number') return [];
-    if(past[0].financial_period) return [...past.map(p=>({period:p.financial_period,value:p.value})),{period:data.financial_period,value:row.current}].slice(-8);
-    const label=as_of=>as_of.length===10?as_of.slice(5):as_of;
-    return [...past.map(p=>({period:label(p.as_of),value:p.value})),{period:row.as_of?label(row.as_of):'最新',value:row.current}].slice(-16);
+    return series.trend(data.series?.[`mu.${metric.id}.${row.id}`],{value:row.current,financial_period:data.financial_period,as_of:row.as_of});
   }
   function sparkline(points,unit) {
     if(points.length<2) return '';

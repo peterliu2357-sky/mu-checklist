@@ -1,7 +1,9 @@
 import fs from 'node:fs';
 import Ajv from 'ajv';
 import {fileURLToPath} from 'node:url';
-import {activeRecords,seriesRecords,isObservationDate,entries,materialize,makeRecord,recordHash,hash,stable,compute,orderedCalculations,numericInputs,pendingInput} from './model.mjs';
+import {activeRecords,seriesRecords,entries,materialize,makeRecord,recordHash,hash,stable,compute,orderedCalculations,numericInputs,pendingInput} from './model.mjs';
+import series from '../lib/series-core.js';
+const {isObservationDate,compareDates}=series;
 import {coverageKeys,validateUpdates,validateUpdateTransition} from './updates.mjs';
 import {validateTechnology,validateTechnologyTransition} from './technology.mjs';
 
@@ -147,7 +149,7 @@ export function validateLedger(ledger,catalog,evidence,legacy) {
     else if(observed.has(metric_id)){
       const live=byMetric.get(metric_id)?.payload.as_of;
       if(r.context.entity!=='industry'||r.payload.as_of!==key||!isObservationDate(key))add('SERIES_PERIOD',path,'Industry points are keyed by the as_of date of their own reading');
-      else if((live||Object.keys(ledger.series[metric_id])[0]).length!==key.length||live&&key>=live)add('SERIES_PERIOD',path,'Points share one date format and predate the live reading, which stays in its row');
+      else if(live?compareDates(key,live)!==-1:compareDates(key,Object.keys(ledger.series[metric_id])[0])===null)add('SERIES_PERIOD',path,'Points share one date format and predate the live reading, which stays in its row');
     }
     else if(r.context.entity!=='micron'||r.context.financial_period!==key||!date(r.context.period_end))add('SERIES_PERIOD',path,'Series record context must name its own quarter and period end');
     else if(key===document.financial_period||Date.parse(r.context.period_end)>=Date.parse(document.financial_as_of))add('SERIES_PERIOD',path,'The live quarter belongs in its metric row, not the series');

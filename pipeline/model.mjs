@@ -1,4 +1,5 @@
 import {createHash} from 'node:crypto';
+import series from '../lib/series-core.js';
 
 export const clone = value => structuredClone(value);
 export const stable = value => JSON.stringify(sort(value));
@@ -100,14 +101,12 @@ export function materialize(ledger) {
       const r=ledger.records[id];
       if(!r) throw new Error(`Missing series record ${id}`);
       const common={value:r.payload.current,unit:r.payload.unit,sources:clone(r.context.sources||[]),record_id:id};
-      return isQuarter(key)?{financial_period:key,period_end:r.context.period_end,...common}:{as_of:key,...common};
+      return series.isQuarter(key)?{financial_period:key,period_end:r.context.period_end,...common}:{as_of:key,...common};
     }).sort((a,b)=>(a.period_end||a.as_of).localeCompare(b.period_end||b.as_of));
   }
   return result;
 }
 
-export const isQuarter=key=>/^FY\d{4} Q[1-4]$/.test(key);
-export const isObservationDate=key=>/^\d{4}-(0[1-9]|1[0-2])(-(0[1-9]|[12]\d|3[01]))?$/.test(key||'');
 
 // Records behind past series points; kept apart from active records because one metric has many periods.
 export function seriesRecords(ledger) {
