@@ -2817,6 +2817,24 @@
         "secondary"
       ]
     },
+    "calendar.alphabet_2026_q3": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "entity": "alphabet",
+      "measurement": "disclosure_calendar",
+      "unit": "",
+      "scope": "calendar.alphabet_2026_q3",
+      "accounting_basis": "not_applicable",
+      "temporal_basis": "dated_disclosure",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct",
+        "proxy",
+        "secondary"
+      ]
+    },
     "tech.sanand": {
       "version": 1,
       "active": true,
@@ -3415,6 +3433,9 @@
     ],
     "calendar_tsmc_20261015": [
       "calendar.tsmc_2026_q3"
+    ],
+    "calendar_alphabet_20261028": [
+      "calendar.alphabet_2026_q3"
     ],
     "price_auto": [
       "quote.mu"
