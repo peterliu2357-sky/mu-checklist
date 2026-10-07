@@ -3469,7 +3469,8 @@
       "tech.skhynix_hbm4e"
     ],
     "dram_spot": [
-      "mu.contract.ddr5_spot"
+      "mu.contract.ddr5_spot",
+      "mu.contract.ddr4_spot"
     ],
     "nanya_monthly": [
       "mu.demand.nanya_revenue"
