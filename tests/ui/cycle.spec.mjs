@@ -36,3 +36,20 @@ test('signal cards draw past quarters plus the live quarter as a trend line',asy
   await expect(page.locator('.cycle-signal[data-metric="margin"] .sparkline')).toHaveCount(0);
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
 });
+test('dated industry readings draw a trend on the signal card and the 周期 card row',async({page})=>{
+  const d=structuredClone(data),contract=d.metrics.find(m=>m.id==='contract'),spot=contract.rows.find(r=>r.id==='ddr4_spot'),tlc=contract.rows.find(r=>r.id==='tlc_spot');
+  spot.current=46.32;spot.as_of='2026-10-06';tlc.as_of='2026-10-05';
+  // Synthetic past readings for layout only.
+  const points=(rows,unit)=>rows.map(([as_of,value])=>({as_of,value,unit,sources:[{id:'x',url:'https://example.com/',published_at:as_of}],record_id:'a'.repeat(64)}));
+  d.series={'mu.contract.ddr4_spot':points([['2026-09-22',46.04],['2026-09-29',46.32]],'USD'),'mu.contract.tlc_spot':points([['2026-09-21',19.883],['2026-09-28',19.396]],'USD')};
+  await page.setViewportSize({width:320,height:900});
+  await page.route('**/data/monitor.json?*',r=>r.fulfill({json:d}));
+  await page.goto('/#cycle');
+  const signal=page.locator('.cycle-signal[data-metric="contract"]').first();
+  await expect(signal.locator('.sparkline circle.dot')).toHaveCount(3);
+  await expect(signal.locator('.sparkline figcaption')).toHaveText('09-2210-06');
+  const row=page.locator('#contract .ledger-row').filter({hasText:tlc.label});
+  await expect(row.locator('.sparkline circle.dot')).toHaveCount(3);
+  await expect(page.locator('#contract .ledger-row').filter({hasText:'普通型 DRAM 合同价环比'}).locator('.sparkline')).toHaveCount(0);
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+});

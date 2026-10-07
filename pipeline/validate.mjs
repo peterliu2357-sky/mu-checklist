@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import Ajv from 'ajv';
 import {fileURLToPath} from 'node:url';
-import {activeRecords,seriesRecords,entries,materialize,makeRecord,recordHash,hash,stable,compute,orderedCalculations,numericInputs,pendingInput} from './model.mjs';
+import {activeRecords,seriesRecords,isObservationDate,entries,materialize,makeRecord,recordHash,hash,stable,compute,orderedCalculations,numericInputs,pendingInput} from './model.mjs';
 import {coverageKeys,validateUpdates,validateUpdateTransition} from './updates.mjs';
 import {validateTechnology,validateTechnologyTransition} from './technology.mjs';
 
@@ -137,16 +137,22 @@ export function validateLedger(ledger,catalog,evidence,legacy) {
     }
   }
   for(const r of active)checkRecord(r);
-  // Past-quarter points: one sourced record per tracked metric and earlier quarter.
-  const tracked=new Set(catalog.series?.metrics||[]),ends=new Map();
-  for(const {metric_id,financial_period,record:r,id} of seriesRecords(ledger)) {
-    const path=`series.${metric_id}.${financial_period}`;
+  for(const id of catalog.series?.observations?.metrics||[]){const as_of=byMetric.get(id)?.payload.as_of;if(as_of!==undefined&&!isObservationDate(as_of))add('OBSERVATION_DATE',id,'as_of must be YYYY-MM-DD or YYYY-MM');}
+  // Past points: one sourced record per tracked metric and earlier quarter, or per industry metric and earlier reading.
+  const tracked=new Set(catalog.series?.metrics||[]),observed=new Set(catalog.series?.observations?.metrics||[]),ends=new Map();
+  for(const {metric_id,key,record:r,id} of seriesRecords(ledger)) {
+    const path=`series.${metric_id}.${key}`;
     if(!r){add('SERIES_RECORD',path,`Missing record ${id}`);continue;}
-    if(!tracked.has(metric_id)||r.metric_id!==metric_id)add('SERIES_METRIC',path,'Series must use a tracked metric and its own records');
-    if(r.context.entity!=='micron'||r.context.financial_period!==financial_period||!date(r.context.period_end))add('SERIES_PERIOD',path,'Series record context must name its own quarter and period end');
-    else if(financial_period===document.financial_period||Date.parse(r.context.period_end)>=Date.parse(document.financial_as_of))add('SERIES_PERIOD',path,'The live quarter belongs in its metric row, not the series');
+    if(!(tracked.has(metric_id)||observed.has(metric_id))||r.metric_id!==metric_id)add('SERIES_METRIC',path,'Series must use a tracked metric and its own records');
+    else if(observed.has(metric_id)){
+      const live=byMetric.get(metric_id)?.payload.as_of;
+      if(r.context.entity!=='industry'||r.payload.as_of!==key||!isObservationDate(key))add('SERIES_PERIOD',path,'Industry points are keyed by the as_of date of their own reading');
+      else if((live||Object.keys(ledger.series[metric_id])[0]).length!==key.length||live&&key>=live)add('SERIES_PERIOD',path,'Points share one date format and predate the live reading, which stays in its row');
+    }
+    else if(r.context.entity!=='micron'||r.context.financial_period!==key||!date(r.context.period_end))add('SERIES_PERIOD',path,'Series record context must name its own quarter and period end');
+    else if(key===document.financial_period||Date.parse(r.context.period_end)>=Date.parse(document.financial_as_of))add('SERIES_PERIOD',path,'The live quarter belongs in its metric row, not the series');
     if(typeof r.payload.current!=='number')add('SERIES_VALUE',path,'Series points need a numeric current value');
-    const seen=ends.get(metric_id)||new Set();if(seen.has(r.context.period_end))add('SERIES_PERIOD',path,'Duplicate quarter in series');seen.add(r.context.period_end);ends.set(metric_id,seen);
+    const end=r.context.period_end||r.payload.as_of,seen=ends.get(metric_id)||new Set();if(seen.has(end))add('SERIES_PERIOD',path,'Duplicate period in series');seen.add(end);ends.set(metric_id,seen);
     checkRecord(r,{series:true});
   }
   const value=(id,field)=>byMetric.get(id)?.payload[field];

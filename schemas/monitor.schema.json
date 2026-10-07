@@ -320,6 +320,11 @@
                   "type": "string",
                   "minLength": 1
                 },
+                "as_of": {
+                  "type": "string",
+                  "pattern": "^\\d{4}-(0[1-9]|1[0-2])(-(0[1-9]|[12]\\d|3[01]))?$",
+                  "description": "Date (or month) of an industry reading kept in a dated series."
+                },
                 "change": {
                   "type": [
                     "string",
@@ -1599,65 +1604,121 @@
     },
     "series": {
       "type": "object",
-      "description": "Past-quarter points for tracked Micron metrics, oldest first; the live quarter stays in its metric row.",
+      "description": "Past points, oldest first: Micron quarters keyed by financial period, industry readings keyed by as_of. The live reading stays in its metric row.",
       "additionalProperties": {
         "type": "array",
         "items": {
-          "type": "object",
-          "required": [
-            "financial_period",
-            "period_end",
-            "value",
-            "unit",
-            "sources",
-            "record_id"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "financial_period": {
-              "type": "string",
-              "pattern": "^FY\\d{4} Q[1-4]$"
+          "anyOf": [
+            {
+              "type": "object",
+              "required": [
+                "financial_period",
+                "period_end",
+                "value",
+                "unit",
+                "sources",
+                "record_id"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "financial_period": {
+                  "type": "string",
+                  "pattern": "^FY\\d{4} Q[1-4]$"
+                },
+                "period_end": {
+                  "type": "string",
+                  "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                },
+                "value": {
+                  "type": "number"
+                },
+                "unit": {
+                  "type": "string"
+                },
+                "record_id": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "sources": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "url"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "url": {
+                        "type": "string",
+                        "pattern": "^https://"
+                      },
+                      "published_at": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
             },
-            "period_end": {
-              "type": "string",
-              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
-            },
-            "value": {
-              "type": "number"
-            },
-            "unit": {
-              "type": "string"
-            },
-            "record_id": {
-              "type": "string",
-              "pattern": "^[a-f0-9]{64}$"
-            },
-            "sources": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "required": [
-                  "id",
-                  "url"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "url": {
-                    "type": "string",
-                    "pattern": "^https://"
-                  },
-                  "published_at": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
+            {
+              "type": "object",
+              "required": [
+                "as_of",
+                "value",
+                "unit",
+                "sources",
+                "record_id"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "as_of": {
+                  "type": "string",
+                  "pattern": "^\\d{4}-(0[1-9]|1[0-2])(-(0[1-9]|[12]\\d|3[01]))?$"
+                },
+                "value": {
+                  "type": "number"
+                },
+                "unit": {
+                  "type": "string"
+                },
+                "record_id": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "sources": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "url"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "url": {
+                        "type": "string",
+                        "pattern": "^https://"
+                      },
+                      "published_at": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      }
+                    }
                   }
                 }
               }
             }
-          }
+          ]
         }
       }
     }

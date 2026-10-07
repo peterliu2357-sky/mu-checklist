@@ -8,7 +8,7 @@ export function validateEvolution({oldCatalog,catalog,oldLedger,ledger,oldEviden
     if(!next||stable({...record,evidence_ids:[]})!==stable({...next,evidence_ids:[]}))add('RECORD_HISTORY',id,'Prior records must be retained unchanged');
     else if(record.evidence_ids.some(id=>!next.evidence_ids.includes(id)))add('EVIDENCE_HISTORY',id,'Existing evidence links must be retained');
   }
-  for(const [metric,periods]of Object.entries(oldLedger.series||{}))for(const period of Object.keys(periods))if(!ledger.series?.[metric]?.[period])add('SERIES_HISTORY',`${metric}@${period}`,'Past-quarter points cannot be removed');
+  for(const [metric,periods]of Object.entries(oldLedger.series||{}))for(const [period,id]of Object.entries(periods))if(ledger.series?.[metric]?.[period]!==id)add('SERIES_HISTORY',`${metric}@${period}`,'Published series points cannot be removed or replaced');
   for(const [id,record]of Object.entries(oldEvidence))if(!evidence[id]||hash(record)!==hash(evidence[id]))add('EVIDENCE_HISTORY',id,'Prior source evidence cannot be removed or overwritten');
   const semantic=['measurement','unit','scope','accounting_basis','temporal_basis','nature','entity'];
   for(const [id,definition]of Object.entries(oldCatalog.definitions)){

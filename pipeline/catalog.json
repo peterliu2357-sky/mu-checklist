@@ -3530,7 +3530,11 @@
   "series": {
     "description": "Micron quarterly metrics kept as past-quarter points for trend lines; the live quarter stays in its metric row.",
     "window": 8,
-    "metrics": ["mu.revenue.total", "mu.revenue.dram", "mu.margin.nongaap", "mu.inventory.days", "mu.capex.net"]
+    "metrics": ["mu.revenue.total", "mu.revenue.dram", "mu.margin.nongaap", "mu.inventory.days", "mu.capex.net"],
+    "observations": {
+      "description": "Industry readings kept as dated points (as_of YYYY-MM-DD, or YYYY-MM for monthly data); the latest reading stays in its row and the one it replaces becomes a point.",
+      "metrics": ["mu.contract.ddr4_spot", "mu.contract.ddr5_spot", "mu.contract.tlc_spot", "mu.demand.nanya_revenue", "mu.demand.korea_semi_exports", "mu.demand.korea_memory_exports"]
+    }
   },
   "calculations": [
     {

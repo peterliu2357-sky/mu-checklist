@@ -166,3 +166,13 @@ schema_version 仍为 2，新增必填 `ecosystem`；已有美光指标与财季
 - `eco.samsung.inventory`：三星集团合并期末存货。不能改标为存储部门存货。来源 ID `eco_samsung_balance`。
 
 产业链公司的存货沿用该部分同比口径（本期末 vs 上年同期末）。月度指标保留自然月期间，不与季度合计混用。
+
+## 周期趋势点
+
+`catalog.series.observations` 列出的行业指标（DDR4/DDR5/TLC 现货、南亚科月营收、韩国半导体与存储出口）在 周期 页画趋势线。每个数字仍只存一次：最新读数在行里，较早读数在 `ledger.series` 中按日期保存。
+
+- 更新这些行时必须填 `as_of`：报价日（`YYYY-MM-DD`）或统计月份（`YYYY-MM`），即数字所描述的日期，不是发布日或核查日。缺 `as_of` 的新读数无法 build。
+- 行的记录身份包含卡片的 `period` 文字：改动卡片 period 会让同卡所有趋势行变成新记录，这些行也都要有 `as_of` 并重新取证。
+- 新读数的 `as_of` 不能早于旧行，也不能换日期格式。新读数的 `as_of` 晚于旧行时，旧行自动成为一个趋势点，无需另录；同一 `as_of` 的更正只替换行，不新增点。所以每次周日/周三更新只需照常更新行。
+- 同一指标前后口径一致：DDR4 1Gx8 3200 与 512Gb TLC 取 TrendForce 每周现货报告（Memory Spot Price Update）中的周均价与其注明日期；DDR5 取 DRAMeXchange 现货表 Session Average 与表头日期；南亚科取官方月营收表；韩国出口取产业通商部月度发布的整月值。不在同一条线上混用日价与周均价；换来源须是同一规格、同一类价格。
+- 补录缺失的较早读数：在 run 的 `history.json` 写 `{指标: {"2026-09-22": {sources:[{id,url,published_at}], payload}}}`，`payload.as_of` 与键相同，在 `industry` 范围 run 中逐份抓取原文并 `evidence-draft --metric 指标 --period 2026-09-22`。趋势点只能追加，日期须早于行内最新读数。
