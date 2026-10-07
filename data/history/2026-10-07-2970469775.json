@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "revision": "2026-10-07-bf98b452cd",
-  "updated_at": "2026-10-07T17:39:48.612Z",
+  "revision": "2026-10-07-2970469775",
+  "updated_at": "2026-10-07T17:15:26.327Z",
   "last_successful_check_at": "2026-09-20T23:50:00Z",
   "last_attempt_at": "2026-09-20T23:50:00Z",
   "financial_period": "FY2026 Q4",
@@ -368,13 +368,13 @@
       "locator": "首段：4Q26 普通型 DRAM 合同价环比；第二段：NAND Flash 合同价环比。"
     },
     "spot": {
-      "label": "TrendForce 现货周报 · 10-07",
-      "url": "https://www.trendforce.com/news/2026/10/07/insights-memory-spot-price-update-dram-spot-largely-sideways-as-holidays-month-end-effects-weigh/",
-      "published_at": "2026-10-07",
-      "checked_at": "2026-10-07",
+      "label": "TrendForce 现货与需求周报 · 09-16",
+      "url": "https://www.trendforce.com/news/2026/09/16/insights-memory-spot-price-update-dram-spot-cools-as-ddr5-inquiries-slow-2gx8-ddr4-prices-retreat/",
+      "published_at": "2026-09-16",
+      "checked_at": "2026-09-23",
       "type": "行业报价",
-      "short_label": "TrendForce · 10-07 现货周报",
-      "locator": "DRAM Spot Price / NAND Flash Spot Price（周均价与注明日期）"
+      "short_label": "TrendForce · 现货周报",
+      "locator": "DRAM Spot Price / NAND Flash Spot Price"
     },
     "ssd": {
       "label": "TrendForce 企业级 SSD 报告 · 09-01",
@@ -1188,30 +1188,30 @@
     },
     "dram_spot": {
       "label": "DRAMeXchange DRAM 现货报价",
-      "short_label": "10-07 · DRAM 现货",
+      "short_label": "10-02 · DRAM 现货",
       "url": "https://www.dramexchange.com/",
-      "published_at": "2026-10-07",
-      "checked_at": "2026-10-07",
+      "published_at": "2026-10-02",
+      "checked_at": "2026-10-05",
       "type": "原始行业报价",
-      "locator": "DRAM Spot Price · Last Update Oct.7 2026 18:10 (GMT+8) · Session Average / Session Change。"
+      "locator": "DRAM Spot Price · Last Update Oct.2 2026 18:10 (GMT+8) · Session Average / Session Change。"
     },
     "korea_trade": {
       "label": "韩国产业通商部 2026 年 9 月进出口动向",
       "short_label": "10-01 · 韩国 9 月出口",
       "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172254/view",
       "published_at": "2026-10-01",
-      "checked_at": "2026-10-07",
+      "checked_at": "2026-10-05",
       "type": "政府官方统计发布",
       "locator": "附件 PDF 第 11 页「20대 주요 수출 품목」表（반도체）；第 12 页품목별 상세（메모리/시스템 반도체 수출액）。"
     },
     "nanya_monthly": {
       "label": "南亚科月营收（官方 IR）",
-      "short_label": "南亚科 8 月营收",
+      "short_label": "南亚科 7 月营收",
       "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
       "published_at": null,
-      "checked_at": "2026-10-07",
+      "checked_at": "2026-10-05",
       "type": "公司官方入口",
-      "locator": "Consolidated Monthly Revenue 表 · 2026 · August / July（千元新台币）。"
+      "locator": "Consolidated Monthly Revenue 表 · 2026 · July / June（千元新台币）。"
     },
     "calendar_index_microsoft_20261007": {
       "label": "Microsoft Investor 首页",
@@ -2324,24 +2324,23 @@
         },
         {
           "label": "DDR4 1Gx8 3200 现货",
-          "current": 46.32,
+          "current": 46.321,
           "previous": null,
           "unit": "USD",
           "source_ids": [
-            "spot"
+            "dram_spot"
           ],
           "kind": "行业报价",
-          "note": "TrendForce 每周现货报告的周均价；趋势线各点同一口径。",
-          "period": "截至 10-06",
-          "change": "周变动 0.00%（报告值）",
-          "location": "TrendForce 10-07 现货周报 · DRAM Spot Price。",
+          "note": "DRAMeXchange 表中同规格 Session Average；前值未单列，日变动按其披露。",
+          "period": "截至 10-02",
+          "change": "日变动 0.00%（DRAMeXchange 披露）",
+          "location": "DRAMeXchange · DRAM Spot Price · DDR4 8Gb (1Gx8) 3200 · Session Average，Last Update Oct.2 2026 18:10 (GMT+8)。",
           "evidence_type": "direct",
-          "id": "ddr4_spot",
-          "as_of": "2026-10-06"
+          "id": "ddr4_spot"
         },
         {
           "label": "DDR5 16Gb (2Gx8) 4800/5600 现货",
-          "current": 58.4,
+          "current": 58,
           "previous": null,
           "unit": "USD",
           "source_ids": [
@@ -2349,16 +2348,15 @@
           ],
           "kind": "行业报价",
           "note": "与 DDR4 1Gx8 现货是不同规格，不互相替代。",
-          "period": "截至 10-07",
-          "change": "日变动 +0.40%（DRAMeXchange 披露）",
-          "location": "DRAMeXchange · DRAM Spot Price · DDR5 16Gb (2Gx8) 4800/5600 · Session Average，Last Update Oct.7 2026 18:10 (GMT+8)。",
+          "period": "截至 10-02",
+          "change": "日变动 +0.12%（DRAMeXchange 披露）",
+          "location": "DRAMeXchange · DRAM Spot Price · DDR5 16Gb (2Gx8) 4800/5600 · Session Average，Last Update Oct.2 2026 18:10 (GMT+8)。",
           "evidence_type": "direct",
-          "id": "ddr5_spot",
-          "as_of": "2026-10-07"
+          "id": "ddr5_spot"
         },
         {
           "label": "512Gb TLC 现货",
-          "current": 18.833,
+          "current": 20.083,
           "previous": null,
           "unit": "USD",
           "source_ids": [
@@ -2366,12 +2364,11 @@
           ],
           "kind": "行业报价",
           "note": "",
-          "period": "截至 10-05",
-          "change": "周变动 −2.90%（报告值）",
-          "location": "TrendForce 10-07 现货周报 · NAND Flash Spot Price。",
+          "period": "截至 09-14",
+          "change": "周变动 −0.31%",
+          "location": "09-16 现货周报 · NAND Flash Spot Price。",
           "evidence_type": "direct",
-          "id": "tlc_spot",
-          "as_of": "2026-10-05"
+          "id": "tlc_spot"
         }
       ],
       "limits": [
@@ -2381,7 +2378,7 @@
       "checked_at": "2026-10-05",
       "next_review": "每周",
       "definition": "行业合同价预测与现货报价。",
-      "interpretation": "TrendForce 09-30 预计 4Q26 普通型 DRAM 合同价仍上涨但涨幅较三季度收敛，NAND 合同价涨幅区间高于 DRAM。DDR4 现货周均价 10-06 与上周持平，06-23 以来整体上行；512Gb TLC 晶圆现货 8 月中以来连续回落。"
+      "interpretation": "TrendForce 09-30 预计 4Q26 普通型 DRAM 合同价仍上涨但涨幅较三季度收敛，NAND 合同价涨幅区间高于 DRAM。10-02 的 DDR4 与 DDR5 现货均价与前一交易时段基本持平。"
     },
     {
       "id": "supply",
@@ -2549,20 +2546,19 @@
         },
         {
           "label": "南亚科单月营收",
-          "current": 44.690268,
-          "previous": 43.867609,
+          "current": 43.867609,
+          "previous": 29.388309,
           "unit": "TWDb",
           "source_ids": [
             "nanya_monthly"
           ],
           "kind": "公司披露",
-          "note": "商品型 DRAM 售价与需求的间接指标，不是美光数据；未经审计。",
-          "period": "2026 年 8 月 vs 7 月",
-          "change": "环比 +1.9%（官方表披露）",
-          "location": "南亚科 IR · Consolidated Monthly Revenue · 2026 August / July。",
+          "note": "商品型 DRAM 售价与需求的间接指标，不是美光数据；未经审计。8 月营收官方页尚未列出。",
+          "period": "2026 年 7 月 vs 6 月",
+          "change": "环比 +49.3%（官方表披露）",
+          "location": "南亚科 IR · Consolidated Monthly Revenue · 2026 July / June。",
           "evidence_type": "proxy",
-          "id": "nanya_revenue",
-          "as_of": "2026-08"
+          "id": "nanya_revenue"
         },
         {
           "label": "韩国半导体单月出口额",
@@ -2578,8 +2574,7 @@
           "change": "同比 +262.8%（官方披露）",
           "location": "产业通商部 9 月进出口动向 · 附件 PDF 第 11 页20 大品目表 · 반도체。",
           "evidence_type": "proxy",
-          "id": "korea_semi_exports",
-          "as_of": "2026-09"
+          "id": "korea_semi_exports"
         },
         {
           "label": "韩国存储芯片单月出口额",
@@ -2595,8 +2590,7 @@
           "change": "同比 +358.6%（官方披露）",
           "location": "产业通商部 9 月进出口动向 · 附件 PDF 第 12 页· 메모리/시스템 반도체 수출액。",
           "evidence_type": "proxy",
-          "id": "korea_memory_exports",
-          "as_of": "2026-09"
+          "id": "korea_memory_exports"
         }
       ],
       "limits": [
@@ -2608,7 +2602,7 @@
       "checked_at": "2026-10-05",
       "next_review": "每周",
       "definition": "用于观察终端需求的间接指标。",
-      "interpretation": "企业 SSD 交付周期为 16 周，而 TrendForce 给出的均衡基准为 8 周，说明交付仍受约束。韩国 9 月存储芯片出口额大幅高于上年同月；南亚科 8 月营收较 7 月小幅增加（环比 +1.9%），维持在 7 月跳升后的高位。官方称出口增长来自出货量扩大、固定价格上涨及季末效应，价格与数量的作用不能拆分。这些都不是美光采购量，客户实际库存与消耗量仍待补充。"
+      "interpretation": "企业 SSD 交付周期为 16 周，而 TrendForce 给出的均衡基准为 8 周，说明交付仍受约束。韩国 9 月存储芯片出口额与南亚科 7 月营收均大幅高于比较期；官方称出口增长来自出货量扩大、固定价格上涨及季末效应，价格与数量的作用不能拆分。这些都不是美光采购量，客户实际库存与消耗量仍待补充。"
     }
   ],
   "methodology": [
@@ -2623,12 +2617,6 @@
     "产业链指引和管理层展望按原披露日期及目标期间记录，文字为中文摘要；同比由原始金额计算，百分点与百分比区分。"
   ],
   "check_log": [
-    {
-      "at": "2026-10-07T17:39:48.612Z",
-      "status": "failed",
-      "scope": "industry",
-      "text": "补录周期趋势历史：DDR4/TLC 现货周均价（06-22 起）、南亚科月营收（2025-09 起）、韩国半导体出口（2026-07 起），并更新现货、南亚科 8 月营收与韩国出口行的读数日期。"
-    },
     {
       "at": "2026-10-07T17:15:26.327Z",
       "status": "success",
@@ -9139,534 +9127,6 @@
           }
         ],
         "record_id": "7b9e28eed4b715b67e868edce16125c43a471be199e4d123d5d22088d40eb0aa"
-      }
-    ],
-    "mu.contract.ddr4_spot": [
-      {
-        "as_of": "2026-06-23",
-        "value": 35.9,
-        "unit": "USD",
-        "sources": [
-          {
-            "id": "tf_spot_0624",
-            "url": "https://www.trendforce.com/news/2026/06/24/insights-memory-spot-price-update-dram-buyers-resist-higher-quotes-as-mainstream-ddr4-prices-gain-0-28/",
-            "published_at": "2026-06-24"
-          }
-        ],
-        "record_id": "6447b1ecd464eee56cd7baf4db45697386b26298be7cad0193f169e5d2e4be7b"
-      },
-      {
-        "as_of": "2026-06-30",
-        "value": 36,
-        "unit": "USD",
-        "sources": [
-          {
-            "id": "tf_spot_0701",
-            "url": "https://www.trendforce.com/news/2026/07/01/insights-memory-spot-price-update-dram-spot-prices-see-gains-in-low-density-ddr4-and-ddr3-amid-sideways-market/",
-            "published_at": "2026-07-01"
-          }
-        ],
-        "record_id": "5e758ed683b3a870255cbdb42880ba20f91138d16b0b24f593edd77c1f01659e"
-      },
-      {
-        "as_of": "2026-07-07",
-        "value": 37.14,
-        "unit": "USD",
-        "sources": [
-          {
-            "id": "tf_spot_0708",
-            "url": "https://www.trendforce.com/news/2026/07/08/insights-memory-spot-price-update-dram-spot-trading-remains-subdued-with-ddr3-and-4gb-ddr4-prices-edging-higher/",
-            "published_at": "2026-07-08"
-          }
-        ],
-        "record_id": "65688b0e169a107c7ef6f30bdddcd006ea8a28a4efef50a189e6abafa16c04c4"
-      },
-      {
-        "as_of": "2026-07-15",
-        "value": 39.8,
-        "unit": "USD",
-        "sources": [
-          {
-            "id": "tf_spot_0722",
-            "url": "https://www.trendforce.com/news/2026/07/22/insights-memory-spot-price-update-dram-spot-market-edges-higher-as-branded-ddr4-demand-supports-prices/",
-            "published_at": "2026-07-22"
-          }
-        ],
-        "record_id": "e55447a0abb68e9fa37cac6666820f2b5db89ab370ac0d24794f1a395495fc72"
-      },
-      {
-        "as_of": "2026-07-21",
-        "value": 41.1,
-        "unit": "USD",
-        "sources": [
-          {
-            "id": "tf_spot_0722",
-            "url": "https://www.trendforce.com/news/2026/07/22/insights-memory-spot-price-update-dram-spot-market-edges-higher-as-branded-ddr4-demand-supports-prices/",
-            "published_at": "2026-07-22"
-          }
-        ],
-        "record_id": "04c48b0dae01abaed98be74ea63083721238bae5b712aaac5575f31e29643708"
-      },
-      {
-        "as_of": "2026-07-28",
-        "value": 42.08,
-        "unit": "USD",
-        "sources": [
-          {
-            "id": "tf_spot_0729",
-            "url": "https://www.trendforce.com/news/2026/07/29/insights-memory-spot-price-update-dram-spot-prices-rise-slightly-as-ddr3-ddr4-and-ddr5-inquiries-pick-up/",
-            "published_at": "2026-07-29"
-          }
-        ],
-        "record_id": "0388e2719b6d8038c875b72cf528f5c0352b8a2de5d6b304bc9719c1afab3603"
-      },
-      {
-        "as_of": "2026-08-04",
-        "value": 42.11,
-        "unit": "USD",
-        "sources": [
-          {
-            "id": "tf_spot_0805",
-            "url": "https://www.trendforce.com/news/2026/08/05/insights-memory-spot-price-update-dram-spot-price-gains-slow-while-ddr4-and-ddr3-continue-uptrend/",
-            "published_at": "2026-08-05"
-          }
-        ],
-        "record_id": "db0be8128b342d6c5a79d7a4f6bdc47387a326e0b63f3b47a50f6d569df709f1"
-      },
-      {
-        "as_of": "2026-08-10",
-        "value": 42.5,
-        "unit": "USD",
-        "sources": [
-          {
-            "id": "tf_spot_0812",
-            "url": "https://www.trendforce.com/news/2026/08/12/insights-memory-spot-price-update-dram-spot-trading-stays-subdued-as-pricing-gap-persists-ddr4-up-0-93/",
-            "published_at": "2026-08-12"
-          }
-        ],
-        "record_id": "4926f9ba4f90630895f02c2c3d1bb0218d3a1af0a1a8359e36ccdd565573eee9"
-      },
-      {
-        "as_of": "2026-08-18",
-        "value": 42.9,
-        "unit": "USD",
-        "sources": [
-          {
-            "id": "tf_spot_0819",
-            "url": "https://www.trendforce.com/news/2026/08/19/insights-memory-spot-price-update-3q-dram-spot-volumes-seen-staying-low-ddr4-prices-up-0-67-this-week/",
-            "published_at": "2026-08-19"
-          }
-        ],
-        "record_id": "4f09d53129802f9fb28498fc5845d135012d25de569e45fbae64573c4c011457"
-      },
-      {
-        "as_of": "2026-08-26",
-        "value": 43.64,
-        "unit": "USD",
-        "sources": [
-          {
-            "id": "tf_spot_0902",
-            "url": "https://www.trendforce.com/news/2026/09/02/insights-memory-spot-price-update-ddr5-ddr4-demand-weakens-but-firm-supplier-quotes-support-elevated-prices/",
-            "published_at": "2026-09-02"
-          }
-        ],
-        "record_id": "2cc91998672214f217b160091268fad0ea2eeb23283e3fecb58ae832926b50b5"
-      },
-      {
-        "as_of": "2026-09-01",
-        "value": 44.54,
-        "unit": "USD",
-        "sources": [
-          {
-            "id": "tf_spot_0902",
-            "url": "https://www.trendforce.com/news/2026/09/02/insights-memory-spot-price-update-ddr5-ddr4-demand-weakens-but-firm-supplier-quotes-support-elevated-prices/",
-            "published_at": "2026-09-02"
-          }
-        ],
-        "record_id": "6068d297110b7e0e6c9da75da6f5a13bf3516b8f18ccb966c5e945127af1ba47"
-      },
-      {
-        "as_of": "2026-09-08",
-        "value": 45.36,
-        "unit": "USD",
-        "sources": [
-          {
-            "id": "tf_spot_0909",
-            "url": "https://www.trendforce.com/news/2026/09/09/insights-memory-spot-price-update-ddr4-mainstream-prices-rise-1-78-on-2gx8-orders-ddr5-demand-remains-limited/",
-            "published_at": "2026-09-09"
-          }
-        ],
-        "record_id": "39a52d2c769170729f2144ca86227415797a7dfb39f92fb16027dace07552a39"
-      },
-      {
-        "as_of": "2026-09-15",
-        "value": 45.54,
-        "unit": "USD",
-        "sources": [
-          {
-            "id": "tf_spot_0916",
-            "url": "https://www.trendforce.com/news/2026/09/16/insights-memory-spot-price-update-dram-spot-cools-as-ddr5-inquiries-slow-2gx8-ddr4-prices-retreat/",
-            "published_at": "2026-09-16"
-          }
-        ],
-        "record_id": "29b6c90fc442a2e68d8fca34546ea2a84676370a78099e92f79b3d6355f3ef5f"
-      },
-      {
-        "as_of": "2026-09-22",
-        "value": 46.04,
-        "unit": "USD",
-        "sources": [
-          {
-            "id": "tf_spot_0923",
-            "url": "https://www.trendforce.com/news/2026/09/23/insights-memory-spot-price-update-dram-spot-prices-hold-cautious-tone-ddr4-2gx8-drops-3-6/",
-            "published_at": "2026-09-23"
-          }
-        ],
-        "record_id": "eaad545f16b03dd6334bdb66ea2335a6926e8f5db630ce3297341869e562dc6b"
-      },
-      {
-        "as_of": "2026-09-29",
-        "value": 46.32,
-        "unit": "USD",
-        "sources": [
-          {
-            "id": "tf_spot_0930",
-            "url": "https://www.trendforce.com/news/2026/09/30/insights-memory-spot-price-update-dram-market-quiet-amid-holidays-nand-buying-stays-weak/",
-            "published_at": "2026-09-30"
-          }
-        ],
-        "record_id": "673e9939e94a56906505dc5c2f89d1d714dd363bb5086c8c4eb05b945d8912f4"
-      }
-    ],
-    "mu.contract.tlc_spot": [
-      {
-        "as_of": "2026-06-22",
-        "value": 20.069,
-        "unit": "USD",
-        "sources": [
-          {
-            "id": "tf_spot_0624",
-            "url": "https://www.trendforce.com/news/2026/06/24/insights-memory-spot-price-update-dram-buyers-resist-higher-quotes-as-mainstream-ddr4-prices-gain-0-28/",
-            "published_at": "2026-06-24"
-          }
-        ],
-        "record_id": "d48aa64fbea278fc0e0aca5f77a195fdc1a501d7cab0c32b721323441b56515a"
-      },
-      {
-        "as_of": "2026-06-29",
-        "value": 19.862,
-        "unit": "USD",
-        "sources": [
-          {
-            "id": "tf_spot_0701",
-            "url": "https://www.trendforce.com/news/2026/07/01/insights-memory-spot-price-update-dram-spot-prices-see-gains-in-low-density-ddr4-and-ddr3-amid-sideways-market/",
-            "published_at": "2026-07-01"
-          }
-        ],
-        "record_id": "7b166ecdd2262908892333ebd0ac68d7ca5552509c3d19f062ab51160fcdcb0a"
-      },
-      {
-        "as_of": "2026-07-06",
-        "value": 19.293,
-        "unit": "USD",
-        "sources": [
-          {
-            "id": "tf_spot_0708",
-            "url": "https://www.trendforce.com/news/2026/07/08/insights-memory-spot-price-update-dram-spot-trading-remains-subdued-with-ddr3-and-4gb-ddr4-prices-edging-higher/",
-            "published_at": "2026-07-08"
-          }
-        ],
-        "record_id": "a06da8ac135f5be89b7b1d12b467ae31977f6cb8af18aa018680a983cc64993a"
-      },
-      {
-        "as_of": "2026-07-20",
-        "value": 18.931,
-        "unit": "USD",
-        "sources": [
-          {
-            "id": "tf_spot_0722",
-            "url": "https://www.trendforce.com/news/2026/07/22/insights-memory-spot-price-update-dram-spot-market-edges-higher-as-branded-ddr4-demand-supports-prices/",
-            "published_at": "2026-07-22"
-          }
-        ],
-        "record_id": "323f0fefeffefcbfef102e4f496d07a48b4a5f164f97f7df5fe080d605c9a34f"
-      },
-      {
-        "as_of": "2026-07-27",
-        "value": 19.25,
-        "unit": "USD",
-        "sources": [
-          {
-            "id": "tf_spot_0729",
-            "url": "https://www.trendforce.com/news/2026/07/29/insights-memory-spot-price-update-dram-spot-prices-rise-slightly-as-ddr3-ddr4-and-ddr5-inquiries-pick-up/",
-            "published_at": "2026-07-29"
-          }
-        ],
-        "record_id": "a1ccc06242b2cf13d8f543f7a737a23318e5bc5557cdfad9fe70a1db004efd8a"
-      },
-      {
-        "as_of": "2026-08-09",
-        "value": 21.125,
-        "unit": "USD",
-        "sources": [
-          {
-            "id": "tf_spot_0812",
-            "url": "https://www.trendforce.com/news/2026/08/12/insights-memory-spot-price-update-dram-spot-trading-stays-subdued-as-pricing-gap-persists-ddr4-up-0-93/",
-            "published_at": "2026-08-12"
-          }
-        ],
-        "record_id": "4d24441288d9e20d5d5a2bc4e2c4d84bb417d07664858b9ec193060d5ce3c630"
-      },
-      {
-        "as_of": "2026-08-17",
-        "value": 21.208,
-        "unit": "USD",
-        "sources": [
-          {
-            "id": "tf_spot_0819",
-            "url": "https://www.trendforce.com/news/2026/08/19/insights-memory-spot-price-update-3q-dram-spot-volumes-seen-staying-low-ddr4-prices-up-0-67-this-week/",
-            "published_at": "2026-08-19"
-          }
-        ],
-        "record_id": "073271147fa8597e88cf1a82eb2df2539595abca72dbaeb200d376a80ceb83d9"
-      },
-      {
-        "as_of": "2026-08-31",
-        "value": 20.708,
-        "unit": "USD",
-        "sources": [
-          {
-            "id": "tf_spot_0902",
-            "url": "https://www.trendforce.com/news/2026/09/02/insights-memory-spot-price-update-ddr5-ddr4-demand-weakens-but-firm-supplier-quotes-support-elevated-prices/",
-            "published_at": "2026-09-02"
-          }
-        ],
-        "record_id": "f55c684307e1ebcf9c7fe8c43b0046373bd5b7f53f512dbb9cd816d59fd3c9b4"
-      },
-      {
-        "as_of": "2026-09-07",
-        "value": 20.146,
-        "unit": "USD",
-        "sources": [
-          {
-            "id": "tf_spot_0909",
-            "url": "https://www.trendforce.com/news/2026/09/09/insights-memory-spot-price-update-ddr4-mainstream-prices-rise-1-78-on-2gx8-orders-ddr5-demand-remains-limited/",
-            "published_at": "2026-09-09"
-          }
-        ],
-        "record_id": "7e61097a349d06df93f39c398cef9a21a01b84802e4e7bcebd7720aa327bc43e"
-      },
-      {
-        "as_of": "2026-09-14",
-        "value": 20.083,
-        "unit": "USD",
-        "sources": [
-          {
-            "id": "tf_spot_0916",
-            "url": "https://www.trendforce.com/news/2026/09/16/insights-memory-spot-price-update-dram-spot-cools-as-ddr5-inquiries-slow-2gx8-ddr4-prices-retreat/",
-            "published_at": "2026-09-16"
-          }
-        ],
-        "record_id": "ebd3965e4a402b2e6c99a1382d9df0d7d07380a54466037d02a18ce11e931cae"
-      },
-      {
-        "as_of": "2026-09-21",
-        "value": 19.883,
-        "unit": "USD",
-        "sources": [
-          {
-            "id": "tf_spot_0923",
-            "url": "https://www.trendforce.com/news/2026/09/23/insights-memory-spot-price-update-dram-spot-prices-hold-cautious-tone-ddr4-2gx8-drops-3-6/",
-            "published_at": "2026-09-23"
-          }
-        ],
-        "record_id": "eeade1b897d2247b31f6213c077c2c2a7b3eb850bf5d32ea4034f8cb67006f6c"
-      },
-      {
-        "as_of": "2026-09-28",
-        "value": 19.396,
-        "unit": "USD",
-        "sources": [
-          {
-            "id": "tf_spot_0930",
-            "url": "https://www.trendforce.com/news/2026/09/30/insights-memory-spot-price-update-dram-market-quiet-amid-holidays-nand-buying-stays-weak/",
-            "published_at": "2026-09-30"
-          }
-        ],
-        "record_id": "d8131e14335d950d07bac089c6017a4e8529424dcfab10371ac0431252a138b2"
-      }
-    ],
-    "mu.demand.nanya_revenue": [
-      {
-        "as_of": "2025-09",
-        "value": 6.66414,
-        "unit": "TWDb",
-        "sources": [
-          {
-            "id": "nanya_monthly_2025",
-            "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue?Year=2025",
-            "published_at": null
-          }
-        ],
-        "record_id": "5045d427f88ece1cf8fc8f963f984320a996f41e9a3551b2c481151c5d401827"
-      },
-      {
-        "as_of": "2025-10",
-        "value": 7.907729,
-        "unit": "TWDb",
-        "sources": [
-          {
-            "id": "nanya_monthly_2025",
-            "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue?Year=2025",
-            "published_at": null
-          }
-        ],
-        "record_id": "a17d628dd0587d176d1749a052bd47e882814ae5b7c1b3384921334a6a8e9a2b"
-      },
-      {
-        "as_of": "2025-11",
-        "value": 10.168737,
-        "unit": "TWDb",
-        "sources": [
-          {
-            "id": "nanya_monthly_2025",
-            "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue?Year=2025",
-            "published_at": null
-          }
-        ],
-        "record_id": "aa35c61c615abc221a6390b2ffda25821f1d82aae828d3cc044e3c9715f6a45e"
-      },
-      {
-        "as_of": "2025-12",
-        "value": 12.017152,
-        "unit": "TWDb",
-        "sources": [
-          {
-            "id": "nanya_monthly_2025",
-            "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue?Year=2025",
-            "published_at": null
-          }
-        ],
-        "record_id": "7fa2927b42bd91ceb0bc19d8046d9f82778ac71c5b05cd770b409dfbe70d3e78"
-      },
-      {
-        "as_of": "2026-01",
-        "value": 15.309988,
-        "unit": "TWDb",
-        "sources": [
-          {
-            "id": "nanya_monthly",
-            "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
-            "published_at": null
-          }
-        ],
-        "record_id": "94b97c5adc06f5c5da0d1d8a3d63a09a2febd526f34ce8fcfd96ca037d77d6b3"
-      },
-      {
-        "as_of": "2026-02",
-        "value": 15.607184,
-        "unit": "TWDb",
-        "sources": [
-          {
-            "id": "nanya_monthly",
-            "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
-            "published_at": null
-          }
-        ],
-        "record_id": "409ca09e69d94d2d11306d6d0c3f1420682c1f33a4630e0e0bb239684aa93718"
-      },
-      {
-        "as_of": "2026-03",
-        "value": 18.16976,
-        "unit": "TWDb",
-        "sources": [
-          {
-            "id": "nanya_monthly",
-            "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
-            "published_at": null
-          }
-        ],
-        "record_id": "c90e6bf4932106a6f9fdcde473cdeec7ddcf7f5ea9d8d0b65f8664ef89f81755"
-      },
-      {
-        "as_of": "2026-04",
-        "value": 25.491201,
-        "unit": "TWDb",
-        "sources": [
-          {
-            "id": "nanya_monthly",
-            "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
-            "published_at": null
-          }
-        ],
-        "record_id": "2c61847e848fb9e035f3a7abba6ccc2a5275dddcd219bba2bc9e064977dec99d"
-      },
-      {
-        "as_of": "2026-05",
-        "value": 27.669563,
-        "unit": "TWDb",
-        "sources": [
-          {
-            "id": "nanya_monthly",
-            "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
-            "published_at": null
-          }
-        ],
-        "record_id": "be67a005c8fefe38445542b85dbf66b5cacf216677398945bcc790d132dda749"
-      },
-      {
-        "as_of": "2026-06",
-        "value": 29.388309,
-        "unit": "TWDb",
-        "sources": [
-          {
-            "id": "nanya_monthly",
-            "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
-            "published_at": null
-          }
-        ],
-        "record_id": "65f521f0a193e76ad65ef8a70276de2e3a76e2f8d08d3efc870c8bc156a067e8"
-      },
-      {
-        "as_of": "2026-07",
-        "value": 43.867609,
-        "unit": "TWDb",
-        "sources": [
-          {
-            "id": "nanya_monthly",
-            "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
-            "published_at": null
-          }
-        ],
-        "record_id": "b8307104dc5a3ca027dec112a093ee7090bf4170976c723fbd65fe0ec324c3aa"
-      }
-    ],
-    "mu.demand.korea_semi_exports": [
-      {
-        "as_of": "2026-07",
-        "value": 41007,
-        "unit": "USDm",
-        "sources": [
-          {
-            "id": "korea_trade",
-            "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172254/view",
-            "published_at": "2026-10-01"
-          }
-        ],
-        "record_id": "809fdc9372eb2cec5f53e179fbd7765cc257786b9cc600f2b09d3ec74aa4ced9"
-      },
-      {
-        "as_of": "2026-08",
-        "value": 46653,
-        "unit": "USDm",
-        "sources": [
-          {
-            "id": "korea_trade",
-            "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172254/view",
-            "published_at": "2026-10-01"
-          }
-        ],
-        "record_id": "553b9d6638de7eb3f1d8c1b786aaa3ceb29e6a09cf9bc8067eeaad452977673b"
       }
     ]
   }

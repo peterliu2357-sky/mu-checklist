@@ -8209,5 +8209,2194 @@
     "mode": "verified",
     "record_hash": "dc3c502612841ee9445520ad1d2ca93f4778ddaabe6d0a1062cb3a7b648e893e",
     "id": "e-54fdb71871768b1673c4aea7d52f87bb86d3aefd61337dce296330113d4e0cd9"
+  },
+  "e-4930eb4dbed25df0b407cb1f38ab6d937007ee1f1729e4083ecb1dad36ae2e2c": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "DDR4 1Gx8 3200 现货",
+    "values": {
+      "current": 35.9,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 35.9,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-06-23",
+        "locator": "DRAM Spot Price · average spot price of mainstream chips (DDR4 1Gx8 3200MT/s) · this week",
+        "source_id": "tf_spot_0624"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "tf_spot_0624",
+        "url": "https://www.trendforce.com/news/2026/06/24/insights-memory-spot-price-update-dram-buyers-resist-higher-quotes-as-mainstream-ddr4-prices-gain-0-28/",
+        "sha256": "6cff0e81b195874d301415958e4bb282fe7d683ffe0aa41549f2c4101a1bfbb2",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:43.553Z",
+        "reviewed_at": "2026-10-07T17:32:43.553Z",
+        "status": "read",
+        "locator": "DRAM Spot Price · average spot price of mainstream chips (DDR4 1Gx8 3200MT/s) · this week",
+        "excerpt": "The average spot price of mainstream chips (i.e., DDR4 1Gx8 3200MT/s) slightly increased by 0.28% from US$35.80 last week to US$35.90 this week (June 23)."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "6447b1ecd464eee56cd7baf4db45697386b26298be7cad0193f169e5d2e4be7b",
+    "id": "e-4930eb4dbed25df0b407cb1f38ab6d937007ee1f1729e4083ecb1dad36ae2e2c"
+  },
+  "e-0288361ff43e1b594fb06fd77fcb3af08657fe8e234ef98370e5c5885a943b3e": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "DDR4 1Gx8 3200 现货",
+    "values": {
+      "current": 36,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 36,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-06-30",
+        "locator": "DRAM Spot Price · average spot price of mainstream chips (DDR4 1Gx8 3200MT/s) · this week",
+        "source_id": "tf_spot_0701"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "tf_spot_0701",
+        "url": "https://www.trendforce.com/news/2026/07/01/insights-memory-spot-price-update-dram-spot-prices-see-gains-in-low-density-ddr4-and-ddr3-amid-sideways-market/",
+        "sha256": "1defbe4a346107d59a0ebedd4ccb069dfbda01f1b3e01fbddb30444f037b534b",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:44.010Z",
+        "reviewed_at": "2026-10-07T17:32:44.010Z",
+        "status": "read",
+        "locator": "DRAM Spot Price · average spot price of mainstream chips (DDR4 1Gx8 3200MT/s) · this week",
+        "excerpt": "The average spot price of mainstream chips (i.e., DDR4 1Gx8 3200MT/s) has risen by 0.28% from US$35.900 last week (June 24) to US$36.00 this week (June 30)."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "5e758ed683b3a870255cbdb42880ba20f91138d16b0b24f593edd77c1f01659e",
+    "id": "e-0288361ff43e1b594fb06fd77fcb3af08657fe8e234ef98370e5c5885a943b3e"
+  },
+  "e-59306a774238a7e3695c6362b803f58b7b56a2f404b2cb8b02684cc3ee5b7293": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "DDR4 1Gx8 3200 现货",
+    "values": {
+      "current": 37.14,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 37.14,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-07-07",
+        "locator": "DRAM Spot Price · average spot price of mainstream chips (DDR4 1Gx8 3200MT/s) · this week",
+        "source_id": "tf_spot_0708"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "tf_spot_0708",
+        "url": "https://www.trendforce.com/news/2026/07/08/insights-memory-spot-price-update-dram-spot-trading-remains-subdued-with-ddr3-and-4gb-ddr4-prices-edging-higher/",
+        "sha256": "4e4cd0e8ea0b360aedf7b20d5b25b8c6c5fa833b3f9ee56360eff292a364e4f9",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:44.463Z",
+        "reviewed_at": "2026-10-07T17:32:44.463Z",
+        "status": "read",
+        "locator": "DRAM Spot Price · average spot price of mainstream chips (DDR4 1Gx8 3200MT/s) · this week",
+        "excerpt": "The average spot price of mainstream chips (i.e., DDR4 1Gx8 3200MT/s) increased by 2.88% from US$36.10 last week (July 1) to US$37.14 this week (July 7)."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "65688b0e169a107c7ef6f30bdddcd006ea8a28a4efef50a189e6abafa16c04c4",
+    "id": "e-59306a774238a7e3695c6362b803f58b7b56a2f404b2cb8b02684cc3ee5b7293"
+  },
+  "e-3f85261056307889525647a7b28e33c93de3fd1126374ed738efae0930f3ace4": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "DDR4 1Gx8 3200 现货",
+    "values": {
+      "current": 39.8,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 39.8,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-07-15",
+        "locator": "DRAM Spot Price · average spot price of mainstream chips (DDR4 1Gx8 3200MT/s) · last week",
+        "source_id": "tf_spot_0722"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "tf_spot_0722",
+        "url": "https://www.trendforce.com/news/2026/07/22/insights-memory-spot-price-update-dram-spot-market-edges-higher-as-branded-ddr4-demand-supports-prices/",
+        "sha256": "76d01da49bb38eb770d03f8d0fe87f353a67946ff7e574e87a398fe9a4cb2f0c",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:44.899Z",
+        "reviewed_at": "2026-10-07T17:32:44.899Z",
+        "status": "read",
+        "locator": "DRAM Spot Price · average spot price of mainstream chips (DDR4 1Gx8 3200MT/s) · last week",
+        "excerpt": "The average spot price of mainstream chips (i.e., DDR4 1Gx8 3200MT/s) increased by 3.27% from US$39.8 last week (July 15) to US$41.1 this week (July 21)."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "e55447a0abb68e9fa37cac6666820f2b5db89ab370ac0d24794f1a395495fc72",
+    "id": "e-3f85261056307889525647a7b28e33c93de3fd1126374ed738efae0930f3ace4"
+  },
+  "e-02800b8174aa971b71f4f45a923905defcb35bcc293628301cfec7fb17e16ac4": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "DDR4 1Gx8 3200 现货",
+    "values": {
+      "current": 41.1,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 41.1,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-07-21",
+        "locator": "DRAM Spot Price · average spot price of mainstream chips (DDR4 1Gx8 3200MT/s) · this week",
+        "source_id": "tf_spot_0722"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "tf_spot_0722",
+        "url": "https://www.trendforce.com/news/2026/07/22/insights-memory-spot-price-update-dram-spot-market-edges-higher-as-branded-ddr4-demand-supports-prices/",
+        "sha256": "76d01da49bb38eb770d03f8d0fe87f353a67946ff7e574e87a398fe9a4cb2f0c",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:44.899Z",
+        "reviewed_at": "2026-10-07T17:32:44.899Z",
+        "status": "read",
+        "locator": "DRAM Spot Price · average spot price of mainstream chips (DDR4 1Gx8 3200MT/s) · this week",
+        "excerpt": "The average spot price of mainstream chips (i.e., DDR4 1Gx8 3200MT/s) increased by 3.27% from US$39.8 last week (July 15) to US$41.1 this week (July 21)."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "04c48b0dae01abaed98be74ea63083721238bae5b712aaac5575f31e29643708",
+    "id": "e-02800b8174aa971b71f4f45a923905defcb35bcc293628301cfec7fb17e16ac4"
+  },
+  "e-0c8c45a6b461dca7350b48bfd5edc1066613e202aedf2889ef801808e9f9c259": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "DDR4 1Gx8 3200 现货",
+    "values": {
+      "current": 42.08,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 42.08,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-07-28",
+        "locator": "DRAM Spot Price · average spot price of mainstream chips (DDR4 1Gx8 3200MT/s) · this week",
+        "source_id": "tf_spot_0729"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "tf_spot_0729",
+        "url": "https://www.trendforce.com/news/2026/07/29/insights-memory-spot-price-update-dram-spot-prices-rise-slightly-as-ddr3-ddr4-and-ddr5-inquiries-pick-up/",
+        "sha256": "d13c71029a8ba99fecc3a4f5e687383bdbcd876951637d5abc2146cfb1e3e432",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:45.330Z",
+        "reviewed_at": "2026-10-07T17:32:45.330Z",
+        "status": "read",
+        "locator": "DRAM Spot Price · average spot price of mainstream chips (DDR4 1Gx8 3200MT/s) · this week",
+        "excerpt": "The average spot price of mainstream chips (i.e., DDR4 1Gx8 3200MT/s) has increased by 1.39% from US$41.50 last week (July 22) to US$42.08 this week (July 28)."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "0388e2719b6d8038c875b72cf528f5c0352b8a2de5d6b304bc9719c1afab3603",
+    "id": "e-0c8c45a6b461dca7350b48bfd5edc1066613e202aedf2889ef801808e9f9c259"
+  },
+  "e-d757be560f850f1cf78f286d2293c3527f122a44748a8660a64eca80a3a0f7a8": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "DDR4 1Gx8 3200 现货",
+    "values": {
+      "current": 42.11,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 42.11,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-08-04",
+        "locator": "DRAM Spot Price · average spot price of mainstream chips (DDR4 1Gx8 3200MT/s) · this week",
+        "source_id": "tf_spot_0805"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "tf_spot_0805",
+        "url": "https://www.trendforce.com/news/2026/08/05/insights-memory-spot-price-update-dram-spot-price-gains-slow-while-ddr4-and-ddr3-continue-uptrend/",
+        "sha256": "26c4b08f5452a31ee67f62a084869b2cd46419b1f575379a24eb41e5bf22d03e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:45.833Z",
+        "reviewed_at": "2026-10-07T17:32:45.833Z",
+        "status": "read",
+        "locator": "DRAM Spot Price · average spot price of mainstream chips (DDR4 1Gx8 3200MT/s) · this week",
+        "excerpt": "The average spot price of mainstream chips (i.e., DDR4 1Gx8 3200MT/s) has increased by 0.17% from US$42.04 last week (July 29) to US$42.11 this week (Aug."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "db0be8128b342d6c5a79d7a4f6bdc47387a326e0b63f3b47a50f6d569df709f1",
+    "id": "e-d757be560f850f1cf78f286d2293c3527f122a44748a8660a64eca80a3a0f7a8"
+  },
+  "e-8ba4456978b269d37226c6261f9947ff7b9a0301767c0fb25b8d6957fd598046": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "DDR4 1Gx8 3200 现货",
+    "values": {
+      "current": 42.5,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 42.5,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-08-10",
+        "locator": "DRAM Spot Price · average spot price of mainstream chips (DDR4 1Gx8 3200MT/s) · this week",
+        "source_id": "tf_spot_0812"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "tf_spot_0812",
+        "url": "https://www.trendforce.com/news/2026/08/12/insights-memory-spot-price-update-dram-spot-trading-stays-subdued-as-pricing-gap-persists-ddr4-up-0-93/",
+        "sha256": "5ae75de97a11fbb2420420282a2634137a73b24441d4c0d75a77efeb36be7f4e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:46.373Z",
+        "reviewed_at": "2026-10-07T17:32:46.373Z",
+        "status": "read",
+        "locator": "DRAM Spot Price · average spot price of mainstream chips (DDR4 1Gx8 3200MT/s) · this week",
+        "excerpt": "The average spot price of mainstream chips (i.e., DDR4 1Gx8 3200MT/s) has increased by 0.93% from US$42.11 last week (Aug.4) to US$42.50 this week (Aug.10)."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "4926f9ba4f90630895f02c2c3d1bb0218d3a1af0a1a8359e36ccdd565573eee9",
+    "id": "e-8ba4456978b269d37226c6261f9947ff7b9a0301767c0fb25b8d6957fd598046"
+  },
+  "e-5a3371907853cd7db1af541faced26be35935bf833344fb06ad4516dcb6bf171": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "DDR4 1Gx8 3200 现货",
+    "values": {
+      "current": 42.9,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 42.9,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-08-18",
+        "locator": "DRAM Spot Price · average spot price of mainstream chips (DDR4 1Gx8 3200MT/s) · this week",
+        "source_id": "tf_spot_0819"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "tf_spot_0819",
+        "url": "https://www.trendforce.com/news/2026/08/19/insights-memory-spot-price-update-3q-dram-spot-volumes-seen-staying-low-ddr4-prices-up-0-67-this-week/",
+        "sha256": "ed601cf39b8b3b5964b8dcd808d73041e43f1b02b1704a83880eb5ea5679a96e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:46.851Z",
+        "reviewed_at": "2026-10-07T17:32:46.851Z",
+        "status": "read",
+        "locator": "DRAM Spot Price · average spot price of mainstream chips (DDR4 1Gx8 3200MT/s) · this week",
+        "excerpt": "The average spot price of mainstream chips (i.e., DDR4 1Gx8 3200MT/s) has increased by 0.67% from US$42.61 last week (Aug.12) to US$42.90 this week (Aug.18)."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "4f09d53129802f9fb28498fc5845d135012d25de569e45fbae64573c4c011457",
+    "id": "e-5a3371907853cd7db1af541faced26be35935bf833344fb06ad4516dcb6bf171"
+  },
+  "e-c7559d3f92948eb2c824f89a3227b638702d7a4c8b84cda1f0da392fa6ea0a9c": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "DDR4 1Gx8 3200 现货",
+    "values": {
+      "current": 43.64,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 43.64,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-08-26",
+        "locator": "DRAM Spot Price · average spot price of mainstream chips (DDR4 1Gx8 3200MT/s) · last week",
+        "source_id": "tf_spot_0902"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "tf_spot_0902",
+        "url": "https://www.trendforce.com/news/2026/09/02/insights-memory-spot-price-update-ddr5-ddr4-demand-weakens-but-firm-supplier-quotes-support-elevated-prices/",
+        "sha256": "2e2b686941d66abcea81951a8fcf30c714fd18d8081d89e14bee60b75810092d",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:47.282Z",
+        "reviewed_at": "2026-10-07T17:32:47.282Z",
+        "status": "read",
+        "locator": "DRAM Spot Price · average spot price of mainstream chips (DDR4 1Gx8 3200MT/s) · last week",
+        "excerpt": "The average spot price of mainstream chips (i.e., DDR4 1Gx8 3200MT/s) has increased by 2.08% from US$43.64 last week (Aug."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "2cc91998672214f217b160091268fad0ea2eeb23283e3fecb58ae832926b50b5",
+    "id": "e-c7559d3f92948eb2c824f89a3227b638702d7a4c8b84cda1f0da392fa6ea0a9c"
+  },
+  "e-ff61e30d15df32a9577a5f7a2942bdd96a3e989b643e634b61a1ced52ee61d59": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "DDR4 1Gx8 3200 现货",
+    "values": {
+      "current": 44.54,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 44.54,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-09-01",
+        "locator": "DRAM Spot Price · average spot price of mainstream chips (DDR4 1Gx8 3200MT/s) · this week",
+        "source_id": "tf_spot_0902"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "tf_spot_0902",
+        "url": "https://www.trendforce.com/news/2026/09/02/insights-memory-spot-price-update-ddr5-ddr4-demand-weakens-but-firm-supplier-quotes-support-elevated-prices/",
+        "sha256": "2e2b686941d66abcea81951a8fcf30c714fd18d8081d89e14bee60b75810092d",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:47.282Z",
+        "reviewed_at": "2026-10-07T17:32:47.282Z",
+        "status": "read",
+        "locator": "DRAM Spot Price · average spot price of mainstream chips (DDR4 1Gx8 3200MT/s) · this week",
+        "excerpt": "The average spot price of mainstream chips (i.e., DDR4 1Gx8 3200MT/s) has increased by 2.08% from US$43.64 last week (Aug."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "6068d297110b7e0e6c9da75da6f5a13bf3516b8f18ccb966c5e945127af1ba47",
+    "id": "e-ff61e30d15df32a9577a5f7a2942bdd96a3e989b643e634b61a1ced52ee61d59"
+  },
+  "e-c7ec536776ccdf8c2d01af8f617439122f913328d11018fb540bfd167aa6aed8": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "DDR4 1Gx8 3200 现货",
+    "values": {
+      "current": 45.36,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 45.36,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-09-08",
+        "locator": "DRAM Spot Price · average spot price of mainstream chips (DDR4 1Gx8 3200MT/s) · this week",
+        "source_id": "tf_spot_0909"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "tf_spot_0909",
+        "url": "https://www.trendforce.com/news/2026/09/09/insights-memory-spot-price-update-ddr4-mainstream-prices-rise-1-78-on-2gx8-orders-ddr5-demand-remains-limited/",
+        "sha256": "b0f7dcbdb5216d927f1027bc1ba4fe96730837cc70165db17910dfd442fe5fad",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:47.698Z",
+        "reviewed_at": "2026-10-07T17:32:47.698Z",
+        "status": "read",
+        "locator": "DRAM Spot Price · average spot price of mainstream chips (DDR4 1Gx8 3200MT/s) · this week",
+        "excerpt": "The average spot price of mainstream chips (i.e., DDR4 1Gx8 3200MT/s) has increased by 1.78% from US$44.57 last week (Sept."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "39a52d2c769170729f2144ca86227415797a7dfb39f92fb16027dace07552a39",
+    "id": "e-c7ec536776ccdf8c2d01af8f617439122f913328d11018fb540bfd167aa6aed8"
+  },
+  "e-5f5e0f27c4c7e90d17f865876b8a4514d55244f34da7d249579b61edbe288a82": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "DDR4 1Gx8 3200 现货",
+    "values": {
+      "current": 45.54,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 45.54,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-09-15",
+        "locator": "DRAM Spot Price · average spot price of mainstream chips (DDR4 1Gx8 3200MT/s) · this week",
+        "source_id": "tf_spot_0916"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "tf_spot_0916",
+        "url": "https://www.trendforce.com/news/2026/09/16/insights-memory-spot-price-update-dram-spot-cools-as-ddr5-inquiries-slow-2gx8-ddr4-prices-retreat/",
+        "sha256": "7fae64620bc3eaeb50c59d8d0f727471430cd61d83ad4cdcacec9831bf8cc385",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:48.115Z",
+        "reviewed_at": "2026-10-07T17:32:48.115Z",
+        "status": "read",
+        "locator": "DRAM Spot Price · average spot price of mainstream chips (DDR4 1Gx8 3200MT/s) · this week",
+        "excerpt": "The average spot price of mainstream chips (i.e., DDR4 1Gx8 3200MT/s) has increased by 0.47% from US$45.32 last week (September 9) to US$45.54 this week (September 15)."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "29b6c90fc442a2e68d8fca34546ea2a84676370a78099e92f79b3d6355f3ef5f",
+    "id": "e-5f5e0f27c4c7e90d17f865876b8a4514d55244f34da7d249579b61edbe288a82"
+  },
+  "e-b7275c55fe4fc1877207242c6bd089b42ea416e890b440bdee118cc45c799dd3": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "DDR4 1Gx8 3200 现货",
+    "values": {
+      "current": 46.04,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 46.04,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-09-22",
+        "locator": "DRAM Spot Price · average spot price of mainstream chips (DDR4 1Gx8 3200MT/s) · this week",
+        "source_id": "tf_spot_0923"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "tf_spot_0923",
+        "url": "https://www.trendforce.com/news/2026/09/23/insights-memory-spot-price-update-dram-spot-prices-hold-cautious-tone-ddr4-2gx8-drops-3-6/",
+        "sha256": "b28a222ff986b3145587b39735698132948b00951782e56ec5a36216c42c02d8",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:48.555Z",
+        "reviewed_at": "2026-10-07T17:32:48.555Z",
+        "status": "read",
+        "locator": "DRAM Spot Price · average spot price of mainstream chips (DDR4 1Gx8 3200MT/s) · this week",
+        "excerpt": "The average spot price of mainstream chips (i.e., DDR4 1Gx8 3200MT/s) has increased by 0.55% from US$45.79 last week (September 16) to US$46.04 this week (September 22)."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "eaad545f16b03dd6334bdb66ea2335a6926e8f5db630ce3297341869e562dc6b",
+    "id": "e-b7275c55fe4fc1877207242c6bd089b42ea416e890b440bdee118cc45c799dd3"
+  },
+  "e-56f679b3b17661b0036a1f1f34dd82a309e49add45c3e9476b28da65370500f2": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "DDR4 1Gx8 3200 现货",
+    "values": {
+      "current": 46.32,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 46.32,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-09-29",
+        "locator": "DRAM Spot Price · average spot price of mainstream chips (DDR4 1Gx8 3200MT/s) · this week",
+        "source_id": "tf_spot_0930"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "tf_spot_0930",
+        "url": "https://www.trendforce.com/news/2026/09/30/insights-memory-spot-price-update-dram-market-quiet-amid-holidays-nand-buying-stays-weak/",
+        "sha256": "ebb7959da7d2d6a0334c79426637a377980515f561c2660debaec189fc2de92a",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:49.011Z",
+        "reviewed_at": "2026-10-07T17:32:49.011Z",
+        "status": "read",
+        "locator": "DRAM Spot Price · average spot price of mainstream chips (DDR4 1Gx8 3200MT/s) · this week",
+        "excerpt": "The average spot price of mainstream chips (i.e., DDR4 1Gx8 3200MT/s) has increased by 0.93% from US$45.89 last week (September 23) to US$46.32 this week (September 29)."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "673e9939e94a56906505dc5c2f89d1d714dd363bb5086c8c4eb05b945d8912f4",
+    "id": "e-56f679b3b17661b0036a1f1f34dd82a309e49add45c3e9476b28da65370500f2"
+  },
+  "e-1efc10a39c782fa5f8fd08a6462dc2a9eba620152afd177fd22341385418bea0": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "512Gb TLC 现货",
+    "values": {
+      "current": 20.069,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 20.069,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-06-22",
+        "locator": "NAND Flash Spot Price · 512Gb TLC wafer",
+        "source_id": "tf_spot_0624"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "tf_spot_0624",
+        "url": "https://www.trendforce.com/news/2026/06/24/insights-memory-spot-price-update-dram-buyers-resist-higher-quotes-as-mainstream-ddr4-prices-gain-0-28/",
+        "sha256": "6cff0e81b195874d301415958e4bb282fe7d683ffe0aa41549f2c4101a1bfbb2",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:43.553Z",
+        "reviewed_at": "2026-10-07T17:32:43.553Z",
+        "status": "read",
+        "locator": "NAND Flash Spot Price · 512Gb TLC wafer",
+        "excerpt": "Spots of 512Gb TLC wafers dropped by 1.77% this week (June 22), arriving at US$20.069."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "d48aa64fbea278fc0e0aca5f77a195fdc1a501d7cab0c32b721323441b56515a",
+    "id": "e-1efc10a39c782fa5f8fd08a6462dc2a9eba620152afd177fd22341385418bea0"
+  },
+  "e-71be1b1bed9af5c2bba852eff01a41074efed0511306ffe14ce4478b11ff929f": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "512Gb TLC 现货",
+    "values": {
+      "current": 19.862,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 19.862,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-06-29",
+        "locator": "NAND Flash Spot Price · 512Gb TLC wafer",
+        "source_id": "tf_spot_0701"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "tf_spot_0701",
+        "url": "https://www.trendforce.com/news/2026/07/01/insights-memory-spot-price-update-dram-spot-prices-see-gains-in-low-density-ddr4-and-ddr3-amid-sideways-market/",
+        "sha256": "1defbe4a346107d59a0ebedd4ccb069dfbda01f1b3e01fbddb30444f037b534b",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:44.010Z",
+        "reviewed_at": "2026-10-07T17:32:44.010Z",
+        "status": "read",
+        "locator": "NAND Flash Spot Price · 512Gb TLC wafer",
+        "excerpt": "512Gb TLC wafer spots dropped by 1.03% this week (June 29), arriving at US$19.862."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "7b166ecdd2262908892333ebd0ac68d7ca5552509c3d19f062ab51160fcdcb0a",
+    "id": "e-71be1b1bed9af5c2bba852eff01a41074efed0511306ffe14ce4478b11ff929f"
+  },
+  "e-2c7c510ec5dd1e6d5401a120fe25cc24d39408a062088ca591e5f7d742604ebb": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "512Gb TLC 现货",
+    "values": {
+      "current": 19.293,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 19.293,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-07-06",
+        "locator": "NAND Flash Spot Price · 512Gb TLC wafer",
+        "source_id": "tf_spot_0708"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "tf_spot_0708",
+        "url": "https://www.trendforce.com/news/2026/07/08/insights-memory-spot-price-update-dram-spot-trading-remains-subdued-with-ddr3-and-4gb-ddr4-prices-edging-higher/",
+        "sha256": "4e4cd0e8ea0b360aedf7b20d5b25b8c6c5fa833b3f9ee56360eff292a364e4f9",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:44.463Z",
+        "reviewed_at": "2026-10-07T17:32:44.463Z",
+        "status": "read",
+        "locator": "NAND Flash Spot Price · 512Gb TLC wafer",
+        "excerpt": "Spot prices for 512Gb TLC dropped by 2.87% this week (July 6), arriving at US$19.293."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "a06da8ac135f5be89b7b1d12b467ae31977f6cb8af18aa018680a983cc64993a",
+    "id": "e-2c7c510ec5dd1e6d5401a120fe25cc24d39408a062088ca591e5f7d742604ebb"
+  },
+  "e-32af9cbcc7850c80bf9cdf98c4e3499b1aa59e8aaa9fc7ade416d455e0583ce4": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "512Gb TLC 现货",
+    "values": {
+      "current": 18.931,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 18.931,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-07-20",
+        "locator": "NAND Flash Spot Price · 512Gb TLC wafer",
+        "source_id": "tf_spot_0722"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "tf_spot_0722",
+        "url": "https://www.trendforce.com/news/2026/07/22/insights-memory-spot-price-update-dram-spot-market-edges-higher-as-branded-ddr4-demand-supports-prices/",
+        "sha256": "76d01da49bb38eb770d03f8d0fe87f353a67946ff7e574e87a398fe9a4cb2f0c",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:44.899Z",
+        "reviewed_at": "2026-10-07T17:32:44.899Z",
+        "status": "read",
+        "locator": "NAND Flash Spot Price · 512Gb TLC wafer",
+        "excerpt": "Spot prices of 512Gb TLC wafers dropped by 1.28% this week (July 20), arriving at US$18.931."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "323f0fefeffefcbfef102e4f496d07a48b4a5f164f97f7df5fe080d605c9a34f",
+    "id": "e-32af9cbcc7850c80bf9cdf98c4e3499b1aa59e8aaa9fc7ade416d455e0583ce4"
+  },
+  "e-ca1a8821cfe7f5b5fcb7da26cfe871ae98e30b76026f03478213b0cb9b4a0c55": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "512Gb TLC 现货",
+    "values": {
+      "current": 19.25,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 19.25,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-07-27",
+        "locator": "NAND Flash Spot Price · 512Gb TLC wafer",
+        "source_id": "tf_spot_0729"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "tf_spot_0729",
+        "url": "https://www.trendforce.com/news/2026/07/29/insights-memory-spot-price-update-dram-spot-prices-rise-slightly-as-ddr3-ddr4-and-ddr5-inquiries-pick-up/",
+        "sha256": "d13c71029a8ba99fecc3a4f5e687383bdbcd876951637d5abc2146cfb1e3e432",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:45.330Z",
+        "reviewed_at": "2026-10-07T17:32:45.330Z",
+        "status": "read",
+        "locator": "NAND Flash Spot Price · 512Gb TLC wafer",
+        "excerpt": "Spot prices of 512Gb TLC wafers rose by 1.69% this week (July 27), with average quotations arriving at US$19.250."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "a1ccc06242b2cf13d8f543f7a737a23318e5bc5557cdfad9fe70a1db004efd8a",
+    "id": "e-ca1a8821cfe7f5b5fcb7da26cfe871ae98e30b76026f03478213b0cb9b4a0c55"
+  },
+  "e-e91ce4196b1fa114506f9226b7cd19a1a62e7e270ac72b443e4333e5d79b4970": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "512Gb TLC 现货",
+    "values": {
+      "current": 21.125,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 21.125,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-08-09",
+        "locator": "NAND Flash Spot Price · 512Gb TLC wafer",
+        "source_id": "tf_spot_0812"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "tf_spot_0812",
+        "url": "https://www.trendforce.com/news/2026/08/12/insights-memory-spot-price-update-dram-spot-trading-stays-subdued-as-pricing-gap-persists-ddr4-up-0-93/",
+        "sha256": "5ae75de97a11fbb2420420282a2634137a73b24441d4c0d75a77efeb36be7f4e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:46.373Z",
+        "reviewed_at": "2026-10-07T17:32:46.373Z",
+        "status": "read",
+        "locator": "NAND Flash Spot Price · 512Gb TLC wafer",
+        "excerpt": "Spot prices of 512Gb TLC wafers rose by 4.97% this week (Aug.9), arriving at US$21.125."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "4d24441288d9e20d5d5a2bc4e2c4d84bb417d07664858b9ec193060d5ce3c630",
+    "id": "e-e91ce4196b1fa114506f9226b7cd19a1a62e7e270ac72b443e4333e5d79b4970"
+  },
+  "e-d87d46c1b5c6bc9cf42398055ddead492ea08fcda10fb79f6da5d1b4770aa088": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "512Gb TLC 现货",
+    "values": {
+      "current": 21.208,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 21.208,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-08-17",
+        "locator": "NAND Flash Spot Price · 512Gb TLC wafer",
+        "source_id": "tf_spot_0819"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "tf_spot_0819",
+        "url": "https://www.trendforce.com/news/2026/08/19/insights-memory-spot-price-update-3q-dram-spot-volumes-seen-staying-low-ddr4-prices-up-0-67-this-week/",
+        "sha256": "ed601cf39b8b3b5964b8dcd808d73041e43f1b02b1704a83880eb5ea5679a96e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:46.851Z",
+        "reviewed_at": "2026-10-07T17:32:46.851Z",
+        "status": "read",
+        "locator": "NAND Flash Spot Price · 512Gb TLC wafer",
+        "excerpt": "Spot prices of 512Gb TLC wafers rose by 0.39% this week (Aug.17), arriving at US$21.208."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "073271147fa8597e88cf1a82eb2df2539595abca72dbaeb200d376a80ceb83d9",
+    "id": "e-d87d46c1b5c6bc9cf42398055ddead492ea08fcda10fb79f6da5d1b4770aa088"
+  },
+  "e-a5927ce2613be70e3b21956db231ed2be0657142dbba9c18cdfe953d69158744": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "512Gb TLC 现货",
+    "values": {
+      "current": 20.708,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 20.708,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-08-31",
+        "locator": "NAND Flash Spot Price · 512Gb TLC wafer",
+        "source_id": "tf_spot_0902"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "tf_spot_0902",
+        "url": "https://www.trendforce.com/news/2026/09/02/insights-memory-spot-price-update-ddr5-ddr4-demand-weakens-but-firm-supplier-quotes-support-elevated-prices/",
+        "sha256": "2e2b686941d66abcea81951a8fcf30c714fd18d8081d89e14bee60b75810092d",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:47.282Z",
+        "reviewed_at": "2026-10-07T17:32:47.282Z",
+        "status": "read",
+        "locator": "NAND Flash Spot Price · 512Gb TLC wafer",
+        "excerpt": "Spot prices of 512Gb TLC wafers fell 0.90% this week (Aug. 31) to US$20.708 per unit."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "f55c684307e1ebcf9c7fe8c43b0046373bd5b7f53f512dbb9cd816d59fd3c9b4",
+    "id": "e-a5927ce2613be70e3b21956db231ed2be0657142dbba9c18cdfe953d69158744"
+  },
+  "e-122053889925aac172355f8c6e1f77955823b29bb1d2c240dbc4b051049c2fe7": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "512Gb TLC 现货",
+    "values": {
+      "current": 20.146,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 20.146,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-09-07",
+        "locator": "NAND Flash Spot Price · 512Gb TLC wafer",
+        "source_id": "tf_spot_0909"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "tf_spot_0909",
+        "url": "https://www.trendforce.com/news/2026/09/09/insights-memory-spot-price-update-ddr4-mainstream-prices-rise-1-78-on-2gx8-orders-ddr5-demand-remains-limited/",
+        "sha256": "b0f7dcbdb5216d927f1027bc1ba4fe96730837cc70165db17910dfd442fe5fad",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:47.698Z",
+        "reviewed_at": "2026-10-07T17:32:47.698Z",
+        "status": "read",
+        "locator": "NAND Flash Spot Price · 512Gb TLC wafer",
+        "excerpt": "512Gb TLC wafers dropped by 2.71% in spot prices this week (Sept. 7), arriving at US$20.146."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "7e61097a349d06df93f39c398cef9a21a01b84802e4e7bcebd7720aa327bc43e",
+    "id": "e-122053889925aac172355f8c6e1f77955823b29bb1d2c240dbc4b051049c2fe7"
+  },
+  "e-2ce1e0a1b90f5978dfada02140cf9da386d97d80bc5d43b9bd107f56b8adc259": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "512Gb TLC 现货",
+    "values": {
+      "current": 20.083,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 20.083,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-09-14",
+        "locator": "NAND Flash Spot Price · 512Gb TLC wafer",
+        "source_id": "tf_spot_0916"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "tf_spot_0916",
+        "url": "https://www.trendforce.com/news/2026/09/16/insights-memory-spot-price-update-dram-spot-cools-as-ddr5-inquiries-slow-2gx8-ddr4-prices-retreat/",
+        "sha256": "7fae64620bc3eaeb50c59d8d0f727471430cd61d83ad4cdcacec9831bf8cc385",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:48.115Z",
+        "reviewed_at": "2026-10-07T17:32:48.115Z",
+        "status": "read",
+        "locator": "NAND Flash Spot Price · 512Gb TLC wafer",
+        "excerpt": "512Gb TLC wafers dropped by 0.31% in spot prices this week (September 14), arriving at US$20.083."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "ebd3965e4a402b2e6c99a1382d9df0d7d07380a54466037d02a18ce11e931cae",
+    "id": "e-2ce1e0a1b90f5978dfada02140cf9da386d97d80bc5d43b9bd107f56b8adc259"
+  },
+  "e-81481f15e96040ad66ad594d848c36ca5495aedc2dd6a4d0b27e38f359610096": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "512Gb TLC 现货",
+    "values": {
+      "current": 19.883,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 19.883,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-09-21",
+        "locator": "NAND Flash Spot Price · 512Gb TLC wafer",
+        "source_id": "tf_spot_0923"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "tf_spot_0923",
+        "url": "https://www.trendforce.com/news/2026/09/23/insights-memory-spot-price-update-dram-spot-prices-hold-cautious-tone-ddr4-2gx8-drops-3-6/",
+        "sha256": "b28a222ff986b3145587b39735698132948b00951782e56ec5a36216c42c02d8",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:48.555Z",
+        "reviewed_at": "2026-10-07T17:32:48.555Z",
+        "status": "read",
+        "locator": "NAND Flash Spot Price · 512Gb TLC wafer",
+        "excerpt": "Spot prices of 512Gb TLC wafers dropped by 1.00% this week (September 21), arriving at US$19.883."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "eeade1b897d2247b31f6213c077c2c2a7b3eb850bf5d32ea4034f8cb67006f6c",
+    "id": "e-81481f15e96040ad66ad594d848c36ca5495aedc2dd6a4d0b27e38f359610096"
+  },
+  "e-0ba2b589785c36fb084905cdb604a0341cbf47f338c9ad551cb376d8c678be7f": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "512Gb TLC 现货",
+    "values": {
+      "current": 19.396,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 19.396,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-09-28",
+        "locator": "NAND Flash Spot Price · 512Gb TLC wafer",
+        "source_id": "tf_spot_0930"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "tf_spot_0930",
+        "url": "https://www.trendforce.com/news/2026/09/30/insights-memory-spot-price-update-dram-market-quiet-amid-holidays-nand-buying-stays-weak/",
+        "sha256": "ebb7959da7d2d6a0334c79426637a377980515f561c2660debaec189fc2de92a",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:49.011Z",
+        "reviewed_at": "2026-10-07T17:32:49.011Z",
+        "status": "read",
+        "locator": "NAND Flash Spot Price · 512Gb TLC wafer",
+        "excerpt": "Spot prices of 512Gb TLC wafers dropped by 2.45% this week (September 28), arriving at US$19.396 in average quotations."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "d8131e14335d950d07bac089c6017a4e8529424dcfab10371ac0431252a138b2",
+    "id": "e-0ba2b589785c36fb084905cdb604a0341cbf47f338c9ad551cb376d8c678be7f"
+  },
+  "e-fd480d096fd080ae7dc3371e6dac217edabde1189379f95ef5e6c28603a50239": {
+    "measurement": "end_consumption_proxy",
+    "unit": "TWDb",
+    "definition_version": 1,
+    "temporal_basis": "calendar_month",
+    "accounting_basis": "as_disclosed",
+    "scope": "南亚科单月营收（与上月比较）",
+    "values": {
+      "current": 6.66414,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 6664140,
+        "scale": 0.000001,
+        "source_unit": "TWD thousands",
+        "period": "2025-09",
+        "locator": "Consolidated Monthly Revenue · 2025 · September",
+        "source_id": "nanya_monthly_2025"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "nanya_monthly_2025",
+        "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue?Year=2025",
+        "sha256": "20720b7e59fbaaffead9fc6153f64a3d5d58b14643fb3768105b54ea24e95220",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:50.758Z",
+        "reviewed_at": "2026-10-07T17:32:50.758Z",
+        "status": "read",
+        "locator": "Consolidated Monthly Revenue · 2025 · September",
+        "excerpt": "September 6,664,140 -1.5% 157.8%. In Thousands of New Taiwan Dollars; monthly revenue figures are unaudited."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "5045d427f88ece1cf8fc8f963f984320a996f41e9a3551b2c481151c5d401827",
+    "id": "e-fd480d096fd080ae7dc3371e6dac217edabde1189379f95ef5e6c28603a50239"
+  },
+  "e-4e86e1ae6971d2bf21b26f5d97dcbbc117c36a62cd481c888df76950c1d5b7b9": {
+    "measurement": "end_consumption_proxy",
+    "unit": "TWDb",
+    "definition_version": 1,
+    "temporal_basis": "calendar_month",
+    "accounting_basis": "as_disclosed",
+    "scope": "南亚科单月营收（与上月比较）",
+    "values": {
+      "current": 7.907729,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 7907729,
+        "scale": 0.000001,
+        "source_unit": "TWD thousands",
+        "period": "2025-10",
+        "locator": "Consolidated Monthly Revenue · 2025 · October",
+        "source_id": "nanya_monthly_2025"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "nanya_monthly_2025",
+        "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue?Year=2025",
+        "sha256": "20720b7e59fbaaffead9fc6153f64a3d5d58b14643fb3768105b54ea24e95220",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:50.758Z",
+        "reviewed_at": "2026-10-07T17:32:50.758Z",
+        "status": "read",
+        "locator": "Consolidated Monthly Revenue · 2025 · October",
+        "excerpt": "October 7,907,729 18.7% 262.4%. In Thousands of New Taiwan Dollars; monthly revenue figures are unaudited."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "a17d628dd0587d176d1749a052bd47e882814ae5b7c1b3384921334a6a8e9a2b",
+    "id": "e-4e86e1ae6971d2bf21b26f5d97dcbbc117c36a62cd481c888df76950c1d5b7b9"
+  },
+  "e-9d2ef4b950f866253f9e9803771a2886418a0cc2241a4c0f9b01669ea2f1fc71": {
+    "measurement": "end_consumption_proxy",
+    "unit": "TWDb",
+    "definition_version": 1,
+    "temporal_basis": "calendar_month",
+    "accounting_basis": "as_disclosed",
+    "scope": "南亚科单月营收（与上月比较）",
+    "values": {
+      "current": 10.168737,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 10168737,
+        "scale": 0.000001,
+        "source_unit": "TWD thousands",
+        "period": "2025-11",
+        "locator": "Consolidated Monthly Revenue · 2025 · November",
+        "source_id": "nanya_monthly_2025"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "nanya_monthly_2025",
+        "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue?Year=2025",
+        "sha256": "20720b7e59fbaaffead9fc6153f64a3d5d58b14643fb3768105b54ea24e95220",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:50.758Z",
+        "reviewed_at": "2026-10-07T17:32:50.758Z",
+        "status": "read",
+        "locator": "Consolidated Monthly Revenue · 2025 · November",
+        "excerpt": "November 10,168,737 28.6% 364.9%. In Thousands of New Taiwan Dollars; monthly revenue figures are unaudited."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "aa35c61c615abc221a6390b2ffda25821f1d82aae828d3cc044e3c9715f6a45e",
+    "id": "e-9d2ef4b950f866253f9e9803771a2886418a0cc2241a4c0f9b01669ea2f1fc71"
+  },
+  "e-98db3178d70e8ebbf82a342e78d9b3403f3a6eedf3e0abbcd24cdc0f6703736d": {
+    "measurement": "end_consumption_proxy",
+    "unit": "TWDb",
+    "definition_version": 1,
+    "temporal_basis": "calendar_month",
+    "accounting_basis": "as_disclosed",
+    "scope": "南亚科单月营收（与上月比较）",
+    "values": {
+      "current": 12.017152,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 12017152,
+        "scale": 0.000001,
+        "source_unit": "TWD thousands",
+        "period": "2025-12",
+        "locator": "Consolidated Monthly Revenue · 2025 · December",
+        "source_id": "nanya_monthly_2025"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "nanya_monthly_2025",
+        "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue?Year=2025",
+        "sha256": "20720b7e59fbaaffead9fc6153f64a3d5d58b14643fb3768105b54ea24e95220",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:50.758Z",
+        "reviewed_at": "2026-10-07T17:32:50.758Z",
+        "status": "read",
+        "locator": "Consolidated Monthly Revenue · 2025 · December",
+        "excerpt": "December 12,017,152 18.2% 444.9%. In Thousands of New Taiwan Dollars; monthly revenue figures are unaudited."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "7fa2927b42bd91ceb0bc19d8046d9f82778ac71c5b05cd770b409dfbe70d3e78",
+    "id": "e-98db3178d70e8ebbf82a342e78d9b3403f3a6eedf3e0abbcd24cdc0f6703736d"
+  },
+  "e-2ead7cb7882ad4e1e22894fb0edeba6b203514ce632d0e0a9d2bda2a2ca65607": {
+    "measurement": "end_consumption_proxy",
+    "unit": "TWDb",
+    "definition_version": 1,
+    "temporal_basis": "calendar_month",
+    "accounting_basis": "as_disclosed",
+    "scope": "南亚科单月营收（与上月比较）",
+    "values": {
+      "current": 15.309988,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 15309988,
+        "scale": 0.000001,
+        "source_unit": "TWD thousands",
+        "period": "2026-01",
+        "locator": "Consolidated Monthly Revenue · 2026 · January",
+        "source_id": "nanya_monthly"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "nanya_monthly",
+        "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
+        "sha256": "6e9f960a00d2f7075673973aa4eb6b253d3723aa57cf4ef4df5aed4d60cc5495",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:50.335Z",
+        "reviewed_at": "2026-10-07T17:32:50.335Z",
+        "status": "read",
+        "locator": "Consolidated Monthly Revenue · 2026 · January",
+        "excerpt": "January 15,309,988 27.4% 608.0%. In Thousands of New Taiwan Dollars; monthly revenue figures are unaudited."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "94b97c5adc06f5c5da0d1d8a3d63a09a2febd526f34ce8fcfd96ca037d77d6b3",
+    "id": "e-2ead7cb7882ad4e1e22894fb0edeba6b203514ce632d0e0a9d2bda2a2ca65607"
+  },
+  "e-6352a89e9a4a28ba0543d8bdfab074a2866099f78fd9dd30937da57ed2d6c947": {
+    "measurement": "end_consumption_proxy",
+    "unit": "TWDb",
+    "definition_version": 1,
+    "temporal_basis": "calendar_month",
+    "accounting_basis": "as_disclosed",
+    "scope": "南亚科单月营收（与上月比较）",
+    "values": {
+      "current": 15.607184,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 15607184,
+        "scale": 0.000001,
+        "source_unit": "TWD thousands",
+        "period": "2026-02",
+        "locator": "Consolidated Monthly Revenue · 2026 · February",
+        "source_id": "nanya_monthly"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "nanya_monthly",
+        "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
+        "sha256": "6e9f960a00d2f7075673973aa4eb6b253d3723aa57cf4ef4df5aed4d60cc5495",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:50.335Z",
+        "reviewed_at": "2026-10-07T17:32:50.335Z",
+        "status": "read",
+        "locator": "Consolidated Monthly Revenue · 2026 · February",
+        "excerpt": "February 15,607,184 1.9% 586.7%. In Thousands of New Taiwan Dollars; monthly revenue figures are unaudited."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "409ca09e69d94d2d11306d6d0c3f1420682c1f33a4630e0e0bb239684aa93718",
+    "id": "e-6352a89e9a4a28ba0543d8bdfab074a2866099f78fd9dd30937da57ed2d6c947"
+  },
+  "e-612b0cf4bb20b969076f8c15b63f1e1d1ff4cb4d9c9736529d4f6462ef8f6cb4": {
+    "measurement": "end_consumption_proxy",
+    "unit": "TWDb",
+    "definition_version": 1,
+    "temporal_basis": "calendar_month",
+    "accounting_basis": "as_disclosed",
+    "scope": "南亚科单月营收（与上月比较）",
+    "values": {
+      "current": 18.16976,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 18169760,
+        "scale": 0.000001,
+        "source_unit": "TWD thousands",
+        "period": "2026-03",
+        "locator": "Consolidated Monthly Revenue · 2026 · March",
+        "source_id": "nanya_monthly"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "nanya_monthly",
+        "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
+        "sha256": "6e9f960a00d2f7075673973aa4eb6b253d3723aa57cf4ef4df5aed4d60cc5495",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:50.335Z",
+        "reviewed_at": "2026-10-07T17:32:50.335Z",
+        "status": "read",
+        "locator": "Consolidated Monthly Revenue · 2026 · March",
+        "excerpt": "March 18,169,760 16.4% 560.0%. In Thousands of New Taiwan Dollars; monthly revenue figures are unaudited."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "c90e6bf4932106a6f9fdcde473cdeec7ddcf7f5ea9d8d0b65f8664ef89f81755",
+    "id": "e-612b0cf4bb20b969076f8c15b63f1e1d1ff4cb4d9c9736529d4f6462ef8f6cb4"
+  },
+  "e-b5e7b7612d44c5883b60951a3fdce23d6d5e01dfc2366548e4e25b4d54af06d2": {
+    "measurement": "end_consumption_proxy",
+    "unit": "TWDb",
+    "definition_version": 1,
+    "temporal_basis": "calendar_month",
+    "accounting_basis": "as_disclosed",
+    "scope": "南亚科单月营收（与上月比较）",
+    "values": {
+      "current": 25.491201,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 25491201,
+        "scale": 0.000001,
+        "source_unit": "TWD thousands",
+        "period": "2026-04",
+        "locator": "Consolidated Monthly Revenue · 2026 · April",
+        "source_id": "nanya_monthly"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "nanya_monthly",
+        "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
+        "sha256": "6e9f960a00d2f7075673973aa4eb6b253d3723aa57cf4ef4df5aed4d60cc5495",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:50.335Z",
+        "reviewed_at": "2026-10-07T17:32:50.335Z",
+        "status": "read",
+        "locator": "Consolidated Monthly Revenue · 2026 · April",
+        "excerpt": "April 25,491,201 40.3% 717.3%. In Thousands of New Taiwan Dollars; monthly revenue figures are unaudited."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "2c61847e848fb9e035f3a7abba6ccc2a5275dddcd219bba2bc9e064977dec99d",
+    "id": "e-b5e7b7612d44c5883b60951a3fdce23d6d5e01dfc2366548e4e25b4d54af06d2"
+  },
+  "e-c728b2de0ba9c6bd46ee46e3ecf3b85d059f89f6664fcd614104bfa79c35f525": {
+    "measurement": "end_consumption_proxy",
+    "unit": "TWDb",
+    "definition_version": 1,
+    "temporal_basis": "calendar_month",
+    "accounting_basis": "as_disclosed",
+    "scope": "南亚科单月营收（与上月比较）",
+    "values": {
+      "current": 27.669563,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 27669563,
+        "scale": 0.000001,
+        "source_unit": "TWD thousands",
+        "period": "2026-05",
+        "locator": "Consolidated Monthly Revenue · 2026 · May",
+        "source_id": "nanya_monthly"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "nanya_monthly",
+        "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
+        "sha256": "6e9f960a00d2f7075673973aa4eb6b253d3723aa57cf4ef4df5aed4d60cc5495",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:50.335Z",
+        "reviewed_at": "2026-10-07T17:32:50.335Z",
+        "status": "read",
+        "locator": "Consolidated Monthly Revenue · 2026 · May",
+        "excerpt": "May 27,669,563 8.6% 730.1%. In Thousands of New Taiwan Dollars; monthly revenue figures are unaudited."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "be67a005c8fefe38445542b85dbf66b5cacf216677398945bcc790d132dda749",
+    "id": "e-c728b2de0ba9c6bd46ee46e3ecf3b85d059f89f6664fcd614104bfa79c35f525"
+  },
+  "e-cf0fa49b7e399844587d7bd61bf7614fefdcf2e2feac6fcd26d672bf85a23074": {
+    "measurement": "end_consumption_proxy",
+    "unit": "TWDb",
+    "definition_version": 1,
+    "temporal_basis": "calendar_month",
+    "accounting_basis": "as_disclosed",
+    "scope": "南亚科单月营收（与上月比较）",
+    "values": {
+      "current": 29.388309,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 29388309,
+        "scale": 0.000001,
+        "source_unit": "TWD thousands",
+        "period": "2026-06",
+        "locator": "Consolidated Monthly Revenue · 2026 · June",
+        "source_id": "nanya_monthly"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "nanya_monthly",
+        "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
+        "sha256": "6e9f960a00d2f7075673973aa4eb6b253d3723aa57cf4ef4df5aed4d60cc5495",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:50.335Z",
+        "reviewed_at": "2026-10-07T17:32:50.335Z",
+        "status": "read",
+        "locator": "Consolidated Monthly Revenue · 2026 · June",
+        "excerpt": "June 29,388,309 6.2% 621.3%. In Thousands of New Taiwan Dollars; monthly revenue figures are unaudited."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "65f521f0a193e76ad65ef8a70276de2e3a76e2f8d08d3efc870c8bc156a067e8",
+    "id": "e-cf0fa49b7e399844587d7bd61bf7614fefdcf2e2feac6fcd26d672bf85a23074"
+  },
+  "e-da800031786ad12b7a5500b517a7b904745bed847c0cf2266a1e28e5679c74fe": {
+    "measurement": "end_consumption_proxy",
+    "unit": "TWDb",
+    "definition_version": 1,
+    "temporal_basis": "calendar_month",
+    "accounting_basis": "as_disclosed",
+    "scope": "南亚科单月营收（与上月比较）",
+    "values": {
+      "current": 43.867609,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 43867609,
+        "scale": 0.000001,
+        "source_unit": "TWD thousands",
+        "period": "2026-07",
+        "locator": "Consolidated Monthly Revenue · 2026 · July",
+        "source_id": "nanya_monthly"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "nanya_monthly",
+        "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
+        "sha256": "6e9f960a00d2f7075673973aa4eb6b253d3723aa57cf4ef4df5aed4d60cc5495",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:50.335Z",
+        "reviewed_at": "2026-10-07T17:32:50.335Z",
+        "status": "read",
+        "locator": "Consolidated Monthly Revenue · 2026 · July",
+        "excerpt": "July 43,867,609 49.3% 719.6%. In Thousands of New Taiwan Dollars; monthly revenue figures are unaudited."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "b8307104dc5a3ca027dec112a093ee7090bf4170976c723fbd65fe0ec324c3aa",
+    "id": "e-da800031786ad12b7a5500b517a7b904745bed847c0cf2266a1e28e5679c74fe"
+  },
+  "e-1d5c46c22ba97215e10f4a81a5320449a7880d7168c849de0be08a92226eccca": {
+    "measurement": "end_consumption_proxy",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "calendar_month",
+    "accounting_basis": "as_disclosed",
+    "scope": "韩国半导体单月出口额（与上年同月比较）",
+    "values": {
+      "current": 41007,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 41007,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026-07",
+        "locator": "PDF p.11 · 20대 주요 수출 품목 표 · 반도체 · ’26.7. 금액",
+        "source_id": "korea_trade"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "korea_trade",
+        "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172254/view",
+        "sha256": "b88296bf78ac445f3c4a240351a40e1b385c769c408f09b0586afc96690b15f6",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-10-07T17:32:51.201Z",
+        "reviewed_at": "2026-10-07T17:32:51.201Z",
+        "status": "read",
+        "locator": "PDF p.11 · 20대 주요 수출 품목 표 · 반도체 · ’26.7. 금액",
+        "excerpt": "1 반도체 16,621 (22.0) 41,007 (178.8) 46,653 (209.1) 60,295 (262.8) — columns ’25.9., ‘26.7., ‘26.8., ‘26.9. (단위: 백만 달러, %)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "809fdc9372eb2cec5f53e179fbd7765cc257786b9cc600f2b09d3ec74aa4ced9",
+    "id": "e-1d5c46c22ba97215e10f4a81a5320449a7880d7168c849de0be08a92226eccca"
+  },
+  "e-aa446c48f42790aaf98e8f09621d5e04545cf4df49d8a4799d37b6f5283e47e8": {
+    "measurement": "end_consumption_proxy",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "calendar_month",
+    "accounting_basis": "as_disclosed",
+    "scope": "韩国半导体单月出口额（与上年同月比较）",
+    "values": {
+      "current": 46653,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 46653,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026-08",
+        "locator": "PDF p.11 · 20대 주요 수출 품목 표 · 반도체 · ’26.8. 금액",
+        "source_id": "korea_trade"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "korea_trade",
+        "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172254/view",
+        "sha256": "b88296bf78ac445f3c4a240351a40e1b385c769c408f09b0586afc96690b15f6",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-10-07T17:32:51.201Z",
+        "reviewed_at": "2026-10-07T17:32:51.201Z",
+        "status": "read",
+        "locator": "PDF p.11 · 20대 주요 수출 품목 표 · 반도체 · ’26.8. 금액",
+        "excerpt": "1 반도체 16,621 (22.0) 41,007 (178.8) 46,653 (209.1) 60,295 (262.8) — columns ’25.9., ‘26.7., ‘26.8., ‘26.9. (단위: 백만 달러, %)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "553b9d6638de7eb3f1d8c1b786aaa3ceb29e6a09cf9bc8067eeaad452977673b",
+    "id": "e-aa446c48f42790aaf98e8f09621d5e04545cf4df49d8a4799d37b6f5283e47e8"
+  },
+  "e-c16159e1de5ae99a0a34aff9f15a4c04548811140dd8fd2b6ff79860b9b5a2d6": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "DDR4 1Gx8 3200 现货",
+    "values": {
+      "current": 46.32,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 46.32,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-10-06",
+        "locator": "DRAM Spot Price · mainstream chips (DDR4 1Gx8 3200MT/s) · this week",
+        "source_id": "spot"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "spot",
+        "url": "https://www.trendforce.com/news/2026/10/07/insights-memory-spot-price-update-dram-spot-largely-sideways-as-holidays-month-end-effects-weigh/",
+        "sha256": "db7641b40f06447b794707836fe8daf64e178ce8c34c9c65d0dad26977e78446",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:49.462Z",
+        "reviewed_at": "2026-10-07T17:32:49.462Z",
+        "status": "read",
+        "locator": "DRAM Spot Price · mainstream chips (DDR4 1Gx8 3200MT/s) · this week",
+        "excerpt": "The average spot price of the mainstream chips (i.e., DDR4 1Gx8 3200MT/s) has not changed from last week and is holding steady at US$ 46.32 (October 6)."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "d27728850c5cd56a2846a3d4442bc26ebf5a427a8368610cb1982576d2469acd",
+    "id": "e-c16159e1de5ae99a0a34aff9f15a4c04548811140dd8fd2b6ff79860b9b5a2d6"
+  },
+  "e-23181516a335fe34ad260be9a2c608b7645986f8e7a560b562cc2a534e3c5580": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "DDR5 16Gb (2Gx8) 4800/5600 现货",
+    "values": {
+      "current": 58.4,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 58.4,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-10-07",
+        "locator": "DRAM Spot Price · DDR5 16Gb (2Gx8) 4800/5600 · Session Average",
+        "source_id": "dram_spot"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "dram_spot",
+        "url": "https://www.dramexchange.com/",
+        "sha256": "82ec56fa15c4383e31d99547f00857fadb26848e8a0a01c6c9886d1e6f1aa8af",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:49.922Z",
+        "reviewed_at": "2026-10-07T17:32:49.922Z",
+        "status": "read",
+        "locator": "DRAM Spot Price table, Last Update: Oct.7 2026 18:10 (GMT+8)",
+        "excerpt": "DDR5 16Gb (2Gx8) 4800/5600 | Daily High 69.80 | Daily Low 43.60 | Session Average 58.400 | Session Change 0.40 %"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "3af90fff5340ed1edd7e2958d7dffed3efbd252703d69fbdfc8f1369fefd4d70",
+    "id": "e-23181516a335fe34ad260be9a2c608b7645986f8e7a560b562cc2a534e3c5580"
+  },
+  "e-c13efce7107a549ad5842b5334c1ffbf080af73f35090fe672f9918ef62a24ec": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "512Gb TLC 现货",
+    "values": {
+      "current": 18.833,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 18.833,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-10-05",
+        "locator": "NAND Flash Spot Price · 512Gb TLC wafer · this week",
+        "source_id": "spot"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "spot",
+        "url": "https://www.trendforce.com/news/2026/10/07/insights-memory-spot-price-update-dram-spot-largely-sideways-as-holidays-month-end-effects-weigh/",
+        "sha256": "db7641b40f06447b794707836fe8daf64e178ce8c34c9c65d0dad26977e78446",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:49.462Z",
+        "reviewed_at": "2026-10-07T17:32:49.462Z",
+        "status": "read",
+        "locator": "NAND Flash Spot Price · 512Gb TLC wafer · this week",
+        "excerpt": "Spot prices of 512Gb TLC wafers dropped by 2.90% this week (October 5), arriving at US$18.833."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "0199b1a5c27c7107e4f755370075f549c1a294ddc3d5a8b7d7c7600ad329f606",
+    "id": "e-c13efce7107a549ad5842b5334c1ffbf080af73f35090fe672f9918ef62a24ec"
+  },
+  "e-d9bb4f07911b611bdc5e78cbad88fb62825428e12e0a474a9b3286dd8bf6e87c": {
+    "measurement": "end_consumption_proxy",
+    "unit": "TWDb",
+    "definition_version": 1,
+    "temporal_basis": "calendar_month",
+    "accounting_basis": "as_disclosed",
+    "scope": "南亚科单月营收（与上月比较）",
+    "values": {
+      "current": 44.690268,
+      "previous": 43.867609,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 44690268,
+        "scale": 0.000001,
+        "source_unit": "TWD thousands",
+        "period": "2026-08",
+        "locator": "Consolidated Monthly Revenue · 2026 · August",
+        "source_id": "nanya_monthly"
+      },
+      {
+        "field": "previous",
+        "value": 43867609,
+        "scale": 0.000001,
+        "source_unit": "TWD thousands",
+        "period": "2026-07",
+        "locator": "Consolidated Monthly Revenue · 2026 · July",
+        "source_id": "nanya_monthly"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "nanya_monthly",
+        "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
+        "sha256": "6e9f960a00d2f7075673973aa4eb6b253d3723aa57cf4ef4df5aed4d60cc5495",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-07T17:32:50.335Z",
+        "reviewed_at": "2026-10-07T17:32:50.335Z",
+        "status": "read",
+        "locator": "Consolidated Monthly Revenue table, 2026, In Thousands of New Taiwan Dollars",
+        "excerpt": "July 43,867,609 (MoM 49.3%, YoY 719.6%); August 44,690,268 (MoM 1.9%, YoY 560.9%); September row blank. In Thousands of New Taiwan Dollars; monthly revenue figures are unaudited."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "99277b4e582878383d71c3556d293197b01a9c78f3ffbada2f961c82a3a62871",
+    "id": "e-d9bb4f07911b611bdc5e78cbad88fb62825428e12e0a474a9b3286dd8bf6e87c"
+  },
+  "e-937747d3a0a09afdf5c9e3fe4e552793a0874616ce29cc1ea7914274523d1d10": {
+    "measurement": "end_consumption_proxy",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "calendar_month",
+    "accounting_basis": "as_disclosed",
+    "scope": "韩国半导体单月出口额（与上年同月比较）",
+    "values": {
+      "current": 60295,
+      "previous": 16621,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 60295,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026-09",
+        "locator": "PDF p.11 · 20대 주요 수출 품목 표 · 반도체 · ’26.9. 금액",
+        "source_id": "korea_trade"
+      },
+      {
+        "field": "previous",
+        "value": 16621,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2025-09",
+        "locator": "PDF p.11 · 20대 주요 수출 품목 표 · 반도체 · ’25.9. 금액",
+        "source_id": "korea_trade"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "korea_trade",
+        "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172254/view",
+        "sha256": "b88296bf78ac445f3c4a240351a40e1b385c769c408f09b0586afc96690b15f6",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-10-07T17:32:51.201Z",
+        "reviewed_at": "2026-10-07T17:32:51.201Z",
+        "status": "read",
+        "locator": "Attachment PDF p.11, 참고 20대 주요 수출 품목 규모 및 증감률 (단위: 백만 달러, %)",
+        "excerpt": "1 반도체 16,621 (22.0) 41,007 (178.8) 46,653 (209.1) 60,295 (262.8) — columns ’25.9., ‘26.7., ‘26.8., ‘26.9."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "2834bffdd184f5ba244ff3245299b87d338ef7a70915657d7fa20dbac12ddb30",
+    "id": "e-937747d3a0a09afdf5c9e3fe4e552793a0874616ce29cc1ea7914274523d1d10"
+  },
+  "e-458d035117071bb0178b9bd4a6fef0c53569685756e0cd704815e2be43c2bca3": {
+    "measurement": "end_consumption_proxy",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "calendar_month",
+    "accounting_basis": "as_disclosed",
+    "scope": "韩国存储芯片单月出口额（与上年同月比较）",
+    "values": {
+      "current": 54070,
+      "previous": 11790,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 540.7,
+        "scale": 100,
+        "source_unit": "USD 100 millions (억 달러)",
+        "period": "2026-09",
+        "locator": "PDF p.12 · 반도체 품목별 상세 · 메모리 수출액 (’26.9.)",
+        "source_id": "korea_trade"
+      },
+      {
+        "field": "previous",
+        "value": 117.9,
+        "scale": 100,
+        "source_unit": "USD 100 millions (억 달러)",
+        "period": "2025-09",
+        "locator": "PDF p.12 · 반도체 품목별 상세 · 메모리 수출액 (’25.9.)",
+        "source_id": "korea_trade"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-source review; raw value times scale checked against candidate",
+      "at": "2026-10-07T17:33:40.196Z"
+    },
+    "documents": [
+      {
+        "source_id": "korea_trade",
+        "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172254/view",
+        "sha256": "b88296bf78ac445f3c4a240351a40e1b385c769c408f09b0586afc96690b15f6",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-10-07T17:32:51.201Z",
+        "reviewed_at": "2026-10-07T17:32:51.201Z",
+        "status": "read",
+        "locator": "Attachment PDF p.12, 품목별 상세 수출 동향 · 반도체",
+        "excerpt": "반도체 수출액/증감률(억 달러) : (’25.9.) 166.2(+22.0%) → (’26.9.) 603.0(+262.8%) ↳ 메모리/시스템 반도체 수출액: 117.9 → 540.7(+358.6%) / 43.0 → 55.4(+28.8%)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "93ab7b711fc6f45a55f57f6c1e3e1fe6c5220afc6289f305f3d2fdd018ba534b",
+    "id": "e-458d035117071bb0178b9bd4a6fef0c53569685756e0cd704815e2be43c2bca3"
   }
 }

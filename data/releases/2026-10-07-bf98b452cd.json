@@ -1,0 +1,214 @@
+{
+  "version": 1,
+  "scope": "industry",
+  "base_commit": "6255dbab89742d6134863eb7dec3d245f6d41d96",
+  "base_revision": "2026-10-07-2970469775",
+  "base_sha256": "50c4aeff2276a1fa3ae2fe47801698bc397909a70b81c4d9f115f9457c74977d",
+  "catalog_sha256": "586aa58a580ecc0aeb935cdce8221a5e028a455b34a0dd7a50d0a6565c39b5b4",
+  "created_at": "2026-10-07T17:32:36.294Z",
+  "completed_at": "2026-10-07T17:39:48.612Z",
+  "state": "verified",
+  "targets": null,
+  "coverage": [
+    {
+      "key": "industry",
+      "status": "pending",
+      "evidence": [],
+      "reviewed_at": null,
+      "latest_disclosure": null,
+      "reason": "仅补录现货与月度趋势历史并更新这些行；合同价预测、供给与其他需求行未在本次复核，留给周三例行更新。"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "tf_spot_0624",
+      "url": "https://www.trendforce.com/news/2026/06/24/insights-memory-spot-price-update-dram-buyers-resist-higher-quotes-as-mainstream-ddr4-prices-gain-0-28/",
+      "sha256": "6cff0e81b195874d301415958e4bb282fe7d683ffe0aa41549f2c4101a1bfbb2",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-07T17:32:43.553Z",
+      "reviewed_at": "2026-10-07T17:32:43.553Z",
+      "status": "read"
+    },
+    {
+      "source_id": "tf_spot_0701",
+      "url": "https://www.trendforce.com/news/2026/07/01/insights-memory-spot-price-update-dram-spot-prices-see-gains-in-low-density-ddr4-and-ddr3-amid-sideways-market/",
+      "sha256": "1defbe4a346107d59a0ebedd4ccb069dfbda01f1b3e01fbddb30444f037b534b",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-07T17:32:44.010Z",
+      "reviewed_at": "2026-10-07T17:32:44.010Z",
+      "status": "read"
+    },
+    {
+      "source_id": "tf_spot_0708",
+      "url": "https://www.trendforce.com/news/2026/07/08/insights-memory-spot-price-update-dram-spot-trading-remains-subdued-with-ddr3-and-4gb-ddr4-prices-edging-higher/",
+      "sha256": "4e4cd0e8ea0b360aedf7b20d5b25b8c6c5fa833b3f9ee56360eff292a364e4f9",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-07T17:32:44.463Z",
+      "reviewed_at": "2026-10-07T17:32:44.463Z",
+      "status": "read"
+    },
+    {
+      "source_id": "tf_spot_0722",
+      "url": "https://www.trendforce.com/news/2026/07/22/insights-memory-spot-price-update-dram-spot-market-edges-higher-as-branded-ddr4-demand-supports-prices/",
+      "sha256": "76d01da49bb38eb770d03f8d0fe87f353a67946ff7e574e87a398fe9a4cb2f0c",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-07T17:32:44.899Z",
+      "reviewed_at": "2026-10-07T17:32:44.899Z",
+      "status": "read"
+    },
+    {
+      "source_id": "tf_spot_0729",
+      "url": "https://www.trendforce.com/news/2026/07/29/insights-memory-spot-price-update-dram-spot-prices-rise-slightly-as-ddr3-ddr4-and-ddr5-inquiries-pick-up/",
+      "sha256": "d13c71029a8ba99fecc3a4f5e687383bdbcd876951637d5abc2146cfb1e3e432",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-07T17:32:45.330Z",
+      "reviewed_at": "2026-10-07T17:32:45.330Z",
+      "status": "read"
+    },
+    {
+      "source_id": "tf_spot_0805",
+      "url": "https://www.trendforce.com/news/2026/08/05/insights-memory-spot-price-update-dram-spot-price-gains-slow-while-ddr4-and-ddr3-continue-uptrend/",
+      "sha256": "26c4b08f5452a31ee67f62a084869b2cd46419b1f575379a24eb41e5bf22d03e",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-07T17:32:45.833Z",
+      "reviewed_at": "2026-10-07T17:32:45.833Z",
+      "status": "read"
+    },
+    {
+      "source_id": "tf_spot_0812",
+      "url": "https://www.trendforce.com/news/2026/08/12/insights-memory-spot-price-update-dram-spot-trading-stays-subdued-as-pricing-gap-persists-ddr4-up-0-93/",
+      "sha256": "5ae75de97a11fbb2420420282a2634137a73b24441d4c0d75a77efeb36be7f4e",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-07T17:32:46.373Z",
+      "reviewed_at": "2026-10-07T17:32:46.373Z",
+      "status": "read"
+    },
+    {
+      "source_id": "tf_spot_0819",
+      "url": "https://www.trendforce.com/news/2026/08/19/insights-memory-spot-price-update-3q-dram-spot-volumes-seen-staying-low-ddr4-prices-up-0-67-this-week/",
+      "sha256": "ed601cf39b8b3b5964b8dcd808d73041e43f1b02b1704a83880eb5ea5679a96e",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-07T17:32:46.851Z",
+      "reviewed_at": "2026-10-07T17:32:46.851Z",
+      "status": "read"
+    },
+    {
+      "source_id": "tf_spot_0902",
+      "url": "https://www.trendforce.com/news/2026/09/02/insights-memory-spot-price-update-ddr5-ddr4-demand-weakens-but-firm-supplier-quotes-support-elevated-prices/",
+      "sha256": "2e2b686941d66abcea81951a8fcf30c714fd18d8081d89e14bee60b75810092d",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-07T17:32:47.282Z",
+      "reviewed_at": "2026-10-07T17:32:47.282Z",
+      "status": "read"
+    },
+    {
+      "source_id": "tf_spot_0909",
+      "url": "https://www.trendforce.com/news/2026/09/09/insights-memory-spot-price-update-ddr4-mainstream-prices-rise-1-78-on-2gx8-orders-ddr5-demand-remains-limited/",
+      "sha256": "b0f7dcbdb5216d927f1027bc1ba4fe96730837cc70165db17910dfd442fe5fad",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-07T17:32:47.698Z",
+      "reviewed_at": "2026-10-07T17:32:47.698Z",
+      "status": "read"
+    },
+    {
+      "source_id": "tf_spot_0916",
+      "url": "https://www.trendforce.com/news/2026/09/16/insights-memory-spot-price-update-dram-spot-cools-as-ddr5-inquiries-slow-2gx8-ddr4-prices-retreat/",
+      "sha256": "7fae64620bc3eaeb50c59d8d0f727471430cd61d83ad4cdcacec9831bf8cc385",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-07T17:32:48.115Z",
+      "reviewed_at": "2026-10-07T17:32:48.115Z",
+      "status": "read"
+    },
+    {
+      "source_id": "tf_spot_0923",
+      "url": "https://www.trendforce.com/news/2026/09/23/insights-memory-spot-price-update-dram-spot-prices-hold-cautious-tone-ddr4-2gx8-drops-3-6/",
+      "sha256": "b28a222ff986b3145587b39735698132948b00951782e56ec5a36216c42c02d8",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-07T17:32:48.555Z",
+      "reviewed_at": "2026-10-07T17:32:48.555Z",
+      "status": "read"
+    },
+    {
+      "source_id": "tf_spot_0930",
+      "url": "https://www.trendforce.com/news/2026/09/30/insights-memory-spot-price-update-dram-market-quiet-amid-holidays-nand-buying-stays-weak/",
+      "sha256": "ebb7959da7d2d6a0334c79426637a377980515f561c2660debaec189fc2de92a",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-07T17:32:49.011Z",
+      "reviewed_at": "2026-10-07T17:32:49.011Z",
+      "status": "read"
+    },
+    {
+      "source_id": "spot",
+      "url": "https://www.trendforce.com/news/2026/10/07/insights-memory-spot-price-update-dram-spot-largely-sideways-as-holidays-month-end-effects-weigh/",
+      "sha256": "db7641b40f06447b794707836fe8daf64e178ce8c34c9c65d0dad26977e78446",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-07T17:32:49.462Z",
+      "reviewed_at": "2026-10-07T17:32:49.462Z",
+      "status": "read"
+    },
+    {
+      "source_id": "dram_spot",
+      "url": "https://www.dramexchange.com/",
+      "sha256": "82ec56fa15c4383e31d99547f00857fadb26848e8a0a01c6c9886d1e6f1aa8af",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-07T17:32:49.922Z",
+      "reviewed_at": "2026-10-07T17:32:49.922Z",
+      "status": "read"
+    },
+    {
+      "source_id": "nanya_monthly",
+      "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
+      "sha256": "6e9f960a00d2f7075673973aa4eb6b253d3723aa57cf4ef4df5aed4d60cc5495",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-07T17:32:50.335Z",
+      "reviewed_at": "2026-10-07T17:32:50.335Z",
+      "status": "read"
+    },
+    {
+      "source_id": "nanya_monthly_2025",
+      "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue?Year=2025",
+      "sha256": "20720b7e59fbaaffead9fc6153f64a3d5d58b14643fb3768105b54ea24e95220",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-07T17:32:50.758Z",
+      "reviewed_at": "2026-10-07T17:32:50.758Z",
+      "status": "read"
+    },
+    {
+      "source_id": "korea_trade",
+      "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172254/view",
+      "sha256": "b88296bf78ac445f3c4a240351a40e1b385c769c408f09b0586afc96690b15f6",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-10-07T17:32:51.201Z",
+      "reviewed_at": "2026-10-07T17:32:51.201Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [],
+  "publication_corrections": [
+    "dram_spot"
+  ],
+  "technology_reviews": [],
+  "summary": "补录周期趋势历史：DDR4/TLC 现货周均价（06-22 起）、南亚科月营收（2025-09 起）、韩国半导体出口（2026-07 起），并更新现货、南亚科 8 月营收与韩国出口行的读数日期。",
+  "result": "failed",
+  "artifact_sha256": "342dad81c01f2dc329946e43aa0b4d763bd9b75b55d3d151a80489127b34719c",
+  "ledger_sha256": "6edf40c37640e5e09a94e75fb9026a59857de1f5f30c019588892acdaae3f388",
+  "evidence_sha256": "8ec1d4720a5df5d9f54c86104890b5cd5f50127b3f164716b2cce8712d0ddd44"
+}
