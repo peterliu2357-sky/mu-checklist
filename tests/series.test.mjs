@@ -112,3 +112,27 @@ test('a published industry point cannot be replaced',()=>{
   has(validateEvolution({oldCatalog:catalog,catalog,oldLedger:first.ledger,ledger:next,oldEvidence:first.evidence,evidence:first.evidence,oldLegacy:legacy,legacy}),'SERIES_HISTORY');
   assert.equal(first.ledger.series[DDR4]['2027-09-29'],live.id);
 });
+
+test('trend lines show past points then the live reading, windowed by series kind',async()=>{
+  const {default:s}=await import('../lib/series-core.js');
+  const quarters=Array.from({length:9},(_,i)=>({financial_period:`FY2024 Q${i%4+1}`,value:i}));
+  const q=s.trend(quarters,{value:99,financial_period:'FY2026 Q4'});
+  assert.equal(q.length,s.windows.quarter);
+  assert.deepEqual(q.at(-1),{period:'FY2026 Q4',value:99});
+  assert.deepEqual(q[0],{period:'FY2024 Q3',value:2});
+  const days=Array.from({length:20},(_,i)=>({as_of:`2026-06-${String(i+1).padStart(2,'0')}`,value:i}));
+  const d=s.trend(days,{value:50,as_of:'2026-10-05'});
+  assert.equal(d.length,s.windows.observation);
+  assert.deepEqual(d.at(-1),{period:'10-05',value:50});
+  assert.equal(d.at(-2).period,'06-20');
+  assert.deepEqual(s.trend([{as_of:'2026-08',value:1}],{value:2}),[{period:'2026-08',value:1},{period:'最新',value:2}]);
+  assert.deepEqual(s.trend([],{value:1}),[]);
+  assert.deepEqual(s.trend(days,{value:null}),[]);
+});
+test('dated readings only compare within one date format',async()=>{
+  const {default:s}=await import('../lib/series-core.js');
+  assert.equal(s.compareDates('2026-09-01','2026-10-01'),-1);
+  assert.equal(s.compareDates('2026-10','2026-10'),0);
+  assert.equal(s.compareDates('2026-10','2026-10-01'),null);
+  assert.equal(s.compareDates('2026-13','2026-10'),null);
+});

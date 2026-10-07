@@ -1,4 +1,6 @@
-import {clone,hash,stable,materialize,recordDocument,makeRecord,activeRecords,calculate,recordHash,isObservationDate} from './model.mjs';
+import {clone,hash,stable,materialize,recordDocument,makeRecord,activeRecords,calculate,recordHash} from './model.mjs';
+import series from '../lib/series-core.js';
+const {isObservationDate,compareDates}=series;
 import {validateLedger,validateTransition} from './validate.mjs';
 import {coverageKeys,deriveDiscovery} from './updates.mjs';
 import {technologyTargets,technologyReviews} from './technology.mjs';
@@ -70,8 +72,9 @@ export function buildCandidate({previousLedger,previousEvidence,proposal,support
       if(!isObservationDate(now.payload.as_of)){add('OBSERVATION_DATE',metric_id,'A new industry reading needs as_of: the date (YYYY-MM-DD) or month (YYYY-MM) it describes');continue;}
       const key=old?.payload.as_of;
       if(!isObservationDate(key))continue;
-      if(key.length!==now.payload.as_of.length||now.payload.as_of<key){add('OBSERVATION_DATE',metric_id,'A new reading cannot predate the live one or change its date format');continue;}
-      if(key<now.payload.as_of&&typeof old.payload.current==='number'&&!ledger.series?.[metric_id]?.[key])setPoint(metric_id,key,old.id);
+      const order=compareDates(key,now.payload.as_of);
+      if(order===null||order>0){add('OBSERVATION_DATE',metric_id,'A new reading cannot predate the live one or change its date format');continue;}
+      if(order<0&&typeof old.payload.current==='number'&&!ledger.series?.[metric_id]?.[key])setPoint(metric_id,key,old.id);
     }
   }
   // Backfilled points reuse an existing evidenced record or add a new one with its own reviewed evidence.
