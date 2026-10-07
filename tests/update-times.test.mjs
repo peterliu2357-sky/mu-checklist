@@ -12,6 +12,8 @@ const clone=value=>structuredClone(value);
 
 test('the last data update is a changed, verified release, not the document write time or an unchanged check',()=>{
   const before=clone(published);before.revision='test-before';before.updated_at='2026-09-21T21:00:00Z';
+  // Real check history is newer than these fixed dates; isolate the release chain from it.
+  before.check_log=[];before.monitoring={...before.monitoring,checks:[]};
   const changed=clone(before);changed.revision='test-changed';changed.updated_at='2026-09-21T22:10:00Z';changed.quote.price+=1;changed.quote.checked_at='2026-09-21T22:05:00Z';
   const checked=clone(changed);checked.revision='test-checked';checked.updated_at='2026-09-22T22:10:00Z';checked.quote.checked_at='2026-09-22T22:05:00Z';
   const release=(old,next,at,status)=>({artifact_sha256:hash(next),base_sha256:hash(old),base_revision:old.revision,completed_at:at,scope:'quote',result:'success',state:'verified',coverage:[{key:'quote',status,reviewed_at:at}]});
