@@ -69,7 +69,9 @@ export function buildCandidate({previousLedger,previousEvidence,proposal,support
       if(!now||old?.id===now.id)continue;
       if(!isObservationDate(now.payload.as_of)){add('OBSERVATION_DATE',metric_id,'A new industry reading needs as_of: the date (YYYY-MM-DD) or month (YYYY-MM) it describes');continue;}
       const key=old?.payload.as_of;
-      if(isObservationDate(key)&&key.length===now.payload.as_of.length&&key<now.payload.as_of&&typeof old.payload.current==='number'&&!ledger.series?.[metric_id]?.[key])setPoint(metric_id,key,old.id);
+      if(!isObservationDate(key))continue;
+      if(key.length!==now.payload.as_of.length||now.payload.as_of<key){add('OBSERVATION_DATE',metric_id,'A new reading cannot predate the live one or change its date format');continue;}
+      if(key<now.payload.as_of&&typeof old.payload.current==='number'&&!ledger.series?.[metric_id]?.[key])setPoint(metric_id,key,old.id);
     }
   }
   // Backfilled points reuse an existing evidenced record or add a new one with its own reviewed evidence.
@@ -94,6 +96,8 @@ export function buildCandidate({previousLedger,previousEvidence,proposal,support
       }
       ledger.records[record.id]=record;
     }
+    const existing=ledger.series?.[metric_id]?.[period];
+    if(existing&&existing!==record.id){add('SERIES_HISTORY',key,'A published point cannot be replaced');continue;}
     setPoint(metric_id,period,record.id);
   }
   const current=activeRecords(ledger),byId=new Map(current.map(r=>[r.metric_id,r]));

@@ -99,3 +99,14 @@ test('a backfilled industry point needs evidence and must predate the live readi
   has(build('2026-09-29',{[`${DDR4}@2026-09-29`]:input}).issues,'SERIES_PERIOD');
   has(build('2026-09',{[`${DDR4}@2026-09`]:input}).issues,'SERIES_PERIOD');
 });
+test('a new industry reading cannot go back in time or switch date format',()=>{
+  const {ledger:base}=ledgerWithLiveDate('2026-09-29');
+  has(industryRun(base,proposalWith(base,{current:46.5,as_of:'2026-09-22'})).issues,'OBSERVATION_DATE');
+  has(industryRun(base,proposalWith(base,{current:46.5,as_of:'2026-10'})).issues,'OBSERVATION_DATE');
+});
+test('a published industry point cannot be replaced',()=>{
+  const {ledger:base,live}=ledgerWithLiveDate('2026-09-29'),first=industryRun(base,proposalWith(base,{current:46.5,as_of:'2026-10-06'})),next=clone(first.ledger);
+  next.series[DDR4]['2026-09-29']=activeRecords(first.ledger).find(r=>r.metric_id===DDR4).id;
+  has(validateEvolution({oldCatalog:catalog,catalog,oldLedger:first.ledger,ledger:next,oldEvidence:first.evidence,evidence:first.evidence,oldLegacy:legacy,legacy}),'SERIES_HISTORY');
+  assert.equal(first.ledger.series[DDR4]['2026-09-29'],live.id);
+});
