@@ -2,8 +2,8 @@
   "format_version": 1,
   "document": {
     "schema_version": 2,
-    "revision": "2026-10-07-bf98b452cd",
-    "updated_at": "2026-10-07T17:39:48.612Z",
+    "revision": "2026-10-08-383fa80251",
+    "updated_at": "2026-10-08T01:54:32.876Z",
     "last_successful_check_at": "2026-09-20T23:50:00Z",
     "last_attempt_at": "2026-09-20T23:50:00Z",
     "financial_period": "FY2026 Q4",
@@ -17,7 +17,7 @@
       "note": "财报按新披露更新；已确认财报日程安排单公司核查，也可按需更新。行情为标注交易日收盘。"
     },
     "quote": {
-      "record_ref": "68bed24b344ab83cec0b390473d48958e91ec64d02e003b1f1effb26b8697517"
+      "record_ref": "12c5926589676838bd0394565b116d1a407ba0a5a65a6572668284fea355abeb"
     },
     "overview": {
       "fact_cards": [
@@ -1287,6 +1287,15 @@
         "checked_at": "2026-10-07",
         "type": "公司日程",
         "locator": "公告正文：Wednesday, October 28, at 1:30pm Pacific Time (4:30pm Eastern Time)。"
+      },
+      "price_auto": {
+        "label": "Yahoo Finance MU 常规交易日线",
+        "short_label": "MU 历史行情",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/MU?range=1mo&interval=1d&events=splits",
+        "locator": "chart.result[0] · timestamp / indicators.quote[0].close；最近两个已完成交易日。",
+        "published_at": "2026-10-07",
+        "checked_at": "2026-10-08",
+        "type": "行情供应商结构化数据"
       }
     },
     "metrics": [
@@ -1698,6 +1707,12 @@
       "产业链指引和管理层展望按原披露日期及目标期间记录，文字为中文摘要；同比由原始金额计算，百分点与百分比区分。"
     ],
     "check_log": [
+      {
+        "at": "2026-10-08T01:54:32.876Z",
+        "status": "success",
+        "scope": "quote",
+        "text": "更新 MU 2026-10-07 常规收盘；财报与新闻核查时间保持不变。"
+      },
       {
         "at": "2026-10-07T17:39:48.612Z",
         "status": "failed",
@@ -18183,6 +18198,38 @@
         "e-aa446c48f42790aaf98e8f09621d5e04545cf4df49d8a4799d37b6f5283e47e8"
       ],
       "id": "553b9d6638de7eb3f1d8c1b786aaa3ceb29e6a09cf9bc8067eeaad452977673b"
+    },
+    "12c5926589676838bd0394565b116d1a407ba0a5a65a6572668284fea355abeb": {
+      "metric_id": "quote.mu",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "session": "regular_close",
+        "measurement": "regular_close",
+        "unit": "",
+        "scope": "quote.mu",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "price_auto",
+            "url": "https://query1.finance.yahoo.com/v8/finance/chart/MU?range=1mo&interval=1d&events=splits",
+            "published_at": "2026-10-07"
+          }
+        ]
+      },
+      "payload": {
+        "price": 1088,
+        "previous_close": 1045.56005859375,
+        "as_of": "2026-10-07T20:00:00.000Z",
+        "session": "regular_close",
+        "source_id": "price_auto",
+        "checked_at": "2026-10-08T01:54:32.876Z"
+      },
+      "evidence_ids": [
+        "e-587aed0113278fbdd9de8ee72cb7bdbafd21587fcb16f0580cca33fb391c6fc7"
+      ],
+      "id": "12c5926589676838bd0394565b116d1a407ba0a5a65a6572668284fea355abeb"
     }
   },
   "supporting": {
