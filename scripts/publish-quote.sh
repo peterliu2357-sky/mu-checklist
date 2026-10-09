@@ -47,8 +47,9 @@ for attempt in $(seq 1 20); do
   sleep 5
 done
 [[ -n "$check_run" ]] || { echo 'Candidate checks did not start; PR remains unmerged.'; exit 1; }
+# The dispatched run is the gate. `gh pr checks` can report no checks for a
+# workflow_dispatch run and exit non-zero even after it passed.
 gh run watch "$check_run" --exit-status
-gh pr checks "$pull_url"
 git fetch origin main
 [[ "$(git rev-parse origin/main)" == "$base_commit" ]] || { echo 'Main moved during CI; rebuild required.'; exit 1; }
 gh pr merge "$pull_url" --squash --match-head-commit "$candidate_commit"
