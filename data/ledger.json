@@ -2,8 +2,8 @@
   "format_version": 1,
   "document": {
     "schema_version": 2,
-    "revision": "2026-10-09-ca0109239d",
-    "updated_at": "2026-10-09T02:07:29.973Z",
+    "revision": "2026-10-10-d2055dd74f",
+    "updated_at": "2026-10-10T01:45:04.079Z",
     "last_successful_check_at": "2026-09-20T23:50:00Z",
     "last_attempt_at": "2026-09-20T23:50:00Z",
     "financial_period": "FY2026 Q4",
@@ -17,7 +17,7 @@
       "note": "财报按新披露更新；已确认财报日程安排单公司核查，也可按需更新。行情为标注交易日收盘。"
     },
     "quote": {
-      "record_ref": "9c4788c55a48d3825c30c5011e545fa6a010b95358e9df698e240745c4c4dc25"
+      "record_ref": "cea45ff4b0ea8bb3557b3bc4af513717cd0d5b98004008e42aa08bc81e0c0edf"
     },
     "overview": {
       "fact_cards": [
@@ -1365,8 +1365,8 @@
         "short_label": "MU 历史行情",
         "url": "https://query1.finance.yahoo.com/v8/finance/chart/MU?range=1mo&interval=1d&events=splits",
         "locator": "chart.result[0] · timestamp / indicators.quote[0].close；最近两个已完成交易日。",
-        "published_at": "2026-10-08",
-        "checked_at": "2026-10-09",
+        "published_at": "2026-10-09",
+        "checked_at": "2026-10-10",
         "type": "行情供应商结构化数据"
       }
     },
@@ -1779,6 +1779,12 @@
       "产业链指引和管理层展望按原披露日期及目标期间记录，文字为中文摘要；同比由原始金额计算，百分点与百分比区分。"
     ],
     "check_log": [
+      {
+        "at": "2026-10-10T01:45:04.079Z",
+        "status": "success",
+        "scope": "quote",
+        "text": "更新 MU 2026-10-09 常规收盘；财报与新闻核查时间保持不变。"
+      },
       {
         "at": "2026-10-09T02:07:29.973Z",
         "status": "success",
@@ -18325,6 +18331,38 @@
         "e-a696c7828cb0ad22f4c0e340991eee94bf54a9d5f4003a53a410557116e63de0"
       ],
       "id": "9c4788c55a48d3825c30c5011e545fa6a010b95358e9df698e240745c4c4dc25"
+    },
+    "cea45ff4b0ea8bb3557b3bc4af513717cd0d5b98004008e42aa08bc81e0c0edf": {
+      "metric_id": "quote.mu",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "session": "regular_close",
+        "measurement": "regular_close",
+        "unit": "",
+        "scope": "quote.mu",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "price_auto",
+            "url": "https://query1.finance.yahoo.com/v8/finance/chart/MU?range=1mo&interval=1d&events=splits",
+            "published_at": "2026-10-09"
+          }
+        ]
+      },
+      "payload": {
+        "price": 1029,
+        "previous_close": 1035.8399658203125,
+        "as_of": "2026-10-09T20:00:00.000Z",
+        "session": "regular_close",
+        "source_id": "price_auto",
+        "checked_at": "2026-10-10T01:45:04.079Z"
+      },
+      "evidence_ids": [
+        "e-15b02d2ca28beb1abc6ea671953f75d860a1dbade26023b0abeeb017c21c8852"
+      ],
+      "id": "cea45ff4b0ea8bb3557b3bc4af513717cd0d5b98004008e42aa08bc81e0c0edf"
     }
   },
   "supporting": {
