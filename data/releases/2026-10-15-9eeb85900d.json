@@ -1,0 +1,164 @@
+{
+  "version": 1,
+  "scope": "batch",
+  "base_commit": "288230a29410f8b8bb56dd3a5e54e736a811be9b",
+  "base_revision": "2026-10-15-4556c007fe",
+  "base_sha256": "b9fae41c06aba1e6eb785c72f53d7aaedad9ae02e2ee2d45aa15b153167b0707",
+  "catalog_sha256": "9aed4c21a0498217462c312c07d277552cd93048c8d3e12ed0d5b0e08cdad4b8",
+  "created_at": "2026-10-15T09:14:58.954Z",
+  "completed_at": "2026-10-15T11:18:51.542Z",
+  "state": "verified",
+  "targets": [
+    "industry",
+    "calendar"
+  ],
+  "coverage": [
+    {
+      "key": "industry",
+      "status": "verified",
+      "evidence": [
+        "dram_spot",
+        "essd_weekly"
+      ],
+      "reviewed_at": "2026-10-15T11:18:37.603Z",
+      "latest_disclosure": {
+        "url": "https://www.dramexchange.com/",
+        "published_at": "2026-10-15"
+      },
+      "reason": "DRAMeXchange 10-15 18:10 收盘场 DDR5 16Gb 4800/5600 现货均价 60.433 美元，加入趋势点；TrendForce Weekly Radar 005（10-12）企业 SSD 交付周期仍为 16 周（均衡 8 周），更新读数日期。其他行业行无新的原始数据。",
+      "finding": "new_disclosure"
+    },
+    {
+      "key": "calendar",
+      "status": "verified",
+      "evidence": [
+        "calendar_meta_20261021",
+        "calendar_microsoft_20261028",
+        "calendar_skhynix_20261028",
+        "calendar_samsung_20261029",
+        "calendar_index_amazon_20261015",
+        "calendar_index_oracle_20261015",
+        "calendar_index_nvidia_20261015",
+        "calendar_index_micron_20261015"
+      ],
+      "reviewed_at": "2026-10-15T11:18:37.603Z",
+      "latest_disclosure": {
+        "url": "https://www.sec.gov/Archives/edgar/data/2120882/000119312526420934/d413172d6k.htm",
+        "published_at": "2026-10-14"
+      },
+      "reason": "八家待确认公司官方日程均已检查：Meta 公告 10 月 21 日、Microsoft 与 SK 海力士 10 月 28 日、三星 10 月 29 日召开 Q3 业绩电话会；Amazon、Oracle、NVIDIA 与美光尚未公布下一财报日期，保持待确认；未发现漏处理的财报。"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "calendar_meta_20261021",
+      "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-to-Announce-Third-Quarter-2026-Results/default.aspx",
+      "sha256": "8ed82b386b218969aaf33a44f395c6618e50a4b61542ad58823d60b003a8f85a",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-10-15T09:16:10.252Z",
+      "reviewed_at": "2026-10-15T09:16:10.252Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_microsoft_20261028",
+      "url": "https://www.microsoft.com/en-us/investor/events/fy-2027/earnings-fy-2027-q1",
+      "sha256": "879e730434b0f619b5df65d450da6288dbabe2d8fc8a181536a0e9852318c46e",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-15T09:16:10.654Z",
+      "reviewed_at": "2026-10-15T09:16:10.654Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_skhynix_20261028",
+      "url": "https://www.sec.gov/Archives/edgar/data/2120882/000119312526420934/d413172d6k.htm",
+      "sha256": "278b33c0d9b3313d01df04805d9a54125562f517d5c2c96ee078a2b2cb2c004c",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-15T09:16:11.045Z",
+      "reviewed_at": "2026-10-15T09:16:11.045Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_samsung_20261029",
+      "url": "https://www.samsung.com/global/ir/ir-events-presentations/events/",
+      "sha256": "2d7ed199056e998c52c5f60422dc60e16fc141c04ecfb2d9dab88acac4787d95",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-15T09:16:11.430Z",
+      "reviewed_at": "2026-10-15T09:16:11.430Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_amazon_20261015",
+      "url": "https://ir.aboutamazon.com/feed/PressRelease.svc/GetPressReleaseList?LanguageId=1&bodyType=0&pressReleaseDateFilter=3&pageSize=12&pageNumber=0&year=-1",
+      "sha256": "78f37c76d8c4ed602035ac1b43f91a8daa1ec96081fb29aa01fb1214f666f1ea",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-15T09:16:11.851Z",
+      "reviewed_at": "2026-10-15T09:16:11.851Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_oracle_20261015",
+      "url": "https://investor.oracle.com/feed/PressRelease.svc/GetPressReleaseList?LanguageId=1&bodyType=0&pressReleaseDateFilter=3&pageSize=12&pageNumber=0&year=-1",
+      "sha256": "dacc34ebff107236f1065971e88a770aee82114ba32ada4d1bfe8b144f31e8f9",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-15T09:16:12.305Z",
+      "reviewed_at": "2026-10-15T09:16:12.305Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_nvidia_20261015",
+      "url": "https://investor.nvidia.com/feed/PressRelease.svc/GetPressReleaseList?LanguageId=1&bodyType=0&pressReleaseDateFilter=3&pageSize=12&pageNumber=0&year=-1",
+      "sha256": "586537cffc99c2e7bfd01648c81f0edecbb7a079c1e18ffdd63adc6910f4ea40",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-15T09:16:12.699Z",
+      "reviewed_at": "2026-10-15T09:16:12.699Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_micron_20261015",
+      "url": "https://investors.micron.com/feed/Event.svc/GetEventList?LanguageId=1&eventSelection=3&sortOperator=1&eventDateFilter=3&pageSize=5&pageNumber=0&year=-1",
+      "sha256": "328165c92a310eac49c17fb9fd11a3e0d141fb8239677d6f025488d9f1e577ca",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-15T09:16:13.080Z",
+      "reviewed_at": "2026-10-15T09:16:13.080Z",
+      "status": "read"
+    },
+    {
+      "source_id": "essd_weekly",
+      "url": "https://insights.trendforce.com/p/weekly-radar-005",
+      "sha256": "3e37821ca03afc51dbda714efb91e53a28e3a4d2ceaec4f03fe58dddeb4b9df8",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-10-15T09:16:49.503Z",
+      "reviewed_at": "2026-10-15T09:16:49.503Z",
+      "status": "read"
+    },
+    {
+      "source_id": "dram_spot",
+      "url": "https://www.dramexchange.com/",
+      "sha256": "32ea9982dd7164ccff3e5b7fcec77e9e43b03e7d42686a08480f53c53f19e6e8",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-15T11:18:26.152Z",
+      "reviewed_at": "2026-10-15T11:18:26.152Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [],
+  "publication_corrections": [
+    "essd_weekly",
+    "dram_spot"
+  ],
+  "technology_reviews": [],
+  "result": "success",
+  "artifact_sha256": "6c966b30cedb670c82ae1493662ac3ea77d0ace9b5c9ba75bd3cc4af638c9275",
+  "ledger_sha256": "8aa950339de4e692de52c0337c232d1eb3d6993eda2e1ebcfde3b9e3d14ae2d4",
+  "evidence_sha256": "1dd876e361bd5398a034691545a98f40983027c701a07c53231458059fa75300"
+}

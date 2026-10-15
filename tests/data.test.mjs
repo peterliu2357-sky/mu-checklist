@@ -30,7 +30,8 @@ test('forecast labels cannot become actuals',()=>has(validateDocument(mutation(c
 test('end consumption proxy cannot become direct',()=>has(validateDocument(mutation(c=>row(c,'demand','ssd_industry_revenue').evidence_type='direct'),catalog),'PROXY'));
 test('enterprise SSD lead time remains a dated proxy with a benchmark, not a prior-period value',()=>{
   const metric=row(d,'demand','essd_lead_time');
-  assert.equal(metric.current,'16 周（均衡基准 8 周）');assert.equal(metric.previous,null);assert.equal(metric.evidence_type,'proxy');assert.equal(metric.period,'截至 2026-09-21');
+  // The reading and its date move with each weekly source; pin the shape, not the live value.
+  assert.match(metric.current,/^\d+ 周（均衡基准 \d+ 周）$/);assert.equal(metric.previous,null);assert.equal(metric.evidence_type,'proxy');assert.match(metric.period,/^截至 \d{4}-\d{2}-\d{2}$/);
   assert.deepEqual(catalog.source_roles.essd_weekly,['mu.demand.essd_lead_time']);
 });
 test('null is not zero',()=>has(validateDocument(mutation(c=>row(c,'inventory','total').current=null),catalog),'MISSING_VALUE'));
