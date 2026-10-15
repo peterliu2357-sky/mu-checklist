@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "scope": "quote",
+  "base_commit": "642387c43eb92042c15d8474b2b5016d9fda5588",
+  "base_revision": "2026-10-14-1bec805250",
+  "base_sha256": "b1ce63fc23ccddf33045e88175e7bd7b158c10b481b443fd1619267d1a034694",
+  "catalog_sha256": "aa94a75041ef0af74b414b04303bd9841133f86c50a2f767e4c00681af5b2d54",
+  "created_at": "2026-10-15T00:31:01.923Z",
+  "completed_at": "2026-10-15T00:31:02.517Z",
+  "state": "verified",
+  "targets": null,
+  "coverage": [
+    {
+      "key": "quote",
+      "status": "failed",
+      "evidence": [],
+      "reviewed_at": null,
+      "latest_disclosure": null,
+      "reason": "Provider has not supplied the current completed daily bar"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "price_auto",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/MU?range=1mo&interval=1d&events=splits",
+      "status": "failed",
+      "attempted_at": "2026-10-15T00:31:02.247Z",
+      "error": "Provider has not supplied the current completed daily bar"
+    }
+  ],
+  "report_bundle": [],
+  "publication_corrections": [],
+  "technology_reviews": [],
+  "summary": "常规收盘更新未完成，保留上次行情。",
+  "result": "failed",
+  "artifact_sha256": "0319219618a8358ad7368b3dce3a6c10a960b95d70dcaa8b39cbe6248735fd8c",
+  "ledger_sha256": "8d88d090f99268bf1dd40b728198c7f39824628fcbd558acbcd340b08b7d921d",
+  "evidence_sha256": "a087488d90cbc95596f98af7458fa53a5b75d5465d5147b8e81cf65b51cddb56"
+}
