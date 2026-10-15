@@ -2,8 +2,8 @@
   "format_version": 1,
   "document": {
     "schema_version": 2,
-    "revision": "2026-10-15-4556c007fe",
-    "updated_at": "2026-10-15T09:05:09.965Z",
+    "revision": "2026-10-15-9eeb85900d",
+    "updated_at": "2026-10-15T11:18:51.542Z",
     "last_successful_check_at": "2026-09-20T23:50:00Z",
     "last_attempt_at": "2026-09-20T23:50:00Z",
     "financial_period": "FY2026 Q4",
@@ -794,12 +794,12 @@
         "type": "行业公开摘要"
       },
       "essd_weekly": {
-        "label": "TrendForce Weekly Radar 002",
-        "short_label": "09-21 · 周度雷达",
-        "url": "https://insights.trendforce.com/p/weekly-radar-002",
-        "published_at": "2026-09-21",
-        "checked_at": "2026-09-22",
-        "locator": "This Week in 30 Seconds · enterprise SSD lead-time bullet。",
+        "label": "TrendForce Weekly Radar 005",
+        "short_label": "10-12 · 周度雷达",
+        "url": "https://insights.trendforce.com/p/weekly-radar-005",
+        "published_at": "2026-10-12",
+        "checked_at": "2026-10-15",
+        "locator": "01 / Supply Chain Radar · NAND (eSSD) 行。",
         "type": "行业公开观察"
       },
       "nand_q3": {
@@ -1182,12 +1182,12 @@
       },
       "dram_spot": {
         "label": "DRAMeXchange DRAM 现货报价",
-        "short_label": "10-07 · DRAM 现货",
+        "short_label": "10-15 · DRAM 现货",
         "url": "https://www.dramexchange.com/",
-        "published_at": "2026-10-07",
-        "checked_at": "2026-10-07",
+        "published_at": "2026-10-15",
+        "checked_at": "2026-10-15",
         "type": "原始行业报价",
-        "locator": "DRAM Spot Price · Last Update Oct.7 2026 18:10 (GMT+8) · Session Average / Session Change。"
+        "locator": "DRAM Spot Price · Last Update Oct.15 2026 18:10 (GMT+8) · Session Average / Session Change。"
       },
       "korea_trade": {
         "label": "韩国产业通商部 2026 年 9 月进出口动向",
@@ -1431,6 +1431,78 @@
         "checked_at": "2026-10-15",
         "type": "监管机构官方入口",
         "locator": "filings.recent：form、filingDate、reportDate；2026-10-15 UTC 查询，含 10-09 的 10-K。"
+      },
+      "calendar_meta_20261021": {
+        "label": "Meta 2026 Q3 业绩日期公告",
+        "short_label": "Meta 财报日程",
+        "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-to-Announce-Third-Quarter-2026-Results/default.aspx",
+        "published_at": "2026-10-12",
+        "checked_at": "2026-10-15",
+        "type": "公司日程",
+        "locator": "公告正文：results after market close on Wednesday, October 21st, 2026；call at 1:30 p.m. PT / 4:30 p.m. ET。"
+      },
+      "calendar_microsoft_20261028": {
+        "label": "Microsoft FY2027 Q1 财报电话会活动",
+        "short_label": "Microsoft 财报日程",
+        "url": "https://www.microsoft.com/en-us/investor/events/fy-2027/earnings-fy-2027-q1",
+        "published_at": null,
+        "checked_at": "2026-10-15",
+        "type": "公司日程",
+        "locator": "活动页：Fiscal Year 2027 First Quarter Earnings Conference Call · Wednesday, October 28, 2026（页面活动时间 14:30 PT）。"
+      },
+      "calendar_skhynix_20261028": {
+        "label": "SK hynix 2026 Q3 业绩电话会公告（Form 6-K）",
+        "short_label": "SK hynix 财报日程",
+        "url": "https://www.sec.gov/Archives/edgar/data/2120882/000119312526420934/d413172d6k.htm",
+        "published_at": "2026-10-14",
+        "checked_at": "2026-10-15",
+        "type": "公司日程",
+        "locator": "Form 6-K · 2. Date and Time：October 28, 2026 9:00 a.m. (Seoul Time)。"
+      },
+      "calendar_samsung_20261029": {
+        "label": "Samsung 3Q26 业绩电话会",
+        "short_label": "Samsung 财报日程",
+        "url": "https://www.samsung.com/global/ir/ir-events-presentations/events/",
+        "published_at": null,
+        "checked_at": "2026-10-15",
+        "type": "公司日程",
+        "locator": "IR Events：3Q26 Earnings Conference Call · October 29, 2026, 10:00 a.m. KST。"
+      },
+      "calendar_index_amazon_20261015": {
+        "label": "Amazon IR 新闻与活动",
+        "short_label": "Amazon IR",
+        "url": "https://ir.aboutamazon.com/feed/PressRelease.svc/GetPressReleaseList?LanguageId=1&bodyType=0&pressReleaseDateFilter=3&pageSize=12&pageNumber=0&year=-1",
+        "published_at": null,
+        "checked_at": "2026-10-15",
+        "type": "公司日程入口",
+        "locator": "新闻稿列表最新为 Second Quarter Results（2026-07-30），尚无 Q3 2026 电话会公告。"
+      },
+      "calendar_index_oracle_20261015": {
+        "label": "Oracle IR 新闻与活动",
+        "short_label": "Oracle IR",
+        "url": "https://investor.oracle.com/feed/PressRelease.svc/GetPressReleaseList?LanguageId=1&bodyType=0&pressReleaseDateFilter=3&pageSize=12&pageNumber=0&year=-1",
+        "published_at": null,
+        "checked_at": "2026-10-15",
+        "type": "公司日程入口",
+        "locator": "新闻稿与活动最新财报项为 Q1 FY27（2026-09-10），尚无 Q2 FY27 日期。"
+      },
+      "calendar_index_nvidia_20261015": {
+        "label": "NVIDIA IR 新闻与活动",
+        "short_label": "NVIDIA IR",
+        "url": "https://investor.nvidia.com/feed/PressRelease.svc/GetPressReleaseList?LanguageId=1&bodyType=0&pressReleaseDateFilter=3&pageSize=12&pageNumber=0&year=-1",
+        "published_at": null,
+        "checked_at": "2026-10-15",
+        "type": "公司日程入口",
+        "locator": "最新财报活动为 2nd Quarter FY27 Financial Results（2026-08-26），尚无 Q3 FY27 日期。"
+      },
+      "calendar_index_micron_20261015": {
+        "label": "美光 IR 新闻与活动",
+        "short_label": "Micron IR",
+        "url": "https://investors.micron.com/feed/Event.svc/GetEventList?LanguageId=1&eventSelection=3&sortOperator=1&eventDateFilter=3&pageSize=5&pageNumber=0&year=-1",
+        "published_at": null,
+        "checked_at": "2026-10-15",
+        "type": "公司日程入口",
+        "locator": "活动列表最新为 Fourth Quarter 2026 Risk Factors（2026-10-13），新闻稿最新为 09-30 FQ4 财报，尚无 FY2027 Q1 日期。"
       }
     },
     "metrics": [
@@ -1746,7 +1818,7 @@
             "record_ref": "d27728850c5cd56a2846a3d4442bc26ebf5a427a8368610cb1982576d2469acd"
           },
           {
-            "record_ref": "3af90fff5340ed1edd7e2958d7dffed3efbd252703d69fbdfc8f1369fefd4d70"
+            "record_ref": "3fb6c9754002c13fb9ab992c46cf6e3a07e17dcb9ea2afa289a197cfd6b97326"
           },
           {
             "record_ref": "0199b1a5c27c7107e4f755370075f549c1a294ddc3d5a8b7d7c7600ad329f606"
@@ -1756,7 +1828,7 @@
           "现货报价按指定规格采样。4Q26 合同价区间来自 TrendForce 09-30 新闻稿；NAND 趋势行仍为 09-10 公开摘要。"
         ],
         "period": "DRAM 报价至 09-23；NAND 报价至 09-14；报告至 09-16",
-        "checked_at": "2026-10-05",
+        "checked_at": "2026-10-15",
         "next_review": "每周",
         "definition": "行业合同价预测与现货报价。",
         "interpretation": "TrendForce 09-30 预计 4Q26 普通型 DRAM 合同价仍上涨但涨幅较三季度收敛，NAND 合同价涨幅区间高于 DRAM。DDR4 现货周均价 10-06 与上周持平，06-23 以来整体上行；512Gb TLC 晶圆现货 8 月中以来连续回落。"
@@ -1780,7 +1852,7 @@
           "首批晶圆、产品出货和成熟产量属于不同阶段。"
         ],
         "period": "2026–2027 展望 · 披露至 09-16",
-        "checked_at": "2026-10-05",
+        "checked_at": "2026-10-15",
         "next_review": "新行业报告",
         "definition": "机构供需预测及公司产能计划。",
         "interpretation": "TrendForce 最新摘要预计 NAND 不同终端市场分化；企业 SSD 的需求展望不宜外推至全部消费级存储。"
@@ -1803,7 +1875,7 @@
             "record_ref": "f5466b5716f3f284a328f314d3f8b801b5625c3ee26291ca47598ac4438fc3fa"
           },
           {
-            "record_ref": "118bf3fa83426b7f84ead2cff388fb58fab49d1094343dfe7d38b99aeaa0e32d"
+            "record_ref": "13ade29612de6812e944d29296071b7967a848b0616df7f32e684063c1b603f0"
           },
           {
             "record_ref": "0e33faa23504fb168d843f6ea27bdfec0b13293991f6b0ef720e6dca831ca074"
@@ -1824,7 +1896,7 @@
           "韩国出口额与南亚科营收是售价与数量混合的间接指标，不是美光位元出货或客户库存。"
         ],
         "period": "行业资料至 09-21",
-        "checked_at": "2026-10-05",
+        "checked_at": "2026-10-15",
         "next_review": "每周",
         "definition": "用于观察终端需求的间接指标。",
         "interpretation": "企业 SSD 交付周期为 16 周，而 TrendForce 给出的均衡基准为 8 周，说明交付仍受约束。韩国 9 月存储芯片出口额大幅高于上年同月；南亚科 8 月营收较 7 月小幅增加（环比 +1.9%），维持在 7 月跳升后的高位。官方称出口增长来自出货量扩大、固定价格上涨及季末效应，价格与数量的作用不能拆分。这些都不是美光采购量，客户实际库存与消耗量仍待补充。"
@@ -1842,6 +1914,12 @@
       "产业链指引和管理层展望按原披露日期及目标期间记录，文字为中文摘要；同比由原始金额计算，百分点与百分比区分。"
     ],
     "check_log": [
+      {
+        "at": "2026-10-15T11:18:51.542Z",
+        "status": "success",
+        "scope": "batch",
+        "text": "核查范围：batch；完成 2 / 2 项。"
+      },
       {
         "at": "2026-10-15T09:05:09.965Z",
         "status": "success",
@@ -2550,6 +2628,18 @@
         },
         {
           "record_ref": "dc3c502612841ee9445520ad1d2ca93f4778ddaabe6d0a1062cb3a7b648e893e"
+        },
+        {
+          "record_ref": "c71a3d4841bef57da1332a77a9fdf56b606fb0e527bae896c034f9df1ac9fda0"
+        },
+        {
+          "record_ref": "ec0e86b395860a0b47bdd417cbb131dbdb06fed17d37bf842595b906f2791335"
+        },
+        {
+          "record_ref": "1d4949fd41d6b140a348dec507a476b4702f78d90613a381fdb0d5b85bb8b02d"
+        },
+        {
+          "record_ref": "bb136f19b0ccd5b9a6eea4979402dc7ec8f94af7b2f2f32f5b8675a668a6658b"
         }
       ]
     },
@@ -18443,6 +18533,243 @@
         "e-15b02d2ca28beb1abc6ea671953f75d860a1dbade26023b0abeeb017c21c8852"
       ],
       "id": "cea45ff4b0ea8bb3557b3bc4af513717cd0d5b98004008e42aa08bc81e0c0edf"
+    },
+    "3fb6c9754002c13fb9ab992c46cf6e3a07e17dcb9ea2afa289a197cfd6b97326": {
+      "metric_id": "mu.contract.ddr5_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "DRAM 报价至 09-23；NAND 报价至 09-14；报告至 09-16",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "DDR5 16Gb (2Gx8) 4800/5600 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "dram_spot",
+            "url": "https://www.dramexchange.com/",
+            "published_at": "2026-10-15"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DDR5 16Gb (2Gx8) 4800/5600 现货",
+        "current": 60.433,
+        "previous": null,
+        "unit": "USD",
+        "source_ids": [
+          "dram_spot"
+        ],
+        "kind": "行业报价",
+        "note": "与 DDR4 1Gx8 现货是不同规格，不互相替代。",
+        "period": "截至 10-15",
+        "change": "日变动 +0.55%（DRAMeXchange 披露）",
+        "location": "DRAMeXchange · DRAM Spot Price · DDR5 16Gb (2Gx8) 4800/5600 · Session Average，Last Update Oct.15 2026 18:10 (GMT+8)。",
+        "evidence_type": "direct",
+        "id": "ddr5_spot",
+        "as_of": "2026-10-15"
+      },
+      "evidence_ids": [
+        "e-e3634a69f721009f79d4d6b31d2864f524b93d7d6dfae84c35f7aa0044d0a2fc"
+      ],
+      "id": "3fb6c9754002c13fb9ab992c46cf6e3a07e17dcb9ea2afa289a197cfd6b97326"
+    },
+    "13ade29612de6812e944d29296071b7967a848b0616df7f32e684063c1b603f0": {
+      "metric_id": "mu.demand.essd_lead_time",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "行业资料至 09-21",
+        "measurement": "end_consumption_proxy",
+        "unit": "",
+        "scope": "企业 SSD 交付周期",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "point_in_time",
+        "sources": [
+          {
+            "id": "essd_weekly",
+            "url": "https://insights.trendforce.com/p/weekly-radar-005",
+            "published_at": "2026-10-12"
+          }
+        ]
+      },
+      "payload": {
+        "label": "企业 SSD 交付周期",
+        "current": "16 周（均衡基准 8 周）",
+        "previous": null,
+        "unit": "",
+        "source_ids": [
+          "essd_weekly"
+        ],
+        "kind": "行业观察",
+        "note": "交付周期同时受需求与供给配置影响，不等于美光订单量。",
+        "period": "截至 2026-10-12",
+        "change": null,
+        "location": "01 / Supply Chain Radar · NAND (eSSD)：Tight，Current 16W，Balanced 8W。",
+        "evidence_type": "proxy",
+        "id": "essd_lead_time"
+      },
+      "evidence_ids": [
+        "e-bdd296b85a4a00917ce6fcd41e21e318d6d9af3cfb25fba210021119f8737b44"
+      ],
+      "id": "13ade29612de6812e944d29296071b7967a848b0616df7f32e684063c1b603f0"
+    },
+    "c71a3d4841bef57da1332a77a9fdf56b606fb0e527bae896c034f9df1ac9fda0": {
+      "metric_id": "calendar.meta_2026_q3",
+      "definition_version": 1,
+      "context": {
+        "entity": "meta",
+        "period": "2026 Q3",
+        "measurement": "disclosure_calendar",
+        "unit": "",
+        "scope": "calendar.meta_2026_q3",
+        "accounting_basis": "not_applicable",
+        "temporal_basis": "dated_disclosure",
+        "sources": [
+          {
+            "id": "calendar_meta_20261021",
+            "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-to-Announce-Third-Quarter-2026-Results/default.aspx",
+            "published_at": "2026-10-12"
+          }
+        ]
+      },
+      "payload": {
+        "id": "meta_2026_q3",
+        "company_id": "meta",
+        "title": "Meta 2026 Q3 财报",
+        "period": "2026 Q3",
+        "scheduled_at": "2026-10-21T16:30:00-04:00",
+        "review_after": "2026-10-22T20:30:00Z",
+        "confirmation": "confirmed",
+        "source_ids": [
+          "calendar_meta_20261021"
+        ],
+        "location": "公告：October 21 美股收盘后发布 2026 Q3 业绩，1:30pm PT / 4:30pm ET 召开电话会。",
+        "kind": "公司日程",
+        "evidence_type": "direct"
+      },
+      "evidence_ids": [
+        "e-056738a74b0facb13cf00a2efd7efec109171a6a9e3fcb0bf0a1ca2cccd2dfc1"
+      ],
+      "id": "c71a3d4841bef57da1332a77a9fdf56b606fb0e527bae896c034f9df1ac9fda0"
+    },
+    "ec0e86b395860a0b47bdd417cbb131dbdb06fed17d37bf842595b906f2791335": {
+      "metric_id": "calendar.microsoft_fy2027_q1",
+      "definition_version": 1,
+      "context": {
+        "entity": "microsoft",
+        "period": "FY2027 Q1",
+        "measurement": "disclosure_calendar",
+        "unit": "",
+        "scope": "calendar.microsoft_fy2027_q1",
+        "accounting_basis": "not_applicable",
+        "temporal_basis": "dated_disclosure",
+        "sources": [
+          {
+            "id": "calendar_microsoft_20261028",
+            "url": "https://www.microsoft.com/en-us/investor/events/fy-2027/earnings-fy-2027-q1",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "id": "microsoft_fy2027_q1",
+        "company_id": "microsoft",
+        "title": "Microsoft FY2027 Q1 财报",
+        "period": "FY2027 Q1",
+        "scheduled_at": "2026-10-28T17:30:00-04:00",
+        "review_after": "2026-10-29T21:30:00Z",
+        "confirmation": "confirmed",
+        "source_ids": [
+          "calendar_microsoft_20261028"
+        ],
+        "location": "活动页：October 28, 2026 召开 FY2027 Q1 业绩电话会，2:30pm PT / 5:30pm ET。",
+        "kind": "公司日程",
+        "evidence_type": "direct"
+      },
+      "evidence_ids": [
+        "e-5407b134923a80b9fc810d8913f0c42274778fc9c28b0739d8c098f268853c6c"
+      ],
+      "id": "ec0e86b395860a0b47bdd417cbb131dbdb06fed17d37bf842595b906f2791335"
+    },
+    "1d4949fd41d6b140a348dec507a476b4702f78d90613a381fdb0d5b85bb8b02d": {
+      "metric_id": "calendar.skhynix_2026_q3",
+      "definition_version": 1,
+      "context": {
+        "entity": "skhynix",
+        "period": "2026 Q3",
+        "measurement": "disclosure_calendar",
+        "unit": "",
+        "scope": "calendar.skhynix_2026_q3",
+        "accounting_basis": "not_applicable",
+        "temporal_basis": "dated_disclosure",
+        "sources": [
+          {
+            "id": "calendar_skhynix_20261028",
+            "url": "https://www.sec.gov/Archives/edgar/data/2120882/000119312526420934/d413172d6k.htm",
+            "published_at": "2026-10-14"
+          }
+        ]
+      },
+      "payload": {
+        "id": "skhynix_2026_q3",
+        "company_id": "skhynix",
+        "title": "SK 海力士 2026 Q3 财报",
+        "period": "2026 Q3",
+        "scheduled_at": "2026-10-28T09:00:00+09:00",
+        "review_after": "2026-10-29T00:00:00Z",
+        "confirmation": "confirmed",
+        "source_ids": [
+          "calendar_skhynix_20261028"
+        ],
+        "location": "Form 6-K：October 28, 2026 9:00 a.m.（首尔时间）召开 2026 Q3 业绩电话会。",
+        "kind": "公司日程",
+        "evidence_type": "direct"
+      },
+      "evidence_ids": [
+        "e-721c1f6d0c6a93ee8c53c116044f42983440c53a5c6bb5664fae27c539b71697"
+      ],
+      "id": "1d4949fd41d6b140a348dec507a476b4702f78d90613a381fdb0d5b85bb8b02d"
+    },
+    "bb136f19b0ccd5b9a6eea4979402dc7ec8f94af7b2f2f32f5b8675a668a6658b": {
+      "metric_id": "calendar.samsung_2026_q3",
+      "definition_version": 1,
+      "context": {
+        "entity": "samsung",
+        "period": "2026 Q3",
+        "measurement": "disclosure_calendar",
+        "unit": "",
+        "scope": "calendar.samsung_2026_q3",
+        "accounting_basis": "not_applicable",
+        "temporal_basis": "dated_disclosure",
+        "sources": [
+          {
+            "id": "calendar_samsung_20261029",
+            "url": "https://www.samsung.com/global/ir/ir-events-presentations/events/",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "id": "samsung_2026_q3",
+        "company_id": "samsung",
+        "title": "三星 2026 Q3 财报",
+        "period": "2026 Q3",
+        "scheduled_at": "2026-10-29T10:00:00+09:00",
+        "review_after": "2026-10-30T01:00:00Z",
+        "confirmation": "confirmed",
+        "source_ids": [
+          "calendar_samsung_20261029"
+        ],
+        "location": "IR 活动：October 29, 2026, 10:00 a.m. KST 召开 3Q26 业绩电话会。",
+        "kind": "公司日程",
+        "evidence_type": "direct"
+      },
+      "evidence_ids": [
+        "e-e2e9332d3427159c7644c2c53ea116266895e6b381a209d9b01f8e12861b1d43"
+      ],
+      "id": "bb136f19b0ccd5b9a6eea4979402dc7ec8f94af7b2f2f32f5b8675a668a6658b"
     }
   },
   "supporting": {
@@ -18545,6 +18872,9 @@
     "mu.demand.korea_semi_exports": {
       "2026-07": "809fdc9372eb2cec5f53e179fbd7765cc257786b9cc600f2b09d3ec74aa4ced9",
       "2026-08": "553b9d6638de7eb3f1d8c1b786aaa3ceb29e6a09cf9bc8067eeaad452977673b"
+    },
+    "mu.contract.ddr5_spot": {
+      "2026-10-07": "3af90fff5340ed1edd7e2958d7dffed3efbd252703d69fbdfc8f1369fefd4d70"
     }
   }
 }

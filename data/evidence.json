@@ -10510,5 +10510,237 @@
     "mode": "verified",
     "record_hash": "cea45ff4b0ea8bb3557b3bc4af513717cd0d5b98004008e42aa08bc81e0c0edf",
     "id": "e-15b02d2ca28beb1abc6ea671953f75d860a1dbade26023b0abeeb017c21c8852"
+  },
+  "e-e3634a69f721009f79d4d6b31d2864f524b93d7d6dfae84c35f7aa0044d0a2fc": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "DDR5 16Gb (2Gx8) 4800/5600 现货",
+    "values": {
+      "current": 60.433,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 60.433,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-10-15",
+        "locator": "DRAM Spot Price · DDR5 16Gb (2Gx8) 4800/5600 · Session Average",
+        "source_id": "dram_spot"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-page review; raw value times scale checked against candidate",
+      "at": "2026-10-15T11:18:26.152Z"
+    },
+    "documents": [
+      {
+        "source_id": "dram_spot",
+        "url": "https://www.dramexchange.com/",
+        "sha256": "32ea9982dd7164ccff3e5b7fcec77e9e43b03e7d42686a08480f53c53f19e6e8",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-15T11:18:26.152Z",
+        "reviewed_at": "2026-10-15T11:18:26.152Z",
+        "status": "read",
+        "locator": "DRAM Spot Price table, Last Update: Oct.15 2026 18:10 (GMT+8)",
+        "excerpt": "DDR5 16Gb (2Gx8) 4800/5600 | Daily High 71.00 | Daily Low 46.00 | Session Average 60.433 | Session Change 0.55 % (up)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "3fb6c9754002c13fb9ab992c46cf6e3a07e17dcb9ea2afa289a197cfd6b97326",
+    "id": "e-e3634a69f721009f79d4d6b31d2864f524b93d7d6dfae84c35f7aa0044d0a2fc"
+  },
+  "e-bdd296b85a4a00917ce6fcd41e21e318d6d9af3cfb25fba210021119f8737b44": {
+    "measurement": "end_consumption_proxy",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "point_in_time",
+    "accounting_basis": "as_disclosed",
+    "scope": "企业 SSD 交付周期",
+    "values": {
+      "current": "16 周（均衡基准 8 周）",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the public TrendForce Weekly Radar 005 post and its Supply Chain Radar table image; checked the eSSD row against the candidate",
+      "at": "2026-10-15T09:16:49.503Z"
+    },
+    "documents": [
+      {
+        "source_id": "essd_weekly",
+        "url": "https://insights.trendforce.com/p/weekly-radar-005",
+        "sha256": "3e37821ca03afc51dbda714efb91e53a28e3a4d2ceaec4f03fe58dddeb4b9df8",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-10-15T09:16:49.503Z",
+        "reviewed_at": "2026-10-15T09:16:49.503Z",
+        "status": "read",
+        "locator": "01 / Supply Chain Radar table (Source: TrendForce, Oct 12, 2026) · NAND (eSSD) row",
+        "excerpt": "NAND (eSSD) | Tight | Current Lead Time 16W | Balanced Lead Time 8W | Lead times for eSSDs remain elevated."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "13ade29612de6812e944d29296071b7967a848b0616df7f32e684063c1b603f0",
+    "id": "e-bdd296b85a4a00917ce6fcd41e21e318d6d9af3cfb25fba210021119f8737b44"
+  },
+  "e-056738a74b0facb13cf00a2efd7efec109171a6a9e3fcb0bf0a1ca2cccd2dfc1": {
+    "measurement": "disclosure_calendar",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "calendar.meta_2026_q3",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "manual review of official Meta investor relations press release",
+      "at": "2026-10-15T09:16:10.252Z"
+    },
+    "documents": [
+      {
+        "source_id": "calendar_meta_20261021",
+        "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-to-Announce-Third-Quarter-2026-Results/default.aspx",
+        "sha256": "8ed82b386b218969aaf33a44f395c6618e50a4b61542ad58823d60b003a8f85a",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-10-15T09:16:10.252Z",
+        "reviewed_at": "2026-10-15T09:16:10.252Z",
+        "status": "read",
+        "locator": "Press release body",
+        "excerpt": "Meta Platforms, Inc. (NASDAQ: META) announced today that the company's third quarter 2026 financial results will be released after market close on Wednesday, October 21st, 2026. Meta will host a conference call to discuss its results at 1:30 p.m. PT / 4:30 p.m. ET the same day."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "c71a3d4841bef57da1332a77a9fdf56b606fb0e527bae896c034f9df1ac9fda0",
+    "id": "e-056738a74b0facb13cf00a2efd7efec109171a6a9e3fcb0bf0a1ca2cccd2dfc1"
+  },
+  "e-5407b134923a80b9fc810d8913f0c42274778fc9c28b0739d8c098f268853c6c": {
+    "measurement": "disclosure_calendar",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "calendar.microsoft_fy2027_q1",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "manual review of official Microsoft investor relations event page",
+      "at": "2026-10-15T09:16:10.654Z"
+    },
+    "documents": [
+      {
+        "source_id": "calendar_microsoft_20261028",
+        "url": "https://www.microsoft.com/en-us/investor/events/fy-2027/earnings-fy-2027-q1",
+        "sha256": "879e730434b0f619b5df65d450da6288dbabe2d8fc8a181536a0e9852318c46e",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-15T09:16:10.654Z",
+        "reviewed_at": "2026-10-15T09:16:10.654Z",
+        "status": "read",
+        "locator": "Event heading and embedded event time",
+        "excerpt": "Microsoft Fiscal Year 2027 First Quarter Earnings Conference Call / Wednesday, October 28, 2026 (event start 2026-10-28T14:30:00 PT)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "ec0e86b395860a0b47bdd417cbb131dbdb06fed17d37bf842595b906f2791335",
+    "id": "e-5407b134923a80b9fc810d8913f0c42274778fc9c28b0739d8c098f268853c6c"
+  },
+  "e-721c1f6d0c6a93ee8c53c116044f42983440c53a5c6bb5664fae27c539b71697": {
+    "measurement": "disclosure_calendar",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "calendar.skhynix_2026_q3",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "manual review of SK hynix Form 6-K filed with the SEC",
+      "at": "2026-10-15T09:16:11.045Z"
+    },
+    "documents": [
+      {
+        "source_id": "calendar_skhynix_20261028",
+        "url": "https://www.sec.gov/Archives/edgar/data/2120882/000119312526420934/d413172d6k.htm",
+        "sha256": "278b33c0d9b3313d01df04805d9a54125562f517d5c2c96ee078a2b2cb2c004c",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-15T09:16:11.045Z",
+        "reviewed_at": "2026-10-15T09:16:11.045Z",
+        "status": "read",
+        "locator": "Item 2, Date and Time",
+        "excerpt": "SK hynix Inc. plans to hold a conference call for the 2026 3Q earnings results as follows: ... 2. Date and Time October 28, 2026 9:00 a.m. (Seoul Time)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "1d4949fd41d6b140a348dec507a476b4702f78d90613a381fdb0d5b85bb8b02d",
+    "id": "e-721c1f6d0c6a93ee8c53c116044f42983440c53a5c6bb5664fae27c539b71697"
+  },
+  "e-e2e9332d3427159c7644c2c53ea116266895e6b381a209d9b01f8e12861b1d43": {
+    "measurement": "disclosure_calendar",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "calendar.samsung_2026_q3",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "manual review of official Samsung investor relations events page",
+      "at": "2026-10-15T09:16:11.430Z"
+    },
+    "documents": [
+      {
+        "source_id": "calendar_samsung_20261029",
+        "url": "https://www.samsung.com/global/ir/ir-events-presentations/events/",
+        "sha256": "2d7ed199056e998c52c5f60422dc60e16fc141c04ecfb2d9dab88acac4787d95",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-15T09:16:11.430Z",
+        "reviewed_at": "2026-10-15T09:16:11.430Z",
+        "status": "read",
+        "locator": "IR Events list",
+        "excerpt": "3Q26 Earnings Conference Call | October 29, 2026, 10:00 a.m. KST"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "bb136f19b0ccd5b9a6eea4979402dc7ec8f94af7b2f2f32f5b8675a668a6658b",
+    "id": "e-e2e9332d3427159c7644c2c53ea116266895e6b381a209d9b01f8e12861b1d43"
   }
 }
