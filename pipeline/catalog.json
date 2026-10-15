@@ -3591,6 +3591,16 @@
       "eco.skhynix.inventory",
       "eco.skhynix.capex"
     ],
+    "fy2026_10k": [
+      "mu.inventory.finished_goods",
+      "mu.inventory.work_in_process",
+      "mu.inventory.raw_materials",
+      "mu.inventory.receivables",
+      "mu.inventory.receivables_revenue",
+      "mu.orders.rpo_quarter_end",
+      "mu.orders.contract_liability",
+      "tech.dram_1gamma"
+    ],
     "fq4_balance_sheet": [
       "mu.inventory.finished_goods",
       "mu.inventory.total",

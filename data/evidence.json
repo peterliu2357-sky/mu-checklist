@@ -10742,5 +10742,503 @@
     "mode": "verified",
     "record_hash": "bb136f19b0ccd5b9a6eea4979402dc7ec8f94af7b2f2f32f5b8675a668a6658b",
     "id": "e-e2e9332d3427159c7644c2c53ea116266895e6b381a209d9b01f8e12861b1d43"
+  },
+  "e-99e143761c4644ec04720d3fc29492cc11d53bb66d33f120452894afda7dd63f": {
+    "measurement": "inventory",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "point_in_time",
+    "accounting_basis": "as_disclosed",
+    "scope": "产成品",
+    "values": {
+      "current": 958,
+      "previous": 621,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 958,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026-09-03 期末",
+        "locator": "10-K Note 6 · Finished goods",
+        "source_id": "fy2026_10k"
+      },
+      {
+        "field": "previous",
+        "value": 621,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026-05-28 期末",
+        "locator": "FQ3 10-Q 第 13 页 · Note 6 · May 28, 2026",
+        "source_id": "q3"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-15T11:26:09.053Z"
+    },
+    "documents": [
+      {
+        "source_id": "fy2026_10k",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm",
+        "sha256": "4f04727d28f6acbf15159cd5906984f7f5180fb7eb7cbfda5387bd0369888b1a",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-15T11:25:30.724Z",
+        "reviewed_at": "2026-10-15T11:25:30.724Z",
+        "status": "read",
+        "locator": "Note 6. Inventories（p76）· September 3, 2026 列",
+        "excerpt": "Finished goods | $ 958 | $ 1,094; Work in process | 8,252 | 6,401; Raw materials and supplies | 1,162 | 860; (total) $ 10,372 | $ 8,355 (September 3, 2026 | August 28, 2025)"
+      },
+      {
+        "source_id": "q3",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/0000723125-26-000015.pdf#page=13",
+        "sha256": "79ef98b3cdc1ffc608b02635ef1fa5e9ed07298bf24f7bb717b03a06bda5e2cd",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-15T11:26:09.053Z",
+        "reviewed_at": "2026-10-15T11:26:09.053Z",
+        "status": "read",
+        "locator": "FQ3 10-Q 第 13 页 · Note 6 Inventories · May 28, 2026 列",
+        "excerpt": "Finished goods $ 621; Work in process 6,960; Raw materials and supplies 986 (May 28, 2026 column)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "d8a113689049a8991108c684d08151e488b7cb7b16eca7a97c89280472a85d2f",
+    "id": "e-99e143761c4644ec04720d3fc29492cc11d53bb66d33f120452894afda7dd63f"
+  },
+  "e-3a929ff57176dc573bd694d78944f3f6be8fb5d63600b0b3356e40b8f2337029": {
+    "measurement": "inventory",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "point_in_time",
+    "accounting_basis": "as_disclosed",
+    "scope": "在制品",
+    "values": {
+      "current": 8252,
+      "previous": 6960,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 8252,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026-09-03 期末",
+        "locator": "10-K Note 6 · Work in process",
+        "source_id": "fy2026_10k"
+      },
+      {
+        "field": "previous",
+        "value": 6960,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026-05-28 期末",
+        "locator": "FQ3 10-Q 第 13 页 · Note 6 · May 28, 2026",
+        "source_id": "q3"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-15T11:26:09.053Z"
+    },
+    "documents": [
+      {
+        "source_id": "fy2026_10k",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm",
+        "sha256": "4f04727d28f6acbf15159cd5906984f7f5180fb7eb7cbfda5387bd0369888b1a",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-15T11:25:30.724Z",
+        "reviewed_at": "2026-10-15T11:25:30.724Z",
+        "status": "read",
+        "locator": "Note 6. Inventories（p76）· September 3, 2026 列",
+        "excerpt": "Finished goods | $ 958 | $ 1,094; Work in process | 8,252 | 6,401; Raw materials and supplies | 1,162 | 860; (total) $ 10,372 | $ 8,355 (September 3, 2026 | August 28, 2025)"
+      },
+      {
+        "source_id": "q3",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/0000723125-26-000015.pdf#page=13",
+        "sha256": "79ef98b3cdc1ffc608b02635ef1fa5e9ed07298bf24f7bb717b03a06bda5e2cd",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-15T11:26:09.053Z",
+        "reviewed_at": "2026-10-15T11:26:09.053Z",
+        "status": "read",
+        "locator": "FQ3 10-Q 第 13 页 · Note 6 Inventories · May 28, 2026 列",
+        "excerpt": "Finished goods $ 621; Work in process 6,960; Raw materials and supplies 986 (May 28, 2026 column)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "faa9b13536f05c66d1f81e7a6dccf53a0b5eae01a9ab7dbdedb4b4c7790a4fae",
+    "id": "e-3a929ff57176dc573bd694d78944f3f6be8fb5d63600b0b3356e40b8f2337029"
+  },
+  "e-b8985f33b9b931d72c2af1fa63781850d89fbc33e49daf988b518367813b040c": {
+    "measurement": "inventory",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "point_in_time",
+    "accounting_basis": "as_disclosed",
+    "scope": "原材料",
+    "values": {
+      "current": 1162,
+      "previous": 986,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 1162,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026-09-03 期末",
+        "locator": "10-K Note 6 · Raw materials and supplies",
+        "source_id": "fy2026_10k"
+      },
+      {
+        "field": "previous",
+        "value": 986,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026-05-28 期末",
+        "locator": "FQ3 10-Q 第 13 页 · Note 6 · May 28, 2026",
+        "source_id": "q3"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-15T11:26:09.053Z"
+    },
+    "documents": [
+      {
+        "source_id": "fy2026_10k",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm",
+        "sha256": "4f04727d28f6acbf15159cd5906984f7f5180fb7eb7cbfda5387bd0369888b1a",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-15T11:25:30.724Z",
+        "reviewed_at": "2026-10-15T11:25:30.724Z",
+        "status": "read",
+        "locator": "Note 6. Inventories（p76）· September 3, 2026 列",
+        "excerpt": "Finished goods | $ 958 | $ 1,094; Work in process | 8,252 | 6,401; Raw materials and supplies | 1,162 | 860; (total) $ 10,372 | $ 8,355 (September 3, 2026 | August 28, 2025)"
+      },
+      {
+        "source_id": "q3",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/0000723125-26-000015.pdf#page=13",
+        "sha256": "79ef98b3cdc1ffc608b02635ef1fa5e9ed07298bf24f7bb717b03a06bda5e2cd",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-15T11:26:09.053Z",
+        "reviewed_at": "2026-10-15T11:26:09.053Z",
+        "status": "read",
+        "locator": "FQ3 10-Q 第 13 页 · Note 6 Inventories · May 28, 2026 列",
+        "excerpt": "Finished goods $ 621; Work in process 6,960; Raw materials and supplies 986 (May 28, 2026 column)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "e01b93532923a88539218e967942a543a55e79ed58fd792c8024376b5b1101ef",
+    "id": "e-b8985f33b9b931d72c2af1fa63781850d89fbc33e49daf988b518367813b040c"
+  },
+  "e-41ae94d47ef8e24ef27f3004a33b4b1d89a287d6c6a14cf429bfbdce64716262": {
+    "measurement": "inventory",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "point_in_time",
+    "accounting_basis": "as_disclosed",
+    "scope": "贸易应收款",
+    "values": {
+      "current": 31793,
+      "previous": 26894,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 31793,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026-09-03 期末",
+        "locator": "10-K Note 5 · Trade receivables",
+        "source_id": "fy2026_10k"
+      },
+      {
+        "field": "previous",
+        "value": 26894,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026-05-28 期末",
+        "locator": "FQ3 10-Q 第 13 页 · Note 5 · May 28, 2026",
+        "source_id": "q3"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-15T11:26:09.053Z"
+    },
+    "documents": [
+      {
+        "source_id": "fy2026_10k",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm",
+        "sha256": "4f04727d28f6acbf15159cd5906984f7f5180fb7eb7cbfda5387bd0369888b1a",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-15T11:25:30.724Z",
+        "reviewed_at": "2026-10-15T11:25:30.724Z",
+        "status": "read",
+        "locator": "Note 5. Receivables（p76）· September 3, 2026 列",
+        "excerpt": "Trade receivables | $ 31,793 | $ 7,163; Government incentives 3,319; Income and other taxes 635; Other 450; total $ 36,197 (September 3, 2026 | August 28, 2025)"
+      },
+      {
+        "source_id": "q3",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/0000723125-26-000015.pdf#page=13",
+        "sha256": "79ef98b3cdc1ffc608b02635ef1fa5e9ed07298bf24f7bb717b03a06bda5e2cd",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-15T11:26:09.053Z",
+        "reviewed_at": "2026-10-15T11:26:09.053Z",
+        "status": "read",
+        "locator": "FQ3 10-Q 第 13 页 · Note 5 Receivables · May 28, 2026 列",
+        "excerpt": "Trade receivables $ 26,894 (May 28, 2026 column)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "ab548ca7a2abb892d84a38e87614ca8fc54481b421749f6e6996588c9f558999",
+    "id": "e-41ae94d47ef8e24ef27f3004a33b4b1d89a287d6c6a14cf429bfbdce64716262"
+  },
+  "e-f1b6c1bd58a9eafde819aa9e26037d0a4976629d9fbd184a51a7d7e99263c54c": {
+    "mode": "calculated",
+    "record_hash": "ed4b9aa6bbb81a7873b0ffea37bb80115e040afeb6ffe97493b3ff9ad622e060",
+    "inputs": [
+      "ab548ca7a2abb892d84a38e87614ca8fc54481b421749f6e6996588c9f558999",
+      "306c3a9c0d18d4a0a038c0bab2b97d3a35eb2c508339e3ca0d23b18f52b9d82e"
+    ],
+    "formula": "ratio_pct",
+    "id": "e-f1b6c1bd58a9eafde819aa9e26037d0a4976629d9fbd184a51a7d7e99263c54c"
+  },
+  "e-f5dd53532ab11561181084d34564509773087e6318908b3f82d0eaa6c1d3321f": {
+    "measurement": "orders",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "财季末 RPO",
+    "values": {
+      "current": 134000,
+      "previous": 5000,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 134,
+        "scale": 1000,
+        "source_unit": "USD billions",
+        "period": "2026-09-03 期末",
+        "locator": "10-K Note 16 · approximately $134 billion",
+        "source_id": "fy2026_10k"
+      },
+      {
+        "field": "previous",
+        "value": 5,
+        "scale": 1000,
+        "source_unit": "USD billions",
+        "period": "2026-05-28 期末",
+        "locator": "FQ3 10-Q 第 21 页 · Note 14 · approximately $5 billion",
+        "source_id": "q3_orders"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-15T11:26:09.437Z"
+    },
+    "documents": [
+      {
+        "source_id": "fy2026_10k",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm",
+        "sha256": "4f04727d28f6acbf15159cd5906984f7f5180fb7eb7cbfda5387bd0369888b1a",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-15T11:25:30.724Z",
+        "reviewed_at": "2026-10-15T11:25:30.724Z",
+        "status": "read",
+        "locator": "Note 16. Revenue and Customer Contract Liabilities（p88）",
+        "excerpt": "As of September 3, 2026, the transaction price allocated to our remaining performance obligations was approximately $134 billion, of which $13 billion has been recognized as contract liabilities. ... Nearly all of the deposits are scheduled to be repaid between 2029 and 2031. Approximately one-fourth of the remaining performance obligations as of September 3, 2026 are expected to be recognized as revenue over the next twelve months."
+      },
+      {
+        "source_id": "q3_orders",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/0000723125-26-000015.pdf#page=21",
+        "sha256": "79ef98b3cdc1ffc608b02635ef1fa5e9ed07298bf24f7bb717b03a06bda5e2cd",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-15T11:26:09.437Z",
+        "reviewed_at": "2026-10-15T11:26:09.437Z",
+        "status": "read",
+        "locator": "FQ3 10-Q 第 21 页 · Note 14 Revenue and Customer Contract Liabilities",
+        "excerpt": "As of May 28, 2026, the transaction price allocated to our remaining performance obligations was approximately $5 billion, of which $422 million has been recognized as contract liabilities."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "0f60a632a0b875d26dbcb0ba29b1ae9023ab3f9b9a9237db2a41dbb75f9f6f67",
+    "id": "e-f5dd53532ab11561181084d34564509773087e6318908b3f82d0eaa6c1d3321f"
+  },
+  "e-849646ef2f44d01091c3ccb779da163201c845055ab9c1de4e586e8b2a653ba0": {
+    "measurement": "orders",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "期末已确认合同负债",
+    "values": {
+      "current": 13000,
+      "previous": 422,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 13,
+        "scale": 1000,
+        "source_unit": "USD billions",
+        "period": "2026-09-03 期末",
+        "locator": "10-K Note 16 · $13 billion has been recognized as contract liabilities",
+        "source_id": "fy2026_10k"
+      },
+      {
+        "field": "previous",
+        "value": 422,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026-05-28 期末",
+        "locator": "FQ3 10-Q 第 21 页 · Note 14 · $422 million",
+        "source_id": "q3_orders"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, period and column to the candidate row",
+      "at": "2026-10-15T11:26:09.437Z"
+    },
+    "documents": [
+      {
+        "source_id": "fy2026_10k",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm",
+        "sha256": "4f04727d28f6acbf15159cd5906984f7f5180fb7eb7cbfda5387bd0369888b1a",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-15T11:25:30.724Z",
+        "reviewed_at": "2026-10-15T11:25:30.724Z",
+        "status": "read",
+        "locator": "Note 16. Revenue and Customer Contract Liabilities（p88）",
+        "excerpt": "As of September 3, 2026, the transaction price allocated to our remaining performance obligations was approximately $134 billion, of which $13 billion has been recognized as contract liabilities. ... Nearly all of the deposits are scheduled to be repaid between 2029 and 2031. Approximately one-fourth of the remaining performance obligations as of September 3, 2026 are expected to be recognized as revenue over the next twelve months."
+      },
+      {
+        "source_id": "q3_orders",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/0000723125-26-000015.pdf#page=21",
+        "sha256": "79ef98b3cdc1ffc608b02635ef1fa5e9ed07298bf24f7bb717b03a06bda5e2cd",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-15T11:26:09.437Z",
+        "reviewed_at": "2026-10-15T11:26:09.437Z",
+        "status": "read",
+        "locator": "FQ3 10-Q 第 21 页 · Note 14 Revenue and Customer Contract Liabilities",
+        "excerpt": "As of May 28, 2026, the transaction price allocated to our remaining performance obligations was approximately $5 billion, of which $422 million has been recognized as contract liabilities."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "b0a524d96a0bd673ded1b7379c12fac81feb67ed44b4386551370b4ee1528d36",
+    "id": "e-849646ef2f44d01091c3ccb779da163201c845055ab9c1de4e586e8b2a653ba0"
+  },
+  "e-f9a2d75a638bf47fc47ad482d34ce288592e8bf601114a1d5d469026ad204608": {
+    "measurement": "technology_process",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "dram_1gamma",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "1γ 正在爬坡，FY2026 第四季度已占美光多数 DRAM 位元产出；下一代 DRAM 预计于 2027 年下半年开始量产。"
+    },
+    "raw_inputs": [
+      {
+        "field": "facts.bit_density.value",
+        "value": 30,
+        "scale": 1,
+        "source_unit": "bits/wafer_pct",
+        "period": "2025-02-25",
+        "locator": "Why this matters / Improved bit-density output；脚注 2、3",
+        "source_id": "tech_gamma"
+      },
+      {
+        "field": "facts.adoption.value",
+        "value": 50,
+        "scale": 1,
+        "source_unit": "pct",
+        "period": "FY2026 Q4",
+        "locator": "10-K Item 1 · Product Technologies · DRAM（p7）· majority of DRAM bit production",
+        "source_id": "fy2026_10k"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Original issuer documents read and compared to each field, its date, unit and stage; adoption recorded as more than half because the 10-K says majority of DRAM bit production without a percentage.",
+      "at": "2026-10-15T11:27:12.827Z"
+    },
+    "documents": [
+      {
+        "source_id": "tech_gamma",
+        "url": "https://investors.micron.com/news/press-release/2025/Micron-Announces-Shipment-of-1-1-gamma-DRAM-Pioneering-Memory-Technology-Advancements-for-Future-Compute-Needs-02-25-2025/default.aspx",
+        "sha256": "b45485a6dd520fa7e9c16e9f90a81a4c7c353fd48437d3c6360e1807964ef473",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-10-15T11:27:12.427Z",
+        "reviewed_at": "2026-10-15T11:27:12.427Z",
+        "status": "read",
+        "locator": "Why this matters / Improved bit-density output；脚注 2、3",
+        "excerpt": "greater than 30% more bits-per-wafer output over the previous generation"
+      },
+      {
+        "source_id": "tech_q3_deck",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf",
+        "sha256": "29468a786fa4a9c7728735ea8e3ad5853bb1375a297c636e86e6a4dd3b155929",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-15T11:27:12.827Z",
+        "reviewed_at": "2026-10-15T11:27:12.827Z",
+        "status": "read",
+        "locator": "p11 技术进展；p17–19 制造项目",
+        "excerpt": "Our 1γ (1-gamma) DRAM node and G9 NAND node are both ramping well ... production in the second half of calendar 2027."
+      },
+      {
+        "source_id": "fy2026_10k",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm",
+        "sha256": "4f04727d28f6acbf15159cd5906984f7f5180fb7eb7cbfda5387bd0369888b1a",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-15T11:25:30.724Z",
+        "reviewed_at": "2026-10-15T11:25:30.724Z",
+        "status": "read",
+        "locator": "Item 1. Business · Product Technologies · DRAM（p7）",
+        "excerpt": "Our 1γ DRAM node is ramping well and on track to become the highest-volume node in our history. The majority of our DRAM bit production in the fourth quarter of 2026 was on our leading-edge 1γ node."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "b7dbffe973e5d9e1aa814218a212af0bcf7f43d101dc5b13157a65846d6ce273",
+    "id": "e-f9a2d75a638bf47fc47ad482d34ce288592e8bf601114a1d5d469026ad204608"
   }
 }
