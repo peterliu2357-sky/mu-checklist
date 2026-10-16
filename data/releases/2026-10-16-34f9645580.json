@@ -1,0 +1,137 @@
+{
+  "version": 1,
+  "scope": "company:tsmc",
+  "base_commit": "7fe735bbeb60f4b4f4152092306faf99e1b7cc16",
+  "base_revision": "2026-10-16-931e79a167",
+  "base_sha256": "817577cc1ed50f6959001d284eaa373d7f942db0d77ea267b6e6156b0ed3451c",
+  "catalog_sha256": "fe7c89afe4f27fc03b955405bdd07dffa3509b01db302b6e9c3c20e19aff4c3f",
+  "created_at": "2026-10-16T06:05:55.022Z",
+  "completed_at": "2026-10-16T06:07:26.112Z",
+  "state": "verified",
+  "targets": null,
+  "coverage": [
+    {
+      "key": "company:tsmc",
+      "status": "verified",
+      "evidence": [
+        "eco_tsmc",
+        "eco_tsmc_guide",
+        "eco_tsmc_prior_revenue",
+        "eco_tsmc_call",
+        "eco_tsmc_prior",
+        "eco_tsmc_ocf",
+        "eco_tsmc_prior_ocf",
+        "eco_tsmc_budget",
+        "eco_tsmc_demand"
+      ],
+      "reviewed_at": "2026-10-16T06:07:25.602Z",
+      "latest_disclosure": {
+        "url": "https://pr.tsmc.com/system/files/newspdf/attachment/70d8a93214795fa88f83fb47e0e45e7b0435e52b/3Q26%20%28E%29_with%20gudiance_final_wmn.pdf",
+        "published_at": "2026-10-15"
+      },
+      "reason": "已读取台积电 2026 Q3 财报、管理报告与业绩会文字稿（10-15）及 2025 Q3 管理报告：收入、营业利润、资本开支、经营现金流按 3Q26 / 3Q25 同比更新；Q4 收入指引、全年资本预算（重申）与需求展望更新。下一次财报日期尚未公布。",
+      "finding": "new_disclosure"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "eco_tsmc",
+      "url": "https://pr.tsmc.com/system/files/newspdf/attachment/70d8a93214795fa88f83fb47e0e45e7b0435e52b/3Q26%20%28E%29_with%20gudiance_final_wmn.pdf#page=2",
+      "sha256": "83aaccc5f574668e4e61b020768fe9e1873bd359bcf1fab81106122fffc7b7e0",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-16T06:06:50.689Z",
+      "reviewed_at": "2026-10-16T06:06:50.689Z",
+      "status": "read"
+    },
+    {
+      "source_id": "eco_tsmc_guide",
+      "url": "https://pr.tsmc.com/system/files/newspdf/attachment/70d8a93214795fa88f83fb47e0e45e7b0435e52b/3Q26%20%28E%29_with%20gudiance_final_wmn.pdf#page=1",
+      "sha256": "83aaccc5f574668e4e61b020768fe9e1873bd359bcf1fab81106122fffc7b7e0",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-16T06:06:51.174Z",
+      "reviewed_at": "2026-10-16T06:06:51.174Z",
+      "status": "read"
+    },
+    {
+      "source_id": "eco_tsmc_prior_revenue",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2025-10/90cb476be2e8406ba477c417a552d36d632db5c3/3Q25ManagementReport.pdf#page=1",
+      "sha256": "f4642c936a33cefaf91c6c7d8d16f0696e91ea17430911f51c20d6f340462ccc",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-16T06:06:51.615Z",
+      "reviewed_at": "2026-10-16T06:06:51.615Z",
+      "status": "read"
+    },
+    {
+      "source_id": "eco_tsmc_call",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/f83780000ddc0c3b48e57a87eab6814c4ab35058/3Q26%20ManagementReport.pdf#page=5",
+      "sha256": "27b5b92d05207bf662756edfbe72494c5f34a007a79306ae040d957886b411d2",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-16T06:06:52.155Z",
+      "reviewed_at": "2026-10-16T06:06:52.155Z",
+      "status": "read"
+    },
+    {
+      "source_id": "eco_tsmc_prior",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2025-10/90cb476be2e8406ba477c417a552d36d632db5c3/3Q25ManagementReport.pdf#page=5",
+      "sha256": "f4642c936a33cefaf91c6c7d8d16f0696e91ea17430911f51c20d6f340462ccc",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-16T06:06:52.624Z",
+      "reviewed_at": "2026-10-16T06:06:52.624Z",
+      "status": "read"
+    },
+    {
+      "source_id": "eco_tsmc_ocf",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/f83780000ddc0c3b48e57a87eab6814c4ab35058/3Q26%20ManagementReport.pdf#page=5",
+      "sha256": "27b5b92d05207bf662756edfbe72494c5f34a007a79306ae040d957886b411d2",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-16T06:06:53.112Z",
+      "reviewed_at": "2026-10-16T06:06:53.112Z",
+      "status": "read"
+    },
+    {
+      "source_id": "eco_tsmc_prior_ocf",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2025-10/90cb476be2e8406ba477c417a552d36d632db5c3/3Q25ManagementReport.pdf#page=5",
+      "sha256": "f4642c936a33cefaf91c6c7d8d16f0696e91ea17430911f51c20d6f340462ccc",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-16T06:06:53.577Z",
+      "reviewed_at": "2026-10-16T06:06:53.577Z",
+      "status": "read"
+    },
+    {
+      "source_id": "eco_tsmc_budget",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/eba4fac72873bf546b669bd2b5d973df5c93215d/TSMC%203Q26%20Transcript.pdf#page=4",
+      "sha256": "bb1d3aeadac9f44189d9d36aa410b0c1c458f9f8b3d8aa63ecc71e6813c5f030",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-16T06:06:54.143Z",
+      "reviewed_at": "2026-10-16T06:06:54.143Z",
+      "status": "read"
+    },
+    {
+      "source_id": "eco_tsmc_demand",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/eba4fac72873bf546b669bd2b5d973df5c93215d/TSMC%203Q26%20Transcript.pdf#page=4",
+      "sha256": "bb1d3aeadac9f44189d9d36aa410b0c1c458f9f8b3d8aa63ecc71e6813c5f030",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-16T06:06:54.631Z",
+      "reviewed_at": "2026-10-16T06:06:54.631Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [
+    "tsmc"
+  ],
+  "publication_corrections": [],
+  "technology_reviews": [],
+  "result": "success",
+  "artifact_sha256": "9fb9f7af9f6ad40c3a24bd63329ab9c8cf90f7ec8d0f8901a1ff4e76287d6ff5",
+  "ledger_sha256": "cbbc698acc94a401bcee360d55913188eda399b913b8bbba296665a4641b9e9e",
+  "evidence_sha256": "d3853c355b423204927e97a162950be8b23eaa4f2146e6a6e15108b381261496"
+}

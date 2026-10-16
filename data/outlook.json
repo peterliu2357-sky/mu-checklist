@@ -104,6 +104,14 @@
           ]
         },
         {
+          "text": "台积电 2026 Q3 收入同比 {{eco.tsmc.revenue|change}}，下季收入指引为 {{outlook.tsmc.revenue}}；管理层称 AI 需求仍高于其供给能力，同时指出消费及价格敏感市场受零部件涨价影响、对来年规划审慎，这与内存涨价向终端传导的压力一致。",
+          "refs": [
+            "eco.tsmc.revenue",
+            "outlook.tsmc.revenue",
+            "outlook.tsmc.demand"
+          ]
+        },
+        {
           "text": "企业 SSD 交付周期为 {{mu.demand.essd_lead_time}}，说明交付仍受约束；这是间接指标，不等于美光的出货量。",
           "refs": [
             "mu.demand.essd_lead_time"
@@ -253,8 +261,8 @@
       ]
     }
   ],
-  "generated_at": "2026-10-15T11:35:16.363Z",
-  "data_revision": "2026-10-15-52cbe46da2",
+  "generated_at": "2026-10-16T06:07:45.074Z",
+  "data_revision": "2026-10-16-34f9645580",
   "financial_period": "FY2026 Q4",
   "cited": {
     "mu.revenue.total": {
@@ -445,6 +453,27 @@
       "previous": null,
       "detail": [
         "预计服务器 DRAM、企业 SSD 与 HBM 需求加速，供给仍偏紧；手机与 PC 需求部分放缓。",
+        ""
+      ]
+    },
+    "eco.tsmc.revenue": {
+      "current": 46720,
+      "previous": 33100,
+      "change": "+41.1%"
+    },
+    "outlook.tsmc.revenue": {
+      "current": "523–543 亿美元",
+      "previous": null,
+      "detail": [
+        "毛利率 65%–67%，营业利润率 56.5%–58.5%。",
+        ""
+      ]
+    },
+    "outlook.tsmc.demand": {
+      "current": "预计第四季度先进制程需求持续强劲、2 纳米快速放量；AI 需求仍高于供给能力；消费及价格敏感市场受零部件涨价与经济不确定性影响，公司对 2027 年规划审慎。全年美元收入增长预计约 44%。",
+      "previous": null,
+      "detail": [
+        "预计第四季度先进制程需求持续强劲、2 纳米快速放量；AI 需求仍高于供给能力；消费及价格敏感市场受零部件涨价与经济不确定性影响，公司对 2027 年规划审慎。全年美元收入增长预计约 44%。",
         ""
       ]
     },

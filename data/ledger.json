@@ -2,8 +2,8 @@
   "format_version": 1,
   "document": {
     "schema_version": 2,
-    "revision": "2026-10-16-931e79a167",
-    "updated_at": "2026-10-16T00:22:37.804Z",
+    "revision": "2026-10-16-34f9645580",
+    "updated_at": "2026-10-16T06:07:26.112Z",
     "last_successful_check_at": "2026-09-20T23:50:00Z",
     "last_attempt_at": "2026-09-20T23:50:00Z",
     "financial_period": "FY2026 Q4",
@@ -677,39 +677,39 @@
         "type": "公司原始披露"
       },
       "eco_tsmc": {
-        "label": "台积电 2026 Q2 财报",
+        "label": "台积电 2026 Q3 财报",
         "short_label": "台积电财报 p2",
-        "url": "https://pr.tsmc.com/system/files/newspdf/attachment/e98d0838eea3c47083fb67dbc349c059d8457c25/2Q26%20(E)_with%20gudiance_final_wmn.pdf#page=2",
-        "published_at": "2026-07-16",
-        "checked_at": "2026-09-20",
-        "locator": "第 2 页 consolidated results，2Q26 / 2Q25；第 1 页利润率及下季指引。",
+        "url": "https://pr.tsmc.com/system/files/newspdf/attachment/70d8a93214795fa88f83fb47e0e45e7b0435e52b/3Q26%20%28E%29_with%20gudiance_final_wmn.pdf#page=2",
+        "published_at": "2026-10-15",
+        "checked_at": "2026-10-16",
+        "locator": "第 2 页 consolidated results，3Q26 / 3Q25；第 1 页利润率及下季指引。",
         "type": "公司原始披露"
       },
       "eco_tsmc_guide": {
-        "label": "台积电 2026 Q3 指引",
+        "label": "台积电 2026 Q4 指引",
         "short_label": "台积电指引 p1",
-        "url": "https://pr.tsmc.com/system/files/newspdf/attachment/e98d0838eea3c47083fb67dbc349c059d8457c25/2Q26%20(E)_with%20gudiance_final_wmn.pdf#page=1",
-        "published_at": "2026-07-16",
-        "checked_at": "2026-09-20",
-        "locator": "第 1 页 third quarter 2026 outlook：收入、毛利率、营业利润率。",
+        "url": "https://pr.tsmc.com/system/files/newspdf/attachment/70d8a93214795fa88f83fb47e0e45e7b0435e52b/3Q26%20%28E%29_with%20gudiance_final_wmn.pdf#page=1",
+        "published_at": "2026-10-15",
+        "checked_at": "2026-10-16",
+        "locator": "第 1 页：In US dollars, third quarter revenue was $46.72 billion；fourth quarter 2026 outlook：收入、毛利率、营业利润率。",
         "type": "公司原始披露"
       },
       "eco_tsmc_call": {
-        "label": "台积电 2026 Q2 业绩会",
-        "short_label": "台积电业绩会 p3–5",
-        "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-08/3e494f0c14dd0890f897aa044415e21d93486cc4/TSMC%202Q26%20Transcript.pdf#page=3",
-        "published_at": "2026-07-16",
-        "checked_at": "2026-09-20",
-        "locator": "第 3 页当季 CapEx；第 4 页全年资本预算；第 5 页需求展望。",
+        "label": "台积电 2026 Q3 管理报告 · 资本开支",
+        "short_label": "台积电管理报告 p5",
+        "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/f83780000ddc0c3b48e57a87eab6814c4ab35058/3Q26%20ManagementReport.pdf#page=5",
+        "published_at": "2026-10-15",
+        "checked_at": "2026-10-16",
+        "locator": "第 5 页 V. Capital Expenditures：3Q26 为 138.4 亿美元。",
         "type": "公司原始披露"
       },
       "eco_tsmc_prior": {
-        "label": "台积电 2025 Q2 管理报告",
+        "label": "台积电 2025 Q3 管理报告",
         "short_label": "台积电上年同期 p5",
-        "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2025-07/1fec9df3de99e6e9f190e1eda7179449381ce6d8/2Q25ManagementReport.pdf#page=5",
-        "published_at": "2025-07-17",
-        "checked_at": "2026-09-20",
-        "locator": "第 5 页 V. Capital Expenditures：2Q25 为 96.3 亿美元。",
+        "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2025-10/90cb476be2e8406ba477c417a552d36d632db5c3/3Q25ManagementReport.pdf#page=5",
+        "published_at": "2025-10-16",
+        "checked_at": "2026-10-16",
+        "locator": "第 5 页 V. Capital Expenditures：3Q25 为 97.0 亿美元。",
         "type": "公司原始披露"
       },
       "eco_samsung": {
@@ -749,30 +749,30 @@
         "type": "公司原始披露"
       },
       "eco_tsmc_prior_revenue": {
-        "label": "台积电 2025 Q2 收入",
+        "label": "台积电 2025 Q3 收入",
         "short_label": "台积电上年同期 p1",
-        "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2025-07/1fec9df3de99e6e9f190e1eda7179449381ce6d8/2Q25ManagementReport.pdf#page=1",
-        "published_at": "2025-07-17",
-        "checked_at": "2026-09-20",
-        "locator": "第 1 页 Net Revenue (US$ billions)：2Q25 为 30.07。",
+        "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2025-10/90cb476be2e8406ba477c417a552d36d632db5c3/3Q25ManagementReport.pdf#page=1",
+        "published_at": "2025-10-16",
+        "checked_at": "2026-10-16",
+        "locator": "第 1 页 Net Revenue (US$ billions)：3Q25 为 33.10。",
         "type": "公司原始披露"
       },
       "eco_tsmc_budget": {
         "label": "台积电 2026 资本预算",
         "short_label": "台积电资本预算 p4",
-        "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-08/3e494f0c14dd0890f897aa044415e21d93486cc4/TSMC%202Q26%20Transcript.pdf#page=4",
-        "published_at": "2026-07-16",
-        "checked_at": "2026-09-20",
-        "locator": "第 4 页：2026 capital budget 及各用途分配。",
+        "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/eba4fac72873bf546b669bd2b5d973df5c93215d/TSMC%203Q26%20Transcript.pdf#page=4",
+        "published_at": "2026-10-15",
+        "checked_at": "2026-10-16",
+        "locator": "第 4 页：reiterate full year 2026 capital budget。",
         "type": "公司原始披露"
       },
       "eco_tsmc_demand": {
-        "label": "台积电 2026 下半年需求展望",
-        "short_label": "台积电需求展望 p5",
-        "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-08/3e494f0c14dd0890f897aa044415e21d93486cc4/TSMC%202Q26%20Transcript.pdf#page=5",
-        "published_at": "2026-07-16",
-        "checked_at": "2026-09-20",
-        "locator": "第 5 页：C.C. Wei，near-term demand outlook。",
+        "label": "台积电 2026 Q4 需求展望",
+        "short_label": "台积电需求展望 p4",
+        "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/eba4fac72873bf546b669bd2b5d973df5c93215d/TSMC%203Q26%20Transcript.pdf#page=4",
+        "published_at": "2026-10-15",
+        "checked_at": "2026-10-16",
+        "locator": "第 4 页：C.C. Wei，fourth quarter 2026 demand outlook。",
         "type": "公司原始披露"
       },
       "rdimm_512": {
@@ -830,21 +830,21 @@
         "type": "公司原始披露"
       },
       "eco_tsmc_ocf": {
-        "label": "台积电 2026 Q2 经营现金流",
-        "short_label": "台积电现金流 p3",
-        "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-08/3e494f0c14dd0890f897aa044415e21d93486cc4/TSMC%202Q26%20Transcript.pdf#page=3",
-        "published_at": "2026-07-16",
-        "checked_at": "2026-09-20",
-        "locator": "第 3 页 Regarding cash flow and CapEx：单季经营现金流约 7,830 亿新台币。",
+        "label": "台积电 2026 Q3 经营现金流",
+        "short_label": "台积电现金流 p5",
+        "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/f83780000ddc0c3b48e57a87eab6814c4ab35058/3Q26%20ManagementReport.pdf#page=5",
+        "published_at": "2026-10-15",
+        "checked_at": "2026-10-16",
+        "locator": "第 5 页 IV-1 Quarterly Cash Flow Analysis · Net Operating Sources/(Uses)，3Q26 列。",
         "type": "公司原始披露"
       },
       "eco_tsmc_prior_ocf": {
-        "label": "台积电 2025 Q2 经营现金流",
+        "label": "台积电 2025 Q3 经营现金流",
         "short_label": "台积电同期现金流 p5",
-        "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2025-07/1fec9df3de99e6e9f190e1eda7179449381ce6d8/2Q25ManagementReport.pdf#page=5",
-        "published_at": "2025-07-17",
-        "checked_at": "2026-09-20",
-        "locator": "第 5 页 IV-1 Summary of Cash Flow · Net Operating Sources/(Uses)，2Q25 列。",
+        "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2025-10/90cb476be2e8406ba477c417a552d36d632db5c3/3Q25ManagementReport.pdf#page=5",
+        "published_at": "2025-10-16",
+        "checked_at": "2026-10-16",
+        "locator": "第 5 页 IV-1 Quarterly Cash Flow Analysis · Net Operating Sources/(Uses)，3Q25 列。",
         "type": "公司原始披露"
       },
       "news_tf_20260921": {
@@ -1924,6 +1924,12 @@
     ],
     "check_log": [
       {
+        "at": "2026-10-16T06:07:26.112Z",
+        "status": "success",
+        "scope": "company:tsmc",
+        "text": "核查范围：company:tsmc；完成 1 / 1 项。"
+      },
+      {
         "at": "2026-10-16T00:22:37.804Z",
         "status": "failed",
         "scope": "quote",
@@ -2384,35 +2390,35 @@
           "ticker": "TSM",
           "group": "chips",
           "role": "晶圆制造与先进封装",
-          "period": "2026 Q2",
-          "previous_period": "2025 Q2",
-          "period_end": "2026-06-30",
-          "published_at": "2026-07-16",
-          "checked_at": "2026-09-20",
+          "period": "2026 Q3",
+          "previous_period": "2025 Q3",
+          "period_end": "2026-09-30",
+          "published_at": "2026-10-15",
+          "checked_at": "2026-10-16",
           "scope": "收入和资本开支为美元；利润和经营现金流为新台币。",
           "metrics": [
             {
-              "record_ref": "839c5481296e74beaba9055720cbd15568f3ca195eaa61ea78cdf8324cb1a4cd"
+              "record_ref": "fdf322f9bc819627f36a5cca2b63adab2311e4cc447ab5699d560adde5e55a0c"
             },
             {
-              "record_ref": "77e34f61dde450296adf232ab294c8d46b573f56b363325d9d5c8032e291aefd"
+              "record_ref": "faf27b8d5b2930a919788db6fb458c2397c4515defe36d4c1444f88806c36eb3"
             },
             {
-              "record_ref": "1fbc24139420768d331ef494a57d4cd338561c220932ca9812578ed22e547b0e"
+              "record_ref": "ba43ac2f6ec22fbc2667e2b3203d4ded7d1b073d797061cc660e0e7e31fc1f03"
             },
             {
-              "record_ref": "930ef32ebb87aed37125cf2df337e7aeb6af85f0edfbe85e8b263a453b31de80"
+              "record_ref": "13567ecadaf93d84ed4737bb4de74e68a0ffe9955c1c242672e7e84aed86b4f5"
             }
           ],
           "outlook": [
             {
-              "record_ref": "c587e3866e01dbb06e25b0496ff5c9c6eee5fb9a4d7192561987fca10b91bf7d"
+              "record_ref": "2dbdb881d0b39326ba956b8c7cbb79f877cff99cea190dd5e58deff856e4ba6a"
             },
             {
-              "record_ref": "f68e25b2c981fbb747379c0759898827c0412442af8ff3f543716f04435b13d3"
+              "record_ref": "682fb607ede39bca67912cd9c7d11a2c3c0c1e318667b6b036a6310f6acb84ed"
             },
             {
-              "record_ref": "827ad8e95899b5979cc364ccc2a78646af69e92a17bcb93457d29fc1b473c89a"
+              "record_ref": "b1ee5524a5c76807076b2dc9602b3a8c1935ea4a8b82c5f9a91e8ce260d6b263"
             }
           ],
           "notes": [
@@ -19288,6 +19294,319 @@
         "e-f9a2d75a638bf47fc47ad482d34ce288592e8bf601114a1d5d469026ad204608"
       ],
       "id": "b7dbffe973e5d9e1aa814218a212af0bcf7f43d101dc5b13157a65846d6ce273"
+    },
+    "fdf322f9bc819627f36a5cca2b63adab2311e4cc447ab5699d560adde5e55a0c": {
+      "metric_id": "eco.tsmc.revenue",
+      "definition_version": 1,
+      "context": {
+        "entity": "tsmc",
+        "period": "2026 Q3",
+        "previous_period": "2025 Q3",
+        "period_end": "2026-09-30",
+        "report_published_at": "2026-10-15",
+        "measurement": "revenue",
+        "unit": "USDm",
+        "scope": "集团收入",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "eco_tsmc_guide",
+            "url": "https://pr.tsmc.com/system/files/newspdf/attachment/70d8a93214795fa88f83fb47e0e45e7b0435e52b/3Q26%20%28E%29_with%20gudiance_final_wmn.pdf#page=1",
+            "published_at": "2026-10-15"
+          },
+          {
+            "id": "eco_tsmc_prior_revenue",
+            "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2025-10/90cb476be2e8406ba477c417a552d36d632db5c3/3Q25ManagementReport.pdf#page=1",
+            "published_at": "2025-10-16"
+          }
+        ]
+      },
+      "payload": {
+        "id": "revenue",
+        "label": "集团收入",
+        "current": 46720,
+        "previous": 33100,
+        "unit": "USDm",
+        "source_ids": [
+          "eco_tsmc_guide",
+          "eco_tsmc_prior_revenue"
+        ],
+        "location": "本期财报 p1：美元收入 467.2 亿；上年管理报告 p1：331.0 亿。",
+        "note": "",
+        "evidence_type": "direct",
+        "digits": 1
+      },
+      "evidence_ids": [
+        "e-43b3a59e09f4f06d7b67c0b334a53de7f9b8a18148abe34f2611f97e941992f8"
+      ],
+      "id": "fdf322f9bc819627f36a5cca2b63adab2311e4cc447ab5699d560adde5e55a0c"
+    },
+    "faf27b8d5b2930a919788db6fb458c2397c4515defe36d4c1444f88806c36eb3": {
+      "metric_id": "eco.tsmc.profit",
+      "definition_version": 1,
+      "context": {
+        "entity": "tsmc",
+        "period": "2026 Q3",
+        "previous_period": "2025 Q3",
+        "period_end": "2026-09-30",
+        "report_published_at": "2026-10-15",
+        "measurement": "operating_profit",
+        "unit": "TWDb",
+        "scope": "集团营业利润",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "eco_tsmc",
+            "url": "https://pr.tsmc.com/system/files/newspdf/attachment/70d8a93214795fa88f83fb47e0e45e7b0435e52b/3Q26%20%28E%29_with%20gudiance_final_wmn.pdf#page=2",
+            "published_at": "2026-10-15"
+          }
+        ]
+      },
+      "payload": {
+        "id": "profit",
+        "label": "集团营业利润",
+        "current": 876.445,
+        "previous": 500.685,
+        "unit": "TWDb",
+        "source_ids": [
+          "eco_tsmc"
+        ],
+        "location": "财报 p2 · Income from operations，原始单位百万新台币，除以 1,000。",
+        "note": "",
+        "evidence_type": "direct"
+      },
+      "evidence_ids": [
+        "e-e632c1390d148ee5d4384ebd68a24ab3553c10b6ce92fe1a3be4f7e7ed08c725"
+      ],
+      "id": "faf27b8d5b2930a919788db6fb458c2397c4515defe36d4c1444f88806c36eb3"
+    },
+    "ba43ac2f6ec22fbc2667e2b3203d4ded7d1b073d797061cc660e0e7e31fc1f03": {
+      "metric_id": "eco.tsmc.capex",
+      "definition_version": 1,
+      "context": {
+        "entity": "tsmc",
+        "period": "2026 Q3",
+        "previous_period": "2025 Q3",
+        "period_end": "2026-09-30",
+        "report_published_at": "2026-10-15",
+        "measurement": "capex",
+        "unit": "USDm",
+        "scope": "集团资本开支",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "eco_tsmc_call",
+            "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/f83780000ddc0c3b48e57a87eab6814c4ab35058/3Q26%20ManagementReport.pdf#page=5",
+            "published_at": "2026-10-15"
+          },
+          {
+            "id": "eco_tsmc_prior",
+            "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2025-10/90cb476be2e8406ba477c417a552d36d632db5c3/3Q25ManagementReport.pdf#page=5",
+            "published_at": "2025-10-16"
+          }
+        ]
+      },
+      "payload": {
+        "id": "capex",
+        "label": "集团资本开支",
+        "current": 13840,
+        "previous": 9700,
+        "unit": "USDm",
+        "source_ids": [
+          "eco_tsmc_call",
+          "eco_tsmc_prior"
+        ],
+        "location": "本期管理报告 p5：138.4 亿美元；上年管理报告 p5：97.0 亿美元。",
+        "note": "",
+        "evidence_type": "direct",
+        "digits": 1
+      },
+      "evidence_ids": [
+        "e-338e1f6f03978f4bbe4b0643fd4b87b95fdabef20a19c6c746165048a268c81e"
+      ],
+      "id": "ba43ac2f6ec22fbc2667e2b3203d4ded7d1b073d797061cc660e0e7e31fc1f03"
+    },
+    "13567ecadaf93d84ed4737bb4de74e68a0ffe9955c1c242672e7e84aed86b4f5": {
+      "metric_id": "eco.tsmc.ocf",
+      "definition_version": 1,
+      "context": {
+        "entity": "tsmc",
+        "period": "2026 Q3",
+        "previous_period": "2025 Q3",
+        "period_end": "2026-09-30",
+        "report_published_at": "2026-10-15",
+        "measurement": "ocf",
+        "unit": "TWDb",
+        "scope": "集团经营现金流",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "eco_tsmc_ocf",
+            "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/f83780000ddc0c3b48e57a87eab6814c4ab35058/3Q26%20ManagementReport.pdf#page=5",
+            "published_at": "2026-10-15"
+          },
+          {
+            "id": "eco_tsmc_prior_ocf",
+            "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2025-10/90cb476be2e8406ba477c417a552d36d632db5c3/3Q25ManagementReport.pdf#page=5",
+            "published_at": "2025-10-16"
+          }
+        ]
+      },
+      "payload": {
+        "id": "ocf",
+        "label": "集团经营现金流",
+        "current": 919.77,
+        "previous": 426.83,
+        "unit": "TWDb",
+        "source_ids": [
+          "eco_tsmc_ocf",
+          "eco_tsmc_prior_ocf"
+        ],
+        "location": "本期管理报告 p5：919.77 十亿新台币；上年管理报告 p5：426.83 十亿新台币。",
+        "note": "",
+        "evidence_type": "direct",
+        "digits": 2
+      },
+      "evidence_ids": [
+        "e-52fc78f6dd2e9171e45b928c2930e9c376e55e12b67f02973dd2c4eedcabea1b"
+      ],
+      "id": "13567ecadaf93d84ed4737bb4de74e68a0ffe9955c1c242672e7e84aed86b4f5"
+    },
+    "2dbdb881d0b39326ba956b8c7cbb79f877cff99cea190dd5e58deff856e4ba6a": {
+      "metric_id": "outlook.tsmc.revenue",
+      "definition_version": 1,
+      "context": {
+        "entity": "tsmc",
+        "period": "2026 Q3",
+        "previous_period": "2025 Q3",
+        "period_end": "2026-09-30",
+        "report_published_at": "2026-10-15",
+        "measurement": "revenue",
+        "unit": "",
+        "scope": "集团收入",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "target_period",
+        "sources": [
+          {
+            "id": "eco_tsmc_guide",
+            "url": "https://pr.tsmc.com/system/files/newspdf/attachment/70d8a93214795fa88f83fb47e0e45e7b0435e52b/3Q26%20%28E%29_with%20gudiance_final_wmn.pdf#page=1",
+            "published_at": "2026-10-15"
+          }
+        ]
+      },
+      "payload": {
+        "id": "revenue",
+        "label": "集团收入",
+        "type": "numeric",
+        "value": "523–543 亿美元",
+        "summary": "毛利率 65%–67%，营业利润率 56.5%–58.5%。",
+        "prior_guidance": "",
+        "period": "2026 Q4",
+        "issued_at": "2026-10-15",
+        "speaker": "CFO Wendell Huang",
+        "kind": "公司指引",
+        "evidence_type": "direct",
+        "source_ids": [
+          "eco_tsmc_guide"
+        ],
+        "location": "财报 p1 · fourth quarter 2026 outlook；汇率假设 1 美元兑 31.8 新台币。"
+      },
+      "evidence_ids": [
+        "e-73dc4bcc7c619de0cfa66e220559ee38952fc2d15069f95bd9c88bf4d9067b6f"
+      ],
+      "id": "2dbdb881d0b39326ba956b8c7cbb79f877cff99cea190dd5e58deff856e4ba6a"
+    },
+    "682fb607ede39bca67912cd9c7d11a2c3c0c1e318667b6b036a6310f6acb84ed": {
+      "metric_id": "outlook.tsmc.capex",
+      "definition_version": 1,
+      "context": {
+        "entity": "tsmc",
+        "period": "2026 Q3",
+        "previous_period": "2025 Q3",
+        "period_end": "2026-09-30",
+        "report_published_at": "2026-10-15",
+        "measurement": "outlook",
+        "unit": "",
+        "scope": "集团资本预算",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "target_period",
+        "sources": [
+          {
+            "id": "eco_tsmc_budget",
+            "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/eba4fac72873bf546b669bd2b5d973df5c93215d/TSMC%203Q26%20Transcript.pdf#page=4",
+            "published_at": "2026-10-15"
+          }
+        ]
+      },
+      "payload": {
+        "id": "capex",
+        "label": "集团资本预算",
+        "type": "numeric",
+        "value": "600–640 亿美元",
+        "summary": "重申全年预算；本次未给出用途分配。",
+        "prior_guidance": "600–640 亿美元（2026-07-16）",
+        "period": "2026 全年",
+        "issued_at": "2026-10-15",
+        "speaker": "CFO Wendell Huang",
+        "kind": "公司指引",
+        "evidence_type": "direct",
+        "source_ids": [
+          "eco_tsmc_budget"
+        ],
+        "location": "业绩会 p4 · reiterate full year 2026 capital budget。"
+      },
+      "evidence_ids": [
+        "e-a74f492ecb5a8fb78029f5bfb745d79a34b91d7a9fc76c7c4123e40af6cdae07"
+      ],
+      "id": "682fb607ede39bca67912cd9c7d11a2c3c0c1e318667b6b036a6310f6acb84ed"
+    },
+    "b1ee5524a5c76807076b2dc9602b3a8c1935ea4a8b82c5f9a91e8ce260d6b263": {
+      "metric_id": "outlook.tsmc.demand",
+      "definition_version": 1,
+      "context": {
+        "entity": "tsmc",
+        "period": "2026 Q3",
+        "previous_period": "2025 Q3",
+        "period_end": "2026-09-30",
+        "report_published_at": "2026-10-15",
+        "measurement": "outlook",
+        "unit": "",
+        "scope": "先进制程与终端需求",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "target_period",
+        "sources": [
+          {
+            "id": "eco_tsmc_demand",
+            "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/eba4fac72873bf546b669bd2b5d973df5c93215d/TSMC%203Q26%20Transcript.pdf#page=4",
+            "published_at": "2026-10-15"
+          }
+        ]
+      },
+      "payload": {
+        "id": "demand",
+        "label": "先进制程与终端需求",
+        "type": "text",
+        "value": null,
+        "summary": "预计第四季度先进制程需求持续强劲、2 纳米快速放量；AI 需求仍高于供给能力；消费及价格敏感市场受零部件涨价与经济不确定性影响，公司对 2027 年规划审慎。全年美元收入增长预计约 44%。",
+        "prior_guidance": "",
+        "period": "2026 Q4",
+        "issued_at": "2026-10-15",
+        "speaker": "董事长兼 CEO 魏哲家",
+        "kind": "管理层展望",
+        "evidence_type": "direct",
+        "source_ids": [
+          "eco_tsmc_demand"
+        ],
+        "location": "业绩会 p4 · fourth quarter 2026 outlook；p15 问答 AI 需求。"
+      },
+      "evidence_ids": [
+        "e-1bdd017a2a3cdd33cdbbdc9582750808f1f785dc59bb969167f448182e9ea70e"
+      ],
+      "id": "b1ee5524a5c76807076b2dc9602b3a8c1935ea4a8b82c5f9a91e8ce260d6b263"
     }
   },
   "supporting": {
