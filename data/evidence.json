@@ -11240,5 +11240,376 @@
     "mode": "verified",
     "record_hash": "b7dbffe973e5d9e1aa814218a212af0bcf7f43d101dc5b13157a65846d6ce273",
     "id": "e-f9a2d75a638bf47fc47ad482d34ce288592e8bf601114a1d5d469026ad204608"
+  },
+  "e-43b3a59e09f4f06d7b67c0b334a53de7f9b8a18148abe34f2611f97e941992f8": {
+    "measurement": "revenue",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "集团收入",
+    "values": {
+      "current": 46720,
+      "previous": 33100,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 46.72,
+        "scale": 1000,
+        "source_unit": "USD billions",
+        "period": "3Q26",
+        "locator": "财报第 1 页 · third quarter revenue was $46.72 billion",
+        "source_id": "eco_tsmc_guide"
+      },
+      {
+        "field": "previous",
+        "value": 33.1,
+        "scale": 1000,
+        "source_unit": "USD billions",
+        "period": "3Q25",
+        "locator": "3Q25 管理报告第 1 页 · Net Revenue (US$ billions)",
+        "source_id": "eco_tsmc_prior_revenue"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-16T06:06:51.615Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_tsmc_guide",
+        "url": "https://pr.tsmc.com/system/files/newspdf/attachment/70d8a93214795fa88f83fb47e0e45e7b0435e52b/3Q26%20%28E%29_with%20gudiance_final_wmn.pdf#page=1",
+        "sha256": "83aaccc5f574668e4e61b020768fe9e1873bd359bcf1fab81106122fffc7b7e0",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-16T06:06:51.174Z",
+        "reviewed_at": "2026-10-16T06:06:51.174Z",
+        "status": "read",
+        "locator": "第 1 页正文及 fourth quarter 2026 outlook",
+        "excerpt": "In US dollars, third quarter revenue was $46.72 billion, which increased 41.2% year-over-year ... Revenue is expected to be between US$52.3 billion and US$54.3 billion; And, based on the exchange rate assumption of 1 US dollar to 31.8 NT dollars, Gross profit margin is expected to be between 65% and 67%; Operating profit margin is expected to be between 56.5% and 58.5%."
+      },
+      {
+        "source_id": "eco_tsmc_prior_revenue",
+        "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2025-10/90cb476be2e8406ba477c417a552d36d632db5c3/3Q25ManagementReport.pdf#page=1",
+        "sha256": "f4642c936a33cefaf91c6c7d8d16f0696e91ea17430911f51c20d6f340462ccc",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-16T06:06:51.615Z",
+        "reviewed_at": "2026-10-16T06:06:51.615Z",
+        "status": "read",
+        "locator": "3Q25 管理报告第 1 页 Net Revenue (US$ billions)，3Q25 列",
+        "excerpt": "Net Revenue (US$ billions) 33.10 30.07 23.50 10.1% 40.8% (3Q25 | 2Q25 | 3Q24)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "fdf322f9bc819627f36a5cca2b63adab2311e4cc447ab5699d560adde5e55a0c",
+    "id": "e-43b3a59e09f4f06d7b67c0b334a53de7f9b8a18148abe34f2611f97e941992f8"
+  },
+  "e-e632c1390d148ee5d4384ebd68a24ab3553c10b6ce92fe1a3be4f7e7ed08c725": {
+    "measurement": "operating_profit",
+    "unit": "TWDb",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "集团营业利润",
+    "values": {
+      "current": 876.445,
+      "previous": 500.685,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 876445,
+        "scale": 0.001,
+        "source_unit": "TWD millions",
+        "period": "3Q26",
+        "locator": "财报第 2 页 · Income from operations · 3Q26",
+        "source_id": "eco_tsmc"
+      },
+      {
+        "field": "previous",
+        "value": 500685,
+        "scale": 0.001,
+        "source_unit": "TWD millions",
+        "period": "3Q25",
+        "locator": "财报第 2 页 · Income from operations · 3Q25",
+        "source_id": "eco_tsmc"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-16T06:06:50.689Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_tsmc",
+        "url": "https://pr.tsmc.com/system/files/newspdf/attachment/70d8a93214795fa88f83fb47e0e45e7b0435e52b/3Q26%20%28E%29_with%20gudiance_final_wmn.pdf#page=2",
+        "sha256": "83aaccc5f574668e4e61b020768fe9e1873bd359bcf1fab81106122fffc7b7e0",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-16T06:06:50.689Z",
+        "reviewed_at": "2026-10-16T06:06:50.689Z",
+        "status": "read",
+        "locator": "第 2 页 consolidated results 表（Unit: NT$ million），3Q26 / 3Q25 列",
+        "excerpt": "Income from operations 876,445 500,685 75.0 766,603 14.3 (3Q26 | 3Q25 | YoY % | 2Q26 | QoQ %)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "faf27b8d5b2930a919788db6fb458c2397c4515defe36d4c1444f88806c36eb3",
+    "id": "e-e632c1390d148ee5d4384ebd68a24ab3553c10b6ce92fe1a3be4f7e7ed08c725"
+  },
+  "e-338e1f6f03978f4bbe4b0643fd4b87b95fdabef20a19c6c746165048a268c81e": {
+    "measurement": "capex",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "集团资本开支",
+    "values": {
+      "current": 13840,
+      "previous": 9700,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 13.84,
+        "scale": 1000,
+        "source_unit": "USD billions",
+        "period": "3Q26",
+        "locator": "3Q26 管理报告第 5 页 · V. Capital Expenditures",
+        "source_id": "eco_tsmc_call"
+      },
+      {
+        "field": "previous",
+        "value": 9.7,
+        "scale": 1000,
+        "source_unit": "USD billions",
+        "period": "3Q25",
+        "locator": "3Q25 管理报告第 5 页 · V. Capital Expenditures",
+        "source_id": "eco_tsmc_prior"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-16T06:06:52.624Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_tsmc_call",
+        "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/f83780000ddc0c3b48e57a87eab6814c4ab35058/3Q26%20ManagementReport.pdf#page=5",
+        "sha256": "27b5b92d05207bf662756edfbe72494c5f34a007a79306ae040d957886b411d2",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-16T06:06:52.155Z",
+        "reviewed_at": "2026-10-16T06:06:52.155Z",
+        "status": "read",
+        "locator": "3Q26 管理报告第 5 页 V. Capital Expenditures",
+        "excerpt": "Capital expenditures for TSMC on a consolidated basis totaled US$13.84 billion in 3Q26. (in US$ billions) Capital Expenditures 13.84 15.70 11.10 40.64 (3Q26 | 2Q26 | 1Q26 | YTD)"
+      },
+      {
+        "source_id": "eco_tsmc_prior",
+        "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2025-10/90cb476be2e8406ba477c417a552d36d632db5c3/3Q25ManagementReport.pdf#page=5",
+        "sha256": "f4642c936a33cefaf91c6c7d8d16f0696e91ea17430911f51c20d6f340462ccc",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-16T06:06:52.624Z",
+        "reviewed_at": "2026-10-16T06:06:52.624Z",
+        "status": "read",
+        "locator": "3Q25 管理报告第 5 页 V. Capital Expenditures",
+        "excerpt": "Capital expenditures for TSMC on a consolidated basis totaled US$9.70 billion in 3Q25."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "ba43ac2f6ec22fbc2667e2b3203d4ded7d1b073d797061cc660e0e7e31fc1f03",
+    "id": "e-338e1f6f03978f4bbe4b0643fd4b87b95fdabef20a19c6c746165048a268c81e"
+  },
+  "e-52fc78f6dd2e9171e45b928c2930e9c376e55e12b67f02973dd2c4eedcabea1b": {
+    "measurement": "ocf",
+    "unit": "TWDb",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "集团经营现金流",
+    "values": {
+      "current": 919.77,
+      "previous": 426.83,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 919.77,
+        "scale": 1,
+        "source_unit": "TWD billions",
+        "period": "3Q26",
+        "locator": "3Q26 管理报告第 5 页 · Net Operating Sources/(Uses)",
+        "source_id": "eco_tsmc_ocf"
+      },
+      {
+        "field": "previous",
+        "value": 426.83,
+        "scale": 1,
+        "source_unit": "TWD billions",
+        "period": "3Q25",
+        "locator": "3Q25 管理报告第 5 页 · Net Operating Sources/(Uses)",
+        "source_id": "eco_tsmc_prior_ocf"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-16T06:06:53.577Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_tsmc_ocf",
+        "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/f83780000ddc0c3b48e57a87eab6814c4ab35058/3Q26%20ManagementReport.pdf#page=5",
+        "sha256": "27b5b92d05207bf662756edfbe72494c5f34a007a79306ae040d957886b411d2",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-16T06:06:53.112Z",
+        "reviewed_at": "2026-10-16T06:06:53.112Z",
+        "status": "read",
+        "locator": "3Q26 管理报告第 5 页 IV-1 Quarterly Cash Flow Analysis（In NT$ billions）",
+        "excerpt": "Net Operating Sources/(Uses) 919.77 783.36 426.83 (3Q26 | 2Q26 | 3Q25)"
+      },
+      {
+        "source_id": "eco_tsmc_prior_ocf",
+        "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2025-10/90cb476be2e8406ba477c417a552d36d632db5c3/3Q25ManagementReport.pdf#page=5",
+        "sha256": "f4642c936a33cefaf91c6c7d8d16f0696e91ea17430911f51c20d6f340462ccc",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-16T06:06:53.577Z",
+        "reviewed_at": "2026-10-16T06:06:53.577Z",
+        "status": "read",
+        "locator": "3Q25 管理报告第 5 页 IV-1 Quarterly Cash Flow Analysis（In NT$ billions）",
+        "excerpt": "Net Operating Sources/(Uses) 426.83 497.07 391.99 (3Q25 | 2Q25 | 3Q24)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "13567ecadaf93d84ed4737bb4de74e68a0ffe9955c1c242672e7e84aed86b4f5",
+    "id": "e-52fc78f6dd2e9171e45b928c2930e9c376e55e12b67f02973dd2c4eedcabea1b"
+  },
+  "e-73dc4bcc7c619de0cfa66e220559ee38952fc2d15069f95bd9c88bf4d9067b6f": {
+    "measurement": "revenue",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "target_period",
+    "accounting_basis": "as_disclosed",
+    "scope": "集团收入",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": "523–543 亿美元",
+      "summary": "毛利率 65%–67%，营业利润率 56.5%–58.5%。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-16T06:06:51.174Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_tsmc_guide",
+        "url": "https://pr.tsmc.com/system/files/newspdf/attachment/70d8a93214795fa88f83fb47e0e45e7b0435e52b/3Q26%20%28E%29_with%20gudiance_final_wmn.pdf#page=1",
+        "sha256": "83aaccc5f574668e4e61b020768fe9e1873bd359bcf1fab81106122fffc7b7e0",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-16T06:06:51.174Z",
+        "reviewed_at": "2026-10-16T06:06:51.174Z",
+        "status": "read",
+        "locator": "第 1 页正文及 fourth quarter 2026 outlook",
+        "excerpt": "In US dollars, third quarter revenue was $46.72 billion, which increased 41.2% year-over-year ... Revenue is expected to be between US$52.3 billion and US$54.3 billion; And, based on the exchange rate assumption of 1 US dollar to 31.8 NT dollars, Gross profit margin is expected to be between 65% and 67%; Operating profit margin is expected to be between 56.5% and 58.5%."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "2dbdb881d0b39326ba956b8c7cbb79f877cff99cea190dd5e58deff856e4ba6a",
+    "id": "e-73dc4bcc7c619de0cfa66e220559ee38952fc2d15069f95bd9c88bf4d9067b6f"
+  },
+  "e-a74f492ecb5a8fb78029f5bfb745d79a34b91d7a9fc76c7c4123e40af6cdae07": {
+    "measurement": "outlook",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "target_period",
+    "accounting_basis": "as_disclosed",
+    "scope": "集团资本预算",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": "600–640 亿美元",
+      "summary": "重申全年预算；本次未给出用途分配。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-16T06:06:54.143Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_tsmc_budget",
+        "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/eba4fac72873bf546b669bd2b5d973df5c93215d/TSMC%203Q26%20Transcript.pdf#page=4",
+        "sha256": "bb1d3aeadac9f44189d9d36aa410b0c1c458f9f8b3d8aa63ecc71e6813c5f030",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-16T06:06:54.143Z",
+        "reviewed_at": "2026-10-16T06:06:54.143Z",
+        "status": "read",
+        "locator": "业绩会文字稿第 4 页，CFO Wendell Huang",
+        "excerpt": "we reiterate our full year 2026 capital budget to be between USD60 billion and USD64 billion."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "682fb607ede39bca67912cd9c7d11a2c3c0c1e318667b6b036a6310f6acb84ed",
+    "id": "e-a74f492ecb5a8fb78029f5bfb745d79a34b91d7a9fc76c7c4123e40af6cdae07"
+  },
+  "e-1bdd017a2a3cdd33cdbbdc9582750808f1f785dc59bb969167f448182e9ea70e": {
+    "measurement": "outlook",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "target_period",
+    "accounting_basis": "as_disclosed",
+    "scope": "先进制程与终端需求",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "预计第四季度先进制程需求持续强劲、2 纳米快速放量；AI 需求仍高于供给能力；消费及价格敏感市场受零部件涨价与经济不确定性影响，公司对 2027 年规划审慎。全年美元收入增长预计约 44%。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-16T06:06:54.631Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_tsmc_demand",
+        "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/eba4fac72873bf546b669bd2b5d973df5c93215d/TSMC%203Q26%20Transcript.pdf#page=4",
+        "sha256": "bb1d3aeadac9f44189d9d36aa410b0c1c458f9f8b3d8aa63ecc71e6813c5f030",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-16T06:06:54.631Z",
+        "reviewed_at": "2026-10-16T06:06:54.631Z",
+        "status": "read",
+        "locator": "业绩会文字稿第 4 页（C.C. Wei 展望）及第 15 页问答",
+        "excerpt": "Moving into fourth quarter 2026, we expect our business to be supported by continued strong demand for our leading-edge process technologies, including the steep ramp-up of our 2-nanometer technology. ... consumer and price-sensitive end market segments are being challenged due to the impact of rising component prices and more economic uncertainties. As such, we are being prudent in our business planning going into 2027 ... we now expect our full year 2026 revenue growth to be around 44% year-over-year in US dollar terms. (p15) the demand actually is still far above our capability today to supply."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "b1ee5524a5c76807076b2dc9602b3a8c1935ea4a8b82c5f9a91e8ce260d6b263",
+    "id": "e-1bdd017a2a3cdd33cdbbdc9582750808f1f785dc59bb969167f448182e9ea70e"
   }
 }
