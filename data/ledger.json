@@ -2,8 +2,8 @@
   "format_version": 1,
   "document": {
     "schema_version": 2,
-    "revision": "2026-10-16-34f9645580",
-    "updated_at": "2026-10-16T06:07:26.112Z",
+    "revision": "2026-10-17-b8c977da13",
+    "updated_at": "2026-10-17T00:27:22.074Z",
     "last_successful_check_at": "2026-09-20T23:50:00Z",
     "last_attempt_at": "2026-09-20T23:50:00Z",
     "financial_period": "FY2026 Q4",
@@ -1923,6 +1923,12 @@
       "产业链指引和管理层展望按原披露日期及目标期间记录，文字为中文摘要；同比由原始金额计算，百分点与百分比区分。"
     ],
     "check_log": [
+      {
+        "at": "2026-10-17T00:27:22.074Z",
+        "status": "failed",
+        "scope": "quote",
+        "text": "常规收盘更新未完成，保留上次行情。"
+      },
       {
         "at": "2026-10-16T06:07:26.112Z",
         "status": "success",
