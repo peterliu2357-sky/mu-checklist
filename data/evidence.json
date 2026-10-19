@@ -11611,5 +11611,89 @@
     "mode": "verified",
     "record_hash": "b1ee5524a5c76807076b2dc9602b3a8c1935ea4a8b82c5f9a91e8ce260d6b263",
     "id": "e-1bdd017a2a3cdd33cdbbdc9582750808f1f785dc59bb969167f448182e9ea70e"
+  },
+  "e-b8dcbdaf4607199c841452523686fc09f0c7bcd551f1b7e21a081e48a675eec9": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "DDR5 16Gb (2Gx8) 4800/5600 现货",
+    "values": {
+      "current": 60.6,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 60.6,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-10-16",
+        "locator": "DRAM Spot Price · DDR5 16Gb (2Gx8) 4800/5600 · Session Average",
+        "source_id": "dram_spot"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-page review; raw value times scale checked against candidate",
+      "at": "2026-10-19T00:32:12.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "dram_spot",
+        "url": "https://www.dramexchange.com/",
+        "sha256": "01b3d353ae2971501e1fcba6362d0bff6a9d48509f513eef73ac69059f979140",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-19T00:31:47.388Z",
+        "reviewed_at": "2026-10-19T00:31:47.388Z",
+        "status": "read",
+        "locator": "DRAM Spot Price table, Last Update: Oct.16 2026 18:10 (GMT+8)",
+        "excerpt": "DDR5 16Gb (2Gx8) 4800/5600 | Daily High 71.00 | Daily Low 46.00 | Session Average 60.600 | Session Change 0.28 % (up)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "2237f248fba62ec2917b5a32f54be9d0b132002ac55422fb7dc0c7e4fe061fbf",
+    "id": "e-b8dcbdaf4607199c841452523686fc09f0c7bcd551f1b7e21a081e48a675eec9"
+  },
+  "e-249efcea08a4f22a8a952d13d4874638bdde7daeed3009578999eb356d3d5747": {
+    "measurement": "disclosure_calendar",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "calendar.amazon_2026_q3",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "manual review of official Amazon investor relations press release, cross-checked with the IR event feed",
+      "at": "2026-10-19T00:32:12.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "calendar_amazon_20261029",
+        "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-to-Webcast-Third-Quarter-2026-Financial-Results-Conference-Call/default.aspx",
+        "sha256": "5077eb4de3fd021377f2244aa087e829a90a1e80679e2ed9ee96b3bf48ac34a5",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-10-19T00:31:48.696Z",
+        "reviewed_at": "2026-10-19T00:31:48.696Z",
+        "status": "read",
+        "locator": "Press release body",
+        "excerpt": "Amazon.com, Inc. (NASDAQ: AMZN) announced today that it will hold a conference call to discuss its third quarter 2026 financial results on Thursday, October 29, 2026, at 2:00 p.m. PT/5:00 p.m. ET."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "0b233760266a1d99b4fbf012ef0b5d5581a809109ea3f32562dd0853ff4c3f54",
+    "id": "e-249efcea08a4f22a8a952d13d4874638bdde7daeed3009578999eb356d3d5747"
   }
 }
