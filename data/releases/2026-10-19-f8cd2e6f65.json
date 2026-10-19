@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "scope": "batch",
+  "base_commit": "0d142ee90446223507d2aab7303691a55f82afd7",
+  "base_revision": "2026-10-19-18668101d6",
+  "base_sha256": "c7c5f730d839e2f64b814400cc8a1f01a9dbe19180442ca40862c8d6bbb9ec02",
+  "catalog_sha256": "cf9a7d5c94ba96dcb6cab6d254d2be094be9f2ed7f74f2141ebf81c694efb985",
+  "created_at": "2026-10-19T00:30:58.862Z",
+  "completed_at": "2026-10-19T00:32:12.500Z",
+  "state": "verified",
+  "targets": [
+    "industry",
+    "calendar"
+  ],
+  "coverage": [
+    {
+      "key": "industry",
+      "status": "verified",
+      "evidence": [
+        "dram_spot",
+        "index_tf_news_20261018",
+        "nanya_monthly"
+      ],
+      "reviewed_at": "2026-10-19T00:32:12.000Z",
+      "latest_disclosure": {
+        "url": "https://www.dramexchange.com/",
+        "published_at": "2026-10-16"
+      },
+      "reason": "DRAMeXchange 10-16 18:10 收盘场 DDR5 16Gb 4800/5600 现货均价 60.600 美元，加入趋势点。TrendForce News 列表 10-07 之后无新的现货周报，DDR4 与 512Gb TLC 保持 10-06/10-05 读数；南亚科官方月营收表 9 月仍为空白；韩国 10 月整月出口尚未发布。其他行业行无新的原始数据。",
+      "finding": "new_disclosure"
+    },
+    {
+      "key": "calendar",
+      "status": "verified",
+      "evidence": [
+        "calendar_amazon_20261029",
+        "calendar_index_oracle_20261018",
+        "calendar_index_nvidia_20261018",
+        "calendar_index_micron_20261018",
+        "calendar_index_tsmc_20261018"
+      ],
+      "reviewed_at": "2026-10-19T00:32:12.000Z",
+      "latest_disclosure": {
+        "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-to-Webcast-Third-Quarter-2026-Financial-Results-Conference-Call/default.aspx",
+        "published_at": "2026-10-15"
+      },
+      "reason": "五家待确认公司官方日程均已检查：Amazon 公告 10 月 29 日 2:00pm PT 召开 2026 Q3 业绩电话会；Oracle、NVIDIA、美光与台积电尚未公布下一财报日期，保持待确认；未发现漏处理的财报。"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "dram_spot",
+      "url": "https://www.dramexchange.com/",
+      "sha256": "01b3d353ae2971501e1fcba6362d0bff6a9d48509f513eef73ac69059f979140",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-19T00:31:47.388Z",
+      "reviewed_at": "2026-10-19T00:31:47.388Z",
+      "status": "read"
+    },
+    {
+      "source_id": "nanya_monthly",
+      "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
+      "sha256": "6e9f960a00d2f7075673973aa4eb6b253d3723aa57cf4ef4df5aed4d60cc5495",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-19T00:31:47.806Z",
+      "reviewed_at": "2026-10-19T00:31:47.806Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_tf_news_20261018",
+      "url": "https://www.trendforce.com/news/wp-json/wp/v2/posts?after=2026-10-08T00:00:00&per_page=50&_fields=id,date,link,title",
+      "sha256": "4ebae182473c74e53257a8fc518c715fc246ef66f19ce5ff7db9105d3ebc9fb4",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-19T00:31:48.265Z",
+      "reviewed_at": "2026-10-19T00:31:48.265Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_amazon_20261029",
+      "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-to-Webcast-Third-Quarter-2026-Financial-Results-Conference-Call/default.aspx",
+      "sha256": "5077eb4de3fd021377f2244aa087e829a90a1e80679e2ed9ee96b3bf48ac34a5",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-10-19T00:31:48.696Z",
+      "reviewed_at": "2026-10-19T00:31:48.696Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_oracle_20261018",
+      "url": "https://investor.oracle.com/feed/PressRelease.svc/GetPressReleaseList?LanguageId=1&bodyType=0&pressReleaseDateFilter=3&pageSize=12&pageNumber=0&year=-1",
+      "sha256": "f770c5d9cab1ee3f0fd76fb8af2da5c717b87ee0df61377dd7689b185bddedf8",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-19T00:31:49.112Z",
+      "reviewed_at": "2026-10-19T00:31:49.112Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_nvidia_20261018",
+      "url": "https://investor.nvidia.com/feed/PressRelease.svc/GetPressReleaseList?LanguageId=1&bodyType=0&pressReleaseDateFilter=3&pageSize=12&pageNumber=0&year=-1",
+      "sha256": "89fcdb5028c8ac3f5417188a3026ff64e2cbc8c5876d37ee1a3beed31d4ea75a",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-19T00:31:49.530Z",
+      "reviewed_at": "2026-10-19T00:31:49.530Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_micron_20261018",
+      "url": "https://investors.micron.com/feed/Event.svc/GetEventList?LanguageId=1&eventSelection=3&sortOperator=1&eventDateFilter=3&pageSize=5&pageNumber=0&year=-1",
+      "sha256": "328165c92a310eac49c17fb9fd11a3e0d141fb8239677d6f025488d9f1e577ca",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-19T00:31:49.950Z",
+      "reviewed_at": "2026-10-19T00:31:49.950Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_tsmc_20261018",
+      "url": "https://investor.tsmc.com/english/financial-calendar",
+      "sha256": "86dd1e076568088e06e171ff10f248fac606b763434a7ffaf6a9cf8c8fd815e7",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-10-19T00:31:50.372Z",
+      "reviewed_at": "2026-10-19T00:31:50.372Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [],
+  "publication_corrections": [
+    "dram_spot"
+  ],
+  "technology_reviews": [],
+  "result": "success",
+  "artifact_sha256": "4bcd01dfbd4e651cccffda1e9d9d952033ad0e9d74a8a9461abeb26e780d9728",
+  "ledger_sha256": "c880b0ffa90683de634d58473d7245fbcbbc8ab28880ec77320ca7585ebabf5d",
+  "evidence_sha256": "55e6494174a53cdd3479446c1bbdbe0a85537eefc5e976f7c455de3cce622ed8"
+}
