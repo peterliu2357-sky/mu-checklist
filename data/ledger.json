@@ -2,8 +2,8 @@
   "format_version": 1,
   "document": {
     "schema_version": 2,
-    "revision": "2026-10-17-b8c977da13",
-    "updated_at": "2026-10-17T00:27:22.074Z",
+    "revision": "2026-10-19-18668101d6",
+    "updated_at": "2026-10-19T00:22:52.340Z",
     "last_successful_check_at": "2026-09-20T23:50:00Z",
     "last_attempt_at": "2026-09-20T23:50:00Z",
     "financial_period": "FY2026 Q4",
@@ -1512,6 +1512,69 @@
         "checked_at": "2026-10-15",
         "type": "原始资料",
         "locator": "Note 5 Receivables / Note 6 Inventories（p76）；Note 16 Revenue and Customer Contract Liabilities（p88）；Item 1 Product Technologies（p7）；本期列为 2026-09-03"
+      },
+      "index_tf_press_20261018": {
+        "label": "TrendForce Press Center 入口",
+        "short_label": "TrendForce 新闻稿",
+        "url": "https://www.trendforce.com/presscenter/",
+        "published_at": null,
+        "checked_at": "2026-10-19",
+        "type": "行业官方入口",
+        "locator": "Press Releases 列表（最新至 10-15）；10-07 之后无内存价格新闻稿。"
+      },
+      "index_tf_insights_20261018": {
+        "label": "TrendForce Insights 入口",
+        "short_label": "TrendForce Insights",
+        "url": "https://insights.trendforce.com/",
+        "published_at": null,
+        "checked_at": "2026-10-19",
+        "type": "行业官方入口",
+        "locator": "文章归档（最新至 10-15）；最新 Weekly Radar 仍为 005（10-12）。"
+      },
+      "index_dramx_20261018": {
+        "label": "DRAMeXchange 首页报价",
+        "short_label": "DRAMeXchange",
+        "url": "https://www.dramexchange.com/",
+        "published_at": null,
+        "checked_at": "2026-10-19",
+        "type": "行业官方入口",
+        "locator": "DRAM Spot Price · Last Update Oct.16 2026 18:10 (GMT+8)。"
+      },
+      "index_micron_news_20261018": {
+        "label": "Micron 新闻稿入口",
+        "short_label": "Micron 新闻稿",
+        "url": "https://investors.micron.com/news/default.aspx",
+        "published_at": null,
+        "checked_at": "2026-10-19",
+        "type": "公司官方入口",
+        "locator": "Press releases 列表（最新至 09-30）。"
+      },
+      "index_samsung_news_20261018": {
+        "label": "Samsung Newsroom 入口",
+        "short_label": "Samsung Newsroom",
+        "url": "https://news.samsung.com/global/",
+        "published_at": null,
+        "checked_at": "2026-10-19",
+        "type": "公司官方入口",
+        "locator": "Latest news（最新至 10-15）。"
+      },
+      "index_skhynix_news_20261018": {
+        "label": "SK hynix Newsroom 入口",
+        "short_label": "SK hynix Newsroom",
+        "url": "https://news.skhynix.com/en/",
+        "published_at": null,
+        "checked_at": "2026-10-19",
+        "type": "公司官方入口",
+        "locator": "Latest news（最新至 10-16 OCP Global Summit 2026 展会稿）。"
+      },
+      "index_samsung_ir_20261018": {
+        "label": "Samsung IR 财报发布页",
+        "short_label": "Samsung IR 财报",
+        "url": "https://www.samsung.com/global/ir/financial-information/earnings-release/",
+        "published_at": null,
+        "checked_at": "2026-10-19",
+        "type": "公司官方入口",
+        "locator": "Earnings Release · 2026 · 3rd Quarter 条目（资料尚未发布）。"
       }
     },
     "metrics": [
@@ -1923,6 +1986,12 @@
       "产业链指引和管理层展望按原披露日期及目标期间记录，文字为中文摘要；同比由原始金额计算，百分点与百分比区分。"
     ],
     "check_log": [
+      {
+        "at": "2026-10-19T00:22:52.340Z",
+        "status": "success",
+        "scope": "discovery",
+        "text": "核查范围：discovery；完成 5 / 5 项。"
+      },
       {
         "at": "2026-10-17T00:27:22.074Z",
         "status": "failed",
@@ -2552,74 +2621,6 @@
           "processed_at": "2026-09-28T00:25:00Z"
         },
         {
-          "key": "industry",
-          "status": "verified",
-          "finding": "new_disclosure",
-          "checked_at": "2026-10-15T09:05:09.547Z",
-          "attempted_at": "2026-10-15T09:05:09.965Z",
-          "latest_disclosure": {
-            "url": "https://insights.trendforce.com/p/weekly-radar-005",
-            "published_at": "2026-10-12"
-          },
-          "source_ids": [
-            "index_tf_press_20261015",
-            "index_tf_insights_20261015",
-            "index_dramx_20261015"
-          ],
-          "reason": "已检查三项行业入口：TrendForce Insights Weekly Radar 005（10-12）企业 SSD 交付周期仍为 16 周（均衡 8 周），读数不变但期间更新，另行发布行业更新；TrendForce 新闻稿 10-14 为 CSP 资本开支，非站内追踪行，10-07 之后未见新的现货周报；DRAMeXchange 10-15 页面为 14:40 日内场次，DDR5 待 18:10 场次后随行业更新一并处理。南亚科 9 月营收尚未公布。",
-          "processed_at": null
-        },
-        {
-          "key": "technology:facilities",
-          "status": "unchanged",
-          "finding": "unchanged",
-          "checked_at": "2026-10-15T09:05:09.547Z",
-          "attempted_at": "2026-10-15T09:05:09.965Z",
-          "latest_disclosure": {
-            "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Fiscal-Fourth-Quarter-and-Full-Year-2026-Results/default.aspx",
-            "published_at": "2026-09-30"
-          },
-          "source_ids": [
-            "index_micron_news_20261015"
-          ],
-          "reason": "Micron 官方新闻入口最新仍为 09-30 FQ4 财报，之后无新的工厂里程碑。",
-          "processed_at": null
-        },
-        {
-          "key": "technology:processes",
-          "status": "unchanged",
-          "finding": "unchanged",
-          "checked_at": "2026-10-15T09:05:09.547Z",
-          "attempted_at": "2026-10-15T09:05:09.965Z",
-          "latest_disclosure": {
-            "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Fiscal-Fourth-Quarter-and-Full-Year-2026-Results/default.aspx",
-            "published_at": "2026-09-30"
-          },
-          "source_ids": [
-            "index_micron_news_20261015"
-          ],
-          "reason": "Micron 官方入口 09-30 之后无新的制程节点、良率或爬坡披露。",
-          "processed_at": null
-        },
-        {
-          "key": "technology:products",
-          "status": "unchanged",
-          "finding": "unchanged",
-          "checked_at": "2026-10-15T09:05:09.547Z",
-          "attempted_at": "2026-10-15T09:05:09.965Z",
-          "latest_disclosure": {
-            "url": "https://news.skhynix.com/en/research-inside-ep2-6/",
-            "published_at": "2026-10-14"
-          },
-          "source_ids": [
-            "index_micron_news_20261015",
-            "index_samsung_news_20261015",
-            "index_skhynix_news_20261015"
-          ],
-          "reason": "三家官方入口无新的 DDR5 RDIMM、HBM4/HBM4E 阶段或规格变化；SK hynix 10-14 为 3D FeNAND 研究介绍，非产品阶段；Samsung 10-08 之后为非存储新闻。",
-          "processed_at": null
-        },
-        {
           "key": "company:micron",
           "status": "verified",
           "finding": "new_disclosure",
@@ -2636,19 +2637,88 @@
           "processed_at": "2026-10-15T11:35:03.370Z"
         },
         {
+          "key": "industry",
+          "status": "verified",
+          "finding": "new_disclosure",
+          "checked_at": "2026-10-19T00:22:51.000Z",
+          "attempted_at": "2026-10-19T00:22:52.340Z",
+          "latest_disclosure": {
+            "url": "https://www.dramexchange.com/",
+            "published_at": "2026-10-16"
+          },
+          "source_ids": [
+            "index_tf_press_20261018",
+            "index_tf_insights_20261018",
+            "index_dramx_20261018"
+          ],
+          "reason": "已检查三项行业入口：DRAMeXchange 10-16 18:10 收盘场 DDR5 16Gb 4800/5600 现货有新读数，另行发布行业更新；TrendForce 新闻稿 10-07 之后无内存价格新闻稿，新闻区 10-07 之后无新的现货周报；Insights 最新 Weekly Radar 仍为 005（10-12）。南亚科 9 月营收尚未公布。",
+          "processed_at": null
+        },
+        {
+          "key": "technology:facilities",
+          "status": "unchanged",
+          "finding": "unchanged",
+          "checked_at": "2026-10-19T00:22:51.000Z",
+          "attempted_at": "2026-10-19T00:22:52.340Z",
+          "latest_disclosure": {
+            "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Fiscal-Fourth-Quarter-and-Full-Year-2026-Results/default.aspx",
+            "published_at": "2026-09-30"
+          },
+          "source_ids": [
+            "index_micron_news_20261018"
+          ],
+          "reason": "Micron 官方新闻入口最新仍为 09-30 FQ4 财报，之后无新的工厂里程碑。",
+          "processed_at": null
+        },
+        {
+          "key": "technology:processes",
+          "status": "unchanged",
+          "finding": "unchanged",
+          "checked_at": "2026-10-19T00:22:51.000Z",
+          "attempted_at": "2026-10-19T00:22:52.340Z",
+          "latest_disclosure": {
+            "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Fiscal-Fourth-Quarter-and-Full-Year-2026-Results/default.aspx",
+            "published_at": "2026-09-30"
+          },
+          "source_ids": [
+            "index_micron_news_20261018"
+          ],
+          "reason": "Micron 官方入口 09-30 之后无新的制程节点、良率或爬坡披露。",
+          "processed_at": null
+        },
+        {
+          "key": "technology:products",
+          "status": "unchanged",
+          "finding": "unchanged",
+          "checked_at": "2026-10-19T00:22:51.000Z",
+          "attempted_at": "2026-10-19T00:22:52.340Z",
+          "latest_disclosure": {
+            "url": "https://news.skhynix.com/en/ocp-global-summit-2026/",
+            "published_at": "2026-10-16"
+          },
+          "source_ids": [
+            "index_micron_news_20261018",
+            "index_samsung_news_20261018",
+            "index_skhynix_news_20261018"
+          ],
+          "reason": "三家官方入口无新的 DDR5 RDIMM、HBM4/HBM4E 阶段或规格变化；SK hynix 10-16 OCP 展会稿仅展示既有 HBM4/HBM4E 与 DDR5 RDIMM 产品，未披露新阶段；Samsung 10-08 之后为非存储新闻。",
+          "processed_at": null
+        },
+        {
           "key": "company:samsung",
           "status": "verified",
           "finding": "new_disclosure",
-          "checked_at": "2026-10-15T09:05:09.547Z",
-          "attempted_at": "2026-10-15T09:05:09.965Z",
+          "checked_at": "2026-10-19T00:22:51.000Z",
+          "attempted_at": "2026-10-19T00:22:52.340Z",
           "latest_disclosure": {
             "url": "https://news.samsung.com/global/samsung-electronics-announces-earnings-guidance-for-third-quarter-2026",
             "published_at": "2026-10-08"
           },
           "source_ids": [
-            "index_samsung_news_20261015"
+            "index_samsung_ir_20261018",
+            "index_samsung_news_20261018"
           ],
-          "reason": "三星 10-08 之后官方入口无完整 2026 Q3 季报；10-08 业绩预告不含存储收入或 DS 利润，继续待完整季报处理。",
+          "reason": "三星 IR 财报页 2026 Q3 条目资料尚未发布，Newsroom 10-08 之后无完整季报；10-08 业绩预告不含存储收入或 DS 利润，继续待 10-29 完整季报处理。",
           "processed_at": null
         }
       ],
