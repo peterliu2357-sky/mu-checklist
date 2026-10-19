@@ -1,0 +1,193 @@
+{
+  "version": 1,
+  "scope": "discovery",
+  "base_commit": "1b0cb4c7f71385f3b9047cbcb5913ed5bab2831f",
+  "base_revision": "2026-10-17-b8c977da13",
+  "base_sha256": "b95a42b041b8c7b247d93689578e6b0137749be824c3a469e73ed5a9ec29864c",
+  "catalog_sha256": "fe7c89afe4f27fc03b955405bdd07dffa3509b01db302b6e9c3c20e19aff4c3f",
+  "created_at": "2026-10-19T00:14:57.179Z",
+  "completed_at": "2026-10-19T00:22:52.340Z",
+  "state": "verified",
+  "targets": [
+    "industry",
+    "technology:facilities",
+    "technology:processes",
+    "technology:products",
+    "company:samsung"
+  ],
+  "coverage": [
+    {
+      "key": "industry",
+      "status": "verified",
+      "evidence": [
+        "index_tf_press_20261018",
+        "index_tf_insights_20261018",
+        "index_dramx_20261018"
+      ],
+      "reviewed_at": "2026-10-19T00:22:51.000Z",
+      "latest_disclosure": {
+        "url": "https://www.dramexchange.com/",
+        "published_at": "2026-10-16"
+      },
+      "reason": "已检查三项行业入口：DRAMeXchange 10-16 18:10 收盘场 DDR5 16Gb 4800/5600 现货有新读数，另行发布行业更新；TrendForce 新闻稿 10-07 之后无内存价格新闻稿，新闻区 10-07 之后无新的现货周报；Insights 最新 Weekly Radar 仍为 005（10-12）。南亚科 9 月营收尚未公布。",
+      "finding": "new_disclosure"
+    },
+    {
+      "key": "technology:facilities",
+      "status": "unchanged",
+      "evidence": [
+        "index_micron_news_20261018"
+      ],
+      "reviewed_at": "2026-10-19T00:22:51.000Z",
+      "latest_disclosure": {
+        "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Fiscal-Fourth-Quarter-and-Full-Year-2026-Results/default.aspx",
+        "published_at": "2026-09-30"
+      },
+      "reason": "Micron 官方新闻入口最新仍为 09-30 FQ4 财报，之后无新的工厂里程碑。",
+      "finding": "unchanged"
+    },
+    {
+      "key": "technology:processes",
+      "status": "unchanged",
+      "evidence": [
+        "index_micron_news_20261018"
+      ],
+      "reviewed_at": "2026-10-19T00:22:51.000Z",
+      "latest_disclosure": {
+        "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Fiscal-Fourth-Quarter-and-Full-Year-2026-Results/default.aspx",
+        "published_at": "2026-09-30"
+      },
+      "reason": "Micron 官方入口 09-30 之后无新的制程节点、良率或爬坡披露。",
+      "finding": "unchanged"
+    },
+    {
+      "key": "technology:products",
+      "status": "unchanged",
+      "evidence": [
+        "index_micron_news_20261018",
+        "index_samsung_news_20261018",
+        "index_skhynix_news_20261018"
+      ],
+      "reviewed_at": "2026-10-19T00:22:51.000Z",
+      "latest_disclosure": {
+        "url": "https://news.skhynix.com/en/ocp-global-summit-2026/",
+        "published_at": "2026-10-16"
+      },
+      "reason": "三家官方入口无新的 DDR5 RDIMM、HBM4/HBM4E 阶段或规格变化；SK hynix 10-16 OCP 展会稿仅展示既有 HBM4/HBM4E 与 DDR5 RDIMM 产品，未披露新阶段；Samsung 10-08 之后为非存储新闻。",
+      "finding": "unchanged"
+    },
+    {
+      "key": "company:samsung",
+      "status": "verified",
+      "evidence": [
+        "index_samsung_ir_20261018",
+        "index_samsung_news_20261018"
+      ],
+      "reviewed_at": "2026-10-19T00:22:51.000Z",
+      "latest_disclosure": {
+        "url": "https://news.samsung.com/global/samsung-electronics-announces-earnings-guidance-for-third-quarter-2026",
+        "published_at": "2026-10-08"
+      },
+      "reason": "三星 IR 财报页 2026 Q3 条目资料尚未发布，Newsroom 10-08 之后无完整季报；10-08 业绩预告不含存储收入或 DS 利润，继续待 10-29 完整季报处理。",
+      "finding": "new_disclosure"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "index_tf_press_20261018",
+      "url": "https://www.trendforce.com/presscenter/",
+      "sha256": "354d14662a06b0ecd2e0a6893dc074afd068df75450719f97b39293f507cd675",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-19T00:22:35.963Z",
+      "reviewed_at": "2026-10-19T00:22:35.963Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_tf_insights_20261018",
+      "url": "https://insights.trendforce.com/",
+      "sha256": "0d1bed48b13456f1622d4de593275a2956ca27dd2a214f177a9494a2b379b801",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-10-19T00:22:36.347Z",
+      "reviewed_at": "2026-10-19T00:22:36.347Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_dramx_20261018",
+      "url": "https://www.dramexchange.com/",
+      "sha256": "01b3d353ae2971501e1fcba6362d0bff6a9d48509f513eef73ac69059f979140",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-19T00:22:36.709Z",
+      "reviewed_at": "2026-10-19T00:22:36.709Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_micron_news_20261018",
+      "url": "https://investors.micron.com/news/default.aspx",
+      "sha256": "5f08d09b8bf883189ab4e56978fbc871d5291c5b7013fb0129b2d62cf8497b78",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-10-19T00:22:37.137Z",
+      "reviewed_at": "2026-10-19T00:22:37.137Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_samsung_news_20261018",
+      "url": "https://news.samsung.com/global/",
+      "sha256": "e2ee5e73b6146eaf6956a22e7c065c79385fb794c10b59704d9c738cb33cf297",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-19T00:22:37.479Z",
+      "reviewed_at": "2026-10-19T00:22:37.479Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_skhynix_news_20261018",
+      "url": "https://news.skhynix.com/en/",
+      "sha256": "244d1c9d0a9fdd32dad5e98d666d2f159ba6a24bf7c6cb741214f49170931b06",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-19T00:22:37.825Z",
+      "reviewed_at": "2026-10-19T00:22:37.825Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_samsung_ir_20261018",
+      "url": "https://www.samsung.com/global/ir/financial-information/earnings-release/",
+      "sha256": "6f565f7e8941d42eef261152102ec127f5a1dafd0641aa7a6dfe1b370e59f6b9",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-19T00:22:38.199Z",
+      "reviewed_at": "2026-10-19T00:22:38.199Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [],
+  "publication_corrections": [],
+  "technology_reviews": [
+    {
+      "id": "samsung_rdimm",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "samsung_hbm4",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "samsung_hbm4e",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    }
+  ],
+  "result": "success",
+  "artifact_sha256": "c7c5f730d839e2f64b814400cc8a1f01a9dbe19180442ca40862c8d6bbb9ec02",
+  "ledger_sha256": "e9d4b7819c15c78e034b69366290338de55235131b285079f8ca17c711c39aba",
+  "evidence_sha256": "d3853c355b423204927e97a162950be8b23eaa4f2146e6a6e15108b381261496"
+}

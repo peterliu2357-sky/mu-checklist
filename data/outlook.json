@@ -104,7 +104,7 @@
           ]
         },
         {
-          "text": "台积电 2026 Q3 收入同比 {{eco.tsmc.revenue|change}}，下季收入指引为 {{outlook.tsmc.revenue}}；管理层称 AI 需求仍高于其供给能力，同时指出消费及价格敏感市场受零部件涨价影响、对来年规划审慎，这与内存涨价向终端传导的压力一致。",
+          "text": "台积电 2026 Q3 收入同比 {{eco.tsmc.revenue|change}}，下季收入指引为 {{outlook.tsmc.revenue}}；管理层称 AI 需求仍高于其供给能力，同时指出消费及价格敏感市场受零部件涨价影响、对来年规划审慎；台积电未点名内存，但这一压力与本站内存涨价数据的方向一致。",
           "refs": [
             "eco.tsmc.revenue",
             "outlook.tsmc.revenue",
@@ -261,8 +261,8 @@
       ]
     }
   ],
-  "generated_at": "2026-10-16T06:07:45.074Z",
-  "data_revision": "2026-10-16-34f9645580",
+  "generated_at": "2026-10-19T00:23:21.834Z",
+  "data_revision": "2026-10-19-18668101d6",
   "financial_period": "FY2026 Q4",
   "cited": {
     "mu.revenue.total": {
