@@ -2,8 +2,8 @@ import market from '../lib/update-core.js';
 
 // Yahoo's daily OHLC close, never adjclose or a post-market snapshot.
 export const quoteURL='https://query1.finance.yahoo.com/v8/finance/chart/MU?range=1mo&interval=1d&events=splits';
-// 16:00 New York time on a past session date, for bars outside currentTradingPeriod.
-function closeInstant(date){const t=Date.parse(date+'T20:00:00Z');return new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'2-digit',hourCycle:'h23'}).format(new Date(t))==='16'?t:t+3600000;}
+// The regular close in New York time on a past session date, for bars outside currentTradingPeriod.
+function closeInstant(date){const hour=market.closeHour(date),t=Date.parse(date+'T'+String(hour+4).padStart(2,'0')+':00:00Z');return Number(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'2-digit',hourCycle:'h23'}).format(new Date(t)))===hour?t:t+3600000;}
 export function parseRegularClose(payload,{now=Date.now(),previousAsOf}={}){
   if(payload.chart?.error)throw new Error('Quote provider returned an error');
   const result=payload.chart?.result?.[0],meta=result?.meta,period=meta?.currentTradingPeriod?.regular;

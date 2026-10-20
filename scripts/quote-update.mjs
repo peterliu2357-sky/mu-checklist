@@ -15,7 +15,7 @@ const proposal=read(dir+'/proposal.json'),manifest=read(dir+'/manifest.json'),ev
 let payload;
 try{
   const {bytes}=await fetchSource(quoteURL);payload=JSON.parse(bytes.toString());const quote=parseRegularClose(payload,{now:Date.now(),previousAsOf:proposal.quote.as_of});
-  if(Date.parse(quote.as_of)<=Date.parse(proposal.quote.as_of)){console.log('No new completed session; existing quote retained.');process.exit(0);}
+  if(quote.date<=market.marketDate(Date.parse(proposal.quote.as_of))){console.log('No new completed session; existing quote retained.');process.exit(0);}
   const at=new Date().toISOString(),receipt=await saveCapture(dir,{source_id:sid,url:quoteURL,bytes,access:'full',at,reviewed:true,format:'source_bytes'});
   manifest.reads=[receipt];manifest.publication_corrections=[sid];
   proposal.sources[sid]={label:'Yahoo Finance MU 常规交易日线',short_label:'MU 历史行情',url:quoteURL,locator:'chart.result[0] · timestamp / indicators.quote[0].close；最近两个已完成交易日。',published_at:quote.date,checked_at:at.slice(0,10),type:'行情供应商结构化数据'};
