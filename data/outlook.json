@@ -154,7 +154,7 @@
       "title": "需要紧盯的转折信号",
       "points": [
         {
-          "text": "库存天数由 FY2026 Q3 的 {{series.mu.inventory.days@FY2026 Q3}} 回升至 {{mu.inventory.days}}，总库存环比 {{mu.inventory.total|change}}。此前自 FY2025 Q2 的 {{series.mu.inventory.days@FY2025 Q2}} 起总体下降；公司称增加含节点停产前备货及计入库存的制造激励薪酬。年报附注显示，增量主要在在制品（由 {{mu.inventory.work_in_process|previous}} 增至 {{mu.inventory.work_in_process}}）；产成品由 {{mu.inventory.finished_goods|previous}} 增至 {{mu.inventory.finished_goods}}，基数小但增速 {{mu.inventory.finished_goods|change}} 更快，需继续观察。",
+          "text": "库存天数由 FY2026 Q3 的 {{series.mu.inventory.days@FY2026 Q3}} 回升至 {{mu.inventory.days}}，总库存环比 {{mu.inventory.total|change}}。此前自 FY2025 Q2 的 {{series.mu.inventory.days@FY2025 Q2}} 起总体下降；公司称增加含节点停产前备货及计入库存的制造激励薪酬。年报附注显示，增量主要在在制品（由 {{mu.inventory.work_in_process|previous}} 增至 {{mu.inventory.work_in_process}}）；产成品由 {{mu.inventory.finished_goods|previous}} 增至 {{mu.inventory.finished_goods}}，基数小但增速 {{mu.inventory.finished_goods|change}} 更快，需继续观察。同期贸易应收增速 {{mu.inventory.receivables|change}}，低于收入增速 {{mu.revenue.total|change}}，应收占季收入由 {{mu.inventory.receivables_revenue|previous}} 降至 {{mu.inventory.receivables_revenue}}，暂未看到靠放宽账期推高出货的迹象。",
           "refs": [
             "series.mu.inventory.days@FY2026 Q3",
             "mu.inventory.days",
@@ -165,7 +165,10 @@
             "series.mu.inventory.days@FY2026 Q1",
             "series.mu.inventory.days@FY2026 Q2",
             "mu.inventory.work_in_process",
-            "mu.inventory.finished_goods"
+            "mu.inventory.finished_goods",
+            "mu.inventory.receivables",
+            "mu.revenue.total",
+            "mu.inventory.receivables_revenue"
           ]
         },
         {
@@ -261,8 +264,8 @@
       ]
     }
   ],
-  "generated_at": "2026-10-19T00:33:20.035Z",
-  "data_revision": "2026-10-19-f8cd2e6f65",
+  "generated_at": "2026-10-20T20:34:11.878Z",
+  "data_revision": "2026-10-20-f3e4d91a71",
   "financial_period": "FY2026 Q4",
   "cited": {
     "mu.revenue.total": {
@@ -554,6 +557,16 @@
       "current": 958,
       "previous": 621,
       "change": "+54.3%"
+    },
+    "mu.inventory.receivables": {
+      "current": 31793,
+      "previous": 26894,
+      "change": "+18.2%"
+    },
+    "mu.inventory.receivables_revenue": {
+      "current": 58.62730273469915,
+      "previous": 64.87360092628329,
+      "change": "−6.2 个百分点"
     },
     "mu.contract.nand_trend": {
       "current": "涨幅收敛",
