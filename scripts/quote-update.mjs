@@ -12,8 +12,9 @@ if(session===null)throw new Error('Exchange calendar needs an original-source up
 const dir='.monitor/runs/quote-'+now.toISOString().replace(/[:.]/g,'-');
 cli('plan','--scope','quote','--run',dir);
 const proposal=read(dir+'/proposal.json'),manifest=read(dir+'/manifest.json'),evidence={},sid='price_auto';
+let payload;
 try{
-  const {bytes}=await fetchSource(quoteURL),payload=JSON.parse(bytes.toString()),quote=parseRegularClose(payload,{now:Date.now(),previousAsOf:proposal.quote.as_of});
+  const {bytes}=await fetchSource(quoteURL);payload=JSON.parse(bytes.toString());const quote=parseRegularClose(payload,{now:Date.now(),previousAsOf:proposal.quote.as_of});
   if(Date.parse(quote.as_of)<=Date.parse(proposal.quote.as_of)){console.log('No new completed session; existing quote retained.');process.exit(0);}
   const at=new Date().toISOString(),receipt=await saveCapture(dir,{source_id:sid,url:quoteURL,bytes,access:'full',at,reviewed:true,format:'source_bytes'});
   manifest.reads=[receipt];manifest.publication_corrections=[sid];
@@ -24,6 +25,8 @@ try{
   manifest.coverage=[{key:'quote',status:'verified',evidence:[sid],reviewed_at:at,latest_disclosure:{url:quoteURL,published_at:quote.date},reason:'Validated final regular-session daily OHLC data.'}];manifest.summary=`更新 MU ${quote.date} 常规收盘；财报与新闻核查时间保持不变。`;
 }catch(error){
   // An access/parsing failure is a publishable failure receipt, never a new price.
+  const r=payload?.chart?.result?.[0];
+  if(r)console.error('Quote rejected:',error.message,JSON.stringify({now:new Date().toISOString(),regular:r.meta?.currentTradingPeriod?.regular,bars:(r.timestamp||[]).slice(-3).map((t,i,a)=>({at:new Date(t*1000).toISOString(),close:r.indicators?.quote?.[0]?.close?.[(r.timestamp.length-a.length)+i]}))}));
   manifest.reads=[{source_id:sid,url:quoteURL,status:'failed',attempted_at:new Date().toISOString(),error:error.message}];
   manifest.coverage=[{key:'quote',status:'failed',evidence:[],reviewed_at:null,latest_disclosure:null,reason:error.message}];manifest.summary='常规收盘更新未完成，保留上次行情。';
 }
