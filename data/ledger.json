@@ -2,8 +2,8 @@
   "format_version": 1,
   "document": {
     "schema_version": 2,
-    "revision": "2026-10-22-09aa22bf0f",
-    "updated_at": "2026-10-22T00:20:30.716Z",
+    "revision": "2026-10-22-d94c3bc9e1",
+    "updated_at": "2026-10-22T00:29:53.710Z",
     "last_successful_check_at": "2026-09-20T23:50:00Z",
     "last_attempt_at": "2026-09-20T23:50:00Z",
     "financial_period": "FY2026 Q4",
@@ -362,12 +362,12 @@
         "locator": "首段：4Q26 普通型 DRAM 合同价环比；第二段：NAND Flash 合同价环比。"
       },
       "spot": {
-        "label": "TrendForce 现货周报 · 10-07",
-        "url": "https://www.trendforce.com/news/2026/10/07/insights-memory-spot-price-update-dram-spot-largely-sideways-as-holidays-month-end-effects-weigh/",
-        "published_at": "2026-10-07",
-        "checked_at": "2026-10-07",
+        "label": "TrendForce 现货周报 · 10-21",
+        "url": "https://www.trendforce.com/news/2026/10/21/insights-memory-spot-price-update-ddr5-supply-tight-ddr4-trading-subdued-despite-0-84-gain-in-mainstream-prices/",
+        "published_at": "2026-10-21",
+        "checked_at": "2026-10-22",
         "type": "行业报价",
-        "short_label": "TrendForce · 10-07 现货周报",
+        "short_label": "TrendForce · 10-21 现货周报",
         "locator": "DRAM Spot Price / NAND Flash Spot Price（周均价与注明日期）"
       },
       "ssd": {
@@ -969,7 +969,7 @@
         "short_label": "美光 · 1γ 发布",
         "url": "https://investors.micron.com/news/press-release/2025/Micron-Announces-Shipment-of-1-1-gamma-DRAM-Pioneering-Memory-Technology-Advancements-for-Future-Compute-Needs-02-25-2025/default.aspx",
         "published_at": "2025-02-25",
-        "checked_at": "2026-10-15",
+        "checked_at": "2026-10-22",
         "locator": "Why this matters / Improved bit-density output；脚注 2、3",
         "type": "公司原始披露"
       },
@@ -978,7 +978,7 @@
         "short_label": "美光 · G9 发布",
         "url": "https://investors.micron.com/news/press-release/2024/Micron-Announces-Volume-Production-of-Ninth-Generation-NAND-Flash-Technology-07-30-2024/default.aspx",
         "published_at": "2024-07-30",
-        "checked_at": "2026-09-24",
+        "checked_at": "2026-10-22",
         "locator": "正文：G9 TLC NAND 随 SSD 出货、3.6 GB/s 接口",
         "type": "公司原始披露"
       },
@@ -987,7 +987,7 @@
         "short_label": "美光 · FQ3 演示稿",
         "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf",
         "published_at": "2026-06-24",
-        "checked_at": "2026-10-15",
+        "checked_at": "2026-10-22",
         "locator": "p11 技术进展；p17–19 制造项目",
         "type": "公司原始披露"
       },
@@ -996,7 +996,7 @@
         "short_label": "美光 · FQ3 产品进展",
         "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Results-for-the-Third-Quarter-of-Fiscal-2026/default.aspx",
         "published_at": "2026-06-24",
-        "checked_at": "2026-09-24",
+        "checked_at": "2026-10-22",
         "locator": "Product highlights：HBM4 / HBM4E / 256GB DDR5 RDIMM",
         "type": "公司原始披露"
       },
@@ -1182,12 +1182,12 @@
       },
       "dram_spot": {
         "label": "DRAMeXchange DRAM 现货报价",
-        "short_label": "10-16 · DRAM 现货",
+        "short_label": "10-21 · DRAM 现货",
         "url": "https://www.dramexchange.com/",
-        "published_at": "2026-10-16",
-        "checked_at": "2026-10-19",
+        "published_at": "2026-10-21",
+        "checked_at": "2026-10-22",
         "type": "原始行业报价",
-        "locator": "DRAM Spot Price · Last Update Oct.16 2026 18:10 (GMT+8) · Session Average / Session Change。"
+        "locator": "DRAM Spot Price · Last Update Oct.21 2026 18:10 (GMT+8) · Session Average / Session Change。"
       },
       "korea_trade": {
         "label": "韩国产业通商部 2026 年 9 月进出口动向",
@@ -1203,7 +1203,7 @@
         "short_label": "南亚科 8 月营收",
         "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
         "published_at": null,
-        "checked_at": "2026-10-19",
+        "checked_at": "2026-10-22",
         "type": "公司官方入口",
         "locator": "Consolidated Monthly Revenue 表 · 2026 · August / July（千元新台币）。"
       },
@@ -1509,7 +1509,7 @@
         "short_label": "FY2026 10-K",
         "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm",
         "published_at": "2026-10-09",
-        "checked_at": "2026-10-15",
+        "checked_at": "2026-10-22",
         "type": "原始资料",
         "locator": "Note 5 Receivables / Note 6 Inventories（p76）；Note 16 Revenue and Customer Contract Liabilities（p88）；Item 1 Product Technologies（p7）；本期列为 2026-09-03"
       },
@@ -1719,6 +1719,15 @@
         "checked_at": "2026-10-22",
         "type": "公司官方入口",
         "locator": "33 页演示稿：p10 技术领先时间线、p16–17 DRAM 路线图与 1δ、p19 新一代 DRAM、p22 HBM 路线图、p23 G11 NAND。"
+      },
+      "tech_webinar_1021": {
+        "label": "美光 · 技术与产品网络研讨会演示稿",
+        "short_label": "美光 · 10-21 技术研讨会",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_downloads/2026/10/MU-TP-Webinar.pdf",
+        "published_at": "2026-10-21",
+        "checked_at": "2026-10-22",
+        "locator": "p10 技术领先时间线；p16–17 DRAM 路线图与 1δ；p22 HBM 路线图；p23 G11 NAND",
+        "type": "公司原始披露"
       }
     },
     "metrics": [
@@ -2031,20 +2040,20 @@
             "record_ref": "40de271190fdbaefbc39b029976f71b8a847bb4fb536ea4479c3126f3bf38a72"
           },
           {
-            "record_ref": "d27728850c5cd56a2846a3d4442bc26ebf5a427a8368610cb1982576d2469acd"
+            "record_ref": "b93a20673a774c7fe5130b266eec4a9ef755972405273cae431b997317a712bb"
           },
           {
-            "record_ref": "2237f248fba62ec2917b5a32f54be9d0b132002ac55422fb7dc0c7e4fe061fbf"
+            "record_ref": "f7d3c43dd5db83a848aa589a5df054955c59cb2f2420799b8281dabc5f88a7c9"
           },
           {
-            "record_ref": "0199b1a5c27c7107e4f755370075f549c1a294ddc3d5a8b7d7c7600ad329f606"
+            "record_ref": "6a352034bd12fb875c8ad063a4bb23df90f45633505b9e989422bf94e4aff843"
           }
         ],
         "limits": [
           "现货报价按指定规格采样。4Q26 合同价区间来自 TrendForce 09-30 新闻稿；NAND 趋势行仍为 09-10 公开摘要。"
         ],
         "period": "DRAM 报价至 09-23；NAND 报价至 09-14；报告至 09-16",
-        "checked_at": "2026-10-19",
+        "checked_at": "2026-10-22",
         "next_review": "每周",
         "definition": "行业合同价预测与现货报价。",
         "interpretation": "TrendForce 09-30 预计 4Q26 普通型 DRAM 合同价仍上涨但涨幅较三季度收敛，NAND 合同价涨幅区间高于 DRAM。DDR4 现货周均价 10-06 与上周持平，06-23 以来整体上行；512Gb TLC 晶圆现货 8 月中以来连续回落。"
@@ -2068,7 +2077,7 @@
           "首批晶圆、产品出货和成熟产量属于不同阶段。"
         ],
         "period": "2026–2027 展望 · 披露至 09-16",
-        "checked_at": "2026-10-19",
+        "checked_at": "2026-10-22",
         "next_review": "新行业报告",
         "definition": "机构供需预测及公司产能计划。",
         "interpretation": "TrendForce 最新摘要预计 NAND 不同终端市场分化；企业 SSD 的需求展望不宜外推至全部消费级存储。"
@@ -2112,7 +2121,7 @@
           "韩国出口额与南亚科营收是售价与数量混合的间接指标，不是美光位元出货或客户库存。"
         ],
         "period": "行业资料至 09-21",
-        "checked_at": "2026-10-19",
+        "checked_at": "2026-10-22",
         "next_review": "每周",
         "definition": "用于观察终端需求的间接指标。",
         "interpretation": "企业 SSD 交付周期为 16 周，而 TrendForce 给出的均衡基准为 8 周，说明交付仍受约束。韩国 9 月存储芯片出口额大幅高于上年同月；南亚科 8 月营收较 7 月小幅增加（环比 +1.9%），维持在 7 月跳升后的高位。官方称出口增长来自出货量扩大、固定价格上涨及季末效应，价格与数量的作用不能拆分。这些都不是美光采购量，客户实际库存与消耗量仍待补充。"
@@ -2130,6 +2139,12 @@
       "产业链指引和管理层展望按原披露日期及目标期间记录，文字为中文摘要；同比由原始金额计算，百分点与百分比区分。"
     ],
     "check_log": [
+      {
+        "at": "2026-10-22T00:29:53.710Z",
+        "status": "success",
+        "scope": "batch",
+        "text": "核查范围：batch；完成 3 / 3 项。"
+      },
       {
         "at": "2026-10-22T00:20:30.716Z",
         "status": "success",
@@ -2827,7 +2842,7 @@
             "index_dramx_20261021"
           ],
           "reason": "已检查四项行业入口：TrendForce 10-21 发布新的 Memory Spot Price Update 周报（DDR4 1Gx8 与 512Gb TLC 新读数），DRAMeXchange 10-21 18:10 收盘场 DDR5 现货有新读数，另行发布行业更新；新闻稿 10-07 之后无内存价格新闻稿；Insights Weekly Radar 006（10-19）为付费文章，企业 SSD 交付周期无法读取，保留 005 读数。",
-          "processed_at": null
+          "processed_at": "2026-10-22T00:29:53.710Z"
         },
         {
           "key": "technology:facilities",
@@ -2862,7 +2877,7 @@
             "index_micron_webinar_20261021"
           ],
           "reason": "Micron 10-21 技术与产品研讨会演示稿披露制程路线：1γ 处于高量产，1δ 处于良率爬坡、计划 2027 年下半年量产，位元密度较 1γ 提升约 20% 中段；下一代 NAND 为 G11（超过 400 层，位元密度约为 G9 的 2 倍，2027 年下半年量产爬坡）。待技术更新处理。",
-          "processed_at": null
+          "processed_at": "2026-10-22T00:29:53.710Z"
         },
         {
           "key": "technology:products",
@@ -2882,7 +2897,7 @@
             "index_skhynix_news_20261021"
           ],
           "reason": "Micron 10-21 技术研讨会演示稿 p10 时间线显示 HBM4E 已向主要客户送样（原记录为已宣布），另行发布技术更新；p19 的 1TB RDIMM 为能力展示、非产品承诺。Samsung 与 SK hynix 入口无新的 DDR5 RDIMM、HBM4/HBM4E 阶段变化（SK hynix 10-21 为 Q3 业绩电话会邀请）。",
-          "processed_at": null
+          "processed_at": "2026-10-22T00:29:53.710Z"
         },
         {
           "key": "company:samsung",
@@ -3007,10 +3022,10 @@
           "record_ref": "ed2cbf65073e6d1912ea46dd9866f8b28a36527e181b2cb610b8bb029d19d1a7"
         },
         {
-          "record_ref": "b7dbffe973e5d9e1aa814218a212af0bcf7f43d101dc5b13157a65846d6ce273"
+          "record_ref": "0c7f5daf2b4d8e9b346e6e6cfdccd85bba66bce24ac24c40a76d1e86befd3346"
         },
         {
-          "record_ref": "8139ef6edc3c44a5088437f85b98e88570f6bc7d938fe4439aa93dc6ee9abaae"
+          "record_ref": "83498774657a3911e9b13ae83360ee525e0260ea440460ec5410f93e37fc54a0"
         },
         {
           "record_ref": "2c4e11731725558a7af693786a6421b296235f47b7d33f52681e2d77c9695404"
@@ -3034,7 +3049,7 @@
           "record_ref": "470cbc81e42cbefa6376b65ced6f95f28b747b96e0d882908fe1fd7b62e24cb4"
         },
         {
-          "record_ref": "e50ae6df4f32cc24ce46a5b9c09e1132843980605a4810fb76d440b74ea01d21"
+          "record_ref": "2407ca203ffb0696bf567d8b1d8203ec44ec639d85da965e93c4aae4bf29f5a9"
         },
         {
           "record_ref": "e7c42e060aa3357bcbc17a8a7168ee7c250430a6639950ff0098711e5231d7ac"
@@ -20010,6 +20025,619 @@
         "e-f2d54c2775d19d71a52b5175f29803bcbbc6a930414db45b0c3e428809a7f5db"
       ],
       "id": "e6aeb0bbac57d2923f4399faf33b511165e569d9142efaf3f792b76723fe8c5b"
+    },
+    "b93a20673a774c7fe5130b266eec4a9ef755972405273cae431b997317a712bb": {
+      "metric_id": "mu.contract.ddr4_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "DRAM 报价至 09-23；NAND 报价至 09-14；报告至 09-16",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "DDR4 1Gx8 3200 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "spot",
+            "url": "https://www.trendforce.com/news/2026/10/21/insights-memory-spot-price-update-ddr5-supply-tight-ddr4-trading-subdued-despite-0-84-gain-in-mainstream-prices/",
+            "published_at": "2026-10-21"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DDR4 1Gx8 3200 现货",
+        "current": 46.357,
+        "previous": null,
+        "unit": "USD",
+        "source_ids": [
+          "spot"
+        ],
+        "kind": "行业报价",
+        "note": "TrendForce 每周现货报告的周均价；趋势线各点同一口径。",
+        "period": "截至 10-20",
+        "change": "周变动 +0.84%（报告值）",
+        "location": "TrendForce 10-21 现货周报 · DRAM Spot Price。",
+        "evidence_type": "direct",
+        "id": "ddr4_spot",
+        "as_of": "2026-10-20"
+      },
+      "evidence_ids": [
+        "e-f89716099ffc4a1889cfdbf349103c760fdb14777c52d3afb03cc9c9f9eec27b"
+      ],
+      "id": "b93a20673a774c7fe5130b266eec4a9ef755972405273cae431b997317a712bb"
+    },
+    "f7d3c43dd5db83a848aa589a5df054955c59cb2f2420799b8281dabc5f88a7c9": {
+      "metric_id": "mu.contract.ddr5_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "DRAM 报价至 09-23；NAND 报价至 09-14；报告至 09-16",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "DDR5 16Gb (2Gx8) 4800/5600 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "dram_spot",
+            "url": "https://www.dramexchange.com/",
+            "published_at": "2026-10-21"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DDR5 16Gb (2Gx8) 4800/5600 现货",
+        "current": 60.867,
+        "previous": null,
+        "unit": "USD",
+        "source_ids": [
+          "dram_spot"
+        ],
+        "kind": "行业报价",
+        "note": "与 DDR4 1Gx8 现货是不同规格，不互相替代。",
+        "period": "截至 10-21",
+        "change": "日变动 +0.28%（DRAMeXchange 披露）",
+        "location": "DRAMeXchange · DRAM Spot Price · DDR5 16Gb (2Gx8) 4800/5600 · Session Average，Last Update Oct.21 2026 18:10 (GMT+8)。",
+        "evidence_type": "direct",
+        "id": "ddr5_spot",
+        "as_of": "2026-10-21"
+      },
+      "evidence_ids": [
+        "e-1dc1f8391e2772f0b09a112c55d14670a32fbaf08caf640be890f7c390505657"
+      ],
+      "id": "f7d3c43dd5db83a848aa589a5df054955c59cb2f2420799b8281dabc5f88a7c9"
+    },
+    "6a352034bd12fb875c8ad063a4bb23df90f45633505b9e989422bf94e4aff843": {
+      "metric_id": "mu.contract.tlc_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "DRAM 报价至 09-23；NAND 报价至 09-14；报告至 09-16",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "512Gb TLC 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "spot",
+            "url": "https://www.trendforce.com/news/2026/10/21/insights-memory-spot-price-update-ddr5-supply-tight-ddr4-trading-subdued-despite-0-84-gain-in-mainstream-prices/",
+            "published_at": "2026-10-21"
+          }
+        ]
+      },
+      "payload": {
+        "label": "512Gb TLC 现货",
+        "current": 18.592,
+        "previous": null,
+        "unit": "USD",
+        "source_ids": [
+          "spot"
+        ],
+        "kind": "行业报价",
+        "note": "",
+        "period": "截至 10-19",
+        "change": "周变动 −1.28%（报告值）",
+        "location": "TrendForce 10-21 现货周报 · NAND Flash Spot Price。",
+        "evidence_type": "direct",
+        "id": "tlc_spot",
+        "as_of": "2026-10-19"
+      },
+      "evidence_ids": [
+        "e-6388f57b42f7df399c11c5c0a677b6955137f199a3c770d445146ba2f123995d"
+      ],
+      "id": "6a352034bd12fb875c8ad063a4bb23df90f45633505b9e989422bf94e4aff843"
+    },
+    "0c7f5daf2b4d8e9b346e6e6cfdccd85bba66bce24ac24c40a76d1e86befd3346": {
+      "metric_id": "tech.dram_1gamma",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "2026-10-21",
+        "measurement": "technology_process",
+        "unit": "",
+        "scope": "dram_1gamma",
+        "accounting_basis": "not_applicable",
+        "temporal_basis": "dated_disclosure",
+        "sources": [
+          {
+            "id": "tech_gamma",
+            "url": "https://investors.micron.com/news/press-release/2025/Micron-Announces-Shipment-of-1-1-gamma-DRAM-Pioneering-Memory-Technology-Advancements-for-Future-Compute-Needs-02-25-2025/default.aspx",
+            "published_at": "2025-02-25"
+          },
+          {
+            "id": "tech_q3_deck",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf",
+            "published_at": "2026-06-24"
+          },
+          {
+            "id": "fy2026_10k",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm",
+            "published_at": "2026-10-09"
+          },
+          {
+            "id": "tech_webinar_1021",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_downloads/2026/10/MU-TP-Webinar.pdf",
+            "published_at": "2026-10-21"
+          }
+        ]
+      },
+      "payload": {
+        "id": "dram_1gamma",
+        "type": "process",
+        "company_id": "micron",
+        "name": "DRAM · 1β → 1γ",
+        "family": "DRAM",
+        "role": "",
+        "stage": "ramping",
+        "as_of": "2026-10-21",
+        "date_basis": "disclosure",
+        "period": "截至所列披露日",
+        "summary": "1γ 已进入大规模量产，FY2026 第四季度已占美光多数 DRAM 位元产出；下一代 1δ 处于良率爬升阶段，美光计划 2027 年下半年开始爬坡，在美国生产。",
+        "kind": "公司披露",
+        "evidence_type": "direct",
+        "source_ids": [
+          "tech_gamma",
+          "tech_q3_deck",
+          "fy2026_10k",
+          "tech_webinar_1021"
+        ],
+        "location": "Why this matters / Improved bit-density output；脚注 2、3；p11 技术进展；p17–19 制造项目；FY2026 10-K Item 1 · Product Technologies · DRAM（p7）；10-21 技术研讨会 p16–17 DRAM 路线图与 1δ",
+        "note": "位元密度改善发生在制程层面；实际供给还取决于转产比例、晶圆投入、良率和产品组合。",
+        "facts": [
+          {
+            "id": "bit_density",
+            "label": "每片晶圆位元提升",
+            "value": 30,
+            "unit": "bits/wafer_pct",
+            "qualifier": ">",
+            "nature": "vendor_claim",
+            "period": "2025-02-25",
+            "as_of": "2025-02-25",
+            "source_ids": [
+              "tech_gamma"
+            ],
+            "location": "Why this matters / Improved bit-density output；脚注 2、3",
+            "baseline": "美光 1β → 1γ，整体晶圆位元密度",
+            "note": "原文为超过 30%。"
+          },
+          {
+            "id": "process",
+            "label": "关键技术",
+            "value": "EUV；第六代 10nm 级",
+            "unit": "",
+            "qualifier": "",
+            "nature": "actual",
+            "period": "2025-02-25",
+            "as_of": "2025-02-25",
+            "source_ids": [
+              "tech_gamma"
+            ],
+            "location": "Why this matters / Improved bit-density output；脚注 2、3",
+            "baseline": "",
+            "note": ""
+          },
+          {
+            "id": "adoption",
+            "label": "FY2026 Q4 位元产出占比",
+            "value": 50,
+            "unit": "pct",
+            "qualifier": ">",
+            "nature": "actual",
+            "period": "FY2026 Q4（截至 2026-09-03）",
+            "as_of": "2026-10-09",
+            "source_ids": [
+              "fy2026_10k"
+            ],
+            "location": "FY2026 10-K Item 1 · Product Technologies · DRAM（p7）",
+            "baseline": "美光 DRAM 位元产出（非晶圆数）",
+            "note": "原文为 majority（多数）位元产出，未给具体比例。"
+          },
+          {
+            "id": "yield",
+            "label": "良率",
+            "value": null,
+            "unit": "pct",
+            "qualifier": "",
+            "nature": "unavailable",
+            "period": "2026-06-24",
+            "as_of": "2026-06-24",
+            "source_ids": [
+              "tech_q3_deck"
+            ],
+            "location": "p11 技术进展；p17–19 制造项目",
+            "baseline": "",
+            "note": ""
+          },
+          {
+            "id": "supply_growth",
+            "label": "公司供给增幅归因",
+            "value": null,
+            "unit": "pct",
+            "qualifier": "",
+            "nature": "unavailable",
+            "period": "2026-06-24",
+            "as_of": "2026-06-24",
+            "source_ids": [
+              "tech_q3_deck"
+            ],
+            "location": "p11 技术进展；p17–19 制造项目",
+            "baseline": "",
+            "note": ""
+          },
+          {
+            "id": "next_milestone",
+            "label": "下一代量产计划",
+            "value": "1δ · 2027 年下半年爬坡",
+            "unit": "",
+            "qualifier": "",
+            "nature": "plan",
+            "period": "自然年 2027 下半年",
+            "as_of": "2026-10-21",
+            "source_ids": [
+              "tech_webinar_1021"
+            ],
+            "location": "10-21 技术研讨会 p16–17",
+            "baseline": "",
+            "note": "原文：1δ ramping in the second half of 2027；美光称位元密度较 1γ 提升二十几百分比中段（mid-20s percentage），在美国生产；p16 称不采用 4F²。"
+          }
+        ],
+        "power_test": null
+      },
+      "evidence_ids": [
+        "e-db407dfcb34ea743cf23e8953e2b3f63a86d1ff568e0873c94f7d1b19f9a5388"
+      ],
+      "id": "0c7f5daf2b4d8e9b346e6e6cfdccd85bba66bce24ac24c40a76d1e86befd3346"
+    },
+    "83498774657a3911e9b13ae83360ee525e0260ea440460ec5410f93e37fc54a0": {
+      "metric_id": "tech.nand_g9",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "2026-10-21",
+        "measurement": "technology_process",
+        "unit": "",
+        "scope": "nand_g9",
+        "accounting_basis": "not_applicable",
+        "temporal_basis": "dated_disclosure",
+        "sources": [
+          {
+            "id": "tech_g9",
+            "url": "https://investors.micron.com/news/press-release/2024/Micron-Announces-Volume-Production-of-Ninth-Generation-NAND-Flash-Technology-07-30-2024/default.aspx",
+            "published_at": "2024-07-30"
+          },
+          {
+            "id": "tech_q3_deck",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf",
+            "published_at": "2026-06-24"
+          },
+          {
+            "id": "tech_webinar_1021",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_downloads/2026/10/MU-TP-Webinar.pdf",
+            "published_at": "2026-10-21"
+          }
+        ]
+      },
+      "payload": {
+        "id": "nand_g9",
+        "type": "process",
+        "company_id": "micron",
+        "name": "NAND · G9",
+        "family": "NAND",
+        "role": "",
+        "stage": "ramping",
+        "as_of": "2026-10-21",
+        "date_basis": "disclosure",
+        "period": "截至所列披露日",
+        "summary": "G9 已随 SSD 出货，仍在扩大生产；下一代 G11 超过 400 层，美光计划 2027 年下半年开始量产爬坡。",
+        "kind": "公司披露",
+        "evidence_type": "direct",
+        "source_ids": [
+          "tech_g9",
+          "tech_q3_deck",
+          "tech_webinar_1021"
+        ],
+        "location": "正文：G9 TLC NAND 随 SSD 出货、3.6 GB/s 接口；p11 技术进展；p17–19 制造项目；10-21 技术研讨会 p23 G11 NAND",
+        "note": "接口速度反映数据传输能力；供给数量以位元出货和产能披露跟踪。",
+        "facts": [
+          {
+            "id": "io_speed",
+            "label": "NAND 接口速率",
+            "value": 3.6,
+            "unit": "GB/s",
+            "qualifier": "",
+            "nature": "actual",
+            "period": "2024-07-30",
+            "as_of": "2024-07-30",
+            "source_ids": [
+              "tech_g9"
+            ],
+            "location": "正文：G9 TLC NAND 随 SSD 出货、3.6 GB/s 接口",
+            "baseline": "",
+            "note": ""
+          },
+          {
+            "id": "bit_density",
+            "label": "每片晶圆位元提升",
+            "value": null,
+            "unit": "bits/wafer_pct",
+            "qualifier": "",
+            "nature": "unavailable",
+            "period": "2026-06-24",
+            "as_of": "2026-06-24",
+            "source_ids": [
+              "tech_q3_deck"
+            ],
+            "location": "p11 技术进展；p17–19 制造项目",
+            "baseline": "",
+            "note": ""
+          },
+          {
+            "id": "adoption",
+            "label": "当前产出占比",
+            "value": null,
+            "unit": "pct",
+            "qualifier": "",
+            "nature": "unavailable",
+            "period": "2026-06-24",
+            "as_of": "2026-06-24",
+            "source_ids": [
+              "tech_q3_deck"
+            ],
+            "location": "p11 技术进展；p17–19 制造项目",
+            "baseline": "",
+            "note": ""
+          },
+          {
+            "id": "yield",
+            "label": "良率",
+            "value": null,
+            "unit": "pct",
+            "qualifier": "",
+            "nature": "unavailable",
+            "period": "2026-06-24",
+            "as_of": "2026-06-24",
+            "source_ids": [
+              "tech_q3_deck"
+            ],
+            "location": "p11 技术进展；p17–19 制造项目",
+            "baseline": "",
+            "note": ""
+          },
+          {
+            "id": "supply_growth",
+            "label": "公司供给增幅归因",
+            "value": null,
+            "unit": "pct",
+            "qualifier": "",
+            "nature": "unavailable",
+            "period": "2026-06-24",
+            "as_of": "2026-06-24",
+            "source_ids": [
+              "tech_q3_deck"
+            ],
+            "location": "p11 技术进展；p17–19 制造项目",
+            "baseline": "",
+            "note": ""
+          },
+          {
+            "id": "next_milestone",
+            "label": "下一代量产计划",
+            "value": "G11 · 2027 年下半年量产爬坡",
+            "unit": "",
+            "qualifier": "",
+            "nature": "plan",
+            "period": "自然年 2027 下半年",
+            "as_of": "2026-10-21",
+            "source_ids": [
+              "tech_webinar_1021"
+            ],
+            "location": "10-21 技术研讨会 p23",
+            "baseline": "",
+            "note": "原文：Volume ramp in 2H 2027；美光称 G11 超过 400 层，位元密度约为 G9 的两倍，接口速度最高为 G9 的 1.5 倍，每位元数据传输能耗较 G9 低 25% 以上（均为美光对比 G9 的说法）。"
+          }
+        ],
+        "power_test": null
+      },
+      "evidence_ids": [
+        "e-b6f9224c0664acf997de1cd54b9fef2969b50d335ac3f0c2cbaa642745464cf2"
+      ],
+      "id": "83498774657a3911e9b13ae83360ee525e0260ea440460ec5410f93e37fc54a0"
+    },
+    "2407ca203ffb0696bf567d8b1d8203ec44ec639d85da965e93c4aae4bf29f5a9": {
+      "metric_id": "tech.micron_hbm4e",
+      "definition_version": 1,
+      "context": {
+        "entity": "micron",
+        "period": "2026-10-21",
+        "measurement": "technology_product",
+        "unit": "",
+        "scope": "micron_hbm4e",
+        "accounting_basis": "not_applicable",
+        "temporal_basis": "dated_disclosure",
+        "sources": [
+          {
+            "id": "tech_mu_q3",
+            "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Results-for-the-Third-Quarter-of-Fiscal-2026/default.aspx",
+            "published_at": "2026-06-24"
+          },
+          {
+            "id": "tech_webinar_1021",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_downloads/2026/10/MU-TP-Webinar.pdf",
+            "published_at": "2026-10-21"
+          }
+        ]
+      },
+      "payload": {
+        "id": "micron_hbm4e",
+        "type": "product",
+        "company_id": "micron",
+        "name": "HBM4E",
+        "family": "hbm4e",
+        "role": "",
+        "stage": "sampling",
+        "as_of": "2026-10-21",
+        "date_basis": "disclosure",
+        "period": "截至所列披露日",
+        "summary": "美光称已向主要客户送样 HBM4E，并自 HBM4E 起同时提供 JEDEC 标准版与定制版；计划采用 1γ DRAM。",
+        "kind": "公司披露",
+        "evidence_type": "direct",
+        "source_ids": [
+          "tech_mu_q3",
+          "tech_webinar_1021"
+        ],
+        "location": "Product highlights：HBM4 / HBM4E / 256GB DDR5 RDIMM；10-21 技术研讨会 p10 技术领先时间线、p22 HBM 路线图",
+        "note": "送样见于演示稿 2026 年时间线，未给出具体送样日期与规格。",
+        "facts": [
+          {
+            "id": "capacity",
+            "label": "单堆栈容量",
+            "value": null,
+            "unit": "GB",
+            "qualifier": "",
+            "nature": "unavailable",
+            "period": "2026-06-24",
+            "as_of": "2026-06-24",
+            "source_ids": [
+              "tech_mu_q3"
+            ],
+            "location": "Product highlights：HBM4 / HBM4E / 256GB DDR5 RDIMM",
+            "baseline": "",
+            "note": ""
+          },
+          {
+            "id": "stack",
+            "label": "堆叠层数",
+            "value": null,
+            "unit": "layers",
+            "qualifier": "",
+            "nature": "unavailable",
+            "period": "2026-06-24",
+            "as_of": "2026-06-24",
+            "source_ids": [
+              "tech_mu_q3"
+            ],
+            "location": "Product highlights：HBM4 / HBM4E / 256GB DDR5 RDIMM",
+            "baseline": "",
+            "note": ""
+          },
+          {
+            "id": "speed",
+            "label": "单针速率",
+            "value": null,
+            "unit": "Gbps",
+            "qualifier": "",
+            "nature": "unavailable",
+            "period": "2026-06-24",
+            "as_of": "2026-06-24",
+            "source_ids": [
+              "tech_mu_q3"
+            ],
+            "location": "Product highlights：HBM4 / HBM4E / 256GB DDR5 RDIMM",
+            "baseline": "",
+            "note": ""
+          },
+          {
+            "id": "bandwidth",
+            "label": "堆栈带宽",
+            "value": null,
+            "unit": "TBps",
+            "qualifier": "",
+            "nature": "unavailable",
+            "period": "2026-06-24",
+            "as_of": "2026-06-24",
+            "source_ids": [
+              "tech_mu_q3"
+            ],
+            "location": "Product highlights：HBM4 / HBM4E / 256GB DDR5 RDIMM",
+            "baseline": "",
+            "note": ""
+          },
+          {
+            "id": "process",
+            "label": "DRAM 制程",
+            "value": "1γ",
+            "unit": "",
+            "qualifier": "",
+            "nature": "actual",
+            "period": "2026-06-24",
+            "as_of": "2026-06-24",
+            "source_ids": [
+              "tech_mu_q3"
+            ],
+            "location": "Product highlights：HBM4 / HBM4E / 256GB DDR5 RDIMM",
+            "baseline": "",
+            "note": ""
+          },
+          {
+            "id": "power",
+            "label": "运行功耗",
+            "value": null,
+            "unit": "W",
+            "qualifier": "",
+            "nature": "unavailable",
+            "period": "2026-06-24",
+            "as_of": "2026-06-24",
+            "source_ids": [
+              "tech_mu_q3"
+            ],
+            "location": "Product highlights：HBM4 / HBM4E / 256GB DDR5 RDIMM",
+            "baseline": "",
+            "note": ""
+          },
+          {
+            "id": "next_milestone",
+            "label": "量产计划",
+            "value": "2027 年",
+            "unit": "",
+            "qualifier": "",
+            "nature": "plan",
+            "period": "自然年 2027",
+            "as_of": "2026-06-24",
+            "source_ids": [
+              "tech_mu_q3"
+            ],
+            "location": "Product highlights：HBM4 / HBM4E / 256GB DDR5 RDIMM",
+            "baseline": "",
+            "note": ""
+          }
+        ],
+        "power_test": {
+          "metric": "unavailable",
+          "capacity_gb": null,
+          "speed_mtps": null,
+          "platform": null,
+          "workload": null,
+          "voltage": null,
+          "temperature_c": null,
+          "method": null
+        }
+      },
+      "evidence_ids": [
+        "e-d57882c7efc126aa1df6dee128646faeb8207ed03a89bc20047935f5a740cf34"
+      ],
+      "id": "2407ca203ffb0696bf567d8b1d8203ec44ec639d85da965e93c4aae4bf29f5a9"
     }
   },
   "supporting": {
@@ -20080,7 +20708,8 @@
       "2026-09-08": "39a52d2c769170729f2144ca86227415797a7dfb39f92fb16027dace07552a39",
       "2026-09-15": "29b6c90fc442a2e68d8fca34546ea2a84676370a78099e92f79b3d6355f3ef5f",
       "2026-09-22": "eaad545f16b03dd6334bdb66ea2335a6926e8f5db630ce3297341869e562dc6b",
-      "2026-09-29": "673e9939e94a56906505dc5c2f89d1d714dd363bb5086c8c4eb05b945d8912f4"
+      "2026-09-29": "673e9939e94a56906505dc5c2f89d1d714dd363bb5086c8c4eb05b945d8912f4",
+      "2026-10-06": "d27728850c5cd56a2846a3d4442bc26ebf5a427a8368610cb1982576d2469acd"
     },
     "mu.contract.tlc_spot": {
       "2026-06-22": "d48aa64fbea278fc0e0aca5f77a195fdc1a501d7cab0c32b721323441b56515a",
@@ -20094,7 +20723,8 @@
       "2026-09-07": "7e61097a349d06df93f39c398cef9a21a01b84802e4e7bcebd7720aa327bc43e",
       "2026-09-14": "ebd3965e4a402b2e6c99a1382d9df0d7d07380a54466037d02a18ce11e931cae",
       "2026-09-21": "eeade1b897d2247b31f6213c077c2c2a7b3eb850bf5d32ea4034f8cb67006f6c",
-      "2026-09-28": "d8131e14335d950d07bac089c6017a4e8529424dcfab10371ac0431252a138b2"
+      "2026-09-28": "d8131e14335d950d07bac089c6017a4e8529424dcfab10371ac0431252a138b2",
+      "2026-10-05": "0199b1a5c27c7107e4f755370075f549c1a294ddc3d5a8b7d7c7600ad329f606"
     },
     "mu.demand.nanya_revenue": {
       "2025-09": "5045d427f88ece1cf8fc8f963f984320a996f41e9a3551b2c481151c5d401827",
@@ -20115,7 +20745,8 @@
     },
     "mu.contract.ddr5_spot": {
       "2026-10-07": "3af90fff5340ed1edd7e2958d7dffed3efbd252703d69fbdfc8f1369fefd4d70",
-      "2026-10-15": "3fb6c9754002c13fb9ab992c46cf6e3a07e17dcb9ea2afa289a197cfd6b97326"
+      "2026-10-15": "3fb6c9754002c13fb9ab992c46cf6e3a07e17dcb9ea2afa289a197cfd6b97326",
+      "2026-10-16": "2237f248fba62ec2917b5a32f54be9d0b132002ac55422fb7dc0c7e4fe061fbf"
     }
   }
 }

@@ -172,7 +172,7 @@
           ]
         },
         {
-          "text": "售价仍在上涨，但涨幅在收窄：本站售价卡片的解读指出 DRAM、NAND 涨幅较 FQ3 收窄（FQ3 售价数值本站未列出），TrendForce 也预计 2026 Q4 普通型 DRAM 合同价为 {{mu.contract.dram_forecast}}，并称涨幅将较上季收敛（上季预测值本站未列出）；NAND 方面，2026 Q3 公开摘要曾称「{{mu.contract.nand_trend}}」，而 2026 Q4 预测为 {{mu.contract.nand_forecast}}。DRAM 现货维持高位：DDR4 {{mu.contract.ddr4_spot|change}}，最新 {{mu.contract.ddr4_spot}}，仍高于趋势线起点的 {{series.mu.contract.ddr4_spot@2026-06-23}}；DDR5 {{mu.contract.ddr5_spot|change}}，最新 {{mu.contract.ddr5_spot}}，高于上一读数 {{series.mu.contract.ddr5_spot@2026-10-15}}。NAND 现货偏弱：TLC 晶圆最新 {{mu.contract.tlc_spot}}，低于近期高点 {{series.mu.contract.tlc_spot@2026-08-17}}。",
+          "text": "售价仍在上涨，但涨幅在收窄：本站售价卡片的解读指出 DRAM、NAND 涨幅较 FQ3 收窄（FQ3 售价数值本站未列出），TrendForce 也预计 2026 Q4 普通型 DRAM 合同价为 {{mu.contract.dram_forecast}}，并称涨幅将较上季收敛（上季预测值本站未列出）；NAND 方面，2026 Q3 公开摘要曾称「{{mu.contract.nand_trend}}」，而 2026 Q4 预测为 {{mu.contract.nand_forecast}}。DRAM 现货维持高位：DDR4 {{mu.contract.ddr4_spot|change}}，最新 {{mu.contract.ddr4_spot}}，仍高于趋势线起点的 {{series.mu.contract.ddr4_spot@2026-06-23}}；DDR5 {{mu.contract.ddr5_spot|change}}，最新 {{mu.contract.ddr5_spot}}，高于上一读数 {{series.mu.contract.ddr5_spot@2026-10-16}}。NAND 现货偏弱：TLC 晶圆最新 {{mu.contract.tlc_spot}}，低于近期高点 {{series.mu.contract.tlc_spot@2026-08-17}}。",
           "refs": [
             "mu.asp.dram",
             "mu.asp.nand",
@@ -184,7 +184,7 @@
             "mu.contract.tlc_spot",
             "series.mu.contract.ddr4_spot@2026-06-23",
             "series.mu.contract.tlc_spot@2026-08-17",
-            "series.mu.contract.ddr5_spot@2026-10-15"
+            "series.mu.contract.ddr5_spot@2026-10-16"
           ]
         },
         {
@@ -264,8 +264,8 @@
       ]
     }
   ],
-  "generated_at": "2026-10-22T00:20:52.284Z",
-  "data_revision": "2026-10-22-09aa22bf0f",
+  "generated_at": "2026-10-22T00:30:21.444Z",
+  "data_revision": "2026-10-22-d94c3bc9e1",
   "financial_period": "FY2026 Q4",
   "cited": {
     "mu.revenue.total": {
@@ -573,19 +573,19 @@
       "previous": null
     },
     "mu.contract.ddr4_spot": {
-      "current": 46.32,
+      "current": 46.357,
       "previous": null,
-      "change": "周变动 0.00%（报告值）"
+      "change": "周变动 +0.84%（报告值）"
     },
     "mu.contract.ddr5_spot": {
-      "current": 60.6,
+      "current": 60.867,
       "previous": null,
       "change": "日变动 +0.28%（DRAMeXchange 披露）"
     },
     "mu.contract.tlc_spot": {
-      "current": 18.833,
+      "current": 18.592,
       "previous": null,
-      "change": "周变动 −2.90%（报告值）"
+      "change": "周变动 −1.28%（报告值）"
     },
     "series.mu.contract.ddr4_spot@2026-06-23": {
       "current": 35.9,
@@ -595,8 +595,8 @@
       "current": 21.208,
       "previous": null
     },
-    "series.mu.contract.ddr5_spot@2026-10-15": {
-      "current": 60.433,
+    "series.mu.contract.ddr5_spot@2026-10-16": {
+      "current": 60.6,
       "previous": null
     },
     "guidance.margin_nongaap": {
