@@ -2,8 +2,8 @@
   "format_version": 1,
   "document": {
     "schema_version": 2,
-    "revision": "2026-10-22-e4067e02da",
-    "updated_at": "2026-10-22T18:27:08.343Z",
+    "revision": "2026-10-22-0304c15cbe",
+    "updated_at": "2026-10-22T20:34:24.420Z",
     "last_successful_check_at": "2026-09-20T23:50:00Z",
     "last_attempt_at": "2026-09-20T23:50:00Z",
     "financial_period": "FY2026 Q4",
@@ -641,12 +641,12 @@
         "type": "公司原始披露"
       },
       "eco_meta": {
-        "label": "Meta 2026 Q2 财报与展望",
+        "label": "Meta 2026 Q3 财报与展望",
         "short_label": "Meta 财报",
-        "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Second-Quarter-2026-Results/",
-        "published_at": "2026-07-29",
-        "checked_at": "2026-09-20",
-        "locator": "Financial Highlights、Cash Flows、CFO Outlook Commentary；Three Months Ended June 30。",
+        "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-09302026xexhibit991.htm",
+        "published_at": "2026-10-21",
+        "checked_at": "2026-10-22",
+        "locator": "Financial Highlights、Cash Flows、CFO Outlook Commentary；Three Months Ended September 30（8-K Exhibit 99.1）。",
         "type": "公司原始披露"
       },
       "eco_oracle": {
@@ -2200,6 +2200,12 @@
     ],
     "check_log": [
       {
+        "at": "2026-10-22T20:34:24.420Z",
+        "status": "success",
+        "scope": "company:meta",
+        "text": "核查范围：company:meta；完成 1 / 1 项。"
+      },
+      {
         "at": "2026-10-22T18:27:08.343Z",
         "status": "success",
         "scope": "industry",
@@ -2645,32 +2651,32 @@
           "ticker": "META",
           "group": "cloud",
           "role": "AI 基础设施买家",
-          "period": "2026 Q2",
-          "previous_period": "2025 Q2",
-          "period_end": "2026-06-30",
-          "published_at": "2026-07-29",
-          "checked_at": "2026-09-20",
+          "period": "2026 Q3",
+          "previous_period": "2025 Q3",
+          "period_end": "2026-09-30",
+          "published_at": "2026-10-21",
+          "checked_at": "2026-10-22",
           "scope": "收入、利润、资本开支及现金流均为集团口径。",
           "metrics": [
             {
-              "record_ref": "10dbcd340b7095367da414c0dc4d056830bff916f4ce488ba06cb5492f52c6bb"
+              "record_ref": "66de9587ee4d1a1eb8f524b14433c29e972da6ee3bb0ab8af0cf9d373ae6d84f"
             },
             {
-              "record_ref": "c9374de93e9701e51081760894aa914bccc33d754151e46a1a2bee556859c5d3"
+              "record_ref": "13ec5fc0e9c4edbb56adae3a67d09f9c964b0c8bc8f3d5040695cf1c544b29cb"
             },
             {
-              "record_ref": "d420800b3ed7b1351466cdffd6fca9f1228617e673091016c8fc551779488abb"
+              "record_ref": "e766a745230129bfc3f2d35484fc9bbbe65e21a088097bd62f035afc2677f4d7"
             },
             {
-              "record_ref": "464067927ce4c2f30fe4ce41973df185999ed73735865a6815f1be7e78cb918e"
+              "record_ref": "ac5f5ed0c87a4e8873fe20678bd7145d88b2c31d4ed3f2ed8be3786dcec70a8b"
             }
           ],
           "outlook": [
             {
-              "record_ref": "6316da4946f8ef8e48aa01e144c69f531e7bc2cdf32fb81f5bf4c34eeac9185e"
+              "record_ref": "b07279228400bbd4f58bbc9df8ca33684e7699595f26cf3ef48687b417a0a9c1"
             },
             {
-              "record_ref": "d7576dba23bc376b1421ff6b073828eefdc272f3b71753690f44247c988159fe"
+              "record_ref": "74adb90420fd255c2c3a162c41db5d215aef7af62bdec9785e0db54590e4d28a"
             }
           ],
           "notes": []
@@ -22997,6 +23003,254 @@
         "e-cc09a2d61b59128d827a42b5e6254aa9c0be8235e674ee2ee8b2710b01335085"
       ],
       "id": "fe7c51818085674fa595af0dc3525c9cbd554465447920f9c676caebb6e10ba8"
+    },
+    "66de9587ee4d1a1eb8f524b14433c29e972da6ee3bb0ab8af0cf9d373ae6d84f": {
+      "metric_id": "eco.meta.revenue",
+      "definition_version": 1,
+      "context": {
+        "entity": "meta",
+        "period": "2026 Q3",
+        "previous_period": "2025 Q3",
+        "period_end": "2026-09-30",
+        "report_published_at": "2026-10-21",
+        "measurement": "revenue",
+        "unit": "USDm",
+        "scope": "集团收入",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "eco_meta",
+            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-09302026xexhibit991.htm",
+            "published_at": "2026-10-21"
+          }
+        ]
+      },
+      "payload": {
+        "id": "revenue",
+        "label": "集团收入",
+        "current": 64601,
+        "previous": 51242,
+        "unit": "USDm",
+        "source_ids": [
+          "eco_meta"
+        ],
+        "location": "Financial Highlights · Revenue；2026 / 2025 三个月列。",
+        "note": "",
+        "evidence_type": "direct"
+      },
+      "evidence_ids": [
+        "e-0d3c878d4aa11bda8416d3ef411b8b811d187e8b786fd1998eedcae17875e79c"
+      ],
+      "id": "66de9587ee4d1a1eb8f524b14433c29e972da6ee3bb0ab8af0cf9d373ae6d84f"
+    },
+    "13ec5fc0e9c4edbb56adae3a67d09f9c964b0c8bc8f3d5040695cf1c544b29cb": {
+      "metric_id": "eco.meta.profit",
+      "definition_version": 1,
+      "context": {
+        "entity": "meta",
+        "period": "2026 Q3",
+        "previous_period": "2025 Q3",
+        "period_end": "2026-09-30",
+        "report_published_at": "2026-10-21",
+        "measurement": "operating_profit",
+        "unit": "USDm",
+        "scope": "集团营业利润",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "eco_meta",
+            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-09302026xexhibit991.htm",
+            "published_at": "2026-10-21"
+          }
+        ]
+      },
+      "payload": {
+        "id": "profit",
+        "label": "集团营业利润",
+        "current": 12988,
+        "previous": 20535,
+        "unit": "USDm",
+        "source_ids": [
+          "eco_meta"
+        ],
+        "location": "Financial Highlights · Income from operations；2026 / 2025。",
+        "note": "当季含 98.9 亿美元与美国各州总检察长和解相关的法律费用；剔除后营业利润为 228.8 亿美元。",
+        "evidence_type": "direct"
+      },
+      "evidence_ids": [
+        "e-f9bc11e0abcb39251b271b43f26c1137bce3834c2a90f3cc5480c1be29ad5d19"
+      ],
+      "id": "13ec5fc0e9c4edbb56adae3a67d09f9c964b0c8bc8f3d5040695cf1c544b29cb"
+    },
+    "e766a745230129bfc3f2d35484fc9bbbe65e21a088097bd62f035afc2677f4d7": {
+      "metric_id": "eco.meta.capex",
+      "definition_version": 1,
+      "context": {
+        "entity": "meta",
+        "period": "2026 Q3",
+        "previous_period": "2025 Q3",
+        "period_end": "2026-09-30",
+        "report_published_at": "2026-10-21",
+        "measurement": "capex",
+        "unit": "USDm",
+        "scope": "集团现金资本开支",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "eco_meta",
+            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-09302026xexhibit991.htm",
+            "published_at": "2026-10-21"
+          }
+        ]
+      },
+      "payload": {
+        "id": "capex",
+        "label": "集团现金资本开支",
+        "current": 33942,
+        "previous": 18829,
+        "unit": "USDm",
+        "source_ids": [
+          "eco_meta"
+        ],
+        "location": "Cash Flows / GAAP to Non-GAAP reconciliation · Purchases of property and equipment。",
+        "note": "现金购置额；当季另支付融资租赁本金 9.64 亿美元，两者合计为公司口径资本开支 349.1 亿美元。",
+        "evidence_type": "direct"
+      },
+      "evidence_ids": [
+        "e-ff42fd15f845767eea285547ae30490f967d1f5af7b88d6373ad91a778584805"
+      ],
+      "id": "e766a745230129bfc3f2d35484fc9bbbe65e21a088097bd62f035afc2677f4d7"
+    },
+    "ac5f5ed0c87a4e8873fe20678bd7145d88b2c31d4ed3f2ed8be3786dcec70a8b": {
+      "metric_id": "eco.meta.ocf",
+      "definition_version": 1,
+      "context": {
+        "entity": "meta",
+        "period": "2026 Q3",
+        "previous_period": "2025 Q3",
+        "period_end": "2026-09-30",
+        "report_published_at": "2026-10-21",
+        "measurement": "ocf",
+        "unit": "USDm",
+        "scope": "集团经营现金流",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "eco_meta",
+            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-09302026xexhibit991.htm",
+            "published_at": "2026-10-21"
+          }
+        ]
+      },
+      "payload": {
+        "id": "ocf",
+        "label": "集团经营现金流",
+        "current": 32786,
+        "previous": 29999,
+        "unit": "USDm",
+        "source_ids": [
+          "eco_meta"
+        ],
+        "location": "GAAP to Non-GAAP reconciliation · Net cash provided by operating activities；三个月列。",
+        "note": "",
+        "evidence_type": "direct"
+      },
+      "evidence_ids": [
+        "e-37b9ec5e1c3f6e93fb2896400b823f684974d991ded55f696b2c913e2cd25c65"
+      ],
+      "id": "ac5f5ed0c87a4e8873fe20678bd7145d88b2c31d4ed3f2ed8be3786dcec70a8b"
+    },
+    "b07279228400bbd4f58bbc9df8ca33684e7699595f26cf3ef48687b417a0a9c1": {
+      "metric_id": "outlook.meta.capex",
+      "definition_version": 1,
+      "context": {
+        "entity": "meta",
+        "period": "2026 Q3",
+        "previous_period": "2025 Q3",
+        "period_end": "2026-09-30",
+        "report_published_at": "2026-10-21",
+        "measurement": "outlook",
+        "unit": "",
+        "scope": "集团资本开支",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "target_period",
+        "sources": [
+          {
+            "id": "eco_meta",
+            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-09302026xexhibit991.htm",
+            "published_at": "2026-10-21"
+          }
+        ]
+      },
+      "payload": {
+        "id": "capex",
+        "label": "集团资本开支",
+        "type": "numeric",
+        "value": "1,350–1,450 亿美元",
+        "summary": "包含融资租赁本金支付；区间由下限上调收窄。管理层称 2027 年将继续积极投资于核心业务与 AI，预算与产能计划尚在制定。",
+        "prior_guidance": "1,300–1,450 亿美元",
+        "period": "2026 全年",
+        "issued_at": "2026-10-21",
+        "speaker": "Meta CFO",
+        "kind": "公司指引",
+        "evidence_type": "direct",
+        "source_ids": [
+          "eco_meta"
+        ],
+        "location": "CFO Outlook Commentary · Capital expenditures。"
+      },
+      "evidence_ids": [
+        "e-8f8f9bd92404d4f902c9d5311790019969ca3cd1e8a976d643078d362f0c7961"
+      ],
+      "id": "b07279228400bbd4f58bbc9df8ca33684e7699595f26cf3ef48687b417a0a9c1"
+    },
+    "74adb90420fd255c2c3a162c41db5d215aef7af62bdec9785e0db54590e4d28a": {
+      "metric_id": "outlook.meta.profit",
+      "definition_version": 1,
+      "context": {
+        "entity": "meta",
+        "period": "2026 Q3",
+        "previous_period": "2025 Q3",
+        "period_end": "2026-09-30",
+        "report_published_at": "2026-10-21",
+        "measurement": "operating_profit",
+        "unit": "",
+        "scope": "全年盈利",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "target_period",
+        "sources": [
+          {
+            "id": "eco_meta",
+            "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-09302026xexhibit991.htm",
+            "published_at": "2026-10-21"
+          }
+        ]
+      },
+      "payload": {
+        "id": "profit",
+        "label": "全年盈利",
+        "type": "text",
+        "value": null,
+        "summary": "剔除第三季度法律费用后，仍预计全年营业利润高于 2025 年。",
+        "prior_guidance": "",
+        "period": "2026 全年",
+        "issued_at": "2026-10-21",
+        "speaker": "Meta CFO",
+        "kind": "管理层展望",
+        "evidence_type": "direct",
+        "source_ids": [
+          "eco_meta"
+        ],
+        "location": "CFO Outlook Commentary · operating income。"
+      },
+      "evidence_ids": [
+        "e-996315d00a244042edaca08864049e2172e4807128b32de27e3b3a7b01913897"
+      ],
+      "id": "74adb90420fd255c2c3a162c41db5d215aef7af62bdec9785e0db54590e4d28a"
     }
   },
   "supporting": {

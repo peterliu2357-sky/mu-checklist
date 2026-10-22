@@ -84,14 +84,15 @@
           ]
         },
         {
-          "text": "主要云厂商最近一季现金资本开支同比大增：Microsoft {{eco.microsoft.capex|change}}，Amazon {{eco.amazon.capex|change}}，Alphabet {{eco.alphabet.capex|change}}，Meta {{eco.meta.capex|change}}，Oracle {{eco.oracle.capex|change}}；Alphabet 把全年资本开支指引上调至 {{outlook.alphabet.capex}}。",
+          "text": "主要云厂商最近一季现金资本开支同比大增：Microsoft {{eco.microsoft.capex|change}}，Amazon {{eco.amazon.capex|change}}，Alphabet {{eco.alphabet.capex|change}}，Meta {{eco.meta.capex|change}}，Oracle {{eco.oracle.capex|change}}；Alphabet 把全年资本开支指引上调至 {{outlook.alphabet.capex}}，Meta 把全年指引收窄为 {{outlook.meta.capex}}，下限上调，并称明年将继续积极投资。",
           "refs": [
             "eco.microsoft.capex",
             "eco.amazon.capex",
             "eco.alphabet.capex",
             "eco.meta.capex",
             "eco.oracle.capex",
-            "outlook.alphabet.capex"
+            "outlook.alphabet.capex",
+            "outlook.meta.capex"
           ]
         },
         {
@@ -264,8 +265,8 @@
       ]
     }
   ],
-  "generated_at": "2026-10-22T18:27:47.794Z",
-  "data_revision": "2026-10-22-e4067e02da",
+  "generated_at": "2026-10-22T20:34:47.887Z",
+  "data_revision": "2026-10-22-0304c15cbe",
   "financial_period": "FY2026 Q4",
   "cited": {
     "mu.revenue.total": {
@@ -418,9 +419,9 @@
       "change": "+100.1%"
     },
     "eco.meta.capex": {
-      "current": 30116,
-      "previous": 16538,
-      "change": "+82.1%"
+      "current": 33942,
+      "previous": 18829,
+      "change": "+80.3%"
     },
     "eco.oracle.capex": {
       "current": 28499,
@@ -433,6 +434,14 @@
       "detail": [
         "提高预算以加快交付算力。",
         "1,800–1,900 亿美元"
+      ]
+    },
+    "outlook.meta.capex": {
+      "current": "1,350–1,450 亿美元",
+      "previous": null,
+      "detail": [
+        "包含融资租赁本金支付；区间由下限上调收窄。管理层称 2027 年将继续积极投资于核心业务与 AI，预算与产能计划尚在制定。",
+        "1,300–1,450 亿美元"
       ]
     },
     "eco.nvidia.datacenter": {
@@ -678,14 +687,6 @@
       "detail": [
         "部分租赁转为经营租赁，调低资本开支列报值；底层投资预期维持不变。",
         ""
-      ]
-    },
-    "outlook.meta.capex": {
-      "current": "1,300–1,450 亿美元",
-      "previous": null,
-      "detail": [
-        "包含融资租赁本金支付。",
-        "1,250–1,450 亿美元"
       ]
     }
   },
