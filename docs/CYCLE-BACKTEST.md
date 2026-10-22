@@ -45,7 +45,7 @@ Lead in months before Micron's gross-margin turn (negative = after the turn; —
 | 韩国央行闪存出口价格指数 | 9.5 | −1.4 | 3.4 | — | 4 (4) | Not added |
 | 韩国半导体业开工率指数 | — | −1.9 | 3.0 | −3.9 | 6 (14) | Not added |
 
-Against the DRAM ASP turns instead, the 2022 peak is nine months earlier (FQ4 2021). Micron inventory days still leads it by 8 months; Korea semiconductor exports turn 3 months after it.
+Against the DRAM ASP turns instead, the 2022 peak is nine months earlier (FQ4 2021). Under the opposite rule Micron inventory days still leads it by 8 months, but under the fresh rule its warning (published 2021-12-30) comes about 4 months after it; Korea semiconductor exports turn 3 months after it under both rules. Neither signal leads the 2022 price peak reliably.
 
 Correlation check (signal change against the change in Micron's margin k quarters later, 2015–2024): Micron inventory days is strongest one quarter ahead (0.78 at lag 1 against 0.43 at lag 0). Korea semiconductor exports is strongest at lag 0 (0.88) and still 0.77 one quarter ahead. The BOK DRAM index falls from 0.85 at lag 0 to 0.70 at lag 1.
 

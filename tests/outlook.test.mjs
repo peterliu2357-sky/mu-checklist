@@ -72,6 +72,11 @@ test('a cycle read follows the prose rules, and its log cannot be edited loosely
   has(validateOutlook({...ok,cycle_log:[{...ok.cycle_log[0],grade:{result:'maybe'}}]},d),'OUTLOOK_CYCLE');
   has(validateOutlook({...ok,cycle_log:[...ok.cycle_log,{...ok.cycle_log[0]}]},d),'OUTLOOK_CYCLE');
   has(validateOutlook({...ok,cycle_read:{...ok.cycle_read,call:'falling'}},d),'OUTLOOK_SNAPSHOT');
+  has(validateOutlook({...ok,cycle_log:[{...ok.cycle_log[0],grade:{result:'hit',graded_at:'2027-01-05',basis:'售价环比上升 12%'}}]},d),'OUTLOOK_CYCLE');
+  // Retiring the read keeps its log, which still validates.
+  const {cycle_read,...retired}=ok;
+  assert.deepEqual(validateOutlook(retired,d),[]);
+  assert.deepEqual(validateOutlook(stampOutlook(retired,d,'2026-10-25T01:00:00Z'),d),[]);
 });
 test('a published cycle log only grows, apart from grading and a same-day re-stamp',()=>{
   const e=(at,call='rising',grade=null)=>({at,call,text:'收入上升。',values:{},grade});
@@ -81,6 +86,8 @@ test('a published cycle log only grows, apart from grading and a same-day re-sta
   assert(!logContinues([e('2026-10-22'),e('2026-10-25')],[e('2026-10-22','falling'),e('2026-10-25')]));
   assert(!logContinues([e('2026-10-22'),e('2026-10-25')],[e('2026-10-25')]));
   assert(!logContinues([e('2026-10-22','rising',{result:'hit',graded_at:'2027-01-05',basis:'x'})],[e('2026-10-22')]));
+  // Rewriting the last read while appending a new one is still an edit of history.
+  assert(!logContinues([e('2026-10-22')],[e('2026-10-22','peaking'),e('2026-10-25')]));
 });
 test('index values keep two decimals and no unit word',()=>{
   assert.equal(formatOutlookValue(289.16,'index'),'289.16');
