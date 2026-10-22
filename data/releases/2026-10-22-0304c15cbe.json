@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "scope": "company:meta",
+  "base_commit": "2f136124c37c597fc4291848caf3f6c09cc95ca5",
+  "base_revision": "2026-10-22-e4067e02da",
+  "base_sha256": "4fc26fb03ae2d4134c32800392f396f26679dbbb2c8c7750d5d47eb76b7ae429",
+  "catalog_sha256": "853cd79d16f56ef0779e74920aa46499d7156f7ec4eacc5f7f1563f34d07c736",
+  "created_at": "2026-10-22T20:33:38.833Z",
+  "completed_at": "2026-10-22T20:34:24.420Z",
+  "state": "verified",
+  "targets": null,
+  "coverage": [
+    {
+      "key": "company:meta",
+      "status": "verified",
+      "evidence": [
+        "eco_meta"
+      ],
+      "reviewed_at": "2026-10-22T20:34:23.000Z",
+      "latest_disclosure": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-09302026xexhibit991.htm",
+        "published_at": "2026-10-21"
+      },
+      "reason": "已读取 Meta 2026 Q3 财报（10-21 发布，8-K Exhibit 99.1，含 2025 Q3 对比列）：收入、营业利润、现金资本开支与经营现金流按 3Q26 / 3Q25 更新；营业利润含 98.9 亿美元法律和解费用。全年资本开支指引收窄为 1,350–1,450 亿美元（原 1,300–1,450 亿美元），管理层称 2027 年将继续积极投资。剔除法律费用后仍预计全年营业利润高于 2025 年。同一 8-K 的新设 C 类无投票权股份与本站指标无关。下一次财报日期尚未公布。",
+      "finding": "new_disclosure"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "eco_meta",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-09302026xexhibit991.htm",
+      "sha256": "039cac3b8ede1cdd87e1d682ec6abd6755e32ff8997a4e44195e19b656c529ec",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-22T20:34:03.089Z",
+      "reviewed_at": "2026-10-22T20:34:03.089Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [
+    "meta"
+  ],
+  "publication_corrections": [],
+  "technology_reviews": [],
+  "result": "success",
+  "artifact_sha256": "ffdb8ddd0c20ce621ece7085099000fe12879bb1ea80e418fc8775a14cebc2de",
+  "ledger_sha256": "24cd73b1504fe23bbb35ce6181c64ef1b9d6a7e46fbeaca08122869521c91939",
+  "evidence_sha256": "fb83302f68fdc704aeaa005b2c288290ee81c37c8a676bffdc7d398cf21b783c"
+}

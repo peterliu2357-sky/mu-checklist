@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "revision": "2026-10-22-e4067e02da",
-  "updated_at": "2026-10-22T18:27:08.343Z",
+  "revision": "2026-10-22-0304c15cbe",
+  "updated_at": "2026-10-22T20:34:24.420Z",
   "last_successful_check_at": "2026-09-20T23:50:00Z",
   "last_attempt_at": "2026-09-20T23:50:00Z",
   "financial_period": "FY2026 Q4",
@@ -647,12 +647,12 @@
       "type": "公司原始披露"
     },
     "eco_meta": {
-      "label": "Meta 2026 Q2 财报与展望",
+      "label": "Meta 2026 Q3 财报与展望",
       "short_label": "Meta 财报",
-      "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Second-Quarter-2026-Results/",
-      "published_at": "2026-07-29",
-      "checked_at": "2026-09-20",
-      "locator": "Financial Highlights、Cash Flows、CFO Outlook Commentary；Three Months Ended June 30。",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-09302026xexhibit991.htm",
+      "published_at": "2026-10-21",
+      "checked_at": "2026-10-22",
+      "locator": "Financial Highlights、Cash Flows、CFO Outlook Commentary；Three Months Ended September 30（8-K Exhibit 99.1）。",
       "type": "公司原始披露"
     },
     "eco_oracle": {
@@ -3195,6 +3195,12 @@
   ],
   "check_log": [
     {
+      "at": "2026-10-22T20:34:24.420Z",
+      "status": "success",
+      "scope": "company:meta",
+      "text": "核查范围：company:meta；完成 1 / 1 项。"
+    },
+    {
       "at": "2026-10-22T18:27:08.343Z",
       "status": "success",
       "scope": "industry",
@@ -4071,18 +4077,18 @@
         "ticker": "META",
         "group": "cloud",
         "role": "AI 基础设施买家",
-        "period": "2026 Q2",
-        "previous_period": "2025 Q2",
-        "period_end": "2026-06-30",
-        "published_at": "2026-07-29",
-        "checked_at": "2026-09-20",
+        "period": "2026 Q3",
+        "previous_period": "2025 Q3",
+        "period_end": "2026-09-30",
+        "published_at": "2026-10-21",
+        "checked_at": "2026-10-22",
         "scope": "收入、利润、资本开支及现金流均为集团口径。",
         "metrics": [
           {
             "id": "revenue",
             "label": "集团收入",
-            "current": 60801,
-            "previous": 47516,
+            "current": 64601,
+            "previous": 51242,
             "unit": "USDm",
             "source_ids": [
               "eco_meta"
@@ -4094,34 +4100,34 @@
           {
             "id": "profit",
             "label": "集团营业利润",
-            "current": 18775,
-            "previous": 20441,
+            "current": 12988,
+            "previous": 20535,
             "unit": "USDm",
             "source_ids": [
               "eco_meta"
             ],
             "location": "Financial Highlights · Income from operations；2026 / 2025。",
-            "note": "当季含 24 亿美元法律相关费用及 11.8 亿美元裁员费用。",
+            "note": "当季含 98.9 亿美元与美国各州总检察长和解相关的法律费用；剔除后营业利润为 228.8 亿美元。",
             "evidence_type": "direct"
           },
           {
             "id": "capex",
             "label": "集团现金资本开支",
-            "current": 30116,
-            "previous": 16538,
+            "current": 33942,
+            "previous": 18829,
             "unit": "USDm",
             "source_ids": [
               "eco_meta"
             ],
             "location": "Cash Flows / GAAP to Non-GAAP reconciliation · Purchases of property and equipment。",
-            "note": "现金购置额；当季另支付融资租赁本金 9.62 亿美元。",
+            "note": "现金购置额；当季另支付融资租赁本金 9.64 亿美元，两者合计为公司口径资本开支 349.1 亿美元。",
             "evidence_type": "direct"
           },
           {
             "id": "ocf",
             "label": "集团经营现金流",
-            "current": 31862,
-            "previous": 25561,
+            "current": 32786,
+            "previous": 29999,
             "unit": "USDm",
             "source_ids": [
               "eco_meta"
@@ -4136,11 +4142,11 @@
             "id": "capex",
             "label": "集团资本开支",
             "type": "numeric",
-            "value": "1,300–1,450 亿美元",
-            "summary": "包含融资租赁本金支付。",
-            "prior_guidance": "1,250–1,450 亿美元",
+            "value": "1,350–1,450 亿美元",
+            "summary": "包含融资租赁本金支付；区间由下限上调收窄。管理层称 2027 年将继续积极投资于核心业务与 AI，预算与产能计划尚在制定。",
+            "prior_guidance": "1,300–1,450 亿美元",
             "period": "2026 全年",
-            "issued_at": "2026-07-29",
+            "issued_at": "2026-10-21",
             "speaker": "Meta CFO",
             "kind": "公司指引",
             "evidence_type": "direct",
@@ -4154,10 +4160,10 @@
             "label": "全年盈利",
             "type": "text",
             "value": null,
-            "summary": "预计全年营业利润高于 2025 年。",
+            "summary": "剔除第三季度法律费用后，仍预计全年营业利润高于 2025 年。",
             "prior_guidance": "",
             "period": "2026 全年",
-            "issued_at": "2026-07-29",
+            "issued_at": "2026-10-21",
             "speaker": "Meta CFO",
             "kind": "管理层展望",
             "evidence_type": "direct",
