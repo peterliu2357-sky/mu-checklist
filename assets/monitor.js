@@ -215,11 +215,13 @@
     document.getElementById('refresh-data').addEventListener('click',()=>load(true));
     navigateHash(false);document.getElementById('loading').hidden=true;
   }
+  // A stalled connection (common from mainland China) must fall back to the embedded records, not hang.
+  const LOAD_TIMEOUT_MS=8000;
   async function load(refresh=false) {
     const feedback=document.getElementById('refresh-state');
     if(refresh&&feedback) feedback.textContent='正在载入已发布的记录…';
     try {
-      const read=async file=>{const response=await fetch(`${file}?t=${Date.now()}`,{cache:'no-store'});if(!response.ok)throw new Error('HTTP '+response.status);return response.json();};
+      const read=async file=>{const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),LOAD_TIMEOUT_MS);try{const response=await fetch(`${file}?t=${Date.now()}`,{cache:'no-store',signal:controller.signal});if(!response.ok)throw new Error('HTTP '+response.status);return await response.json();}finally{clearTimeout(timer);}};
       const [documentResult,statusResult,outlookResult]=await Promise.allSettled([read('data/monitor.json'),read('data/update-status.json'),read('data/outlook.json')]);
       if(documentResult.status!=='fulfilled')throw documentResult.reason;
       const next=documentResult.value;

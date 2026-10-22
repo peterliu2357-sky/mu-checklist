@@ -18,7 +18,13 @@ for(const name of ['index.html','preview.html']){
   let html=fs.readFileSync(name,'utf8').replace(/(<script type="application\/json" id="fallback-data">)[\s\S]*?(<\/script>)/,(_,a,b)=>a+JSON.stringify(d).replace(/</g,'\\u003c')+b);
   html=html.replace('<script type="application/json" id="fallback-outlook">null</script>','<script type="application/json" id="fallback-outlook">'+JSON.stringify(outlook).replace(/</g,'\\u003c')+'</script>');
   html=html.replace('<script type="application/json" id="fallback-update-status">null</script>','<script type="application/json" id="fallback-update-status">'+JSON.stringify(updateStatus).replace(/</g,'\\u003c')+'</script>');
-  html=html.replace(/((?:src|href)="([^"?]+))\?v=[^" ]+/g,(match,prefix,file)=>fs.existsSync(file)?prefix+'?v='+hash(fs.readFileSync(file,'utf8')).slice(0,12):match);
+  // Inline local CSS and JS so the page needs a single request; extra requests to github.io often stall from mainland China.
+  const local=file=>fs.readFileSync(file,'utf8').replace(/<\/(script|style)/gi,'<\\/$1');
+  html=html.replace(/<link rel="stylesheet" href="([^"?]+)\?v=[^"]*">/g,(_,file)=>`<style>${local(file)}</style>`);
+  const scripts=[];
+  html=html.replace(/<script src="([^"?]+)\?v=[^"]*" defer><\/script>/g,(_,file)=>{scripts.push(`<script>${local(file)}</script>`);return '';});
+  if(html.includes(' src="')||html.includes('rel="stylesheet"'))throw new Error(`${name} still references an external script or stylesheet`);
+  html=html.replace('</body>',()=>scripts.join('')+'</body>');
   fs.writeFileSync(path.join('dist',name),html);
 }
 fs.copyFileSync('data/monitor.json','dist/data/monitor.json');

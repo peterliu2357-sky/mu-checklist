@@ -52,6 +52,17 @@ test('network failure shows dated fallback and usable facts',async({page})=>{
   await page.route('**/data/monitor.json?*',r=>r.abort());await page.goto('/');
   await expect(page.locator('#freshness')).toContainText('备用资料');await expect(page.locator('.fact-card')).toHaveCount(8);
 });
+test('a stalled data request falls back instead of loading forever',async({page})=>{
+  await page.route('**/data/*.json?*',()=>{});await page.goto('/');
+  await expect(page.locator('#freshness')).toContainText('备用资料',{timeout:15000});await expect(page.locator('.fact-card')).toHaveCount(8);
+  await expect(page.locator('#loading')).toBeHidden();
+});
+test('the page loads with no request beyond the HTML',async({page})=>{
+  const requests=[];page.on('request',r=>requests.push(new URL(r.url()).pathname));
+  await page.route('**/data/*.json?*',r=>r.abort());await page.goto('/');
+  await expect(page.locator('.fact-card')).toHaveCount(8);
+  expect(requests.filter(p=>!p.startsWith('/data/')&&p!=='/')).toEqual([]);
+});
 test('refresh loads published JSON and never contacts financial sources',async({page})=>{
   const external=[];page.on('request',r=>{if(!r.url().startsWith('http://127.0.0.1:4173/'))external.push(r.url());});
   await page.route('**/data/monitor.json?*',r=>r.fulfill({json:fixture}));await page.goto('/#updates');await page.locator('#refresh-data').click();
