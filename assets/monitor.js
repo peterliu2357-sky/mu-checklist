@@ -2,7 +2,7 @@
 (function () {
   'use strict';
   const esc = value => String(value ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const {rowChange,freshness,isRenderable:validate,guidanceActuals,guidanceComparison,partnerValue,partnerChange,groupTotal,cycleSignals,spotPremiums,datedRatio,cycleLayout,companyOutlook,isCompanyRow,provenance,partnerUnits}=globalThis.MonitorCore;
+  const {rowChange,freshness,isRenderable:validate,guidanceActuals,guidanceComparison,partnerValue,partnerChange,groupTotal,cycleSignals,spotPremiums,datedRatio,inventoryRatio,cycleLayout,companyOutlook,isCompanyRow,provenance,partnerUnits}=globalThis.MonitorCore;
   const num = (value,digits=2) => Number(value).toLocaleString('en-US',{minimumFractionDigits:digits,maximumFractionDigits:digits});
   const updateCore=globalThis.MonitorUpdates;
   const updateTimes=globalThis.MonitorUpdateTimes;
@@ -118,22 +118,25 @@
     const value=typeof row.current==='number'?`${formatted(row.current,row.unit)}${row.unit?`<span class="unit">${esc(unitName(row.unit))}</span>`:''}`:esc(row.current);
     return `<a class="card cycle-signal" href="#${esc(metric.id)}" data-metric="${esc(metric.id)}"><span class="signal-label">${metric.category==='business'?(/^[A-Za-z]/.test(row.label)?'美光 ':'美光'):''}${esc(row.label)}</span><strong class="signal-value">${value}</strong>${rowChange(row)?`<span class="change-line">${esc(rowChange(row))}</span>`:''}<span class="row-period">${esc(row.period)}</span>${sparkline(trendPoints(metric,row),row.unit)}<span class="signal-lead">${esc(lead)}</span><span class="tag-group">${tags(row)}</span></a>`;
   }
+  const LOG_SHOWN=20;
   // The agent's dated cycle read and its log; shown only when the stored analysis validates against this page's data.
   function cycleRead() {
     if(!agent||!outlook?.cycle_read||agent.validate(outlook,data).length) return '';
     const render=segments=>segments.map(s=>s.text!==undefined?esc(s.text):`<b class="ao-value">${esc(s.value)}</b>`).join('');
     const log=outlook.cycle_log,graded=log.filter(e=>e.grade),hits=graded.filter(e=>e.grade.result==='hit').length;
-    const items=[...log].reverse().map(e=>`<li><span class="cr-day">${esc(e.at)}</span><span class="cr-call ${esc(e.call)}">${esc(agent.calls[e.call])}</span><span class="cr-text">${render(agent.logSegments(e))}</span><span class="cr-grade">${e.grade?`${esc(agent.grades[e.grade.result])} · ${esc(e.grade.basis)}`:'待评分'}</span></li>`).join('');
-    return `<section class="card cycle-read" id="cycle-read" aria-label="Agent 周期判断"><div class="cr-head"><span class="ao-label">Agent 周期判断</span><span class="cr-call ${esc(outlook.cycle_read.call)}">${esc(agent.calls[outlook.cycle_read.call])}</span><span class="ao-date">${esc(log.at(-1).at)}</span></div><p class="cr-line">${render(agent.segments(outlook.cycle_read.text,data))}</p><details class="cr-log"><summary>判断记录 ${log.length} 条 · ${graded.length?`已评分 ${graded.length} 条，应验 ${hits} 条`:'尚无评分'}</summary><ul>${items}</ul><p class="ao-note">每次例行核查记录一条判断。目标季度的美光 DRAM 售价与韩国央行 DRAM 出口价格指数公布后评分；评分规则见 MONITORING.md。由 AI agent 依据本站数据撰写，不构成投资建议。</p></details></section>`;
+    const items=log.slice(-LOG_SHOWN).reverse().map(e=>`<li><span class="cr-day">${esc(e.at)}</span><span class="cr-call ${esc(e.call)}">${esc(agent.calls[e.call])}</span><span class="cr-text">${render(agent.logSegments(e))}</span><span class="cr-grade">${e.grade?`${esc(agent.grades[e.grade.result])} · ${esc(e.grade.basis)}`:'待评分'}</span></li>`).join('');
+    return `<section class="card cycle-read" id="cycle-read" aria-label="Agent 周期判断"><div class="cr-head"><span class="ao-label">Agent 周期判断</span><span class="cr-call ${esc(outlook.cycle_read.call)}">${esc(agent.calls[outlook.cycle_read.call])}</span><span class="ao-date">${esc(log.at(-1).at)}</span></div><p class="cr-line">${render(agent.segments(outlook.cycle_read.text,data))}</p><details class="cr-log"><summary>判断记录 ${log.length} 条${log.length>LOG_SHOWN?`（显示最近 ${LOG_SHOWN} 条）`:''} · ${graded.length?`已评分 ${graded.length} 条，应验 ${hits} 条`:'尚无评分'}</summary><ul>${items}</ul><p class="ao-note">每次例行核查记录一条判断。目标季度的美光 DRAM 售价与韩国央行 DRAM 出口价格指数公布后评分；评分规则见 MONITORING.md。由 AI agent 依据本站数据撰写，不构成投资建议。</p></details></section>`;
   }
   function spotPremiumCard() {
     const pairs=spotPremiums(data);
     if(!pairs.length) return '';
     const sign=v=>`${v>0?'+':v<0?'−':''}${num(Math.abs(v),1)}%`;
-    return `<article class="card group-total spot-premium" aria-label="现货较合同价"><div class="row-top"><h3>现货较合同价</h3><span class="tag-group"><span class="basis calculated">${provenance.calculated}</span></span></div>${pairs.map(p=>`<div class="premium-row"><span class="premium-label">${esc(p.label)}</span><strong class="premium-value">${sign(p.premium)}</strong><span class="row-period">现货 ${formatted(p.spot.current,p.spot.unit)} 美元（${esc(p.spot.as_of||p.spot.period)}）· 合同 ${formatted(p.contract.current,p.contract.unit)} 美元（${esc(p.contract.as_of||p.contract.period)}）</span></div>`).join('')}<p class="row-note">现货 ÷ 合同价 − 1，取同规格的最新读数，两者日期不同。现货高于合同价表示短期买盘更紧；本站从 2026 年 10 月起记录，历史不足以回测。</p></article>`;
+    // The premium inherits its inputs' provenance: a secondary-sourced contract price is tagged as such.
+    const inputs=[...new Set(pairs.flatMap(p=>[p.spot.evidence_type,p.contract.evidence_type]).filter(t=>t!=='direct'&&provenance[t]))];
+    return `<article class="card group-total spot-premium" aria-label="现货较合同价"><div class="row-top"><h3>现货较合同价</h3><span class="tag-group"><span class="basis calculated">${provenance.calculated}</span>${inputs.map(t=>`<span class="basis ${esc(t)}">含${provenance[t]}</span>`).join('')}</span></div>${pairs.map(p=>`<div class="premium-row"><span class="premium-label">${esc(p.label)}</span><strong class="premium-value">${sign(p.premium)}</strong><span class="row-period">现货 ${formatted(p.spot.current,p.spot.unit)} 美元（${esc(p.spot.as_of||p.spot.period)}）· 合同 ${formatted(p.contract.current,p.contract.unit)} 美元（${esc(p.contract.as_of||p.contract.period)}）</span></div>`).join('')}<p class="row-note">现货 ÷ 合同价 − 1，取同规格的最新读数，两者日期不同。现货高于合同价表示短期买盘更紧；本站从 2026 年 10 月起记录，历史不足以回测。</p></article>`;
   }
   function inventoryRatioCard() {
-    const r=datedRatio(data,'supply','korea_ic_inventory','korea_ic_shipment');
+    const r=datedRatio(data,inventoryRatio.metric,inventoryRatio.numerator,inventoryRatio.denominator);
     if(!r) return '';
     const points=[...r.history,{as_of:r.as_of,value:r.value}].slice(-series.windows.observation).map(p=>({period:p.as_of,value:p.value}));
     const previous=r.history.at(-1);

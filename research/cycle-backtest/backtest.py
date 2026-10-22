@@ -5,12 +5,14 @@ Rule (fixed before looking at results):
            inventory-type signals the sign is flipped, so "worse" is always down.
   A peak warning fires when g has fallen n periods in a row (n = 3 months for
   monthly data, 2 quarters for quarterly data) and the total fall is at least
-  D, half the median absolute n-period change of g before 2015.
+  D, half the median absolute n-period change of g before 2017.
   A trough all-clear is the mirror image (3 rises, total rise >= D).
   Warnings re-arm only after an opposite-direction signal.
   A warning is known once it is published: month end + publication lag.
-  Lead = target turn quarter end - publication date (months). A hit needs a
-  warning inside the 24 months before the turn and lead >= 3 months.
+  Lead = target turn quarter end - publication date (months). At each turn the
+  signal's state is its latest published warning; a hit needs a matching warning
+  3-18 months old. Scored twice: with warnings re-arming only after the opposite
+  warning, and with a fresh warning each time the condition newly appears.
   Any other warning in 2015-2025 is a false alarm.
 """
 import json, datetime as dt, os, statistics as st, sys
@@ -78,7 +80,11 @@ def quarterly_capex():
                 q[e] = v - ytd[prev[0]]
         for e, v in q.items():
             key = e[:4] + {'03': '03', '06': '06', '09': '09', '12': '12'}.get(e[5:7], e[5:7])
-            total.setdefault(key, {})[name if name != 'amzn2' else 'amzn'] = v
+            # Amazon renamed its capex tag in 2017; the newer tag only fills quarters the older one lacks.
+            slot = total.setdefault(key, {})
+            company = 'amzn' if name == 'amzn2' else name
+            if name != 'amzn2' or company not in slot:
+                slot[company] = v
     out = []
     for k in sorted(total):
         if len(total[k]) == 4:
@@ -90,37 +96,46 @@ def mu_quarters(field):
     return [(o['end'][:4] + o['end'][5:7], o[field]) for o in q if o[field] is not None]
 
 def yoy(series, step, invert=False, avg=3):
-    """YoY % of a trailing average. step=1 monthly (avg 3 months), step=3 quarterly."""
-    vals = [v for _, v in series]
-    keys = [k for k, _ in series]
-    n = 12 // step
-    w = avg if step == 1 else 1
+    """YoY % of a trailing 3-month average (monthly) or of the quarter itself (quarterly, matched to the
+    quarter ending 11-13 months earlier, so a missing quarter cannot shift the comparison)."""
+    keys = [k for k, _ in series]; vals = [v for _, v in series]
+    month = lambda k: int(k[:4]) * 12 + int(k[4:]) - 1
     out = []
     for i in range(len(vals)):
-        if i - n - w + 1 < 0: continue
-        cur = sum(vals[i - w + 1:i + 1]) / w
-        old = sum(vals[i - n - w + 1:i - n + 1]) / w
+        if step == 1:
+            if i - 12 - avg + 1 < 0 or month(keys[i]) - month(keys[i - 12]) != 12: continue
+            cur = sum(vals[i - avg + 1:i + 1]) / avg
+            old = sum(vals[i - 12 - avg + 1:i - 12 + 1]) / avg
+        else:
+            prior = [j for j in range(i) if 11 <= month(keys[i]) - month(keys[j]) <= 13]
+            if not prior: continue
+            cur, old = vals[i], vals[prior[-1]]
         if old <= 0: continue
         g = (cur / old - 1) * 100
         out.append((keys[i], -g if invert else g))
     return out
 
-def warnings(g, step, lag_days, end_date_of):
-    """n consistent moves confirm a turn: 3 months for monthly data, 2 quarters for quarterly data."""
+def warnings(g, step, lag_days, end_date_of, rearm='opposite'):
+    """n consistent moves confirm a turn: 3 months for monthly data, 2 quarters for quarterly data.
+
+    rearm='opposite': after a warning, the same warning fires again only after the opposite one.
+    rearm='fresh': a warning fires each time the condition newly appears (stricter: leads count from the latest one).
+    The threshold uses only changes dated before 2017, ahead of the first scored turn.
+    """
     n = 3 if step == 1 else 2
     keys = [k for k, _ in g]; vals = [v for _, v in g]
-    base = [abs(vals[i] - vals[i - n]) for i in range(n, len(vals)) if keys[i] < '201501']
-    if len(base) < 6:
-        base = [abs(vals[i] - vals[i - n]) for i in range(n, min(len(vals), n + 20))]
+    base = [abs(vals[i] - vals[i - n]) for i in range(n, len(vals)) if keys[i] < '201701']
     thr = 0.5 * st.median(base)
-    out = []; armed = {'peak': True, 'trough': True}
+    out = []; armed = {'peak': True, 'trough': True}; previous = None
     for i in range(n, len(vals)):
         d1 = [vals[j] - vals[j - 1] for j in range(i - n + 1, i + 1)]
         fall = vals[i - n] - vals[i]
         kind = None
         if all(x < 0 for x in d1) and fall >= thr: kind = 'peak'
         if all(x > 0 for x in d1) and -fall >= thr: kind = 'trough'
-        if kind and armed[kind]:
+        fire = kind and (armed[kind] if rearm == 'opposite' else kind != previous)
+        previous = kind
+        if fire:
             pub = add_days(end_date_of(keys[i]), lag_days)
             out.append((kind, keys[i], pub))
             armed[kind] = False
@@ -130,7 +145,7 @@ def warnings(g, step, lag_days, end_date_of):
 def score(warns, which):
     """The signal's state at the turn is its latest published warning.
 
-    Hit: that warning matches the turn and is 3-18 months old.
+    Hit: that warning matches the turn, is at most 18 months old and at least 3 months old.
     Late: the matching warning is published after the turn (within 6 months); lead is negative.
     """
     res = []; used = set()
@@ -213,9 +228,12 @@ def run():
         warns, thr = warnings(g, step, lag, end_of)
         gm_res, false = score(warns, 'gm')
         asp_res, _ = score(warns, 'asp')
+        fresh, _ = warnings(g, step, lag, end_of, rearm='fresh')
+        fresh_res, fresh_false = score(fresh, 'gm')
         report.append({'id': sid, 'label': label, 'status': status, 'first': series[0][0], 'last': series[-1][0],
                        'threshold': round(thr, 2), 'gm': gm_res, 'asp': asp_res,
                        'false_alarms': [(w[0], w[1]) for w in false],
+                       'fresh_gm': fresh_res, 'fresh_false_alarms': [(w[0], w[1]) for w in fresh_false],
                        'hits_gm': sum(r['hit'] for r in gm_res if r['size'] == 'major'), 'hits_asp': sum(r['hit'] for r in asp_res if r['size'] == 'major'),
                        'xcorr_gm': xcorr(g, step)})
     json.dump(report, open(B + '../results.json', 'w'), ensure_ascii=False, indent=1, default=str)
@@ -229,7 +247,8 @@ if __name__ == '__main__' and len(sys.argv) == 1:
     run()
 
 def event_study(g, lag_days, end_of, which='gm', confirm_months=3):
-    """Months from the signal's YoY extreme (+ confirmation + publication lag) to each major turn."""
+    """Months from the signal's YoY extreme (+ confirmation + publication lag) to each major turn.
+    Descriptive only: the extreme is chosen with data up to 6 months after the turn."""
     out = []
     for name, kind, gm, asp, size in TURNS:
         if size != 'major': continue

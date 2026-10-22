@@ -19,34 +19,35 @@ The small 2016 trough and the 2020–21 mini-cycle are also dated, so warnings a
 
 ## Rule (fixed before scoring)
 
-- Each signal is turned into its year-on-year change of a 3-month average (quarterly data: year-on-year change of the quarter). Inventory-type signals are sign-flipped so "worse" is always down.
-- A peak warning fires when that change has fallen 3 months in a row (2 quarters for quarterly data) by at least half its typical pre-2015 move. A trough all-clear is the mirror image. A warning re-arms only after the opposite warning.
+- Each signal is turned into its year-on-year change of a 3-month average (quarterly data: year-on-year change against the quarter 11 to 13 months earlier). Inventory-type signals are sign-flipped so "worse" is always down.
+- A peak warning fires when that change has fallen 3 months in a row (2 quarters for quarterly data) by at least half its typical move before 2017. A trough all-clear is the mirror image.
 - A warning counts from its publication date: month end plus the source's lag (customs 1 day, BOK 15 days, Nanya 10 days, Statistics Korea 30 days, Micron filings 28 days, hyperscaler filings 30 days).
-- At each turn the signal's state is its latest published warning. It is a hit if that warning matches the turn and is at least 3 months (one quarter) old. A matching warning published up to 6 months after the turn is reported as a negative lead.
+- At each turn the signal's state is its latest published warning. It is a hit if that warning matches the turn and is 3 to 18 months old. A matching warning published up to 6 months after the turn is reported as a negative lead.
+- Each signal is scored under two re-arm rules. **Opposite**: a warning fires again only after the opposite warning. **Fresh**: a warning fires each time the condition newly appears, so the lead counts from the latest one. A signal joins the signal row only if it leads both peaks by at least 3 months under both rules.
 - Unmatched warnings from 2015 to 2025 are false alarms.
 
-Change after the first run: quarterly signals originally used the same 3-period confirmation as monthly ones, which meant 9 months of data. They now use 2 quarters. This changed Micron inventory days from a miss to a hit and is the only rule change.
+Changes after the first run: quarterly signals originally used the same 3-period confirmation as monthly ones, which meant 9 months of data; they now use 2 quarters. The fresh rule was added after review, because the opposite rule let one early warning carry a long lead (Micron inventory days' 17 months in 2022). Both changes are shown in the table.
 
 ## Result
 
-Lead in months before Micron's gross-margin turn (negative = after the turn; — = no matching warning).
+Lead in months before Micron's gross-margin turn (negative = after the turn; — = no matching warning). Where the fresh rule differs, it is shown in brackets.
 
 | Signal | 2018 peak | 2022 peak | 2019 trough | 2023 trough | False alarms | Decision |
 |---|---|---|---|---|---|---|
-| 韩国存储芯片出口额 (customs HS 854232) | 6.0 | 6.0 | −2.1 | −5.0 | 2 | **Signal row** |
-| 美光库存天数 | 8.0 | 17.0 | −0.9 | — | 2 | **Signal row** |
-| 韩国半导体出口额 (HS 8541+8542) | 6.0 | 6.0 | −2.1 | −4.0 | 2 | Card only: leads, but memory is two thirds to nine tenths of it, so it repeats the memory signal |
-| 韩国央行 DRAM 出口价格指数 | 7.5 | 1.6 | −3.5 | — | 3 | Card only: moves with Micron's margin (best correlation at lag 0, 0.85); added as the official price yardstick |
-| 南亚科月营收 | −2.4 | 5.7 | 1.6 | −4.3 | 4 | Card only |
-| 韩国电子零件业库存/出货比 (KSIC 26) | — | 5.1 | 6.0 | — | 10 | Card only: right in 2022 and 2019, but noisy |
-| 美光总收入 (proxy for DRAM revenue) | 8.0 | −0.9 | −3.9 | — | 3 | Off the signal row: coincident with margin |
-| 四家云厂商资本开支合计 | −5.0 | 4.0 | 1.0 | — | 2 | Off the signal row |
-| 韩国央行闪存出口价格指数 | 9.5 | −1.4 | 2.4 | — | 4 | Not added |
-| 韩国半导体业开工率指数 | — | −1.9 | 3.0 | −3.9 | 6 | Not added |
+| 韩国半导体出口额 (customs HS 8541+8542) | 6.0 | 6.0 | −2.1 | −4.0 | 2 (8) | **Signal row** |
+| 美光库存天数 | 8.0 | 17.0 (5.1) | −0.9 | — | 2 (7) | **Signal row** |
+| 韩国存储芯片出口额 (HS 854232) | 6.0 | 6.0 (2.0) | −2.1 | −4.0 | 2 (9) | Card only: fails the 2022 peak under the fresh rule |
+| 韩国央行 DRAM 出口价格指数 | 7.5 (3.5) | 1.6 | −3.5 | — | 3 (7) | Card only: moves with Micron's margin (best correlation at lag 0, 0.85); added as the official price yardstick |
+| 南亚科月营收 | −2.4 | 5.7 | 1.6 | −5.3 | 4 (6) | Card only |
+| 韩国电子零件业库存/出货比 (KSIC 26) | — | 5.1 | 6.0 | — | 10 (18) | Card only: right in 2022 and 2019, but noisy |
+| 美光总收入 (proxy for DRAM revenue) | 8.0 | 2.1 | −3.9 | — | 3 (4) | Off the signal row: fails 2022 |
+| 四家云厂商资本开支合计 | −5.0 | 4.0 | 1.0 | — | 2 (4) | Off the signal row |
+| 韩国央行闪存出口价格指数 | 9.5 | −1.4 | 3.4 | — | 4 (4) | Not added |
+| 韩国半导体业开工率指数 | — | −1.9 | 3.0 | −3.9 | 6 (14) | Not added |
 
-Against the DRAM ASP turns instead, the 2022 peak is nine months earlier (FQ4 2021). Micron inventory days still leads it by 8 months; Korea memory exports turn 3 months after it.
+Against the DRAM ASP turns instead, the 2022 peak is nine months earlier (FQ4 2021). Micron inventory days still leads it by 8 months; Korea semiconductor exports turn 3 months after it.
 
-Correlation check (signal change against the change in Micron's margin k quarters later, 2015–2024): Micron inventory days is strongest one quarter ahead (0.78 at lag 1 against 0.43 at lag 0). Korea memory exports is strongest at lag 0 (0.89) and still 0.81 one quarter ahead. The BOK DRAM index falls from 0.85 at lag 0 to 0.70 at lag 1.
+Correlation check (signal change against the change in Micron's margin k quarters later, 2015–2024): Micron inventory days is strongest one quarter ahead (0.78 at lag 1 against 0.43 at lag 0). Korea semiconductor exports is strongest at lag 0 (0.88) and still 0.77 one quarter ahead. The BOK DRAM index falls from 0.85 at lag 0 to 0.70 at lag 1.
 
 No signal called the troughs a quarter early. Peaks are where these signals help, which is also the turn that matters while the cycle is rising.
 
@@ -57,7 +58,7 @@ These have no free history that reaches back to 2018, so they leave the signal r
 ## Limits
 
 - Two peaks and two troughs are few. The leads above are evidence, not a guarantee.
-- The customs series in the test is HS 854232 from UN Comtrade. The site's row uses the trade ministry's memory figure, which is broader (it includes multi-chip packages): September 2025 was 117.9 亿美元 in the ministry release and 93.5 亿美元 under HS 854232. Both come from the same customs records and turn together.
+- The customs series in the test come from UN Comtrade (HS 8541+8542 and HS 854232). The site's rows use the trade ministry's figures, which group products differently: September 2025 memory was 117.9 亿美元 in the ministry release and 93.5 亿美元 under HS 854232. Both come from the same customs records and turn together.
 - The inventory ratio is for KSIC 26 (electronic components, computers and communications equipment), where semiconductors are the largest part. A semiconductor-only ratio is published by Statistics Korea (KOSIS) but needs an API key.
 - The 2023 gross-margin trough is pulled earlier by inventory write-downs, so trough leads against it are understated.
 

@@ -2,7 +2,7 @@ import {createRequire} from 'node:module';
 import {entries} from './model.mjs';
 
 const require=createRequire(import.meta.url),core=require('../lib/outlook-core.js'),series=require('../lib/series-core.js');
-export const {validate:validateOutlook,resolve:resolveOutlookRef,format:formatOutlookValue,citedRefs,snapshot:outlookSnapshot,logEntry}=core;
+export const {validate:validateOutlook,resolve:resolveOutlookRef,format:formatOutlookValue,citedRefs,snapshot:outlookSnapshot,logEntry,logContinues}=core;
 
 // Every fact a writer may cite: live rows, guidance, partner results and outlook, plus past series points.
 export function outlookContext(document,catalog) {

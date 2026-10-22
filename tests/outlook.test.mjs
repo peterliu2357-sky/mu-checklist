@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {clone,materialize} from '../pipeline/model.mjs';
-import {validateOutlook,stampOutlook,outlookContext} from '../pipeline/outlook.mjs';
+import {validateOutlook,stampOutlook,outlookContext,logContinues,formatOutlookValue} from '../pipeline/outlook.mjs';
 const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url)));
 const d=materialize(read('data/ledger.json')),catalog=read('pipeline/catalog.json'),outlook=read('data/outlook.json');
 const has=(issues,code)=>assert(issues.some(x=>x.code===code),JSON.stringify(issues));
@@ -72,4 +72,16 @@ test('a cycle read follows the prose rules, and its log cannot be edited loosely
   has(validateOutlook({...ok,cycle_log:[{...ok.cycle_log[0],grade:{result:'maybe'}}]},d),'OUTLOOK_CYCLE');
   has(validateOutlook({...ok,cycle_log:[...ok.cycle_log,{...ok.cycle_log[0]}]},d),'OUTLOOK_CYCLE');
   has(validateOutlook({...ok,cycle_read:{...ok.cycle_read,call:'falling'}},d),'OUTLOOK_SNAPSHOT');
+});
+test('a published cycle log only grows, apart from grading and a same-day re-stamp',()=>{
+  const e=(at,call='rising',grade=null)=>({at,call,text:'收入上升。',values:{},grade});
+  assert(logContinues([e('2026-10-22')],[e('2026-10-22'),e('2026-10-25')]));
+  assert(logContinues([e('2026-10-22')],[e('2026-10-22','slowing')]));
+  assert(logContinues([e('2026-10-22'),e('2026-10-25')],[e('2026-10-22','rising',{result:'hit',graded_at:'2027-01-05',basis:'x'}),e('2026-10-25')]));
+  assert(!logContinues([e('2026-10-22'),e('2026-10-25')],[e('2026-10-22','falling'),e('2026-10-25')]));
+  assert(!logContinues([e('2026-10-22'),e('2026-10-25')],[e('2026-10-25')]));
+  assert(!logContinues([e('2026-10-22','rising',{result:'hit',graded_at:'2027-01-05',basis:'x'})],[e('2026-10-22')]));
+});
+test('index values keep two decimals and no unit word',()=>{
+  assert.equal(formatOutlookValue(289.16,'index'),'289.16');
 });
