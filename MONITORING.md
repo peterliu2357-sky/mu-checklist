@@ -169,7 +169,7 @@ schema_version 仍为 2，新增必填 `ecosystem`；已有美光指标与财季
 - `mu.contract.ddr4_contract`：DRAMeXchange 合同价表 DDR4 8Gb (1Gx8) 的 Average（美元，`as_of` 为合同价所属月份 `YYYY-MM`）。来源 ID `dram_contract`。只取芯片合同价，不用模组（SO-DIMM）价。
 - `mu.contract.ddr5_contract`：产业通商部月度出口发布中所列 DDR5 16Gb 固定价格（美元，`as_of` 为月份）。原文未注明出处，标 `secondary`（转引）。来源 ID `korea_trade`，与出口额同一份发布。
 - `mu.contract.bok_dram_price`：韩国央行出口价格指数（品目别，ECOS 402Y016）DRAM 项，美元基准（2020=100），单位 `index`。来源 ID `bok_export_price`。回测显示它与美光毛利率同步而非领先，用作价格基准和周期判断的评分依据。
-- `mu.supply.korea_ic_shipment` / `mu.supply.korea_ic_inventory`：统计厅生产者出货指数与库存指数（ECOS 901Y032，KSIC 26 电子零件、计算机、影像音响及通信设备制造业，原指数，2020=100）。来源 ID `kostat_industry`。两行 `as_of` 必须相同；页面计算 库存 ÷ 出货，不另存比值。半导体单独的指数在 KOSIS，需要 API 密钥，目前未接入。
+- `mu.supply.korea_ic_shipment` / `mu.supply.korea_ic_inventory`：统计厅生产者出货指数与库存指数（ECOS 901Y032，KSIC 26 电子零件、计算机、影像音响及通信设备制造业，季节调整，2020=100）。来源 ID 分别为 `kostat_shipment`、`kostat_inventory`。回测用原指数的同比；页面趋势用季节调整值。两行 `as_of` 必须相同；页面计算 库存 ÷ 出货，不另存比值。半导体单独的指数在 KOSIS，需要 API 密钥，目前未接入。
 - 现货较合同价：页面用同规格的最新现货行与合同价行计算（现货 ÷ 合同价 − 1），不存储；两者日期不同，卡片同时显示两个日期。
 
 产业链公司的存货沿用该部分同比口径（本期末 vs 上年同期末）。月度指标保留自然月期间，不与季度合计混用。

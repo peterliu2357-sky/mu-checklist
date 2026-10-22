@@ -3255,7 +3255,7 @@
       "entity": "industry",
       "measurement": "supply",
       "unit": "index",
-      "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者出货指数（KSIC 26，原指数，2020=100）",
+      "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者出货指数（KSIC 26，季节调整，2020=100）",
       "temporal_basis": "calendar_month",
       "evidence_types": [
         "direct"
@@ -3271,7 +3271,7 @@
       "entity": "industry",
       "measurement": "supply",
       "unit": "index",
-      "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者库存指数（KSIC 26，原指数，2020=100）",
+      "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者库存指数（KSIC 26，季节调整，2020=100）",
       "temporal_basis": "calendar_month",
       "evidence_types": [
         "direct"
@@ -3733,8 +3733,10 @@
     "bok_export_price": [
       "mu.contract.bok_dram_price"
     ],
-    "kostat_industry": [
-      "mu.supply.korea_ic_shipment",
+    "kostat_shipment": [
+      "mu.supply.korea_ic_shipment"
+    ],
+    "kostat_inventory": [
       "mu.supply.korea_ic_inventory"
     ]
   },
@@ -4157,7 +4159,7 @@
       "kostat_industry": {
         "entry_url": "https://ecos.bok.or.kr/",
         "period_basis": "calendar_month",
-        "note": "Statistics Korea producer shipment and inventory indices for KSIC 26 (ECOS 901Y032), raw index, published about 30 days after the month. The page divides inventory by shipment."
+        "note": "Statistics Korea producer shipment and inventory indices for KSIC 26 (ECOS 901Y032), seasonally adjusted, published about 30 days after the month. One source per index (kostat_shipment, kostat_inventory); the page divides inventory by shipment."
       },
       "dram_contract": {
         "entry_url": "https://www.dramexchange.com/",
