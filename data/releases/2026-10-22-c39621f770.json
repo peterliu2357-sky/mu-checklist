@@ -1,0 +1,237 @@
+{
+  "version": 1,
+  "scope": "batch",
+  "base_commit": "92539527e104202aa01f3b7e1ac74c0976441c6b",
+  "base_revision": "2026-10-22-09aa22bf0f",
+  "base_sha256": "72d5439ff6b1fdcaf11be9b91aaebf1e835f3c08d24502514ef7c668fd206133",
+  "catalog_sha256": "5298de77d02a0d20d6b2590900cf9f7a06e8c4c1063c039f15670f2a1137b768",
+  "created_at": "2026-10-22T00:37:49.788Z",
+  "completed_at": "2026-10-22T00:38:40.586Z",
+  "state": "verified",
+  "targets": [
+    "industry",
+    "technology:processes",
+    "technology:products"
+  ],
+  "coverage": [
+    {
+      "key": "industry",
+      "status": "verified",
+      "evidence": [
+        "spot",
+        "dram_spot",
+        "index_tf_news_20261021",
+        "tf_news_dram_20261020",
+        "nanya_monthly"
+      ],
+      "reviewed_at": "2026-10-22T00:38:40.000Z",
+      "latest_disclosure": {
+        "url": "https://www.trendforce.com/news/2026/10/21/insights-memory-spot-price-update-ddr5-supply-tight-ddr4-trading-subdued-despite-0-84-gain-in-mainstream-prices/",
+        "published_at": "2026-10-21"
+      },
+      "reason": "TrendForce 10-21 现货周报：DDR4 1Gx8 3200 周均价 46.357 美元（10-20，周涨 0.84%），512Gb TLC 18.592 美元（10-19，周跌 1.28%）；DRAMeXchange 10-21 18:10 收盘场 DDR5 16Gb 4800/5600 均价 60.867 美元。三行各加入趋势点。TrendForce News 10-20 文章所引 4Q26 DRAM 合同价环比约 20% 来自《工商时报》引述的机构投资人，并非 TrendForce 自身预测，合同价预测行保持 09-30 报告的 TrendForce 数值。南亚科官方月营收表 9 月仍为空白；其他行业行无新的原始数据。",
+      "finding": "new_disclosure"
+    },
+    {
+      "key": "technology:processes",
+      "status": "verified",
+      "evidence": [
+        "tech_webinar_1021",
+        "tech_gamma",
+        "tech_q3_deck",
+        "fy2026_10k",
+        "tech_g9",
+        "index_micron_news_20261021",
+        "index_micron_events_20261021"
+      ],
+      "reviewed_at": "2026-10-22T00:38:40.000Z",
+      "latest_disclosure": {
+        "url": "https://s25.q4cdn.com/621799436/files/doc_downloads/2026/10/MU-TP-Webinar.pdf",
+        "published_at": "2026-10-21"
+      },
+      "reason": "美光 10-21 技术与产品网络研讨会演示稿：p16 称 1γ 已大规模量产、1δ 处于良率爬升、不采用 4F²；p17 称 1δ 计划 2027 年下半年开始爬坡，位元密度较 1γ 提升约二成五（原文 mid-20s percentage），在美国生产；p23 称 G11 超过 400 层、2027 年下半年量产爬坡，位元密度约为 G9 两倍。更新 1γ 与 G9 的下一代里程碑；两者阶段仍为量产爬坡，原有事实保留原披露日期。",
+      "finding": "new_disclosure"
+    },
+    {
+      "key": "technology:products",
+      "status": "verified",
+      "evidence": [
+        "tech_webinar_1021",
+        "tech_mu_q3",
+        "index_micron_news_20261021",
+        "index_micron_events_20261021",
+        "index_samsung_news_20261021",
+        "index_skhynix_news_20261021"
+      ],
+      "reviewed_at": "2026-10-22T00:38:40.000Z",
+      "latest_disclosure": {
+        "url": "https://s25.q4cdn.com/621799436/files/doc_downloads/2026/10/MU-TP-Webinar.pdf",
+        "published_at": "2026-10-21"
+      },
+      "reason": "美光 10-21 演示稿 p10 在 2026 年栏列出 HBM4E 已向主要客户送样，p22 路线图称自 HBM4E 起提供 JEDEC 标准与定制版本，HBM4E 阶段更新为已送样，未披露送样日期与规格，2027 年量产计划不变。p19 的 1TB RDIMM 为能力展示，并非产品承诺，不新增记录。三星新闻室无新的 HBM 或 RDIMM 产品里程碑；SK 海力士 10-21 [AI Ecosystem] 文章为行业观点系列，无产品阶段变化。",
+      "finding": "new_disclosure"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "spot",
+      "url": "https://www.trendforce.com/news/2026/10/21/insights-memory-spot-price-update-ddr5-supply-tight-ddr4-trading-subdued-despite-0-84-gain-in-mainstream-prices/",
+      "sha256": "e25d6e5d3cb50fbf1fccccdba6587e8f64c52a6c3b68db7e3862b54ab17c2ab3",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-22T00:38:18.616Z",
+      "reviewed_at": "2026-10-22T00:38:18.616Z",
+      "status": "read"
+    },
+    {
+      "source_id": "dram_spot",
+      "url": "https://www.dramexchange.com/",
+      "sha256": "4760ce52ff2ec2ef82116c9f0016321142f60948bb1875bd736a4b11fefdda47",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-22T00:38:19.001Z",
+      "reviewed_at": "2026-10-22T00:38:19.001Z",
+      "status": "read"
+    },
+    {
+      "source_id": "tech_webinar_1021",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_downloads/2026/10/MU-TP-Webinar.pdf",
+      "sha256": "00808627216e27375a163a3beff5393aea826c3722004a1a6948e88c07180f94",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-22T00:38:19.364Z",
+      "reviewed_at": "2026-10-22T00:38:19.364Z",
+      "status": "read"
+    },
+    {
+      "source_id": "tf_news_dram_20261020",
+      "url": "https://www.trendforce.com/news/2026/10/20/news-dram-prices-seen-rising-20-qoq-in-4q26-despite-slower-gains-ai-demand-tight-supply-support-outlook/",
+      "sha256": "f86f922c89a0deba3ad666e660cd71827268a38f5731bb41bec0f61b162dcb30",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-22T00:38:19.730Z",
+      "reviewed_at": "2026-10-22T00:38:19.730Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_tf_news_20261021",
+      "url": "https://www.trendforce.com/news/wp-json/wp/v2/posts?after=2026-10-15T00:00:00&per_page=60&_fields=id,date,link,title",
+      "sha256": "3ca1ad07634f054b011d75e8cfc4ad53ff838c6e618e57e49375c75889c189ce",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-22T00:38:20.080Z",
+      "reviewed_at": "2026-10-22T00:38:20.080Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_micron_news_20261021",
+      "url": "https://investors.micron.com/news/default.aspx",
+      "sha256": "1b2152ae27142d062668f2a977300ab293e51fa9b317536da5e35d6359e34287",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-10-22T00:38:20.419Z",
+      "reviewed_at": "2026-10-22T00:38:20.419Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_micron_events_20261021",
+      "url": "https://investors.micron.com/feed/Event.svc/GetEventList?LanguageId=1&eventSelection=3&sortOperator=1&eventDateFilter=3&pageSize=5&pageNumber=0&year=-1&includePresentations=true&includeFinancialReports=true",
+      "sha256": "db583abad534e999b2466e96b28eebcd15b8639bc7cbf613c977d0f8c7ef2d37",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-22T00:38:20.762Z",
+      "reviewed_at": "2026-10-22T00:38:20.762Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_samsung_news_20261021",
+      "url": "https://news.samsung.com/global/",
+      "sha256": "296905ad2e700f68f20c230aa9b7c2531cae3e8452e9753364679e00ee996fb9",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-22T00:38:21.114Z",
+      "reviewed_at": "2026-10-22T00:38:21.114Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_skhynix_news_20261021",
+      "url": "https://news.skhynix.com/en/",
+      "sha256": "3061d3088a1f7347c60e200b5e5a7fa65928c42dfaa9f329f77877e96c24b311",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-22T00:38:21.442Z",
+      "reviewed_at": "2026-10-22T00:38:21.442Z",
+      "status": "read"
+    },
+    {
+      "source_id": "nanya_monthly",
+      "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
+      "sha256": "6e9f960a00d2f7075673973aa4eb6b253d3723aa57cf4ef4df5aed4d60cc5495",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-22T00:38:21.790Z",
+      "reviewed_at": "2026-10-22T00:38:21.790Z",
+      "status": "read"
+    },
+    {
+      "source_id": "tech_g9",
+      "url": "https://investors.micron.com/news/press-release/2024/Micron-Announces-Volume-Production-of-Ninth-Generation-NAND-Flash-Technology-07-30-2024/default.aspx",
+      "sha256": "2a1c032ad9b5340f54cee00f0a816fa82310978d9505b5ad2179052006fade42",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-10-22T00:38:22.131Z",
+      "reviewed_at": "2026-10-22T00:38:22.131Z",
+      "status": "read"
+    },
+    {
+      "source_id": "tech_mu_q3",
+      "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Results-for-the-Third-Quarter-of-Fiscal-2026/default.aspx",
+      "sha256": "e94c4bade963a07e825ab9acd24e2357b0ae8e530156a11234016302e860c61d",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-10-22T00:38:22.456Z",
+      "reviewed_at": "2026-10-22T00:38:22.456Z",
+      "status": "read"
+    },
+    {
+      "source_id": "tech_gamma",
+      "url": "https://investors.micron.com/news/press-release/2025/Micron-Announces-Shipment-of-1-1-gamma-DRAM-Pioneering-Memory-Technology-Advancements-for-Future-Compute-Needs-02-25-2025/default.aspx",
+      "sha256": "b45485a6dd520fa7e9c16e9f90a81a4c7c353fd48437d3c6360e1807964ef473",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-10-22T00:38:22.823Z",
+      "reviewed_at": "2026-10-22T00:38:22.823Z",
+      "status": "read"
+    },
+    {
+      "source_id": "tech_q3_deck",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf",
+      "sha256": "29468a786fa4a9c7728735ea8e3ad5853bb1375a297c636e86e6a4dd3b155929",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-22T00:38:23.160Z",
+      "reviewed_at": "2026-10-22T00:38:23.160Z",
+      "status": "read"
+    },
+    {
+      "source_id": "fy2026_10k",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm",
+      "sha256": "4f04727d28f6acbf15159cd5906984f7f5180fb7eb7cbfda5387bd0369888b1a",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-22T00:38:23.509Z",
+      "reviewed_at": "2026-10-22T00:38:23.509Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [],
+  "publication_corrections": [
+    "spot",
+    "dram_spot"
+  ],
+  "technology_reviews": [],
+  "result": "success",
+  "artifact_sha256": "0a20d3a522305d51095454c887ed2a67adc4c6ca6014b19f91b62ded477ac71d",
+  "ledger_sha256": "9864a9b72a929cfa99f431e47f104ce3aa2f8ead5d4ad170030ea930c2c653ad",
+  "evidence_sha256": "4c06093ed63719344e0fabfd4c8c7c12d8ad8803b6d78077261d526e749e68f9"
+}
