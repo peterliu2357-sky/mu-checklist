@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "revision": "2026-10-22-2b898566d3",
-  "updated_at": "2026-10-22T18:17:03.110Z",
+  "revision": "2026-10-22-e4067e02da",
+  "updated_at": "2026-10-22T18:27:08.343Z",
   "last_successful_check_at": "2026-09-20T23:50:00Z",
   "last_attempt_at": "2026-09-20T23:50:00Z",
   "financial_period": "FY2026 Q4",
@@ -2786,7 +2786,7 @@
             "dram_contract"
           ],
           "kind": "行业报价",
-          "note": "合同价月均价，与 DDR4 1Gx8 现货同规格芯片；不含模组价。",
+          "note": "DRAMeXchange 合同价表的均价（Average），与 DDR4 1Gx8 现货同规格芯片；不含模组价。",
           "period": "2026 年 8 月",
           "change": "较上期 +4.17%（DRAMeXchange 披露）",
           "location": "DRAMeXchange · DRAM Contract Price · DDR4 8Gb 1Gx8 · Average 25.00（High 34.50 / Low 22.50），日期 2026-08-31。",
@@ -2974,7 +2974,7 @@
           "id": "micron_outlook"
         },
         {
-          "label": "韩国电子零件业出货指数（KSIC 26，季调）",
+          "label": "韩国电子零件·计算机·通信设备业出货指数（KSIC 26，季调）",
           "current": 135.1,
           "previous": 129.7,
           "unit": "index",
@@ -2991,7 +2991,7 @@
           "as_of": "2026-08"
         },
         {
-          "label": "韩国电子零件业库存指数（KSIC 26，季调）",
+          "label": "韩国电子零件·计算机·通信设备业库存指数（KSIC 26，季调）",
           "current": 112.8,
           "previous": 115.2,
           "unit": "index",
@@ -3161,7 +3161,7 @@
             "korea_trade"
           ],
           "kind": "官方统计",
-          "note": "原文以亿美元列示（540.7 / 117.9）；整月值。受价格与数量共同影响。 约占同月半导体出口的九成：已核对原文，主要因存储价格大涨（同一发布列 DDR5 16Gb 固定价格同比 +687.5%）。",
+          "note": "原文以亿美元列示（540.7 / 117.9）；整月值。受价格与数量共同影响。约占同月半导体出口的九成（上年同月约七成），同期存储价格大幅上涨。",
           "period": "2026 年 9 月 vs 2025 年 9 月",
           "change": "同比 +358.6%（官方披露）",
           "location": "产业通商部 9 月进出口动向 · 附件 PDF 第 12 页· 메모리/시스템 반도체 수출액。",
@@ -3195,10 +3195,10 @@
   ],
   "check_log": [
     {
-      "at": "2026-10-22T18:17:03.110Z",
-      "status": "failed",
+      "at": "2026-10-22T18:27:08.343Z",
+      "status": "success",
       "scope": "industry",
-      "text": "核查范围：industry；完成 0 / 1 项。"
+      "text": "核查范围：industry；完成 1 / 1 项。"
     },
     {
       "at": "2026-10-22T06:32:28.635Z",
@@ -11327,7 +11327,7 @@
             "published_at": null
           }
         ],
-        "record_id": "fb37763dcaaf12e4098bc6791df1179debd0364e7eff13b9b13f0461e8de6262"
+        "record_id": "d82b0796b42389857af999274283ddf1dcd6cc3ad9101103a41d9d7f1d0a4c76"
       },
       {
         "as_of": "2025-06",
@@ -11340,7 +11340,7 @@
             "published_at": null
           }
         ],
-        "record_id": "3b663cab2a76772f9c252df423a23ec9d75541ea3eab2cdc69ded77d14286382"
+        "record_id": "a8fbb1a7c640c35b28e9512a0037a104194ea9789c50f75e52236656d95bbae5"
       },
       {
         "as_of": "2025-07",
@@ -11353,7 +11353,7 @@
             "published_at": null
           }
         ],
-        "record_id": "4a110e18e366d40796b609a53d97cb17408ca72808ee2f8cc645124e12fa44ad"
+        "record_id": "e6ff6fc6bee24b1db1e687547f193091fa302a539c2c2333478425319a1f5d8f"
       },
       {
         "as_of": "2025-08",
@@ -11366,7 +11366,7 @@
             "published_at": null
           }
         ],
-        "record_id": "dffaa0d34be289d5a63a80b8e5e482b4a4f39f1a32184bd27995ea984c612e32"
+        "record_id": "13a92649f97655855747a6c3f884a82d2d32fbcc26aa4c97b3439d476b8ace7a"
       },
       {
         "as_of": "2025-09",
@@ -11379,7 +11379,7 @@
             "published_at": null
           }
         ],
-        "record_id": "35b4a8aae24ccc547c6102e5cf0347d709931981250b5ceb72200a97d66cd577"
+        "record_id": "d5694edb4e1839d3a64bef67bb02d2594f32397cdd0c0eba41d63446b9d69fe8"
       },
       {
         "as_of": "2025-10",
@@ -11392,7 +11392,7 @@
             "published_at": null
           }
         ],
-        "record_id": "f4e04c7cfe531aebe6617382544d0bd59072755e1407823096e3f29a52ae5469"
+        "record_id": "3ce242985139d9bc60feee124d231b76c3065e90e157fcf47d7e90337105cdfa"
       },
       {
         "as_of": "2025-11",
@@ -11405,7 +11405,7 @@
             "published_at": null
           }
         ],
-        "record_id": "eef21acc08f1bb59e26d4cd6896ab9d23f95fa1a176e14d1f25369cd02ae5720"
+        "record_id": "631c46e6f64421180b9e4b382663528586505f505d89bc5057b66747e59167cd"
       },
       {
         "as_of": "2025-12",
@@ -11418,7 +11418,7 @@
             "published_at": null
           }
         ],
-        "record_id": "6fd9a95203a38bfbceb20f7df981a0286ffc05df42ffa3b892c05eebdc5a1cdd"
+        "record_id": "c96eb3ee9989c9061ba1b671f3338e53c965ddd1d9dee1fe8b9b92b063de5f45"
       },
       {
         "as_of": "2026-01",
@@ -11431,7 +11431,7 @@
             "published_at": null
           }
         ],
-        "record_id": "65a1a29948660c6bd9fc66fcecbac5158cb2146bf8c1bdf5c4dca9d6e50de7ad"
+        "record_id": "b19a3b73c425d38369a7ef34fa23103bc27798b8803c8c3331a6f1ba91bfcb6c"
       },
       {
         "as_of": "2026-02",
@@ -11444,7 +11444,7 @@
             "published_at": null
           }
         ],
-        "record_id": "7067e37f94f58a0c1fcdd9ccf7fdace1908c26238eee5836d3556e52edc568d0"
+        "record_id": "8312b132a4e9f20f924e4aeedaa54c791c8a40c35fc04dcd6f00e4a2c03695bb"
       },
       {
         "as_of": "2026-03",
@@ -11457,7 +11457,7 @@
             "published_at": null
           }
         ],
-        "record_id": "e3d3879eef86306f9b8c2055a9b954bd3e030befea4bcb9516795af3221ff4d4"
+        "record_id": "8eb228f3d6a0f80306e15f9d0e0c778fa52208fb80c8b29445d51413bedf16c4"
       },
       {
         "as_of": "2026-04",
@@ -11470,7 +11470,7 @@
             "published_at": null
           }
         ],
-        "record_id": "7aae42987eca579bedf2652a7bd8fd1d1db400250153f8edf1f467440dbba688"
+        "record_id": "0b1fcc751e6120d34a3d13aaae28f609c8c47ff23f0ac311915a852854243d20"
       },
       {
         "as_of": "2026-05",
@@ -11483,7 +11483,7 @@
             "published_at": null
           }
         ],
-        "record_id": "c2c3d6510d9ae32f120c0d78c99d25b7b665d2cd96dabdce3a0ccaeb815ab470"
+        "record_id": "8944be3f378fd9f57a29d83359838aa7e1f4c0fb55f7cee10554c69b3f84f52b"
       },
       {
         "as_of": "2026-06",
@@ -11496,7 +11496,7 @@
             "published_at": null
           }
         ],
-        "record_id": "86ab2eb81ea1c3cc0307c72a7319610ce761e86cad06f918a063870e6b733657"
+        "record_id": "93664c60d1ae585e6a3c012fd5190529a0316a6702e8ae8161fea56138514084"
       },
       {
         "as_of": "2026-07",
@@ -11509,7 +11509,7 @@
             "published_at": null
           }
         ],
-        "record_id": "98b2e2e5e46cf9b7653b10dcc48f52bc6705ec98c4b913f376b0bcafd51a0b83"
+        "record_id": "2ae1bc31cfa38cb596f58c53c448c6a910fb81b39db52bab789079f43e05f650"
       }
     ],
     "mu.supply.korea_ic_inventory": [
@@ -11524,7 +11524,7 @@
             "published_at": null
           }
         ],
-        "record_id": "0fcdbe1e07799a7830a939ac374bcd45aebf38d774ce2f0d21d3cc56248e6a83"
+        "record_id": "6d76f684f1861fad5cfd575c9ab27e99849c4c32a00b564fc7243efc0058de18"
       },
       {
         "as_of": "2025-06",
@@ -11537,7 +11537,7 @@
             "published_at": null
           }
         ],
-        "record_id": "72562ea957848a55742294b8029bf0aac38accd36aeec1e9f0da6b8857b94c34"
+        "record_id": "7a9ae8be0554338c4bd950e22559688a3969e09c6d0f2ff0d51910dd99704872"
       },
       {
         "as_of": "2025-07",
@@ -11550,7 +11550,7 @@
             "published_at": null
           }
         ],
-        "record_id": "de42a3c664cdf88f4c500c9f74a28a5abbec80e7386e6fefc6e0f8a61ff7ea18"
+        "record_id": "0702fe3bb6b6aa77a834c99373afc2c47d298a043316aede7e0082597496bcc9"
       },
       {
         "as_of": "2025-08",
@@ -11563,7 +11563,7 @@
             "published_at": null
           }
         ],
-        "record_id": "e1dc111297a523d11b59bf9a01301819f835cd323841f9e71e622dcc4dee3375"
+        "record_id": "d3a4600a1df9c6d4a88d2d1b29a9c9ff4883f6e61154d1b434d42f139e69be68"
       },
       {
         "as_of": "2025-09",
@@ -11576,7 +11576,7 @@
             "published_at": null
           }
         ],
-        "record_id": "8f3c4d4d2a1299887456fc9aaac50d47bd6019f2965f419743427379f63e28c1"
+        "record_id": "3b9f7d062a8dfd4572ab9717eea101b0e87b0baac477dffb79b75dbc81de1a78"
       },
       {
         "as_of": "2025-10",
@@ -11589,7 +11589,7 @@
             "published_at": null
           }
         ],
-        "record_id": "3a543446b11b1440ec61d10239efc2239dcc726672c88b6c53bcf83b81f65282"
+        "record_id": "d7bbe90f1572f803ff045cad38f5fb7b08bdd97697743874a3325799fa860026"
       },
       {
         "as_of": "2025-11",
@@ -11602,7 +11602,7 @@
             "published_at": null
           }
         ],
-        "record_id": "cacb47467b26d590b8f550297cb816cf1747d51f6418ad49d3253a37087b269a"
+        "record_id": "110c5b6617cc63ef752497f471679f70ee40674b3cf947e31db856728f63feee"
       },
       {
         "as_of": "2025-12",
@@ -11615,7 +11615,7 @@
             "published_at": null
           }
         ],
-        "record_id": "d94c5794ca027407ced2961dac8a26e2b57dd91df8c43006b0c6b1c0eb665f59"
+        "record_id": "b485ebe211a9465fe4914b28e8b499a2982b9e8beb99a6b0a8446435ddb5bff5"
       },
       {
         "as_of": "2026-01",
@@ -11628,7 +11628,7 @@
             "published_at": null
           }
         ],
-        "record_id": "b8ac8561b967cf68fc5a10b0164c59acba34beecdee11eedee145ba9bf2e9bb0"
+        "record_id": "ab0310b5627b38c07b655be4aa6cb7cb17c498cb2af18e6333532decb18b2b16"
       },
       {
         "as_of": "2026-02",
@@ -11641,7 +11641,7 @@
             "published_at": null
           }
         ],
-        "record_id": "81ee01b0bcde776d9b4adc709356a42cb61f225e7eaef4a65772337c8ec37992"
+        "record_id": "af295019c0e9d2762965c17f68c1c93062c4753f868a5408fb614a43a22be4cd"
       },
       {
         "as_of": "2026-03",
@@ -11654,7 +11654,7 @@
             "published_at": null
           }
         ],
-        "record_id": "d7007590ecc3ed8c1a7fb758a2b25f9739685e0a5f41dc086fe72ee163d0243f"
+        "record_id": "8fffdfca25ba69a59c7bafb4fafb6a281c603309df9375b9ef68b351d4d568c1"
       },
       {
         "as_of": "2026-04",
@@ -11667,7 +11667,7 @@
             "published_at": null
           }
         ],
-        "record_id": "20e3c102eb43db0198045ea1e8ba0abc0451362dc4b1b365eea4384bbf34248b"
+        "record_id": "d086e10d3992da2123643a570535f2541329b57589dd9c4aae963056721b0269"
       },
       {
         "as_of": "2026-05",
@@ -11680,7 +11680,7 @@
             "published_at": null
           }
         ],
-        "record_id": "e667675d3c557f50c9c2a07118854325ba77c5be84f8917a5def9d33bafa1532"
+        "record_id": "b35e4ca17c13ee35a64924de1538fb54a54d1a0300241ebc7edd3a846bd89837"
       },
       {
         "as_of": "2026-06",
@@ -11693,7 +11693,7 @@
             "published_at": null
           }
         ],
-        "record_id": "61dc692956870cb20621ece4f2ece5ab5c681fa4a24988b5865bdb234ae6a81c"
+        "record_id": "c07677c2d392d22b0467345681c951a2bde1003690d534bc487101c6c76eb8b6"
       },
       {
         "as_of": "2026-07",
@@ -11706,7 +11706,7 @@
             "published_at": null
           }
         ],
-        "record_id": "92628b3516aa7fe645c66b8d0115a44ab6707e54b10ad7132e6a757a992b29cf"
+        "record_id": "afea99ea54694c02e404454532fd47914752b41cd6f7ad052e4ce56e3659771f"
       }
     ],
     "mu.contract.ddr5_contract": [

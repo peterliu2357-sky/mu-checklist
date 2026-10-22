@@ -154,7 +154,7 @@
       "title": "需要紧盯的转折信号",
       "points": [
         {
-          "text": "库存天数由 FY2026 Q3 的 {{series.mu.inventory.days@FY2026 Q3}} 回升至 {{mu.inventory.days}}，总库存环比 {{mu.inventory.total|change}}。此前自 FY2025 Q2 的 {{series.mu.inventory.days@FY2025 Q2}} 起总体下降；公司称增加含节点停产前备货及计入库存的制造激励薪酬。年报附注显示，增量主要在在制品（由 {{mu.inventory.work_in_process|previous}} 增至 {{mu.inventory.work_in_process}}）；产成品由 {{mu.inventory.finished_goods|previous}} 增至 {{mu.inventory.finished_goods}}，基数小但增速 {{mu.inventory.finished_goods|change}} 更快，需继续观察。另一方面，同期贸易应收款增速 {{mu.inventory.receivables|change}}，低于收入增速 {{mu.revenue.total|change}}，应收占季收入由 {{mu.inventory.receivables_revenue|previous}} 降至 {{mu.inventory.receivables_revenue}}，暂未看到靠放宽账期推高出货的迹象。",
+          "text": "库存天数由 FY2026 Q3 的 {{series.mu.inventory.days@FY2026 Q3}} 回升至 {{mu.inventory.days}}，总库存环比 {{mu.inventory.total|change}}。此前自 FY2025 Q2 的 {{series.mu.inventory.days@FY2025 Q2}} 起总体下降；公司称增加含节点停产前备货及计入库存的制造激励薪酬。年报附注显示，增量主要在在制品（由 {{mu.inventory.work_in_process|previous}} 增至 {{mu.inventory.work_in_process}}）；产成品由 {{mu.inventory.finished_goods|previous}} 增至 {{mu.inventory.finished_goods}}，基数小但增速 {{mu.inventory.finished_goods|change}} 更快，需继续观察。另一方面，同期贸易应收款增速 {{mu.inventory.receivables|change}}，低于收入增速 {{mu.revenue.total|change}}，应收占季收入由 {{mu.inventory.receivables_revenue|previous}} 降至 {{mu.inventory.receivables_revenue}}，暂未看到靠放宽账期推高出货的迹象。按本站回测规则，库存天数本季已发出见顶预警；回测中这一预警在 2018 年与 2022 年都早于美光毛利率见顶。",
           "refs": [
             "series.mu.inventory.days@FY2026 Q3",
             "mu.inventory.days",
@@ -264,8 +264,8 @@
       ]
     }
   ],
-  "generated_at": "2026-10-22T18:17:33.145Z",
-  "data_revision": "2026-10-22-2b898566d3",
+  "generated_at": "2026-10-22T18:27:47.794Z",
+  "data_revision": "2026-10-22-e4067e02da",
   "financial_period": "FY2026 Q4",
   "cited": {
     "mu.revenue.total": {
@@ -295,11 +295,6 @@
     "mu.inventory.days": {
       "current": 129,
       "previous": null
-    },
-    "mu.demand.korea_semi_exports": {
-      "current": 60295,
-      "previous": 16621,
-      "change": "同比 +262.8%（官方披露）"
     },
     "mu.contract.bok_dram_price": {
       "current": 289.16,
@@ -499,6 +494,11 @@
       "previous": 11790,
       "change": "同比 +358.6%（官方披露）"
     },
+    "mu.demand.korea_semi_exports": {
+      "current": 60295,
+      "previous": 16621,
+      "change": "同比 +262.8%（官方披露）"
+    },
     "mu.demand.nanya_revenue": {
       "current": 44.690268,
       "previous": 43.867609,
@@ -690,21 +690,20 @@
     }
   },
   "cycle_read": {
-    "call": "rising",
-    "text": "半导体出口{{mu.demand.korea_semi_exports|change}}，DRAM 价格指数仍升，回测信号未发预警。",
+    "call": "slowing",
+    "text": "美光库存天数已触发回测见顶预警；DRAM 价格指数{{mu.contract.bok_dram_price|change}}仍在上升。",
     "refs": [
-      "mu.demand.korea_semi_exports",
-      "mu.contract.bok_dram_price",
-      "mu.inventory.days"
+      "mu.inventory.days",
+      "mu.contract.bok_dram_price"
     ]
   },
   "cycle_log": [
     {
       "at": "2026-10-22",
-      "call": "rising",
-      "text": "半导体出口{{mu.demand.korea_semi_exports|change}}，DRAM 价格指数仍升，回测信号未发预警。",
+      "call": "slowing",
+      "text": "美光库存天数已触发回测见顶预警；DRAM 价格指数{{mu.contract.bok_dram_price|change}}仍在上升。",
       "values": {
-        "mu.demand.korea_semi_exports|change": "同比 +262.8%（官方披露）"
+        "mu.contract.bok_dram_price|change": "+2.3%"
       },
       "grade": null
     }

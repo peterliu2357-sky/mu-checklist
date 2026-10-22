@@ -140,7 +140,7 @@
     if(!r) return '';
     const points=[...r.history,{as_of:r.as_of,value:r.value}].slice(-series.windows.observation).map(p=>({period:p.as_of,value:p.value}));
     const previous=r.history.at(-1);
-    return `<article class="card group-total inventory-ratio" aria-label="韩国电子零件业库存/出货比"><div class="row-top"><h3>韩国电子零件业库存 / 出货比</h3><span class="tag-group"><span class="basis calculated">${provenance.calculated}</span></span></div><div class="numbers">${previous?`<span class="previous">${num(previous.value,2)}</span><span class="arrow" aria-label="变为">→</span>`:''}<span class="current">${num(r.value,2)}</span></div><p class="row-period">${esc(r.as_of)}${previous?` vs ${esc(previous.as_of)}`:''}</p>${sparkline(points,'')}<p class="row-note">库存指数 ÷ 出货指数（KSIC 26，半导体为最大组成）。比值上升表示出货放缓、库存累积；回测中 2022 年见顶前约 5 个月先转弱，但误报较多，未列入周期信号。</p></article>`;
+    return `<article class="card group-total inventory-ratio" aria-label="韩国电子零件·计算机·通信设备业库存/出货比"><div class="row-top"><h3>韩国电子零件·计算机·通信设备业库存 / 出货比</h3><span class="tag-group"><span class="basis calculated">${provenance.calculated}</span></span></div><div class="numbers">${previous?`<span class="previous">${num(previous.value,2)}</span><span class="arrow" aria-label="变为">→</span>`:''}<span class="current">${num(r.value,2)}</span></div><p class="row-period">${esc(r.as_of)}${previous?` vs ${esc(previous.as_of)}`:''}</p>${sparkline(points,'')}<p class="row-note">库存指数 ÷ 出货指数（KSIC 26，半导体为最大组成）。比值上升表示出货放缓、库存累积；回测中 2022 年见顶前约 5 个月先转弱，但误报较多，未列入周期信号。</p></article>`;
   }
   function cycle() {
     const sections=cycleLayout(data);
