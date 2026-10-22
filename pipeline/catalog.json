@@ -3556,6 +3556,11 @@
       "tech.nand_g9",
       "tech.micron_hbm4"
     ],
+    "tech_webinar_1021": [
+      "tech.dram_1gamma",
+      "tech.nand_g9",
+      "tech.micron_hbm4e"
+    ],
     "tech_gamma": [
       "tech.dram_1gamma"
     ],

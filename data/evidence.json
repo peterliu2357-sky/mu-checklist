@@ -11807,5 +11807,358 @@
     "mode": "verified",
     "record_hash": "e6aeb0bbac57d2923f4399faf33b511165e569d9142efaf3f792b76723fe8c5b",
     "id": "e-f2d54c2775d19d71a52b5175f29803bcbbc6a930414db45b0c3e428809a7f5db"
+  },
+  "e-06e854cffdd7a42cb0f0e4c1c55796f05a2918fdf01264b40623e5376cf15325": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "DDR4 1Gx8 3200 现货",
+    "values": {
+      "current": 46.357,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 46.357,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-10-20",
+        "locator": "TrendForce 10-21 Memory Spot Price Update · DRAM Spot Price",
+        "source_id": "spot"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-page review; raw value times scale checked against candidate",
+      "at": "2026-10-22T00:38:25.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "spot",
+        "url": "https://www.trendforce.com/news/2026/10/21/insights-memory-spot-price-update-ddr5-supply-tight-ddr4-trading-subdued-despite-0-84-gain-in-mainstream-prices/",
+        "sha256": "e25d6e5d3cb50fbf1fccccdba6587e8f64c52a6c3b68db7e3862b54ab17c2ab3",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-22T00:38:18.616Z",
+        "reviewed_at": "2026-10-22T00:38:18.616Z",
+        "status": "read",
+        "locator": "DRAM Spot Price 正文：this week (October 20)",
+        "excerpt": "The average spot price of mainstream chips (i.e., DDR4 1Gx8 3200MT/s) has risen by 0.84% to US$46.357 this week (October 20)."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "d2089348f30235f6e5e9f1aeab9f09d82072384afa9c5fb63708d7e54c0ad561",
+    "id": "e-06e854cffdd7a42cb0f0e4c1c55796f05a2918fdf01264b40623e5376cf15325"
+  },
+  "e-4482c51f5622a5b65eae12debd353ee1eb83c6cd039049ebc0c8441ea3008687": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "DDR5 16Gb (2Gx8) 4800/5600 现货",
+    "values": {
+      "current": 60.867,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 60.867,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-10-21",
+        "locator": "DRAM Spot Price · DDR5 16Gb (2Gx8) 4800/5600 · Session Average",
+        "source_id": "dram_spot"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-page review; raw value times scale checked against candidate",
+      "at": "2026-10-22T00:38:25.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "dram_spot",
+        "url": "https://www.dramexchange.com/",
+        "sha256": "4760ce52ff2ec2ef82116c9f0016321142f60948bb1875bd736a4b11fefdda47",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-22T00:38:19.001Z",
+        "reviewed_at": "2026-10-22T00:38:19.001Z",
+        "status": "read",
+        "locator": "DRAM Spot Price table, Last Update: Oct.21 2026 18:10 (GMT+8)",
+        "excerpt": "DDR5 16Gb (2Gx8) 4800/5600 | Daily High 71.00 | Daily Low 46.50 | Session High 71.00 | Session Low 46.80 | Session Average 60.867 | Session Change 0.28 %"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "f7d3c43dd5db83a848aa589a5df054955c59cb2f2420799b8281dabc5f88a7c9",
+    "id": "e-4482c51f5622a5b65eae12debd353ee1eb83c6cd039049ebc0c8441ea3008687"
+  },
+  "e-5f5f5db94eb4907a50032b939d3b2428dd36358bb5fb915d41ef32f680f1f63a": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "512Gb TLC 现货",
+    "values": {
+      "current": 18.592,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 18.592,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-10-19",
+        "locator": "TrendForce 10-21 Memory Spot Price Update · NAND Flash Spot Price",
+        "source_id": "spot"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-page review; raw value times scale checked against candidate",
+      "at": "2026-10-22T00:38:25.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "spot",
+        "url": "https://www.trendforce.com/news/2026/10/21/insights-memory-spot-price-update-ddr5-supply-tight-ddr4-trading-subdued-despite-0-84-gain-in-mainstream-prices/",
+        "sha256": "e25d6e5d3cb50fbf1fccccdba6587e8f64c52a6c3b68db7e3862b54ab17c2ab3",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-22T00:38:18.616Z",
+        "reviewed_at": "2026-10-22T00:38:18.616Z",
+        "status": "read",
+        "locator": "NAND Flash Spot Price 正文：this week (October 19)",
+        "excerpt": "Spot prices of 512Gb TLC wafers dropped by 1.28% this week (October 19), with average quotations arriving at US$18.592."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "6a352034bd12fb875c8ad063a4bb23df90f45633505b9e989422bf94e4aff843",
+    "id": "e-5f5f5db94eb4907a50032b939d3b2428dd36358bb5fb915d41ef32f680f1f63a"
+  },
+  "e-fd8978ad233022e1a178be92d0d9b50266ca6d8cdfae11edb6fc046c7191e7ef": {
+    "measurement": "technology_process",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "dram_1gamma",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "1γ 已进入大规模量产，FY2026 第四季度已占美光多数 DRAM 位元产出；下一代 1δ 处于良率爬升阶段，美光计划 2027 年下半年开始爬坡，在美国生产。"
+    },
+    "raw_inputs": [
+      {
+        "field": "facts.bit_density.value",
+        "value": 30,
+        "scale": 1,
+        "source_unit": "bits/wafer_pct",
+        "period": "2025-02-25",
+        "locator": "Why this matters / Improved bit-density output；脚注 2、3",
+        "source_id": "tech_gamma"
+      },
+      {
+        "field": "facts.adoption.value",
+        "value": 50,
+        "scale": 1,
+        "source_unit": "pct",
+        "period": "FY2026 Q4",
+        "locator": "10-K Item 1 · Product Technologies · DRAM（p7）· majority of DRAM bit production",
+        "source_id": "fy2026_10k"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Original issuer documents read and compared to each field, its date, unit and stage; next milestone now cites the 10-21 webinar deck, which names 1δ ramping in 2H 2027; earlier facts keep their original dates.",
+      "at": "2026-10-22T00:38:25.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "tech_gamma",
+        "url": "https://investors.micron.com/news/press-release/2025/Micron-Announces-Shipment-of-1-1-gamma-DRAM-Pioneering-Memory-Technology-Advancements-for-Future-Compute-Needs-02-25-2025/default.aspx",
+        "sha256": "b45485a6dd520fa7e9c16e9f90a81a4c7c353fd48437d3c6360e1807964ef473",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-10-22T00:38:22.823Z",
+        "reviewed_at": "2026-10-22T00:38:22.823Z",
+        "status": "read",
+        "locator": "Why this matters / Improved bit-density output；脚注 2、3",
+        "excerpt": "greater than 30% more bits-per-wafer output over the previous generation"
+      },
+      {
+        "source_id": "tech_q3_deck",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf",
+        "sha256": "29468a786fa4a9c7728735ea8e3ad5853bb1375a297c636e86e6a4dd3b155929",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-22T00:38:23.160Z",
+        "reviewed_at": "2026-10-22T00:38:23.160Z",
+        "status": "read",
+        "locator": "p11 技术进展；p17–19 制造项目",
+        "excerpt": "Our 1γ (1-gamma) DRAM node and G9 NAND node are both ramping well ... production in the second half of calendar 2027."
+      },
+      {
+        "source_id": "fy2026_10k",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm",
+        "sha256": "4f04727d28f6acbf15159cd5906984f7f5180fb7eb7cbfda5387bd0369888b1a",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-22T00:38:23.509Z",
+        "reviewed_at": "2026-10-22T00:38:23.509Z",
+        "status": "read",
+        "locator": "Item 1. Business · Product Technologies · DRAM（p7）",
+        "excerpt": "Our 1γ DRAM node is ramping well and on track to become the highest-volume node in our history. The majority of our DRAM bit production in the fourth quarter of 2026 was on our leading-edge 1γ node."
+      },
+      {
+        "source_id": "tech_webinar_1021",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_downloads/2026/10/MU-TP-Webinar.pdf",
+        "sha256": "00808627216e27375a163a3beff5393aea826c3722004a1a6948e88c07180f94",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-22T00:38:19.364Z",
+        "reviewed_at": "2026-10-22T00:38:19.364Z",
+        "status": "read",
+        "locator": "p16 DRAM 路线图；p17 1δ",
+        "excerpt": "1γ In high-volume ... 1δ Yield ramp ... 1δ: the world’s most advanced DRAM Fifth consecutive node of DRAM industry leadership – ramping in the second half of 2027 ... Industry-leading technology manufactured in the U.S. • Mid-20s percentage bit density improvement from 1γ; optimized cost"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "ea50b204b018acb9bef2be10b78e6241bbc15d2dcd1f1f2a51a41a12610ece51",
+    "id": "e-fd8978ad233022e1a178be92d0d9b50266ca6d8cdfae11edb6fc046c7191e7ef"
+  },
+  "e-464f1e3123c9c665f527d93856f0042ca9033c67fc55856ba6a94cf595e48084": {
+    "measurement": "technology_process",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "nand_g9",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "G9 已随 SSD 出货，FQ3 财报披露仍在扩大生产；美光 10-21 技术研讨会称下一代 G11 超过 400 层，美光计划 2027 年下半年开始量产爬坡。"
+    },
+    "raw_inputs": [
+      {
+        "field": "facts.io_speed.value",
+        "value": 3.6,
+        "scale": 1,
+        "source_unit": "GB/s",
+        "period": "2024-07-30",
+        "locator": "正文：G9 TLC NAND 随 SSD 出货、3.6 GB/s 接口",
+        "source_id": "tech_g9"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Original issuer documents read and compared to each field, its date, unit and stage; G11 plan cited only as next milestone, G9 facts keep original dates.",
+      "at": "2026-10-22T00:38:25.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "tech_g9",
+        "url": "https://investors.micron.com/news/press-release/2024/Micron-Announces-Volume-Production-of-Ninth-Generation-NAND-Flash-Technology-07-30-2024/default.aspx",
+        "sha256": "2a1c032ad9b5340f54cee00f0a816fa82310978d9505b5ad2179052006fade42",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-10-22T00:38:22.131Z",
+        "reviewed_at": "2026-10-22T00:38:22.131Z",
+        "status": "read",
+        "locator": "正文第一段",
+        "excerpt": "Micron G9 NAND features the industry’s highest transfer speed of 3.6 GB/s"
+      },
+      {
+        "source_id": "tech_q3_deck",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf",
+        "sha256": "29468a786fa4a9c7728735ea8e3ad5853bb1375a297c636e86e6a4dd3b155929",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-22T00:38:23.160Z",
+        "reviewed_at": "2026-10-22T00:38:23.160Z",
+        "status": "read",
+        "locator": "p11 技术进展；p17–19 制造项目",
+        "excerpt": "Our 1γ (1-gamma) DRAM node and G9 NAND node are both ramping well ... production in the second half of calendar 2027."
+      },
+      {
+        "source_id": "tech_webinar_1021",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_downloads/2026/10/MU-TP-Webinar.pdf",
+        "sha256": "00808627216e27375a163a3beff5393aea826c3722004a1a6948e88c07180f94",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-22T00:38:19.364Z",
+        "reviewed_at": "2026-10-22T00:38:19.364Z",
+        "status": "read",
+        "locator": "p23 G11 NAND",
+        "excerpt": "G11: the world’s most advanced NAND • >400 layers and industry-leading cell pitch • Volume ramp in 2H 2027 ... • ~2x bit density vs. G9 • Up to 1.5x I/O speed • >25% less data transfer energy per bit vs. G9"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "3350d9975b025856bdc3a4bc587cf254234519920ac850ef91f3688e9691a53f",
+    "id": "e-464f1e3123c9c665f527d93856f0042ca9033c67fc55856ba6a94cf595e48084"
+  },
+  "e-223be4a04141bcbdd4abf1a81a522fb8bd7b61f94eade15ee46cf617f96a8690": {
+    "measurement": "technology_product",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "micron_hbm4e",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "美光称已向主要客户送样 HBM4E，路线图称自 HBM4E 起提供 JEDEC 标准与定制版本；计划采用 1γ DRAM。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Webinar deck p10 lists HBM4E samples to key customers in the 2026 column of its leadership timeline, so stage moves to sampling as of the deck date; no sample date or specification disclosed, so facts remain unavailable; 2027 volume plan from FQ3 release unchanged.",
+      "at": "2026-10-22T00:38:25.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "tech_mu_q3",
+        "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Results-for-the-Third-Quarter-of-Fiscal-2026/default.aspx",
+        "sha256": "e94c4bade963a07e825ab9acd24e2357b0ae8e530156a11234016302e860c61d",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-10-22T00:38:22.456Z",
+        "reviewed_at": "2026-10-22T00:38:22.456Z",
+        "status": "read",
+        "locator": "Product highlights",
+        "excerpt": "Development of HBM4E, built on 1-gamma DRAM technology, is well underway, with volume production expected in calendar 2027."
+      },
+      {
+        "source_id": "tech_webinar_1021",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_downloads/2026/10/MU-TP-Webinar.pdf",
+        "sha256": "00808627216e27375a163a3beff5393aea826c3722004a1a6948e88c07180f94",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-22T00:38:19.364Z",
+        "reviewed_at": "2026-10-22T00:38:19.364Z",
+        "status": "read",
+        "locator": "p10 技术领先时间线（2026 栏）；p22 HBM 路线图",
+        "excerpt": "HBM4E samples to key customers ... HBM JEDEC + custom beginning with HBM4E"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "a885ca7b381f7a1c695c16c64ed4ed40636131615aed63d1e0aaba2f826cb635",
+    "id": "e-223be4a04141bcbdd4abf1a81a522fb8bd7b61f94eade15ee46cf617f96a8690"
   }
 }
