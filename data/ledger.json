@@ -2,8 +2,8 @@
   "format_version": 1,
   "document": {
     "schema_version": 2,
-    "revision": "2026-10-22-75830b9c02",
-    "updated_at": "2026-10-22T06:32:28.635Z",
+    "revision": "2026-10-22-e4067e02da",
+    "updated_at": "2026-10-22T18:27:08.343Z",
     "last_successful_check_at": "2026-09-20T23:50:00Z",
     "last_attempt_at": "2026-09-20T23:50:00Z",
     "financial_period": "FY2026 Q4",
@@ -1194,7 +1194,7 @@
         "short_label": "10-01 · 韩国 9 月出口",
         "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172254/view",
         "published_at": "2026-10-01",
-        "checked_at": "2026-10-07",
+        "checked_at": "2026-10-22",
         "type": "政府官方统计发布",
         "locator": "附件 PDF 第 11 页「20대 주요 수출 품목」表（반도체）；第 12 页품목별 상세（메모리/시스템 반도체 수출액）。"
       },
@@ -1737,6 +1737,42 @@
         "checked_at": "2026-10-22",
         "type": "行业媒体转引",
         "locator": "首段：according to Commercial Times, institutional investors … contract prices are expected to rise about 20% quarter-on-quarter"
+      },
+      "bok_export_price": {
+        "label": "韩国央行 ECOS 出口价格指数（品目别）· DRAM",
+        "short_label": "韩国央行 · DRAM 出口价格指数",
+        "type": "官方统计数据接口",
+        "published_at": null,
+        "locator": "ECOS 统计表 402Y016「수출물가지수(품목별)」· 品目 DRAM（30911201AA）· 달러기준 · 2025-12 至 2026-09 月度值（ECOS 公开示例接口，每次最多 10 个月）。",
+        "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202512/202609/30911201AA/D",
+        "checked_at": "2026-10-22"
+      },
+      "kostat_shipment": {
+        "label": "统计厅 生产者出货指数 · KSIC 26（经韩国央行 ECOS）",
+        "short_label": "统计厅 · 电子零件业出货指数",
+        "type": "官方统计数据接口",
+        "published_at": null,
+        "locator": "ECOS 统计表 901Y032「산업별 생산/출하/재고 지수」· 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업（I11ACQ）· 출하지수(계절조정) · 2025-11 至 2026-08。",
+        "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/4",
+        "checked_at": "2026-10-22"
+      },
+      "kostat_inventory": {
+        "label": "统计厅 生产者库存指数 · KSIC 26（经韩国央行 ECOS）",
+        "short_label": "统计厅 · 电子零件业库存指数",
+        "type": "官方统计数据接口",
+        "published_at": null,
+        "locator": "ECOS 统计表 901Y032「산업별 생산/출하/재고 지수」· 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업（I11ACQ）· 재고지수(계절조정) · 2025-11 至 2026-08。",
+        "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/6",
+        "checked_at": "2026-10-22"
+      },
+      "dram_contract": {
+        "label": "DRAMeXchange DRAM 合同价表",
+        "short_label": "DRAMeXchange · DRAM 合同价",
+        "type": "行业报价",
+        "published_at": "2026-08-31",
+        "locator": "DRAMeXchange 首页「DRAM Contract Price」表的数据（NationalDramContract）· DDR4 8Gb 1Gx8 · Average，日期 2026-08-31。",
+        "url": "https://www.dramexchange.com/Home/HomePrice?Source=NationalDramContract",
+        "checked_at": "2026-10-22"
       }
     },
     "metrics": [
@@ -2040,6 +2076,24 @@
         "category": "industry",
         "rows": [
           {
+            "record_ref": "d2089348f30235f6e5e9f1aeab9f09d82072384afa9c5fb63708d7e54c0ad561"
+          },
+          {
+            "record_ref": "e982ed0aeb825ae20d2884ac8d2e306ea49c7deb3c829a06d264bb76efe2b6df"
+          },
+          {
+            "record_ref": "f7d3c43dd5db83a848aa589a5df054955c59cb2f2420799b8281dabc5f88a7c9"
+          },
+          {
+            "record_ref": "158d5ba3d46f308218a5f6ea1271ed631831a095b369f1ebc6954a3bf0b6c1ea"
+          },
+          {
+            "record_ref": "c7ea625db99572b28bbbbf1daad5bf071840b095eaa1b3b538a3e4564925f36c"
+          },
+          {
+            "record_ref": "6a352034bd12fb875c8ad063a4bb23df90f45633505b9e989422bf94e4aff843"
+          },
+          {
             "record_ref": "abb17d9b53eaca60c16cb1a9d5a6d0b20fcc7dd81947665fc9dc364447b0bc29"
           },
           {
@@ -2047,15 +2101,6 @@
           },
           {
             "record_ref": "40de271190fdbaefbc39b029976f71b8a847bb4fb536ea4479c3126f3bf38a72"
-          },
-          {
-            "record_ref": "d2089348f30235f6e5e9f1aeab9f09d82072384afa9c5fb63708d7e54c0ad561"
-          },
-          {
-            "record_ref": "f7d3c43dd5db83a848aa589a5df054955c59cb2f2420799b8281dabc5f88a7c9"
-          },
-          {
-            "record_ref": "6a352034bd12fb875c8ad063a4bb23df90f45633505b9e989422bf94e4aff843"
           }
         ],
         "limits": [
@@ -2080,6 +2125,12 @@
           },
           {
             "record_ref": "81ca2cf5e398b0cf07428075e058af001921b6d2d9e3c41e30f563d26f4f812d"
+          },
+          {
+            "record_ref": "166e1b710663f9f03f9622f6d2f665adfa4f57bfb358d2585d707faec072d173"
+          },
+          {
+            "record_ref": "a25216563448271ac7d5731e20750e4ccc4d8f96aaec432b472a586b174f964a"
           }
         ],
         "limits": [
@@ -2121,7 +2172,7 @@
             "record_ref": "2834bffdd184f5ba244ff3245299b87d338ef7a70915657d7fa20dbac12ddb30"
           },
           {
-            "record_ref": "93ab7b711fc6f45a55f57f6c1e3e1fe6c5220afc6289f305f3d2fdd018ba534b"
+            "record_ref": "c3bbc6e6b0ac7ba7dbe7a73948d7bba2dadb0c6ba6f57ec547108878d225c19d"
           }
         ],
         "limits": [
@@ -2148,6 +2199,12 @@
       "产业链指引和管理层展望按原披露日期及目标期间记录，文字为中文摘要；同比由原始金额计算，百分点与百分比区分。"
     ],
     "check_log": [
+      {
+        "at": "2026-10-22T18:27:08.343Z",
+        "status": "success",
+        "scope": "industry",
+        "text": "核查范围：industry；完成 1 / 1 项。"
+      },
       {
         "at": "2026-10-22T06:32:28.635Z",
         "status": "success",
@@ -20685,6 +20742,2261 @@
         "e-80d4be106aad403299a8bf898d4e2cb5dba2ed7041ac2c128aed3f164e46e946"
       ],
       "id": "ccfe822a61a355cf0bfa135118c8f12a87ee034395686b58b8eb34ecb237b40a"
+    },
+    "e982ed0aeb825ae20d2884ac8d2e306ea49c7deb3c829a06d264bb76efe2b6df": {
+      "metric_id": "mu.contract.ddr4_contract",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "DRAM 报价至 09-23；NAND 报价至 09-14；报告至 09-16",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "DDR4 8Gb (1Gx8) 合同价月均价",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "dram_contract",
+            "url": "https://www.dramexchange.com/Home/HomePrice?Source=NationalDramContract",
+            "published_at": "2026-08-31"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DDR4 8Gb (1Gx8) 合同价",
+        "current": 25,
+        "previous": null,
+        "unit": "USD",
+        "source_ids": [
+          "dram_contract"
+        ],
+        "kind": "行业报价",
+        "note": "DRAMeXchange 合同价表的均价（Average），与 DDR4 1Gx8 现货同规格芯片；不含模组价。",
+        "period": "2026 年 8 月",
+        "change": "较上期 +4.17%（DRAMeXchange 披露）",
+        "location": "DRAMeXchange · DRAM Contract Price · DDR4 8Gb 1Gx8 · Average 25.00（High 34.50 / Low 22.50），日期 2026-08-31。",
+        "evidence_type": "direct",
+        "id": "ddr4_contract",
+        "as_of": "2026-08"
+      },
+      "evidence_ids": [
+        "e-74e8c738b7337500be208ccd15c2c6a6744dd0a6a5e5b286adcf888eda87be53"
+      ],
+      "id": "e982ed0aeb825ae20d2884ac8d2e306ea49c7deb3c829a06d264bb76efe2b6df"
+    },
+    "158d5ba3d46f308218a5f6ea1271ed631831a095b369f1ebc6954a3bf0b6c1ea": {
+      "metric_id": "mu.contract.ddr5_contract",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "DRAM 报价至 09-23；NAND 报价至 09-14；报告至 09-16",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "DDR5 16Gb 合同价（韩国产业通商部出口发布所列固定价格）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "korea_trade",
+            "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172254/view",
+            "published_at": "2026-10-01"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DDR5 16Gb 合同价（固定价格）",
+        "current": 48,
+        "previous": 46.5,
+        "unit": "USD",
+        "source_ids": [
+          "korea_trade"
+        ],
+        "kind": "转引",
+        "note": "产业通商部出口发布所列月度固定价格，原文未注明出处；与 DDR5 16Gb 现货同规格容量，速度等级未注明。",
+        "period": "2026 年 9 月 vs 8 月",
+        "change": null,
+        "location": "产业通商部 9 月进出口动向 · 附件 PDF 第 1 页注释「메모리 고정가격 추이」(DDR5 16Gb, ‘26.5월→9월) · 2026 年 9 月。",
+        "evidence_type": "secondary",
+        "id": "ddr5_contract",
+        "as_of": "2026-09"
+      },
+      "evidence_ids": [
+        "e-466f277500a6b011848e55b9ee13cc1217d37268bf403600d5b2783ad7c1a1b4"
+      ],
+      "id": "158d5ba3d46f308218a5f6ea1271ed631831a095b369f1ebc6954a3bf0b6c1ea"
+    },
+    "c7ea625db99572b28bbbbf1daad5bf071840b095eaa1b3b538a3e4564925f36c": {
+      "metric_id": "mu.contract.bok_dram_price",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "DRAM 报价至 09-23；NAND 报价至 09-14；报告至 09-16",
+        "measurement": "contract",
+        "unit": "index",
+        "scope": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "bok_export_price",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202512/202609/30911201AA/D",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+        "current": 289.16,
+        "previous": 282.77,
+        "unit": "index",
+        "source_ids": [
+          "bok_export_price"
+        ],
+        "kind": "官方统计",
+        "note": "韩国出口 DRAM 的合同价格变动（美元计价），比现货平稳；回测中与美光毛利率同步，用作价格基准。",
+        "period": "2026 年 9 月 vs 8 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 4.3.1.3 수출물가지수(품목별) · DRAM · 달러기준 · 2026 年 9 月。",
+        "evidence_type": "direct",
+        "id": "bok_dram_price",
+        "as_of": "2026-09"
+      },
+      "evidence_ids": [
+        "e-7487ca1a1638618f0d64a235361fdb5488e63ec0e50f7b9ead0e6f10742e9f18"
+      ],
+      "id": "c7ea625db99572b28bbbbf1daad5bf071840b095eaa1b3b538a3e4564925f36c"
+    },
+    "166e1b710663f9f03f9622f6d2f665adfa4f57bfb358d2585d707faec072d173": {
+      "metric_id": "mu.supply.korea_ic_shipment",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "2026–2027 展望 · 披露至 09-16",
+        "measurement": "supply",
+        "unit": "index",
+        "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者出货指数（KSIC 26，季节调整，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "kostat_shipment",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/4",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国电子零件·计算机·通信设备业出货指数（KSIC 26，季调）",
+        "current": 135.1,
+        "previous": 129.7,
+        "unit": "index",
+        "source_ids": [
+          "kostat_shipment"
+        ],
+        "kind": "官方统计",
+        "note": "统计厅生产者出货指数，季节调整，2020=100；KSIC 26 含半导体、显示与通信设备，半导体占比最大。",
+        "period": "2026 年 8 月 vs 7 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 출하지수(계절조정) · 2026 年 8 月。",
+        "evidence_type": "direct",
+        "id": "korea_ic_shipment",
+        "as_of": "2026-08"
+      },
+      "evidence_ids": [
+        "e-356f6e5ff3efc71da505b1ed0b88acb930c601bf13313ec8100726f88da151f5"
+      ],
+      "id": "166e1b710663f9f03f9622f6d2f665adfa4f57bfb358d2585d707faec072d173"
+    },
+    "a25216563448271ac7d5731e20750e4ccc4d8f96aaec432b472a586b174f964a": {
+      "metric_id": "mu.supply.korea_ic_inventory",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "2026–2027 展望 · 披露至 09-16",
+        "measurement": "supply",
+        "unit": "index",
+        "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者库存指数（KSIC 26，季节调整，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "kostat_inventory",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/6",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国电子零件·计算机·通信设备业库存指数（KSIC 26，季调）",
+        "current": 112.8,
+        "previous": 115.2,
+        "unit": "index",
+        "source_ids": [
+          "kostat_inventory"
+        ],
+        "kind": "官方统计",
+        "note": "统计厅生产者库存指数，季节调整，2020=100；与出货指数同口径，页面以两者之比观察库存累积。",
+        "period": "2026 年 8 月 vs 7 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 재고지수(계절조정) · 2026 年 8 月。",
+        "evidence_type": "direct",
+        "id": "korea_ic_inventory",
+        "as_of": "2026-08"
+      },
+      "evidence_ids": [
+        "e-5fe15ede264bdecbaed1b893e710ab44d40d5af93fbccd06d7cb25d8a2d2a2fa"
+      ],
+      "id": "a25216563448271ac7d5731e20750e4ccc4d8f96aaec432b472a586b174f964a"
+    },
+    "c3bbc6e6b0ac7ba7dbe7a73948d7bba2dadb0c6ba6f57ec547108878d225c19d": {
+      "metric_id": "mu.demand.korea_memory_exports",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "行业资料至 09-21",
+        "measurement": "end_consumption_proxy",
+        "unit": "USDm",
+        "scope": "韩国存储芯片单月出口额（与上年同月比较）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "korea_trade",
+            "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172254/view",
+            "published_at": "2026-10-01"
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国存储芯片单月出口额",
+        "current": 54070,
+        "previous": 11790,
+        "unit": "USDm",
+        "source_ids": [
+          "korea_trade"
+        ],
+        "kind": "官方统计",
+        "note": "原文以亿美元列示（540.7 / 117.9）；整月值。受价格与数量共同影响。约占同月半导体出口的九成（上年同月约七成），同期存储价格大幅上涨。",
+        "period": "2026 年 9 月 vs 2025 年 9 月",
+        "change": "同比 +358.6%（官方披露）",
+        "location": "产业通商部 9 月进出口动向 · 附件 PDF 第 12 页· 메모리/시스템 반도체 수출액。",
+        "evidence_type": "proxy",
+        "id": "korea_memory_exports",
+        "as_of": "2026-09"
+      },
+      "evidence_ids": [
+        "e-4e72787e8300fb117ae066f94556495d8a77640963019b7388644e2054f54b15"
+      ],
+      "id": "c3bbc6e6b0ac7ba7dbe7a73948d7bba2dadb0c6ba6f57ec547108878d225c19d"
+    },
+    "f4745d896b80abce92a617685ad131b5fc045387102ed85eaa5939aba4876a32": {
+      "metric_id": "mu.contract.bok_dram_price",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2025-06",
+        "measurement": "contract",
+        "unit": "index",
+        "scope": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "bok_export_price_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202506/202511/30911201AA/D",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+        "current": 74.72,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "bok_export_price_2025"
+        ],
+        "kind": "官方统计",
+        "note": "韩国出口 DRAM 的合同价格变动（美元计价），比现货平稳；回测中与美光毛利率同步，用作价格基准。",
+        "period": "2025 年 6 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 4.3.1.3 수출물가지수(품목별) · DRAM · 달러기준 · 2025 年 6 月。",
+        "evidence_type": "direct",
+        "id": "bok_dram_price",
+        "as_of": "2025-06"
+      },
+      "evidence_ids": [
+        "e-d46b86ce9237fe34a178b7ee17c29658fa6643f5e2a813556c7293193bb11e40"
+      ],
+      "id": "f4745d896b80abce92a617685ad131b5fc045387102ed85eaa5939aba4876a32"
+    },
+    "bcc475516df20769960881220faf31ca60947a82d598fd32f1c835946f27409f": {
+      "metric_id": "mu.contract.bok_dram_price",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2025-07",
+        "measurement": "contract",
+        "unit": "index",
+        "scope": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "bok_export_price_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202506/202511/30911201AA/D",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+        "current": 80.81,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "bok_export_price_2025"
+        ],
+        "kind": "官方统计",
+        "note": "韩国出口 DRAM 的合同价格变动（美元计价），比现货平稳；回测中与美光毛利率同步，用作价格基准。",
+        "period": "2025 年 7 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 4.3.1.3 수출물가지수(품목별) · DRAM · 달러기준 · 2025 年 7 月。",
+        "evidence_type": "direct",
+        "id": "bok_dram_price",
+        "as_of": "2025-07"
+      },
+      "evidence_ids": [
+        "e-b5f97ef7f7b1027c1e7e04740a9ec539036a41a9749151f84a6d7b3647e15cba"
+      ],
+      "id": "bcc475516df20769960881220faf31ca60947a82d598fd32f1c835946f27409f"
+    },
+    "4d0081610627032cf85801f04dc6a22790c619207334cc352e3c766b37b24801": {
+      "metric_id": "mu.contract.bok_dram_price",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2025-08",
+        "measurement": "contract",
+        "unit": "index",
+        "scope": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "bok_export_price_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202506/202511/30911201AA/D",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+        "current": 80.98,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "bok_export_price_2025"
+        ],
+        "kind": "官方统计",
+        "note": "韩国出口 DRAM 的合同价格变动（美元计价），比现货平稳；回测中与美光毛利率同步，用作价格基准。",
+        "period": "2025 年 8 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 4.3.1.3 수출물가지수(품목별) · DRAM · 달러기준 · 2025 年 8 月。",
+        "evidence_type": "direct",
+        "id": "bok_dram_price",
+        "as_of": "2025-08"
+      },
+      "evidence_ids": [
+        "e-dbde9e35a0af89f79e67808a5b19c924aee18abfd67123afcd51985852c725da"
+      ],
+      "id": "4d0081610627032cf85801f04dc6a22790c619207334cc352e3c766b37b24801"
+    },
+    "0038f3a721f53c731ca4f52acea04e5068bc964f2228cc2a5e2ef929d6673a03": {
+      "metric_id": "mu.contract.bok_dram_price",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2025-09",
+        "measurement": "contract",
+        "unit": "index",
+        "scope": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "bok_export_price_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202506/202511/30911201AA/D",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+        "current": 83.16,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "bok_export_price_2025"
+        ],
+        "kind": "官方统计",
+        "note": "韩国出口 DRAM 的合同价格变动（美元计价），比现货平稳；回测中与美光毛利率同步，用作价格基准。",
+        "period": "2025 年 9 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 4.3.1.3 수출물가지수(품목별) · DRAM · 달러기준 · 2025 年 9 月。",
+        "evidence_type": "direct",
+        "id": "bok_dram_price",
+        "as_of": "2025-09"
+      },
+      "evidence_ids": [
+        "e-70392c3c76b1a9b70dffff7b52edc75c81a6c8ebc07c849a21e3b534d067b27e"
+      ],
+      "id": "0038f3a721f53c731ca4f52acea04e5068bc964f2228cc2a5e2ef929d6673a03"
+    },
+    "e8c3d7cc49d62ed750d2cc86be2300609de15c6aefe818b645224fe313d67e93": {
+      "metric_id": "mu.contract.bok_dram_price",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2025-10",
+        "measurement": "contract",
+        "unit": "index",
+        "scope": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "bok_export_price_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202506/202511/30911201AA/D",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+        "current": 97.3,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "bok_export_price_2025"
+        ],
+        "kind": "官方统计",
+        "note": "韩国出口 DRAM 的合同价格变动（美元计价），比现货平稳；回测中与美光毛利率同步，用作价格基准。",
+        "period": "2025 年 10 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 4.3.1.3 수출물가지수(품목별) · DRAM · 달러기준 · 2025 年 10 月。",
+        "evidence_type": "direct",
+        "id": "bok_dram_price",
+        "as_of": "2025-10"
+      },
+      "evidence_ids": [
+        "e-036bbf3f89f2f314f99156735aab6c99829c71f25aa535a18d115412aec1e395"
+      ],
+      "id": "e8c3d7cc49d62ed750d2cc86be2300609de15c6aefe818b645224fe313d67e93"
+    },
+    "1c87dec1d4c3dd4aaa6b69bce5130845e89bcbe78cb11ad0e912a41f319e41cb": {
+      "metric_id": "mu.contract.bok_dram_price",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2025-11",
+        "measurement": "contract",
+        "unit": "index",
+        "scope": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "bok_export_price_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202506/202511/30911201AA/D",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+        "current": 109.03,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "bok_export_price_2025"
+        ],
+        "kind": "官方统计",
+        "note": "韩国出口 DRAM 的合同价格变动（美元计价），比现货平稳；回测中与美光毛利率同步，用作价格基准。",
+        "period": "2025 年 11 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 4.3.1.3 수출물가지수(품목별) · DRAM · 달러기준 · 2025 年 11 月。",
+        "evidence_type": "direct",
+        "id": "bok_dram_price",
+        "as_of": "2025-11"
+      },
+      "evidence_ids": [
+        "e-173f85af6a1f02561e6cd800025edfb957e753d419b019d016edb37fc26668f1"
+      ],
+      "id": "1c87dec1d4c3dd4aaa6b69bce5130845e89bcbe78cb11ad0e912a41f319e41cb"
+    },
+    "6c5bad421f6b3d75757a5a165c1948fec53ad0684749ba7bfe45e59c89ce63f0": {
+      "metric_id": "mu.contract.bok_dram_price",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2025-12",
+        "measurement": "contract",
+        "unit": "index",
+        "scope": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "bok_export_price",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202512/202609/30911201AA/D",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+        "current": 111.22,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "bok_export_price"
+        ],
+        "kind": "官方统计",
+        "note": "韩国出口 DRAM 的合同价格变动（美元计价），比现货平稳；回测中与美光毛利率同步，用作价格基准。",
+        "period": "2025 年 12 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 4.3.1.3 수출물가지수(품목별) · DRAM · 달러기준 · 2025 年 12 月。",
+        "evidence_type": "direct",
+        "id": "bok_dram_price",
+        "as_of": "2025-12"
+      },
+      "evidence_ids": [
+        "e-5ccb8129bc260caa7594fcf5756a7c9c1d71d89de889872852f686bf766d1088"
+      ],
+      "id": "6c5bad421f6b3d75757a5a165c1948fec53ad0684749ba7bfe45e59c89ce63f0"
+    },
+    "58f8ad0e2c00af85f56df4c4cd34e238147ee480df3cbea266cb6f4417e5071d": {
+      "metric_id": "mu.contract.bok_dram_price",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-01",
+        "measurement": "contract",
+        "unit": "index",
+        "scope": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "bok_export_price",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202512/202609/30911201AA/D",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+        "current": 147.44,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "bok_export_price"
+        ],
+        "kind": "官方统计",
+        "note": "韩国出口 DRAM 的合同价格变动（美元计价），比现货平稳；回测中与美光毛利率同步，用作价格基准。",
+        "period": "2026 年 1 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 4.3.1.3 수출물가지수(품목별) · DRAM · 달러기준 · 2026 年 1 月。",
+        "evidence_type": "direct",
+        "id": "bok_dram_price",
+        "as_of": "2026-01"
+      },
+      "evidence_ids": [
+        "e-35c827bf2fc1e5d9ea681f0c5339b14e0c8f0506ab2a2620913bbb614d2523ab"
+      ],
+      "id": "58f8ad0e2c00af85f56df4c4cd34e238147ee480df3cbea266cb6f4417e5071d"
+    },
+    "aceeace10fff4c0c98edd1378dea46a5852abf9e2b6513b9bd67fbedb469dfa4": {
+      "metric_id": "mu.contract.bok_dram_price",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-02",
+        "measurement": "contract",
+        "unit": "index",
+        "scope": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "bok_export_price",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202512/202609/30911201AA/D",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+        "current": 157.62,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "bok_export_price"
+        ],
+        "kind": "官方统计",
+        "note": "韩国出口 DRAM 的合同价格变动（美元计价），比现货平稳；回测中与美光毛利率同步，用作价格基准。",
+        "period": "2026 年 2 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 4.3.1.3 수출물가지수(품목별) · DRAM · 달러기준 · 2026 年 2 月。",
+        "evidence_type": "direct",
+        "id": "bok_dram_price",
+        "as_of": "2026-02"
+      },
+      "evidence_ids": [
+        "e-dc32e6494161f1e93bf930652ca631a209b2236f1df402947290b663d04cbf87"
+      ],
+      "id": "aceeace10fff4c0c98edd1378dea46a5852abf9e2b6513b9bd67fbedb469dfa4"
+    },
+    "6a14f4ff211d2debfd26d9034efe4044e02f47264167ed62305c1b247e1863de": {
+      "metric_id": "mu.contract.bok_dram_price",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-03",
+        "measurement": "contract",
+        "unit": "index",
+        "scope": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "bok_export_price",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202512/202609/30911201AA/D",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+        "current": 187.19,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "bok_export_price"
+        ],
+        "kind": "官方统计",
+        "note": "韩国出口 DRAM 的合同价格变动（美元计价），比现货平稳；回测中与美光毛利率同步，用作价格基准。",
+        "period": "2026 年 3 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 4.3.1.3 수출물가지수(품목별) · DRAM · 달러기준 · 2026 年 3 月。",
+        "evidence_type": "direct",
+        "id": "bok_dram_price",
+        "as_of": "2026-03"
+      },
+      "evidence_ids": [
+        "e-b1fa2b718b0ad365af82655093664dacf193f0c928383da4f1f24563610462ca"
+      ],
+      "id": "6a14f4ff211d2debfd26d9034efe4044e02f47264167ed62305c1b247e1863de"
+    },
+    "984bd229ddd393e44d81df8c8e14bf49feac17ed9f3a2becffd77ffb43616677": {
+      "metric_id": "mu.contract.bok_dram_price",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-04",
+        "measurement": "contract",
+        "unit": "index",
+        "scope": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "bok_export_price",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202512/202609/30911201AA/D",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+        "current": 233.82,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "bok_export_price"
+        ],
+        "kind": "官方统计",
+        "note": "韩国出口 DRAM 的合同价格变动（美元计价），比现货平稳；回测中与美光毛利率同步，用作价格基准。",
+        "period": "2026 年 4 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 4.3.1.3 수출물가지수(품목별) · DRAM · 달러기준 · 2026 年 4 月。",
+        "evidence_type": "direct",
+        "id": "bok_dram_price",
+        "as_of": "2026-04"
+      },
+      "evidence_ids": [
+        "e-e5699638bfe125aa7c4eda91b12dee4493e5d7d24a5e914202b105eb0ef23c14"
+      ],
+      "id": "984bd229ddd393e44d81df8c8e14bf49feac17ed9f3a2becffd77ffb43616677"
+    },
+    "ff727bd4c369c31522f19f4176bc46c6ac4da41f15763282dadf5ba004738a50": {
+      "metric_id": "mu.contract.bok_dram_price",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-05",
+        "measurement": "contract",
+        "unit": "index",
+        "scope": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "bok_export_price",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202512/202609/30911201AA/D",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+        "current": 251.21,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "bok_export_price"
+        ],
+        "kind": "官方统计",
+        "note": "韩国出口 DRAM 的合同价格变动（美元计价），比现货平稳；回测中与美光毛利率同步，用作价格基准。",
+        "period": "2026 年 5 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 4.3.1.3 수출물가지수(품목별) · DRAM · 달러기준 · 2026 年 5 月。",
+        "evidence_type": "direct",
+        "id": "bok_dram_price",
+        "as_of": "2026-05"
+      },
+      "evidence_ids": [
+        "e-0476522a8b07ad0db1aca13a60783d7ea95b646c50b400132b67714d41314169"
+      ],
+      "id": "ff727bd4c369c31522f19f4176bc46c6ac4da41f15763282dadf5ba004738a50"
+    },
+    "3b0abd10c87a13c908c2b93cb4b13c3aaf6cedf5751296cbc3b01a462cb7a5b9": {
+      "metric_id": "mu.contract.bok_dram_price",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-06",
+        "measurement": "contract",
+        "unit": "index",
+        "scope": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "bok_export_price",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202512/202609/30911201AA/D",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+        "current": 252.74,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "bok_export_price"
+        ],
+        "kind": "官方统计",
+        "note": "韩国出口 DRAM 的合同价格变动（美元计价），比现货平稳；回测中与美光毛利率同步，用作价格基准。",
+        "period": "2026 年 6 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 4.3.1.3 수출물가지수(품목별) · DRAM · 달러기준 · 2026 年 6 月。",
+        "evidence_type": "direct",
+        "id": "bok_dram_price",
+        "as_of": "2026-06"
+      },
+      "evidence_ids": [
+        "e-8687c83563418690b232a52b66ea97a5e424da638da65c57599fbb686dec9252"
+      ],
+      "id": "3b0abd10c87a13c908c2b93cb4b13c3aaf6cedf5751296cbc3b01a462cb7a5b9"
+    },
+    "bf6e2c576c2049760b43c93c900b1d8997c007f93a77e4d8c95adfa5d467792c": {
+      "metric_id": "mu.contract.bok_dram_price",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-07",
+        "measurement": "contract",
+        "unit": "index",
+        "scope": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "bok_export_price",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202512/202609/30911201AA/D",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+        "current": 274.79,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "bok_export_price"
+        ],
+        "kind": "官方统计",
+        "note": "韩国出口 DRAM 的合同价格变动（美元计价），比现货平稳；回测中与美光毛利率同步，用作价格基准。",
+        "period": "2026 年 7 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 4.3.1.3 수출물가지수(품목별) · DRAM · 달러기준 · 2026 年 7 月。",
+        "evidence_type": "direct",
+        "id": "bok_dram_price",
+        "as_of": "2026-07"
+      },
+      "evidence_ids": [
+        "e-82d6eff305eced0408aa81098ee486797b266d6ecea4251b0e34cf79480ad67e"
+      ],
+      "id": "bf6e2c576c2049760b43c93c900b1d8997c007f93a77e4d8c95adfa5d467792c"
+    },
+    "a0e8014c33e9ca3c8ae7826fb5ea193614d760b6b691032f561a1297a5adce5e": {
+      "metric_id": "mu.contract.bok_dram_price",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-08",
+        "measurement": "contract",
+        "unit": "index",
+        "scope": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "bok_export_price",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202512/202609/30911201AA/D",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+        "current": 282.77,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "bok_export_price"
+        ],
+        "kind": "官方统计",
+        "note": "韩国出口 DRAM 的合同价格变动（美元计价），比现货平稳；回测中与美光毛利率同步，用作价格基准。",
+        "period": "2026 年 8 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 4.3.1.3 수출물가지수(품목별) · DRAM · 달러기준 · 2026 年 8 月。",
+        "evidence_type": "direct",
+        "id": "bok_dram_price",
+        "as_of": "2026-08"
+      },
+      "evidence_ids": [
+        "e-2c799d281da5dd01a75a266ae7e38fb75d20d6fa6eec4e54c70fb4e2fc650dcd"
+      ],
+      "id": "a0e8014c33e9ca3c8ae7826fb5ea193614d760b6b691032f561a1297a5adce5e"
+    },
+    "d82b0796b42389857af999274283ddf1dcd6cc3ad9101103a41d9d7f1d0a4c76": {
+      "metric_id": "mu.supply.korea_ic_shipment",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2025-05",
+        "measurement": "supply",
+        "unit": "index",
+        "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者出货指数（KSIC 26，季节调整，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "kostat_shipment_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202505/202510/I11ACQ/4",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国电子零件·计算机·通信设备业出货指数（KSIC 26，季调）",
+        "current": 129.4,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "kostat_shipment_2025"
+        ],
+        "kind": "官方统计",
+        "note": "统计厅生产者出货指数，季节调整，2020=100；KSIC 26 含半导体、显示与通信设备，半导体占比最大。",
+        "period": "2025 年 5 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 출하지수(계절조정) · 2025 年 5 月。",
+        "evidence_type": "direct",
+        "id": "korea_ic_shipment",
+        "as_of": "2025-05"
+      },
+      "evidence_ids": [
+        "e-1c702717bf6a210f0823473416ea7d9f6f3d90b9086e526ad24b3a5600d116b7"
+      ],
+      "id": "d82b0796b42389857af999274283ddf1dcd6cc3ad9101103a41d9d7f1d0a4c76"
+    },
+    "a8fbb1a7c640c35b28e9512a0037a104194ea9789c50f75e52236656d95bbae5": {
+      "metric_id": "mu.supply.korea_ic_shipment",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2025-06",
+        "measurement": "supply",
+        "unit": "index",
+        "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者出货指数（KSIC 26，季节调整，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "kostat_shipment_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202505/202510/I11ACQ/4",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国电子零件·计算机·通信设备业出货指数（KSIC 26，季调）",
+        "current": 129.7,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "kostat_shipment_2025"
+        ],
+        "kind": "官方统计",
+        "note": "统计厅生产者出货指数，季节调整，2020=100；KSIC 26 含半导体、显示与通信设备，半导体占比最大。",
+        "period": "2025 年 6 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 출하지수(계절조정) · 2025 年 6 月。",
+        "evidence_type": "direct",
+        "id": "korea_ic_shipment",
+        "as_of": "2025-06"
+      },
+      "evidence_ids": [
+        "e-9317a0a995a84cc697c479e761a77d8a7b90d28d75df4e5e9cd92b99ed532626"
+      ],
+      "id": "a8fbb1a7c640c35b28e9512a0037a104194ea9789c50f75e52236656d95bbae5"
+    },
+    "e6ff6fc6bee24b1db1e687547f193091fa302a539c2c2333478425319a1f5d8f": {
+      "metric_id": "mu.supply.korea_ic_shipment",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2025-07",
+        "measurement": "supply",
+        "unit": "index",
+        "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者出货指数（KSIC 26，季节调整，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "kostat_shipment_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202505/202510/I11ACQ/4",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国电子零件·计算机·通信设备业出货指数（KSIC 26，季调）",
+        "current": 131.3,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "kostat_shipment_2025"
+        ],
+        "kind": "官方统计",
+        "note": "统计厅生产者出货指数，季节调整，2020=100；KSIC 26 含半导体、显示与通信设备，半导体占比最大。",
+        "period": "2025 年 7 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 출하지수(계절조정) · 2025 年 7 月。",
+        "evidence_type": "direct",
+        "id": "korea_ic_shipment",
+        "as_of": "2025-07"
+      },
+      "evidence_ids": [
+        "e-ccfac8104c07b84a8a204d8bbbab1f49801fcd83f757b36bf99fd22b82dd0739"
+      ],
+      "id": "e6ff6fc6bee24b1db1e687547f193091fa302a539c2c2333478425319a1f5d8f"
+    },
+    "13a92649f97655855747a6c3f884a82d2d32fbcc26aa4c97b3439d476b8ace7a": {
+      "metric_id": "mu.supply.korea_ic_shipment",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2025-08",
+        "measurement": "supply",
+        "unit": "index",
+        "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者出货指数（KSIC 26，季节调整，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "kostat_shipment_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202505/202510/I11ACQ/4",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国电子零件·计算机·通信设备业出货指数（KSIC 26，季调）",
+        "current": 133.5,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "kostat_shipment_2025"
+        ],
+        "kind": "官方统计",
+        "note": "统计厅生产者出货指数，季节调整，2020=100；KSIC 26 含半导体、显示与通信设备，半导体占比最大。",
+        "period": "2025 年 8 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 출하지수(계절조정) · 2025 年 8 月。",
+        "evidence_type": "direct",
+        "id": "korea_ic_shipment",
+        "as_of": "2025-08"
+      },
+      "evidence_ids": [
+        "e-73d37b8fbad482579e4032e20b89542c2b2e38008e1fab24308010a746eefeab"
+      ],
+      "id": "13a92649f97655855747a6c3f884a82d2d32fbcc26aa4c97b3439d476b8ace7a"
+    },
+    "d5694edb4e1839d3a64bef67bb02d2594f32397cdd0c0eba41d63446b9d69fe8": {
+      "metric_id": "mu.supply.korea_ic_shipment",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2025-09",
+        "measurement": "supply",
+        "unit": "index",
+        "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者出货指数（KSIC 26，季节调整，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "kostat_shipment_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202505/202510/I11ACQ/4",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国电子零件·计算机·通信设备业出货指数（KSIC 26，季调）",
+        "current": 139.1,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "kostat_shipment_2025"
+        ],
+        "kind": "官方统计",
+        "note": "统计厅生产者出货指数，季节调整，2020=100；KSIC 26 含半导体、显示与通信设备，半导体占比最大。",
+        "period": "2025 年 9 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 출하지수(계절조정) · 2025 年 9 月。",
+        "evidence_type": "direct",
+        "id": "korea_ic_shipment",
+        "as_of": "2025-09"
+      },
+      "evidence_ids": [
+        "e-9c85c627e5db00978f5cd874fd7eac9731f8e5500c69a4293303f0862d807816"
+      ],
+      "id": "d5694edb4e1839d3a64bef67bb02d2594f32397cdd0c0eba41d63446b9d69fe8"
+    },
+    "3ce242985139d9bc60feee124d231b76c3065e90e157fcf47d7e90337105cdfa": {
+      "metric_id": "mu.supply.korea_ic_shipment",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2025-10",
+        "measurement": "supply",
+        "unit": "index",
+        "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者出货指数（KSIC 26，季节调整，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "kostat_shipment_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202505/202510/I11ACQ/4",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国电子零件·计算机·通信设备业出货指数（KSIC 26，季调）",
+        "current": 114.5,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "kostat_shipment_2025"
+        ],
+        "kind": "官方统计",
+        "note": "统计厅生产者出货指数，季节调整，2020=100；KSIC 26 含半导体、显示与通信设备，半导体占比最大。",
+        "period": "2025 年 10 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 출하지수(계절조정) · 2025 年 10 月。",
+        "evidence_type": "direct",
+        "id": "korea_ic_shipment",
+        "as_of": "2025-10"
+      },
+      "evidence_ids": [
+        "e-3924faf96a48c2f8568cf709a0251f798ee1b3e3c1fc818a9fae380b81758aa8"
+      ],
+      "id": "3ce242985139d9bc60feee124d231b76c3065e90e157fcf47d7e90337105cdfa"
+    },
+    "631c46e6f64421180b9e4b382663528586505f505d89bc5057b66747e59167cd": {
+      "metric_id": "mu.supply.korea_ic_shipment",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2025-11",
+        "measurement": "supply",
+        "unit": "index",
+        "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者出货指数（KSIC 26，季节调整，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "kostat_shipment",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/4",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国电子零件·计算机·通信设备业出货指数（KSIC 26，季调）",
+        "current": 125.6,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "kostat_shipment"
+        ],
+        "kind": "官方统计",
+        "note": "统计厅生产者出货指数，季节调整，2020=100；KSIC 26 含半导体、显示与通信设备，半导体占比最大。",
+        "period": "2025 年 11 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 출하지수(계절조정) · 2025 年 11 月。",
+        "evidence_type": "direct",
+        "id": "korea_ic_shipment",
+        "as_of": "2025-11"
+      },
+      "evidence_ids": [
+        "e-8084ad8aed56ceb013fcd3381ffa8e076882e3bdcc6692ebf6995eda30a7ccfb"
+      ],
+      "id": "631c46e6f64421180b9e4b382663528586505f505d89bc5057b66747e59167cd"
+    },
+    "c96eb3ee9989c9061ba1b671f3338e53c965ddd1d9dee1fe8b9b92b063de5f45": {
+      "metric_id": "mu.supply.korea_ic_shipment",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2025-12",
+        "measurement": "supply",
+        "unit": "index",
+        "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者出货指数（KSIC 26，季节调整，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "kostat_shipment",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/4",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国电子零件·计算机·通信设备业出货指数（KSIC 26，季调）",
+        "current": 128,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "kostat_shipment"
+        ],
+        "kind": "官方统计",
+        "note": "统计厅生产者出货指数，季节调整，2020=100；KSIC 26 含半导体、显示与通信设备，半导体占比最大。",
+        "period": "2025 年 12 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 출하지수(계절조정) · 2025 年 12 月。",
+        "evidence_type": "direct",
+        "id": "korea_ic_shipment",
+        "as_of": "2025-12"
+      },
+      "evidence_ids": [
+        "e-036c07e18e814272ca3532243634fefa52a6c84c3f792737ca095ed381b67650"
+      ],
+      "id": "c96eb3ee9989c9061ba1b671f3338e53c965ddd1d9dee1fe8b9b92b063de5f45"
+    },
+    "b19a3b73c425d38369a7ef34fa23103bc27798b8803c8c3331a6f1ba91bfcb6c": {
+      "metric_id": "mu.supply.korea_ic_shipment",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-01",
+        "measurement": "supply",
+        "unit": "index",
+        "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者出货指数（KSIC 26，季节调整，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "kostat_shipment",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/4",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国电子零件·计算机·通信设备业出货指数（KSIC 26，季调）",
+        "current": 117.4,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "kostat_shipment"
+        ],
+        "kind": "官方统计",
+        "note": "统计厅生产者出货指数，季节调整，2020=100；KSIC 26 含半导体、显示与通信设备，半导体占比最大。",
+        "period": "2026 年 1 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 출하지수(계절조정) · 2026 年 1 月。",
+        "evidence_type": "direct",
+        "id": "korea_ic_shipment",
+        "as_of": "2026-01"
+      },
+      "evidence_ids": [
+        "e-a3636971de19c4f59df9eee72fee7eddd4c064584cb278d2df4f70091016354f"
+      ],
+      "id": "b19a3b73c425d38369a7ef34fa23103bc27798b8803c8c3331a6f1ba91bfcb6c"
+    },
+    "8312b132a4e9f20f924e4aeedaa54c791c8a40c35fc04dcd6f00e4a2c03695bb": {
+      "metric_id": "mu.supply.korea_ic_shipment",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-02",
+        "measurement": "supply",
+        "unit": "index",
+        "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者出货指数（KSIC 26，季节调整，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "kostat_shipment",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/4",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国电子零件·计算机·通信设备业出货指数（KSIC 26，季调）",
+        "current": 141.2,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "kostat_shipment"
+        ],
+        "kind": "官方统计",
+        "note": "统计厅生产者出货指数，季节调整，2020=100；KSIC 26 含半导体、显示与通信设备，半导体占比最大。",
+        "period": "2026 年 2 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 출하지수(계절조정) · 2026 年 2 月。",
+        "evidence_type": "direct",
+        "id": "korea_ic_shipment",
+        "as_of": "2026-02"
+      },
+      "evidence_ids": [
+        "e-399f2fc768ed5f4175c28aa2e7fc1c134d3e66c793c37ee0a90e882d58f4e749"
+      ],
+      "id": "8312b132a4e9f20f924e4aeedaa54c791c8a40c35fc04dcd6f00e4a2c03695bb"
+    },
+    "8eb228f3d6a0f80306e15f9d0e0c778fa52208fb80c8b29445d51413bedf16c4": {
+      "metric_id": "mu.supply.korea_ic_shipment",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-03",
+        "measurement": "supply",
+        "unit": "index",
+        "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者出货指数（KSIC 26，季节调整，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "kostat_shipment",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/4",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国电子零件·计算机·通信设备业出货指数（KSIC 26，季调）",
+        "current": 138.3,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "kostat_shipment"
+        ],
+        "kind": "官方统计",
+        "note": "统计厅生产者出货指数，季节调整，2020=100；KSIC 26 含半导体、显示与通信设备，半导体占比最大。",
+        "period": "2026 年 3 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 출하지수(계절조정) · 2026 年 3 月。",
+        "evidence_type": "direct",
+        "id": "korea_ic_shipment",
+        "as_of": "2026-03"
+      },
+      "evidence_ids": [
+        "e-f4a085750a49218a0291f476371b00fb92ba1589d783022070f4620c7e7aa70f"
+      ],
+      "id": "8eb228f3d6a0f80306e15f9d0e0c778fa52208fb80c8b29445d51413bedf16c4"
+    },
+    "0b1fcc751e6120d34a3d13aaae28f609c8c47ff23f0ac311915a852854243d20": {
+      "metric_id": "mu.supply.korea_ic_shipment",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-04",
+        "measurement": "supply",
+        "unit": "index",
+        "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者出货指数（KSIC 26，季节调整，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "kostat_shipment",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/4",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国电子零件·计算机·通信设备业出货指数（KSIC 26，季调）",
+        "current": 132.6,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "kostat_shipment"
+        ],
+        "kind": "官方统计",
+        "note": "统计厅生产者出货指数，季节调整，2020=100；KSIC 26 含半导体、显示与通信设备，半导体占比最大。",
+        "period": "2026 年 4 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 출하지수(계절조정) · 2026 年 4 月。",
+        "evidence_type": "direct",
+        "id": "korea_ic_shipment",
+        "as_of": "2026-04"
+      },
+      "evidence_ids": [
+        "e-84e57dcff5e087d08cbec763db9d7b5abe77ff9cc0804222593ea8e6f886c232"
+      ],
+      "id": "0b1fcc751e6120d34a3d13aaae28f609c8c47ff23f0ac311915a852854243d20"
+    },
+    "8944be3f378fd9f57a29d83359838aa7e1f4c0fb55f7cee10554c69b3f84f52b": {
+      "metric_id": "mu.supply.korea_ic_shipment",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-05",
+        "measurement": "supply",
+        "unit": "index",
+        "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者出货指数（KSIC 26，季节调整，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "kostat_shipment",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/4",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国电子零件·计算机·通信设备业出货指数（KSIC 26，季调）",
+        "current": 126.4,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "kostat_shipment"
+        ],
+        "kind": "官方统计",
+        "note": "统计厅生产者出货指数，季节调整，2020=100；KSIC 26 含半导体、显示与通信设备，半导体占比最大。",
+        "period": "2026 年 5 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 출하지수(계절조정) · 2026 年 5 月。",
+        "evidence_type": "direct",
+        "id": "korea_ic_shipment",
+        "as_of": "2026-05"
+      },
+      "evidence_ids": [
+        "e-73138a6d93c056cabcf214acafc32b1c61aaed95c410293576c0cfd3ca531e24"
+      ],
+      "id": "8944be3f378fd9f57a29d83359838aa7e1f4c0fb55f7cee10554c69b3f84f52b"
+    },
+    "93664c60d1ae585e6a3c012fd5190529a0316a6702e8ae8161fea56138514084": {
+      "metric_id": "mu.supply.korea_ic_shipment",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-06",
+        "measurement": "supply",
+        "unit": "index",
+        "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者出货指数（KSIC 26，季节调整，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "kostat_shipment",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/4",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国电子零件·计算机·通信设备业出货指数（KSIC 26，季调）",
+        "current": 139.1,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "kostat_shipment"
+        ],
+        "kind": "官方统计",
+        "note": "统计厅生产者出货指数，季节调整，2020=100；KSIC 26 含半导体、显示与通信设备，半导体占比最大。",
+        "period": "2026 年 6 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 출하지수(계절조정) · 2026 年 6 月。",
+        "evidence_type": "direct",
+        "id": "korea_ic_shipment",
+        "as_of": "2026-06"
+      },
+      "evidence_ids": [
+        "e-6268b2559c3e196072eb43537380a83b5e972feb44cbc66afba9aac8bed30874"
+      ],
+      "id": "93664c60d1ae585e6a3c012fd5190529a0316a6702e8ae8161fea56138514084"
+    },
+    "2ae1bc31cfa38cb596f58c53c448c6a910fb81b39db52bab789079f43e05f650": {
+      "metric_id": "mu.supply.korea_ic_shipment",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-07",
+        "measurement": "supply",
+        "unit": "index",
+        "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者出货指数（KSIC 26，季节调整，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "kostat_shipment",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/4",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国电子零件·计算机·通信设备业出货指数（KSIC 26，季调）",
+        "current": 129.7,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "kostat_shipment"
+        ],
+        "kind": "官方统计",
+        "note": "统计厅生产者出货指数，季节调整，2020=100；KSIC 26 含半导体、显示与通信设备，半导体占比最大。",
+        "period": "2026 年 7 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 출하지수(계절조정) · 2026 年 7 月。",
+        "evidence_type": "direct",
+        "id": "korea_ic_shipment",
+        "as_of": "2026-07"
+      },
+      "evidence_ids": [
+        "e-f42dbe2868357d6cc0d4dbef558f7b38c6d9f5c04438df97676fd9fd0f1f0328"
+      ],
+      "id": "2ae1bc31cfa38cb596f58c53c448c6a910fb81b39db52bab789079f43e05f650"
+    },
+    "6d76f684f1861fad5cfd575c9ab27e99849c4c32a00b564fc7243efc0058de18": {
+      "metric_id": "mu.supply.korea_ic_inventory",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2025-05",
+        "measurement": "supply",
+        "unit": "index",
+        "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者库存指数（KSIC 26，季节调整，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "kostat_inventory_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202505/202510/I11ACQ/6",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国电子零件·计算机·通信设备业库存指数（KSIC 26，季调）",
+        "current": 105.4,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "kostat_inventory_2025"
+        ],
+        "kind": "官方统计",
+        "note": "统计厅生产者库存指数，季节调整，2020=100；与出货指数同口径，页面以两者之比观察库存累积。",
+        "period": "2025 年 5 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 재고지수(계절조정) · 2025 年 5 月。",
+        "evidence_type": "direct",
+        "id": "korea_ic_inventory",
+        "as_of": "2025-05"
+      },
+      "evidence_ids": [
+        "e-66ebb8059b46855790cbf6aaa19b9c8b99a834a5b3ae7550d18dec5a53980a07"
+      ],
+      "id": "6d76f684f1861fad5cfd575c9ab27e99849c4c32a00b564fc7243efc0058de18"
+    },
+    "7a9ae8be0554338c4bd950e22559688a3969e09c6d0f2ff0d51910dd99704872": {
+      "metric_id": "mu.supply.korea_ic_inventory",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2025-06",
+        "measurement": "supply",
+        "unit": "index",
+        "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者库存指数（KSIC 26，季节调整，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "kostat_inventory_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202505/202510/I11ACQ/6",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国电子零件·计算机·通信设备业库存指数（KSIC 26，季调）",
+        "current": 99.5,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "kostat_inventory_2025"
+        ],
+        "kind": "官方统计",
+        "note": "统计厅生产者库存指数，季节调整，2020=100；与出货指数同口径，页面以两者之比观察库存累积。",
+        "period": "2025 年 6 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 재고지수(계절조정) · 2025 年 6 月。",
+        "evidence_type": "direct",
+        "id": "korea_ic_inventory",
+        "as_of": "2025-06"
+      },
+      "evidence_ids": [
+        "e-826dd68dd59f8e07d25c541c6e67638dc827d05c45910e2e0926875b8ffbb854"
+      ],
+      "id": "7a9ae8be0554338c4bd950e22559688a3969e09c6d0f2ff0d51910dd99704872"
+    },
+    "0702fe3bb6b6aa77a834c99373afc2c47d298a043316aede7e0082597496bcc9": {
+      "metric_id": "mu.supply.korea_ic_inventory",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2025-07",
+        "measurement": "supply",
+        "unit": "index",
+        "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者库存指数（KSIC 26，季节调整，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "kostat_inventory_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202505/202510/I11ACQ/6",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国电子零件·计算机·通信设备业库存指数（KSIC 26，季调）",
+        "current": 98.9,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "kostat_inventory_2025"
+        ],
+        "kind": "官方统计",
+        "note": "统计厅生产者库存指数，季节调整，2020=100；与出货指数同口径，页面以两者之比观察库存累积。",
+        "period": "2025 年 7 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 재고지수(계절조정) · 2025 年 7 月。",
+        "evidence_type": "direct",
+        "id": "korea_ic_inventory",
+        "as_of": "2025-07"
+      },
+      "evidence_ids": [
+        "e-38a59e0ca4d7430bc1eeaad3a2e0d80917d3519e3369ba6f08a3d1b7ffc7e8e5"
+      ],
+      "id": "0702fe3bb6b6aa77a834c99373afc2c47d298a043316aede7e0082597496bcc9"
+    },
+    "d3a4600a1df9c6d4a88d2d1b29a9c9ff4883f6e61154d1b434d42f139e69be68": {
+      "metric_id": "mu.supply.korea_ic_inventory",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2025-08",
+        "measurement": "supply",
+        "unit": "index",
+        "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者库存指数（KSIC 26，季节调整，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "kostat_inventory_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202505/202510/I11ACQ/6",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国电子零件·计算机·通信设备业库存指数（KSIC 26，季调）",
+        "current": 99,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "kostat_inventory_2025"
+        ],
+        "kind": "官方统计",
+        "note": "统计厅生产者库存指数，季节调整，2020=100；与出货指数同口径，页面以两者之比观察库存累积。",
+        "period": "2025 年 8 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 재고지수(계절조정) · 2025 年 8 月。",
+        "evidence_type": "direct",
+        "id": "korea_ic_inventory",
+        "as_of": "2025-08"
+      },
+      "evidence_ids": [
+        "e-e8be27b5da63e63aa4d63b8394db7ddbfc8d8c1378682384c2a33e4b483384a1"
+      ],
+      "id": "d3a4600a1df9c6d4a88d2d1b29a9c9ff4883f6e61154d1b434d42f139e69be68"
+    },
+    "3b9f7d062a8dfd4572ab9717eea101b0e87b0baac477dffb79b75dbc81de1a78": {
+      "metric_id": "mu.supply.korea_ic_inventory",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2025-09",
+        "measurement": "supply",
+        "unit": "index",
+        "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者库存指数（KSIC 26，季节调整，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "kostat_inventory_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202505/202510/I11ACQ/6",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国电子零件·计算机·通信设备业库存指数（KSIC 26，季调）",
+        "current": 99.5,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "kostat_inventory_2025"
+        ],
+        "kind": "官方统计",
+        "note": "统计厅生产者库存指数，季节调整，2020=100；与出货指数同口径，页面以两者之比观察库存累积。",
+        "period": "2025 年 9 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 재고지수(계절조정) · 2025 年 9 月。",
+        "evidence_type": "direct",
+        "id": "korea_ic_inventory",
+        "as_of": "2025-09"
+      },
+      "evidence_ids": [
+        "e-8448b48ca5d543c7a44c8b7ad54d02123a2b0d8ea8f2130b9b057a1d7fc007b0"
+      ],
+      "id": "3b9f7d062a8dfd4572ab9717eea101b0e87b0baac477dffb79b75dbc81de1a78"
+    },
+    "d7bbe90f1572f803ff045cad38f5fb7b08bdd97697743874a3325799fa860026": {
+      "metric_id": "mu.supply.korea_ic_inventory",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2025-10",
+        "measurement": "supply",
+        "unit": "index",
+        "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者库存指数（KSIC 26，季节调整，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "kostat_inventory_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202505/202510/I11ACQ/6",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国电子零件·计算机·通信设备业库存指数（KSIC 26，季调）",
+        "current": 98.8,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "kostat_inventory_2025"
+        ],
+        "kind": "官方统计",
+        "note": "统计厅生产者库存指数，季节调整，2020=100；与出货指数同口径，页面以两者之比观察库存累积。",
+        "period": "2025 年 10 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 재고지수(계절조정) · 2025 年 10 月。",
+        "evidence_type": "direct",
+        "id": "korea_ic_inventory",
+        "as_of": "2025-10"
+      },
+      "evidence_ids": [
+        "e-0f192a6efff0146fda1b3df80c6aba6e0b5d9ae42ba8242fa02f1425a1a416ac"
+      ],
+      "id": "d7bbe90f1572f803ff045cad38f5fb7b08bdd97697743874a3325799fa860026"
+    },
+    "110c5b6617cc63ef752497f471679f70ee40674b3cf947e31db856728f63feee": {
+      "metric_id": "mu.supply.korea_ic_inventory",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2025-11",
+        "measurement": "supply",
+        "unit": "index",
+        "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者库存指数（KSIC 26，季节调整，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "kostat_inventory",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/6",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国电子零件·计算机·通信设备业库存指数（KSIC 26，季调）",
+        "current": 95.8,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "kostat_inventory"
+        ],
+        "kind": "官方统计",
+        "note": "统计厅生产者库存指数，季节调整，2020=100；与出货指数同口径，页面以两者之比观察库存累积。",
+        "period": "2025 年 11 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 재고지수(계절조정) · 2025 年 11 月。",
+        "evidence_type": "direct",
+        "id": "korea_ic_inventory",
+        "as_of": "2025-11"
+      },
+      "evidence_ids": [
+        "e-409e85cd2241ef1703f1d2d27b4fd298bac8dad6530725d780ecf960b0a09cb8"
+      ],
+      "id": "110c5b6617cc63ef752497f471679f70ee40674b3cf947e31db856728f63feee"
+    },
+    "b485ebe211a9465fe4914b28e8b499a2982b9e8beb99a6b0a8446435ddb5bff5": {
+      "metric_id": "mu.supply.korea_ic_inventory",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2025-12",
+        "measurement": "supply",
+        "unit": "index",
+        "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者库存指数（KSIC 26，季节调整，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "kostat_inventory",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/6",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国电子零件·计算机·通信设备业库存指数（KSIC 26，季调）",
+        "current": 94.3,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "kostat_inventory"
+        ],
+        "kind": "官方统计",
+        "note": "统计厅生产者库存指数，季节调整，2020=100；与出货指数同口径，页面以两者之比观察库存累积。",
+        "period": "2025 年 12 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 재고지수(계절조정) · 2025 年 12 月。",
+        "evidence_type": "direct",
+        "id": "korea_ic_inventory",
+        "as_of": "2025-12"
+      },
+      "evidence_ids": [
+        "e-1d9b73ad3fac90b96663e4ccfd25d733c92bbbb25f30b38704d517ed95ca070d"
+      ],
+      "id": "b485ebe211a9465fe4914b28e8b499a2982b9e8beb99a6b0a8446435ddb5bff5"
+    },
+    "ab0310b5627b38c07b655be4aa6cb7cb17c498cb2af18e6333532decb18b2b16": {
+      "metric_id": "mu.supply.korea_ic_inventory",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-01",
+        "measurement": "supply",
+        "unit": "index",
+        "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者库存指数（KSIC 26，季节调整，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "kostat_inventory",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/6",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国电子零件·计算机·通信设备业库存指数（KSIC 26，季调）",
+        "current": 100.3,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "kostat_inventory"
+        ],
+        "kind": "官方统计",
+        "note": "统计厅生产者库存指数，季节调整，2020=100；与出货指数同口径，页面以两者之比观察库存累积。",
+        "period": "2026 年 1 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 재고지수(계절조정) · 2026 年 1 月。",
+        "evidence_type": "direct",
+        "id": "korea_ic_inventory",
+        "as_of": "2026-01"
+      },
+      "evidence_ids": [
+        "e-7692350f9ca07b4e2bc3c3e578169ca78c54346f4ded815ebd314340526215ce"
+      ],
+      "id": "ab0310b5627b38c07b655be4aa6cb7cb17c498cb2af18e6333532decb18b2b16"
+    },
+    "af295019c0e9d2762965c17f68c1c93062c4753f868a5408fb614a43a22be4cd": {
+      "metric_id": "mu.supply.korea_ic_inventory",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-02",
+        "measurement": "supply",
+        "unit": "index",
+        "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者库存指数（KSIC 26，季节调整，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "kostat_inventory",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/6",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国电子零件·计算机·通信设备业库存指数（KSIC 26，季调）",
+        "current": 116.1,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "kostat_inventory"
+        ],
+        "kind": "官方统计",
+        "note": "统计厅生产者库存指数，季节调整，2020=100；与出货指数同口径，页面以两者之比观察库存累积。",
+        "period": "2026 年 2 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 재고지수(계절조정) · 2026 年 2 月。",
+        "evidence_type": "direct",
+        "id": "korea_ic_inventory",
+        "as_of": "2026-02"
+      },
+      "evidence_ids": [
+        "e-79bd263f08be04573118f03a5aee6f0fbfd8ca6045ce8055a09ba5a6fe17afe0"
+      ],
+      "id": "af295019c0e9d2762965c17f68c1c93062c4753f868a5408fb614a43a22be4cd"
+    },
+    "8fffdfca25ba69a59c7bafb4fafb6a281c603309df9375b9ef68b351d4d568c1": {
+      "metric_id": "mu.supply.korea_ic_inventory",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-03",
+        "measurement": "supply",
+        "unit": "index",
+        "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者库存指数（KSIC 26，季节调整，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "kostat_inventory",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/6",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国电子零件·计算机·通信设备业库存指数（KSIC 26，季调）",
+        "current": 96.7,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "kostat_inventory"
+        ],
+        "kind": "官方统计",
+        "note": "统计厅生产者库存指数，季节调整，2020=100；与出货指数同口径，页面以两者之比观察库存累积。",
+        "period": "2026 年 3 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 재고지수(계절조정) · 2026 年 3 月。",
+        "evidence_type": "direct",
+        "id": "korea_ic_inventory",
+        "as_of": "2026-03"
+      },
+      "evidence_ids": [
+        "e-316d81172f7747fa6608f1091eedd0f41e38fdc52793029425e88455a36a5c30"
+      ],
+      "id": "8fffdfca25ba69a59c7bafb4fafb6a281c603309df9375b9ef68b351d4d568c1"
+    },
+    "d086e10d3992da2123643a570535f2541329b57589dd9c4aae963056721b0269": {
+      "metric_id": "mu.supply.korea_ic_inventory",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-04",
+        "measurement": "supply",
+        "unit": "index",
+        "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者库存指数（KSIC 26，季节调整，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "kostat_inventory",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/6",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国电子零件·计算机·通信设备业库存指数（KSIC 26，季调）",
+        "current": 108.3,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "kostat_inventory"
+        ],
+        "kind": "官方统计",
+        "note": "统计厅生产者库存指数，季节调整，2020=100；与出货指数同口径，页面以两者之比观察库存累积。",
+        "period": "2026 年 4 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 재고지수(계절조정) · 2026 年 4 月。",
+        "evidence_type": "direct",
+        "id": "korea_ic_inventory",
+        "as_of": "2026-04"
+      },
+      "evidence_ids": [
+        "e-082410cc2cc76dc1ae7bed3259ec0800be6cbf032185367725535b537976f9d2"
+      ],
+      "id": "d086e10d3992da2123643a570535f2541329b57589dd9c4aae963056721b0269"
+    },
+    "b35e4ca17c13ee35a64924de1538fb54a54d1a0300241ebc7edd3a846bd89837": {
+      "metric_id": "mu.supply.korea_ic_inventory",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-05",
+        "measurement": "supply",
+        "unit": "index",
+        "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者库存指数（KSIC 26，季节调整，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "kostat_inventory",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/6",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国电子零件·计算机·通信设备业库存指数（KSIC 26，季调）",
+        "current": 111.9,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "kostat_inventory"
+        ],
+        "kind": "官方统计",
+        "note": "统计厅生产者库存指数，季节调整，2020=100；与出货指数同口径，页面以两者之比观察库存累积。",
+        "period": "2026 年 5 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 재고지수(계절조정) · 2026 年 5 月。",
+        "evidence_type": "direct",
+        "id": "korea_ic_inventory",
+        "as_of": "2026-05"
+      },
+      "evidence_ids": [
+        "e-ead26e36e5cc5b1807667873af0d02321b7addc62a78bb12681f265f483c83ff"
+      ],
+      "id": "b35e4ca17c13ee35a64924de1538fb54a54d1a0300241ebc7edd3a846bd89837"
+    },
+    "c07677c2d392d22b0467345681c951a2bde1003690d534bc487101c6c76eb8b6": {
+      "metric_id": "mu.supply.korea_ic_inventory",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-06",
+        "measurement": "supply",
+        "unit": "index",
+        "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者库存指数（KSIC 26，季节调整，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "kostat_inventory",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/6",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国电子零件·计算机·通信设备业库存指数（KSIC 26，季调）",
+        "current": 105.7,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "kostat_inventory"
+        ],
+        "kind": "官方统计",
+        "note": "统计厅生产者库存指数，季节调整，2020=100；与出货指数同口径，页面以两者之比观察库存累积。",
+        "period": "2026 年 6 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 재고지수(계절조정) · 2026 年 6 月。",
+        "evidence_type": "direct",
+        "id": "korea_ic_inventory",
+        "as_of": "2026-06"
+      },
+      "evidence_ids": [
+        "e-ca6fa1d87883d02ba55b81db780d685afd4e40fdded894d02266d6e86d2136e1"
+      ],
+      "id": "c07677c2d392d22b0467345681c951a2bde1003690d534bc487101c6c76eb8b6"
+    },
+    "afea99ea54694c02e404454532fd47914752b41cd6f7ad052e4ce56e3659771f": {
+      "metric_id": "mu.supply.korea_ic_inventory",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-07",
+        "measurement": "supply",
+        "unit": "index",
+        "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者库存指数（KSIC 26，季节调整，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "kostat_inventory",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/6",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国电子零件·计算机·通信设备业库存指数（KSIC 26，季调）",
+        "current": 115.2,
+        "previous": null,
+        "unit": "index",
+        "source_ids": [
+          "kostat_inventory"
+        ],
+        "kind": "官方统计",
+        "note": "统计厅生产者库存指数，季节调整，2020=100；与出货指数同口径，页面以两者之比观察库存累积。",
+        "period": "2026 年 7 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 재고지수(계절조정) · 2026 年 7 月。",
+        "evidence_type": "direct",
+        "id": "korea_ic_inventory",
+        "as_of": "2026-07"
+      },
+      "evidence_ids": [
+        "e-924b09d287192023512a880ca3fa34a363f69680a16b4b251389665a858e5863"
+      ],
+      "id": "afea99ea54694c02e404454532fd47914752b41cd6f7ad052e4ce56e3659771f"
+    },
+    "dea397c3bb614973f226c8b1b1a47f5a9c5c14521375dbb94fbb53d7ca896794": {
+      "metric_id": "mu.contract.ddr5_contract",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-05",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "DDR5 16Gb 合同价（韩国产业通商部出口发布所列固定价格）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "korea_trade",
+            "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172254/view",
+            "published_at": "2026-10-01"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DDR5 16Gb 合同价（固定价格）",
+        "current": 37.5,
+        "previous": null,
+        "unit": "USD",
+        "source_ids": [
+          "korea_trade"
+        ],
+        "kind": "转引",
+        "note": "产业通商部出口发布所列月度固定价格，原文未注明出处；与 DDR5 16Gb 现货同规格容量，速度等级未注明。",
+        "period": "2026 年 5 月",
+        "change": null,
+        "location": "产业通商部 9 月进出口动向 · 附件 PDF 第 1 页注释「메모리 고정가격 추이」(DDR5 16Gb, ‘26.5월→9월) · 2026 年 5 月。",
+        "evidence_type": "secondary",
+        "id": "ddr5_contract",
+        "as_of": "2026-05"
+      },
+      "evidence_ids": [
+        "e-39448e7193f935abfb846035e0b88b71f9c0eee37d7802c60ae4aa2c4514d35a"
+      ],
+      "id": "dea397c3bb614973f226c8b1b1a47f5a9c5c14521375dbb94fbb53d7ca896794"
+    },
+    "adf4e5cd751b651889076af6f023ea8ad89ef7e1f825902e625b1259ef8cad99": {
+      "metric_id": "mu.contract.ddr5_contract",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-06",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "DDR5 16Gb 合同价（韩国产业通商部出口发布所列固定价格）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "korea_trade",
+            "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172254/view",
+            "published_at": "2026-10-01"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DDR5 16Gb 合同价（固定价格）",
+        "current": 40,
+        "previous": null,
+        "unit": "USD",
+        "source_ids": [
+          "korea_trade"
+        ],
+        "kind": "转引",
+        "note": "产业通商部出口发布所列月度固定价格，原文未注明出处；与 DDR5 16Gb 现货同规格容量，速度等级未注明。",
+        "period": "2026 年 6 月",
+        "change": null,
+        "location": "产业通商部 9 月进出口动向 · 附件 PDF 第 1 页注释「메모리 고정가격 추이」(DDR5 16Gb, ‘26.5월→9월) · 2026 年 6 月。",
+        "evidence_type": "secondary",
+        "id": "ddr5_contract",
+        "as_of": "2026-06"
+      },
+      "evidence_ids": [
+        "e-4d0305baaec355519d39af62488029b66753c617027263dcd58686cf49b961a4"
+      ],
+      "id": "adf4e5cd751b651889076af6f023ea8ad89ef7e1f825902e625b1259ef8cad99"
+    },
+    "76f996555e4fe8b25ea7cf5c0731eef053fcbb75439ff8ff36fb21b7df04dd7d": {
+      "metric_id": "mu.contract.ddr5_contract",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-07",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "DDR5 16Gb 合同价（韩国产业通商部出口发布所列固定价格）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "korea_trade",
+            "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172254/view",
+            "published_at": "2026-10-01"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DDR5 16Gb 合同价（固定价格）",
+        "current": 45,
+        "previous": null,
+        "unit": "USD",
+        "source_ids": [
+          "korea_trade"
+        ],
+        "kind": "转引",
+        "note": "产业通商部出口发布所列月度固定价格，原文未注明出处；与 DDR5 16Gb 现货同规格容量，速度等级未注明。",
+        "period": "2026 年 7 月",
+        "change": null,
+        "location": "产业通商部 9 月进出口动向 · 附件 PDF 第 1 页注释「메모리 고정가격 추이」(DDR5 16Gb, ‘26.5월→9월) · 2026 年 7 月。",
+        "evidence_type": "secondary",
+        "id": "ddr5_contract",
+        "as_of": "2026-07"
+      },
+      "evidence_ids": [
+        "e-f674642c373f40f0bf253f7ae848ada27d42614dd5aed9d58e76525ae66c264f"
+      ],
+      "id": "76f996555e4fe8b25ea7cf5c0731eef053fcbb75439ff8ff36fb21b7df04dd7d"
+    },
+    "fe7c51818085674fa595af0dc3525c9cbd554465447920f9c676caebb6e10ba8": {
+      "metric_id": "mu.contract.ddr5_contract",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "as_of": "2026-08",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "DDR5 16Gb 合同价（韩国产业通商部出口发布所列固定价格）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "korea_trade",
+            "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172254/view",
+            "published_at": "2026-10-01"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DDR5 16Gb 合同价（固定价格）",
+        "current": 46.5,
+        "previous": null,
+        "unit": "USD",
+        "source_ids": [
+          "korea_trade"
+        ],
+        "kind": "转引",
+        "note": "产业通商部出口发布所列月度固定价格，原文未注明出处；与 DDR5 16Gb 现货同规格容量，速度等级未注明。",
+        "period": "2026 年 8 月",
+        "change": null,
+        "location": "产业通商部 9 月进出口动向 · 附件 PDF 第 1 页注释「메모리 고정가격 추이」(DDR5 16Gb, ‘26.5월→9월) · 2026 年 8 月。",
+        "evidence_type": "secondary",
+        "id": "ddr5_contract",
+        "as_of": "2026-08"
+      },
+      "evidence_ids": [
+        "e-cc09a2d61b59128d827a42b5e6254aa9c0be8235e674ee2ee8b2710b01335085"
+      ],
+      "id": "fe7c51818085674fa595af0dc3525c9cbd554465447920f9c676caebb6e10ba8"
     }
   },
   "supporting": {
@@ -20794,6 +23106,63 @@
       "2026-10-07": "3af90fff5340ed1edd7e2958d7dffed3efbd252703d69fbdfc8f1369fefd4d70",
       "2026-10-15": "3fb6c9754002c13fb9ab992c46cf6e3a07e17dcb9ea2afa289a197cfd6b97326",
       "2026-10-16": "2237f248fba62ec2917b5a32f54be9d0b132002ac55422fb7dc0c7e4fe061fbf"
+    },
+    "mu.contract.bok_dram_price": {
+      "2025-06": "f4745d896b80abce92a617685ad131b5fc045387102ed85eaa5939aba4876a32",
+      "2025-07": "bcc475516df20769960881220faf31ca60947a82d598fd32f1c835946f27409f",
+      "2025-08": "4d0081610627032cf85801f04dc6a22790c619207334cc352e3c766b37b24801",
+      "2025-09": "0038f3a721f53c731ca4f52acea04e5068bc964f2228cc2a5e2ef929d6673a03",
+      "2025-10": "e8c3d7cc49d62ed750d2cc86be2300609de15c6aefe818b645224fe313d67e93",
+      "2025-11": "1c87dec1d4c3dd4aaa6b69bce5130845e89bcbe78cb11ad0e912a41f319e41cb",
+      "2025-12": "6c5bad421f6b3d75757a5a165c1948fec53ad0684749ba7bfe45e59c89ce63f0",
+      "2026-01": "58f8ad0e2c00af85f56df4c4cd34e238147ee480df3cbea266cb6f4417e5071d",
+      "2026-02": "aceeace10fff4c0c98edd1378dea46a5852abf9e2b6513b9bd67fbedb469dfa4",
+      "2026-03": "6a14f4ff211d2debfd26d9034efe4044e02f47264167ed62305c1b247e1863de",
+      "2026-04": "984bd229ddd393e44d81df8c8e14bf49feac17ed9f3a2becffd77ffb43616677",
+      "2026-05": "ff727bd4c369c31522f19f4176bc46c6ac4da41f15763282dadf5ba004738a50",
+      "2026-06": "3b0abd10c87a13c908c2b93cb4b13c3aaf6cedf5751296cbc3b01a462cb7a5b9",
+      "2026-07": "bf6e2c576c2049760b43c93c900b1d8997c007f93a77e4d8c95adfa5d467792c",
+      "2026-08": "a0e8014c33e9ca3c8ae7826fb5ea193614d760b6b691032f561a1297a5adce5e"
+    },
+    "mu.supply.korea_ic_shipment": {
+      "2025-05": "d82b0796b42389857af999274283ddf1dcd6cc3ad9101103a41d9d7f1d0a4c76",
+      "2025-06": "a8fbb1a7c640c35b28e9512a0037a104194ea9789c50f75e52236656d95bbae5",
+      "2025-07": "e6ff6fc6bee24b1db1e687547f193091fa302a539c2c2333478425319a1f5d8f",
+      "2025-08": "13a92649f97655855747a6c3f884a82d2d32fbcc26aa4c97b3439d476b8ace7a",
+      "2025-09": "d5694edb4e1839d3a64bef67bb02d2594f32397cdd0c0eba41d63446b9d69fe8",
+      "2025-10": "3ce242985139d9bc60feee124d231b76c3065e90e157fcf47d7e90337105cdfa",
+      "2025-11": "631c46e6f64421180b9e4b382663528586505f505d89bc5057b66747e59167cd",
+      "2025-12": "c96eb3ee9989c9061ba1b671f3338e53c965ddd1d9dee1fe8b9b92b063de5f45",
+      "2026-01": "b19a3b73c425d38369a7ef34fa23103bc27798b8803c8c3331a6f1ba91bfcb6c",
+      "2026-02": "8312b132a4e9f20f924e4aeedaa54c791c8a40c35fc04dcd6f00e4a2c03695bb",
+      "2026-03": "8eb228f3d6a0f80306e15f9d0e0c778fa52208fb80c8b29445d51413bedf16c4",
+      "2026-04": "0b1fcc751e6120d34a3d13aaae28f609c8c47ff23f0ac311915a852854243d20",
+      "2026-05": "8944be3f378fd9f57a29d83359838aa7e1f4c0fb55f7cee10554c69b3f84f52b",
+      "2026-06": "93664c60d1ae585e6a3c012fd5190529a0316a6702e8ae8161fea56138514084",
+      "2026-07": "2ae1bc31cfa38cb596f58c53c448c6a910fb81b39db52bab789079f43e05f650"
+    },
+    "mu.supply.korea_ic_inventory": {
+      "2025-05": "6d76f684f1861fad5cfd575c9ab27e99849c4c32a00b564fc7243efc0058de18",
+      "2025-06": "7a9ae8be0554338c4bd950e22559688a3969e09c6d0f2ff0d51910dd99704872",
+      "2025-07": "0702fe3bb6b6aa77a834c99373afc2c47d298a043316aede7e0082597496bcc9",
+      "2025-08": "d3a4600a1df9c6d4a88d2d1b29a9c9ff4883f6e61154d1b434d42f139e69be68",
+      "2025-09": "3b9f7d062a8dfd4572ab9717eea101b0e87b0baac477dffb79b75dbc81de1a78",
+      "2025-10": "d7bbe90f1572f803ff045cad38f5fb7b08bdd97697743874a3325799fa860026",
+      "2025-11": "110c5b6617cc63ef752497f471679f70ee40674b3cf947e31db856728f63feee",
+      "2025-12": "b485ebe211a9465fe4914b28e8b499a2982b9e8beb99a6b0a8446435ddb5bff5",
+      "2026-01": "ab0310b5627b38c07b655be4aa6cb7cb17c498cb2af18e6333532decb18b2b16",
+      "2026-02": "af295019c0e9d2762965c17f68c1c93062c4753f868a5408fb614a43a22be4cd",
+      "2026-03": "8fffdfca25ba69a59c7bafb4fafb6a281c603309df9375b9ef68b351d4d568c1",
+      "2026-04": "d086e10d3992da2123643a570535f2541329b57589dd9c4aae963056721b0269",
+      "2026-05": "b35e4ca17c13ee35a64924de1538fb54a54d1a0300241ebc7edd3a846bd89837",
+      "2026-06": "c07677c2d392d22b0467345681c951a2bde1003690d534bc487101c6c76eb8b6",
+      "2026-07": "afea99ea54694c02e404454532fd47914752b41cd6f7ad052e4ce56e3659771f"
+    },
+    "mu.contract.ddr5_contract": {
+      "2026-05": "dea397c3bb614973f226c8b1b1a47f5a9c5c14521375dbb94fbb53d7ca896794",
+      "2026-06": "adf4e5cd751b651889076af6f023ea8ad89ef7e1f825902e625b1259ef8cad99",
+      "2026-07": "76f996555e4fe8b25ea7cf5c0731eef053fcbb75439ff8ff36fb21b7df04dd7d",
+      "2026-08": "fe7c51818085674fa595af0dc3525c9cbd554465447920f9c676caebb6e10ba8"
     }
   }
 }
