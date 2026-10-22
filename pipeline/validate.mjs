@@ -3,6 +3,7 @@ import Ajv from 'ajv';
 import {fileURLToPath} from 'node:url';
 import {activeRecords,seriesRecords,entries,materialize,makeRecord,recordHash,hash,stable,compute,orderedCalculations,numericInputs,pendingInput} from './model.mjs';
 import series from '../lib/series-core.js';
+import monitorCore from '../lib/monitor-core.js';
 const {isObservationDate,compareDates}=series;
 import {coverageKeys,validateUpdates,validateUpdateTransition} from './updates.mjs';
 import {validateTechnology,validateTechnologyTransition} from './technology.mjs';
@@ -140,6 +141,8 @@ export function validateLedger(ledger,catalog,evidence,legacy) {
   }
   for(const r of active)checkRecord(r);
   for(const id of catalog.series?.observations?.metrics||[]){const as_of=byMetric.get(id)?.payload.as_of;if(as_of!==undefined&&!isObservationDate(as_of))add('OBSERVATION_DATE',id,'as_of must be YYYY-MM-DD or YYYY-MM');}
+  {const {metric,numerator,denominator}=monitorCore.inventoryRatio,[a,b]=[numerator,denominator].map(row=>byMetric.get(`mu.${metric}.${row}`)?.payload.as_of);
+    if(a!==undefined&&b!==undefined&&a!==b)add('OBSERVATION_DATE',`mu.${metric}.${numerator}`,`as_of must match mu.${metric}.${denominator}: the inventory ratio divides readings of the same month`);}
   // Past points: one sourced record per tracked metric and earlier quarter, or per industry metric and earlier reading.
   const tracked=new Set(catalog.series?.metrics||[]),observed=new Set(catalog.series?.observations?.metrics||[]),ends=new Map();
   for(const {metric_id,key,record:r,id} of seriesRecords(ledger)) {

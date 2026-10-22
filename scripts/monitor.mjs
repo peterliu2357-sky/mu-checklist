@@ -10,7 +10,7 @@ import {createManifest,buildCandidate} from '../pipeline/run.mjs';
 import {fetchSource,saveCapture,verifyCaptures} from '../pipeline/acquire.mjs';
 import {validateEvolution} from '../pipeline/evolution.mjs';
 import {readUpdateStatus} from './update-status.mjs';
-import {validateOutlook,outlookContext,stampOutlook} from '../pipeline/outlook.mjs';
+import {validateOutlook,outlookContext,stampOutlook,logContinues} from '../pipeline/outlook.mjs';
 
 const root=fileURLToPath(new URL('../',import.meta.url));process.chdir(root);
 const args=process.argv.slice(2),command=args.shift()||'help',flag=(name,fallback)=>{const i=args.indexOf('--'+name);return i<0?fallback:args[i+1];};
@@ -42,6 +42,7 @@ try {
         const fromBase=p=>JSON.parse(git('show',`${base}:${p}`));
         issues.push(...validateEvolution({oldCatalog:fromBase('pipeline/catalog.json'),catalog,oldLedger:fromBase('data/ledger.json'),ledger,oldEvidence:fromBase('data/evidence.json'),evidence,oldLegacy:fromBase('pipeline/legacy-baseline.json'),legacy}));
       }
+      if(paths.includes('data/outlook.json')&&!logContinues(JSON.parse(git('show',`${base}:data/outlook.json`)).cycle_log||[],read('data/outlook.json').cycle_log||[]))issues.push({code:'OUTLOOK_LOG',path:'data/outlook.json',message:'The cycle log only grows: earlier reads stay as written and keep their grades'});
       const changed=git('diff','--name-only',base,'HEAD').split('\n');
       for(const p of changed.filter(p=>p.startsWith('data/history/')&&paths.includes(p))){try{const old=git('show',`${base}:${p}`);if(old!==fs.readFileSync(p,'utf8').trim())issues.push({code:'HISTORY',path:p,message:'Historical snapshots are immutable'});}catch(e){if(!fs.existsSync(p))issues.push({code:'HISTORY',path:p,message:'Historical snapshot deleted'});}}
       if(hash(previous)!==hash(d)){

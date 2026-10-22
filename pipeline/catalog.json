@@ -3196,6 +3196,86 @@
         "direct"
       ],
       "monitoring_target": "technology:products"
+    },
+    "mu.contract.ddr4_contract": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "accounting_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "entity": "industry",
+      "measurement": "contract",
+      "unit": "USD",
+      "scope": "DDR4 8Gb (1Gx8) 合同价月均价",
+      "temporal_basis": "calendar_month",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.contract.ddr5_contract": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "accounting_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "entity": "industry",
+      "measurement": "contract",
+      "unit": "USD",
+      "scope": "DDR5 16Gb 合同价（韩国产业通商部出口发布所列固定价格）",
+      "temporal_basis": "calendar_month",
+      "evidence_types": [
+        "secondary"
+      ]
+    },
+    "mu.contract.bok_dram_price": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "accounting_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "entity": "industry",
+      "measurement": "contract",
+      "unit": "index",
+      "scope": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+      "temporal_basis": "calendar_month",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.supply.korea_ic_shipment": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "accounting_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "entity": "industry",
+      "measurement": "supply",
+      "unit": "index",
+      "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者出货指数（KSIC 26，季节调整，2020=100）",
+      "temporal_basis": "calendar_month",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.supply.korea_ic_inventory": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "accounting_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "entity": "industry",
+      "measurement": "supply",
+      "unit": "index",
+      "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者库存指数（KSIC 26，季节调整，2020=100）",
+      "temporal_basis": "calendar_month",
+      "evidence_types": [
+        "direct"
+      ]
     }
   },
   "source_roles": {
@@ -3608,7 +3688,8 @@
     ],
     "korea_trade": [
       "mu.demand.korea_semi_exports",
-      "mu.demand.korea_memory_exports"
+      "mu.demand.korea_memory_exports",
+      "mu.contract.ddr5_contract"
     ],
     "eco_samsung_balance": [
       "eco.samsung.inventory"
@@ -3645,14 +3726,44 @@
       "mu.orders.agreements",
       "mu.orders.rpo_post_quarter",
       "mu.orders.deposits_forecast"
+    ],
+    "dram_contract": [
+      "mu.contract.ddr4_contract"
+    ],
+    "bok_export_price": [
+      "mu.contract.bok_dram_price"
+    ],
+    "kostat_shipment": [
+      "mu.supply.korea_ic_shipment"
+    ],
+    "kostat_inventory": [
+      "mu.supply.korea_ic_inventory"
     ]
   },
   "series": {
     "description": "Micron quarterly metrics kept as past-quarter points for trend lines; the live quarter stays in its metric row.",
-    "metrics": ["mu.revenue.total", "mu.revenue.dram", "mu.margin.nongaap", "mu.inventory.days", "mu.capex.net"],
+    "metrics": [
+      "mu.revenue.total",
+      "mu.revenue.dram",
+      "mu.margin.nongaap",
+      "mu.inventory.days",
+      "mu.capex.net"
+    ],
     "observations": {
       "description": "Industry readings kept as dated points (as_of YYYY-MM-DD, or YYYY-MM for monthly data); the latest reading stays in its row and the one it replaces becomes a point.",
-      "metrics": ["mu.contract.ddr4_spot", "mu.contract.ddr5_spot", "mu.contract.tlc_spot", "mu.demand.nanya_revenue", "mu.demand.korea_semi_exports", "mu.demand.korea_memory_exports"]
+      "metrics": [
+        "mu.contract.ddr4_spot",
+        "mu.contract.ddr5_spot",
+        "mu.contract.tlc_spot",
+        "mu.demand.nanya_revenue",
+        "mu.demand.korea_semi_exports",
+        "mu.demand.korea_memory_exports",
+        "mu.contract.ddr4_contract",
+        "mu.contract.ddr5_contract",
+        "mu.contract.bok_dram_price",
+        "mu.supply.korea_ic_shipment",
+        "mu.supply.korea_ic_inventory"
+      ]
     }
   },
   "calculations": [
@@ -3919,7 +4030,8 @@
         "entry_urls": [
           "https://www.trendforce.com/presscenter/",
           "https://insights.trendforce.com/",
-          "https://www.dramexchange.com/"
+          "https://www.dramexchange.com/",
+          "https://ecos.bok.or.kr/"
         ]
       },
       "news": {
@@ -4038,6 +4150,21 @@
         "entry_url": "https://www.motie.go.kr/",
         "period_basis": "calendar_month",
         "note": "MOTIE monthly export release (semiconductor total and memory). Korea Customs 1st–20th preliminary data is a separate partial-month observation."
+      },
+      "bok_export_price": {
+        "entry_url": "https://ecos.bok.or.kr/",
+        "period_basis": "calendar_month",
+        "note": "Bank of Korea export price index by item (402Y016), DRAM, USD basis, published mid-month for the prior month. An official price observation that moves with Micron's margin; used to grade cycle reads."
+      },
+      "kostat_industry": {
+        "entry_url": "https://ecos.bok.or.kr/",
+        "period_basis": "calendar_month",
+        "note": "Statistics Korea producer shipment and inventory indices for KSIC 26 (ECOS 901Y032), seasonally adjusted, published about 30 days after the month. One source per index (kostat_shipment, kostat_inventory); the page divides inventory by shipment."
+      },
+      "dram_contract": {
+        "entry_url": "https://www.dramexchange.com/",
+        "period_basis": "calendar_month",
+        "note": "DRAMeXchange DRAM contract price table (DDR4 8Gb 1Gx8 average). Pair with the same-spec spot row; never mix with module prices."
       }
     }
   },

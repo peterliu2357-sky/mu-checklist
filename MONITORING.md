@@ -22,6 +22,7 @@
 - `summary` 是一句话结论（不超过 120 字）；`sections[].points[]` 是完整分析，默认折叠。
 - 只能依据本站已发布的数据。每条 point 的 `refs` 必须引用站内指标：`mu.<指标>.<行>`、`guidance.<id>`、`eco.<公司>.<行>`、`outlook.<公司>.<行>` 或 `series.<指标>@FY2026 Q3`。可用 ID 及当前值由 `npm run monitor -- outlook-context` 列出。
 - 正文不写数字。数字一律用 `{{ref}}`、`{{ref|previous}}` 或 `{{ref|change}}` 插入，页面按站内数据显示；仅允许财季、年份和产品型号（FY2026 Q4、2027 年、HBM4、DDR5）。
+- `cycle_read` 是 周期 页顶部的「Agent 周期判断」：一句话（不超过 80 字），规则同上，另有 `call`；见下文「周期判断」。
 - 写完后运行 `npm run monitor -- outlook-stamp`：记录所引用的数值、数据版本与生成时间。之后任何被引用数值或财季变化，`npm run verify` 会报 `OUTLOOK_STALE`，必须重读并改写后再次 stamp。不能只重新 stamp 而不重读分析。
 - 每次周日、周三例行核查（以及财报更新）在 apply 之后、提交之前刷新分析：先看 `outlook-context`，检查结论、转折信号与「什么会改变判断」是否仍成立；需要时改写 stance 与正文，然后 stamp，并与数据发布放在同一提交。数据未变时也重读，确认后重新 stamp 以更新生成日期。
 - 只改分析不算数据核查，不推进任何核查日期。
@@ -155,7 +156,7 @@ schema_version 仍为 2，新增必填 `ecosystem`；已有美光指标与财季
 
 新增验证：`validateEcosystem`、币种/单位换算、同比分母、亏损及零基数、百分点、引用完整性、分组与公司深链接、指引展开、320/390 px 无横向溢出。既有美光三季指引对照须继续有效。
 
-## 周期指标（已登记，待首次取数）
+## 周期指标
 
 以下定义已在 `pipeline/catalog.json` 登记为 `required:false`，取得首次经核实的读数后再加入候选行；没有行时不影响现有覆盖要求。网站 周期 页从这些记录读取，不另存一份数字。
 
@@ -165,7 +166,31 @@ schema_version 仍为 2，新增必填 `ecosystem`；已有美光指标与财季
 - `eco.skhynix.inventory` / `eco.skhynix.capex`：SK 海力士期末存货与现金资本开支（购置有形资产），取自季度财务报表或 IR 资料；新闻稿没有披露时保留缺口。来源 ID `eco_skhynix_statements`。
 - `eco.samsung.inventory`：三星集团合并期末存货。不能改标为存储部门存货。来源 ID `eco_samsung_balance`。
 
+- `mu.contract.ddr4_contract`：DRAMeXchange 合同价表 DDR4 8Gb (1Gx8) 的 Average（美元，`as_of` 为合同价所属月份 `YYYY-MM`）。来源 ID `dram_contract`。只取芯片合同价，不用模组（SO-DIMM）价。
+- `mu.contract.ddr5_contract`：产业通商部月度出口发布中所列 DDR5 16Gb 固定价格（美元，`as_of` 为月份）。原文未注明出处，标 `secondary`（转引）。来源 ID `korea_trade`，与出口额同一份发布。
+- `mu.contract.bok_dram_price`：韩国央行出口价格指数（品目别，ECOS 402Y016）DRAM 项，美元基准（2020=100），单位 `index`。来源 ID `bok_export_price`。回测显示它与美光毛利率同步而非领先，用作价格基准和周期判断的评分依据。
+- `mu.supply.korea_ic_shipment` / `mu.supply.korea_ic_inventory`：统计厅生产者出货指数与库存指数（ECOS 901Y032，KSIC 26 电子零件、计算机、影像音响及通信设备制造业，季节调整，2020=100）。来源 ID 分别为 `kostat_shipment`、`kostat_inventory`。回测用原指数的同比；页面趋势用季节调整值。两行 `as_of` 必须相同；页面计算 库存 ÷ 出货，不另存比值。半导体单独的指数在 KOSIS，需要 API 密钥，目前未接入。
+- 现货较合同价：页面用同规格的最新现货行与合同价行计算（现货 ÷ 合同价 − 1），不存储；两者日期不同，卡片同时显示两个日期。
+
 产业链公司的存货沿用该部分同比口径（本期末 vs 上年同期末）。月度指标保留自然月期间，不与季度合计混用。
+
+## 周期信号（回测）
+
+周期 页的「周期信号」只放通过领先性回测的行，名单在 `lib/monitor-core.js` 的 `cycleSignalRefs`，方法与结果见 `docs/CYCLE-BACKTEST.md`：
+
+- 标准：不借后见之明的预警规则下，在 2018、2022 年两次美光毛利率见顶前至少一个季度（3 个月，按公布日计）已经转弱；两种重新触发规则下都要成立。
+- 2026-10-22 结果：韩国半导体出口额、美光库存天数入选。韩国存储芯片出口额在较严规则下 2022 年只领先约 2 个月，留在卡片。其余行缺少可回测历史或没有领先，只留在各自卡片，不删除记录。
+- 新增候选指标或每年一次，用 `research/cycle-backtest/` 重新回测，再改名单；不要凭印象加入信号行。
+
+## 周期判断
+
+`data/outlook.json` 的 `cycle_read` 是一句带日期的周期判断，显示在 周期 页顶部；`cycle_log` 是历次判断的记录。
+
+- `call` 只能是 `rising`（上行）、`slowing`（上行放缓）、`peaking`（见顶迹象）、`falling`（下行）、`bottoming`（见底迹象），说的是 DRAM 价格周期的方向，不是股票判断。
+- 每次周日、周三例行核查与 Agent 分析一起重读并改写；优先引用通过回测的信号（韩国半导体出口额、美光库存天数），价格以 DRAM 合同价、韩国央行 DRAM 出口价格指数为准。
+- `outlook-stamp` 自动把当天的判断追加到 `cycle_log`（同一天再次 stamp 只替换当天这一条），并冻结当时显示的数值。不要手改已记录的判断；`verify --base` 拒绝改动或删除旧记录、拒绝去掉已填评分（只允许补填评分，以及在没有新记录时替换同一天的最后一条）。
+- 页面只显示最近 20 条记录；更早的记录留在 `cycle_log` 里。要停用周期判断，删除 `cycle_read` 即可，`cycle_log` 保留作为记录。
+- 评分：判断的目标是作出判断后美光下一次公布的财季。该财季财报发布后，在对应记录填 `grade: {result: "hit"|"miss", graded_at: "YYYY-MM-DD", basis: "…"}`：上行、上行放缓——美光 DRAM 售价环比上升为应验；见顶迹象、下行——售价持平或下降、或下一财季下降为应验；见底迹象——之后两个财季内售价回升为应验。`basis` 写明所用的美光财报与韩国央行 DRAM 出口价格指数同期的变化方向；与其他判断文字一样不写数字（财季名称除外）。页面显示已评分条数与应验条数。
 
 ## 周期趋势点
 
@@ -174,5 +199,6 @@ schema_version 仍为 2，新增必填 `ecosystem`；已有美光指标与财季
 - 更新这些行时必须填 `as_of`：报价日（`YYYY-MM-DD`）或统计月份（`YYYY-MM`），即数字所描述的日期，不是发布日或核查日。缺 `as_of` 的新读数无法 build。
 - 行的记录身份包含卡片的 `period` 文字：改动卡片 period 会让同卡所有趋势行变成新记录，这些行也都要有 `as_of` 并重新取证。
 - 新读数的 `as_of` 不能早于旧行，也不能换日期格式。新读数的 `as_of` 晚于旧行时，旧行自动成为一个趋势点，无需另录；同一 `as_of` 的更正只替换行，不新增点。所以每次周日/周三更新只需照常更新行。
+- `catalog.series.observations` 还包括 DDR4/DDR5 合同价、韩国央行 DRAM 出口价格指数和 KSIC 26 出货/库存指数，规则相同；ECOS 一次查询最多返回 10 个月，补录时按月份区间分次抓取。
 - 同一指标前后口径一致：DDR4 1Gx8 3200 与 512Gb TLC 取 TrendForce 每周现货报告（Memory Spot Price Update）中的周均价与其注明日期；DDR5 取 DRAMeXchange 现货表 Session Average 与表头日期；南亚科取官方月营收表；韩国出口取产业通商部月度发布的整月值。不在同一条线上混用日价与周均价；换来源须是同一规格、同一类价格。
 - 补录缺失的较早读数：在 run 的 `history.json` 写 `{指标: {"2026-09-22": {sources:[{id,url,published_at}], payload}}}`，`payload.as_of` 与键相同，在 `industry` 范围 run 中逐份抓取原文并 `evidence-draft --metric 指标 --period 2026-09-22`。趋势点只能追加，日期须早于行内最新读数。

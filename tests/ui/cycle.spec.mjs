@@ -8,7 +8,8 @@ for(const width of [320,390,860])test(`cycle tab signals and sections at ${width
   await page.goto('/#cycle');
   await expect(page.locator('#panel-industry')).toBeVisible();
   await expect(page.locator('.nav [data-panel="industry"]')).toHaveText('周期');
-  await expect(page.locator('.cycle-signal')).toHaveCount(8);
+  await expect(page.locator('.cycle-signal')).toHaveCount(2);
+  await expect(page.locator('.cycle-signal .signal-lead').first()).toContainText('回测');
   for(const id of ['price','supply','demand'])await expect(page.locator(`#cycle-${id}`)).toBeAttached();
   await expect(page.locator('#cycle-demand .group-total')).toContainText('本页计算');
   await expect(page.locator('#panel-ecosystem .group-total')).toHaveCount(0);
@@ -36,7 +37,7 @@ test('signal cards draw past quarters plus the live quarter as a trend line',asy
   await expect(page.locator('.cycle-signal[data-metric="margin"] .sparkline')).toHaveCount(0);
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
 });
-test('dated industry readings draw a trend on the signal card and the 周期 card row',async({page})=>{
+test('dated industry readings draw a trend on their 周期 card rows',async({page})=>{
   const d=structuredClone(data),contract=d.metrics.find(m=>m.id==='contract'),spot=contract.rows.find(r=>r.id==='ddr4_spot'),tlc=contract.rows.find(r=>r.id==='tlc_spot');
   spot.current=46.32;spot.as_of='2026-10-06';tlc.as_of='2026-10-05';
   // Synthetic past readings for layout only.
@@ -45,11 +46,40 @@ test('dated industry readings draw a trend on the signal card and the 周期 car
   await page.setViewportSize({width:320,height:900});
   await page.route('**/data/monitor.json?*',r=>r.fulfill({json:d}));
   await page.goto('/#cycle');
-  const signal=page.locator('.cycle-signal[data-metric="contract"]').first();
-  await expect(signal.locator('.sparkline circle.dot')).toHaveCount(3);
-  await expect(signal.locator('.sparkline figcaption')).toHaveText('09-2210-06');
+  const spotRow=page.locator('#contract .ledger-row').filter({hasText:spot.label});
+  await expect(spotRow.locator('.sparkline circle.dot')).toHaveCount(3);
+  await expect(spotRow.locator('.sparkline figcaption')).toHaveText('09-2210-06');
   const row=page.locator('#contract .ledger-row').filter({hasText:tlc.label});
   await expect(row.locator('.sparkline circle.dot')).toHaveCount(3);
   await expect(page.locator('#contract .ledger-row').filter({hasText:'普通型 DRAM 合同价环比'}).locator('.sparkline')).toHaveCount(0);
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+});
+test('the cycle read, spot premium and inventory ratio render from stored rows',async({page})=>{
+  const d=structuredClone(data),contract=d.metrics.find(m=>m.id==='contract'),supply=d.metrics.find(m=>m.id==='supply');
+  // Synthetic rows for layout only.
+  const add=(rows,id,label,current,unit,as_of)=>rows.push({id,label,current,previous:null,unit,source_ids:rows[0].source_ids,kind:'行业报价',evidence_type:'direct',period:as_of,location:'x',note:'',as_of});
+  add(contract.rows,'ddr4_contract','DDR4 8Gb (1Gx8) 合同价',25,'USD','2026-08');
+  add(supply.rows,'korea_ic_inventory','库存指数',118.7,'index','2026-08');
+  add(supply.rows,'korea_ic_shipment','出货指数',138.2,'index','2026-08');
+  const pts=list=>list.map(([as_of,value])=>({as_of,value,unit:'index',sources:[{id:'x',url:'https://example.com/',published_at:as_of}],record_id:'a'.repeat(64)}));
+  d.series={...d.series,'mu.supply.korea_ic_inventory':pts([['2026-06',97.6],['2026-07',120.1]]),'mu.supply.korea_ic_shipment':pts([['2026-06',148],['2026-07',117.8]])};
+  const outlook=JSON.parse(fs.readFileSync(new URL('../../data/outlook.json',import.meta.url)));
+  const {stampOutlook}=await import('../../pipeline/outlook.mjs');
+  const stamped=stampOutlook({...outlook,cycle_read:{call:'rising',text:'库存天数 {{mu.inventory.days}}，尚未出现回测中的见顶信号。',refs:['mu.inventory.days']}},d,'2026-10-22T01:00:00Z');
+  await page.setViewportSize({width:320,height:900});
+  await page.route('**/data/monitor.json?*',r=>r.fulfill({json:d}));
+  await page.route('**/data/outlook.json?*',r=>r.fulfill({json:stamped}));
+  await page.goto('/#cycle');
+  const read=page.locator('#cycle-read');
+  await expect(read.locator('.cr-head .cr-call')).toHaveText('上行');
+  await expect(read.locator('.cr-line')).toContainText('129 天');
+  await read.locator('.cr-log summary').click();
+  await expect(read.locator('.cr-log li')).toHaveCount(1);
+  await expect(read.locator('.cr-log li .cr-grade')).toHaveText('待评分');
+  await expect(page.locator('#cycle-price .spot-premium .premium-row')).toHaveCount(1);
+  await expect(page.locator('#cycle-price .spot-premium .premium-value')).toHaveText('+85.4%');
+  const ratio=page.locator('#cycle-supply .inventory-ratio');
+  await expect(ratio.locator('.current')).toHaveText('0.86');
+  await expect(ratio.locator('.sparkline circle.dot')).toHaveCount(3);
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
 });

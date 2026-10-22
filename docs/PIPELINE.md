@@ -105,7 +105,7 @@ Industry readings listed in `catalog.series.observations` (spot prices, Nanya mo
 
 ## Agent analysis
 
-`data/outlook.json` holds the 总览 agent analysis. It is not part of the ledger and has no evidence of its own: every point cites site records by id, and numbers appear only as `{{ref}}` tokens. `npm run monitor -- outlook-context` lists citable ids; `npm run monitor -- outlook-stamp` snapshots the cited values. `npm run verify` and the site build (`npm run build`) reject an analysis whose citations do not resolve, whose cited values or financial period changed since the stamp, or whose prose contains its own numbers or trading language. Refresh it in every routine run before committing the release; rules are in `MONITORING.md` ("Agent 分析").
+`data/outlook.json` holds the 总览 agent analysis. It is not part of the ledger and has no evidence of its own: every point cites site records by id, and numbers appear only as `{{ref}}` tokens. `npm run monitor -- outlook-context` lists citable ids; `npm run monitor -- outlook-stamp` snapshots the cited values. `npm run verify` and the site build (`npm run build`) reject an analysis whose citations do not resolve, whose cited values or financial period changed since the stamp, or whose prose contains its own numbers or trading language. The optional `cycle_read` (the dated one-line read on 周期) follows the same rules; each stamp appends it to `cycle_log` with the values shown that day, one entry per day, so later quarters can grade it. Refresh it in every routine run before committing the release; rules are in `MONITORING.md` ("Agent 分析", "周期判断").
 
 ## UI-only work
 
