@@ -264,8 +264,8 @@
       ]
     }
   ],
-  "generated_at": "2026-10-22T00:38:50.671Z",
-  "data_revision": "2026-10-22-c39621f770",
+  "generated_at": "2026-10-22T18:17:33.145Z",
+  "data_revision": "2026-10-22-2b898566d3",
   "financial_period": "FY2026 Q4",
   "cited": {
     "mu.revenue.total": {
@@ -295,6 +295,16 @@
     "mu.inventory.days": {
       "current": 129,
       "previous": null
+    },
+    "mu.demand.korea_semi_exports": {
+      "current": 60295,
+      "previous": 16621,
+      "change": "同比 +262.8%（官方披露）"
+    },
+    "mu.contract.bok_dram_price": {
+      "current": 289.16,
+      "previous": 282.77,
+      "change": "+2.3%"
     },
     "series.mu.revenue.total@FY2025 Q4": {
       "current": 11315,
@@ -489,11 +499,6 @@
       "previous": 11790,
       "change": "同比 +358.6%（官方披露）"
     },
-    "mu.demand.korea_semi_exports": {
-      "current": 60295,
-      "previous": 16621,
-      "change": "同比 +262.8%（官方披露）"
-    },
     "mu.demand.nanya_revenue": {
       "current": 44.690268,
       "previous": 43.867609,
@@ -683,5 +688,25 @@
         "1,250–1,450 亿美元"
       ]
     }
-  }
+  },
+  "cycle_read": {
+    "call": "rising",
+    "text": "半导体出口{{mu.demand.korea_semi_exports|change}}，DRAM 价格指数仍升，回测信号未发预警。",
+    "refs": [
+      "mu.demand.korea_semi_exports",
+      "mu.contract.bok_dram_price",
+      "mu.inventory.days"
+    ]
+  },
+  "cycle_log": [
+    {
+      "at": "2026-10-22",
+      "call": "rising",
+      "text": "半导体出口{{mu.demand.korea_semi_exports|change}}，DRAM 价格指数仍升，回测信号未发预警。",
+      "values": {
+        "mu.demand.korea_semi_exports|change": "同比 +262.8%（官方披露）"
+      },
+      "grade": null
+    }
+  ]
 }

@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "scope": "industry",
+  "base_commit": "ed76fabe51bd6a5db03c31fbc35fd12d4900d0fe",
+  "base_revision": "2026-10-22-75830b9c02",
+  "base_sha256": "985fcf8674acf951f6d20c92a8968dbd181e8cf89e327e5fa2fb92bf328d30af",
+  "catalog_sha256": "853cd79d16f56ef0779e74920aa46499d7156f7ec4eacc5f7f1563f34d07c736",
+  "created_at": "2026-10-22T18:16:31.212Z",
+  "completed_at": "2026-10-22T18:17:03.110Z",
+  "state": "verified",
+  "targets": null,
+  "coverage": [
+    {
+      "key": "industry",
+      "status": "pending",
+      "evidence": [
+        "bok_export_price",
+        "kostat_shipment",
+        "kostat_inventory",
+        "dram_contract",
+        "korea_trade"
+      ],
+      "reviewed_at": "2026-10-22T18:16:34.166Z",
+      "latest_disclosure": {
+        "url": "https://ecos.bok.or.kr/",
+        "published_at": "2026-10-22"
+      },
+      "reason": "新增周期指标首次取数（合同价、韩国央行 DRAM 出口价格指数、电子零件业出货与库存指数）并复核韩国存储出口；其余行业资料 10-21 已核查，留待周日例行核查。"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "bok_export_price",
+      "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202512/202609/30911201AA/D",
+      "sha256": "37ca1bfe716a7ee18789b7a9043c4bf5d6884e97a587d532c5feb5aa641ba0b0",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-22T18:16:31.661Z",
+      "reviewed_at": "2026-10-22T18:16:31.661Z",
+      "status": "read"
+    },
+    {
+      "source_id": "bok_export_price_2025",
+      "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202506/202511/30911201AA/D",
+      "sha256": "a0231391e226bb76890355c14d6427806ba60ada8edddb30be97b1b6bcd09763",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-22T18:16:31.997Z",
+      "reviewed_at": "2026-10-22T18:16:31.997Z",
+      "status": "read"
+    },
+    {
+      "source_id": "kostat_shipment",
+      "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/4",
+      "sha256": "d8aed241a9bda8e032f06496275152f4cdf397c411b11c1ce05dc5349efebd9b",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-22T18:16:32.375Z",
+      "reviewed_at": "2026-10-22T18:16:32.375Z",
+      "status": "read"
+    },
+    {
+      "source_id": "kostat_shipment_2025",
+      "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202505/202510/I11ACQ/4",
+      "sha256": "7c4dbdc7b9f70a76a83f99c1f52e62a5577a9176f1191315e89669820699775e",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-22T18:16:32.748Z",
+      "reviewed_at": "2026-10-22T18:16:32.748Z",
+      "status": "read"
+    },
+    {
+      "source_id": "kostat_inventory",
+      "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/6",
+      "sha256": "edbcf3672ee6ee84388deaf881da5dfdc8a247a9061eaccb03c6adf1f83251fa",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-22T18:16:33.133Z",
+      "reviewed_at": "2026-10-22T18:16:33.133Z",
+      "status": "read"
+    },
+    {
+      "source_id": "kostat_inventory_2025",
+      "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202505/202510/I11ACQ/6",
+      "sha256": "d65ba842f803ef913074603ab85a65c67fe21012ba86763b1470c637ac11e499",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-22T18:16:33.472Z",
+      "reviewed_at": "2026-10-22T18:16:33.472Z",
+      "status": "read"
+    },
+    {
+      "source_id": "dram_contract",
+      "url": "https://www.dramexchange.com/Home/HomePrice?Source=NationalDramContract",
+      "sha256": "29c77bccc31ba3a52f6cc14e783e7a2dbb5b11a8d16d254514ec0ef6212744bf",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-22T18:16:33.828Z",
+      "reviewed_at": "2026-10-22T18:16:33.828Z",
+      "status": "read"
+    },
+    {
+      "source_id": "korea_trade",
+      "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172254/view",
+      "sha256": "5a1dd78c9a0fc084b1d750b539edf9fe39e1f0f37ff887e2275458c408e29177",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-10-22T18:16:34.166Z",
+      "reviewed_at": "2026-10-22T18:16:34.166Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [],
+  "publication_corrections": [],
+  "technology_reviews": [],
+  "result": "failed",
+  "artifact_sha256": "ce5698eca81c7040f38f40124322f26fb205c0c033748d37648b995d1f81587f",
+  "ledger_sha256": "e8101f62f8bed296893f09362dd84049860f118e1cf56d8975412f2a91dd742d",
+  "evidence_sha256": "c8eb6e038a889ceea23ba53fcf2b185160f1d6e09d95ebdb31ae1c9c9519585f"
+}

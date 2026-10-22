@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "revision": "2026-10-22-75830b9c02",
-  "updated_at": "2026-10-22T06:32:28.635Z",
+  "revision": "2026-10-22-2b898566d3",
+  "updated_at": "2026-10-22T18:17:03.110Z",
   "last_successful_check_at": "2026-09-20T23:50:00Z",
   "last_attempt_at": "2026-09-20T23:50:00Z",
   "financial_period": "FY2026 Q4",
@@ -1200,7 +1200,7 @@
       "short_label": "10-01 · 韩国 9 月出口",
       "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172254/view",
       "published_at": "2026-10-01",
-      "checked_at": "2026-10-07",
+      "checked_at": "2026-10-22",
       "type": "政府官方统计发布",
       "locator": "附件 PDF 第 11 页「20대 주요 수출 품목」表（반도체）；第 12 页품목별 상세（메모리/시스템 반도체 수출액）。"
     },
@@ -1743,6 +1743,42 @@
       "checked_at": "2026-10-22",
       "type": "行业媒体转引",
       "locator": "首段：according to Commercial Times, institutional investors … contract prices are expected to rise about 20% quarter-on-quarter"
+    },
+    "bok_export_price": {
+      "label": "韩国央行 ECOS 出口价格指数（品目别）· DRAM",
+      "short_label": "韩国央行 · DRAM 出口价格指数",
+      "type": "官方统计数据接口",
+      "published_at": null,
+      "locator": "ECOS 统计表 402Y016「수출물가지수(품목별)」· 品目 DRAM（30911201AA）· 달러기준 · 2025-12 至 2026-09 月度值（ECOS 公开示例接口，每次最多 10 个月）。",
+      "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202512/202609/30911201AA/D",
+      "checked_at": "2026-10-22"
+    },
+    "kostat_shipment": {
+      "label": "统计厅 生产者出货指数 · KSIC 26（经韩国央行 ECOS）",
+      "short_label": "统计厅 · 电子零件业出货指数",
+      "type": "官方统计数据接口",
+      "published_at": null,
+      "locator": "ECOS 统计表 901Y032「산업별 생산/출하/재고 지수」· 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업（I11ACQ）· 출하지수(계절조정) · 2025-11 至 2026-08。",
+      "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/4",
+      "checked_at": "2026-10-22"
+    },
+    "kostat_inventory": {
+      "label": "统计厅 生产者库存指数 · KSIC 26（经韩国央行 ECOS）",
+      "short_label": "统计厅 · 电子零件业库存指数",
+      "type": "官方统计数据接口",
+      "published_at": null,
+      "locator": "ECOS 统计表 901Y032「산업별 생산/출하/재고 지수」· 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업（I11ACQ）· 재고지수(계절조정) · 2025-11 至 2026-08。",
+      "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/6",
+      "checked_at": "2026-10-22"
+    },
+    "dram_contract": {
+      "label": "DRAMeXchange DRAM 合同价表",
+      "short_label": "DRAMeXchange · DRAM 合同价",
+      "type": "行业报价",
+      "published_at": "2026-08-31",
+      "locator": "DRAMeXchange 首页「DRAM Contract Price」表的数据（NationalDramContract）· DDR4 8Gb 1Gx8 · Average，日期 2026-08-31。",
+      "url": "https://www.dramexchange.com/Home/HomePrice?Source=NationalDramContract",
+      "checked_at": "2026-10-22"
     }
   },
   "metrics": [
@@ -2725,6 +2761,108 @@
       "category": "industry",
       "rows": [
         {
+          "label": "DDR4 1Gx8 3200 现货",
+          "current": 46.357,
+          "previous": null,
+          "unit": "USD",
+          "source_ids": [
+            "spot"
+          ],
+          "kind": "行业报价",
+          "note": "TrendForce 每周现货报告的周均价；趋势线各点同一口径。周变动为 TrendForce 相对其上周报告的报告值，上周读数本站未收录。",
+          "period": "截至 10-20",
+          "change": "周变动 +0.84%（报告值）",
+          "location": "TrendForce 10-21 现货周报 · DRAM Spot Price。",
+          "evidence_type": "direct",
+          "id": "ddr4_spot",
+          "as_of": "2026-10-20"
+        },
+        {
+          "label": "DDR4 8Gb (1Gx8) 合同价",
+          "current": 25,
+          "previous": null,
+          "unit": "USD",
+          "source_ids": [
+            "dram_contract"
+          ],
+          "kind": "行业报价",
+          "note": "合同价月均价，与 DDR4 1Gx8 现货同规格芯片；不含模组价。",
+          "period": "2026 年 8 月",
+          "change": "较上期 +4.17%（DRAMeXchange 披露）",
+          "location": "DRAMeXchange · DRAM Contract Price · DDR4 8Gb 1Gx8 · Average 25.00（High 34.50 / Low 22.50），日期 2026-08-31。",
+          "evidence_type": "direct",
+          "id": "ddr4_contract",
+          "as_of": "2026-08"
+        },
+        {
+          "label": "DDR5 16Gb (2Gx8) 4800/5600 现货",
+          "current": 60.867,
+          "previous": null,
+          "unit": "USD",
+          "source_ids": [
+            "dram_spot"
+          ],
+          "kind": "行业报价",
+          "note": "与 DDR4 1Gx8 现货是不同规格，不互相替代。",
+          "period": "截至 10-21",
+          "change": "日变动 +0.28%（DRAMeXchange 披露）",
+          "location": "DRAMeXchange · DRAM Spot Price · DDR5 16Gb (2Gx8) 4800/5600 · Session Average，Last Update Oct.21 2026 18:10 (GMT+8)。",
+          "evidence_type": "direct",
+          "id": "ddr5_spot",
+          "as_of": "2026-10-21"
+        },
+        {
+          "label": "DDR5 16Gb 合同价（固定价格）",
+          "current": 48,
+          "previous": 46.5,
+          "unit": "USD",
+          "source_ids": [
+            "korea_trade"
+          ],
+          "kind": "转引",
+          "note": "产业通商部出口发布所列月度固定价格，原文未注明出处；与 DDR5 16Gb 现货同规格容量，速度等级未注明。",
+          "period": "2026 年 9 月 vs 8 月",
+          "change": null,
+          "location": "产业通商部 9 月进出口动向 · 附件 PDF 第 1 页注释「메모리 고정가격 추이」(DDR5 16Gb, ‘26.5월→9월) · 2026 年 9 月。",
+          "evidence_type": "secondary",
+          "id": "ddr5_contract",
+          "as_of": "2026-09"
+        },
+        {
+          "label": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+          "current": 289.16,
+          "previous": 282.77,
+          "unit": "index",
+          "source_ids": [
+            "bok_export_price"
+          ],
+          "kind": "官方统计",
+          "note": "韩国出口 DRAM 的合同价格变动（美元计价），比现货平稳；回测中与美光毛利率同步，用作价格基准。",
+          "period": "2026 年 9 月 vs 8 月",
+          "change": null,
+          "location": "韩国央行 ECOS · 4.3.1.3 수출물가지수(품목별) · DRAM · 달러기준 · 2026 年 9 月。",
+          "evidence_type": "direct",
+          "id": "bok_dram_price",
+          "as_of": "2026-09"
+        },
+        {
+          "label": "512Gb TLC 现货",
+          "current": 18.592,
+          "previous": null,
+          "unit": "USD",
+          "source_ids": [
+            "spot"
+          ],
+          "kind": "行业报价",
+          "note": "",
+          "period": "截至 10-19",
+          "change": "周变动 −1.28%（报告值）",
+          "location": "TrendForce 10-21 现货周报 · NAND Flash Spot Price。",
+          "evidence_type": "direct",
+          "id": "tlc_spot",
+          "as_of": "2026-10-19"
+        },
+        {
           "label": "普通型 DRAM 合同价环比",
           "current": "+10% 至 +15%",
           "previous": null,
@@ -2771,57 +2909,6 @@
           "location": "Summary · contract price trends。",
           "evidence_type": "direct",
           "id": "nand_trend"
-        },
-        {
-          "label": "DDR4 1Gx8 3200 现货",
-          "current": 46.357,
-          "previous": null,
-          "unit": "USD",
-          "source_ids": [
-            "spot"
-          ],
-          "kind": "行业报价",
-          "note": "TrendForce 每周现货报告的周均价；趋势线各点同一口径。周变动为 TrendForce 相对其上周报告的报告值，上周读数本站未收录。",
-          "period": "截至 10-20",
-          "change": "周变动 +0.84%（报告值）",
-          "location": "TrendForce 10-21 现货周报 · DRAM Spot Price。",
-          "evidence_type": "direct",
-          "id": "ddr4_spot",
-          "as_of": "2026-10-20"
-        },
-        {
-          "label": "DDR5 16Gb (2Gx8) 4800/5600 现货",
-          "current": 60.867,
-          "previous": null,
-          "unit": "USD",
-          "source_ids": [
-            "dram_spot"
-          ],
-          "kind": "行业报价",
-          "note": "与 DDR4 1Gx8 现货是不同规格，不互相替代。",
-          "period": "截至 10-21",
-          "change": "日变动 +0.28%（DRAMeXchange 披露）",
-          "location": "DRAMeXchange · DRAM Spot Price · DDR5 16Gb (2Gx8) 4800/5600 · Session Average，Last Update Oct.21 2026 18:10 (GMT+8)。",
-          "evidence_type": "direct",
-          "id": "ddr5_spot",
-          "as_of": "2026-10-21"
-        },
-        {
-          "label": "512Gb TLC 现货",
-          "current": 18.592,
-          "previous": null,
-          "unit": "USD",
-          "source_ids": [
-            "spot"
-          ],
-          "kind": "行业报价",
-          "note": "",
-          "period": "截至 10-19",
-          "change": "周变动 −1.28%（报告值）",
-          "location": "TrendForce 10-21 现货周报 · NAND Flash Spot Price。",
-          "evidence_type": "direct",
-          "id": "tlc_spot",
-          "as_of": "2026-10-19"
         }
       ],
       "limits": [
@@ -2885,6 +2972,40 @@
           "location": "第 16 页 · Market outlook。",
           "evidence_type": "direct",
           "id": "micron_outlook"
+        },
+        {
+          "label": "韩国电子零件业出货指数（KSIC 26，季调）",
+          "current": 135.1,
+          "previous": 129.7,
+          "unit": "index",
+          "source_ids": [
+            "kostat_shipment"
+          ],
+          "kind": "官方统计",
+          "note": "统计厅生产者出货指数，季节调整，2020=100；KSIC 26 含半导体、显示与通信设备，半导体占比最大。",
+          "period": "2026 年 8 月 vs 7 月",
+          "change": null,
+          "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 출하지수(계절조정) · 2026 年 8 月。",
+          "evidence_type": "direct",
+          "id": "korea_ic_shipment",
+          "as_of": "2026-08"
+        },
+        {
+          "label": "韩国电子零件业库存指数（KSIC 26，季调）",
+          "current": 112.8,
+          "previous": 115.2,
+          "unit": "index",
+          "source_ids": [
+            "kostat_inventory"
+          ],
+          "kind": "官方统计",
+          "note": "统计厅生产者库存指数，季节调整，2020=100；与出货指数同口径，页面以两者之比观察库存累积。",
+          "period": "2026 年 8 月 vs 7 月",
+          "change": null,
+          "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 재고지수(계절조정) · 2026 年 8 月。",
+          "evidence_type": "direct",
+          "id": "korea_ic_inventory",
+          "as_of": "2026-08"
         }
       ],
       "limits": [
@@ -3040,7 +3161,7 @@
             "korea_trade"
           ],
           "kind": "官方统计",
-          "note": "原文以亿美元列示（540.7 / 117.9）；整月值。受价格与数量共同影响。",
+          "note": "原文以亿美元列示（540.7 / 117.9）；整月值。受价格与数量共同影响。 约占同月半导体出口的九成：已核对原文，主要因存储价格大涨（同一发布列 DDR5 16Gb 固定价格同比 +687.5%）。",
           "period": "2026 年 9 月 vs 2025 年 9 月",
           "change": "同比 +358.6%（官方披露）",
           "location": "产业通商部 9 月进出口动向 · 附件 PDF 第 12 页· 메모리/시스템 반도체 수출액。",
@@ -3073,6 +3194,12 @@
     "产业链指引和管理层展望按原披露日期及目标期间记录，文字为中文摘要；同比由原始金额计算，百分点与百分比区分。"
   ],
   "check_log": [
+    {
+      "at": "2026-10-22T18:17:03.110Z",
+      "status": "failed",
+      "scope": "industry",
+      "text": "核查范围：industry；完成 0 / 1 项。"
+    },
     {
       "at": "2026-10-22T06:32:28.635Z",
       "status": "success",
@@ -10989,6 +11116,651 @@
           }
         ],
         "record_id": "2237f248fba62ec2917b5a32f54be9d0b132002ac55422fb7dc0c7e4fe061fbf"
+      }
+    ],
+    "mu.contract.bok_dram_price": [
+      {
+        "as_of": "2025-06",
+        "value": 74.72,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "bok_export_price_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202506/202511/30911201AA/D",
+            "published_at": null
+          }
+        ],
+        "record_id": "f4745d896b80abce92a617685ad131b5fc045387102ed85eaa5939aba4876a32"
+      },
+      {
+        "as_of": "2025-07",
+        "value": 80.81,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "bok_export_price_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202506/202511/30911201AA/D",
+            "published_at": null
+          }
+        ],
+        "record_id": "bcc475516df20769960881220faf31ca60947a82d598fd32f1c835946f27409f"
+      },
+      {
+        "as_of": "2025-08",
+        "value": 80.98,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "bok_export_price_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202506/202511/30911201AA/D",
+            "published_at": null
+          }
+        ],
+        "record_id": "4d0081610627032cf85801f04dc6a22790c619207334cc352e3c766b37b24801"
+      },
+      {
+        "as_of": "2025-09",
+        "value": 83.16,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "bok_export_price_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202506/202511/30911201AA/D",
+            "published_at": null
+          }
+        ],
+        "record_id": "0038f3a721f53c731ca4f52acea04e5068bc964f2228cc2a5e2ef929d6673a03"
+      },
+      {
+        "as_of": "2025-10",
+        "value": 97.3,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "bok_export_price_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202506/202511/30911201AA/D",
+            "published_at": null
+          }
+        ],
+        "record_id": "e8c3d7cc49d62ed750d2cc86be2300609de15c6aefe818b645224fe313d67e93"
+      },
+      {
+        "as_of": "2025-11",
+        "value": 109.03,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "bok_export_price_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202506/202511/30911201AA/D",
+            "published_at": null
+          }
+        ],
+        "record_id": "1c87dec1d4c3dd4aaa6b69bce5130845e89bcbe78cb11ad0e912a41f319e41cb"
+      },
+      {
+        "as_of": "2025-12",
+        "value": 111.22,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "bok_export_price",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202512/202609/30911201AA/D",
+            "published_at": null
+          }
+        ],
+        "record_id": "6c5bad421f6b3d75757a5a165c1948fec53ad0684749ba7bfe45e59c89ce63f0"
+      },
+      {
+        "as_of": "2026-01",
+        "value": 147.44,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "bok_export_price",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202512/202609/30911201AA/D",
+            "published_at": null
+          }
+        ],
+        "record_id": "58f8ad0e2c00af85f56df4c4cd34e238147ee480df3cbea266cb6f4417e5071d"
+      },
+      {
+        "as_of": "2026-02",
+        "value": 157.62,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "bok_export_price",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202512/202609/30911201AA/D",
+            "published_at": null
+          }
+        ],
+        "record_id": "aceeace10fff4c0c98edd1378dea46a5852abf9e2b6513b9bd67fbedb469dfa4"
+      },
+      {
+        "as_of": "2026-03",
+        "value": 187.19,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "bok_export_price",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202512/202609/30911201AA/D",
+            "published_at": null
+          }
+        ],
+        "record_id": "6a14f4ff211d2debfd26d9034efe4044e02f47264167ed62305c1b247e1863de"
+      },
+      {
+        "as_of": "2026-04",
+        "value": 233.82,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "bok_export_price",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202512/202609/30911201AA/D",
+            "published_at": null
+          }
+        ],
+        "record_id": "984bd229ddd393e44d81df8c8e14bf49feac17ed9f3a2becffd77ffb43616677"
+      },
+      {
+        "as_of": "2026-05",
+        "value": 251.21,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "bok_export_price",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202512/202609/30911201AA/D",
+            "published_at": null
+          }
+        ],
+        "record_id": "ff727bd4c369c31522f19f4176bc46c6ac4da41f15763282dadf5ba004738a50"
+      },
+      {
+        "as_of": "2026-06",
+        "value": 252.74,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "bok_export_price",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202512/202609/30911201AA/D",
+            "published_at": null
+          }
+        ],
+        "record_id": "3b0abd10c87a13c908c2b93cb4b13c3aaf6cedf5751296cbc3b01a462cb7a5b9"
+      },
+      {
+        "as_of": "2026-07",
+        "value": 274.79,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "bok_export_price",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202512/202609/30911201AA/D",
+            "published_at": null
+          }
+        ],
+        "record_id": "bf6e2c576c2049760b43c93c900b1d8997c007f93a77e4d8c95adfa5d467792c"
+      },
+      {
+        "as_of": "2026-08",
+        "value": 282.77,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "bok_export_price",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202512/202609/30911201AA/D",
+            "published_at": null
+          }
+        ],
+        "record_id": "a0e8014c33e9ca3c8ae7826fb5ea193614d760b6b691032f561a1297a5adce5e"
+      }
+    ],
+    "mu.supply.korea_ic_shipment": [
+      {
+        "as_of": "2025-05",
+        "value": 129.4,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "kostat_shipment_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202505/202510/I11ACQ/4",
+            "published_at": null
+          }
+        ],
+        "record_id": "fb37763dcaaf12e4098bc6791df1179debd0364e7eff13b9b13f0461e8de6262"
+      },
+      {
+        "as_of": "2025-06",
+        "value": 129.7,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "kostat_shipment_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202505/202510/I11ACQ/4",
+            "published_at": null
+          }
+        ],
+        "record_id": "3b663cab2a76772f9c252df423a23ec9d75541ea3eab2cdc69ded77d14286382"
+      },
+      {
+        "as_of": "2025-07",
+        "value": 131.3,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "kostat_shipment_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202505/202510/I11ACQ/4",
+            "published_at": null
+          }
+        ],
+        "record_id": "4a110e18e366d40796b609a53d97cb17408ca72808ee2f8cc645124e12fa44ad"
+      },
+      {
+        "as_of": "2025-08",
+        "value": 133.5,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "kostat_shipment_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202505/202510/I11ACQ/4",
+            "published_at": null
+          }
+        ],
+        "record_id": "dffaa0d34be289d5a63a80b8e5e482b4a4f39f1a32184bd27995ea984c612e32"
+      },
+      {
+        "as_of": "2025-09",
+        "value": 139.1,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "kostat_shipment_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202505/202510/I11ACQ/4",
+            "published_at": null
+          }
+        ],
+        "record_id": "35b4a8aae24ccc547c6102e5cf0347d709931981250b5ceb72200a97d66cd577"
+      },
+      {
+        "as_of": "2025-10",
+        "value": 114.5,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "kostat_shipment_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202505/202510/I11ACQ/4",
+            "published_at": null
+          }
+        ],
+        "record_id": "f4e04c7cfe531aebe6617382544d0bd59072755e1407823096e3f29a52ae5469"
+      },
+      {
+        "as_of": "2025-11",
+        "value": 125.6,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "kostat_shipment",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/4",
+            "published_at": null
+          }
+        ],
+        "record_id": "eef21acc08f1bb59e26d4cd6896ab9d23f95fa1a176e14d1f25369cd02ae5720"
+      },
+      {
+        "as_of": "2025-12",
+        "value": 128,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "kostat_shipment",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/4",
+            "published_at": null
+          }
+        ],
+        "record_id": "6fd9a95203a38bfbceb20f7df981a0286ffc05df42ffa3b892c05eebdc5a1cdd"
+      },
+      {
+        "as_of": "2026-01",
+        "value": 117.4,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "kostat_shipment",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/4",
+            "published_at": null
+          }
+        ],
+        "record_id": "65a1a29948660c6bd9fc66fcecbac5158cb2146bf8c1bdf5c4dca9d6e50de7ad"
+      },
+      {
+        "as_of": "2026-02",
+        "value": 141.2,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "kostat_shipment",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/4",
+            "published_at": null
+          }
+        ],
+        "record_id": "7067e37f94f58a0c1fcdd9ccf7fdace1908c26238eee5836d3556e52edc568d0"
+      },
+      {
+        "as_of": "2026-03",
+        "value": 138.3,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "kostat_shipment",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/4",
+            "published_at": null
+          }
+        ],
+        "record_id": "e3d3879eef86306f9b8c2055a9b954bd3e030befea4bcb9516795af3221ff4d4"
+      },
+      {
+        "as_of": "2026-04",
+        "value": 132.6,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "kostat_shipment",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/4",
+            "published_at": null
+          }
+        ],
+        "record_id": "7aae42987eca579bedf2652a7bd8fd1d1db400250153f8edf1f467440dbba688"
+      },
+      {
+        "as_of": "2026-05",
+        "value": 126.4,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "kostat_shipment",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/4",
+            "published_at": null
+          }
+        ],
+        "record_id": "c2c3d6510d9ae32f120c0d78c99d25b7b665d2cd96dabdce3a0ccaeb815ab470"
+      },
+      {
+        "as_of": "2026-06",
+        "value": 139.1,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "kostat_shipment",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/4",
+            "published_at": null
+          }
+        ],
+        "record_id": "86ab2eb81ea1c3cc0307c72a7319610ce761e86cad06f918a063870e6b733657"
+      },
+      {
+        "as_of": "2026-07",
+        "value": 129.7,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "kostat_shipment",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/4",
+            "published_at": null
+          }
+        ],
+        "record_id": "98b2e2e5e46cf9b7653b10dcc48f52bc6705ec98c4b913f376b0bcafd51a0b83"
+      }
+    ],
+    "mu.supply.korea_ic_inventory": [
+      {
+        "as_of": "2025-05",
+        "value": 105.4,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "kostat_inventory_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202505/202510/I11ACQ/6",
+            "published_at": null
+          }
+        ],
+        "record_id": "0fcdbe1e07799a7830a939ac374bcd45aebf38d774ce2f0d21d3cc56248e6a83"
+      },
+      {
+        "as_of": "2025-06",
+        "value": 99.5,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "kostat_inventory_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202505/202510/I11ACQ/6",
+            "published_at": null
+          }
+        ],
+        "record_id": "72562ea957848a55742294b8029bf0aac38accd36aeec1e9f0da6b8857b94c34"
+      },
+      {
+        "as_of": "2025-07",
+        "value": 98.9,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "kostat_inventory_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202505/202510/I11ACQ/6",
+            "published_at": null
+          }
+        ],
+        "record_id": "de42a3c664cdf88f4c500c9f74a28a5abbec80e7386e6fefc6e0f8a61ff7ea18"
+      },
+      {
+        "as_of": "2025-08",
+        "value": 99,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "kostat_inventory_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202505/202510/I11ACQ/6",
+            "published_at": null
+          }
+        ],
+        "record_id": "e1dc111297a523d11b59bf9a01301819f835cd323841f9e71e622dcc4dee3375"
+      },
+      {
+        "as_of": "2025-09",
+        "value": 99.5,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "kostat_inventory_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202505/202510/I11ACQ/6",
+            "published_at": null
+          }
+        ],
+        "record_id": "8f3c4d4d2a1299887456fc9aaac50d47bd6019f2965f419743427379f63e28c1"
+      },
+      {
+        "as_of": "2025-10",
+        "value": 98.8,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "kostat_inventory_2025",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202505/202510/I11ACQ/6",
+            "published_at": null
+          }
+        ],
+        "record_id": "3a543446b11b1440ec61d10239efc2239dcc726672c88b6c53bcf83b81f65282"
+      },
+      {
+        "as_of": "2025-11",
+        "value": 95.8,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "kostat_inventory",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/6",
+            "published_at": null
+          }
+        ],
+        "record_id": "cacb47467b26d590b8f550297cb816cf1747d51f6418ad49d3253a37087b269a"
+      },
+      {
+        "as_of": "2025-12",
+        "value": 94.3,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "kostat_inventory",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/6",
+            "published_at": null
+          }
+        ],
+        "record_id": "d94c5794ca027407ced2961dac8a26e2b57dd91df8c43006b0c6b1c0eb665f59"
+      },
+      {
+        "as_of": "2026-01",
+        "value": 100.3,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "kostat_inventory",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/6",
+            "published_at": null
+          }
+        ],
+        "record_id": "b8ac8561b967cf68fc5a10b0164c59acba34beecdee11eedee145ba9bf2e9bb0"
+      },
+      {
+        "as_of": "2026-02",
+        "value": 116.1,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "kostat_inventory",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/6",
+            "published_at": null
+          }
+        ],
+        "record_id": "81ee01b0bcde776d9b4adc709356a42cb61f225e7eaef4a65772337c8ec37992"
+      },
+      {
+        "as_of": "2026-03",
+        "value": 96.7,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "kostat_inventory",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/6",
+            "published_at": null
+          }
+        ],
+        "record_id": "d7007590ecc3ed8c1a7fb758a2b25f9739685e0a5f41dc086fe72ee163d0243f"
+      },
+      {
+        "as_of": "2026-04",
+        "value": 108.3,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "kostat_inventory",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/6",
+            "published_at": null
+          }
+        ],
+        "record_id": "20e3c102eb43db0198045ea1e8ba0abc0451362dc4b1b365eea4384bbf34248b"
+      },
+      {
+        "as_of": "2026-05",
+        "value": 111.9,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "kostat_inventory",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/6",
+            "published_at": null
+          }
+        ],
+        "record_id": "e667675d3c557f50c9c2a07118854325ba77c5be84f8917a5def9d33bafa1532"
+      },
+      {
+        "as_of": "2026-06",
+        "value": 105.7,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "kostat_inventory",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/6",
+            "published_at": null
+          }
+        ],
+        "record_id": "61dc692956870cb20621ece4f2ece5ab5c681fa4a24988b5865bdb234ae6a81c"
+      },
+      {
+        "as_of": "2026-07",
+        "value": 115.2,
+        "unit": "index",
+        "sources": [
+          {
+            "id": "kostat_inventory",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/6",
+            "published_at": null
+          }
+        ],
+        "record_id": "92628b3516aa7fe645c66b8d0115a44ab6707e54b10ad7132e6a757a992b29cf"
+      }
+    ],
+    "mu.contract.ddr5_contract": [
+      {
+        "as_of": "2026-05",
+        "value": 37.5,
+        "unit": "USD",
+        "sources": [
+          {
+            "id": "korea_trade",
+            "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172254/view",
+            "published_at": "2026-10-01"
+          }
+        ],
+        "record_id": "dea397c3bb614973f226c8b1b1a47f5a9c5c14521375dbb94fbb53d7ca896794"
+      },
+      {
+        "as_of": "2026-06",
+        "value": 40,
+        "unit": "USD",
+        "sources": [
+          {
+            "id": "korea_trade",
+            "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172254/view",
+            "published_at": "2026-10-01"
+          }
+        ],
+        "record_id": "adf4e5cd751b651889076af6f023ea8ad89ef7e1f825902e625b1259ef8cad99"
+      },
+      {
+        "as_of": "2026-07",
+        "value": 45,
+        "unit": "USD",
+        "sources": [
+          {
+            "id": "korea_trade",
+            "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172254/view",
+            "published_at": "2026-10-01"
+          }
+        ],
+        "record_id": "76f996555e4fe8b25ea7cf5c0731eef053fcbb75439ff8ff36fb21b7df04dd7d"
+      },
+      {
+        "as_of": "2026-08",
+        "value": 46.5,
+        "unit": "USD",
+        "sources": [
+          {
+            "id": "korea_trade",
+            "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172254/view",
+            "published_at": "2026-10-01"
+          }
+        ],
+        "record_id": "fe7c51818085674fa595af0dc3525c9cbd554465447920f9c676caebb6e10ba8"
       }
     ]
   }
