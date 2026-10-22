@@ -2,7 +2,7 @@ import {createRequire} from 'node:module';
 import {entries} from './model.mjs';
 
 const require=createRequire(import.meta.url),core=require('../lib/outlook-core.js'),series=require('../lib/series-core.js');
-export const {validate:validateOutlook,resolve:resolveOutlookRef,format:formatOutlookValue,citedRefs,snapshot:outlookSnapshot}=core;
+export const {validate:validateOutlook,resolve:resolveOutlookRef,format:formatOutlookValue,citedRefs,snapshot:outlookSnapshot,logEntry}=core;
 
 // Every fact a writer may cite: live rows, guidance, partner results and outlook, plus past series points.
 export function outlookContext(document,catalog) {
@@ -15,5 +15,12 @@ export function outlookContext(document,catalog) {
 export function stampOutlook(outlook,document,at) {
   const cited={};
   for(const ref of core.citedRefs(outlook)){const item=core.resolve(document,ref);if(item)cited[ref]=core.snapshot(item);}
-  return {...outlook,generated_at:at,data_revision:document.revision,financial_period:document.financial_period,cited};
+  const next={...outlook,generated_at:at,data_revision:document.revision,financial_period:document.financial_period,cited};
+  // One logged cycle read per day: a same-day re-stamp replaces that day's entry and keeps any grade already given.
+  if(outlook.cycle_read) {
+    const entry=core.logEntry(outlook,document,at),log=[...(outlook.cycle_log||[])],last=log.at(-1);
+    if(last?.at===entry.at)log[log.length-1]={...entry,grade:last.grade??null};else log.push(entry);
+    next.cycle_log=log;
+  }
+  return next;
 }

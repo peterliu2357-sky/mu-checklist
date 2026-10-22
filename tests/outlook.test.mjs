@@ -47,3 +47,29 @@ test('a changed prior guidance or reported change also makes the analysis stale'
   const next=clone(d);next.ecosystem.companies.find(c=>c.id==='alphabet').outlook.find(o=>o.id==='capex').prior_guidance='2,100 亿美元';
   has(validateOutlook(outlook,next),'OUTLOOK_STALE');
 });
+const withRead=(call,text,refs)=>({...clone(outlook),cycle_read:{call,text,refs}});
+test('a cycle read is one cited line with a fixed call, logged once per day by the stamp',()=>{
+  const read=withRead('rising','库存天数 {{mu.inventory.days}}，收入仍在上升。',['mu.inventory.days','mu.revenue.total']);
+  has(validateOutlook(read,d),'OUTLOOK_SNAPSHOT');
+  const first=stampOutlook(read,d,'2026-10-22T01:00:00Z');
+  assert.deepEqual(validateOutlook(first,d),[]);
+  assert.deepEqual(first.cycle_log,[{at:'2026-10-22',call:'rising',text:read.cycle_read.text,values:{'mu.inventory.days|current':'129 天'},grade:null}]);
+  const sameDay=stampOutlook({...first,cycle_read:{...read.cycle_read,call:'slowing'}},d,'2026-10-22T09:00:00Z');
+  assert.equal(sameDay.cycle_log.length,1);assert.equal(sameDay.cycle_log[0].call,'slowing');
+  const graded={...sameDay,cycle_log:[{...sameDay.cycle_log[0],grade:{result:'hit',graded_at:'2027-01-05',basis:'FY2027 Q1 DRAM 售价环比上升'}}]};
+  const nextRun=stampOutlook(graded,d,'2026-10-25T01:00:00Z');
+  assert.equal(nextRun.cycle_log.length,2);assert.equal(nextRun.cycle_log[0].grade.result,'hit');assert.equal(nextRun.cycle_log[1].grade,null);
+  assert.deepEqual(validateOutlook(nextRun,d),[]);
+  // A logged read keeps the values of its day even after the data moves on.
+  const later=clone(d);later.metrics.find(m=>m.id==='inventory').rows.find(r=>r.id==='days').current=140;
+  assert.equal(stampOutlook(nextRun,later,'2026-10-28T01:00:00Z').cycle_log[0].values['mu.inventory.days|current'],'129 天');
+});
+test('a cycle read follows the prose rules, and its log cannot be edited loosely',()=>{
+  has(validateOutlook(stampOutlook(withRead('buy','上行。',['mu.revenue.total']),d,d.updated_at),d),'OUTLOOK_CYCLE');
+  has(validateOutlook(stampOutlook(withRead('rising','库存约 129 天。',['mu.inventory.days']),d,d.updated_at),d),'OUTLOOK_NUMBER');
+  has(validateOutlook(stampOutlook(withRead('rising','收入上升。',[]),d,d.updated_at),d),'OUTLOOK_CITATION');
+  const ok=stampOutlook(withRead('rising','收入上升。',['mu.revenue.total']),d,'2026-10-22T01:00:00Z');
+  has(validateOutlook({...ok,cycle_log:[{...ok.cycle_log[0],grade:{result:'maybe'}}]},d),'OUTLOOK_CYCLE');
+  has(validateOutlook({...ok,cycle_log:[...ok.cycle_log,{...ok.cycle_log[0]}]},d),'OUTLOOK_CYCLE');
+  has(validateOutlook({...ok,cycle_read:{...ok.cycle_read,call:'falling'}},d),'OUTLOOK_SNAPSHOT');
+});

@@ -2,7 +2,7 @@
 (function () {
   'use strict';
   const esc = value => String(value ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const {rowChange,freshness,isRenderable:validate,guidanceActuals,guidanceComparison,partnerValue,partnerChange,groupTotal,cycleSignals,cycleLayout,companyOutlook,isCompanyRow,provenance,partnerUnits}=globalThis.MonitorCore;
+  const {rowChange,freshness,isRenderable:validate,guidanceActuals,guidanceComparison,partnerValue,partnerChange,groupTotal,cycleSignals,spotPremiums,datedRatio,cycleLayout,companyOutlook,isCompanyRow,provenance,partnerUnits}=globalThis.MonitorCore;
   const num = (value,digits=2) => Number(value).toLocaleString('en-US',{minimumFractionDigits:digits,maximumFractionDigits:digits});
   const updateCore=globalThis.MonitorUpdates;
   const updateTimes=globalThis.MonitorUpdateTimes;
@@ -49,7 +49,7 @@
     const digits=unit==='pct'?1:unit==='days'||unit==='份'?0:unit==='USD'&&Math.abs(value*100-Math.round(value*100))>0.00001?3:2;
     return num(unit==='USDm'?value/100:value,digits);
   }
-  function unitName(unit) {return {USDm:'亿美元',pct:'%',USD:'美元',days:'天',multiple:'倍',TWDb:'十亿新台币',KRWt:'万亿韩元'}[unit]||unit;}
+  function unitName(unit) {return {USDm:'亿美元',pct:'%',USD:'美元',days:'天',multiple:'倍',TWDb:'十亿新台币',KRWt:'万亿韩元',index:''}[unit]??unit;}
   function numberLine(row,compact=false) {
     const previous=row.previous!==null&&row.previous!==undefined;
     const current=row.current!==null&&row.current!==undefined;
@@ -114,18 +114,34 @@
     const label=points.map(p=>`${p.period} ${formatted(p.value,unit)}${unitName(unit)}`).join('；');
     return `<figure class="sparkline"><svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" role="img" aria-label="${esc(label)}"><polyline points="${xy.map(([x,y])=>`${x.toFixed(1)},${y.toFixed(1)}`).join(' ')}" fill="none" vector-effect="non-scaling-stroke"/>${xy.map(([x,y],i)=>`<g><circle class="hit" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="9"/><circle class="dot${i===xy.length-1?' last':''}" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${i===xy.length-1?4:2.5}"/><title>${esc(points[i].period)}：${formatted(points[i].value,unit)}${esc(unitName(unit))}</title></g>`).join('')}</svg><figcaption><span>${esc(points[0].period)}</span><span>${esc(points.at(-1).period)}</span></figcaption></figure>`;
   }
-  function cycleSignal({metric,row}) {
+  function cycleSignal({metric,row,lead}) {
     const value=typeof row.current==='number'?`${formatted(row.current,row.unit)}${row.unit?`<span class="unit">${esc(unitName(row.unit))}</span>`:''}`:esc(row.current);
-    return `<a class="card cycle-signal" href="#${esc(metric.id)}" data-metric="${esc(metric.id)}"><span class="signal-label">${metric.category==='business'?(/^[A-Za-z]/.test(row.label)?'美光 ':'美光'):''}${esc(row.label)}</span><strong class="signal-value">${value}</strong>${rowChange(row)?`<span class="change-line">${esc(rowChange(row))}</span>`:''}<span class="row-period">${esc(row.period)}</span>${sparkline(trendPoints(metric,row),row.unit)}<span class="tag-group">${tags(row)}</span></a>`;
+    return `<a class="card cycle-signal" href="#${esc(metric.id)}" data-metric="${esc(metric.id)}"><span class="signal-label">${metric.category==='business'?(/^[A-Za-z]/.test(row.label)?'美光 ':'美光'):''}${esc(row.label)}</span><strong class="signal-value">${value}</strong>${rowChange(row)?`<span class="change-line">${esc(rowChange(row))}</span>`:''}<span class="row-period">${esc(row.period)}</span>${sparkline(trendPoints(metric,row),row.unit)}<span class="signal-lead">${esc(lead)}</span><span class="tag-group">${tags(row)}</span></a>`;
   }
-  function capexSignal() {
-    const group=data.ecosystem.groups.find(g=>g.id==='cloud'),companies=data.ecosystem.companies.filter(c=>c.group==='cloud'),total=companies.length>1?groupTotal(companies,'capex'):null;
-    if(!group||!total) return '';
-    return `<a class="card cycle-signal" href="#cycle-demand"><span class="signal-label">${companies.length} 家云厂商资本开支合计</span><strong class="signal-value">${partnerValue(total.current,total.unit)}<span class="unit">${esc(partnerUnits[total.unit])}</span></strong>${total.change?`<span class="change-line">同比 ${esc(total.change)}</span>`:''}<span class="row-period">各公司最近财季</span><span class="tag-group"><span class="basis calculated">${provenance.calculated}</span></span></a>`;
+  // The agent's dated cycle read and its log; shown only when the stored analysis validates against this page's data.
+  function cycleRead() {
+    if(!agent||!outlook?.cycle_read||agent.validate(outlook,data).length) return '';
+    const render=segments=>segments.map(s=>s.text!==undefined?esc(s.text):`<b class="ao-value">${esc(s.value)}</b>`).join('');
+    const log=outlook.cycle_log,graded=log.filter(e=>e.grade),hits=graded.filter(e=>e.grade.result==='hit').length;
+    const items=[...log].reverse().map(e=>`<li><span class="cr-day">${esc(e.at)}</span><span class="cr-call ${esc(e.call)}">${esc(agent.calls[e.call])}</span><span class="cr-text">${render(agent.logSegments(e))}</span><span class="cr-grade">${e.grade?`${esc(agent.grades[e.grade.result])} · ${esc(e.grade.basis)}`:'待评分'}</span></li>`).join('');
+    return `<section class="card cycle-read" id="cycle-read" aria-label="Agent 周期判断"><div class="cr-head"><span class="ao-label">Agent 周期判断</span><span class="cr-call ${esc(outlook.cycle_read.call)}">${esc(agent.calls[outlook.cycle_read.call])}</span><span class="ao-date">${esc(log.at(-1).at)}</span></div><p class="cr-line">${render(agent.segments(outlook.cycle_read.text,data))}</p><details class="cr-log"><summary>判断记录 ${log.length} 条 · ${graded.length?`已评分 ${graded.length} 条，应验 ${hits} 条`:'尚无评分'}</summary><ul>${items}</ul><p class="ao-note">每次例行核查记录一条判断。目标季度的美光 DRAM 售价与韩国央行 DRAM 出口价格指数公布后评分；评分规则见 MONITORING.md。由 AI agent 依据本站数据撰写，不构成投资建议。</p></details></section>`;
+  }
+  function spotPremiumCard() {
+    const pairs=spotPremiums(data);
+    if(!pairs.length) return '';
+    const sign=v=>`${v>0?'+':v<0?'−':''}${num(Math.abs(v),1)}%`;
+    return `<article class="card group-total spot-premium" aria-label="现货较合同价"><div class="row-top"><h3>现货较合同价</h3><span class="tag-group"><span class="basis calculated">${provenance.calculated}</span></span></div>${pairs.map(p=>`<div class="premium-row"><span class="premium-label">${esc(p.label)}</span><strong class="premium-value">${sign(p.premium)}</strong><span class="row-period">现货 ${formatted(p.spot.current,p.spot.unit)} 美元（${esc(p.spot.as_of||p.spot.period)}）· 合同 ${formatted(p.contract.current,p.contract.unit)} 美元（${esc(p.contract.as_of||p.contract.period)}）</span></div>`).join('')}<p class="row-note">现货 ÷ 合同价 − 1，取同规格的最新读数，两者日期不同。现货高于合同价表示短期买盘更紧；本站从 2026 年 10 月起记录，历史不足以回测。</p></article>`;
+  }
+  function inventoryRatioCard() {
+    const r=datedRatio(data,'supply','korea_ic_inventory','korea_ic_shipment');
+    if(!r) return '';
+    const points=[...r.history,{as_of:r.as_of,value:r.value}].slice(-series.windows.observation).map(p=>({period:p.as_of,value:p.value}));
+    const previous=r.history.at(-1);
+    return `<article class="card group-total inventory-ratio" aria-label="韩国电子零件业库存/出货比"><div class="row-top"><h3>韩国电子零件业库存 / 出货比</h3><span class="tag-group"><span class="basis calculated">${provenance.calculated}</span></span></div><div class="numbers">${previous?`<span class="previous">${num(previous.value,2)}</span><span class="arrow" aria-label="变为">→</span>`:''}<span class="current">${num(r.value,2)}</span></div><p class="row-period">${esc(r.as_of)}${previous?` vs ${esc(previous.as_of)}`:''}</p>${sparkline(points,'')}<p class="row-note">库存指数 ÷ 出货指数（KSIC 26，半导体为最大组成）。比值上升表示出货放缓、库存累积；回测中 2022 年见顶前约 5 个月先转弱，但误报较多，未列入周期信号。</p></article>`;
   }
   function cycle() {
     const sections=cycleLayout(data);
-    return `<div class="data-heading"><h2>周期跟踪</h2></div><p class="section-intro">价格、供给与需求的行业资料。行业估计、报价与预测分别标识；美光自身财务见“公司”。</p><div class="section-heading"><h2>周期信号</h2><span class="small">各项最新读数 · 点击查看来源</span></div><div class="signal-grid">${cycleSignals(data).map(cycleSignal).join('')}${capexSignal()}</div>${sections.map(s=>`<section class="cycle-section" id="cycle-${esc(s.id)}" aria-label="${esc(s.title)}"><div class="section-heading"><h2>${esc(s.title)}</h2></div>${s.metrics.map(m=>metricCard(m,data.metrics.indexOf(m),{skip:isCompanyRow})).join('')}${s.id==='supply'?technology.hbmProgress(data):''}${s.id==='demand'?data.ecosystem.groups.map(groupCapex).join(''):''}</section>`).join('')}`;
+    return `<div class="data-heading"><h2>周期跟踪</h2></div><p class="section-intro">价格、供给与需求的行业资料。行业估计、报价与预测分别标识；美光自身财务见“公司”。</p>${cycleRead()}<div class="section-heading"><h2>周期信号</h2><span class="small">经 2018、2022 年两次见顶回测仍领先的指标 · 点击查看来源</span></div><div class="signal-grid">${cycleSignals(data).map(cycleSignal).join('')}</div><p class="signal-note">其他指标没有通过领先性回测或缺少可回测的历史，仍在下方各卡片中列示。<a href="https://github.com/peterliu2357-sky/mu-checklist/blob/main/docs/CYCLE-BACKTEST.md" target="_blank" rel="noopener noreferrer">回测方法与结果 ↗</a></p>${sections.map(s=>`<section class="cycle-section" id="cycle-${esc(s.id)}" aria-label="${esc(s.title)}"><div class="section-heading"><h2>${esc(s.title)}</h2></div>${s.metrics.map(m=>metricCard(m,data.metrics.indexOf(m),{skip:isCompanyRow})).join('')}${s.id==='price'?spotPremiumCard():''}${s.id==='supply'?inventoryRatioCard()+technology.hbmProgress(data):''}${s.id==='demand'?data.ecosystem.groups.map(groupCapex).join(''):''}</section>`).join('')}`;
   }
   function ecosystem() {
     const e=data.ecosystem;

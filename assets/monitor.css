@@ -181,3 +181,30 @@
 .ao-note{font-size:11px;line-height:1.8;color:var(--muted);margin-top:14px;padding-top:10px;border-top:1px solid var(--line)}
 @media(min-width:700px){.agent-outlook>summary{padding:17px 27px}.ao-body{padding:4px 27px 18px}}
 @media(prefers-reduced-motion:reduce){.ao-chevron{transition:none}}
+/* 周期 tab: the lead each signal showed in the back-test, and the note on what was left out. */
+.signal-lead{font-size:11px;line-height:1.6;color:#4c6355;margin-top:2px}
+.signal-note{font-size:12px;line-height:1.75;color:var(--muted);margin:2px 0 6px}
+.signal-note a{margin-left:6px}
+/* Agent cycle read: one dated line above the signals; its log opens below. */
+.cycle-read{padding:15px 18px;margin-bottom:6px}
+.cr-head{display:flex;align-items:center;flex-wrap:wrap;gap:6px 9px}
+.cr-call{font-size:12px;font-weight:650;padding:2px 8px;border-radius:6px;line-height:1.7;color:var(--green);background:var(--green-bg);white-space:nowrap}
+.cr-call.slowing,.cr-call.peaking,.cr-call.bottoming{color:var(--amber);background:var(--amber-bg)}
+.cr-call.falling{color:#9c4627;background:#f8e9e2}
+.cr-line{margin-top:7px;font-size:14px;line-height:1.8;color:#3f544a;overflow-wrap:anywhere}
+.cr-log{margin-top:10px;border-top:1px solid var(--line)}
+.cr-log>summary{font-size:12px;color:var(--green);padding:10px 0 2px;min-height:40px}
+.cr-log ul{list-style:none;margin:0;padding:0}
+.cr-log li{display:flex;flex-wrap:wrap;gap:3px 8px;align-items:baseline;padding:8px 0;border-top:1px solid #edf0e9;font-size:12px;line-height:1.7}
+.cr-log li:first-child{border-top:0}
+.cr-day{font-variant-numeric:tabular-nums;color:var(--muted)}
+.cr-log .cr-call{font-size:11px;padding:0 6px}
+.cr-text{flex-basis:100%;color:#40554c;overflow-wrap:anywhere}
+.cr-grade{font-size:11px;color:var(--muted)}
+/* Calculated cards on the 周期 sections: spot premium and the Korea inventory-to-shipment ratio. */
+.premium-row{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 10px;margin-top:10px}
+.premium-label{font-size:13px;font-weight:600}
+.premium-value{font-size:19px;font-weight:650;font-variant-numeric:tabular-nums}
+.premium-row .row-period{flex-basis:100%;margin-top:0}
+.inventory-ratio .sparkline{max-width:320px}
+@media(min-width:700px){.cycle-read{padding:17px 27px}}

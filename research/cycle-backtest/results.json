@@ -1,0 +1,1504 @@
+[
+ {
+  "id": "bok_dram",
+  "label": "韩国央行 DRAM 出口价格指数",
+  "status": "new",
+  "first": "201001",
+  "last": "202609",
+  "threshold": 6.13,
+  "gm": [
+   {
+    "size": "minor",
+    "turn": "2016 谷",
+    "warn_month": "201609",
+    "published": "2016-10-15",
+    "lead_months": -4.4,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2018 峰",
+    "warn_month": "201712",
+    "published": "2018-01-15",
+    "lead_months": 7.5,
+    "hit": true
+   },
+   {
+    "size": "major",
+    "turn": "2019 谷",
+    "warn_month": "202002",
+    "published": "2020-03-15",
+    "lead_months": -3.5,
+    "hit": false
+   },
+   {
+    "size": "minor",
+    "turn": "2020 小峰",
+    "warn_month": null,
+    "published": null,
+    "lead_months": null,
+    "hit": false
+   },
+   {
+    "size": "minor",
+    "turn": "2021 小谷",
+    "warn_month": "202002",
+    "published": "2020-03-15",
+    "lead_months": 11.6,
+    "hit": true
+   },
+   {
+    "size": "major",
+    "turn": "2022 峰",
+    "warn_month": "202203",
+    "published": "2022-04-15",
+    "lead_months": 1.6,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2023 谷",
+    "warn_month": null,
+    "published": null,
+    "lead_months": null,
+    "hit": false
+   }
+  ],
+  "asp": [
+   {
+    "size": "minor",
+    "turn": "2016 谷",
+    "warn_month": "201609",
+    "published": "2016-10-15",
+    "lead_months": -4.4,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2018 峰",
+    "warn_month": "201712",
+    "published": "2018-01-15",
+    "lead_months": 7.5,
+    "hit": true
+   },
+   {
+    "size": "major",
+    "turn": "2019 谷",
+    "warn_month": "202002",
+    "published": "2020-03-15",
+    "lead_months": -0.6,
+    "hit": false
+   },
+   {
+    "size": "minor",
+    "turn": "2020 小峰",
+    "warn_month": null,
+    "published": null,
+    "lead_months": null,
+    "hit": false
+   },
+   {
+    "size": "minor",
+    "turn": "2021 小谷",
+    "warn_month": "202002",
+    "published": "2020-03-15",
+    "lead_months": 8.6,
+    "hit": true
+   },
+   {
+    "size": "major",
+    "turn": "2022 峰",
+    "warn_month": null,
+    "published": null,
+    "lead_months": null,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2023 谷",
+    "warn_month": "202310",
+    "published": "2023-11-15",
+    "lead_months": -2.5,
+    "hit": false
+   }
+  ],
+  "false_alarms": [
+   [
+    "trough",
+    "202310"
+   ],
+   [
+    "peak",
+    "202412"
+   ],
+   [
+    "trough",
+    "202510"
+   ]
+  ],
+  "hits_gm": 1,
+  "hits_asp": 1,
+  "xcorr_gm": {
+   "0": 0.85,
+   "1": 0.7,
+   "2": 0.4,
+   "3": 0.04,
+   "4": -0.28
+  }
+ },
+ {
+  "id": "bok_flash",
+  "label": "韩国央行闪存出口价格指数",
+  "status": "new",
+  "first": "201001",
+  "last": "202609",
+  "threshold": 5.2,
+  "gm": [
+   {
+    "size": "minor",
+    "turn": "2016 谷",
+    "warn_month": "201609",
+    "published": "2016-10-15",
+    "lead_months": -4.4,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2018 峰",
+    "warn_month": "201710",
+    "published": "2017-11-15",
+    "lead_months": 9.5,
+    "hit": true
+   },
+   {
+    "size": "major",
+    "turn": "2019 谷",
+    "warn_month": "201908",
+    "published": "2019-09-15",
+    "lead_months": 2.4,
+    "hit": false
+   },
+   {
+    "size": "minor",
+    "turn": "2020 小峰",
+    "warn_month": "202009",
+    "published": "2020-10-15",
+    "lead_months": -1.4,
+    "hit": false
+   },
+   {
+    "size": "minor",
+    "turn": "2021 小谷",
+    "warn_month": "202107",
+    "published": "2021-08-15",
+    "lead_months": -5.4,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2022 峰",
+    "warn_month": "202206",
+    "published": "2022-07-15",
+    "lead_months": -1.4,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2023 谷",
+    "warn_month": null,
+    "published": null,
+    "lead_months": null,
+    "hit": false
+   }
+  ],
+  "asp": [
+   {
+    "size": "minor",
+    "turn": "2016 谷",
+    "warn_month": "201609",
+    "published": "2016-10-15",
+    "lead_months": -4.4,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2018 峰",
+    "warn_month": "201710",
+    "published": "2017-11-15",
+    "lead_months": 9.5,
+    "hit": true
+   },
+   {
+    "size": "major",
+    "turn": "2019 谷",
+    "warn_month": "201908",
+    "published": "2019-09-15",
+    "lead_months": 5.4,
+    "hit": true
+   },
+   {
+    "size": "minor",
+    "turn": "2020 小峰",
+    "warn_month": "202009",
+    "published": "2020-10-15",
+    "lead_months": -1.4,
+    "hit": false
+   },
+   {
+    "size": "minor",
+    "turn": "2021 小谷",
+    "warn_month": null,
+    "published": null,
+    "lead_months": null,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2022 峰",
+    "warn_month": null,
+    "published": null,
+    "lead_months": null,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2023 谷",
+    "warn_month": "202309",
+    "published": "2023-10-15",
+    "lead_months": -1.5,
+    "hit": false
+   }
+  ],
+  "false_alarms": [
+   [
+    "peak",
+    "201504"
+   ],
+   [
+    "trough",
+    "202309"
+   ],
+   [
+    "peak",
+    "202411"
+   ],
+   [
+    "trough",
+    "202510"
+   ]
+  ],
+  "hits_gm": 1,
+  "hits_asp": 2,
+  "xcorr_gm": {
+   "0": 0.8,
+   "1": 0.74,
+   "2": 0.56,
+   "3": 0.24,
+   "4": -0.07
+  }
+ },
+ {
+  "id": "korea_memory_exports",
+  "label": "韩国存储芯片出口额 (HS 854232)",
+  "status": "site",
+  "first": "201501",
+  "last": "202512",
+  "threshold": 5.19,
+  "gm": [
+   {
+    "size": "minor",
+    "turn": "2016 谷",
+    "warn_month": "201606",
+    "published": "2016-07-01",
+    "lead_months": -1.0,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2018 峰",
+    "warn_month": "201802",
+    "published": "2018-03-01",
+    "lead_months": 6.0,
+    "hit": true
+   },
+   {
+    "size": "major",
+    "turn": "2019 谷",
+    "warn_month": "202001",
+    "published": "2020-02-01",
+    "lead_months": -2.1,
+    "hit": false
+   },
+   {
+    "size": "minor",
+    "turn": "2020 小峰",
+    "warn_month": null,
+    "published": null,
+    "lead_months": null,
+    "hit": false
+   },
+   {
+    "size": "minor",
+    "turn": "2021 小谷",
+    "warn_month": "202001",
+    "published": "2020-02-01",
+    "lead_months": 13.0,
+    "hit": true
+   },
+   {
+    "size": "major",
+    "turn": "2022 峰",
+    "warn_month": "202111",
+    "published": "2021-12-01",
+    "lead_months": 6.0,
+    "hit": true
+   },
+   {
+    "size": "major",
+    "turn": "2023 谷",
+    "warn_month": "202307",
+    "published": "2023-08-01",
+    "lead_months": -5.0,
+    "hit": false
+   }
+  ],
+  "asp": [
+   {
+    "size": "minor",
+    "turn": "2016 谷",
+    "warn_month": "201606",
+    "published": "2016-07-01",
+    "lead_months": -1.0,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2018 峰",
+    "warn_month": "201802",
+    "published": "2018-03-01",
+    "lead_months": 6.0,
+    "hit": true
+   },
+   {
+    "size": "major",
+    "turn": "2019 谷",
+    "warn_month": "202001",
+    "published": "2020-02-01",
+    "lead_months": 0.9,
+    "hit": false
+   },
+   {
+    "size": "minor",
+    "turn": "2020 小峰",
+    "warn_month": null,
+    "published": null,
+    "lead_months": null,
+    "hit": false
+   },
+   {
+    "size": "minor",
+    "turn": "2021 小谷",
+    "warn_month": "202001",
+    "published": "2020-02-01",
+    "lead_months": 10.1,
+    "hit": true
+   },
+   {
+    "size": "major",
+    "turn": "2022 峰",
+    "warn_month": "202111",
+    "published": "2021-12-01",
+    "lead_months": -3.0,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2023 谷",
+    "warn_month": "202307",
+    "published": "2023-08-01",
+    "lead_months": 1.0,
+    "hit": false
+   }
+  ],
+  "false_alarms": [
+   [
+    "peak",
+    "202410"
+   ],
+   [
+    "trough",
+    "202509"
+   ]
+  ],
+  "hits_gm": 2,
+  "hits_asp": 1,
+  "xcorr_gm": {
+   "0": 0.89,
+   "1": 0.81,
+   "2": 0.58,
+   "3": 0.23,
+   "4": -0.15
+  }
+ },
+ {
+  "id": "korea_semi_exports",
+  "label": "韩国半导体出口额 (HS 8541+8542)",
+  "status": "site",
+  "first": "201501",
+  "last": "202512",
+  "threshold": 3.58,
+  "gm": [
+   {
+    "size": "minor",
+    "turn": "2016 谷",
+    "warn_month": "201607",
+    "published": "2016-08-01",
+    "lead_months": -2.0,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2018 峰",
+    "warn_month": "201802",
+    "published": "2018-03-01",
+    "lead_months": 6.0,
+    "hit": true
+   },
+   {
+    "size": "major",
+    "turn": "2019 谷",
+    "warn_month": "202001",
+    "published": "2020-02-01",
+    "lead_months": -2.1,
+    "hit": false
+   },
+   {
+    "size": "minor",
+    "turn": "2020 小峰",
+    "warn_month": "202006",
+    "published": "2020-07-01",
+    "lead_months": 2.1,
+    "hit": false
+   },
+   {
+    "size": "minor",
+    "turn": "2021 小谷",
+    "warn_month": "202011",
+    "published": "2020-12-01",
+    "lead_months": 3.1,
+    "hit": true
+   },
+   {
+    "size": "major",
+    "turn": "2022 峰",
+    "warn_month": "202111",
+    "published": "2021-12-01",
+    "lead_months": 6.0,
+    "hit": true
+   },
+   {
+    "size": "major",
+    "turn": "2023 谷",
+    "warn_month": "202306",
+    "published": "2023-07-01",
+    "lead_months": -4.0,
+    "hit": false
+   }
+  ],
+  "asp": [
+   {
+    "size": "minor",
+    "turn": "2016 谷",
+    "warn_month": "201607",
+    "published": "2016-08-01",
+    "lead_months": -2.0,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2018 峰",
+    "warn_month": "201802",
+    "published": "2018-03-01",
+    "lead_months": 6.0,
+    "hit": true
+   },
+   {
+    "size": "major",
+    "turn": "2019 谷",
+    "warn_month": "202001",
+    "published": "2020-02-01",
+    "lead_months": 0.9,
+    "hit": false
+   },
+   {
+    "size": "minor",
+    "turn": "2020 小峰",
+    "warn_month": "202006",
+    "published": "2020-07-01",
+    "lead_months": 2.1,
+    "hit": false
+   },
+   {
+    "size": "minor",
+    "turn": "2021 小谷",
+    "warn_month": "202011",
+    "published": "2020-12-01",
+    "lead_months": 0.1,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2022 峰",
+    "warn_month": "202111",
+    "published": "2021-12-01",
+    "lead_months": -3.0,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2023 谷",
+    "warn_month": "202306",
+    "published": "2023-07-01",
+    "lead_months": 2.0,
+    "hit": false
+   }
+  ],
+  "false_alarms": [
+   [
+    "peak",
+    "202409"
+   ],
+   [
+    "trough",
+    "202509"
+   ]
+  ],
+  "hits_gm": 2,
+  "hits_asp": 1,
+  "xcorr_gm": {
+   "0": 0.88,
+   "1": 0.77,
+   "2": 0.49,
+   "3": 0.13,
+   "4": -0.26
+  }
+ },
+ {
+  "id": "nanya_revenue",
+  "label": "南亚科月营收",
+  "status": "site",
+  "first": "201501",
+  "last": "202608",
+  "threshold": 5.28,
+  "gm": [
+   {
+    "size": "minor",
+    "turn": "2016 谷",
+    "warn_month": "201608",
+    "published": "2016-09-10",
+    "lead_months": -3.3,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2018 峰",
+    "warn_month": "201810",
+    "published": "2018-11-10",
+    "lead_months": -2.4,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2019 谷",
+    "warn_month": "201909",
+    "published": "2019-10-10",
+    "lead_months": 1.6,
+    "hit": false
+   },
+   {
+    "size": "minor",
+    "turn": "2020 小峰",
+    "warn_month": "202007",
+    "published": "2020-08-10",
+    "lead_months": 0.8,
+    "hit": false
+   },
+   {
+    "size": "minor",
+    "turn": "2021 小谷",
+    "warn_month": "202101",
+    "published": "2021-02-10",
+    "lead_months": 0.7,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2022 峰",
+    "warn_month": "202111",
+    "published": "2021-12-10",
+    "lead_months": 5.7,
+    "hit": true
+   },
+   {
+    "size": "major",
+    "turn": "2023 谷",
+    "warn_month": "202306",
+    "published": "2023-07-10",
+    "lead_months": -4.3,
+    "hit": false
+   }
+  ],
+  "asp": [
+   {
+    "size": "minor",
+    "turn": "2016 谷",
+    "warn_month": "201608",
+    "published": "2016-09-10",
+    "lead_months": -3.3,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2018 峰",
+    "warn_month": "201810",
+    "published": "2018-11-10",
+    "lead_months": -2.4,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2019 谷",
+    "warn_month": "201909",
+    "published": "2019-10-10",
+    "lead_months": 4.6,
+    "hit": true
+   },
+   {
+    "size": "minor",
+    "turn": "2020 小峰",
+    "warn_month": "202007",
+    "published": "2020-08-10",
+    "lead_months": 0.8,
+    "hit": false
+   },
+   {
+    "size": "minor",
+    "turn": "2021 小谷",
+    "warn_month": "202101",
+    "published": "2021-02-10",
+    "lead_months": -2.3,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2022 峰",
+    "warn_month": "202111",
+    "published": "2021-12-10",
+    "lead_months": -3.3,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2023 谷",
+    "warn_month": "202306",
+    "published": "2023-07-10",
+    "lead_months": 1.7,
+    "hit": false
+   }
+  ],
+  "false_alarms": [
+   [
+    "peak",
+    "201709"
+   ],
+   [
+    "trough",
+    "201712"
+   ],
+   [
+    "peak",
+    "202407"
+   ],
+   [
+    "trough",
+    "202505"
+   ]
+  ],
+  "hits_gm": 1,
+  "hits_asp": 1,
+  "xcorr_gm": {
+   "0": 0.72,
+   "1": 0.75,
+   "2": 0.56,
+   "3": 0.18,
+   "4": -0.22
+  }
+ },
+ {
+  "id": "korea_inventory_ratio",
+  "label": "韩国电子零件业库存/出货比 (KSIC 26)",
+  "status": "new",
+  "first": "201001",
+  "last": "202608",
+  "threshold": 4.56,
+  "gm": [
+   {
+    "size": "minor",
+    "turn": "2016 谷",
+    "warn_month": "201605",
+    "published": "2016-06-30",
+    "lead_months": -0.9,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2018 峰",
+    "warn_month": null,
+    "published": null,
+    "lead_months": null,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2019 谷",
+    "warn_month": "201904",
+    "published": "2019-05-30",
+    "lead_months": 6.0,
+    "hit": true
+   },
+   {
+    "size": "minor",
+    "turn": "2020 小峰",
+    "warn_month": "202007",
+    "published": "2020-08-30",
+    "lead_months": 0.1,
+    "hit": false
+   },
+   {
+    "size": "minor",
+    "turn": "2021 小谷",
+    "warn_month": "202101",
+    "published": "2021-03-02",
+    "lead_months": 0.1,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2022 峰",
+    "warn_month": "202111",
+    "published": "2021-12-30",
+    "lead_months": 5.1,
+    "hit": true
+   },
+   {
+    "size": "major",
+    "turn": "2023 谷",
+    "warn_month": null,
+    "published": null,
+    "lead_months": null,
+    "hit": false
+   }
+  ],
+  "asp": [
+   {
+    "size": "minor",
+    "turn": "2016 谷",
+    "warn_month": "201605",
+    "published": "2016-06-30",
+    "lead_months": -0.9,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2018 峰",
+    "warn_month": null,
+    "published": null,
+    "lead_months": null,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2019 谷",
+    "warn_month": "201904",
+    "published": "2019-05-30",
+    "lead_months": 9.0,
+    "hit": true
+   },
+   {
+    "size": "minor",
+    "turn": "2020 小峰",
+    "warn_month": "202007",
+    "published": "2020-08-30",
+    "lead_months": 0.1,
+    "hit": false
+   },
+   {
+    "size": "minor",
+    "turn": "2021 小谷",
+    "warn_month": "202101",
+    "published": "2021-03-02",
+    "lead_months": -2.9,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2022 峰",
+    "warn_month": "202111",
+    "published": "2021-12-30",
+    "lead_months": -3.9,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2023 谷",
+    "warn_month": "202308",
+    "published": "2023-09-30",
+    "lead_months": -1.0,
+    "hit": false
+   }
+  ],
+  "false_alarms": [
+   [
+    "peak",
+    "201504"
+   ],
+   [
+    "peak",
+    "201707"
+   ],
+   [
+    "trough",
+    "201807"
+   ],
+   [
+    "peak",
+    "201901"
+   ],
+   [
+    "peak",
+    "202104"
+   ],
+   [
+    "trough",
+    "202107"
+   ],
+   [
+    "trough",
+    "202308"
+   ],
+   [
+    "peak",
+    "202412"
+   ],
+   [
+    "trough",
+    "202505"
+   ],
+   [
+    "peak",
+    "202512"
+   ]
+  ],
+  "hits_gm": 2,
+  "hits_asp": 1,
+  "xcorr_gm": {
+   "0": 0.7,
+   "1": 0.73,
+   "2": 0.68,
+   "3": 0.36,
+   "4": -0.0
+  }
+ },
+ {
+  "id": "korea_semi_utilization",
+  "label": "韩国半导体业开工率指数",
+  "status": "extra",
+  "first": "201001",
+  "last": "202608",
+  "threshold": 2.58,
+  "gm": [
+   {
+    "size": "minor",
+    "turn": "2016 谷",
+    "warn_month": "201510",
+    "published": "2015-11-30",
+    "lead_months": 6.1,
+    "hit": true
+   },
+   {
+    "size": "major",
+    "turn": "2018 峰",
+    "warn_month": null,
+    "published": null,
+    "lead_months": null,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2019 谷",
+    "warn_month": "201907",
+    "published": "2019-08-30",
+    "lead_months": 3.0,
+    "hit": true
+   },
+   {
+    "size": "minor",
+    "turn": "2020 小峰",
+    "warn_month": "202006",
+    "published": "2020-07-30",
+    "lead_months": 1.1,
+    "hit": false
+   },
+   {
+    "size": "minor",
+    "turn": "2021 小谷",
+    "warn_month": "202101",
+    "published": "2021-03-02",
+    "lead_months": 0.1,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2022 峰",
+    "warn_month": "202206",
+    "published": "2022-07-30",
+    "lead_months": -1.9,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2023 谷",
+    "warn_month": "202305",
+    "published": "2023-06-30",
+    "lead_months": -3.9,
+    "hit": false
+   }
+  ],
+  "asp": [
+   {
+    "size": "minor",
+    "turn": "2016 谷",
+    "warn_month": "201510",
+    "published": "2015-11-30",
+    "lead_months": 6.1,
+    "hit": true
+   },
+   {
+    "size": "major",
+    "turn": "2018 峰",
+    "warn_month": null,
+    "published": null,
+    "lead_months": null,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2019 谷",
+    "warn_month": "201907",
+    "published": "2019-08-30",
+    "lead_months": 5.9,
+    "hit": true
+   },
+   {
+    "size": "minor",
+    "turn": "2020 小峰",
+    "warn_month": "202006",
+    "published": "2020-07-30",
+    "lead_months": 1.1,
+    "hit": false
+   },
+   {
+    "size": "minor",
+    "turn": "2021 小谷",
+    "warn_month": "202101",
+    "published": "2021-03-02",
+    "lead_months": -2.9,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2022 峰",
+    "warn_month": null,
+    "published": null,
+    "lead_months": null,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2023 谷",
+    "warn_month": "202305",
+    "published": "2023-06-30",
+    "lead_months": 2.0,
+    "hit": false
+   }
+  ],
+  "false_alarms": [
+   [
+    "peak",
+    "201610"
+   ],
+   [
+    "trough",
+    "201702"
+   ],
+   [
+    "peak",
+    "201706"
+   ],
+   [
+    "trough",
+    "201709"
+   ],
+   [
+    "peak",
+    "201902"
+   ],
+   [
+    "peak",
+    "202405"
+   ]
+  ],
+  "hits_gm": 1,
+  "hits_asp": 1,
+  "xcorr_gm": {
+   "0": 0.45,
+   "1": 0.59,
+   "2": 0.5,
+   "3": 0.23,
+   "4": -0.14
+  }
+ },
+ {
+  "id": "mu_inventory_days",
+  "label": "美光库存天数",
+  "status": "site",
+  "first": "200912",
+  "last": "202609",
+  "threshold": 9.9,
+  "gm": [
+   {
+    "size": "minor",
+    "turn": "2016 谷",
+    "warn_month": null,
+    "published": null,
+    "lead_months": null,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2018 峰",
+    "warn_month": "201711",
+    "published": "2017-12-28",
+    "lead_months": 8.0,
+    "hit": true
+   },
+   {
+    "size": "major",
+    "turn": "2019 谷",
+    "warn_month": "201911",
+    "published": "2019-12-26",
+    "lead_months": -0.9,
+    "hit": false
+   },
+   {
+    "size": "minor",
+    "turn": "2020 小峰",
+    "warn_month": "202012",
+    "published": "2020-12-31",
+    "lead_months": -3.9,
+    "hit": false
+   },
+   {
+    "size": "minor",
+    "turn": "2021 小谷",
+    "warn_month": null,
+    "published": null,
+    "lead_months": null,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2022 峰",
+    "warn_month": "202012",
+    "published": "2020-12-31",
+    "lead_months": 17.0,
+    "hit": true
+   },
+   {
+    "size": "major",
+    "turn": "2023 谷",
+    "warn_month": null,
+    "published": null,
+    "lead_months": null,
+    "hit": false
+   }
+  ],
+  "asp": [
+   {
+    "size": "minor",
+    "turn": "2016 谷",
+    "warn_month": null,
+    "published": null,
+    "lead_months": null,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2018 峰",
+    "warn_month": "201711",
+    "published": "2017-12-28",
+    "lead_months": 8.0,
+    "hit": true
+   },
+   {
+    "size": "major",
+    "turn": "2019 谷",
+    "warn_month": "201911",
+    "published": "2019-12-26",
+    "lead_months": 2.1,
+    "hit": false
+   },
+   {
+    "size": "minor",
+    "turn": "2020 小峰",
+    "warn_month": "202012",
+    "published": "2020-12-31",
+    "lead_months": -3.9,
+    "hit": false
+   },
+   {
+    "size": "minor",
+    "turn": "2021 小谷",
+    "warn_month": "201911",
+    "published": "2019-12-26",
+    "lead_months": 11.3,
+    "hit": true
+   },
+   {
+    "size": "major",
+    "turn": "2022 峰",
+    "warn_month": "202012",
+    "published": "2020-12-31",
+    "lead_months": 8.0,
+    "hit": true
+   },
+   {
+    "size": "major",
+    "turn": "2023 谷",
+    "warn_month": "202311",
+    "published": "2023-12-28",
+    "lead_months": -3.9,
+    "hit": false
+   }
+  ],
+  "false_alarms": [
+   [
+    "trough",
+    "201612"
+   ],
+   [
+    "trough",
+    "202311"
+   ]
+  ],
+  "hits_gm": 2,
+  "hits_asp": 2,
+  "xcorr_gm": {
+   "0": 0.43,
+   "1": 0.78,
+   "2": 0.72,
+   "3": 0.45,
+   "4": 0.19
+  }
+ },
+ {
+  "id": "mu_revenue",
+  "label": "美光总收入 (代 DRAM 收入)",
+  "status": "site",
+  "first": "200812",
+  "last": "202609",
+  "threshold": 16.3,
+  "gm": [
+   {
+    "size": "minor",
+    "turn": "2016 谷",
+    "warn_month": "201609",
+    "published": "2016-09-29",
+    "lead_months": -3.9,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2018 峰",
+    "warn_month": "201711",
+    "published": "2017-12-28",
+    "lead_months": 8.0,
+    "hit": true
+   },
+   {
+    "size": "major",
+    "turn": "2019 谷",
+    "warn_month": "202002",
+    "published": "2020-03-26",
+    "lead_months": -3.9,
+    "hit": false
+   },
+   {
+    "size": "minor",
+    "turn": "2020 小峰",
+    "warn_month": null,
+    "published": null,
+    "lead_months": null,
+    "hit": false
+   },
+   {
+    "size": "minor",
+    "turn": "2021 小谷",
+    "warn_month": "202002",
+    "published": "2020-03-26",
+    "lead_months": 11.3,
+    "hit": true
+   },
+   {
+    "size": "major",
+    "turn": "2022 峰",
+    "warn_month": "202206",
+    "published": "2022-06-30",
+    "lead_months": -0.9,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2023 谷",
+    "warn_month": null,
+    "published": null,
+    "lead_months": null,
+    "hit": false
+   }
+  ],
+  "asp": [
+   {
+    "size": "minor",
+    "turn": "2016 谷",
+    "warn_month": "201609",
+    "published": "2016-09-29",
+    "lead_months": -3.9,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2018 峰",
+    "warn_month": "201711",
+    "published": "2017-12-28",
+    "lead_months": 8.0,
+    "hit": true
+   },
+   {
+    "size": "major",
+    "turn": "2019 谷",
+    "warn_month": "202002",
+    "published": "2020-03-26",
+    "lead_months": -0.9,
+    "hit": false
+   },
+   {
+    "size": "minor",
+    "turn": "2020 小峰",
+    "warn_month": null,
+    "published": null,
+    "lead_months": null,
+    "hit": false
+   },
+   {
+    "size": "minor",
+    "turn": "2021 小谷",
+    "warn_month": "202002",
+    "published": "2020-03-26",
+    "lead_months": 8.3,
+    "hit": true
+   },
+   {
+    "size": "major",
+    "turn": "2022 峰",
+    "warn_month": null,
+    "published": null,
+    "lead_months": null,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2023 谷",
+    "warn_month": "202311",
+    "published": "2023-12-28",
+    "lead_months": -3.9,
+    "hit": false
+   }
+  ],
+  "false_alarms": [
+   [
+    "trough",
+    "202311"
+   ],
+   [
+    "peak",
+    "202502"
+   ],
+   [
+    "trough",
+    "202511"
+   ]
+  ],
+  "hits_gm": 1,
+  "hits_asp": 1,
+  "xcorr_gm": {
+   "0": 0.9,
+   "1": 0.86,
+   "2": 0.59,
+   "3": 0.21,
+   "4": -0.17
+  }
+ },
+ {
+  "id": "hyperscaler_capex",
+  "label": "四家云厂商资本开支合计",
+  "status": "site",
+  "first": "201412",
+  "last": "202606",
+  "threshold": 14.71,
+  "gm": [
+   {
+    "size": "minor",
+    "turn": "2016 谷",
+    "warn_month": null,
+    "published": null,
+    "lead_months": null,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2018 峰",
+    "warn_month": "201812",
+    "published": "2019-01-30",
+    "lead_months": -5.0,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2019 谷",
+    "warn_month": "201909",
+    "published": "2019-10-30",
+    "lead_months": 1.0,
+    "hit": false
+   },
+   {
+    "size": "minor",
+    "turn": "2020 小峰",
+    "warn_month": null,
+    "published": null,
+    "lead_months": null,
+    "hit": false
+   },
+   {
+    "size": "minor",
+    "turn": "2021 小谷",
+    "warn_month": "201909",
+    "published": "2019-10-30",
+    "lead_months": 16.1,
+    "hit": true
+   },
+   {
+    "size": "major",
+    "turn": "2022 峰",
+    "warn_month": "202112",
+    "published": "2022-01-30",
+    "lead_months": 4.0,
+    "hit": true
+   },
+   {
+    "size": "major",
+    "turn": "2023 谷",
+    "warn_month": null,
+    "published": null,
+    "lead_months": null,
+    "hit": false
+   }
+  ],
+  "asp": [
+   {
+    "size": "minor",
+    "turn": "2016 谷",
+    "warn_month": null,
+    "published": null,
+    "lead_months": null,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2018 峰",
+    "warn_month": "201812",
+    "published": "2019-01-30",
+    "lead_months": -5.0,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2019 谷",
+    "warn_month": "201909",
+    "published": "2019-10-30",
+    "lead_months": 3.9,
+    "hit": true
+   },
+   {
+    "size": "minor",
+    "turn": "2020 小峰",
+    "warn_month": null,
+    "published": null,
+    "lead_months": null,
+    "hit": false
+   },
+   {
+    "size": "minor",
+    "turn": "2021 小谷",
+    "warn_month": "201909",
+    "published": "2019-10-30",
+    "lead_months": 13.1,
+    "hit": true
+   },
+   {
+    "size": "major",
+    "turn": "2022 峰",
+    "warn_month": "202112",
+    "published": "2022-01-30",
+    "lead_months": -4.9,
+    "hit": false
+   },
+   {
+    "size": "major",
+    "turn": "2023 谷",
+    "warn_month": "202312",
+    "published": "2024-01-30",
+    "lead_months": -5.0,
+    "hit": false
+   }
+  ],
+  "false_alarms": [
+   [
+    "trough",
+    "201712"
+   ],
+   [
+    "trough",
+    "202312"
+   ]
+  ],
+  "hits_gm": 1,
+  "hits_asp": 1,
+  "xcorr_gm": {
+   "0": 0.46,
+   "1": 0.26,
+   "2": 0.02,
+   "3": -0.19,
+   "4": -0.36
+  }
+ }
+]
