@@ -15200,5 +15200,52 @@
     "mode": "verified",
     "record_hash": "9c704d9580d8a05e6c15d10b487f2b7a49ea83202a8886205e575d00b8a45ca5",
     "id": "e-afbdc1ac47fab49962e5bf1c098fe94a83448cdee3552236de61fb799be1c4ea"
+  },
+  "e-8844313d41bfb52ccadc6aa4685c33391995116a1c00dcef825d60ad00ba0abd": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "DDR5 16Gb (2Gx8) 4800/5600 现货",
+    "values": {
+      "current": 61.267,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 61.267,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-10-23",
+        "locator": "DRAM Spot Price · DDR5 16Gb (2Gx8) 4800/5600 · Session Average",
+        "source_id": "dram_spot"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Manual original-page review; raw value times scale checked against candidate",
+      "at": "2026-10-26T00:32:25.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "dram_spot",
+        "url": "https://www.dramexchange.com/",
+        "sha256": "466921e5544daebd3516727be0e0a0727b046b952dd6d5dab2f9ba8c95b79138",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-26T00:31:38.545Z",
+        "reviewed_at": "2026-10-26T00:31:38.545Z",
+        "status": "read",
+        "locator": "DRAM Spot Price table, Last Update: Oct.23 2026 18:10 (GMT+8)",
+        "excerpt": "DDR5 16Gb (2Gx8) 4800/5600 | Daily High 71.00 | Daily Low 47.00 | Session High 71.00 | Session Low 47.00 | Session Average 61.267 | Session Change 0.27 % (up)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "5c5b3a8a7ef612a9f30d7c7e2c4911158b6a98765a5ad461b7ab525c0ea87d9a",
+    "id": "e-8844313d41bfb52ccadc6aa4685c33391995116a1c00dcef825d60ad00ba0abd"
   }
 }

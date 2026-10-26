@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "revision": "2026-10-26-c45edc92c4",
-  "updated_at": "2026-10-26T00:15:31.799Z",
+  "revision": "2026-10-26-5cda35099f",
+  "updated_at": "2026-10-26T00:32:26.009Z",
   "last_successful_check_at": "2026-09-20T23:50:00Z",
   "last_attempt_at": "2026-09-20T23:50:00Z",
   "financial_period": "FY2026 Q4",
@@ -1188,12 +1188,12 @@
     },
     "dram_spot": {
       "label": "DRAMeXchange DRAM 现货报价",
-      "short_label": "10-21 · DRAM 现货",
+      "short_label": "10-23 · DRAM 现货",
       "url": "https://www.dramexchange.com/",
-      "published_at": "2026-10-21",
-      "checked_at": "2026-10-22",
+      "published_at": "2026-10-23",
+      "checked_at": "2026-10-26",
       "type": "原始行业报价",
-      "locator": "DRAM Spot Price · Last Update Oct.21 2026 18:10 (GMT+8) · Session Average / Session Change。"
+      "locator": "DRAM Spot Price · Last Update Oct.23 2026 18:10 (GMT+8) · Session Average / Session Change。"
     },
     "korea_trade": {
       "label": "韩国产业通商部 2026 年 9 月进出口动向",
@@ -1209,7 +1209,7 @@
       "short_label": "南亚科 8 月营收",
       "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
       "published_at": null,
-      "checked_at": "2026-10-22",
+      "checked_at": "2026-10-26",
       "type": "公司官方入口",
       "locator": "Consolidated Monthly Revenue 表 · 2026 · August / July（千元新台币）。"
     },
@@ -1905,6 +1905,51 @@
       "checked_at": "2026-10-26",
       "type": "官方统计数据接口",
       "locator": "901Y032 KSIC 26 库存指数最新月份仍为 2026-08。"
+    },
+    "calendar_index_oracle_20261025": {
+      "published_at": null,
+      "checked_at": "2026-10-26",
+      "label": "Oracle IR 新闻与活动",
+      "short_label": "Oracle IR",
+      "url": "https://investor.oracle.com/feed/PressRelease.svc/GetPressReleaseList?LanguageId=1&bodyType=0&pressReleaseDateFilter=3&pageSize=12&pageNumber=0&year=-1",
+      "type": "公司日程入口",
+      "locator": "新闻稿最新为 10-23 Investor Day（10-28 举行，非财报）；最新财报项仍为 Q1 FY27（2026-09-10），尚无 Q2 FY27 日期。"
+    },
+    "calendar_index_nvidia_20261025": {
+      "published_at": null,
+      "checked_at": "2026-10-26",
+      "label": "NVIDIA IR 新闻与活动",
+      "short_label": "NVIDIA IR",
+      "url": "https://investor.nvidia.com/feed/PressRelease.svc/GetPressReleaseList?LanguageId=1&bodyType=0&pressReleaseDateFilter=3&pageSize=12&pageNumber=0&year=-1",
+      "type": "公司日程入口",
+      "locator": "新闻稿最新至 10-21（GTC Berlin），最新财报活动仍为 2nd Quarter FY27 Financial Results（2026-08-26），尚无 Q3 FY27 日期。"
+    },
+    "calendar_index_micron_20261025": {
+      "published_at": null,
+      "checked_at": "2026-10-26",
+      "label": "美光 IR 新闻与活动",
+      "short_label": "Micron IR",
+      "url": "https://investors.micron.com/feed/Event.svc/GetEventList?LanguageId=1&eventSelection=3&sortOperator=1&eventDateFilter=3&pageSize=5&pageNumber=0&year=-1",
+      "type": "公司日程入口",
+      "locator": "活动列表最新为 Technology and product webinar（2026-10-21），尚无 FY2027 Q1 日期。"
+    },
+    "calendar_index_meta_20261025": {
+      "published_at": null,
+      "checked_at": "2026-10-26",
+      "label": "Meta IR 活动",
+      "short_label": "Meta IR",
+      "url": "https://investor.atmeta.com/feed/Event.svc/GetEventList?apiKey=F37D4FC40D0E4774887D6827E95013D5&eventSelection=0&eventDateFilter=0&includeFinancialReports=true&includePresentations=true&includePressReleases=true&sortOperator=1&pageSize=-1&tagList=&includeTags=true&year=-1&excludeSelection=0",
+      "type": "公司日程入口",
+      "locator": "活动列表最新为 Q3 2026 Earnings Call（2026-10-21），尚无 Q4 2026 日期。"
+    },
+    "calendar_index_tsmc_20261025": {
+      "published_at": null,
+      "checked_at": "2026-10-26",
+      "label": "TSMC 财务日程",
+      "short_label": "TSMC 日程",
+      "url": "https://investor.tsmc.com/english/financial-calendar",
+      "type": "公司日程入口",
+      "locator": "Upcoming Events 仅列 11 月至次年 1 月月营收发布，尚无 4Q'26 法说会日期。"
     }
   },
   "metrics": [
@@ -2922,7 +2967,7 @@
         },
         {
           "label": "DDR5 16Gb (2Gx8) 4800/5600 现货",
-          "current": 60.867,
+          "current": 61.267,
           "previous": null,
           "unit": "USD",
           "source_ids": [
@@ -2930,12 +2975,12 @@
           ],
           "kind": "行业报价",
           "note": "与 DDR4 1Gx8 现货是不同规格，不互相替代。",
-          "period": "截至 10-21",
-          "change": "日变动 +0.28%（DRAMeXchange 披露）",
-          "location": "DRAMeXchange · DRAM Spot Price · DDR5 16Gb (2Gx8) 4800/5600 · Session Average，Last Update Oct.21 2026 18:10 (GMT+8)。",
+          "period": "截至 10-23",
+          "change": "日变动 +0.27%（DRAMeXchange 披露）",
+          "location": "DRAMeXchange · DRAM Spot Price · DDR5 16Gb (2Gx8) 4800/5600 · Session Average，Last Update Oct.23 2026 18:10 (GMT+8)。",
           "evidence_type": "direct",
           "id": "ddr5_spot",
-          "as_of": "2026-10-21"
+          "as_of": "2026-10-23"
         },
         {
           "label": "DDR5 16Gb 合同价（固定价格）",
@@ -3041,7 +3086,7 @@
         "现货报价按指定规格采样。4Q26 合同价区间来自 TrendForce 09-30 新闻稿；NAND 趋势行仍为 09-10 公开摘要。"
       ],
       "period": "DRAM 报价至 09-23；NAND 报价至 09-14；报告至 09-16",
-      "checked_at": "2026-10-22",
+      "checked_at": "2026-10-26",
       "next_review": "每周",
       "definition": "行业合同价预测与现货报价。",
       "interpretation": "TrendForce 09-30 预计 4Q26 普通型 DRAM 合同价仍上涨但涨幅较三季度收敛，NAND 合同价涨幅区间高于 DRAM。DDR4 现货周均价 10-20 较上周小幅上涨，06-23 以来整体上行；512Gb TLC 晶圆现货 8 月中以来连续回落。"
@@ -3138,7 +3183,7 @@
         "首批晶圆、产品出货和成熟产量属于不同阶段。"
       ],
       "period": "2026–2027 展望 · 披露至 09-16",
-      "checked_at": "2026-10-22",
+      "checked_at": "2026-10-26",
       "next_review": "新行业报告",
       "definition": "机构供需预测及公司产能计划。",
       "interpretation": "TrendForce 最新摘要预计 NAND 不同终端市场分化；企业 SSD 的需求展望不宜外推至全部消费级存储。"
@@ -3302,7 +3347,7 @@
         "韩国出口额与南亚科营收是售价与数量混合的间接指标，不是美光位元出货或客户库存。"
       ],
       "period": "行业资料至 09-21",
-      "checked_at": "2026-10-22",
+      "checked_at": "2026-10-26",
       "next_review": "每周",
       "definition": "用于观察终端需求的间接指标。",
       "interpretation": "企业 SSD 交付周期为 16 周，而 TrendForce 给出的均衡基准为 8 周，说明交付仍受约束。韩国 9 月存储芯片出口额大幅高于上年同月；南亚科 8 月营收较 7 月小幅增加（环比 +1.9%），维持在 7 月跳升后的高位。官方称出口增长来自出货量扩大、固定价格上涨及季末效应，价格与数量的作用不能拆分。这些都不是美光采购量，客户实际库存与消耗量仍待补充。"
@@ -3320,6 +3365,12 @@
     "产业链指引和管理层展望按原披露日期及目标期间记录，文字为中文摘要；同比由原始金额计算，百分点与百分比区分。"
   ],
   "check_log": [
+    {
+      "at": "2026-10-26T00:32:26.009Z",
+      "status": "success",
+      "scope": "batch",
+      "text": "核查范围：batch；完成 2 / 2 项。"
+    },
     {
       "at": "2026-10-26T00:15:31.799Z",
       "status": "success",
@@ -4895,7 +4946,7 @@
           "index_ecos_kostat_inv_20261025"
         ],
         "reason": "已检查行业入口：DRAMeXchange 10-23 18:10 收盘场 DDR5 16Gb 4800/5600 现货有新读数，另行发布行业更新；合同价表仍为 08-31；TrendForce 新闻区 10-21 之后无新的现货周报，新闻稿 10-14 之后无内存价格新闻稿，Insights 无新的公开 Weekly Radar；韩国央行 DRAM 出口价格指数最新仍为 9 月，KSIC 26 出货与库存指数最新仍为 8 月；南亚科 9 月营收仍未公布。",
-        "processed_at": null
+        "processed_at": "2026-10-26T00:32:26.009Z"
       },
       {
         "key": "technology:facilities",
@@ -11263,6 +11314,19 @@
           }
         ],
         "record_id": "2237f248fba62ec2917b5a32f54be9d0b132002ac55422fb7dc0c7e4fe061fbf"
+      },
+      {
+        "as_of": "2026-10-21",
+        "value": 60.867,
+        "unit": "USD",
+        "sources": [
+          {
+            "id": "dram_spot",
+            "url": "https://www.dramexchange.com/",
+            "published_at": "2026-10-21"
+          }
+        ],
+        "record_id": "f7d3c43dd5db83a848aa589a5df054955c59cb2f2420799b8281dabc5f88a7c9"
       }
     ],
     "mu.contract.bok_dram_price": [
