@@ -66,7 +66,7 @@ test('the cycle read, spot premium and inventory ratio render from stored rows',
   d.series={...d.series,'mu.supply.korea_ic_inventory':pts([['2026-06',97.6],['2026-07',120.1]]),'mu.supply.korea_ic_shipment':pts([['2026-06',148],['2026-07',117.8]])};
   const outlook=JSON.parse(fs.readFileSync(new URL('../../data/outlook.json',import.meta.url)));
   const {stampOutlook}=await import('../../pipeline/outlook.mjs');
-  const stamped=stampOutlook({...outlook,cycle_read:{call:'rising',text:'库存天数 {{mu.inventory.days}}，尚未出现回测中的见顶信号。',refs:['mu.inventory.days']}},d,'2026-10-22T01:00:00Z');
+  const stamped=stampOutlook({...outlook,cycle_log:[],cycle_read:{call:'rising',text:'库存天数 {{mu.inventory.days}}，尚未出现回测中的见顶信号。',refs:['mu.inventory.days']}},d,'2026-10-22T01:00:00Z');
   await page.setViewportSize({width:320,height:900});
   await page.route('**/data/monitor.json?*',r=>r.fulfill({json:d}));
   await page.route('**/data/outlook.json?*',r=>r.fulfill({json:stamped}));

@@ -47,7 +47,7 @@ test('a changed prior guidance or reported change also makes the analysis stale'
   const next=clone(d);next.ecosystem.companies.find(c=>c.id==='alphabet').outlook.find(o=>o.id==='capex').prior_guidance='2,100 亿美元';
   has(validateOutlook(outlook,next),'OUTLOOK_STALE');
 });
-// Start from an empty log so these fixed test dates do not depend on the published log's latest entry.
+// Start from an empty log so these fixed test dates do not depend on the published log, which must stay in strictly ascending date order.
 const withRead=(call,text,refs)=>({...clone(outlook),cycle_log:[],cycle_read:{call,text,refs}});
 test('a cycle read is one cited line with a fixed call, logged once per day by the stamp',()=>{
   const read=withRead('rising','库存天数 {{mu.inventory.days}}，收入仍在上升。',['mu.inventory.days','mu.revenue.total']);
