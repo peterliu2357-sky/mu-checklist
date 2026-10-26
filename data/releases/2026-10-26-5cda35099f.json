@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "scope": "batch",
+  "base_commit": "afe4bd9328c1e1897c8a46beeb31b804f0e39715",
+  "base_revision": "2026-10-26-c45edc92c4",
+  "base_sha256": "85d54a8df8e33822494c57bc281e33aa3cebab5e98dbe5fb39f11454aa16e1b1",
+  "catalog_sha256": "853cd79d16f56ef0779e74920aa46499d7156f7ec4eacc5f7f1563f34d07c736",
+  "created_at": "2026-10-26T00:28:40.218Z",
+  "completed_at": "2026-10-26T00:32:26.009Z",
+  "state": "verified",
+  "targets": [
+    "industry",
+    "calendar"
+  ],
+  "coverage": [
+    {
+      "key": "industry",
+      "status": "verified",
+      "evidence": [
+        "dram_spot",
+        "index_tf_news_20261025",
+        "nanya_monthly"
+      ],
+      "reviewed_at": "2026-10-26T00:32:25.000Z",
+      "latest_disclosure": {
+        "url": "https://www.dramexchange.com/",
+        "published_at": "2026-10-23"
+      },
+      "reason": "DRAMeXchange 10-23 18:10 收盘场 DDR5 16Gb 4800/5600 现货均价 61.267 美元，加入趋势点。TrendForce News 列表 10-21 之后无新的现货周报，DDR4 与 512Gb TLC 保持 10-20/10-19 读数；南亚科官方月营收表 9 月仍为空白。其他行业行无新的原始数据。",
+      "finding": "new_disclosure"
+    },
+    {
+      "key": "calendar",
+      "status": "verified",
+      "evidence": [
+        "calendar_index_micron_20261025",
+        "calendar_index_oracle_20261025",
+        "calendar_index_meta_20261025",
+        "calendar_index_nvidia_20261025",
+        "calendar_index_tsmc_20261025"
+      ],
+      "reviewed_at": "2026-10-26T00:32:25.000Z",
+      "latest_disclosure": {
+        "url": "https://investor.oracle.com/investor-news/news-details/2026/ORACLE-INVESTOR-DAY-MEETING-TO-BE-HELD-OCTOBER-28-2026/default.aspx",
+        "published_at": "2026-10-23"
+      },
+      "reason": "五家待确认公司官方日程均已检查：美光、Oracle、Meta、NVIDIA 与台积电均尚未公布下一财报日期，保持待确认；Oracle 10-28 Investor Day 不是财报。未发现漏处理的财报。"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "dram_spot",
+      "url": "https://www.dramexchange.com/",
+      "sha256": "466921e5544daebd3516727be0e0a0727b046b952dd6d5dab2f9ba8c95b79138",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-26T00:31:38.545Z",
+      "reviewed_at": "2026-10-26T00:31:38.545Z",
+      "status": "read"
+    },
+    {
+      "source_id": "nanya_monthly",
+      "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
+      "sha256": "6e9f960a00d2f7075673973aa4eb6b253d3723aa57cf4ef4df5aed4d60cc5495",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-26T00:31:38.955Z",
+      "reviewed_at": "2026-10-26T00:31:38.955Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_tf_news_20261025",
+      "url": "https://www.trendforce.com/news/wp-json/wp/v2/posts?after=2026-10-21T00:00:00&per_page=80&_fields=id,date,link,title",
+      "sha256": "6f70abadfa9b47337509f7defaf577a32e375bfb8afba29320f25e0abd4bbd7d",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-26T00:31:39.403Z",
+      "reviewed_at": "2026-10-26T00:31:39.403Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_oracle_20261025",
+      "url": "https://investor.oracle.com/feed/PressRelease.svc/GetPressReleaseList?LanguageId=1&bodyType=0&pressReleaseDateFilter=3&pageSize=12&pageNumber=0&year=-1",
+      "sha256": "96b74529143143de12a5f1fffa3686e8f7e6a55de8d9a1e6758de6096fdc2d5b",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-26T00:31:39.814Z",
+      "reviewed_at": "2026-10-26T00:31:39.814Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_nvidia_20261025",
+      "url": "https://investor.nvidia.com/feed/PressRelease.svc/GetPressReleaseList?LanguageId=1&bodyType=0&pressReleaseDateFilter=3&pageSize=12&pageNumber=0&year=-1",
+      "sha256": "915e5ac9542eafdad9d5dfed3f40dcf43b178489e6c1a319db54bf01de1bca34",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-26T00:31:40.197Z",
+      "reviewed_at": "2026-10-26T00:31:40.197Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_micron_20261025",
+      "url": "https://investors.micron.com/feed/Event.svc/GetEventList?LanguageId=1&eventSelection=3&sortOperator=1&eventDateFilter=3&pageSize=5&pageNumber=0&year=-1",
+      "sha256": "db583abad534e999b2466e96b28eebcd15b8639bc7cbf613c977d0f8c7ef2d37",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-26T00:31:40.607Z",
+      "reviewed_at": "2026-10-26T00:31:40.607Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_meta_20261025",
+      "url": "https://investor.atmeta.com/feed/Event.svc/GetEventList?apiKey=F37D4FC40D0E4774887D6827E95013D5&eventSelection=0&eventDateFilter=0&includeFinancialReports=true&includePresentations=true&includePressReleases=true&sortOperator=1&pageSize=-1&tagList=&includeTags=true&year=-1&excludeSelection=0",
+      "sha256": "e1c153c01038f8118964444b34bb5d865cd98194428efce62cc2684e52a5c299",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-26T00:31:40.999Z",
+      "reviewed_at": "2026-10-26T00:31:40.999Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_tsmc_20261025",
+      "url": "https://investor.tsmc.com/english/financial-calendar",
+      "sha256": "21cee5a01386a1f5458eb23518f4b2ce2a205a57f2d8a7305f3e25f1af6451ed",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-10-26T00:31:41.393Z",
+      "reviewed_at": "2026-10-26T00:31:41.393Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [],
+  "publication_corrections": [
+    "dram_spot"
+  ],
+  "technology_reviews": [],
+  "result": "success",
+  "artifact_sha256": "f0efb4bf10ed235a1a5e638c7212f938ae4cf31bdb99e3c9910685c019a5952e",
+  "ledger_sha256": "84f2aee7a8421aa7a08248f85ea7a5356ca92a4d964f139c7c0502ab81fcd82f",
+  "evidence_sha256": "d2387a1907a00a6715cf1d3807a5fed0751a5d38698cdcf02a19165cef0c1ce1"
+}
