@@ -265,8 +265,8 @@
       ]
     }
   ],
-  "generated_at": "2026-10-22T20:34:47.887Z",
-  "data_revision": "2026-10-22-0304c15cbe",
+  "generated_at": "2026-10-26T00:15:53.526Z",
+  "data_revision": "2026-10-26-c45edc92c4",
   "financial_period": "FY2026 Q4",
   "cited": {
     "mu.revenue.total": {
@@ -701,6 +701,15 @@
   "cycle_log": [
     {
       "at": "2026-10-22",
+      "call": "slowing",
+      "text": "美光库存天数已触发回测见顶预警；DRAM 价格指数{{mu.contract.bok_dram_price|change}}仍在上升。",
+      "values": {
+        "mu.contract.bok_dram_price|change": "+2.3%"
+      },
+      "grade": null
+    },
+    {
+      "at": "2026-10-26",
       "call": "slowing",
       "text": "美光库存天数已触发回测见顶预警；DRAM 价格指数{{mu.contract.bok_dram_price|change}}仍在上升。",
       "values": {
