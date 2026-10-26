@@ -15247,5 +15247,61 @@
     "mode": "verified",
     "record_hash": "5c5b3a8a7ef612a9f30d7c7e2c4911158b6a98765a5ad461b7ab525c0ea87d9a",
     "id": "e-8844313d41bfb52ccadc6aa4685c33391995116a1c00dcef825d60ad00ba0abd"
+  },
+  "e-ceb199393e54fa0cd7223cf25a5d66ae9d7541a771993b00e4aad1b3b2335a6f": {
+    "measurement": "regular_close",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "quote.mu",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "price",
+        "value": 877.5499877929688,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-10-23",
+        "locator": "indicators.quote[0].close · latest completed daily timestamp",
+        "source_id": "price_auto"
+      },
+      {
+        "field": "previous_close",
+        "value": 856.489990234375,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-10-22",
+        "locator": "indicators.quote[0].close · previous daily timestamp",
+        "source_id": "price_auto"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Tested structured OHLC adapter: identity, currency, completed session, previous bar and split checks",
+      "at": "2026-10-26T19:05:58.746Z"
+    },
+    "documents": [
+      {
+        "source_id": "price_auto",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/MU?range=1mo&interval=1d&events=splits",
+        "sha256": "0d0686a404333945690c81bdcb326742f35ee66d06277baabfc4c444e8fe30b6",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-26T19:05:58.746Z",
+        "reviewed_at": "2026-10-26T19:05:58.746Z",
+        "status": "read",
+        "locator": "chart.result[0] · timestamp / indicators.quote[0].close；最近两个已完成交易日。",
+        "excerpt": "{\"symbol\":\"MU\",\"date\":\"2026-10-23\",\"close\":877.5499877929688,\"previous_date\":\"2026-10-22\",\"previous_close\":856.489990234375}"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "03896284d18cd6923b96d8ae6128a35ecc19fa8f1ae96a8ba3b83e3639d46c23",
+    "id": "e-ceb199393e54fa0cd7223cf25a5d66ae9d7541a771993b00e4aad1b3b2335a6f"
   }
 }
