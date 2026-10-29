@@ -1,0 +1,272 @@
+{
+  "version": 1,
+  "scope": "discovery",
+  "base_commit": "7cc8a7fdda7f215c771da8e76cbfbaca9fb53824",
+  "base_revision": "2026-10-29-9c5456f07e",
+  "base_sha256": "a0afe1fc118b61567a427a0d42e2a48a39ebeddb7e179250e11affccba8f4bd8",
+  "catalog_sha256": "b2f0acd9c73154504b9ba62d18a75398328554491b7b364b4c5b6d840c00c20f",
+  "created_at": "2026-10-29T00:16:30.803Z",
+  "completed_at": "2026-10-29T00:19:14.309Z",
+  "state": "verified",
+  "targets": [
+    "company:samsung",
+    "industry",
+    "technology:facilities",
+    "technology:processes",
+    "technology:products"
+  ],
+  "coverage": [
+    {
+      "key": "company:samsung",
+      "status": "verified",
+      "evidence": [
+        "index_samsung_ir_20261028",
+        "index_samsung_news_20261028"
+      ],
+      "reviewed_at": "2026-10-29T00:19:13.000Z",
+      "latest_disclosure": {
+        "url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_3Q_conference_eng.pdf",
+        "published_at": "2026-10-29"
+      },
+      "reason": "三星 IR 财报页 2026 Q3 条目的 3Q 2026 Earnings Call 资料已发布（10-29），包含存储部门收入与 DS 营业利润，另行处理完整季报。",
+      "finding": "new_disclosure"
+    },
+    {
+      "key": "industry",
+      "status": "verified",
+      "evidence": [
+        "index_tf_press_20261028",
+        "index_tf_insights_20261028",
+        "index_tf_news_20261028",
+        "index_dramx_20261028",
+        "index_dramx_contract_20261028",
+        "index_nanya_20261028",
+        "index_ecos_bok_20261028",
+        "index_ecos_kostat_20261028",
+        "index_ecos_kostat_inv_20261028"
+      ],
+      "reviewed_at": "2026-10-29T00:19:13.000Z",
+      "latest_disclosure": {
+        "url": "https://www.trendforce.com/news/2026/10/28/insights-memory-spot-price-update-nand-spot-price-cuts-accelerate-amid-china-phone-discounts-512gb-tlc-sink-9-19/",
+        "published_at": "2026-10-28"
+      },
+      "reason": "已检查行业入口：TrendForce 10-28 发布新的现货周报（DDR4 截至 10-27、512Gb TLC 截至 10-26），DRAMeXchange 10-28 18:10 收盘场有新的 DDR5 现货读数，另行发布行业更新；合同价表仍为 08-31；TrendForce 新闻稿 10-14 之后无内存价格新闻稿，Insights 无新的公开 Weekly Radar；韩国央行 DRAM 出口价格指数最新仍为 9 月，KSIC 26 出货与库存指数最新仍为 8 月；南亚科 9 月营收仍未公布。",
+      "finding": "new_disclosure"
+    },
+    {
+      "key": "technology:facilities",
+      "status": "verified",
+      "evidence": [
+        "index_micron_news_20261028",
+        "index_micron_events_20261028"
+      ],
+      "reviewed_at": "2026-10-29T00:19:13.000Z",
+      "latest_disclosure": {
+        "url": "https://investors.micron.com/news/press-release/2026/Micron-Invests-in-New-York-Critical-Minerals-Processing-With-Indium-Corporation/default.aspx",
+        "published_at": "2026-10-20"
+      },
+      "reason": "Micron 官方新闻入口最新为 10-27 爱达荷社区投资（非工厂里程碑）与 10-20 Indium 关键矿物投资，活动列表最新为 10-21 技术研讨会（已处理），无追踪工厂的新里程碑。",
+      "finding": "unchanged"
+    },
+    {
+      "key": "technology:processes",
+      "status": "verified",
+      "evidence": [
+        "index_micron_news_20261028",
+        "index_micron_events_20261028"
+      ],
+      "reviewed_at": "2026-10-29T00:19:13.000Z",
+      "latest_disclosure": {
+        "url": "https://s25.q4cdn.com/621799436/files/doc_downloads/2026/10/MU-TP-Webinar.pdf",
+        "published_at": "2026-10-21"
+      },
+      "reason": "最新相关披露仍为美光 10-21 技术研讨会（已处理）；之后官方入口无新的制程节点、良率或爬坡披露。",
+      "finding": "unchanged"
+    },
+    {
+      "key": "technology:products",
+      "status": "verified",
+      "evidence": [
+        "index_micron_news_20261028",
+        "index_micron_events_20261028",
+        "index_samsung_news_20261028",
+        "index_skhynix_news_20261028"
+      ],
+      "reviewed_at": "2026-10-29T00:19:13.000Z",
+      "latest_disclosure": {
+        "url": "https://news.skhynix.com/en/q3-2026-business-results/",
+        "published_at": "2026-10-28"
+      },
+      "reason": "SK 海力士 10-28 3Q26 财报中的 HBM4 进展已在上次更新处理；三星 Newsroom 与美光入口无新的 DDR5 RDIMM、HBM4/HBM4E 产品稿。三星 3Q26 财报资料中的产品进展随三星财报一并处理。",
+      "finding": "unchanged"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "index_tf_press_20261028",
+      "url": "https://www.trendforce.com/presscenter/",
+      "sha256": "78e36760b3209756eaf639eaa596d93502433d4b79d9ab6fc47b2a96689e3f6d",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-29T00:18:34.499Z",
+      "reviewed_at": "2026-10-29T00:18:34.499Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_tf_insights_20261028",
+      "url": "https://insights.trendforce.com/api/v1/archive?sort=new&search=&offset=0&limit=12",
+      "sha256": "68850f8acf232f43cbf0380109de99837ee79a276d21ea323829f2f679b5186e",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-29T00:18:34.844Z",
+      "reviewed_at": "2026-10-29T00:18:34.844Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_tf_news_20261028",
+      "url": "https://www.trendforce.com/news/wp-json/wp/v2/posts?after=2026-10-21T00:00:00&per_page=80&_fields=id,date,link,title",
+      "sha256": "5260dd01f3eeb744c8315ae3747f0a29a956cd85678b1c4bbedf29b692342acd",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-29T00:18:35.219Z",
+      "reviewed_at": "2026-10-29T00:18:35.219Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_dramx_20261028",
+      "url": "https://www.dramexchange.com/",
+      "sha256": "53cb272b1a3036d3c119016cfa898967b5ebecf06e37c4d4de0620f84089840c",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-29T00:18:35.563Z",
+      "reviewed_at": "2026-10-29T00:18:35.563Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_dramx_contract_20261028",
+      "url": "https://www.dramexchange.com/Home/HomePrice?Source=NationalDramContract",
+      "sha256": "29c77bccc31ba3a52f6cc14e783e7a2dbb5b11a8d16d254514ec0ef6212744bf",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-29T00:18:35.917Z",
+      "reviewed_at": "2026-10-29T00:18:35.917Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_nanya_20261028",
+      "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
+      "sha256": "6e9f960a00d2f7075673973aa4eb6b253d3723aa57cf4ef4df5aed4d60cc5495",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-29T00:18:36.268Z",
+      "reviewed_at": "2026-10-29T00:18:36.268Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_ecos_bok_20261028",
+      "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202601/202610/30911201AA/D",
+      "sha256": "5712399e1b6a68a38958abcea449ff1baac08d9ea48db363a2b1ae70d9d0cca6",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-29T00:18:36.628Z",
+      "reviewed_at": "2026-10-29T00:18:36.628Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_ecos_kostat_20261028",
+      "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202601/202610/I11ACQ/4",
+      "sha256": "6e1d9f849aec1f6ea071b3efa83215268bde3054737a8772d0e7608656c70e34",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-29T00:18:36.957Z",
+      "reviewed_at": "2026-10-29T00:18:36.957Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_ecos_kostat_inv_20261028",
+      "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202601/202610/I11ACQ/6",
+      "sha256": "75ec6df3fe58d0802722bf8964e52b9158deeca0feef326932c498fcaa5dcc31",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-29T00:18:37.277Z",
+      "reviewed_at": "2026-10-29T00:18:37.277Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_micron_events_20261028",
+      "url": "https://investors.micron.com/feed/Event.svc/GetEventList?LanguageId=1&eventSelection=3&sortOperator=1&eventDateFilter=3&pageSize=5&pageNumber=0&year=-1",
+      "sha256": "db583abad534e999b2466e96b28eebcd15b8639bc7cbf613c977d0f8c7ef2d37",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-29T00:18:38.044Z",
+      "reviewed_at": "2026-10-29T00:18:38.044Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_samsung_news_20261028",
+      "url": "https://news.samsung.com/global/",
+      "sha256": "cfe0c3e21d6756e82b769ffa8df677dce5794eaa3f45a6a37c0e8ef50d753424",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-29T00:18:38.499Z",
+      "reviewed_at": "2026-10-29T00:18:38.499Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_skhynix_news_20261028",
+      "url": "https://news.skhynix.com/en/",
+      "sha256": "c7e358f6b49afa7e68ad8ce07a2f03417e3bce1523d80639d5833bd2ac0bd1f4",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-29T00:18:38.837Z",
+      "reviewed_at": "2026-10-29T00:18:38.837Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_samsung_ir_20261028",
+      "url": "https://www.samsung.com/global/ir/financial-information/earnings-release/",
+      "sha256": "eccc9e0d9f7c52f6203ebaff06d3889837497696c051d4b273c5cd480a573008",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-29T00:18:39.203Z",
+      "reviewed_at": "2026-10-29T00:18:39.203Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_micron_news_20261028",
+      "url": "https://investors.micron.com/news/default.aspx",
+      "sha256": "57a7fea5f7e94b87c50ab1054254b659c2148959925744dd3093b9b90c7ec8c8",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-10-29T00:19:13.930Z",
+      "reviewed_at": "2026-10-29T00:19:13.930Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [],
+  "publication_corrections": [],
+  "technology_reviews": [
+    {
+      "id": "samsung_rdimm",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "samsung_hbm4",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "samsung_hbm4e",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    }
+  ],
+  "result": "success",
+  "artifact_sha256": "7de528bff4c3a02468cb3a40fbadb494e0fe9016b05860386440c31b68e4c59c",
+  "ledger_sha256": "0afba4aca7051f98cc5ed1a280650fb12ad507620552fe88a66358974b087143",
+  "evidence_sha256": "c440bd02827644c3f1b4abe1c11eb2658513b0271a639cf2c10ba3bab0f00aef"
+}
