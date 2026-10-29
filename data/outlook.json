@@ -113,6 +113,14 @@
           ]
         },
         {
+          "text": "SK 海力士 2026 Q3 收入同比 {{eco.skhynix.revenue|change}}，营业利润率由上年同期的 {{eco.skhynix.margin|previous}} 升至 {{eco.skhynix.margin}}；公司预计第四季 HBM4 出货量与收入均超过 HBM3E，并将在年底前让新产线满产以增加 HBM4 产量。同业利润率处于高位，与本站内存涨价数据的方向一致。",
+          "refs": [
+            "eco.skhynix.revenue",
+            "eco.skhynix.margin",
+            "outlook.skhynix.hbm"
+          ]
+        },
+        {
           "text": "企业 SSD 交付周期为 {{mu.demand.essd_lead_time}}，说明交付仍受约束；这是间接指标，不等于美光的出货量。",
           "refs": [
             "mu.demand.essd_lead_time"
@@ -207,7 +215,7 @@
           ]
         },
         {
-          "text": "供给在扩张：美光净资本开支 {{mu.capex.net}}，占收入 {{mu.capex.revenue_ratio}}，FY2027 计划{{mu.capex.next_year}}；SK 海力士计划加快新产线量产、2027 年初开放龙仁一期洁净室，三星计划扩大 HBM4 与 DDR5 供给。这些产能何时落地，是判断供需何时转松的关键。",
+          "text": "供给在扩张：美光净资本开支 {{mu.capex.net}}，占收入 {{mu.capex.revenue_ratio}}，FY2027 计划{{mu.capex.next_year}}；SK 海力士称明年龙仁一期全面投产、投资将大幅增加，并已用长期协议锁定 2027 年和 2028 年过半产能，三星计划扩大 HBM4 与 DDR5 供给。这些产能何时落地，是判断供需何时转松的关键。",
           "refs": [
             "mu.capex.net",
             "mu.capex.revenue_ratio",
@@ -265,8 +273,8 @@
       ]
     }
   ],
-  "generated_at": "2026-10-26T00:32:42.723Z",
-  "data_revision": "2026-10-26-5cda35099f",
+  "generated_at": "2026-10-29T00:12:47.052Z",
+  "data_revision": "2026-10-29-9c5456f07e",
   "financial_period": "FY2026 Q4",
   "cited": {
     "mu.revenue.total": {
@@ -494,6 +502,24 @@
         ""
       ]
     },
+    "eco.skhynix.revenue": {
+      "current": 104.6155,
+      "previous": 24.4489,
+      "change": "+327.9%"
+    },
+    "eco.skhynix.margin": {
+      "current": 80,
+      "previous": 47,
+      "change": "+33.0 个百分点"
+    },
+    "outlook.skhynix.hbm": {
+      "current": "M15X 将于年底前达到满产以增加 HBM4 产量；预计第四季度 HBM4 出货量与收入均超过 HBM3E，成为主流产品。",
+      "previous": null,
+      "detail": [
+        "M15X 将于年底前达到满产以增加 HBM4 产量；预计第四季度 HBM4 出货量与收入均超过 HBM3E，成为主流产品。",
+        "第二季度开始批量出货，下半年继续扩产"
+      ]
+    },
     "mu.demand.essd_lead_time": {
       "current": "16 周（均衡基准 8 周）",
       "previous": null
@@ -649,11 +675,11 @@
       "previous": null
     },
     "outlook.skhynix.capacity": {
-      "current": "加快 M15X 量产；龙仁一期洁净室计划于 2027 年初开放，随后扩产。项目按客户需求与投资效率分阶段推进。",
+      "current": "明年龙仁一期全面投产、国内外基础设施投资加速，投资预计大幅增加；规模与时点将按客户需求、产品竞争力、盈利能力与投资效率灵活调整。已与 14 家主要客户签订长期协议，覆盖 2027–2028 年总产能的一半以上。",
       "previous": null,
       "detail": [
-        "加快 M15X 量产；龙仁一期洁净室计划于 2027 年初开放，随后扩产。项目按客户需求与投资效率分阶段推进。",
-        ""
+        "明年龙仁一期全面投产、国内外基础设施投资加速，投资预计大幅增加；规模与时点将按客户需求、产品竞争力、盈利能力与投资效率灵活调整。已与 14 家主要客户签订长期协议，覆盖 2027–2028 年总产能的一半以上。",
+        "加快 M15X 量产；龙仁一期洁净室 2027 年初开放"
       ]
     },
     "outlook.samsung.products": {
@@ -710,6 +736,15 @@
     },
     {
       "at": "2026-10-26",
+      "call": "slowing",
+      "text": "美光库存天数已触发回测见顶预警；DRAM 价格指数{{mu.contract.bok_dram_price|change}}仍在上升。",
+      "values": {
+        "mu.contract.bok_dram_price|change": "+2.3%"
+      },
+      "grade": null
+    },
+    {
+      "at": "2026-10-29",
       "call": "slowing",
       "text": "美光库存天数已触发回测见顶预警；DRAM 价格指数{{mu.contract.bok_dram_price|change}}仍在上升。",
       "values": {

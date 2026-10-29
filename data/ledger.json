@@ -2,8 +2,8 @@
   "format_version": 1,
   "document": {
     "schema_version": 2,
-    "revision": "2026-10-28-7bc1bdd647",
-    "updated_at": "2026-10-28T07:18:45.280Z",
+    "revision": "2026-10-29-9c5456f07e",
+    "updated_at": "2026-10-29T00:12:29.249Z",
     "last_successful_check_at": "2026-09-20T23:50:00Z",
     "last_attempt_at": "2026-09-20T23:50:00Z",
     "financial_period": "FY2026 Q4",
@@ -740,12 +740,12 @@
         "type": "公司原始披露"
       },
       "eco_skhynix": {
-        "label": "SK 海力士 2026 Q2 财报与展望",
+        "label": "SK 海力士 2026 Q3 财报与展望",
         "short_label": "海力士财报",
-        "url": "https://news.skhynix.com/en/q2-2026-business-results/",
-        "published_at": "2026-07-29",
-        "checked_at": "2026-09-20",
-        "locator": "2Q26 Financial Results (K-IFRS) 表；HBM4、321 层 NAND、M15X 与 Yongin 产能计划。",
+        "url": "https://news.skhynix.com/en/q3-2026-business-results/",
+        "published_at": "2026-10-28",
+        "checked_at": "2026-10-29",
+        "locator": "3Q26 Financial Results (K-IFRS) 表，3Q26 / 3Q25；HBM4、321 层 NAND、M15X 与龙仁一期计划。",
         "type": "公司原始披露"
       },
       "eco_tsmc_prior_revenue": {
@@ -1050,7 +1050,7 @@
         "short_label": "SK 海力士 · HBM4 技术",
         "url": "https://news.skhynix.com/en/sk-hynix-completes-worlds-first-hbm4-development-and-readies-mass-production/",
         "published_at": "2025-09-12",
-        "checked_at": "2026-09-24",
+        "checked_at": "2026-10-29",
         "locator": "正文：1b、2048 I/O、超过 10Gbps、能效及 MR-MUF",
         "type": "公司原始披露"
       },
@@ -1944,6 +1944,51 @@
         "url": "https://investor.tsmc.com/english/financial-calendar",
         "type": "公司日程入口",
         "locator": "Upcoming Events 仅列 11 月至次年 1 月月营收发布，尚无 4Q'26 法说会日期。"
+      },
+      "tech_sk_q3": {
+        "label": "SK 海力士 · Q3 产品进展",
+        "short_label": "SK 海力士 · Q3 产品进展",
+        "url": "https://news.skhynix.com/en/q3-2026-business-results/",
+        "published_at": "2026-10-28",
+        "checked_at": "2026-10-29",
+        "locator": "HBM4 第三季正式出货；预计第四季出货量与收入均超过 HBM3E；M15X 年底前满产",
+        "type": "公司原始披露"
+      },
+      "index_micron_news_20261028": {
+        "label": "美光 IR 新闻稿",
+        "short_label": "Micron IR 新闻",
+        "url": "https://investors.micron.com/feed/PressRelease.svc/GetPressReleaseList?LanguageId=1&bodyType=0&pressReleaseDateFilter=3&pageSize=8&pageNumber=0&year=-1",
+        "published_at": null,
+        "checked_at": "2026-10-29",
+        "type": "公司官方入口",
+        "locator": "最新新闻稿为 10-27 爱达荷社区投资、10-20 Indium 投资，无产品阶段变化。"
+      },
+      "index_micron_events_20261028": {
+        "label": "美光 IR 活动",
+        "short_label": "Micron IR 活动",
+        "url": "https://investors.micron.com/feed/Event.svc/GetEventList?LanguageId=1&eventSelection=3&sortOperator=1&eventDateFilter=3&pageSize=5&pageNumber=0&year=-1",
+        "published_at": null,
+        "checked_at": "2026-10-29",
+        "type": "公司官方入口",
+        "locator": "最新活动仍为 10-21 技术与产品研讨会。"
+      },
+      "index_samsung_news_20261028": {
+        "label": "三星 Newsroom",
+        "short_label": "Samsung Newsroom",
+        "url": "https://news.samsung.com/global/",
+        "published_at": null,
+        "checked_at": "2026-10-29",
+        "type": "公司官方入口",
+        "locator": "最新为耳机、音响、品牌排名等非存储新闻，无 DDR5 RDIMM 或 HBM 新稿。"
+      },
+      "index_skhynix_news_20261028": {
+        "label": "SK 海力士 Newsroom",
+        "short_label": "SK hynix Newsroom",
+        "url": "https://news.skhynix.com/en/",
+        "published_at": null,
+        "checked_at": "2026-10-29",
+        "type": "公司官方入口",
+        "locator": "10-28 3Q26 财报与电话会通知；其余为技术专栏，无新的产品发布稿。"
       }
     },
     "metrics": [
@@ -2370,6 +2415,12 @@
       "产业链指引和管理层展望按原披露日期及目标期间记录，文字为中文摘要；同比由原始金额计算，百分点与百分比区分。"
     ],
     "check_log": [
+      {
+        "at": "2026-10-29T00:12:29.249Z",
+        "status": "success",
+        "scope": "batch",
+        "text": "核查范围：batch；完成 2 / 2 项。"
+      },
       {
         "at": "2026-10-28T07:18:45.280Z",
         "status": "success",
@@ -3018,32 +3069,32 @@
           "ticker": "000660",
           "group": "chips",
           "role": "DRAM · HBM · NAND",
-          "period": "2026 Q2",
-          "previous_period": "2025 Q2",
-          "period_end": "2026-06-30",
-          "published_at": "2026-07-29",
-          "checked_at": "2026-09-20",
+          "period": "2026 Q3",
+          "previous_period": "2025 Q3",
+          "period_end": "2026-09-30",
+          "published_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "scope": "集团存储业务，财报采用 K-IFRS。",
           "metrics": [
             {
-              "record_ref": "24d385d234626d90873cdfe0e5dd85bf6be32710301702e97a2a106707ab6bb1"
+              "record_ref": "cce73afe05b06bf154253853d32ac706232f0ab8b54d22b94789ce46d1a98a5b"
             },
             {
-              "record_ref": "de41c2d22a0b00969ed0377065b012b995c239cab9213e56abf584df751ef7ea"
+              "record_ref": "2ba1fc21ff31dd4eecf4c0c635527e21508aca945db032a8d8469a7d58d36cc0"
             },
             {
-              "record_ref": "485f58f44e44be876984a727f0968deecd4dcf0f8b04876ba271e10b0815689b"
+              "record_ref": "f13f54b287aba431eed236bf704d9f2c5164a1fcab88aa563c32364a67016efa"
             }
           ],
           "outlook": [
             {
-              "record_ref": "8c1acf157c3a2728ffe10d077945eb2577ae0364e4119d73e7c99ae01a3a63a9"
+              "record_ref": "7b31d5af723075243e4959753705cad0863aa25340790da2d57d3c330d0839f7"
             },
             {
-              "record_ref": "69538c191921b585967de48605944111b9c3530dacdd81e5eef5efa98cb89498"
+              "record_ref": "cb28f824e81365cf5840f6ff5090dc5ec01dfdc417e43b1eb628d8496f0401a8"
             },
             {
-              "record_ref": "d3facd32ff5c347fb5dc2a65a3aad021be258df5be49f9191b84ab82deb119df"
+              "record_ref": "a7635e8a498f35d5c7e4f2b0ffc05f8b16041d27c9718e6ec8f69b166f815fd4"
             }
           ],
           "notes": [
@@ -3334,7 +3385,7 @@
           "record_ref": "059ff325bc92f47d2a6571eaa928a342e15b9c14285966116e6bafd1137a6de4"
         },
         {
-          "record_ref": "470cbc81e42cbefa6376b65ced6f95f28b747b96e0d882908fe1fd7b62e24cb4"
+          "record_ref": "16d86d87edffb936c24fbf57a7fef3f022617b686ac3abe8ec83588d81e5b412"
         },
         {
           "record_ref": "a885ca7b381f7a1c695c16c64ed4ed40636131615aed63d1e0aaba2f826cb635"
@@ -23630,6 +23681,449 @@
         "e-2628a1f3dadabb9899b2e3f52193ecc49bd5314c8c33c50f8406b4acba8804d0"
       ],
       "id": "f064976616d443e6b355ef53d881e5f0cfd163b3878138688a3a9bf3e76badc7"
+    },
+    "cce73afe05b06bf154253853d32ac706232f0ab8b54d22b94789ce46d1a98a5b": {
+      "metric_id": "eco.skhynix.revenue",
+      "definition_version": 1,
+      "context": {
+        "entity": "skhynix",
+        "period": "2026 Q3",
+        "previous_period": "2025 Q3",
+        "period_end": "2026-09-30",
+        "report_published_at": "2026-10-28",
+        "measurement": "revenue",
+        "unit": "KRWt",
+        "scope": "集团收入",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "eco_skhynix",
+            "url": "https://news.skhynix.com/en/q3-2026-business-results/",
+            "published_at": "2026-10-28"
+          }
+        ]
+      },
+      "payload": {
+        "id": "revenue",
+        "label": "集团收入",
+        "current": 104.6155,
+        "previous": 24.4489,
+        "unit": "KRWt",
+        "source_ids": [
+          "eco_skhynix"
+        ],
+        "location": "3Q26 Financial Results 表 · Revenues，3Q26 / 3Q25；十亿韩元除以 1,000。",
+        "note": "",
+        "evidence_type": "direct"
+      },
+      "evidence_ids": [
+        "e-8743862949ff29b53eab35e97b0480680e3ac5db3973e305edd58e2d138af202"
+      ],
+      "id": "cce73afe05b06bf154253853d32ac706232f0ab8b54d22b94789ce46d1a98a5b"
+    },
+    "2ba1fc21ff31dd4eecf4c0c635527e21508aca945db032a8d8469a7d58d36cc0": {
+      "metric_id": "eco.skhynix.profit",
+      "definition_version": 1,
+      "context": {
+        "entity": "skhynix",
+        "period": "2026 Q3",
+        "previous_period": "2025 Q3",
+        "period_end": "2026-09-30",
+        "report_published_at": "2026-10-28",
+        "measurement": "operating_profit",
+        "unit": "KRWt",
+        "scope": "集团营业利润",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "eco_skhynix",
+            "url": "https://news.skhynix.com/en/q3-2026-business-results/",
+            "published_at": "2026-10-28"
+          }
+        ]
+      },
+      "payload": {
+        "id": "profit",
+        "label": "集团营业利润",
+        "current": 83.3338,
+        "previous": 11.3834,
+        "unit": "KRWt",
+        "source_ids": [
+          "eco_skhynix"
+        ],
+        "location": "3Q26 Financial Results 表 · Operating Profit，3Q26 / 3Q25；十亿韩元除以 1,000。",
+        "note": "",
+        "evidence_type": "direct"
+      },
+      "evidence_ids": [
+        "e-2bb843b86fb439642c8182ef35d0ea530bb59eeab1188a4abfe20f61257d3419"
+      ],
+      "id": "2ba1fc21ff31dd4eecf4c0c635527e21508aca945db032a8d8469a7d58d36cc0"
+    },
+    "f13f54b287aba431eed236bf704d9f2c5164a1fcab88aa563c32364a67016efa": {
+      "metric_id": "eco.skhynix.margin",
+      "definition_version": 1,
+      "context": {
+        "entity": "skhynix",
+        "period": "2026 Q3",
+        "previous_period": "2025 Q3",
+        "period_end": "2026-09-30",
+        "report_published_at": "2026-10-28",
+        "measurement": "margin",
+        "unit": "pct",
+        "scope": "集团营业利润率",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "eco_skhynix",
+            "url": "https://news.skhynix.com/en/q3-2026-business-results/",
+            "published_at": "2026-10-28"
+          }
+        ]
+      },
+      "payload": {
+        "id": "margin",
+        "label": "集团营业利润率",
+        "current": 80,
+        "previous": 47,
+        "unit": "pct",
+        "source_ids": [
+          "eco_skhynix"
+        ],
+        "location": "3Q26 Financial Results 表 · Operating Margin，3Q26 / 3Q25；按公司整数精度披露。",
+        "note": "",
+        "evidence_type": "direct",
+        "digits": 0
+      },
+      "evidence_ids": [
+        "e-8191a87b9b9f71e1b12675a5f02773bc7e369ad1593704a3066244ae0037c01a"
+      ],
+      "id": "f13f54b287aba431eed236bf704d9f2c5164a1fcab88aa563c32364a67016efa"
+    },
+    "7b31d5af723075243e4959753705cad0863aa25340790da2d57d3c330d0839f7": {
+      "metric_id": "outlook.skhynix.hbm",
+      "definition_version": 1,
+      "context": {
+        "entity": "skhynix",
+        "period": "2026 Q3",
+        "previous_period": "2025 Q3",
+        "period_end": "2026-09-30",
+        "report_published_at": "2026-10-28",
+        "measurement": "outlook",
+        "unit": "",
+        "scope": "HBM4 产量",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "target_period",
+        "sources": [
+          {
+            "id": "eco_skhynix",
+            "url": "https://news.skhynix.com/en/q3-2026-business-results/",
+            "published_at": "2026-10-28"
+          }
+        ]
+      },
+      "payload": {
+        "id": "hbm",
+        "label": "HBM4 产量",
+        "type": "text",
+        "value": null,
+        "summary": "M15X 将于年底前达到满产以增加 HBM4 产量；预计第四季度 HBM4 出货量与收入均超过 HBM3E，成为主流产品。",
+        "prior_guidance": "第二季度开始批量出货，下半年继续扩产",
+        "period": "2026 Q4",
+        "issued_at": "2026-10-28",
+        "speaker": "SK 海力士管理层",
+        "kind": "公司计划",
+        "evidence_type": "direct",
+        "source_ids": [
+          "eco_skhynix"
+        ],
+        "location": "Expanding production capacity 段落：M15X to maximum capacity by the end of the year；HBM4 to surpass HBM3E in the fourth quarter。"
+      },
+      "evidence_ids": [
+        "e-e9c74f899ddd5bfc79f8ac7d37a46012eb7862a7a52b722ac23bef344dfcb00c"
+      ],
+      "id": "7b31d5af723075243e4959753705cad0863aa25340790da2d57d3c330d0839f7"
+    },
+    "cb28f824e81365cf5840f6ff5090dc5ec01dfdc417e43b1eb628d8496f0401a8": {
+      "metric_id": "outlook.skhynix.nand",
+      "definition_version": 1,
+      "context": {
+        "entity": "skhynix",
+        "period": "2026 Q3",
+        "previous_period": "2025 Q3",
+        "period_end": "2026-09-30",
+        "report_published_at": "2026-10-28",
+        "measurement": "outlook",
+        "unit": "",
+        "scope": "321 层 NAND 产能占比",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "target_period",
+        "sources": [
+          {
+            "id": "eco_skhynix",
+            "url": "https://news.skhynix.com/en/q3-2026-business-results/",
+            "published_at": "2026-10-28"
+          }
+        ]
+      },
+      "payload": {
+        "id": "nand",
+        "label": "321 层 NAND 产能占比",
+        "type": "numeric",
+        "value": "超过 50%",
+        "summary": "第四季度 321 层工艺占韩国境内 NAND 产能过半，用于扩大高性能、大容量 eSSD 供给。",
+        "prior_guidance": "约 50%（2026 年末）",
+        "period": "2026 Q4",
+        "issued_at": "2026-10-28",
+        "speaker": "SK 海力士管理层",
+        "kind": "公司指引",
+        "evidence_type": "direct",
+        "source_ids": [
+          "eco_skhynix"
+        ],
+        "location": "In NAND 段落：raise the ratio of its 321-layer process to more than half of its domestic production capacity in the fourth quarter。"
+      },
+      "evidence_ids": [
+        "e-105776b452b6dcd05843fba388734faab0f3d2d5daf99ed6283ae2014ee2d48d"
+      ],
+      "id": "cb28f824e81365cf5840f6ff5090dc5ec01dfdc417e43b1eb628d8496f0401a8"
+    },
+    "a7635e8a498f35d5c7e4f2b0ffc05f8b16041d27c9718e6ec8f69b166f815fd4": {
+      "metric_id": "outlook.skhynix.capacity",
+      "definition_version": 1,
+      "context": {
+        "entity": "skhynix",
+        "period": "2026 Q3",
+        "previous_period": "2025 Q3",
+        "period_end": "2026-09-30",
+        "report_published_at": "2026-10-28",
+        "measurement": "outlook",
+        "unit": "",
+        "scope": "新增产能",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "target_period",
+        "sources": [
+          {
+            "id": "eco_skhynix",
+            "url": "https://news.skhynix.com/en/q3-2026-business-results/",
+            "published_at": "2026-10-28"
+          }
+        ]
+      },
+      "payload": {
+        "id": "capacity",
+        "label": "新增产能",
+        "type": "text",
+        "value": null,
+        "summary": "明年龙仁一期全面投产、国内外基础设施投资加速，投资预计大幅增加；规模与时点将按客户需求、产品竞争力、盈利能力与投资效率灵活调整。已与 14 家主要客户签订长期协议，覆盖 2027–2028 年总产能的一半以上。",
+        "prior_guidance": "加快 M15X 量产；龙仁一期洁净室 2027 年初开放",
+        "period": "2027 年",
+        "issued_at": "2026-10-28",
+        "speaker": "SK 海力士管理层",
+        "kind": "公司计划",
+        "evidence_type": "direct",
+        "source_ids": [
+          "eco_skhynix"
+        ],
+        "location": "Long-term agreements 段落：LTAs with 14 major customers，more than 50% of 2027 and 2028 capacity；Yongin Phase 1 full-scale operation next year。"
+      },
+      "evidence_ids": [
+        "e-c843ef16e2d1b72543a2814cb39fa3bd5ecc426fc78e95d9d284a96f22cc237f"
+      ],
+      "id": "a7635e8a498f35d5c7e4f2b0ffc05f8b16041d27c9718e6ec8f69b166f815fd4"
+    },
+    "16d86d87edffb936c24fbf57a7fef3f022617b686ac3abe8ec83588d81e5b412": {
+      "metric_id": "tech.skhynix_hbm4",
+      "definition_version": 1,
+      "context": {
+        "entity": "skhynix",
+        "period": "2026-10-28",
+        "measurement": "technology_product",
+        "unit": "",
+        "scope": "skhynix_hbm4",
+        "accounting_basis": "not_applicable",
+        "temporal_basis": "dated_disclosure",
+        "sources": [
+          {
+            "id": "tech_sk_hbm4",
+            "url": "https://news.skhynix.com/en/sk-hynix-completes-worlds-first-hbm4-development-and-readies-mass-production/",
+            "published_at": "2025-09-12"
+          },
+          {
+            "id": "tech_sk_q3",
+            "url": "https://news.skhynix.com/en/q3-2026-business-results/",
+            "published_at": "2026-10-28"
+          }
+        ]
+      },
+      "payload": {
+        "id": "skhynix_hbm4",
+        "type": "product",
+        "company_id": "skhynix",
+        "name": "HBM4",
+        "family": "hbm4",
+        "role": "",
+        "stage": "production",
+        "as_of": "2026-10-28",
+        "date_basis": "disclosure",
+        "period": "截至所列披露日",
+        "summary": "第三季度正式出货；预计第四季度出货量与收入均超过 HBM3E，M15X 于年底前满产。",
+        "kind": "公司披露",
+        "evidence_type": "direct",
+        "source_ids": [
+          "tech_sk_hbm4",
+          "tech_sk_q3"
+        ],
+        "location": "正文：1b、2048 I/O、超过 10Gbps、能效及 MR-MUF；3Q26 财报：HBM4 正式出货、Q4 超过 HBM3E、M15X 满产",
+        "note": "速率与能效取自 2025 年开发公告；2026 年第三季财报确认正式出货与扩产。",
+        "facts": [
+          {
+            "id": "capacity",
+            "label": "单堆栈容量",
+            "value": null,
+            "unit": "GB",
+            "qualifier": "",
+            "nature": "unavailable",
+            "period": "2025-09-12",
+            "as_of": "2025-09-12",
+            "source_ids": [
+              "tech_sk_hbm4"
+            ],
+            "location": "正文：1b、2048 I/O、超过 10Gbps、能效及 MR-MUF",
+            "baseline": "",
+            "note": ""
+          },
+          {
+            "id": "stack",
+            "label": "堆叠层数",
+            "value": null,
+            "unit": "layers",
+            "qualifier": "",
+            "nature": "unavailable",
+            "period": "2025-09-12",
+            "as_of": "2025-09-12",
+            "source_ids": [
+              "tech_sk_hbm4"
+            ],
+            "location": "正文：1b、2048 I/O、超过 10Gbps、能效及 MR-MUF",
+            "baseline": "",
+            "note": ""
+          },
+          {
+            "id": "speed",
+            "label": "单针速率",
+            "value": 10,
+            "unit": "Gbps",
+            "qualifier": ">",
+            "nature": "actual",
+            "period": "2025-09-12",
+            "as_of": "2025-09-12",
+            "source_ids": [
+              "tech_sk_hbm4"
+            ],
+            "location": "正文：1b、2048 I/O、超过 10Gbps、能效及 MR-MUF",
+            "baseline": "",
+            "note": ""
+          },
+          {
+            "id": "bandwidth",
+            "label": "堆栈带宽",
+            "value": null,
+            "unit": "TBps",
+            "qualifier": "",
+            "nature": "unavailable",
+            "period": "2025-09-12",
+            "as_of": "2025-09-12",
+            "source_ids": [
+              "tech_sk_hbm4"
+            ],
+            "location": "正文：1b、2048 I/O、超过 10Gbps、能效及 MR-MUF",
+            "baseline": "",
+            "note": ""
+          },
+          {
+            "id": "process",
+            "label": "DRAM / 封装",
+            "value": "1b / Advanced MR-MUF",
+            "unit": "",
+            "qualifier": "",
+            "nature": "actual",
+            "period": "2025-09-12",
+            "as_of": "2025-09-12",
+            "source_ids": [
+              "tech_sk_hbm4"
+            ],
+            "location": "正文：1b、2048 I/O、超过 10Gbps、能效及 MR-MUF",
+            "baseline": "",
+            "note": ""
+          },
+          {
+            "id": "power",
+            "label": "运行功耗",
+            "value": null,
+            "unit": "W",
+            "qualifier": "",
+            "nature": "unavailable",
+            "period": "2025-09-12",
+            "as_of": "2025-09-12",
+            "source_ids": [
+              "tech_sk_hbm4"
+            ],
+            "location": "正文：1b、2048 I/O、超过 10Gbps、能效及 MR-MUF",
+            "baseline": "",
+            "note": ""
+          },
+          {
+            "id": "power_change",
+            "label": "能效提升",
+            "value": 40,
+            "unit": "pct",
+            "qualifier": ">",
+            "nature": "vendor_claim",
+            "period": "2025-09-12",
+            "as_of": "2025-09-12",
+            "source_ids": [
+              "tech_sk_hbm4"
+            ],
+            "location": "正文：1b、2048 I/O、超过 10Gbps、能效及 MR-MUF",
+            "baseline": "自家前代；开发公告未给出完整测试条件",
+            "note": ""
+          },
+          {
+            "id": "next_milestone",
+            "label": "下一里程碑",
+            "value": "第四季度出货量与收入超过 HBM3E",
+            "unit": "",
+            "qualifier": "",
+            "nature": "plan",
+            "period": "自然年 2026 第四季度",
+            "as_of": "2026-10-28",
+            "source_ids": [
+              "tech_sk_q3"
+            ],
+            "location": "3Q26 财报：expects HBM4 to surpass HBM3E in both shipment volume and revenue in the fourth quarter",
+            "baseline": "",
+            "note": ""
+          }
+        ],
+        "power_test": {
+          "metric": "vendor_relative",
+          "capacity_gb": null,
+          "speed_mtps": null,
+          "platform": null,
+          "workload": null,
+          "voltage": null,
+          "temperature_c": null,
+          "method": null
+        }
+      },
+      "evidence_ids": [
+        "e-817d9746e0e8430f2fa0b8f69fb14123d29d945b25803e4ed7da63903104c19c"
+      ],
+      "id": "16d86d87edffb936c24fbf57a7fef3f022617b686ac3abe8ec83588d81e5b412"
     }
   },
   "supporting": {
