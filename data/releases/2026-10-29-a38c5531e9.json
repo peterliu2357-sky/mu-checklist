@@ -1,0 +1,195 @@
+{
+  "version": 1,
+  "scope": "batch",
+  "base_commit": "142510214e9ac66567cc9b6956f9787228c822ff",
+  "base_revision": "2026-10-29-80af3d8066",
+  "base_sha256": "80ac64f643c4f3acb0d250bcc6599740267b141bf5c15c783ba072b5bb91feef",
+  "catalog_sha256": "b2f0acd9c73154504b9ba62d18a75398328554491b7b364b4c5b6d840c00c20f",
+  "created_at": "2026-10-29T00:34:21.070Z",
+  "completed_at": "2026-10-29T00:44:04.634Z",
+  "state": "verified",
+  "targets": [
+    "industry",
+    "company:samsung",
+    "technology:products"
+  ],
+  "coverage": [
+    {
+      "key": "industry",
+      "status": "verified",
+      "evidence": [
+        "spot",
+        "dram_spot",
+        "index_tf_news_20261028",
+        "index_nanya_20261028"
+      ],
+      "reviewed_at": "2026-10-29T00:39:02.103Z",
+      "latest_disclosure": {
+        "url": "https://www.trendforce.com/news/2026/10/28/insights-memory-spot-price-update-nand-spot-price-cuts-accelerate-amid-china-phone-discounts-512gb-tlc-sink-9-19/",
+        "published_at": "2026-10-28"
+      },
+      "reason": "TrendForce 10-28 现货周报：DDR4 1Gx8 3200 周均价 47.04 美元（10-27，周涨 0.55%），512Gb TLC 晶圆 16.883 美元（10-26，周跌 9.19%）；DRAMeXchange 10-28 18:10 收盘场 DDR5 16Gb 4800/5600 均价 61.333 美元（持平）。三行各加入趋势点。TrendForce 本期称上周 DDR4 为 46.79 美元（10-21），与其 10-21 报告的 46.357 美元（10-20）不同，趋势线保留各期报告原值并在行注说明。南亚科官方月营收表 9 月仍为空白；其他行业行无新的原始数据。",
+      "finding": "new_disclosure"
+    },
+    {
+      "key": "company:samsung",
+      "status": "verified",
+      "evidence": [
+        "eco_samsung",
+        "eco_samsung_cash",
+        "eco_samsung_balance",
+        "eco_samsung_outlook",
+        "index_samsung_3q26_deck_20261029"
+      ],
+      "reviewed_at": "2026-10-29T00:39:02.103Z",
+      "latest_disclosure": {
+        "url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_3Q_conference_eng.pdf",
+        "published_at": "2026-10-29"
+      },
+      "reason": "三星 2026 Q3 业绩说明会资料：p13 Memory 收入 140.7 万亿韩元（上年同期 26.7）、DS 营业利润 106.5 万亿（上年同期 7.0）；p15 经营现金流 98.6 万亿、购置 PP&E 26.9 万亿；p14 期末存货 71,995.2 十亿韩元（上年同期 50,332.4），首次加入集团合并存货行；p7 存储业务第四季与 2027 年展望替换上季下半年展望。资料在外部审阅完成前发布，已在公司备注说明。",
+      "finding": "new_disclosure"
+    },
+    {
+      "key": "technology:products",
+      "status": "verified",
+      "evidence": [
+        "index_samsung_3q26_deck_20261029"
+      ],
+      "reviewed_at": "2026-10-29T00:39:02.103Z",
+      "latest_disclosure": {
+        "url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_3Q_conference_eng.pdf",
+        "published_at": "2026-10-29"
+      },
+      "reason": "三星 3Q26 资料称 HBM4 销售大幅扩大、第四季增加高速服务器 DDR5 供给，未披露 HBM4、HBM4E 或 DDR5 RDIMM 的新阶段、规格或里程碑日期，三项产品记录保留。",
+      "finding": "unchanged"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "spot",
+      "url": "https://www.trendforce.com/news/2026/10/28/insights-memory-spot-price-update-nand-spot-price-cuts-accelerate-amid-china-phone-discounts-512gb-tlc-sink-9-19/",
+      "sha256": "7201c8e10bb7681857ecb0fc885f4a8d2fed9f39de9595b8be1e33694a35e6fd",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-29T00:37:39.921Z",
+      "reviewed_at": "2026-10-29T00:37:39.921Z",
+      "status": "read"
+    },
+    {
+      "source_id": "dram_spot",
+      "url": "https://www.dramexchange.com/",
+      "sha256": "53cb272b1a3036d3c119016cfa898967b5ebecf06e37c4d4de0620f84089840c",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-29T00:37:40.258Z",
+      "reviewed_at": "2026-10-29T00:37:40.258Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_tf_news_20261028",
+      "url": "https://www.trendforce.com/news/wp-json/wp/v2/posts?after=2026-10-21T00:00:00&per_page=80&_fields=id,date,link,title",
+      "sha256": "653353aca6fc4955141dde75aa19b511b5d52ddd8f48e27cfa672e185a0d8456",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-29T00:37:40.601Z",
+      "reviewed_at": "2026-10-29T00:37:40.601Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_nanya_20261028",
+      "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
+      "sha256": "6e9f960a00d2f7075673973aa4eb6b253d3723aa57cf4ef4df5aed4d60cc5495",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-29T00:37:40.957Z",
+      "reviewed_at": "2026-10-29T00:37:40.957Z",
+      "status": "read"
+    },
+    {
+      "source_id": "eco_samsung",
+      "url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_3Q_conference_eng.pdf#page=13",
+      "sha256": "f3b09471a839eee5b0360ef9ecf9cd62ec75910174758a13a86562975fc7e241",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-29T00:37:41.289Z",
+      "reviewed_at": "2026-10-29T00:37:41.289Z",
+      "status": "read"
+    },
+    {
+      "source_id": "eco_samsung_cash",
+      "url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_3Q_conference_eng.pdf#page=15",
+      "sha256": "f3b09471a839eee5b0360ef9ecf9cd62ec75910174758a13a86562975fc7e241",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-29T00:37:41.685Z",
+      "reviewed_at": "2026-10-29T00:37:41.685Z",
+      "status": "read"
+    },
+    {
+      "source_id": "eco_samsung_balance",
+      "url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_3Q_conference_eng.pdf#page=14",
+      "sha256": "f3b09471a839eee5b0360ef9ecf9cd62ec75910174758a13a86562975fc7e241",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-29T00:37:42.052Z",
+      "reviewed_at": "2026-10-29T00:37:42.052Z",
+      "status": "read"
+    },
+    {
+      "source_id": "eco_samsung_outlook",
+      "url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_3Q_conference_eng.pdf#page=7",
+      "sha256": "f3b09471a839eee5b0360ef9ecf9cd62ec75910174758a13a86562975fc7e241",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-29T00:37:42.370Z",
+      "reviewed_at": "2026-10-29T00:37:42.370Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_samsung_3q26_deck_20261029",
+      "url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_3Q_conference_eng.pdf",
+      "sha256": "f3b09471a839eee5b0360ef9ecf9cd62ec75910174758a13a86562975fc7e241",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-29T00:37:42.739Z",
+      "reviewed_at": "2026-10-29T00:37:42.739Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [
+    "samsung"
+  ],
+  "publication_corrections": [
+    "dram_spot"
+  ],
+  "technology_reviews": [
+    {
+      "id": "samsung_rdimm",
+      "status": "unchanged",
+      "evidence": [
+        "index_samsung_3q26_deck_20261029"
+      ],
+      "reason": "3Q26 资料只称第四季增加高速服务器 DDR5 供给，未披露 DDR5 RDIMM 的新型号或阶段，保留原记录。"
+    },
+    {
+      "id": "samsung_hbm4",
+      "status": "unchanged",
+      "evidence": [
+        "index_samsung_3q26_deck_20261029"
+      ],
+      "reason": "3Q26 资料称 HBM4 销售大幅扩大，阶段仍为量产，未给新规格或里程碑，保留原记录。"
+    },
+    {
+      "id": "samsung_hbm4e",
+      "status": "unchanged",
+      "evidence": [
+        "index_samsung_3q26_deck_20261029"
+      ],
+      "reason": "3Q26 资料仅在配图说明列出 HBM4/E，未披露 HBM4E 新阶段，保留 05-29 送样记录。"
+    }
+  ],
+  "result": "success",
+  "artifact_sha256": "e61dced7b6947e4b0a3fd671b0d55782bdf3b0118176eab963bcefc40f6c4b38",
+  "ledger_sha256": "727d3a449a7943b72e3bfaf818c43aff28fcdd02de542c96b7643c0420b07375",
+  "evidence_sha256": "2cb615f1366df35dfafe7e1f668138597f405f746066ffc5d717a44363116044"
+}
