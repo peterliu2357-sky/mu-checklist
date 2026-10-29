@@ -60,6 +60,7 @@ test('the cycle read, spot premium and inventory ratio render from stored rows',
   contract.rows=contract.rows.filter(r=>!/_contract$/.test(r.id));supply.rows=supply.rows.filter(r=>!/^korea_ic_/.test(r.id));
   const add=(rows,id,label,current,unit,as_of)=>rows.push({id,label,current,previous:null,unit,source_ids:rows[0].source_ids,kind:'行业报价',evidence_type:'direct',period:as_of,location:'x',note:'',as_of});
   add(contract.rows,'ddr4_contract','DDR4 8Gb (1Gx8) 合同价',25,'USD','2026-08');
+  contract.rows.find(r=>r.id==='ddr4_spot').current=46.357;
   add(supply.rows,'korea_ic_inventory','库存指数',118.7,'index','2026-08');
   add(supply.rows,'korea_ic_shipment','出货指数',138.2,'index','2026-08');
   const pts=list=>list.map(([as_of,value])=>({as_of,value,unit:'index',sources:[{id:'x',url:'https://example.com/',published_at:as_of}],record_id:'a'.repeat(64)}));
