@@ -15762,5 +15762,500 @@
     "mode": "verified",
     "record_hash": "16d86d87edffb936c24fbf57a7fef3f022617b686ac3abe8ec83588d81e5b412",
     "id": "e-817d9746e0e8430f2fa0b8f69fb14123d29d945b25803e4ed7da63903104c19c"
+  },
+  "e-82a74baf26f334085ea0ad54616927f16887f20c0934054a3980ccb2ba6f55af": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "DDR4 1Gx8 3200 现货",
+    "values": {
+      "current": 47.04,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 47.04,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-10-27",
+        "locator": "TrendForce 10-28 Memory Spot Price Update · DRAM Spot Price",
+        "source_id": "spot"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-29T00:38:41.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "spot",
+        "url": "https://www.trendforce.com/news/2026/10/28/insights-memory-spot-price-update-nand-spot-price-cuts-accelerate-amid-china-phone-discounts-512gb-tlc-sink-9-19/",
+        "sha256": "7201c8e10bb7681857ecb0fc885f4a8d2fed9f39de9595b8be1e33694a35e6fd",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-29T00:37:39.921Z",
+        "reviewed_at": "2026-10-29T00:37:39.921Z",
+        "status": "read",
+        "locator": "DRAM Spot Price 正文：this week (October 27)",
+        "excerpt": "The average spot price of mainstream chips (i.e., DDR4 1Gx8 3200MT/s) has increased by 0.55% from US$46.79 last week (October 21) to US$47.04 this week (October 27)."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "20443dc5339d83a1a0f98a6b4cdb489174c91ed6f902e0995f65a172dfc914fb",
+    "id": "e-82a74baf26f334085ea0ad54616927f16887f20c0934054a3980ccb2ba6f55af"
+  },
+  "e-8b7648ba4bb18fb55dbe220bd8218775a2153d8068844a4eba5b8b4215140d7e": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "DDR5 16Gb (2Gx8) 4800/5600 现货",
+    "values": {
+      "current": 61.333,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 61.333,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-10-28",
+        "locator": "DRAMeXchange DRAM Spot Price · DDR5 16Gb (2Gx8) 4800/5600 · Session Average",
+        "source_id": "dram_spot"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-29T00:38:41.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "dram_spot",
+        "url": "https://www.dramexchange.com/",
+        "sha256": "53cb272b1a3036d3c119016cfa898967b5ebecf06e37c4d4de0620f84089840c",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-29T00:37:40.258Z",
+        "reviewed_at": "2026-10-29T00:37:40.258Z",
+        "status": "read",
+        "locator": "DRAM Spot Price 表 · Last Update: Oct.28 2026 18:10 (GMT+8)",
+        "excerpt": "DDR5 16Gb (2Gx8) 4800/5600 | Daily High 72.50 | Daily Low 47.30 | Session High 72.50 | Session Low 47.30 | Session Average 61.333 | Session Change 0.00 %"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "12f953c69dec2df9c5396fbb30e9cea5e6b5d13502b4cd05588392faf5ed6a26",
+    "id": "e-8b7648ba4bb18fb55dbe220bd8218775a2153d8068844a4eba5b8b4215140d7e"
+  },
+  "e-a8c236b4313b2a919e79f1660091c5701ef769cbf6a110ad2445dcfe149a65c8": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "512Gb TLC 现货",
+    "values": {
+      "current": 16.883,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 16.883,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-10-26",
+        "locator": "TrendForce 10-28 Memory Spot Price Update · NAND Flash Spot Price",
+        "source_id": "spot"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-29T00:38:41.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "spot",
+        "url": "https://www.trendforce.com/news/2026/10/28/insights-memory-spot-price-update-nand-spot-price-cuts-accelerate-amid-china-phone-discounts-512gb-tlc-sink-9-19/",
+        "sha256": "7201c8e10bb7681857ecb0fc885f4a8d2fed9f39de9595b8be1e33694a35e6fd",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-29T00:37:39.921Z",
+        "reviewed_at": "2026-10-29T00:37:39.921Z",
+        "status": "read",
+        "locator": "NAND Flash Spot Price 正文：this week (October 26)",
+        "excerpt": "Spot prices of 512Gb TLC wafers dropped by 9.19% this week (October 26), with average quotations arriving at US$16.883."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "54efb902320fb829a6b7264cd043787378938a41b44695ff8145f70f64d54622",
+    "id": "e-a8c236b4313b2a919e79f1660091c5701ef769cbf6a110ad2445dcfe149a65c8"
+  },
+  "e-3c7963959385c2678462adfa93f30d8c58ab5138ec4006b839c26e0618b05840": {
+    "measurement": "revenue",
+    "unit": "KRWt",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "Memory 收入",
+    "values": {
+      "current": 140.7,
+      "previous": 26.7,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 140.7,
+        "scale": 1,
+        "source_unit": "KRW trillion",
+        "period": "3Q26",
+        "locator": "Appendix 2 · Sales · Memory · 3Q 26",
+        "source_id": "eco_samsung"
+      },
+      {
+        "field": "previous",
+        "value": 26.7,
+        "scale": 1,
+        "source_unit": "KRW trillion",
+        "period": "3Q25",
+        "locator": "Appendix 2 · Sales · Memory · 3Q 25",
+        "source_id": "eco_samsung"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-29T00:38:41.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_samsung",
+        "url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_3Q_conference_eng.pdf#page=13",
+        "sha256": "f3b09471a839eee5b0360ef9ecf9cd62ec75910174758a13a86562975fc7e241",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-29T00:37:41.289Z",
+        "reviewed_at": "2026-10-29T00:37:41.289Z",
+        "status": "read",
+        "locator": "p13 Appendix 2: Results by Business Segment",
+        "excerpt": "Appendix 2: Results by Business Segment · Sales (KRW trillion) 3Q 25 | 2Q 26 | 3Q 26 · DS 33.1 | 127.5 | 147.1 (15%↑ QoQ, 344%↑ YoY) · Memory 26.7 | 120.8 | 140.7 (16%↑ QoQ, 427%↑ YoY) · Operating Profit DS 7.0 | 89.2 | 106.5 (17.3↑, 99.5↑)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "eface744f833869c728e90e9b5485edfbb15b2a654b1a0b9a73ba885362e23ba",
+    "id": "e-3c7963959385c2678462adfa93f30d8c58ab5138ec4006b839c26e0618b05840"
+  },
+  "e-bf8d93a9cf216db0981340fa8763eff274800fe2e7880491db6cf822fe380acf": {
+    "measurement": "operating_profit",
+    "unit": "KRWt",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "DS 营业利润",
+    "values": {
+      "current": 106.5,
+      "previous": 7,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 106.5,
+        "scale": 1,
+        "source_unit": "KRW trillion",
+        "period": "3Q26",
+        "locator": "Appendix 2 · Operating Profit · DS · 3Q 26",
+        "source_id": "eco_samsung"
+      },
+      {
+        "field": "previous",
+        "value": 7,
+        "scale": 1,
+        "source_unit": "KRW trillion",
+        "period": "3Q25",
+        "locator": "Appendix 2 · Operating Profit · DS · 3Q 25",
+        "source_id": "eco_samsung"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-29T00:38:41.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_samsung",
+        "url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_3Q_conference_eng.pdf#page=13",
+        "sha256": "f3b09471a839eee5b0360ef9ecf9cd62ec75910174758a13a86562975fc7e241",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-29T00:37:41.289Z",
+        "reviewed_at": "2026-10-29T00:37:41.289Z",
+        "status": "read",
+        "locator": "p13 Appendix 2: Results by Business Segment",
+        "excerpt": "Appendix 2: Results by Business Segment · Sales (KRW trillion) 3Q 25 | 2Q 26 | 3Q 26 · DS 33.1 | 127.5 | 147.1 (15%↑ QoQ, 344%↑ YoY) · Memory 26.7 | 120.8 | 140.7 (16%↑ QoQ, 427%↑ YoY) · Operating Profit DS 7.0 | 89.2 | 106.5 (17.3↑, 99.5↑)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "c2eaf08964d05c1d038bed05716f3280a0b8e45c0bf20a73fa0af6eaca142e2b",
+    "id": "e-bf8d93a9cf216db0981340fa8763eff274800fe2e7880491db6cf822fe380acf"
+  },
+  "e-987477ad4f3f7042056fc26b17b862ceda27e668b346deae68fea97918f66d6a": {
+    "measurement": "capex",
+    "unit": "KRWt",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "集团现金资本开支",
+    "values": {
+      "current": 26.9,
+      "previous": 10.8,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 26.9,
+        "scale": 1,
+        "source_unit": "KRW trillion",
+        "period": "3Q26",
+        "locator": "Appendix 4 · Purchase of PP&E · 3Q 26（流出，取绝对值）",
+        "source_id": "eco_samsung_cash"
+      },
+      {
+        "field": "previous",
+        "value": 10.8,
+        "scale": 1,
+        "source_unit": "KRW trillion",
+        "period": "3Q25",
+        "locator": "Appendix 4 · Purchase of PP&E · 3Q 25（流出，取绝对值）",
+        "source_id": "eco_samsung_cash"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-29T00:38:41.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_samsung_cash",
+        "url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_3Q_conference_eng.pdf#page=15",
+        "sha256": "f3b09471a839eee5b0360ef9ecf9cd62ec75910174758a13a86562975fc7e241",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-29T00:37:41.685Z",
+        "reviewed_at": "2026-10-29T00:37:41.685Z",
+        "status": "read",
+        "locator": "p15 Appendix 4: Cash Flow (Summary)",
+        "excerpt": "Appendix 4: Cash Flow (Summary) · KRW trillion 3Q 25 | 2Q 26 | 3Q 26 · Cash flows from operating activities 22.6 | 105.1 | 98.6 · Purchase of PP&E (10.8) | (14.1) | (26.9)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "444bd4fcfce5b709f36da15fff1e2b13babc45508b2ba26d10e082b489d0cb63",
+    "id": "e-987477ad4f3f7042056fc26b17b862ceda27e668b346deae68fea97918f66d6a"
+  },
+  "e-f1180e3109d328b460f7751567cce6a75b4c02a5be311071a9b00b8ebd1be572": {
+    "measurement": "ocf",
+    "unit": "KRWt",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "集团经营现金流",
+    "values": {
+      "current": 98.6,
+      "previous": 22.6,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 98.6,
+        "scale": 1,
+        "source_unit": "KRW trillion",
+        "period": "3Q26",
+        "locator": "Appendix 4 · Cash flows from operating activities · 3Q 26",
+        "source_id": "eco_samsung_cash"
+      },
+      {
+        "field": "previous",
+        "value": 22.6,
+        "scale": 1,
+        "source_unit": "KRW trillion",
+        "period": "3Q25",
+        "locator": "Appendix 4 · Cash flows from operating activities · 3Q 25",
+        "source_id": "eco_samsung_cash"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-29T00:38:41.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_samsung_cash",
+        "url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_3Q_conference_eng.pdf#page=15",
+        "sha256": "f3b09471a839eee5b0360ef9ecf9cd62ec75910174758a13a86562975fc7e241",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-29T00:37:41.685Z",
+        "reviewed_at": "2026-10-29T00:37:41.685Z",
+        "status": "read",
+        "locator": "p15 Appendix 4: Cash Flow (Summary)",
+        "excerpt": "Appendix 4: Cash Flow (Summary) · KRW trillion 3Q 25 | 2Q 26 | 3Q 26 · Cash flows from operating activities 22.6 | 105.1 | 98.6 · Purchase of PP&E (10.8) | (14.1) | (26.9)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "0883089153fa13f5c46689cfc670dd10eaf19496c6eb6602642df065681e1ec5",
+    "id": "e-f1180e3109d328b460f7751567cce6a75b4c02a5be311071a9b00b8ebd1be572"
+  },
+  "e-ece97e65bd04e14146ff5ec6f8af58ebd10c26017d12c2b5bc0943c7c1976490": {
+    "measurement": "inventory",
+    "unit": "KRWt",
+    "definition_version": 1,
+    "temporal_basis": "period_end",
+    "accounting_basis": "as_disclosed",
+    "scope": "集团合并期末存货（非存储部门口径）",
+    "values": {
+      "current": 71.9952,
+      "previous": 50.3324,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 71995.2,
+        "scale": 0.001,
+        "source_unit": "KRW billion",
+        "period": "2026-09-30",
+        "locator": "Appendix 3 · Inventories · 30.Sep.26",
+        "source_id": "eco_samsung_balance"
+      },
+      {
+        "field": "previous",
+        "value": 50332.4,
+        "scale": 0.001,
+        "source_unit": "KRW billion",
+        "period": "2025-09-30",
+        "locator": "Appendix 3 · Inventories · 30.Sep.25",
+        "source_id": "eco_samsung_balance"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-29T00:38:41.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_samsung_balance",
+        "url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_3Q_conference_eng.pdf#page=14",
+        "sha256": "f3b09471a839eee5b0360ef9ecf9cd62ec75910174758a13a86562975fc7e241",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-29T00:37:42.052Z",
+        "reviewed_at": "2026-10-29T00:37:42.052Z",
+        "status": "read",
+        "locator": "p14 Appendix 3: Financial Position (Summary)",
+        "excerpt": "Appendix 3: Financial Position (Summary) · KRW billion 30.Sep.25 | 30.Jun.26 | 30.Sep.26 · Inventories 50,332.4 | 71,389.1 | 71,995.2"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "286c41879d5f5bc6990dc23e73e17e645a8e5a79c69f46a9f15361519a03219b",
+    "id": "e-ece97e65bd04e14146ff5ec6f8af58ebd10c26017d12c2b5bc0943c7c1976490"
+  },
+  "e-0e860c1f6c45b865bd9d1975d8f728ae4545005257ea108fe8459666c2c7dcca": {
+    "measurement": "outlook",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "target_period",
+    "accounting_basis": "as_disclosed",
+    "scope": "存储需求与供给",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "预计第四季 AI 基础设施投资持续，存储需求进一步增长、以新 CPU/GPU 平台相关产品为主，个人 AI Agent 服务推动 QLC SSD 需求快速增加；2027 年 AI 驱动的需求可能使供给短缺较 2026 年更紧。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-29T00:38:41.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_samsung_outlook",
+        "url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_3Q_conference_eng.pdf#page=7",
+        "sha256": "f3b09471a839eee5b0360ef9ecf9cd62ec75910174758a13a86562975fc7e241",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-29T00:37:42.370Z",
+        "reviewed_at": "2026-10-29T00:37:42.370Z",
+        "status": "read",
+        "locator": "p7 Memory · Outlook · 4Q 2026 / 2027",
+        "excerpt": "4Q 2026: AI infrastructure investment to continue backed by industry-wide competition for AI leadership · Further memory demand growth centered on products for new CPU/GPU platforms · Surging QLC SSD demand linked to the expansion of personal AI Agent services. 2027: AI infra CapEx to accelerate as AI ecosystem expands · Surging AI-driven demand likely to further tighten supply shortages compared with CY26"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "06a442d0fab1ff4bfe81bf66f558b5270e4f86c4673a0a3a7b8510ce437a6c71",
+    "id": "e-0e860c1f6c45b865bd9d1975d8f728ae4545005257ea108fe8459666c2c7dcca"
+  },
+  "e-6a1d6cb9bb8d158717d936c4fad145df666974d7afeaac357c04b6dab6559648": {
+    "measurement": "outlook",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "target_period",
+    "accounting_basis": "as_disclosed",
+    "scope": "产品组合",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "第四季进一步增加 HBM、服务器 DRAM 与 SSD 销售，扩大高速服务器 DDR5 与 QLC 供给；2027 年以长期合约建立稳定销售基础，并按 AI 应用需求及时备妥新品。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-29T00:38:41.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_samsung_outlook",
+        "url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_3Q_conference_eng.pdf#page=7",
+        "sha256": "f3b09471a839eee5b0360ef9ecf9cd62ec75910174758a13a86562975fc7e241",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-29T00:37:42.370Z",
+        "reviewed_at": "2026-10-29T00:37:42.370Z",
+        "status": "read",
+        "locator": "p7 Memory · Outlook · 4Q 2026 / 2027",
+        "excerpt": "Maintain AI application focused sales strategy · Further increase sales of HBM, Server DRAM and SSDs · Increase supply of high-speed Server DDR5 and QLC. 2027: Build a stable sales base through long-term contracts and ensure timely readiness of new products tailored to requirements for AI applications"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "e261e5bc6976ef1f2c87a5a461ae6018ed05005ef0160a49b5fb3743a8896bb2",
+    "id": "e-6a1d6cb9bb8d158717d936c4fad145df666974d7afeaac357c04b6dab6559648"
   }
 }
