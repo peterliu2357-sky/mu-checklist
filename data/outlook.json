@@ -96,7 +96,7 @@
           ]
         },
         {
-          "text": "英伟达数据中心收入同比 {{eco.nvidia.datacenter|change}}；Microsoft 管理层称客户需求仍超过供给，Oracle 称 AI 需求增长仍快于供给，三星预计第四季新 CPU/GPU 平台带动存储需求进一步增长，并称明年 AI 驱动的需求可能让供给短缺比今年更紧。",
+          "text": "英伟达数据中心收入同比 {{eco.nvidia.datacenter|change}}；Microsoft 管理层称客户需求仍超过供给，Oracle 称 AI 需求增长仍快于供给，三星预计服务器 DRAM、企业 SSD 与 HBM 需求加速。",
           "refs": [
             "eco.nvidia.datacenter",
             "outlook.microsoft.demand",
@@ -118,13 +118,6 @@
             "eco.skhynix.revenue",
             "eco.skhynix.margin",
             "outlook.skhynix.hbm"
-          ]
-        },
-        {
-          "text": "三星 2026 Q3 存储收入同比 {{eco.samsung.revenue|change}}，含存储、晶圆代工与 System LSI 的 DS 部门营业利润由上年同期的 {{eco.samsung.profit|previous}} 增至 {{eco.samsung.profit}}。两家同业的业绩方向一致。",
-          "refs": [
-            "eco.samsung.revenue",
-            "eco.samsung.profit"
           ]
         },
         {
@@ -188,7 +181,7 @@
           ]
         },
         {
-          "text": "售价仍在上涨，但涨幅在收窄：本站售价卡片的解读指出 DRAM、NAND 涨幅较 FQ3 收窄（FQ3 售价数值本站未列出），TrendForce 也预计 2026 Q4 普通型 DRAM 合同价为 {{mu.contract.dram_forecast}}，并称涨幅将较上季收敛（上季预测值本站未列出）；NAND 方面，2026 Q3 公开摘要曾称「{{mu.contract.nand_trend}}」，而 2026 Q4 预测为 {{mu.contract.nand_forecast}}。DRAM 现货维持高位：DDR4 {{mu.contract.ddr4_spot|change}}，最新 {{mu.contract.ddr4_spot}}，仍高于趋势线起点的 {{series.mu.contract.ddr4_spot@2026-06-23}}；DDR5 {{mu.contract.ddr5_spot|change}}，最新 {{mu.contract.ddr5_spot}}，与上一读数 {{series.mu.contract.ddr5_spot@2026-10-23}} 相近。NAND 现货走弱加快：TLC 晶圆 {{mu.contract.tlc_spot|change}}，最新 {{mu.contract.tlc_spot}}，低于近期高点 {{series.mu.contract.tlc_spot@2026-08-17}}。",
+          "text": "售价仍在上涨，但涨幅在收窄：本站售价卡片的解读指出 DRAM、NAND 涨幅较 FQ3 收窄（FQ3 售价数值本站未列出），TrendForce 也预计 2026 Q4 普通型 DRAM 合同价为 {{mu.contract.dram_forecast}}，并称涨幅将较上季收敛（上季预测值本站未列出）；NAND 方面，2026 Q3 公开摘要曾称「{{mu.contract.nand_trend}}」，而 2026 Q4 预测为 {{mu.contract.nand_forecast}}。DRAM 现货维持高位：DDR4 {{mu.contract.ddr4_spot|change}}，最新 {{mu.contract.ddr4_spot}}，仍高于趋势线起点的 {{series.mu.contract.ddr4_spot@2026-06-23}}；DDR5 {{mu.contract.ddr5_spot|change}}，最新 {{mu.contract.ddr5_spot}}，高于上一读数 {{series.mu.contract.ddr5_spot@2026-10-21}}。NAND 现货偏弱：TLC 晶圆最新 {{mu.contract.tlc_spot}}，低于近期高点 {{series.mu.contract.tlc_spot@2026-08-17}}。",
           "refs": [
             "mu.asp.dram",
             "mu.asp.nand",
@@ -200,7 +193,7 @@
             "mu.contract.tlc_spot",
             "series.mu.contract.ddr4_spot@2026-06-23",
             "series.mu.contract.tlc_spot@2026-08-17",
-            "series.mu.contract.ddr5_spot@2026-10-23"
+            "series.mu.contract.ddr5_spot@2026-10-21"
           ]
         },
         {
@@ -213,15 +206,16 @@
           ]
         },
         {
-          "text": "消费端偏弱：手机与客户端位元出货{{mu.volume.mobile_bits}}，手机客户方面{{mu.demand.mobile_inventory_proxy}}；TrendForce 的 NAND 展望为「{{mu.supply.nand_outlook}}」。",
+          "text": "消费端偏弱：手机与客户端位元出货{{mu.volume.mobile_bits}}，手机客户方面{{mu.demand.mobile_inventory_proxy}}；三星也预计手机与 PC 需求部分放缓，TrendForce 的 NAND 展望为「{{mu.supply.nand_outlook}}」。",
           "refs": [
             "mu.volume.mobile_bits",
             "mu.demand.mobile_inventory_proxy",
+            "outlook.samsung.demand",
             "mu.supply.nand_outlook"
           ]
         },
         {
-          "text": "供给在扩张：美光净资本开支 {{mu.capex.net}}，占收入 {{mu.capex.revenue_ratio}}，FY2027 计划{{mu.capex.next_year}}；SK 海力士称明年龙仁一期全面投产、投资将大幅增加，并已用长期协议锁定 2027 年和 2028 年过半产能，三星计划第四季扩大高速服务器 DDR5 与 QLC 供给，并进一步增加 HBM 销售。这些产能何时落地，是判断供需何时转松的关键。",
+          "text": "供给在扩张：美光净资本开支 {{mu.capex.net}}，占收入 {{mu.capex.revenue_ratio}}，FY2027 计划{{mu.capex.next_year}}；SK 海力士称明年龙仁一期全面投产、投资将大幅增加，并已用长期协议锁定 2027 年和 2028 年过半产能，三星计划扩大 HBM4 与 DDR5 供给。这些产能何时落地，是判断供需何时转松的关键。",
           "refs": [
             "mu.capex.net",
             "mu.capex.revenue_ratio",
@@ -279,8 +273,8 @@
       ]
     }
   ],
-  "generated_at": "2026-10-29T00:44:05.850Z",
-  "data_revision": "2026-10-29-a38c5531e9",
+  "generated_at": "2026-10-29T00:28:09.339Z",
+  "data_revision": "2026-10-29-80af3d8066",
   "financial_period": "FY2026 Q4",
   "cited": {
     "mu.revenue.total": {
@@ -480,10 +474,10 @@
       ]
     },
     "outlook.samsung.demand": {
-      "current": "预计第四季 AI 基础设施投资持续，新 CPU/GPU 平台带动存储需求进一步增长，个人 AI Agent 服务推动 QLC SSD 需求快速增加；2027 年 AI 驱动的需求可能使供给短缺较 2026 年更紧。",
+      "current": "预计服务器 DRAM、企业 SSD 与 HBM 需求加速，供给仍偏紧；手机与 PC 需求部分放缓。",
       "previous": null,
       "detail": [
-        "预计第四季 AI 基础设施投资持续，新 CPU/GPU 平台带动存储需求进一步增长，个人 AI Agent 服务推动 QLC SSD 需求快速增加；2027 年 AI 驱动的需求可能使供给短缺较 2026 年更紧。",
+        "预计服务器 DRAM、企业 SSD 与 HBM 需求加速，供给仍偏紧；手机与 PC 需求部分放缓。",
         ""
       ]
     },
@@ -525,16 +519,6 @@
         "M15X 将于年底前达到满产以增加 HBM4 产量；预计第四季度 HBM4 出货量与收入均超过 HBM3E，成为主流产品。",
         "第二季度开始批量出货，下半年继续扩产"
       ]
-    },
-    "eco.samsung.revenue": {
-      "current": 140.7,
-      "previous": 26.7,
-      "change": "+427%（报告值）"
-    },
-    "eco.samsung.profit": {
-      "current": 106.5,
-      "previous": 7,
-      "change": "+99.5 万亿韩元"
     },
     "mu.demand.essd_lead_time": {
       "current": "16 周（均衡基准 8 周）",
@@ -629,19 +613,19 @@
       "previous": null
     },
     "mu.contract.ddr4_spot": {
-      "current": 47.04,
+      "current": 46.357,
       "previous": null,
-      "change": "周变动 +0.55%（报告值）"
+      "change": "周变动 +0.84%（报告值）"
     },
     "mu.contract.ddr5_spot": {
-      "current": 61.333,
+      "current": 61.267,
       "previous": null,
-      "change": "日变动 0.00%（DRAMeXchange 披露）"
+      "change": "日变动 +0.27%（DRAMeXchange 披露）"
     },
     "mu.contract.tlc_spot": {
-      "current": 16.883,
+      "current": 18.592,
       "previous": null,
-      "change": "周变动 −9.19%（报告值）"
+      "change": "周变动 −1.28%（报告值）"
     },
     "series.mu.contract.ddr4_spot@2026-06-23": {
       "current": 35.9,
@@ -651,8 +635,8 @@
       "current": 21.208,
       "previous": null
     },
-    "series.mu.contract.ddr5_spot@2026-10-23": {
-      "current": 61.267,
+    "series.mu.contract.ddr5_spot@2026-10-21": {
+      "current": 60.867,
       "previous": null
     },
     "guidance.margin_nongaap": {
@@ -699,10 +683,10 @@
       ]
     },
     "outlook.samsung.products": {
-      "current": "第四季进一步增加 HBM、服务器 DRAM 与 SSD 销售，扩大高速服务器 DDR5 与 QLC 供给；2027 年以长期合约建立稳定销售基础，并按 AI 应用需求及时推出新品。",
+      "current": "计划扩大 HBM4、DDR5、SOCAMM2 等高附加值产品供给。",
       "previous": null,
       "detail": [
-        "第四季进一步增加 HBM、服务器 DRAM 与 SSD 销售，扩大高速服务器 DDR5 与 QLC 供给；2027 年以长期合约建立稳定销售基础，并按 AI 应用需求及时推出新品。",
+        "计划扩大 HBM4、DDR5、SOCAMM2 等高附加值产品供给。",
         ""
       ]
     },
