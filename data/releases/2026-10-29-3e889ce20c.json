@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "scope": "batch",
+  "base_commit": "c1b2bc4e5093b90e8f45eb995e64422fc9c8c150",
+  "base_revision": "2026-10-29-a8c3ce927f",
+  "base_sha256": "bf27c6355617c6d7d356cd6087e520f0f99deab3117aebe26eb22bcc62b4610e",
+  "catalog_sha256": "bdeb646b45ef5221e3fe3fd02fb932273d743f0c60d1d537f4f475b91b814ba9",
+  "created_at": "2026-10-29T21:36:58.482Z",
+  "completed_at": "2026-10-29T21:46:11.930Z",
+  "state": "verified",
+  "targets": [
+    "company:alphabet",
+    "company:microsoft"
+  ],
+  "coverage": [
+    {
+      "key": "company:alphabet",
+      "status": "verified",
+      "evidence": [
+        "eco_google_cloud",
+        "eco_google_cash",
+        "eco_google_call"
+      ],
+      "reviewed_at": "2026-10-29T21:46:11.517Z",
+      "latest_disclosure": {
+        "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-release.pdf",
+        "published_at": "2026-10-28"
+      },
+      "reason": "已读取 Alphabet 2026 Q3 财报（10-28 发布）与业绩会文字稿：Google Cloud 收入 307.09 亿美元（上年同期 151.57 亿）、营业利润 111.21 亿（35.94 亿）；现金资本开支 513.55 亿（239.53 亿），经营现金流 422.90 亿（484.14 亿）。全年资本开支指引维持 1,950–2,050 亿美元；预计 2027 年资本开支继续显著增加；第三季末开始使用第三方算力，预计近期云利润率承压。下一次财报日期尚未公布。",
+      "finding": "new_disclosure"
+    },
+    {
+      "key": "company:microsoft",
+      "status": "verified",
+      "evidence": [
+        "eco_ms",
+        "eco_ms_recast",
+        "eco_ms_adjusted",
+        "eco_ms_call"
+      ],
+      "reviewed_at": "2026-10-29T21:46:11.517Z",
+      "latest_disclosure": {
+        "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast",
+        "published_at": "2026-10-28"
+      },
+      "reason": "已读取 Microsoft FY2027 Q1 财报（10-28 发布）与业绩会文字稿：FY2027 起分部改为 Agents and Infra / Devices and Consumer，Intelligent Cloud 不再披露，分部收入与利润定义升至版本 2（Agents and Infra，上年同期为公司重列值）；Azure 收入 331.65 亿美元（重列上年同期 223.84 亿）；现金资本开支 393.67 亿（193.94 亿），经营现金流 580.00 亿（450.57 亿）。Q2 指引 Azure 固定汇率增长 49%–50%、资本开支超过 500 亿美元；自然年资本开支下调至约 1,700 亿美元（原约 1,750 亿美元），原因为第三方产能交付延迟；下半财年资本开支预计加速，含更高的内存与存储成本。下一次财报日期尚未公布。",
+      "finding": "new_disclosure"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "eco_google_cloud",
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-release.pdf#page=2",
+      "sha256": "2f9b94e9194ea4b462bf754c4b651615ab53518b314550f3402b27aabf0735e9",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-29T21:37:54.940Z",
+      "reviewed_at": "2026-10-29T21:37:54.940Z",
+      "status": "read"
+    },
+    {
+      "source_id": "eco_google_cash",
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-release.pdf#page=6",
+      "sha256": "2f9b94e9194ea4b462bf754c4b651615ab53518b314550f3402b27aabf0735e9",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-29T21:37:55.303Z",
+      "reviewed_at": "2026-10-29T21:37:55.303Z",
+      "status": "read"
+    },
+    {
+      "source_id": "eco_google_call",
+      "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Oct/28/2026_Q3_Earnings_Transcript.pdf#page=12",
+      "sha256": "7e92f1db003536fb7cdc80546c3d5cc2c7f9528368efd4b7421cb550ac75db64",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-29T21:37:55.698Z",
+      "reviewed_at": "2026-10-29T21:37:55.698Z",
+      "status": "read"
+    },
+    {
+      "source_id": "eco_ms",
+      "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast",
+      "sha256": "b6557edf22d53376fb492b0091c7e8138d2576f5e7145ce0b15d6d34a279222f",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-29T21:37:56.044Z",
+      "reviewed_at": "2026-10-29T21:37:56.044Z",
+      "status": "read"
+    },
+    {
+      "source_id": "eco_ms_recast",
+      "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast",
+      "sha256": "b6557edf22d53376fb492b0091c7e8138d2576f5e7145ce0b15d6d34a279222f",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-29T21:37:56.426Z",
+      "reviewed_at": "2026-10-29T21:37:56.426Z",
+      "status": "read"
+    },
+    {
+      "source_id": "eco_ms_adjusted",
+      "url": "https://www.microsoft.com/en-us/investor/earnings/FY-2027-Q1/Document/DownloadDocument/37/TranscriptQandAFY27Q1.docx",
+      "sha256": "f7d9327dcba092cedc8a59dbc038565da34daeff2faa4ad4e7204b73890144ac",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-29T21:37:56.831Z",
+      "reviewed_at": "2026-10-29T21:37:56.831Z",
+      "status": "read"
+    },
+    {
+      "source_id": "eco_ms_call",
+      "url": "https://www.microsoft.com/en-us/investor/earnings/FY-2027-Q1/Document/DownloadDocument/37/TranscriptQandAFY27Q1.docx",
+      "sha256": "f7d9327dcba092cedc8a59dbc038565da34daeff2faa4ad4e7204b73890144ac",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-29T21:37:57.250Z",
+      "reviewed_at": "2026-10-29T21:37:57.250Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [
+    "alphabet",
+    "microsoft"
+  ],
+  "publication_corrections": [],
+  "technology_reviews": [],
+  "result": "success",
+  "artifact_sha256": "d8d9e2267d50696d755e22eded7f917eb0486324c9f7fd626beacd17b8ce235e",
+  "ledger_sha256": "8e2a8f4af9a75caa265d4fd89096a6206acf6a12888d4ff60d7b3dfa65faac74",
+  "evidence_sha256": "d2a3bbcf8329aa84200d0fee69284cb71dfdf8c24ec8321b98c7c7033efda249"
+}
