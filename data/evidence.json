@@ -16313,5 +16313,768 @@
     "mode": "verified",
     "record_hash": "bf8eff542325afbc077be840c34f5d587a0253f48b3b604da16ac62b33e87f32",
     "id": "e-b0b820afb7fc422781263ad11357fe0449da27b13baf337f4939e84f8a6dde04"
+  },
+  "e-33ce7d8cfbfa1fbef08a9a0a4ac0d1cd6f3ba7ec6a550e8cfcb33a67924a00a8": {
+    "measurement": "revenue",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "Azure 收入（新口径）",
+    "values": {
+      "current": 33165,
+      "previous": 22384,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 33165,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FY2027 Q1",
+        "locator": "Product and Service Offerings Revenue · Azure · 2026",
+        "source_id": "eco_ms_recast"
+      },
+      {
+        "field": "previous",
+        "value": 22384,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FY2026 Q1",
+        "locator": "Product and Service Offerings Revenue · Azure · 2025（重列）",
+        "source_id": "eco_ms_recast"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-29T21:46:11.517Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_ms_recast",
+        "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast",
+        "sha256": "b6557edf22d53376fb492b0091c7e8138d2576f5e7145ce0b15d6d34a279222f",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-29T21:37:56.426Z",
+        "reviewed_at": "2026-10-29T21:37:56.426Z",
+        "status": "read",
+        "locator": "PRODUCT AND SERVICE OFFERINGS REVENUE",
+        "excerpt": "PRODUCT AND SERVICE OFFERINGS REVENUE (In millions) Three Months Ended September 30, 2026 | 2025 · Azure $33,165 | $22,384 · We have recast certain prior period amounts to conform to the way we internally manage and monitor our business, which reflects the fiscal year 2027 changes to our segments announced in September 2026."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "37577c96e140cc5f4a8ad4fdb94810078d625f620a4f3e7aca925f39a3bcc9a7",
+    "id": "e-33ce7d8cfbfa1fbef08a9a0a4ac0d1cd6f3ba7ec6a550e8cfcb33a67924a00a8"
+  },
+  "e-e2904af8fd8efb5ce34060c1adb5dedd94050150804b79090576cd037f26be37": {
+    "measurement": "revenue",
+    "unit": "USDm",
+    "definition_version": 2,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "Agents and Infra 收入",
+    "values": {
+      "current": 76795,
+      "previous": 61672,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 76795,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FY2027 Q1",
+        "locator": "Segment Results · Agents and Infra · Revenue · 2026",
+        "source_id": "eco_ms"
+      },
+      {
+        "field": "previous",
+        "value": 61672,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FY2026 Q1",
+        "locator": "Segment Results · Agents and Infra · Revenue · 2025（重列）",
+        "source_id": "eco_ms"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-29T21:46:11.517Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_ms",
+        "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast",
+        "sha256": "b6557edf22d53376fb492b0091c7e8138d2576f5e7145ce0b15d6d34a279222f",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-29T21:37:56.044Z",
+        "reviewed_at": "2026-10-29T21:37:56.044Z",
+        "status": "read",
+        "locator": "SEGMENT RESULTS",
+        "excerpt": "SEGMENT RESULTS (In millions) Three Months Ended September 30, 2026 | 2025 · Agents and Infra · Revenue $76,795 | $61,672 · Operating income $40,558 | $32,718 · We have recast certain prior period amounts ... FY2027 changes to our segments announced in September 2026."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "d4a3d3c8d310c5124ed377b2e7076ec516ad744e7031fe0f3a4697ba6245a0af",
+    "id": "e-e2904af8fd8efb5ce34060c1adb5dedd94050150804b79090576cd037f26be37"
+  },
+  "e-4835aef9c20f6234efdd526dc0925695c9eb8a921f13543dc27f5018ea0b994f": {
+    "measurement": "operating_profit",
+    "unit": "USDm",
+    "definition_version": 2,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "Agents and Infra 营业利润",
+    "values": {
+      "current": 40558,
+      "previous": 32718,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 40558,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FY2027 Q1",
+        "locator": "Segment Results · Agents and Infra · Operating income · 2026",
+        "source_id": "eco_ms"
+      },
+      {
+        "field": "previous",
+        "value": 32718,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FY2026 Q1",
+        "locator": "Segment Results · Agents and Infra · Operating income · 2025（重列）",
+        "source_id": "eco_ms"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-29T21:46:11.517Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_ms",
+        "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast",
+        "sha256": "b6557edf22d53376fb492b0091c7e8138d2576f5e7145ce0b15d6d34a279222f",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-29T21:37:56.044Z",
+        "reviewed_at": "2026-10-29T21:37:56.044Z",
+        "status": "read",
+        "locator": "SEGMENT RESULTS",
+        "excerpt": "SEGMENT RESULTS (In millions) Three Months Ended September 30, 2026 | 2025 · Agents and Infra · Revenue $76,795 | $61,672 · Operating income $40,558 | $32,718 · We have recast certain prior period amounts ... FY2027 changes to our segments announced in September 2026."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "98b42ee64fa324948352b5da3628f55e5fd842ce9fb31c38b6237f2d3c46bd5e",
+    "id": "e-4835aef9c20f6234efdd526dc0925695c9eb8a921f13543dc27f5018ea0b994f"
+  },
+  "e-97c74afddd931629bdb663624b1bc481f0a8d767ec757b8239f4ec0c5fccfd4c": {
+    "measurement": "capex",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "集团现金资本开支",
+    "values": {
+      "current": 39367,
+      "previous": 19394,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 39367,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FY2027 Q1",
+        "locator": "Cash Flows · Additions to property and equipment · 2026（流出，取绝对值）",
+        "source_id": "eco_ms"
+      },
+      {
+        "field": "previous",
+        "value": 19394,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FY2026 Q1",
+        "locator": "Cash Flows · Additions to property and equipment · 2025（流出，取绝对值）",
+        "source_id": "eco_ms"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-29T21:46:11.517Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_ms",
+        "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast",
+        "sha256": "b6557edf22d53376fb492b0091c7e8138d2576f5e7145ce0b15d6d34a279222f",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-29T21:37:56.044Z",
+        "reviewed_at": "2026-10-29T21:37:56.044Z",
+        "status": "read",
+        "locator": "CASH FLOWS STATEMENTS",
+        "excerpt": "CASH FLOWS STATEMENTS (In millions) Three Months Ended September 30, 2026 | 2025 · Net cash from operations 58,000 | 45,057 · Additions to property and equipment (39,367) | (19,394)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "a64f1d5aaa2405310eedcd0036cae1489e643ad4bff5c0a124b5ac1e0f59b323",
+    "id": "e-97c74afddd931629bdb663624b1bc481f0a8d767ec757b8239f4ec0c5fccfd4c"
+  },
+  "e-35a2604531c67977491bedf872ed99f1fbac063046072eec37582ef0e6549344": {
+    "measurement": "ocf",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "集团经营现金流",
+    "values": {
+      "current": 58000,
+      "previous": 45057,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 58000,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FY2027 Q1",
+        "locator": "Cash Flows · Net cash from operations · 2026",
+        "source_id": "eco_ms"
+      },
+      {
+        "field": "previous",
+        "value": 45057,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "FY2026 Q1",
+        "locator": "Cash Flows · Net cash from operations · 2025",
+        "source_id": "eco_ms"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-29T21:46:11.517Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_ms",
+        "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast",
+        "sha256": "b6557edf22d53376fb492b0091c7e8138d2576f5e7145ce0b15d6d34a279222f",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-29T21:37:56.044Z",
+        "reviewed_at": "2026-10-29T21:37:56.044Z",
+        "status": "read",
+        "locator": "CASH FLOWS STATEMENTS",
+        "excerpt": "CASH FLOWS STATEMENTS (In millions) Three Months Ended September 30, 2026 | 2025 · Net cash from operations 58,000 | 45,057 · Additions to property and equipment (39,367) | (19,394)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "5e29dd8e56522390e1ab8b1a7f0d55807aee06af9e8f29ffb3e9102b921c7c3d",
+    "id": "e-35a2604531c67977491bedf872ed99f1fbac063046072eec37582ef0e6549344"
+  },
+  "e-f37ef46191958906891cfd35c4d405c6431a9b9462df149ef9deecb88a4c5fc2": {
+    "measurement": "outlook",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "target_period",
+    "accounting_basis": "as_disclosed",
+    "scope": "Azure 收入同比",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": "+49%–50%",
+      "summary": "固定汇率；CPU/GPU 效率提升可部分抵消延至下半财年的第三方 GPU 服务合同。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-29T21:46:11.517Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_ms_adjusted",
+        "url": "https://www.microsoft.com/en-us/investor/earnings/FY-2027-Q1/Document/DownloadDocument/37/TranscriptQandAFY27Q1.docx",
+        "sha256": "f7d9327dcba092cedc8a59dbc038565da34daeff2faa4ad4e7204b73890144ac",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-29T21:37:56.831Z",
+        "reviewed_at": "2026-10-29T21:37:56.831Z",
+        "status": "read",
+        "locator": "Amy Hood · outlook for our second quarter · Azure",
+        "excerpt": "In Azure, we expect revenue growth of 49 to 50% in constant currency with continued efficiency gains across our CPU and GPU fleet helping to offset some 3P GPU as a service contracts that have been delayed to H2. Customer demand continues to exceed available supply."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "24cc65d60ed3cb3fef20392a9b7115d86b02950a000d28a531f1268ee40bed1a",
+    "id": "e-f37ef46191958906891cfd35c4d405c6431a9b9462df149ef9deecb88a4c5fc2"
+  },
+  "e-dfca0cbb32b58bc1151a3a64eb118489ea3049ecb29dd59f81cd95ef7e85afc7": {
+    "measurement": "outlook",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "target_period",
+    "accounting_basis": "as_disclosed",
+    "scope": "集团资本开支",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": "超过 500 亿美元",
+      "summary": "含融资租赁；Q1 资本开支 452 亿美元（含融资租赁 74 亿美元），部分第三方产能交付延迟。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-29T21:46:11.517Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_ms_call",
+        "url": "https://www.microsoft.com/en-us/investor/earnings/FY-2027-Q1/Document/DownloadDocument/37/TranscriptQandAFY27Q1.docx",
+        "sha256": "f7d9327dcba092cedc8a59dbc038565da34daeff2faa4ad4e7204b73890144ac",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-29T21:37:57.250Z",
+        "reviewed_at": "2026-10-29T21:37:57.250Z",
+        "status": "read",
+        "locator": "Amy Hood · Capital expenditures",
+        "excerpt": "Capital expenditures were $45.2 billion, as some third-party capacity deliveries we expected in Q1 were delayed. ... This quarter, finance leases were $7.4 billion. As a reminder, we recognize the full principal value of finance leases in capex at the time of lease commencement. ... In Q2, we expect CapEx spend will be over $50 billion. Therefore, for the calendar year, spend should be approximately $170 billion due to the 3P capacity delays noted earlier. In the second half of the fiscal year, we currently expect CapEx spend to accelerate primarily from CPUs, inclusive of higher memory and storage costs, and GPUs, as well as the 3P capacity deliveries that shifted to H2."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "dc926510dc3510c7782da1cdba1b5dec869a05188ac32e0e8db8d94d86cc276c",
+    "id": "e-dfca0cbb32b58bc1151a3a64eb118489ea3049ecb29dd59f81cd95ef7e85afc7"
+  },
+  "e-ceff9d1618e1e7e160467168115f5caab281ae6ceff5d0a60f69f6af43186a8b": {
+    "measurement": "outlook",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "target_period",
+    "accounting_basis": "as_disclosed",
+    "scope": "需求与产能",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "客户需求仍超过可用供给；预计下半财年资本开支加速，主要来自 CPU（含更高的内存与存储成本）、GPU 及延后的第三方产能交付。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-29T21:46:11.517Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_ms_call",
+        "url": "https://www.microsoft.com/en-us/investor/earnings/FY-2027-Q1/Document/DownloadDocument/37/TranscriptQandAFY27Q1.docx",
+        "sha256": "f7d9327dcba092cedc8a59dbc038565da34daeff2faa4ad4e7204b73890144ac",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-29T21:37:57.250Z",
+        "reviewed_at": "2026-10-29T21:37:57.250Z",
+        "status": "read",
+        "locator": "Amy Hood · Azure outlook; Capital expenditures · second half of the fiscal year",
+        "excerpt": "In Azure, we expect revenue growth of 49 to 50% in constant currency with continued efficiency gains across our CPU and GPU fleet helping to offset some 3P GPU as a service contracts that have been delayed to H2. Customer demand continues to exceed available supply. ... In Q2, we expect CapEx spend will be over $50 billion. Therefore, for the calendar year, spend should be approximately $170 billion due to the 3P capacity delays noted earlier. In the second half of the fiscal year, we currently expect CapEx spend to accelerate primarily from CPUs, inclusive of higher memory and storage costs, and GPUs, as well as the 3P capacity deliveries that shifted to H2."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "ce9555e423de12e2e1a396cdd62bce89f74683b709911fdc15eb9e8f0c26fbf4",
+    "id": "e-ceff9d1618e1e7e160467168115f5caab281ae6ceff5d0a60f69f6af43186a8b"
+  },
+  "e-e488203b008fb0c364d2541ea2d2d79fc237288fc2102200ad8025d229bc7236": {
+    "measurement": "outlook",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "target_period",
+    "accounting_basis": "as_disclosed",
+    "scope": "全年资本开支",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": "约 1,700 亿美元",
+      "summary": "与 Q1 口径相同，含融资租赁；因第三方产能交付延迟，下调自然年支出预期。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-29T21:46:11.517Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_ms_call",
+        "url": "https://www.microsoft.com/en-us/investor/earnings/FY-2027-Q1/Document/DownloadDocument/37/TranscriptQandAFY27Q1.docx",
+        "sha256": "f7d9327dcba092cedc8a59dbc038565da34daeff2faa4ad4e7204b73890144ac",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-29T21:37:57.250Z",
+        "reviewed_at": "2026-10-29T21:37:57.250Z",
+        "status": "read",
+        "locator": "Amy Hood · Capital expenditures · calendar year",
+        "excerpt": "Capital expenditures were $45.2 billion, as some third-party capacity deliveries we expected in Q1 were delayed. ... This quarter, finance leases were $7.4 billion. As a reminder, we recognize the full principal value of finance leases in capex at the time of lease commencement. ... In Q2, we expect CapEx spend will be over $50 billion. Therefore, for the calendar year, spend should be approximately $170 billion due to the 3P capacity delays noted earlier. In the second half of the fiscal year, we currently expect CapEx spend to accelerate primarily from CPUs, inclusive of higher memory and storage costs, and GPUs, as well as the 3P capacity deliveries that shifted to H2."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "fbb65367e7dd44c75e2a6562f87bc2fe533ab37439d7dff2c4a2c913d278dd29",
+    "id": "e-e488203b008fb0c364d2541ea2d2d79fc237288fc2102200ad8025d229bc7236"
+  },
+  "e-19e601af94f0efed7284d4dd07e2049edf870fdc02facea632743389e30686e0": {
+    "measurement": "revenue",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "Google Cloud 收入",
+    "values": {
+      "current": 30709,
+      "previous": 15157,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 30709,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026 Q3",
+        "locator": "p2 · Google Cloud · 2026",
+        "source_id": "eco_google_cloud"
+      },
+      {
+        "field": "previous",
+        "value": 15157,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2025 Q3",
+        "locator": "p2 · Google Cloud · 2025",
+        "source_id": "eco_google_cloud"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-29T21:46:11.517Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_google_cloud",
+        "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-release.pdf#page=2",
+        "sha256": "2f9b94e9194ea4b462bf754c4b651615ab53518b314550f3402b27aabf0735e9",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-29T21:37:54.940Z",
+        "reviewed_at": "2026-10-29T21:37:54.940Z",
+        "status": "read",
+        "locator": "p2 Revenues, Traffic Acquisition Costs (TAC), and Number of Employees",
+        "excerpt": "Quarter Ended September 30, 2025 2026 · Google Cloud 15,157 30,709"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "25abffffc7a55192afb19293e1aa02f1df6e476d106ebc84d0c86b640830a605",
+    "id": "e-19e601af94f0efed7284d4dd07e2049edf870fdc02facea632743389e30686e0"
+  },
+  "e-0294ffe267458c280870ae08c9f79e6e8873c8613c3cc9d9e81d04949046f5ad": {
+    "measurement": "operating_profit",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "Google Cloud 营业利润",
+    "values": {
+      "current": 11121,
+      "previous": 3594,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 11121,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026 Q3",
+        "locator": "p2 · Segment Operating Results · Google Cloud · 2026",
+        "source_id": "eco_google_cloud"
+      },
+      {
+        "field": "previous",
+        "value": 3594,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2025 Q3",
+        "locator": "p2 · Segment Operating Results · Google Cloud · 2025",
+        "source_id": "eco_google_cloud"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-29T21:46:11.517Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_google_cloud",
+        "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-release.pdf#page=2",
+        "sha256": "2f9b94e9194ea4b462bf754c4b651615ab53518b314550f3402b27aabf0735e9",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-29T21:37:54.940Z",
+        "reviewed_at": "2026-10-29T21:37:54.940Z",
+        "status": "read",
+        "locator": "p2 Segment Operating Results",
+        "excerpt": "Segment Operating Results · Quarter Ended September 30, 2025 2026 · Google Cloud 3,594 11,121"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "69764eedacd42c092b58096e9996e1f1a06474cf3a0417ef80dd86800e3dda4e",
+    "id": "e-0294ffe267458c280870ae08c9f79e6e8873c8613c3cc9d9e81d04949046f5ad"
+  },
+  "e-f1243a9b16ce65742fe29de008bced7741617757df8e34c3c5caa932f38e9749": {
+    "measurement": "capex",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "集团现金资本开支",
+    "values": {
+      "current": 51355,
+      "previous": 23953,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 51355,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026 Q3",
+        "locator": "p6 · Purchases of property and equipment · 2026 季度（流出，取绝对值）",
+        "source_id": "eco_google_cash"
+      },
+      {
+        "field": "previous",
+        "value": 23953,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2025 Q3",
+        "locator": "p6 · Purchases of property and equipment · 2025 季度（流出，取绝对值）",
+        "source_id": "eco_google_cash"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-29T21:46:11.517Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_google_cash",
+        "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-release.pdf#page=6",
+        "sha256": "2f9b94e9194ea4b462bf754c4b651615ab53518b314550f3402b27aabf0735e9",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-29T21:37:55.303Z",
+        "reviewed_at": "2026-10-29T21:37:55.303Z",
+        "status": "read",
+        "locator": "p6 Consolidated Statements of Cash Flows",
+        "excerpt": "CONSOLIDATED STATEMENTS OF CASH FLOWS (In millions, unaudited) · Quarter Ended September 30, 2025 2026 · Net cash provided by operating activities 48,414 42,290 · Purchases of property and equipment (23,953) (51,355)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "4a002c90a0a014cad7a46dcd118e9d50989c71e90040393f299b91d51dad6e22",
+    "id": "e-f1243a9b16ce65742fe29de008bced7741617757df8e34c3c5caa932f38e9749"
+  },
+  "e-0de005d989a64b4b83a786d6f8ff43d0fe43009e95627b00e8d7d796a0ba9e00": {
+    "measurement": "ocf",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "集团经营现金流",
+    "values": {
+      "current": 42290,
+      "previous": 48414,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 42290,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026 Q3",
+        "locator": "p6 · Net cash provided by operating activities · 2026 季度",
+        "source_id": "eco_google_cash"
+      },
+      {
+        "field": "previous",
+        "value": 48414,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2025 Q3",
+        "locator": "p6 · Net cash provided by operating activities · 2025 季度",
+        "source_id": "eco_google_cash"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-29T21:46:11.517Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_google_cash",
+        "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-release.pdf#page=6",
+        "sha256": "2f9b94e9194ea4b462bf754c4b651615ab53518b314550f3402b27aabf0735e9",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-29T21:37:55.303Z",
+        "reviewed_at": "2026-10-29T21:37:55.303Z",
+        "status": "read",
+        "locator": "p6 Consolidated Statements of Cash Flows",
+        "excerpt": "CONSOLIDATED STATEMENTS OF CASH FLOWS (In millions, unaudited) · Quarter Ended September 30, 2025 2026 · Net cash provided by operating activities 48,414 42,290 · Purchases of property and equipment (23,953) (51,355)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "b531e17e664092fe1caa8afa1c4d365900a763ec810de84508797d502ccb039a",
+    "id": "e-0de005d989a64b4b83a786d6f8ff43d0fe43009e95627b00e8d7d796a0ba9e00"
+  },
+  "e-c1ae8573bb7857c90278c102f2da832fab8ff43d1f33924d2e3c1d080206baa9": {
+    "measurement": "outlook",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "target_period",
+    "accounting_basis": "as_disclosed",
+    "scope": "集团资本开支",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": "1,950–2,050 亿美元",
+      "summary": "维持全年资本开支指引不变。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-29T21:46:11.517Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_google_call",
+        "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Oct/28/2026_Q3_Earnings_Transcript.pdf#page=12",
+        "sha256": "7e92f1db003536fb7cdc80546c3d5cc2c7f9528368efd4b7421cb550ac75db64",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-29T21:37:55.698Z",
+        "reviewed_at": "2026-10-29T21:37:55.698Z",
+        "status": "read",
+        "locator": "p12 Anat Ashkenazi · outlook / investments",
+        "excerpt": "In Google Cloud, we expect TPU system sales to continue to scale in Q4, followed by a meaningful revenue ramp in 2027. With respect to Cloud margins, given the supply-constraint environment, we started utilizing third-party compute capacity at the end of Q3 and will ramp usage in Q4. We expect margin headwinds in the near-term as we utilize this capacity. Moving to investments, our full-year 2026 CapEx guidance range of $195-$205 billion remain unchanged. We continue to expect our CapEx to increase significantly in 2027, and we'll provide further details on our Q4 call."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "7ccc96cf927772dd144d69e337c6fb6d29f22cc823c61dcf44a0407cf5818ab1",
+    "id": "e-c1ae8573bb7857c90278c102f2da832fab8ff43d1f33924d2e3c1d080206baa9"
+  },
+  "e-009d30fdd560d23898e9d7c15ac1db4759e78c3120bd86a533e66d7058147e4c": {
+    "measurement": "outlook",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "target_period",
+    "accounting_basis": "as_disclosed",
+    "scope": "产能与利润率",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "供给受限，第三季末开始使用第三方算力，第四季加大使用；预计近期云业务利润率承压。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-29T21:46:11.517Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_google_call",
+        "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Oct/28/2026_Q3_Earnings_Transcript.pdf#page=12",
+        "sha256": "7e92f1db003536fb7cdc80546c3d5cc2c7f9528368efd4b7421cb550ac75db64",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-29T21:37:55.698Z",
+        "reviewed_at": "2026-10-29T21:37:55.698Z",
+        "status": "read",
+        "locator": "p12 Anat Ashkenazi · Cloud margins",
+        "excerpt": "In Google Cloud, we expect TPU system sales to continue to scale in Q4, followed by a meaningful revenue ramp in 2027. With respect to Cloud margins, given the supply-constraint environment, we started utilizing third-party compute capacity at the end of Q3 and will ramp usage in Q4. We expect margin headwinds in the near-term as we utilize this capacity. Moving to investments, our full-year 2026 CapEx guidance range of $195-$205 billion remain unchanged. We continue to expect our CapEx to increase significantly in 2027, and we'll provide further details on our Q4 call."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "5cf6bb7564369565ff010960feb947df55da8bb623d5a9d6b88b62edabbabb98",
+    "id": "e-009d30fdd560d23898e9d7c15ac1db4759e78c3120bd86a533e66d7058147e4c"
+  },
+  "e-d3af1beb14732d06d09acd80462c8677d421badb3dc1941fb43c61758d741673": {
+    "measurement": "outlook",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "target_period",
+    "accounting_basis": "as_disclosed",
+    "scope": "后续投入",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "预计 2027 年资本开支继续显著增加，将在第四季业绩会提供细节。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-29T21:46:11.517Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_google_call",
+        "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Oct/28/2026_Q3_Earnings_Transcript.pdf#page=12",
+        "sha256": "7e92f1db003536fb7cdc80546c3d5cc2c7f9528368efd4b7421cb550ac75db64",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-29T21:37:55.698Z",
+        "reviewed_at": "2026-10-29T21:37:55.698Z",
+        "status": "read",
+        "locator": "p12 Anat Ashkenazi · 2027 CapEx",
+        "excerpt": "In Google Cloud, we expect TPU system sales to continue to scale in Q4, followed by a meaningful revenue ramp in 2027. With respect to Cloud margins, given the supply-constraint environment, we started utilizing third-party compute capacity at the end of Q3 and will ramp usage in Q4. We expect margin headwinds in the near-term as we utilize this capacity. Moving to investments, our full-year 2026 CapEx guidance range of $195-$205 billion remain unchanged. We continue to expect our CapEx to increase significantly in 2027, and we'll provide further details on our Q4 call."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "8112ac432eb011667a2b24ed11dc43c1776dc740f806f18006642a71209297f4",
+    "id": "e-d3af1beb14732d06d09acd80462c8677d421badb3dc1941fb43c61758d741673"
   }
 }
