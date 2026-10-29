@@ -1414,14 +1414,14 @@
       ]
     },
     "eco.microsoft.revenue": {
-      "version": 2,
+      "version": 1,
       "active": true,
       "required": true,
       "supporting": false,
       "entity": "microsoft",
       "measurement": "revenue",
       "unit": "USDm",
-      "scope": "Agents and Infra 收入",
+      "scope": "Intelligent Cloud 收入",
       "accounting_basis": "as_disclosed",
       "temporal_basis": "quarter",
       "nature": "actual_or_observation",
@@ -1430,14 +1430,14 @@
       ]
     },
     "eco.microsoft.profit": {
-      "version": 2,
+      "version": 1,
       "active": true,
       "required": true,
       "supporting": false,
       "entity": "microsoft",
       "measurement": "operating_profit",
       "unit": "USDm",
-      "scope": "Agents and Infra 营业利润",
+      "scope": "Intelligent Cloud 营业利润",
       "accounting_basis": "as_disclosed",
       "temporal_basis": "quarter",
       "nature": "actual_or_observation",

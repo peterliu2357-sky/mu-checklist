@@ -31,12 +31,17 @@
   },
   "earnings": {
     "enabled": true,
-    "run_at": "2026-10-30T21:00:00Z",
+    "run_at": "2026-10-29T21:30:00Z",
     "events": [
       {
-        "id": "amazon_2026_q3",
-        "company_id": "amazon",
-        "review_after": "2026-10-30T21:00:00Z"
+        "id": "alphabet_2026_q3",
+        "company_id": "alphabet",
+        "review_after": "2026-10-29T20:30:00Z"
+      },
+      {
+        "id": "microsoft_fy2027_q1",
+        "company_id": "microsoft",
+        "review_after": "2026-10-29T21:30:00Z"
       }
     ]
   }

@@ -139,7 +139,7 @@ schema_version 仍为 2，新增必填 `ecosystem`；已有美光指标与财季
 - 可选 `digits` 控制展示精度。`change` 只用于明确标为报告值的同比等例外；如 NVIDIA 数据中心摘要采用舍入金额、同比用报告值。
 - 毛利率、营业利润率的变化用百分点。亏损或零基数用金额变化；低且舍入的基数可用 `change_mode=absolute`，例如三星 DS 利润。
 - 每个输入均需对应来源。两份报告提供本期与同期时，在 `source_ids` 同时列出，PDF 链接指向各自相应页。来源定位在展开区可见，表格指标名称可直接打开原文。
-- AWS / Google Cloud 可用云分部营业利润。Microsoft 的 Azure 收入使用 FY2027 新口径；FY2027 起分部收入与利润改用 Agents and Infra（定义版本 2，上年同期取公司重列值），FY2026 及以前的 Intelligent Cloud 记录保留为版本 1；Oracle OCI 没有独立利润时只标集团营业利润；三星 DS 利润不能改标为 Memory 利润。
+- AWS / Google Cloud 可用云分部营业利润。Microsoft 的 Azure 收入使用公司重列口径，Intelligent Cloud 利润保留原分部口径；Oracle OCI 没有独立利润时只标集团营业利润；三星 DS 利润不能改标为 Memory 利润。
 - 云厂商资本开支与现金流采用集团口径。现金购置 PP&E、净资本开支、融资租赁确认额、本金支付、供应商融资与客户预付款要分清。数字指引也必须写出所用口径。
 - 资本开支、云收入、GPU 收入与存储厂收入均非美光的直接内存采购量。不要由收入倒推位元量，不汇总为美光订单或市场供需缺口。
 
