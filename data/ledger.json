@@ -2,8 +2,8 @@
   "format_version": 1,
   "document": {
     "schema_version": 2,
-    "revision": "2026-10-29-a8c3ce927f",
-    "updated_at": "2026-10-29T01:46:57.172Z",
+    "revision": "2026-10-29-f85f8699fa",
+    "updated_at": "2026-10-29T21:38:51.958Z",
     "last_successful_check_at": "2026-09-20T23:50:00Z",
     "last_attempt_at": "2026-09-20T23:50:00Z",
     "financial_period": "FY2026 Q4",
@@ -587,21 +587,21 @@
         "type": "公司披露"
       },
       "eco_ms": {
-        "label": "Microsoft FY2026 Q4 财报",
+        "label": "Microsoft FY2027 Q1 财报",
         "short_label": "微软财报",
-        "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q4/press-release-webcast",
-        "published_at": "2026-07-29",
-        "checked_at": "2026-09-20",
-        "locator": "Segment Results / Cash Flows；Three Months Ended June 30，2026 / 2025 列。",
+        "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast",
+        "published_at": "2026-10-28",
+        "checked_at": "2026-10-29",
+        "locator": "SEGMENT RESULTS · Agents and Infra / CASH FLOWS STATEMENTS；Three Months Ended September 30，2026 / 2025 列（上年同期为公司重列值）。",
         "type": "公司原始披露"
       },
       "eco_ms_call": {
-        "label": "Microsoft FY2026 Q4 业绩会",
+        "label": "Microsoft FY2027 Q1 业绩会",
         "short_label": "微软业绩会",
-        "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4",
-        "published_at": "2026-07-29",
-        "checked_at": "2026-09-20",
-        "locator": "Amy Hood：Capital expenditures、FY27 outlook、Q1 segment guidance。",
+        "url": "https://www.microsoft.com/en-us/investor/earnings/FY-2027-Q1/Document/DownloadDocument/37/TranscriptQandAFY27Q1.docx",
+        "published_at": "2026-10-28",
+        "checked_at": "2026-10-29",
+        "locator": "Amy Hood：Capital expenditures（Q1 实际与 Q2、自然年展望）、Azure 供需。",
         "type": "公司原始披露"
       },
       "eco_amazon": {
@@ -614,30 +614,30 @@
         "type": "公司原始披露"
       },
       "eco_google_cloud": {
-        "label": "Alphabet 2026 Q2 云业务财报",
+        "label": "Alphabet 2026 Q3 云业务财报",
         "short_label": "Alphabet 财报 p2",
-        "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q2/2026q2-alphabet-earnings-release.pdf#page=2",
-        "published_at": "2026-07-22",
-        "checked_at": "2026-09-20",
-        "locator": "第 2 页 Segment Operating Results；Google Cloud 收入与营业利润。",
+        "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-release.pdf#page=2",
+        "published_at": "2026-10-28",
+        "checked_at": "2026-10-29",
+        "locator": "第 2 页 Segment Operating Results；Google Cloud 收入与营业利润，2025 / 2026 季度列。",
         "type": "公司原始披露"
       },
       "eco_google_cash": {
-        "label": "Alphabet 2026 Q2 现金流",
-        "short_label": "Alphabet 现金流 p7",
-        "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q2/2026q2-alphabet-earnings-release.pdf#page=7",
-        "published_at": "2026-07-22",
-        "checked_at": "2026-09-20",
-        "locator": "第 7 页 Consolidated Statements of Cash Flows；季度列 2025 / 2026。",
+        "label": "Alphabet 2026 Q3 现金流",
+        "short_label": "Alphabet 现金流 p6",
+        "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-release.pdf#page=6",
+        "published_at": "2026-10-28",
+        "checked_at": "2026-10-29",
+        "locator": "第 6 页 Consolidated Statements of Cash Flows；Three Months Ended September 30 列 2025 / 2026。",
         "type": "公司原始披露"
       },
       "eco_google_call": {
-        "label": "Alphabet 2026 Q2 业绩会",
-        "short_label": "Alphabet 业绩会 p13",
-        "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Jul/22/2026_Q2_Earnings_Transcript.pdf#page=13",
-        "published_at": "2026-07-22",
-        "checked_at": "2026-09-20",
-        "locator": "第 13–14 页，Anat Ashkenazi：CapEx guidance、third-party capacity、free cash flow。",
+        "label": "Alphabet 2026 Q3 业绩会",
+        "short_label": "Alphabet 业绩会 p12",
+        "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Oct/28/2026_Q3_Earnings_Transcript.pdf#page=12",
+        "published_at": "2026-10-28",
+        "checked_at": "2026-10-29",
+        "locator": "第 12 页，Anat Ashkenazi：Cloud margins / third-party compute capacity、full-year 2026 CapEx、2027 CapEx。",
         "type": "公司原始披露"
       },
       "eco_meta": {
@@ -812,21 +812,21 @@
         "type": "行业公开摘要"
       },
       "eco_ms_recast": {
-        "label": "Microsoft FY27 分部及 Azure 历史数据重列",
-        "short_label": "Azure 重列数据 p20",
-        "url": "https://microsoft.gcs-web.com/static-files/6f77f14c-9bdd-49c1-bfa3-1dbe8d872424#page=20",
-        "published_at": "2026-09-02",
-        "checked_at": "2026-09-20",
-        "locator": "8-K 附件 PDF 第 20 页 Products and Service Offerings Revenue · As Restated · Azure，FY2026 / FY2025 Q4；第 10、14 页统计定义。",
+        "label": "Microsoft FY2027 Q1 产品与服务收入",
+        "short_label": "微软产品与服务收入",
+        "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast",
+        "published_at": "2026-10-28",
+        "checked_at": "2026-10-29",
+        "locator": "PRODUCT AND SERVICE OFFERINGS REVENUE · Azure；Three Months Ended September 30，2026 / 2025 列（上年同期为公司重列值）。",
         "type": "公司原始披露"
       },
       "eco_ms_adjusted": {
-        "label": "Microsoft FY2027 Q1 调整后指引",
-        "short_label": "Azure 新口径指引 p24",
-        "url": "https://microsoft.gcs-web.com/static-files/6f77f14c-9bdd-49c1-bfa3-1dbe8d872424#page=24",
-        "published_at": "2026-09-02",
-        "checked_at": "2026-09-20",
-        "locator": "8-K 附件 PDF 第 24 页 Adjusted Outlook · Azure revenue；第 23 页说明只按报告结构作机械调整。",
+        "label": "Microsoft FY2027 Q1 业绩会 · Q2 指引",
+        "short_label": "微软 Q2 指引",
+        "url": "https://www.microsoft.com/en-us/investor/earnings/FY-2027-Q1/Document/DownloadDocument/37/TranscriptQandAFY27Q1.docx",
+        "published_at": "2026-10-28",
+        "checked_at": "2026-10-29",
+        "locator": "Amy Hood：outlook for our second quarter · Azure revenue growth in constant currency。",
         "type": "公司原始披露"
       },
       "eco_tsmc_ocf": {
@@ -2542,6 +2542,12 @@
     ],
     "check_log": [
       {
+        "at": "2026-10-29T21:38:51.958Z",
+        "status": "success",
+        "scope": "batch",
+        "text": "核查范围：batch；完成 2 / 2 项。"
+      },
+      {
         "at": "2026-10-29T01:46:57.172Z",
         "status": "success",
         "scope": "quote",
@@ -2886,45 +2892,45 @@
           "ticker": "MSFT",
           "group": "cloud",
           "role": "云计算",
-          "period": "FY2026 Q4",
-          "previous_period": "FY2025 Q4",
-          "period_end": "2026-06-30",
-          "published_at": "2026-07-29",
-          "checked_at": "2026-09-20",
-          "scope": "Azure 收入采用 09-02 重列口径；Intelligent Cloud 为原财报分部口径。",
+          "period": "FY2027 Q1",
+          "previous_period": "FY2026 Q1",
+          "period_end": "2026-09-30",
+          "published_at": "2026-10-28",
+          "checked_at": "2026-10-29",
+          "scope": "Azure 与 Agents and Infra 均为 FY2027 新口径；上年同期为公司重列值。",
           "metrics": [
             {
-              "record_ref": "1b6a1f35cb68a8a40def33208f2e805e37c3aede8d4f40bd184edf6b9057dbe9"
+              "record_ref": "37577c96e140cc5f4a8ad4fdb94810078d625f620a4f3e7aca925f39a3bcc9a7"
             },
             {
-              "record_ref": "d0ec233b152bb1046d2e1f8539de2869111c4ba3cf8f769619f572dad14808ba"
+              "record_ref": "9eec5f375c9fffd983a86aa47aa04555a9637c0eb74bca20bfbb1625870656ff"
             },
             {
-              "record_ref": "e30b2d27c087d3422fa7c93ad1bb355f89a7a614228e136661ac1d35c2b1462d"
+              "record_ref": "af24e69b30331e8f7b7a0277b12ed7a0f05b26040b09c25fdaf21bb18599ca94"
             },
             {
-              "record_ref": "d33a2c407d4fb316b903f133998fd50f9a4109b4932740bed0b0d195ff467ae6"
+              "record_ref": "a64f1d5aaa2405310eedcd0036cae1489e643ad4bff5c0a124b5ac1e0f59b323"
             },
             {
-              "record_ref": "2b9359b99c4246916fff8ba2eda9d9286cb7dc7e4b45ea0826ca4073340a291e"
+              "record_ref": "5e29dd8e56522390e1ab8b1a7f0d55807aee06af9e8f29ffb3e9102b921c7c3d"
             }
           ],
           "outlook": [
             {
-              "record_ref": "0b1b2464fcd0441db9550d494fc0fdbe0ea8cab2ec962037bb1bdd309ee44d15"
+              "record_ref": "24cc65d60ed3cb3fef20392a9b7115d86b02950a000d28a531f1268ee40bed1a"
             },
             {
-              "record_ref": "3b3cc21306ae41037d6a7627a2ec5fb8246d283872979ef52b9476e485c0ad3a"
+              "record_ref": "b65536f14b92c864cd524a5fadc30ddfb3a0a755717878cf98bcb3b7f61c3b2e"
             },
             {
-              "record_ref": "81309797c6a8d82334076c58a95632ad6a7c351dc25341e0475ee9cb029da188"
+              "record_ref": "ce9555e423de12e2e1a396cdd62bce89f74683b709911fdc15eb9e8f0c26fbf4"
             },
             {
-              "record_ref": "00718aac1fe84bee2816523c71eb60a522007254ddbdf094b13bcc7ff81c0156"
+              "record_ref": "7ae769db07602b7369aecd68ad1bf9380264d24e347063473d3fc370ff573268"
             }
           ],
           "notes": [
-            "Azure 未单独披露营业利润。FY2027 起报告分部改为 Agents and Infra、Devices and Consumer；此处 Intelligent Cloud 保留 FY2026 原披露口径。"
+            "Azure 未单独披露营业利润。FY2027 起报告分部为 Agents and Infra、Devices and Consumer；FY2026 及以前的 Intelligent Cloud 记录保留在历史中，与新分部不可直接比较。"
           ]
         },
         {
@@ -2971,35 +2977,35 @@
           "ticker": "GOOGL",
           "group": "cloud",
           "role": "云计算",
-          "period": "2026 Q2",
-          "previous_period": "2025 Q2",
-          "period_end": "2026-06-30",
-          "published_at": "2026-07-22",
-          "checked_at": "2026-09-20",
+          "period": "2026 Q3",
+          "previous_period": "2025 Q3",
+          "period_end": "2026-09-30",
+          "published_at": "2026-10-28",
+          "checked_at": "2026-10-29",
           "scope": "Google Cloud 含 GCP、Workspace 与 TPU 系统销售。",
           "metrics": [
             {
-              "record_ref": "ba6d95ee060f6f9591e53457ec603c74df840785b8baa20ce5c3eec4aa0a5453"
+              "record_ref": "290d7a8eb6fd046040333df63f9030b4ef0ea45cd3c60b2f668f96686e217369"
             },
             {
-              "record_ref": "e5f5487714fd317ce82230804eb77186060e0a1a953f616e38fb525e1048dd20"
+              "record_ref": "7b21d850aac6d6d7fe33f04ebf6c5b3ba888ced74b9127126f565c15933956bb"
             },
             {
-              "record_ref": "ef644fd5cdf94d646b1ddabc50dd53bca5086e6a17ed66c40402a9f0c2d87813"
+              "record_ref": "a069b95be25510bdf3b666a07307107e3e20a4273e168aeec4b33a10c4ec12ec"
             },
             {
-              "record_ref": "74c02d62d0c3c3514959e614ba9f91f821822c93711075a7e32f069850223c29"
+              "record_ref": "ff4651c6cfe09bd6b762f666a2821e4a07625ad6b35ea6eb89c19fce2c92ca88"
             }
           ],
           "outlook": [
             {
-              "record_ref": "8938701c51fa1433b6c2f6eb8f2e18f297a7600f4ca569a3f8023607d244c42c"
+              "record_ref": "7ccc96cf927772dd144d69e337c6fb6d29f22cc823c61dcf44a0407cf5818ab1"
             },
             {
-              "record_ref": "da224d122f558ab020f6d301a966dfa45f829e8d355a63b0b746875a027f5f12"
+              "record_ref": "5cf6bb7564369565ff010960feb947df55da8bb623d5a9d6b88b62edabbabb98"
             },
             {
-              "record_ref": "dd261852047e9b20033fc688dbce76eb7b45fbc958d3e8cda99bfe26814465c6"
+              "record_ref": "8112ac432eb011667a2b24ed11dc43c1776dc740f806f18006642a71209297f4"
             }
           ],
           "notes": [
@@ -24725,6 +24731,674 @@
         "e-b0b820afb7fc422781263ad11357fe0449da27b13baf337f4939e84f8a6dde04"
       ],
       "id": "bf8eff542325afbc077be840c34f5d587a0253f48b3b604da16ac62b33e87f32"
+    },
+    "37577c96e140cc5f4a8ad4fdb94810078d625f620a4f3e7aca925f39a3bcc9a7": {
+      "metric_id": "eco.microsoft.azure_revenue",
+      "definition_version": 1,
+      "context": {
+        "entity": "microsoft",
+        "period": "FY2027 Q1",
+        "previous_period": "FY2026 Q1",
+        "period_end": "2026-09-30",
+        "report_published_at": "2026-10-28",
+        "measurement": "revenue",
+        "unit": "USDm",
+        "scope": "Azure 收入（新口径）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "eco_ms_recast",
+            "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast",
+            "published_at": "2026-10-28"
+          }
+        ]
+      },
+      "payload": {
+        "id": "azure_revenue",
+        "label": "Azure 收入（新口径）",
+        "current": 33165,
+        "previous": 22384,
+        "unit": "USDm",
+        "source_ids": [
+          "eco_ms_recast"
+        ],
+        "location": "财报 · Product and Service Offerings Revenue · Azure，2026 / 2025 季度列。",
+        "note": "FY2027 新口径，上年同期为公司重列值。",
+        "evidence_type": "direct"
+      },
+      "evidence_ids": [
+        "e-36b0d9b9c7a936ea6733e36d91d2531225beed6621c320c0785e30f1e5e8f627"
+      ],
+      "id": "37577c96e140cc5f4a8ad4fdb94810078d625f620a4f3e7aca925f39a3bcc9a7"
+    },
+    "9eec5f375c9fffd983a86aa47aa04555a9637c0eb74bca20bfbb1625870656ff": {
+      "metric_id": "eco.microsoft.revenue",
+      "definition_version": 2,
+      "context": {
+        "entity": "microsoft",
+        "period": "FY2027 Q1",
+        "previous_period": "FY2026 Q1",
+        "period_end": "2026-09-30",
+        "report_published_at": "2026-10-28",
+        "measurement": "revenue",
+        "unit": "USDm",
+        "scope": "Agents and Infra 收入",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "eco_ms",
+            "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast",
+            "published_at": "2026-10-28"
+          }
+        ]
+      },
+      "payload": {
+        "id": "revenue",
+        "label": "Agents and Infra 收入",
+        "current": 76795,
+        "previous": 61672,
+        "unit": "USDm",
+        "source_ids": [
+          "eco_ms"
+        ],
+        "location": "Segment Results · Agents and Infra · Revenue；2026 / 2025 季度列。",
+        "note": "",
+        "evidence_type": "direct"
+      },
+      "evidence_ids": [
+        "e-94a59d7a7cb415961a1714115439949deeef685d1ebb3c980ff9852b232a74e0"
+      ],
+      "id": "9eec5f375c9fffd983a86aa47aa04555a9637c0eb74bca20bfbb1625870656ff"
+    },
+    "af24e69b30331e8f7b7a0277b12ed7a0f05b26040b09c25fdaf21bb18599ca94": {
+      "metric_id": "eco.microsoft.profit",
+      "definition_version": 2,
+      "context": {
+        "entity": "microsoft",
+        "period": "FY2027 Q1",
+        "previous_period": "FY2026 Q1",
+        "period_end": "2026-09-30",
+        "report_published_at": "2026-10-28",
+        "measurement": "operating_profit",
+        "unit": "USDm",
+        "scope": "Agents and Infra 营业利润",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "eco_ms",
+            "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast",
+            "published_at": "2026-10-28"
+          }
+        ]
+      },
+      "payload": {
+        "id": "profit",
+        "label": "Agents and Infra 营业利润",
+        "current": 40558,
+        "previous": 32718,
+        "unit": "USDm",
+        "source_ids": [
+          "eco_ms"
+        ],
+        "location": "Segment Results · Agents and Infra · Operating income；2026 / 2025 季度列。",
+        "note": "",
+        "evidence_type": "direct"
+      },
+      "evidence_ids": [
+        "e-afea9e73f425434d8839b6cd1e8659c303ddf1acea9002b807cdb4465416d1ef"
+      ],
+      "id": "af24e69b30331e8f7b7a0277b12ed7a0f05b26040b09c25fdaf21bb18599ca94"
+    },
+    "a64f1d5aaa2405310eedcd0036cae1489e643ad4bff5c0a124b5ac1e0f59b323": {
+      "metric_id": "eco.microsoft.capex",
+      "definition_version": 1,
+      "context": {
+        "entity": "microsoft",
+        "period": "FY2027 Q1",
+        "previous_period": "FY2026 Q1",
+        "period_end": "2026-09-30",
+        "report_published_at": "2026-10-28",
+        "measurement": "capex",
+        "unit": "USDm",
+        "scope": "集团现金资本开支",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "eco_ms",
+            "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast",
+            "published_at": "2026-10-28"
+          }
+        ]
+      },
+      "payload": {
+        "id": "capex",
+        "label": "集团现金资本开支",
+        "current": 39367,
+        "previous": 19394,
+        "unit": "USDm",
+        "source_ids": [
+          "eco_ms"
+        ],
+        "location": "Cash Flows · Additions to property and equipment；2026 / 2025 季度列。",
+        "note": "购置物业及设备的现金支出。",
+        "evidence_type": "direct"
+      },
+      "evidence_ids": [
+        "e-f6f414740ecb1fe711d3e865d7c730d2003fd69c53cdc5476d54ac21b0a325c4"
+      ],
+      "id": "a64f1d5aaa2405310eedcd0036cae1489e643ad4bff5c0a124b5ac1e0f59b323"
+    },
+    "5e29dd8e56522390e1ab8b1a7f0d55807aee06af9e8f29ffb3e9102b921c7c3d": {
+      "metric_id": "eco.microsoft.ocf",
+      "definition_version": 1,
+      "context": {
+        "entity": "microsoft",
+        "period": "FY2027 Q1",
+        "previous_period": "FY2026 Q1",
+        "period_end": "2026-09-30",
+        "report_published_at": "2026-10-28",
+        "measurement": "ocf",
+        "unit": "USDm",
+        "scope": "集团经营现金流",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "eco_ms",
+            "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast",
+            "published_at": "2026-10-28"
+          }
+        ]
+      },
+      "payload": {
+        "id": "ocf",
+        "label": "集团经营现金流",
+        "current": 58000,
+        "previous": 45057,
+        "unit": "USDm",
+        "source_ids": [
+          "eco_ms"
+        ],
+        "location": "Cash Flows · Net cash from operations；2026 / 2025 季度列。",
+        "note": "",
+        "evidence_type": "direct"
+      },
+      "evidence_ids": [
+        "e-8dbd8b533b70b13084c441963384a54f6acae2ccb6ae2639e037200d66cf3f04"
+      ],
+      "id": "5e29dd8e56522390e1ab8b1a7f0d55807aee06af9e8f29ffb3e9102b921c7c3d"
+    },
+    "24cc65d60ed3cb3fef20392a9b7115d86b02950a000d28a531f1268ee40bed1a": {
+      "metric_id": "outlook.microsoft.azure",
+      "definition_version": 1,
+      "context": {
+        "entity": "microsoft",
+        "period": "FY2027 Q1",
+        "previous_period": "FY2026 Q1",
+        "period_end": "2026-09-30",
+        "report_published_at": "2026-10-28",
+        "measurement": "outlook",
+        "unit": "",
+        "scope": "Azure 收入同比",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "target_period",
+        "sources": [
+          {
+            "id": "eco_ms_adjusted",
+            "url": "https://www.microsoft.com/en-us/investor/earnings/FY-2027-Q1/Document/DownloadDocument/37/TranscriptQandAFY27Q1.docx",
+            "published_at": "2026-10-28"
+          }
+        ]
+      },
+      "payload": {
+        "id": "azure",
+        "label": "Azure 收入同比",
+        "type": "numeric",
+        "value": "+49%–50%",
+        "summary": "固定汇率；CPU/GPU 效率提升可部分抵消延至下半财年的第三方 GPU 服务合同。",
+        "prior_guidance": "",
+        "period": "FY2027 Q2",
+        "issued_at": "2026-10-28",
+        "speaker": "CFO Amy Hood",
+        "kind": "公司指引",
+        "evidence_type": "direct",
+        "source_ids": [
+          "eco_ms_adjusted"
+        ],
+        "location": "业绩会 · outlook for our second quarter · Azure。"
+      },
+      "evidence_ids": [
+        "e-1f7e6e41ca52cc5114a10998d0f55ea8f477a89e307c98668a80f1f92bcf6a4b"
+      ],
+      "id": "24cc65d60ed3cb3fef20392a9b7115d86b02950a000d28a531f1268ee40bed1a"
+    },
+    "b65536f14b92c864cd524a5fadc30ddfb3a0a755717878cf98bcb3b7f61c3b2e": {
+      "metric_id": "outlook.microsoft.capex",
+      "definition_version": 1,
+      "context": {
+        "entity": "microsoft",
+        "period": "FY2027 Q1",
+        "previous_period": "FY2026 Q1",
+        "period_end": "2026-09-30",
+        "report_published_at": "2026-10-28",
+        "measurement": "outlook",
+        "unit": "",
+        "scope": "集团资本开支",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "target_period",
+        "sources": [
+          {
+            "id": "eco_ms_call",
+            "url": "https://www.microsoft.com/en-us/investor/earnings/FY-2027-Q1/Document/DownloadDocument/37/TranscriptQandAFY27Q1.docx",
+            "published_at": "2026-10-28"
+          }
+        ]
+      },
+      "payload": {
+        "id": "capex",
+        "label": "集团资本开支",
+        "type": "numeric",
+        "value": "超过 500 亿美元",
+        "summary": "Q1 资本开支 452 亿美元（含融资租赁），部分第三方产能交付延迟。",
+        "prior_guidance": "",
+        "period": "FY2027 Q2",
+        "issued_at": "2026-10-28",
+        "speaker": "CFO Amy Hood",
+        "kind": "公司指引",
+        "evidence_type": "direct",
+        "source_ids": [
+          "eco_ms_call"
+        ],
+        "location": "业绩会 · Capital expenditures · In Q2。"
+      },
+      "evidence_ids": [
+        "e-8095f349244fa2431abfa4100911860539eb038586ece8ea4d16564fbb5db947"
+      ],
+      "id": "b65536f14b92c864cd524a5fadc30ddfb3a0a755717878cf98bcb3b7f61c3b2e"
+    },
+    "ce9555e423de12e2e1a396cdd62bce89f74683b709911fdc15eb9e8f0c26fbf4": {
+      "metric_id": "outlook.microsoft.demand",
+      "definition_version": 1,
+      "context": {
+        "entity": "microsoft",
+        "period": "FY2027 Q1",
+        "previous_period": "FY2026 Q1",
+        "period_end": "2026-09-30",
+        "report_published_at": "2026-10-28",
+        "measurement": "outlook",
+        "unit": "",
+        "scope": "需求与产能",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "target_period",
+        "sources": [
+          {
+            "id": "eco_ms_call",
+            "url": "https://www.microsoft.com/en-us/investor/earnings/FY-2027-Q1/Document/DownloadDocument/37/TranscriptQandAFY27Q1.docx",
+            "published_at": "2026-10-28"
+          }
+        ]
+      },
+      "payload": {
+        "id": "demand",
+        "label": "需求与产能",
+        "type": "text",
+        "value": null,
+        "summary": "客户需求仍超过可用供给；预计下半财年资本开支加速，主要来自 CPU（含更高的内存与存储成本）、GPU 及延后的第三方产能交付。",
+        "prior_guidance": "",
+        "period": "FY2027 下半年",
+        "issued_at": "2026-10-28",
+        "speaker": "CFO Amy Hood",
+        "kind": "管理层展望",
+        "evidence_type": "direct",
+        "source_ids": [
+          "eco_ms_call"
+        ],
+        "location": "业绩会 · Azure outlook；Capital expenditures · second half of the fiscal year。"
+      },
+      "evidence_ids": [
+        "e-bc675e103433d381de6c38c71d5fd93a6ce827a8ef582a5d0b4ec5d8c7ede253"
+      ],
+      "id": "ce9555e423de12e2e1a396cdd62bce89f74683b709911fdc15eb9e8f0c26fbf4"
+    },
+    "7ae769db07602b7369aecd68ad1bf9380264d24e347063473d3fc370ff573268": {
+      "metric_id": "outlook.microsoft.annual_capex",
+      "definition_version": 1,
+      "context": {
+        "entity": "microsoft",
+        "period": "FY2027 Q1",
+        "previous_period": "FY2026 Q1",
+        "period_end": "2026-09-30",
+        "report_published_at": "2026-10-28",
+        "measurement": "outlook",
+        "unit": "",
+        "scope": "全年资本开支",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "target_period",
+        "sources": [
+          {
+            "id": "eco_ms_call",
+            "url": "https://www.microsoft.com/en-us/investor/earnings/FY-2027-Q1/Document/DownloadDocument/37/TranscriptQandAFY27Q1.docx",
+            "published_at": "2026-10-28"
+          }
+        ]
+      },
+      "payload": {
+        "id": "annual_capex",
+        "label": "全年资本开支",
+        "type": "numeric",
+        "value": "约 1,700 亿美元",
+        "summary": "因第三方产能交付延迟，下调自然年支出预期。",
+        "prior_guidance": "约 1,750 亿美元",
+        "period": "2026 自然年",
+        "issued_at": "2026-10-28",
+        "speaker": "CFO Amy Hood",
+        "kind": "公司指引",
+        "evidence_type": "direct",
+        "source_ids": [
+          "eco_ms_call"
+        ],
+        "location": "业绩会 · Capital expenditures · calendar year。"
+      },
+      "evidence_ids": [
+        "e-8051530fc226f0c1cafc2bf9ac123188040420dd6d78d8c639df1a63ea36d2ac"
+      ],
+      "id": "7ae769db07602b7369aecd68ad1bf9380264d24e347063473d3fc370ff573268"
+    },
+    "290d7a8eb6fd046040333df63f9030b4ef0ea45cd3c60b2f668f96686e217369": {
+      "metric_id": "eco.alphabet.revenue",
+      "definition_version": 1,
+      "context": {
+        "entity": "alphabet",
+        "period": "2026 Q3",
+        "previous_period": "2025 Q3",
+        "period_end": "2026-09-30",
+        "report_published_at": "2026-10-28",
+        "measurement": "revenue",
+        "unit": "USDm",
+        "scope": "Google Cloud 收入",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "eco_google_cloud",
+            "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-release.pdf#page=2",
+            "published_at": "2026-10-28"
+          }
+        ]
+      },
+      "payload": {
+        "id": "revenue",
+        "label": "Google Cloud 收入",
+        "current": 30709,
+        "previous": 15157,
+        "unit": "USDm",
+        "source_ids": [
+          "eco_google_cloud"
+        ],
+        "location": "财报 p2 · Google Cloud revenues；2026 / 2025。",
+        "note": "",
+        "evidence_type": "direct"
+      },
+      "evidence_ids": [
+        "e-53a2c1590451efcb0c321c82dd1f9cf4631f539781acf5e5eb61f46b152a847e"
+      ],
+      "id": "290d7a8eb6fd046040333df63f9030b4ef0ea45cd3c60b2f668f96686e217369"
+    },
+    "7b21d850aac6d6d7fe33f04ebf6c5b3ba888ced74b9127126f565c15933956bb": {
+      "metric_id": "eco.alphabet.profit",
+      "definition_version": 1,
+      "context": {
+        "entity": "alphabet",
+        "period": "2026 Q3",
+        "previous_period": "2025 Q3",
+        "period_end": "2026-09-30",
+        "report_published_at": "2026-10-28",
+        "measurement": "operating_profit",
+        "unit": "USDm",
+        "scope": "Google Cloud 营业利润",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "eco_google_cloud",
+            "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-release.pdf#page=2",
+            "published_at": "2026-10-28"
+          }
+        ]
+      },
+      "payload": {
+        "id": "profit",
+        "label": "Google Cloud 营业利润",
+        "current": 11121,
+        "previous": 3594,
+        "unit": "USDm",
+        "source_ids": [
+          "eco_google_cloud"
+        ],
+        "location": "财报 p2 · Segment Operating Results · Google Cloud。",
+        "note": "",
+        "evidence_type": "direct"
+      },
+      "evidence_ids": [
+        "e-89463e7ae108876701541f25debea4b6f5d819fc82723e8c85d03400b18b1e4d"
+      ],
+      "id": "7b21d850aac6d6d7fe33f04ebf6c5b3ba888ced74b9127126f565c15933956bb"
+    },
+    "a069b95be25510bdf3b666a07307107e3e20a4273e168aeec4b33a10c4ec12ec": {
+      "metric_id": "eco.alphabet.capex",
+      "definition_version": 1,
+      "context": {
+        "entity": "alphabet",
+        "period": "2026 Q3",
+        "previous_period": "2025 Q3",
+        "period_end": "2026-09-30",
+        "report_published_at": "2026-10-28",
+        "measurement": "capex",
+        "unit": "USDm",
+        "scope": "集团现金资本开支",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "eco_google_cash",
+            "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-release.pdf#page=6",
+            "published_at": "2026-10-28"
+          }
+        ]
+      },
+      "payload": {
+        "id": "capex",
+        "label": "集团现金资本开支",
+        "current": 51355,
+        "previous": 23953,
+        "unit": "USDm",
+        "source_ids": [
+          "eco_google_cash"
+        ],
+        "location": "财报 p6 · Purchases of property and equipment；Quarter Ended September 30。",
+        "note": "",
+        "evidence_type": "direct"
+      },
+      "evidence_ids": [
+        "e-695d4968b7e9035c9f4f086cce3d2fb6ffded7b28f3e0d2cf4bbda0559862041"
+      ],
+      "id": "a069b95be25510bdf3b666a07307107e3e20a4273e168aeec4b33a10c4ec12ec"
+    },
+    "ff4651c6cfe09bd6b762f666a2821e4a07625ad6b35ea6eb89c19fce2c92ca88": {
+      "metric_id": "eco.alphabet.ocf",
+      "definition_version": 1,
+      "context": {
+        "entity": "alphabet",
+        "period": "2026 Q3",
+        "previous_period": "2025 Q3",
+        "period_end": "2026-09-30",
+        "report_published_at": "2026-10-28",
+        "measurement": "ocf",
+        "unit": "USDm",
+        "scope": "集团经营现金流",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "eco_google_cash",
+            "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-release.pdf#page=6",
+            "published_at": "2026-10-28"
+          }
+        ]
+      },
+      "payload": {
+        "id": "ocf",
+        "label": "集团经营现金流",
+        "current": 42290,
+        "previous": 48414,
+        "unit": "USDm",
+        "source_ids": [
+          "eco_google_cash"
+        ],
+        "location": "财报 p6 · Net cash provided by operating activities；季度列。",
+        "note": "",
+        "evidence_type": "direct"
+      },
+      "evidence_ids": [
+        "e-18b0f6fca959eb75c71a4e54559961d24717199a3cd0f29f5ff44387b62754e0"
+      ],
+      "id": "ff4651c6cfe09bd6b762f666a2821e4a07625ad6b35ea6eb89c19fce2c92ca88"
+    },
+    "7ccc96cf927772dd144d69e337c6fb6d29f22cc823c61dcf44a0407cf5818ab1": {
+      "metric_id": "outlook.alphabet.capex",
+      "definition_version": 1,
+      "context": {
+        "entity": "alphabet",
+        "period": "2026 Q3",
+        "previous_period": "2025 Q3",
+        "period_end": "2026-09-30",
+        "report_published_at": "2026-10-28",
+        "measurement": "outlook",
+        "unit": "",
+        "scope": "集团资本开支",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "target_period",
+        "sources": [
+          {
+            "id": "eco_google_call",
+            "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Oct/28/2026_Q3_Earnings_Transcript.pdf#page=12",
+            "published_at": "2026-10-28"
+          }
+        ]
+      },
+      "payload": {
+        "id": "capex",
+        "label": "集团资本开支",
+        "type": "numeric",
+        "value": "1,950–2,050 亿美元",
+        "summary": "维持全年资本开支指引不变。",
+        "prior_guidance": "1,950–2,050 亿美元",
+        "period": "2026 全年",
+        "issued_at": "2026-10-28",
+        "speaker": "CFO Anat Ashkenazi",
+        "kind": "公司指引",
+        "evidence_type": "direct",
+        "source_ids": [
+          "eco_google_call"
+        ],
+        "location": "业绩会 p12 · full-year 2026 CapEx guidance。"
+      },
+      "evidence_ids": [
+        "e-e10cb41e225a42b931de46bcc992c778bfacec17aebe4224b4c4da38929cf3a0"
+      ],
+      "id": "7ccc96cf927772dd144d69e337c6fb6d29f22cc823c61dcf44a0407cf5818ab1"
+    },
+    "5cf6bb7564369565ff010960feb947df55da8bb623d5a9d6b88b62edabbabb98": {
+      "metric_id": "outlook.alphabet.capacity",
+      "definition_version": 1,
+      "context": {
+        "entity": "alphabet",
+        "period": "2026 Q3",
+        "previous_period": "2025 Q3",
+        "period_end": "2026-09-30",
+        "report_published_at": "2026-10-28",
+        "measurement": "outlook",
+        "unit": "",
+        "scope": "产能与利润率",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "target_period",
+        "sources": [
+          {
+            "id": "eco_google_call",
+            "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Oct/28/2026_Q3_Earnings_Transcript.pdf#page=12",
+            "published_at": "2026-10-28"
+          }
+        ]
+      },
+      "payload": {
+        "id": "capacity",
+        "label": "产能与利润率",
+        "type": "text",
+        "value": null,
+        "summary": "供给受限，第三季末开始使用第三方算力，第四季加大使用；预计近期云业务利润率承压。",
+        "prior_guidance": "",
+        "period": "2026 Q4",
+        "issued_at": "2026-10-28",
+        "speaker": "CFO Anat Ashkenazi",
+        "kind": "管理层展望",
+        "evidence_type": "direct",
+        "source_ids": [
+          "eco_google_call"
+        ],
+        "location": "业绩会 p12 · Cloud margins / third-party compute capacity。"
+      },
+      "evidence_ids": [
+        "e-f58a98ef09d21269eaabd98ba429e249147caf1462dc059b31ac93868ce4e47c"
+      ],
+      "id": "5cf6bb7564369565ff010960feb947df55da8bb623d5a9d6b88b62edabbabb98"
+    },
+    "8112ac432eb011667a2b24ed11dc43c1776dc740f806f18006642a71209297f4": {
+      "metric_id": "outlook.alphabet.next_year",
+      "definition_version": 1,
+      "context": {
+        "entity": "alphabet",
+        "period": "2026 Q3",
+        "previous_period": "2025 Q3",
+        "period_end": "2026-09-30",
+        "report_published_at": "2026-10-28",
+        "measurement": "outlook",
+        "unit": "",
+        "scope": "后续投入",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "target_period",
+        "sources": [
+          {
+            "id": "eco_google_call",
+            "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Oct/28/2026_Q3_Earnings_Transcript.pdf#page=12",
+            "published_at": "2026-10-28"
+          }
+        ]
+      },
+      "payload": {
+        "id": "next_year",
+        "label": "后续投入",
+        "type": "text",
+        "value": null,
+        "summary": "预计 2027 年资本开支继续显著增加，将在第四季业绩会提供细节。",
+        "prior_guidance": "",
+        "period": "2027 全年",
+        "issued_at": "2026-10-28",
+        "speaker": "CFO Anat Ashkenazi",
+        "kind": "管理层展望",
+        "evidence_type": "direct",
+        "source_ids": [
+          "eco_google_call"
+        ],
+        "location": "业绩会 p12 · 2027 CapEx。"
+      },
+      "evidence_ids": [
+        "e-42ae52829bd911ee28ee213c46114857976e3c628cdd365f4fd8ef490213feca"
+      ],
+      "id": "8112ac432eb011667a2b24ed11dc43c1776dc740f806f18006642a71209297f4"
     }
   },
   "supporting": {

@@ -84,7 +84,7 @@
           ]
         },
         {
-          "text": "主要云厂商最近一季现金资本开支同比大增：Microsoft {{eco.microsoft.capex|change}}，Amazon {{eco.amazon.capex|change}}，Alphabet {{eco.alphabet.capex|change}}，Meta {{eco.meta.capex|change}}，Oracle {{eco.oracle.capex|change}}；Alphabet 把全年资本开支指引上调至 {{outlook.alphabet.capex}}，Meta 把全年指引收窄为 {{outlook.meta.capex}}，下限上调，并称明年将继续积极投资。",
+          "text": "主要云厂商最近一季现金资本开支同比大增：Microsoft {{eco.microsoft.capex|change}}，Amazon {{eco.amazon.capex|change}}，Alphabet {{eco.alphabet.capex|change}}，Meta {{eco.meta.capex|change}}，Oracle {{eco.oracle.capex|change}}；Alphabet 维持全年资本开支指引 {{outlook.alphabet.capex}}，并预计 2027 年继续显著增加；Meta 把全年指引收窄为 {{outlook.meta.capex}}，下限上调，并称 2027 年将继续积极投资。Microsoft 因第三方产能交付延迟，把自然年资本开支预期下调至 {{outlook.microsoft.annual_capex}}，并称下半财年支出将加速，其中包括更高的内存与存储成本。",
           "refs": [
             "eco.microsoft.capex",
             "eco.amazon.capex",
@@ -92,7 +92,10 @@
             "eco.meta.capex",
             "eco.oracle.capex",
             "outlook.alphabet.capex",
-            "outlook.meta.capex"
+            "outlook.meta.capex",
+            "outlook.alphabet.next_year",
+            "outlook.microsoft.annual_capex",
+            "outlook.microsoft.demand"
           ]
         },
         {
@@ -268,20 +271,21 @@
           ]
         },
         {
-          "text": "维持「整体向好」：FY2027 Q1 收入达到指引，长约与 RPO 继续增加，云厂商资本开支指引维持或上调。",
+          "text": "维持「整体向好」：FY2027 Q1 收入达到指引，长约与 RPO 继续增加，云厂商资本开支指引维持或上调（Microsoft 本季下调自然年预期，原因是第三方产能交付延迟，并称需求仍超过供给）。",
           "refs": [
             "guidance.revenue",
             "mu.orders.rpo_post_quarter",
             "outlook.microsoft.annual_capex",
             "outlook.meta.capex",
-            "outlook.alphabet.capex"
+            "outlook.alphabet.capex",
+            "outlook.microsoft.demand"
           ]
         }
       ]
     }
   ],
-  "generated_at": "2026-10-29T00:50:52.723Z",
-  "data_revision": "2026-10-29-322748692f",
+  "generated_at": "2026-10-29T21:39:22.988Z",
+  "data_revision": "2026-10-29-f85f8699fa",
   "financial_period": "FY2026 Q4",
   "cited": {
     "mu.revenue.total": {
@@ -419,9 +423,9 @@
       "change": "+2,980.6%"
     },
     "eco.microsoft.capex": {
-      "current": 35802,
-      "previous": 17079,
-      "change": "+109.6%"
+      "current": 39367,
+      "previous": 19394,
+      "change": "+103.0%"
     },
     "eco.amazon.capex": {
       "current": 54208,
@@ -429,9 +433,9 @@
       "change": "+68.4%"
     },
     "eco.alphabet.capex": {
-      "current": 44924,
-      "previous": 22446,
-      "change": "+100.1%"
+      "current": 51355,
+      "previous": 23953,
+      "change": "+114.4%"
     },
     "eco.meta.capex": {
       "current": 33942,
@@ -447,8 +451,8 @@
       "current": "1,950–2,050 亿美元",
       "previous": null,
       "detail": [
-        "提高预算以加快交付算力。",
-        "1,800–1,900 亿美元"
+        "维持全年资本开支指引不变。",
+        "1,950–2,050 亿美元"
       ]
     },
     "outlook.meta.capex": {
@@ -459,18 +463,34 @@
         "1,300–1,450 亿美元"
       ]
     },
+    "outlook.alphabet.next_year": {
+      "current": "预计 2027 年资本开支继续显著增加，将在第四季业绩会提供细节。",
+      "previous": null,
+      "detail": [
+        "预计 2027 年资本开支继续显著增加，将在第四季业绩会提供细节。",
+        ""
+      ]
+    },
+    "outlook.microsoft.annual_capex": {
+      "current": "约 1,700 亿美元",
+      "previous": null,
+      "detail": [
+        "因第三方产能交付延迟，下调自然年支出预期。",
+        "约 1,750 亿美元"
+      ]
+    },
+    "outlook.microsoft.demand": {
+      "current": "客户需求仍超过可用供给；预计下半财年资本开支加速，主要来自 CPU（含更高的内存与存储成本）、GPU 及延后的第三方产能交付。",
+      "previous": null,
+      "detail": [
+        "客户需求仍超过可用供给；预计下半财年资本开支加速，主要来自 CPU（含更高的内存与存储成本）、GPU 及延后的第三方产能交付。",
+        ""
+      ]
+    },
     "eco.nvidia.datacenter": {
       "current": 89000,
       "previous": 41100,
       "change": "+117%（报告值）"
-    },
-    "outlook.microsoft.demand": {
-      "current": "客户需求仍超过供给，预计上半年 Azure 增长加速；FY2027 资本开支继续同比增加。",
-      "previous": null,
-      "detail": [
-        "客户需求仍超过供给，预计上半年 Azure 增长加速；FY2027 资本开支继续同比增加。",
-        ""
-      ]
     },
     "outlook.oracle.demand": {
       "current": "公司称 AI 训练与推理需求的增长仍快于供给。",
@@ -723,14 +743,6 @@
     "mu.hbm.yield": {
       "current": null,
       "previous": null
-    },
-    "outlook.microsoft.annual_capex": {
-      "current": "约 1,750 亿美元",
-      "previous": null,
-      "detail": [
-        "部分租赁转为经营租赁，调低资本开支列报值；底层投资预期维持不变。",
-        ""
-      ]
     }
   },
   "cycle_read": {
