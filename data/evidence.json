@@ -15415,5 +15415,352 @@
     "mode": "verified",
     "record_hash": "f064976616d443e6b355ef53d881e5f0cfd163b3878138688a3a9bf3e76badc7",
     "id": "e-2628a1f3dadabb9899b2e3f52193ecc49bd5314c8c33c50f8406b4acba8804d0"
+  },
+  "e-37f4357a61c5558ba635bb6066c3fd8412f19bffa41875592543816054adc366": {
+    "measurement": "revenue",
+    "unit": "KRWt",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "集团收入",
+    "values": {
+      "current": 104.6155,
+      "previous": 24.4489,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 104615.5,
+        "scale": 0.001,
+        "source_unit": "KRW billions",
+        "period": "3Q26",
+        "locator": "3Q26 Financial Results 表 · Revenues · 3Q26",
+        "source_id": "eco_skhynix"
+      },
+      {
+        "field": "previous",
+        "value": 24448.9,
+        "scale": 0.001,
+        "source_unit": "KRW billions",
+        "period": "3Q25",
+        "locator": "3Q26 Financial Results 表 · Revenues · 3Q25",
+        "source_id": "eco_skhynix"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-29T00:06:17.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_skhynix",
+        "url": "https://news.skhynix.com/en/q3-2026-business-results/",
+        "sha256": "417d1b8e3350c1908632e780891a4b3811cf0e638051965fd154f3890592d777",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-29T00:05:18.487Z",
+        "reviewed_at": "2026-10-29T00:05:18.487Z",
+        "status": "read",
+        "locator": "3Q26 Financial Results (K-IFRS) 表",
+        "excerpt": "3Q26 Financial Results (K-IFRS) Unit: Billion KRW 3Q26 | 2Q26 | QoQ | 3Q25 | YoY · Revenues 104,615.5 | 79,318.7 | 32% | 24,448.9 | 328% · Operating Profit 83,333.8 | 60,542.6 | 38% | 11,383.4 | 632% · Operating Margin 80% | 76% | 3%p | 47% | 33%p"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "cce73afe05b06bf154253853d32ac706232f0ab8b54d22b94789ce46d1a98a5b",
+    "id": "e-37f4357a61c5558ba635bb6066c3fd8412f19bffa41875592543816054adc366"
+  },
+  "e-b0fe598564e1a33884571a7b5ff1e47016553d1ae714b3c7dda5d0f04b225149": {
+    "measurement": "operating_profit",
+    "unit": "KRWt",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "集团营业利润",
+    "values": {
+      "current": 83.3338,
+      "previous": 11.3834,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 83333.8,
+        "scale": 0.001,
+        "source_unit": "KRW billions",
+        "period": "3Q26",
+        "locator": "3Q26 Financial Results 表 · Operating Profit · 3Q26",
+        "source_id": "eco_skhynix"
+      },
+      {
+        "field": "previous",
+        "value": 11383.4,
+        "scale": 0.001,
+        "source_unit": "KRW billions",
+        "period": "3Q25",
+        "locator": "3Q26 Financial Results 表 · Operating Profit · 3Q25",
+        "source_id": "eco_skhynix"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-29T00:06:17.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_skhynix",
+        "url": "https://news.skhynix.com/en/q3-2026-business-results/",
+        "sha256": "417d1b8e3350c1908632e780891a4b3811cf0e638051965fd154f3890592d777",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-29T00:05:18.487Z",
+        "reviewed_at": "2026-10-29T00:05:18.487Z",
+        "status": "read",
+        "locator": "3Q26 Financial Results (K-IFRS) 表",
+        "excerpt": "3Q26 Financial Results (K-IFRS) Unit: Billion KRW 3Q26 | 2Q26 | QoQ | 3Q25 | YoY · Revenues 104,615.5 | 79,318.7 | 32% | 24,448.9 | 328% · Operating Profit 83,333.8 | 60,542.6 | 38% | 11,383.4 | 632% · Operating Margin 80% | 76% | 3%p | 47% | 33%p"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "2ba1fc21ff31dd4eecf4c0c635527e21508aca945db032a8d8469a7d58d36cc0",
+    "id": "e-b0fe598564e1a33884571a7b5ff1e47016553d1ae714b3c7dda5d0f04b225149"
+  },
+  "e-a4594b749c264eccec6a3357b384b738f290f346d461c096578795ce3fa6e0f5": {
+    "measurement": "margin",
+    "unit": "pct",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "集团营业利润率",
+    "values": {
+      "current": 80,
+      "previous": 47,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 80,
+        "scale": 1,
+        "source_unit": "pct",
+        "period": "3Q26",
+        "locator": "3Q26 Financial Results 表 · Operating Margin · 3Q26",
+        "source_id": "eco_skhynix"
+      },
+      {
+        "field": "previous",
+        "value": 47,
+        "scale": 1,
+        "source_unit": "pct",
+        "period": "3Q25",
+        "locator": "3Q26 Financial Results 表 · Operating Margin · 3Q25",
+        "source_id": "eco_skhynix"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-29T00:06:17.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_skhynix",
+        "url": "https://news.skhynix.com/en/q3-2026-business-results/",
+        "sha256": "417d1b8e3350c1908632e780891a4b3811cf0e638051965fd154f3890592d777",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-29T00:05:18.487Z",
+        "reviewed_at": "2026-10-29T00:05:18.487Z",
+        "status": "read",
+        "locator": "3Q26 Financial Results (K-IFRS) 表",
+        "excerpt": "3Q26 Financial Results (K-IFRS) Unit: Billion KRW 3Q26 | 2Q26 | QoQ | 3Q25 | YoY · Revenues 104,615.5 | 79,318.7 | 32% | 24,448.9 | 328% · Operating Profit 83,333.8 | 60,542.6 | 38% | 11,383.4 | 632% · Operating Margin 80% | 76% | 3%p | 47% | 33%p"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "f13f54b287aba431eed236bf704d9f2c5164a1fcab88aa563c32364a67016efa",
+    "id": "e-a4594b749c264eccec6a3357b384b738f290f346d461c096578795ce3fa6e0f5"
+  },
+  "e-b5570f29b3e3ad9739680732f7bef670c07321ec4ce902fb01a9101b23f9ec65": {
+    "measurement": "outlook",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "target_period",
+    "accounting_basis": "as_disclosed",
+    "scope": "HBM4 产量",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "M15X 将于年底前达到满产以增加 HBM4 产量；预计第四季度 HBM4 出货量与收入均超过 HBM3E，成为主流产品。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-29T00:06:17.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_skhynix",
+        "url": "https://news.skhynix.com/en/q3-2026-business-results/",
+        "sha256": "417d1b8e3350c1908632e780891a4b3811cf0e638051965fd154f3890592d777",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-29T00:05:18.487Z",
+        "reviewed_at": "2026-10-29T00:05:18.487Z",
+        "status": "read",
+        "locator": "Expanding production capacity and strengthening product competitiveness 段落",
+        "excerpt": "To respond to surging HBM demand, the company will ramp up M15X to maximum capacity by the end of the year to increase HBM4 production. Accordingly, the company expects HBM4 to surpass HBM3E in both shipment volume and revenue in the fourth quarter and to establish itself as a mainstream product."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "7b31d5af723075243e4959753705cad0863aa25340790da2d57d3c330d0839f7",
+    "id": "e-b5570f29b3e3ad9739680732f7bef670c07321ec4ce902fb01a9101b23f9ec65"
+  },
+  "e-93a4d731c845f6e653c9852508ca204f7d31971d43f17a607c443970b1d443bd": {
+    "measurement": "outlook",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "target_period",
+    "accounting_basis": "as_disclosed",
+    "scope": "321 层 NAND 产能占比",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": "超过 50%",
+      "summary": "第四季度 321 层工艺占韩国境内 NAND 产能过半，用于扩大高性能、大容量 eSSD 供给。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-29T00:06:17.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_skhynix",
+        "url": "https://news.skhynix.com/en/q3-2026-business-results/",
+        "sha256": "417d1b8e3350c1908632e780891a4b3811cf0e638051965fd154f3890592d777",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-29T00:05:18.487Z",
+        "reviewed_at": "2026-10-29T00:05:18.487Z",
+        "status": "read",
+        "locator": "Expanding production capacity 段落 · In NAND",
+        "excerpt": "In NAND, the company will raise the ratio of its 321-layer process to more than half of its domestic production capacity in the fourth quarter, and thereby increase the supply of high-performance, high-capacity eSSD."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "cb28f824e81365cf5840f6ff5090dc5ec01dfdc417e43b1eb628d8496f0401a8",
+    "id": "e-93a4d731c845f6e653c9852508ca204f7d31971d43f17a607c443970b1d443bd"
+  },
+  "e-818ff84795ca15c3dbf0993c2cb6695da7dc4743162325a05f1f48c583dca04c": {
+    "measurement": "outlook",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "target_period",
+    "accounting_basis": "as_disclosed",
+    "scope": "新增产能",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "明年龙仁一期全面投产、国内外基础设施投资加速，投资预计大幅增加；规模与时点将按客户需求、产品竞争力、盈利能力与投资效率灵活调整。已与 14 家主要客户签订长期协议，覆盖 2027–2028 年总产能的一半以上。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-29T00:06:17.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_skhynix",
+        "url": "https://news.skhynix.com/en/q3-2026-business-results/",
+        "sha256": "417d1b8e3350c1908632e780891a4b3811cf0e638051965fd154f3890592d777",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-29T00:05:18.487Z",
+        "reviewed_at": "2026-10-29T00:05:18.487Z",
+        "status": "read",
+        "locator": "Long-term agreements secured for more than 50% of 2027~2028 production capacity 段落",
+        "excerpt": "The company has currently signed LTAs with 14 major customers ... The LTA volume secured to date corresponds to more than 50% of total production capacity for 2027 and 2028. ... Next year, with the Yongin Phase 1 entering full-scale operation and domestic and overseas infrastructure investment gaining momentum, investment is expected to increase significantly. The company nevertheless plans to adjust the scale and timing of its investment flexibly, after carefully weighing customer demand, product competitiveness, profitability and investment efficiency."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "a7635e8a498f35d5c7e4f2b0ffc05f8b16041d27c9718e6ec8f69b166f815fd4",
+    "id": "e-818ff84795ca15c3dbf0993c2cb6695da7dc4743162325a05f1f48c583dca04c"
+  },
+  "e-7725bfc353c51c9b56aff89f36ab91093b74dcf841f385149bbf16232a6d3ca0": {
+    "measurement": "technology_product",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "skhynix_hbm4",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "第三季度正式扩大出货；预计第四季度出货量与收入均超过 HBM3E，M15X 于年底前满产。"
+    },
+    "raw_inputs": [
+      {
+        "field": "facts.speed.value",
+        "value": 10,
+        "scale": 1,
+        "source_unit": "Gbps",
+        "period": "2025-09-12",
+        "locator": "AI Summary · speeds above 10Gbps",
+        "source_id": "tech_sk_hbm4"
+      },
+      {
+        "field": "facts.power_change.value",
+        "value": 40,
+        "scale": 1,
+        "source_unit": "pct",
+        "period": "2025-09-12",
+        "locator": "正文 · power efficiency improved by more than 40%",
+        "source_id": "tech_sk_hbm4"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-29T00:06:17.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "tech_sk_hbm4",
+        "url": "https://news.skhynix.com/en/sk-hynix-completes-worlds-first-hbm4-development-and-readies-mass-production/",
+        "sha256": "d7e089d99a291555dad8e0012eb0914a0a3a907ebba49353fc786e4e086567e0",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-29T00:05:51.798Z",
+        "reviewed_at": "2026-10-29T00:05:51.798Z",
+        "status": "read",
+        "locator": "AI Summary 与正文（2,048 I/O、功耗效率）",
+        "excerpt": "HBM4, a next-gen AI memory with double the bandwidth, over 40% better power efficiency, and speeds above 10Gbps ... bandwidth doubled through adoption of 2,048 I/O terminals, double from the previous generation, and power efficiency improved by more than 40%."
+      },
+      {
+        "source_id": "tech_sk_q3",
+        "url": "https://news.skhynix.com/en/q3-2026-business-results/",
+        "sha256": "417d1b8e3350c1908632e780891a4b3811cf0e638051965fd154f3890592d777",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-29T00:05:18.815Z",
+        "reviewed_at": "2026-10-29T00:05:18.815Z",
+        "status": "read",
+        "locator": "By product 段落与 Expanding production capacity 段落",
+        "excerpt": "By product, DRAM results were driven by a significant increase in sales of server DDR5 while HBM4 shipments began in earnest. ... the company will ramp up M15X to maximum capacity by the end of the year to increase HBM4 production. Accordingly, the company expects HBM4 to surpass HBM3E in both shipment volume and revenue in the fourth quarter"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "a08bbedf5d3de5efc0096be5c2809c13cbb03eb0386079ceb0facecd046d85c0",
+    "id": "e-7725bfc353c51c9b56aff89f36ab91093b74dcf841f385149bbf16232a6d3ca0"
   }
 }
