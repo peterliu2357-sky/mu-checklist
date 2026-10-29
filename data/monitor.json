@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "revision": "2026-10-29-80af3d8066",
-  "updated_at": "2026-10-29T00:28:03.080Z",
+  "revision": "2026-10-29-322748692f",
+  "updated_at": "2026-10-29T00:50:42.150Z",
   "last_successful_check_at": "2026-09-20T23:50:00Z",
   "last_attempt_at": "2026-09-20T23:50:00Z",
   "financial_period": "FY2026 Q4",
@@ -368,12 +368,12 @@
       "locator": "首段：4Q26 普通型 DRAM 合同价环比；第二段：NAND Flash 合同价环比。"
     },
     "spot": {
-      "label": "TrendForce 现货周报 · 10-21",
-      "url": "https://www.trendforce.com/news/2026/10/21/insights-memory-spot-price-update-ddr5-supply-tight-ddr4-trading-subdued-despite-0-84-gain-in-mainstream-prices/",
-      "published_at": "2026-10-21",
-      "checked_at": "2026-10-22",
+      "label": "TrendForce 现货周报 · 10-28",
+      "url": "https://www.trendforce.com/news/2026/10/28/insights-memory-spot-price-update-nand-spot-price-cuts-accelerate-amid-china-phone-discounts-512gb-tlc-sink-9-19/",
+      "published_at": "2026-10-28",
+      "checked_at": "2026-10-29",
       "type": "行业报价",
-      "short_label": "TrendForce · 10-21 现货周报",
+      "short_label": "TrendForce · 10-28 现货周报",
       "locator": "DRAM Spot Price / NAND Flash Spot Price（周均价与注明日期）"
     },
     "ssd": {
@@ -719,30 +719,30 @@
       "type": "公司原始披露"
     },
     "eco_samsung": {
-      "label": "三星 2026 Q2 分部业绩",
+      "label": "三星 2026 Q3 分部业绩",
       "short_label": "三星分部数据 p13",
-      "url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_2Q_conference_eng.pdf?pubDate=20260802#page=13",
-      "published_at": "2026-07-30",
-      "checked_at": "2026-09-20",
-      "locator": "第 13 页 Appendix 2：Memory / DS 收入与 DS 营业利润，2Q25 / 2Q26。",
+      "url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_3Q_conference_eng.pdf#page=13",
+      "published_at": "2026-10-29",
+      "checked_at": "2026-10-29",
+      "locator": "第 13 页 Appendix 2：Memory / DS 收入与 DS 营业利润，3Q25 / 3Q26。",
       "type": "公司原始披露"
     },
     "eco_samsung_cash": {
-      "label": "三星 2026 Q2 现金流",
+      "label": "三星 2026 Q3 现金流",
       "short_label": "三星现金流 p15",
-      "url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_2Q_conference_eng.pdf?pubDate=20260802#page=15",
-      "published_at": "2026-07-30",
-      "checked_at": "2026-09-20",
-      "locator": "第 15 页 Appendix 4：Cash flows from operating activities / Purchase of PP&E，2Q25 / 2Q26。",
+      "url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_3Q_conference_eng.pdf#page=15",
+      "published_at": "2026-10-29",
+      "checked_at": "2026-10-29",
+      "locator": "第 15 页 Appendix 4：Cash flows from operating activities / Purchase of PP&E，3Q25 / 3Q26。",
       "type": "公司原始披露"
     },
     "eco_samsung_outlook": {
-      "label": "三星 2026 Q2 经营展望",
+      "label": "三星 2026 Q3 存储业务展望",
       "short_label": "三星经营展望",
-      "url": "https://news.samsung.com/global/samsung-electronics-announces-second-quarter-2026-results",
-      "published_at": "2026-07-30",
-      "checked_at": "2026-09-20",
-      "locator": "DS To Maintain Growth Momentum：H2 2026 memory demand and supply outlook。",
+      "url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_3Q_conference_eng.pdf#page=7",
+      "published_at": "2026-10-29",
+      "checked_at": "2026-10-29",
+      "locator": "第 7 页 Memory · Outlook：4Q 2026 与 2027。",
       "type": "公司原始披露"
     },
     "eco_skhynix": {
@@ -1188,12 +1188,12 @@
     },
     "dram_spot": {
       "label": "DRAMeXchange DRAM 现货报价",
-      "short_label": "10-23 · DRAM 现货",
+      "short_label": "10-28 · DRAM 现货",
       "url": "https://www.dramexchange.com/",
-      "published_at": "2026-10-23",
-      "checked_at": "2026-10-26",
+      "published_at": "2026-10-28",
+      "checked_at": "2026-10-29",
       "type": "原始行业报价",
-      "locator": "DRAM Spot Price · Last Update Oct.23 2026 18:10 (GMT+8) · Session Average / Session Change。"
+      "locator": "DRAM Spot Price · Last Update Oct.28 2026 18:10 (GMT+8) · Session Average / Session Change。"
     },
     "korea_trade": {
       "label": "韩国产业通商部 2026 年 9 月进出口动向",
@@ -2112,6 +2112,15 @@
       "checked_at": "2026-10-29",
       "type": "公司财报",
       "locator": "首尔时间 10-29 上午读取时已可下载（16 页，PDF 创建于 10-28 UTC）；Appendix 2 列出 DS 与 Memory 收入、DS 营业利润，Appendix 3/4 列出存货与资本开支。"
+    },
+    "eco_samsung_balance": {
+      "label": "三星 2026 Q3 财务状况",
+      "short_label": "三星财务状况 p14",
+      "url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_3Q_conference_eng.pdf#page=14",
+      "published_at": "2026-10-29",
+      "checked_at": "2026-10-29",
+      "locator": "第 14 页 Appendix 3：Inventories，30.Sep.25 / 30.Sep.26（十亿韩元）。",
+      "type": "公司原始披露"
     }
   },
   "metrics": [
@@ -3095,20 +3104,20 @@
       "rows": [
         {
           "label": "DDR4 1Gx8 3200 现货",
-          "current": 46.357,
+          "current": 47.04,
           "previous": null,
           "unit": "USD",
           "source_ids": [
             "spot"
           ],
           "kind": "行业报价",
-          "note": "TrendForce 每周现货报告的周均价；趋势线各点同一口径。周变动为 TrendForce 相对其上周报告的报告值，上周读数本站未收录。",
-          "period": "截至 10-20",
-          "change": "周变动 +0.84%（报告值）",
-          "location": "TrendForce 10-21 现货周报 · DRAM Spot Price。",
+          "note": "TrendForce 每周现货报告的周均价；趋势线各点同一口径。周变动为 TrendForce 相对其上周报告的报告值；10-28 报告称上周（10-21）为 46.79 美元，与其 10-21 报告所列 10-20 周均价 46.357 美元不同，趋势线保留各期报告原值。",
+          "period": "截至 10-27",
+          "change": "周变动 +0.55%（报告值）",
+          "location": "TrendForce 10-28 现货周报 · DRAM Spot Price。",
           "evidence_type": "direct",
           "id": "ddr4_spot",
-          "as_of": "2026-10-20"
+          "as_of": "2026-10-27"
         },
         {
           "label": "DDR4 8Gb (1Gx8) 合同价",
@@ -3129,7 +3138,7 @@
         },
         {
           "label": "DDR5 16Gb (2Gx8) 4800/5600 现货",
-          "current": 61.267,
+          "current": 61.333,
           "previous": null,
           "unit": "USD",
           "source_ids": [
@@ -3137,12 +3146,12 @@
           ],
           "kind": "行业报价",
           "note": "与 DDR4 1Gx8 现货是不同规格，不互相替代。",
-          "period": "截至 10-23",
-          "change": "日变动 +0.27%（DRAMeXchange 披露）",
-          "location": "DRAMeXchange · DRAM Spot Price · DDR5 16Gb (2Gx8) 4800/5600 · Session Average，Last Update Oct.23 2026 18:10 (GMT+8)。",
+          "period": "截至 10-28",
+          "change": "日变动 0.00%（DRAMeXchange 披露）",
+          "location": "DRAMeXchange · DRAM Spot Price · DDR5 16Gb (2Gx8) 4800/5600 · Session Average，Last Update Oct.28 2026 18:10 (GMT+8)。",
           "evidence_type": "direct",
           "id": "ddr5_spot",
-          "as_of": "2026-10-23"
+          "as_of": "2026-10-28"
         },
         {
           "label": "DDR5 16Gb 合同价（固定价格）",
@@ -3180,7 +3189,7 @@
         },
         {
           "label": "512Gb TLC 现货",
-          "current": 18.592,
+          "current": 16.883,
           "previous": null,
           "unit": "USD",
           "source_ids": [
@@ -3188,12 +3197,12 @@
           ],
           "kind": "行业报价",
           "note": "",
-          "period": "截至 10-19",
-          "change": "周变动 −1.28%（报告值）",
-          "location": "TrendForce 10-21 现货周报 · NAND Flash Spot Price。",
+          "period": "截至 10-26",
+          "change": "周变动 −9.19%（报告值）",
+          "location": "TrendForce 10-28 现货周报 · NAND Flash Spot Price。",
           "evidence_type": "direct",
           "id": "tlc_spot",
-          "as_of": "2026-10-19"
+          "as_of": "2026-10-26"
         },
         {
           "label": "普通型 DRAM 合同价环比",
@@ -3248,10 +3257,10 @@
         "现货报价按指定规格采样。4Q26 合同价区间来自 TrendForce 09-30 新闻稿；NAND 趋势行仍为 09-10 公开摘要。"
       ],
       "period": "DRAM 报价至 09-23；NAND 报价至 09-14；报告至 09-16",
-      "checked_at": "2026-10-26",
+      "checked_at": "2026-10-29",
       "next_review": "每周",
       "definition": "行业合同价预测与现货报价。",
-      "interpretation": "TrendForce 09-30 预计 4Q26 普通型 DRAM 合同价仍上涨但涨幅较三季度收敛，NAND 合同价涨幅区间高于 DRAM。DDR4 现货周均价 10-20 较上周小幅上涨，06-23 以来整体上行；512Gb TLC 晶圆现货 8 月中以来连续回落。"
+      "interpretation": "TrendForce 09-30 预计 4Q26 普通型 DRAM 合同价仍上涨但涨幅较三季度收敛，NAND 合同价涨幅区间高于 DRAM。DDR4 现货周均价 10-27 较上周小幅上涨，06-23 以来整体上行；512Gb TLC 晶圆现货 8 月中以来连续回落，10-26 当周跌幅明显扩大。"
     },
     {
       "id": "supply",
@@ -3345,7 +3354,7 @@
         "首批晶圆、产品出货和成熟产量属于不同阶段。"
       ],
       "period": "2026–2027 展望 · 披露至 09-16",
-      "checked_at": "2026-10-26",
+      "checked_at": "2026-10-29",
       "next_review": "新行业报告",
       "definition": "机构供需预测及公司产能计划。",
       "interpretation": "TrendForce 最新摘要预计 NAND 不同终端市场分化；企业 SSD 的需求展望不宜外推至全部消费级存储。"
@@ -3509,7 +3518,7 @@
         "韩国出口额与南亚科营收是售价与数量混合的间接指标，不是美光位元出货或客户库存。"
       ],
       "period": "行业资料至 09-21",
-      "checked_at": "2026-10-26",
+      "checked_at": "2026-10-29",
       "next_review": "每周",
       "definition": "用于观察终端需求的间接指标。",
       "interpretation": "企业 SSD 交付周期为 16 周，而 TrendForce 给出的均衡基准为 8 周，说明交付仍受约束。韩国 9 月存储芯片出口额大幅高于上年同月；南亚科 8 月营收较 7 月小幅增加（环比 +1.9%），维持在 7 月跳升后的高位。官方称出口增长来自出货量扩大、固定价格上涨及季末效应，价格与数量的作用不能拆分。这些都不是美光采购量，客户实际库存与消耗量仍待补充。"
@@ -3527,6 +3536,12 @@
     "产业链指引和管理层展望按原披露日期及目标期间记录，文字为中文摘要；同比由原始金额计算，百分点与百分比区分。"
   ],
   "check_log": [
+    {
+      "at": "2026-10-29T00:50:42.150Z",
+      "status": "success",
+      "scope": "batch",
+      "text": "核查范围：batch；完成 3 / 3 项。"
+    },
     {
       "at": "2026-10-29T00:28:03.080Z",
       "status": "success",
@@ -4841,39 +4856,39 @@
         "ticker": "005930",
         "group": "chips",
         "role": "DRAM · HBM · NAND",
-        "period": "2026 Q2",
-        "previous_period": "2025 Q2",
-        "period_end": "2026-06-30",
-        "published_at": "2026-07-30",
-        "checked_at": "2026-09-20",
+        "period": "2026 Q3",
+        "previous_period": "2025 Q3",
+        "period_end": "2026-09-30",
+        "published_at": "2026-10-29",
+        "checked_at": "2026-10-29",
         "scope": "DS 含存储、晶圆代工与 System LSI；Memory 收入单列。",
         "metrics": [
           {
             "id": "revenue",
             "label": "Memory 收入",
-            "current": 120.8,
-            "previous": 21.2,
+            "current": 140.7,
+            "previous": 26.7,
             "unit": "KRWt",
             "source_ids": [
               "eco_samsung"
             ],
-            "location": "业绩材料 p13 · Sales · Memory，2Q26 / 2Q25。",
+            "location": "业绩材料 p13 · Sales · Memory，3Q26 / 3Q25。",
             "note": "按公司舍入金额展示；同比采用业绩材料披露值。",
             "evidence_type": "direct",
             "digits": 1,
-            "change": "+471%（报告值）"
+            "change": "+427%（报告值）"
           },
           {
             "id": "profit",
             "label": "DS 营业利润",
-            "current": 89.2,
-            "previous": 0.4,
+            "current": 106.5,
+            "previous": 7,
             "unit": "KRWt",
             "source_ids": [
               "eco_samsung"
             ],
-            "location": "业绩材料 p13 · Operating Profit · DS，2Q26 / 2Q25。",
-            "note": "同期基数较低，使用利润金额增量。",
+            "location": "业绩材料 p13 · Operating Profit · DS，3Q26 / 3Q25。",
+            "note": "上年同期基数较低，使用利润金额增量。",
             "evidence_type": "direct",
             "digits": 1,
             "change_mode": "absolute"
@@ -4881,28 +4896,44 @@
           {
             "id": "capex",
             "label": "集团现金资本开支",
-            "current": 14.11,
-            "previous": 13.04,
+            "current": 26.9,
+            "previous": 10.8,
             "unit": "KRWt",
             "source_ids": [
               "eco_samsung_cash"
             ],
-            "location": "业绩材料 p15 · Purchase of PP&E，2Q26 / 2Q25。",
-            "note": "",
-            "evidence_type": "direct"
+            "location": "业绩材料 p15 · Purchase of PP&E，3Q26 / 3Q25。",
+            "note": "资料按一位小数披露。",
+            "evidence_type": "direct",
+            "digits": 1
           },
           {
             "id": "ocf",
             "label": "集团经营现金流",
-            "current": 105.08,
-            "previous": 17.31,
+            "current": 98.6,
+            "previous": 22.6,
             "unit": "KRWt",
             "source_ids": [
               "eco_samsung_cash"
             ],
-            "location": "业绩材料 p15 · Cash flows from operating activities，2Q26 / 2Q25。",
-            "note": "",
-            "evidence_type": "direct"
+            "location": "业绩材料 p15 · Cash flows from operating activities，3Q26 / 3Q25。",
+            "note": "资料按一位小数披露。",
+            "evidence_type": "direct",
+            "digits": 1
+          },
+          {
+            "id": "inventory",
+            "label": "集团合并存货",
+            "current": 71.9952,
+            "previous": 50.3324,
+            "unit": "KRWt",
+            "source_ids": [
+              "eco_samsung_balance"
+            ],
+            "location": "业绩材料 p14 · Inventories，30.Sep.26 / 30.Sep.25（十亿韩元换算为万亿韩元）。",
+            "note": "集团合并口径，不是存储部门存货。",
+            "evidence_type": "direct",
+            "digits": 1
           }
         ],
         "outlook": [
@@ -4911,38 +4942,39 @@
             "label": "存储需求与供给",
             "type": "text",
             "value": null,
-            "summary": "预计服务器 DRAM、企业 SSD 与 HBM 需求加速，供给仍偏紧；手机与 PC 需求部分放缓。",
+            "summary": "预计第四季 AI 基础设施投资持续，存储需求进一步增长、以新 CPU/GPU 平台相关产品为主，个人 AI Agent 服务推动 QLC SSD 需求快速增加；2027 年 AI 驱动的需求可能使供给短缺较 2026 年更紧。",
             "prior_guidance": "",
-            "period": "2026 下半年",
-            "issued_at": "2026-07-30",
+            "period": "2026 Q4 与 2027 年",
+            "issued_at": "2026-10-29",
             "speaker": "三星存储业务管理层",
             "kind": "管理层展望",
             "evidence_type": "direct",
             "source_ids": [
               "eco_samsung_outlook"
             ],
-            "location": "DS / Memory · H2 2026 outlook。"
+            "location": "第 7 页 Memory · Outlook：4Q 2026 / 2027。"
           },
           {
             "id": "products",
             "label": "产品组合",
             "type": "text",
             "value": null,
-            "summary": "计划扩大 HBM4、DDR5、SOCAMM2 等高附加值产品供给。",
+            "summary": "第四季进一步增加 HBM、服务器 DRAM 与 SSD 销售，扩大高速服务器 DDR5 与 QLC 供给；2027 年以长期合约建立稳定销售基础，并按 AI 应用需求及时备妥新品。",
             "prior_guidance": "",
-            "period": "2026 下半年",
-            "issued_at": "2026-07-30",
+            "period": "2026 Q4 与 2027 年",
+            "issued_at": "2026-10-29",
             "speaker": "三星存储业务管理层",
             "kind": "公司计划",
             "evidence_type": "direct",
             "source_ids": [
               "eco_samsung_outlook"
             ],
-            "location": "DS / Memory · product portfolio plans。"
+            "location": "第 7 页 Memory · Outlook：Maintain AI application focused sales strategy / 2027。"
           }
         ],
         "notes": [
-          "Memory 的独立营业利润未列示；DS 利润覆盖多个半导体业务。"
+          "Memory 的独立营业利润未列示；DS 利润覆盖多个半导体业务。",
+          "业绩材料在外部审阅完成前发布，三星称部分数字可能调整。"
         ]
       },
       {
@@ -5132,7 +5164,7 @@
           "index_samsung_news_20261028"
         ],
         "reason": "三星 2026 Q3 业绩说明会资料 PDF 已可下载（首尔时间 10-29 读取），附录列出存储部门收入、DS 营业利润、存货与资本开支，另行处理完整季报；IR 财报页的财报发布按钮仍未启用。",
-        "processed_at": null
+        "processed_at": "2026-10-29T00:50:42.150Z"
       },
       {
         "key": "industry",
@@ -5157,7 +5189,7 @@
           "index_ecos_kostat_inv_20261028"
         ],
         "reason": "已检查行业入口：TrendForce 10-28 发布新的现货周报（DDR4 截至 10-27、512Gb TLC 截至 10-26），DRAMeXchange 10-28 18:10 收盘场有新的 DDR5 现货读数，另行发布行业更新；合同价表仍为 08-31；TrendForce 新闻稿列表中无内存价格新闻稿，Insights 无新的公开 Weekly Radar；韩国央行 DRAM 出口价格指数最新仍为 9 月，KSIC 26 出货与库存指数最新仍为 8 月；南亚科 9 月营收仍未公布。",
-        "processed_at": null
+        "processed_at": "2026-10-29T00:50:42.150Z"
       },
       {
         "key": "technology:facilities",
@@ -11300,6 +11332,19 @@
           }
         ],
         "record_id": "d27728850c5cd56a2846a3d4442bc26ebf5a427a8368610cb1982576d2469acd"
+      },
+      {
+        "as_of": "2026-10-20",
+        "value": 46.357,
+        "unit": "USD",
+        "sources": [
+          {
+            "id": "spot",
+            "url": "https://www.trendforce.com/news/2026/10/21/insights-memory-spot-price-update-ddr5-supply-tight-ddr4-trading-subdued-despite-0-84-gain-in-mainstream-prices/",
+            "published_at": "2026-10-21"
+          }
+        ],
+        "record_id": "d2089348f30235f6e5e9f1aeab9f09d82072384afa9c5fb63708d7e54c0ad561"
       }
     ],
     "mu.contract.tlc_spot": [
@@ -11471,6 +11516,19 @@
           }
         ],
         "record_id": "0199b1a5c27c7107e4f755370075f549c1a294ddc3d5a8b7d7c7600ad329f606"
+      },
+      {
+        "as_of": "2026-10-19",
+        "value": 18.592,
+        "unit": "USD",
+        "sources": [
+          {
+            "id": "spot",
+            "url": "https://www.trendforce.com/news/2026/10/21/insights-memory-spot-price-update-ddr5-supply-tight-ddr4-trading-subdued-despite-0-84-gain-in-mainstream-prices/",
+            "published_at": "2026-10-21"
+          }
+        ],
+        "record_id": "6a352034bd12fb875c8ad063a4bb23df90f45633505b9e989422bf94e4aff843"
       }
     ],
     "mu.demand.nanya_revenue": [
@@ -11698,6 +11756,19 @@
           }
         ],
         "record_id": "f7d3c43dd5db83a848aa589a5df054955c59cb2f2420799b8281dabc5f88a7c9"
+      },
+      {
+        "as_of": "2026-10-23",
+        "value": 61.267,
+        "unit": "USD",
+        "sources": [
+          {
+            "id": "dram_spot",
+            "url": "https://www.dramexchange.com/",
+            "published_at": "2026-10-23"
+          }
+        ],
+        "record_id": "5c5b3a8a7ef612a9f30d7c7e2c4911158b6a98765a5ad461b7ab525c0ea87d9a"
       }
     ],
     "mu.contract.bok_dram_price": [
