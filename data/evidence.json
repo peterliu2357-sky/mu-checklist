@@ -17132,5 +17132,377 @@
     "mode": "verified",
     "record_hash": "7a0dac60151eb11ceb8b5295630d62589d2f086490e4007e17f2ebd8ae14f403",
     "id": "e-1f3ac11ff6a9d2c943fbd569aac49d43f9c50c68d430be9b6b03cbde6475d05c"
+  },
+  "e-88f66d8db0fbdb201ab228773ffc4de2ab2d4598bdaef0f24c1b8ec92b4bb382": {
+    "measurement": "revenue",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "AWS 收入",
+    "values": {
+      "current": 45984,
+      "previous": 33006,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 45984,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026 Q3",
+        "locator": "Segment Information · AWS · Net sales · 2026",
+        "source_id": "eco_amazon"
+      },
+      {
+        "field": "previous",
+        "value": 33006,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2025 Q3",
+        "locator": "Segment Information · AWS · Net sales · 2025",
+        "source_id": "eco_amazon"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-30T21:12:00.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_amazon",
+        "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+        "sha256": "7db2112f3b602c5b9ed3886a1811b30e2fe690963f8c9feba6f880fbcf33a68f",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-30T21:04:47.224Z",
+        "reviewed_at": "2026-10-30T21:04:47.224Z",
+        "status": "read",
+        "locator": "Segment Information · AWS · Net sales",
+        "excerpt": "Three Months Ended September 30, 2025 2026 · AWS Net sales $ 33,006 $ 45,984"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "3d73cd2e1f5ae256308d52dcd2297e97349aa3c23ec36a30aeb4bc27ebcc26ee",
+    "id": "e-88f66d8db0fbdb201ab228773ffc4de2ab2d4598bdaef0f24c1b8ec92b4bb382"
+  },
+  "e-2e4989f61cb5ae2ce00ee69a88c8b1c1b36dbad86bd1f4cd0cbadef9649824f7": {
+    "measurement": "operating_profit",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "AWS 营业利润",
+    "values": {
+      "current": 17773,
+      "previous": 11434,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 17773,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026 Q3",
+        "locator": "Segment Information · AWS · Operating income · 2026",
+        "source_id": "eco_amazon"
+      },
+      {
+        "field": "previous",
+        "value": 11434,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2025 Q3",
+        "locator": "Segment Information · AWS · Operating income · 2025",
+        "source_id": "eco_amazon"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-30T21:12:00.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_amazon",
+        "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+        "sha256": "7db2112f3b602c5b9ed3886a1811b30e2fe690963f8c9feba6f880fbcf33a68f",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-30T21:04:47.224Z",
+        "reviewed_at": "2026-10-30T21:04:47.224Z",
+        "status": "read",
+        "locator": "Segment Information · AWS · Operating income",
+        "excerpt": "Three Months Ended September 30, 2025 2026 · AWS Net sales $ 33,006 $ 45,984 · Operating income $ 11,434 $ 17,773"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "800ec74275f531c504294aef282d3456c2a268eb660643a81cfbfbdf0d9d712c",
+    "id": "e-2e4989f61cb5ae2ce00ee69a88c8b1c1b36dbad86bd1f4cd0cbadef9649824f7"
+  },
+  "e-18be96374d1edeb266d270221336402d395e172d92d8435854a5ca22786f7c53": {
+    "measurement": "capex",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "集团现金资本开支",
+    "values": {
+      "current": 77259,
+      "previous": 35095,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 77259,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026 Q3",
+        "locator": "Consolidated Statements of Cash Flows · Purchases of property and equipment · 2026",
+        "source_id": "eco_amazon"
+      },
+      {
+        "field": "previous",
+        "value": 35095,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2025 Q3",
+        "locator": "Consolidated Statements of Cash Flows · Purchases of property and equipment · 2025",
+        "source_id": "eco_amazon"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-30T21:12:00.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_amazon",
+        "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+        "sha256": "7db2112f3b602c5b9ed3886a1811b30e2fe690963f8c9feba6f880fbcf33a68f",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-30T21:04:47.224Z",
+        "reviewed_at": "2026-10-30T21:04:47.224Z",
+        "status": "read",
+        "locator": "Consolidated Statements of Cash Flows · Purchases of property and equipment",
+        "excerpt": "Three Months Ended September 30, 2025 2026 · Purchases of property and equipment (35,095) (77,259)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "ae5100570e8a9fc21598c4d507ec208c9271dd03009e3e5bc981cb09ff2d961b",
+    "id": "e-18be96374d1edeb266d270221336402d395e172d92d8435854a5ca22786f7c53"
+  },
+  "e-9acefb90b6fb586cdf2f3f4c014873a21f766d4d4560a2cc89b4ed97f7606686": {
+    "measurement": "ocf",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "集团经营现金流",
+    "values": {
+      "current": 42422,
+      "previous": 35525,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 42422,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026 Q3",
+        "locator": "Consolidated Statements of Cash Flows · Net cash provided by (used in) operating activities · 2026",
+        "source_id": "eco_amazon"
+      },
+      {
+        "field": "previous",
+        "value": 35525,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2025 Q3",
+        "locator": "Consolidated Statements of Cash Flows · Net cash provided by (used in) operating activities · 2025",
+        "source_id": "eco_amazon"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-30T21:12:00.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_amazon",
+        "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+        "sha256": "7db2112f3b602c5b9ed3886a1811b30e2fe690963f8c9feba6f880fbcf33a68f",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-30T21:04:47.224Z",
+        "reviewed_at": "2026-10-30T21:04:47.224Z",
+        "status": "read",
+        "locator": "Consolidated Statements of Cash Flows · Net cash provided by (used in) operating activities",
+        "excerpt": "Three Months Ended September 30, 2025 2026 · Net cash provided by (used in) operating activities 35,525 42,422"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "001e8d556dc0f74a8be6aa96271c2b6303c928cdf00fd195d0d928d0d6b95c54",
+    "id": "e-9acefb90b6fb586cdf2f3f4c014873a21f766d4d4560a2cc89b4ed97f7606686"
+  },
+  "e-aa9b107ee71866fdd0bc898f808a92ae6598b04d82dc80b8f9634e8fbd4c9026": {
+    "measurement": "operating_profit",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "target_period",
+    "accounting_basis": "as_disclosed",
+    "scope": "集团营业利润",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": "285–335 亿美元",
+      "summary": "上年同期为 250 亿美元。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-30T21:12:00.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_amazon",
+        "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+        "sha256": "7db2112f3b602c5b9ed3886a1811b30e2fe690963f8c9feba6f880fbcf33a68f",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-30T21:04:47.224Z",
+        "reviewed_at": "2026-10-30T21:04:47.224Z",
+        "status": "read",
+        "locator": "Financial Guidance · Fourth Quarter 2026 Guidance",
+        "excerpt": "•Operating income is expected to be between $28.5 billion and $33.5 billion, compared with $25.0 billion in fourth quarter 2025."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "d87590d3b017e88ec25e04beca1b898c57ab5f1ba655531663aea393485151a0",
+    "id": "e-aa9b107ee71866fdd0bc898f808a92ae6598b04d82dc80b8f9634e8fbd4c9026"
+  },
+  "e-62cb149a46203bd3d7ef8de0944d356b3f491b2d63602d3ac3452c6eb62a178d": {
+    "measurement": "revenue",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "target_period",
+    "accounting_basis": "as_disclosed",
+    "scope": "集团收入",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": "2,400–2,470 亿美元",
+      "summary": "公司预计同比增长 12%–16%，已计入约 60 个基点的不利汇率影响。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-30T21:12:00.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_amazon",
+        "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+        "sha256": "7db2112f3b602c5b9ed3886a1811b30e2fe690963f8c9feba6f880fbcf33a68f",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-30T21:04:47.224Z",
+        "reviewed_at": "2026-10-30T21:04:47.224Z",
+        "status": "read",
+        "locator": "Financial Guidance · Fourth Quarter 2026 Guidance",
+        "excerpt": "•Net sales are expected to be between $240.0 billion and $247.0 billion, or to grow between 12% and 16% compared with fourth quarter 2025. This guidance anticipates an unfavorable impact of approximately 60 basis points from foreign exchange rates."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "f8020d68ba871d00413e14d35f35fc9aca9d1a7c964c2f71fa97baa0b8f2bce9",
+    "id": "e-62cb149a46203bd3d7ef8de0944d356b3f491b2d63602d3ac3452c6eb62a178d"
+  },
+  "e-6960adea97db7917cda522bf10b665923f039477b80096326967a9c05eb0d999": {
+    "measurement": "outlook",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "target_period",
+    "accounting_basis": "as_disclosed",
+    "scope": "集团现金资本开支",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": "约 2,200 亿美元",
+      "summary": "公司表示继续预计全年现金资本开支约 2,200 亿美元；原文未说明是否扣除资产出售及激励款，与上方本季现金购置总额口径未必一致。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-30T21:12:00.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_amazon",
+        "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+        "sha256": "7db2112f3b602c5b9ed3886a1811b30e2fe690963f8c9feba6f880fbcf33a68f",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-30T21:04:47.224Z",
+        "reviewed_at": "2026-10-30T21:04:47.224Z",
+        "status": "read",
+        "locator": "Financial Guidance · Fourth Quarter 2026 Guidance",
+        "excerpt": "•We continue to expect 2026 cash capital expenditures to be approximately $220 billion."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "dc3ce5e7038af4a4f0fc21279077d1723882fb57897cd394cd0752f9500b57e4",
+    "id": "e-6960adea97db7917cda522bf10b665923f039477b80096326967a9c05eb0d999"
+  },
+  "e-4ceb7e3a5bd3cd5cce3e68068e5346fd5c6d8ae262da16c91e598966a59c9a15": {
+    "measurement": "outlook",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "target_period",
+    "accounting_basis": "as_disclosed",
+    "scope": "AWS 增长展望",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": "CEO 预计 AWS 收入在 2027 年和 2028 年的增速均超过 40%。"
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-10-30T21:12:00.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_amazon",
+        "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+        "sha256": "7db2112f3b602c5b9ed3886a1811b30e2fe690963f8c9feba6f880fbcf33a68f",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-10-30T21:04:47.224Z",
+        "reviewed_at": "2026-10-30T21:04:47.224Z",
+        "status": "read",
+        "locator": "Release page 1 · Andy Jassy quote",
+        "excerpt": "“Our AWS investment in functionality and infrastructure is working, with over 39% year-over-year revenue growth in Q3 ($184 billion revenue run rate) and projected revenue growth rates of over 40% both in 2027 and in 2028,” said Andy Jassy, President and CEO, Amazon."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "7c2f0ae4e0dda20314fb861daeb7e4228f24e36dd2d65b8bbacb113da8b92b76",
+    "id": "e-4ceb7e3a5bd3cd5cce3e68068e5346fd5c6d8ae262da16c91e598966a59c9a15"
   }
 }

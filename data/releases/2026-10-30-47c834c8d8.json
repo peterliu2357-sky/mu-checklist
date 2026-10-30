@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "scope": "batch",
+  "base_commit": "05661cd4ca431bba3ca6f2e32c8cf35b4a9c53da",
+  "base_revision": "2026-10-30-13e6dc8911",
+  "base_sha256": "cfe3a92a9a1524edff33a4ce68362b22704993181d8076ce116f5c5325f29d28",
+  "catalog_sha256": "6f06bb35fdc6ced3fe64bce52c71d4603b75fc7d6fc6507d48e996cc3b10e683",
+  "created_at": "2026-10-30T21:11:30.057Z",
+  "completed_at": "2026-10-30T21:11:30.549Z",
+  "state": "verified",
+  "targets": [
+    "company:amazon"
+  ],
+  "coverage": [
+    {
+      "key": "company:amazon",
+      "status": "verified",
+      "evidence": [
+        "eco_amazon"
+      ],
+      "reviewed_at": "2026-10-30T21:12:00.000Z",
+      "latest_disclosure": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+        "published_at": "2026-10-29"
+      },
+      "reason": "已读取 Amazon 2026 Q3 财报（10-29 发布，SEC 8-K 附件 99.1；IR 网站对自动访问返回验证页）：AWS 收入 459.84 亿美元（上年同期 330.06 亿）、营业利润 177.73 亿（114.34 亿）；现金资本开支 772.59 亿（350.95 亿），经营现金流 424.22 亿（355.25 亿）。Q4 指引收入 2,400–2,470 亿美元、营业利润 285–335 亿美元；继续预计 2026 年现金资本开支约 2,200 亿美元；CEO 预计 AWS 2027 年与 2028 年收入增速均超过 40%；指引风险提示列出内存芯片等供应波动。下一次财报日期尚未公布。",
+      "finding": "new_disclosure"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "eco_amazon",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+      "sha256": "7db2112f3b602c5b9ed3886a1811b30e2fe690963f8c9feba6f880fbcf33a68f",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-10-30T21:04:47.224Z",
+      "reviewed_at": "2026-10-30T21:04:47.224Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [
+    "amazon"
+  ],
+  "publication_corrections": [],
+  "technology_reviews": [],
+  "result": "success",
+  "artifact_sha256": "ac8d2ac4e4a9257afb304ab3c85a97c6e020b8c6d8b75fd02791958075f9bf5c",
+  "ledger_sha256": "1f15660a8168f7973f322730009bf4058ab22ceb959cf97f878f45f22ad2c212",
+  "evidence_sha256": "af41b3a08e128611593ad419e7d7f332cc2270ca7a0bd60557fbe446d88ee49b"
+}
