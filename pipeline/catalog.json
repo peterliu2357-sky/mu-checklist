@@ -1637,6 +1637,38 @@
         "direct"
       ]
     },
+    "outlook.amazon.capex": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "amazon",
+      "measurement": "outlook",
+      "unit": "",
+      "scope": "集团现金资本开支",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "target_period",
+      "nature": "forecast",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "outlook.amazon.next_year": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "amazon",
+      "measurement": "outlook",
+      "unit": "",
+      "scope": "AWS 增长展望",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "target_period",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
     "eco.alphabet.revenue": {
       "version": 1,
       "active": true,
@@ -3459,7 +3491,9 @@
       "eco.amazon.capex",
       "eco.amazon.ocf",
       "outlook.amazon.profit",
-      "outlook.amazon.revenue"
+      "outlook.amazon.revenue",
+      "outlook.amazon.capex",
+      "outlook.amazon.next_year"
     ],
     "eco_google_cloud": [
       "eco.alphabet.revenue",
