@@ -84,7 +84,7 @@
           ]
         },
         {
-          "text": "主要云厂商最近一季现金资本开支同比大增：Microsoft {{eco.microsoft.capex|change}}，Amazon {{eco.amazon.capex|change}}，Alphabet {{eco.alphabet.capex|change}}，Meta {{eco.meta.capex|change}}，Oracle {{eco.oracle.capex|change}}；Alphabet 维持全年资本开支指引 {{outlook.alphabet.capex}}，并预计 2027 年继续显著增加；Meta 把全年指引收窄为 {{outlook.meta.capex}}，下限上调，并称 2027 年将继续积极投资。Microsoft 因第三方产能交付延迟，把自然年资本开支预期下调至 {{outlook.microsoft.annual_capex}}，并称下半财年支出将加速，其中包括更高的内存与存储成本。",
+          "text": "主要云厂商最近一季现金资本开支同比大增：Microsoft {{eco.microsoft.capex|change}}，Amazon {{eco.amazon.capex|change}}，Alphabet {{eco.alphabet.capex|change}}，Meta {{eco.meta.capex|change}}，Oracle {{eco.oracle.capex|change}}；Alphabet 维持全年资本开支指引 {{outlook.alphabet.capex}}，并预计 2027 年继续显著增加；Meta 把全年指引收窄为 {{outlook.meta.capex}}，下限上调，并称 2027 年将继续积极投资。Amazon 继续预计全年现金资本开支 {{outlook.amazon.capex}}，AWS 收入 {{eco.amazon.revenue|change}}，CEO 预计 2027 年和 2028 年 AWS 收入继续高速增长，同时在指引风险提示中列出内存芯片等供应波动。Microsoft 因第三方产能交付延迟，把自然年资本开支预期下调至 {{outlook.microsoft.annual_capex}}，并称下半财年支出将加速，其中包括更高的内存与存储成本。",
           "refs": [
             "eco.microsoft.capex",
             "eco.amazon.capex",
@@ -95,7 +95,10 @@
             "outlook.meta.capex",
             "outlook.alphabet.next_year",
             "outlook.microsoft.annual_capex",
-            "outlook.microsoft.demand"
+            "outlook.microsoft.demand",
+            "outlook.amazon.capex",
+            "eco.amazon.revenue",
+            "outlook.amazon.next_year"
           ]
         },
         {
@@ -271,21 +274,22 @@
           ]
         },
         {
-          "text": "维持「整体向好」：FY2027 Q1 收入达到指引，长约与 RPO 继续增加，Alphabet、Meta 资本开支指引维持或上调，Microsoft 称其自然年预期下调是因为第三方产能交付延迟（公司称需求仍超过供给）。",
+          "text": "维持「整体向好」：FY2027 Q1 收入达到指引，长约与 RPO 继续增加，Alphabet、Meta、Amazon 资本开支指引维持或上调，Microsoft 称其自然年预期下调是因为第三方产能交付延迟（公司称需求仍超过供给）。",
           "refs": [
             "guidance.revenue",
             "mu.orders.rpo_post_quarter",
             "outlook.microsoft.annual_capex",
             "outlook.meta.capex",
             "outlook.alphabet.capex",
+            "outlook.amazon.capex",
             "outlook.microsoft.demand"
           ]
         }
       ]
     }
   ],
-  "generated_at": "2026-10-29T21:47:03.606Z",
-  "data_revision": "2026-10-29-3e889ce20c",
+  "generated_at": "2026-10-30T21:06:39.828Z",
+  "data_revision": "2026-10-30-33fa44d8fd",
   "financial_period": "FY2026 Q4",
   "cited": {
     "mu.revenue.total": {
@@ -428,9 +432,9 @@
       "change": "+103.0%"
     },
     "eco.amazon.capex": {
-      "current": 54208,
-      "previous": 32183,
-      "change": "+68.4%"
+      "current": 77259,
+      "previous": 35095,
+      "change": "+120.1%"
     },
     "eco.alphabet.capex": {
       "current": 51355,
@@ -484,6 +488,27 @@
       "previous": null,
       "detail": [
         "客户需求仍超过可用供给；预计下半财年资本开支加速，主要来自 CPU（含更高的内存与存储成本）、GPU 及延后的第三方产能交付。",
+        ""
+      ]
+    },
+    "outlook.amazon.capex": {
+      "current": "约 2,200 亿美元",
+      "previous": null,
+      "detail": [
+        "公司表示继续预计全年现金资本开支约 2,200 亿美元。",
+        ""
+      ]
+    },
+    "eco.amazon.revenue": {
+      "current": 45984,
+      "previous": 33006,
+      "change": "+39.3%"
+    },
+    "outlook.amazon.next_year": {
+      "current": "CEO 预计 AWS 收入在 2027 年和 2028 年的增速均超过 40%。",
+      "previous": null,
+      "detail": [
+        "CEO 预计 AWS 收入在 2027 年和 2028 年的增速均超过 40%。",
         ""
       ]
     },
@@ -774,6 +799,15 @@
     },
     {
       "at": "2026-10-29",
+      "call": "slowing",
+      "text": "美光库存天数已触发回测见顶预警；DRAM 价格指数{{mu.contract.bok_dram_price|change}}仍在上升。",
+      "values": {
+        "mu.contract.bok_dram_price|change": "+2.3%"
+      },
+      "grade": null
+    },
+    {
+      "at": "2026-10-30",
       "call": "slowing",
       "text": "美光库存天数已触发回测见顶预警；DRAM 价格指数{{mu.contract.bok_dram_price|change}}仍在上升。",
       "values": {

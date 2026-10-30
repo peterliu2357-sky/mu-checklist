@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "revision": "2026-10-30-13e6dc8911",
-  "updated_at": "2026-10-30T01:56:47.048Z",
+  "revision": "2026-10-30-33fa44d8fd",
+  "updated_at": "2026-10-30T21:05:56.946Z",
   "last_successful_check_at": "2026-09-20T23:50:00Z",
   "last_attempt_at": "2026-09-20T23:50:00Z",
   "financial_period": "FY2026 Q4",
@@ -611,12 +611,12 @@
       "type": "公司原始披露"
     },
     "eco_amazon": {
-      "label": "Amazon 2026 Q2 财报",
+      "label": "Amazon 2026 Q3 财报",
       "short_label": "Amazon 财报",
-      "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Second-Quarter-Results/default.aspx?linkId=987889123",
-      "published_at": "2026-07-30",
-      "checked_at": "2026-09-20",
-      "locator": "Segment Information / Statements of Cash Flows；Three Months Ended June 30，2026 / 2025；Financial Guidance。",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+      "published_at": "2026-10-29",
+      "checked_at": "2026-10-30",
+      "locator": "SEC 8-K 附件 99.1：Segment Information、Consolidated Statements of Cash Flows（Three Months Ended September 30，2025 / 2026 列）；Financial Guidance。",
       "type": "公司原始披露"
     },
     "eco_google_cloud": {
@@ -3537,6 +3537,12 @@
   ],
   "check_log": [
     {
+      "at": "2026-10-30T21:05:56.946Z",
+      "status": "success",
+      "scope": "batch",
+      "text": "核查范围：batch；完成 1 / 1 项。"
+    },
+    {
       "at": "2026-10-30T01:56:47.048Z",
       "status": "success",
       "scope": "quote",
@@ -4139,104 +4145,139 @@
         "ticker": "AMZN",
         "group": "cloud",
         "role": "云计算",
-        "period": "2026 Q2",
-        "previous_period": "2025 Q2",
-        "period_end": "2026-06-30",
-        "published_at": "2026-07-30",
-        "checked_at": "2026-09-20",
+        "period": "2026 Q3",
+        "previous_period": "2025 Q3",
+        "period_end": "2026-09-30",
+        "published_at": "2026-10-29",
+        "checked_at": "2026-10-30",
         "scope": "收入与利润为 AWS；资本开支及现金流为 Amazon 集团。",
         "metrics": [
           {
             "id": "revenue",
             "label": "AWS 收入",
-            "current": 42232,
-            "previous": 30873,
+            "current": 45984,
+            "previous": 33006,
             "unit": "USDm",
             "source_ids": [
               "eco_amazon"
             ],
-            "location": "Segment Information · AWS · Net sales；2026 / 2025 三个月列。",
+            "location": "Segment Information · AWS · Net sales；Three Months Ended September 30，2025 / 2026 列。",
             "note": "",
             "evidence_type": "direct"
           },
           {
             "id": "profit",
             "label": "AWS 营业利润",
-            "current": 16621,
-            "previous": 10160,
+            "current": 17773,
+            "previous": 11434,
             "unit": "USDm",
             "source_ids": [
               "eco_amazon"
             ],
-            "location": "Segment Information · AWS · Operating income；2026 / 2025 三个月列。",
+            "location": "Segment Information · AWS · Operating income；Three Months Ended September 30，2025 / 2026 列。",
             "note": "",
             "evidence_type": "direct"
           },
           {
             "id": "capex",
             "label": "集团现金资本开支",
-            "current": 54208,
-            "previous": 32183,
+            "current": 77259,
+            "previous": 35095,
             "unit": "USDm",
             "source_ids": [
               "eco_amazon"
             ],
-            "location": "Statements of Cash Flows · Purchases of property and equipment；三个月列。",
+            "location": "Statements of Cash Flows · Purchases of property and equipment；Three Months Ended September 30，2025 / 2026 列。",
             "note": "现金购置总额，未扣资产出售及激励款。",
             "evidence_type": "direct"
           },
           {
             "id": "ocf",
             "label": "集团经营现金流",
-            "current": 45387,
-            "previous": 32515,
+            "current": 42422,
+            "previous": 35525,
             "unit": "USDm",
             "source_ids": [
               "eco_amazon"
             ],
-            "location": "Statements of Cash Flows · Net cash provided by operating activities；三个月列。",
+            "location": "Statements of Cash Flows · Net cash provided by (used in) operating activities；Three Months Ended September 30，2025 / 2026 列。",
             "note": "",
             "evidence_type": "direct"
           }
         ],
         "outlook": [
           {
+            "type": "numeric",
+            "prior_guidance": "",
+            "issued_at": "2026-10-29",
+            "speaker": "Amazon 管理层",
+            "kind": "公司指引",
+            "evidence_type": "direct",
+            "source_ids": [
+              "eco_amazon"
+            ],
             "id": "profit",
             "label": "集团营业利润",
-            "type": "numeric",
-            "value": "225–265 亿美元",
-            "summary": "",
-            "prior_guidance": "",
-            "period": "2026 Q3",
-            "issued_at": "2026-07-30",
-            "speaker": "Amazon 管理层",
-            "kind": "公司指引",
-            "evidence_type": "direct",
-            "source_ids": [
-              "eco_amazon"
-            ],
-            "location": "Financial Guidance · Third Quarter 2026 Guidance · Operating income。"
+            "value": "285–335 亿美元",
+            "summary": "上年同期为 250 亿美元。",
+            "period": "2026 Q4",
+            "location": "Financial Guidance · Fourth Quarter 2026 Guidance · Operating income。"
           },
           {
-            "id": "revenue",
-            "label": "集团收入",
             "type": "numeric",
-            "value": "1,970–2,020 亿美元",
-            "summary": "公司预计同比增长 9%–12%。",
             "prior_guidance": "",
-            "period": "2026 Q3",
-            "issued_at": "2026-07-30",
+            "issued_at": "2026-10-29",
             "speaker": "Amazon 管理层",
             "kind": "公司指引",
             "evidence_type": "direct",
             "source_ids": [
               "eco_amazon"
             ],
-            "location": "Financial Guidance · Third Quarter 2026 Guidance · Net sales。"
+            "id": "revenue",
+            "label": "集团收入",
+            "value": "2,400–2,470 亿美元",
+            "summary": "公司预计同比增长 12%–16%，已计入约 60 个基点的不利汇率影响。",
+            "period": "2026 Q4",
+            "location": "Financial Guidance · Fourth Quarter 2026 Guidance · Net sales。"
+          },
+          {
+            "type": "numeric",
+            "prior_guidance": "",
+            "issued_at": "2026-10-29",
+            "speaker": "Amazon 管理层",
+            "kind": "公司指引",
+            "evidence_type": "direct",
+            "source_ids": [
+              "eco_amazon"
+            ],
+            "id": "capex",
+            "label": "集团现金资本开支",
+            "value": "约 2,200 亿美元",
+            "summary": "公司表示继续预计全年现金资本开支约 2,200 亿美元。",
+            "period": "2026 全年",
+            "location": "Financial Guidance · Fourth Quarter 2026 Guidance · cash capital expenditures。"
+          },
+          {
+            "type": "text",
+            "prior_guidance": "",
+            "issued_at": "2026-10-29",
+            "speaker": "CEO Andy Jassy",
+            "kind": "管理层展望",
+            "evidence_type": "direct",
+            "source_ids": [
+              "eco_amazon"
+            ],
+            "id": "next_year",
+            "value": null,
+            "label": "AWS 增长展望",
+            "summary": "CEO 预计 AWS 收入在 2027 年和 2028 年的增速均超过 40%。",
+            "period": "2027–2028",
+            "location": "财报首页 · Andy Jassy 引言（projected revenue growth rates of over 40% both in 2027 and in 2028）。"
           }
         ],
         "notes": [
-          "全年资本开支指引待核对原始业绩会披露。"
+          "财务指引的风险提示把包括内存芯片在内的资源与供应波动列为影响因素。",
+          "Amazon 不发布业绩会文字稿，本季数据取自 SEC 8-K 附件 99.1 财报原文。"
         ]
       },
       {
