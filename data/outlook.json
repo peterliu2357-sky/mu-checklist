@@ -147,6 +147,15 @@
             "mu.demand.korea_semi_exports",
             "mu.demand.nanya_revenue"
           ]
+        },
+        {
+          "text": "韩国 2026 年十月半导体出口额 {{mu.demand.korea_semi_exports}}，{{mu.demand.korea_semi_exports|change}}，其中存储芯片{{mu.demand.korea_memory_exports|change}}；但低于九月的 {{series.mu.demand.korea_semi_exports@2026-09}}，出现环比回落。南亚科九月营收{{mu.demand.nanya_revenue|change}}，增速放缓。",
+          "refs": [
+            "mu.demand.korea_semi_exports",
+            "mu.demand.korea_memory_exports",
+            "series.mu.demand.korea_semi_exports@2026-09",
+            "mu.demand.nanya_revenue"
+          ]
         }
       ]
     },
@@ -168,6 +177,15 @@
           "refs": [
             "mu.supply.dram_balance",
             "mu.supply.micron_outlook"
+          ]
+        },
+        {
+          "text": "已实现的合同价仍在上涨：DDR5 合同价由 {{mu.contract.ddr5_contract|previous}} 升至 {{mu.contract.ddr5_contract}}；DDR4 合同价{{mu.contract.ddr4_contract|change}}。韩国电子零件业出货指数环比{{mu.supply.korea_ic_shipment|change}}，快于库存指数的{{mu.supply.korea_ic_inventory|change}}，行业库存暂未明显堆积。",
+          "refs": [
+            "mu.contract.ddr5_contract",
+            "mu.contract.ddr4_contract",
+            "mu.supply.korea_ic_shipment",
+            "mu.supply.korea_ic_inventory"
           ]
         }
       ]
@@ -288,8 +306,8 @@
       ]
     }
   ],
-  "generated_at": "2026-11-02T01:24:48.487Z",
-  "data_revision": "2026-11-02-2f491b3680",
+  "generated_at": "2026-11-02T01:29:38.156Z",
+  "data_revision": "2026-11-02-c8aa289c57",
   "financial_period": "FY2026 Q4",
   "cited": {
     "mu.revenue.total": {
@@ -319,6 +337,11 @@
     "mu.inventory.days": {
       "current": 129,
       "previous": null
+    },
+    "mu.demand.korea_semi_exports": {
+      "current": 56438,
+      "previous": 15701,
+      "change": "同比 +259.4%（官方披露）"
     },
     "mu.contract.bok_dram_price": {
       "current": 289.16,
@@ -587,19 +610,18 @@
       "previous": null
     },
     "mu.demand.korea_memory_exports": {
-      "current": 54070,
-      "previous": 11790,
-      "change": "同比 +358.6%（官方披露）"
-    },
-    "mu.demand.korea_semi_exports": {
-      "current": 60295,
-      "previous": 16621,
-      "change": "同比 +262.8%（官方披露）"
+      "current": 50140,
+      "previous": 10890,
+      "change": "同比 +360.5%（官方披露）"
     },
     "mu.demand.nanya_revenue": {
-      "current": 44.690268,
-      "previous": 43.867609,
-      "change": "环比 +1.9%（官方表披露）"
+      "current": 45.091089,
+      "previous": 44.690268,
+      "change": "环比 +0.9%（证交所申报）"
+    },
+    "series.mu.demand.korea_semi_exports@2026-09": {
+      "current": 60295,
+      "previous": null
     },
     "mu.asp.nand": {
       "current": "约 30% 增长",
@@ -620,6 +642,26 @@
     "mu.supply.micron_outlook": {
       "current": "紧张延续至 2027 年之后",
       "previous": null
+    },
+    "mu.contract.ddr5_contract": {
+      "current": 50,
+      "previous": 48,
+      "change": "+4.2%"
+    },
+    "mu.contract.ddr4_contract": {
+      "current": 26,
+      "previous": null,
+      "change": "较上期 +4.00%（DRAMeXchange 披露）"
+    },
+    "mu.supply.korea_ic_shipment": {
+      "current": 142.4,
+      "previous": 137.5,
+      "change": "+3.6%"
+    },
+    "mu.supply.korea_ic_inventory": {
+      "current": 116.7,
+      "previous": 115.6,
+      "change": "+1.0%"
     },
     "series.mu.inventory.days@FY2026 Q3": {
       "current": 120,
@@ -680,9 +722,9 @@
       "change": "周变动 +0.55%（报告值）"
     },
     "mu.contract.ddr5_spot": {
-      "current": 61.333,
+      "current": 61.5,
       "previous": null,
-      "change": "日变动 0.00%（DRAMeXchange 披露）"
+      "change": "日变动 +0.27%（DRAMeXchange 披露）"
     },
     "mu.contract.tlc_spot": {
       "current": 16.883,
@@ -772,9 +814,10 @@
   },
   "cycle_read": {
     "call": "slowing",
-    "text": "美光库存天数已触发回测见顶预警；DRAM 价格指数{{mu.contract.bok_dram_price|change}}仍在上升。",
+    "text": "库存天数触发见顶预警；韩国半导体出口{{mu.demand.korea_semi_exports|change}}但环比回落；DRAM 价格指数仍升。",
     "refs": [
       "mu.inventory.days",
+      "mu.demand.korea_semi_exports",
       "mu.contract.bok_dram_price"
     ]
   },
@@ -809,9 +852,9 @@
     {
       "at": "2026-11-02",
       "call": "slowing",
-      "text": "美光库存天数已触发回测见顶预警；DRAM 价格指数{{mu.contract.bok_dram_price|change}}仍在上升。",
+      "text": "库存天数触发见顶预警；韩国半导体出口{{mu.demand.korea_semi_exports|change}}但环比回落；DRAM 价格指数仍升。",
       "values": {
-        "mu.contract.bok_dram_price|change": "+2.3%"
+        "mu.demand.korea_semi_exports|change": "同比 +259.4%（官方披露）"
       },
       "grade": null
     }

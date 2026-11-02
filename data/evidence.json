@@ -17560,5 +17560,472 @@
     "mode": "verified",
     "record_hash": "7c2f0ae4e0dda20314fb861daeb7e4228f24e36dd2d65b8bbacb113da8b92b76",
     "id": "e-55b35d22287a3a38189f7e3f4545f3424a45d33b25b870a341706fd9adf5a531"
+  },
+  "e-43bea2420d0bdb00f42ffae403ddb8668c6cf75441674751852150e9c5a73cc8": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "calendar_month",
+    "accounting_basis": "as_disclosed",
+    "scope": "DDR4 8Gb (1Gx8) 合同价月均价",
+    "values": {
+      "current": 26,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 26,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-09",
+        "locator": "DDR4 8Gb 1Gx8 · show_avg",
+        "source_id": "dram_contract"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-11-02T01:22:00.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "dram_contract",
+        "url": "https://www.dramexchange.com/Home/HomePrice?Source=NationalDramContract",
+        "sha256": "3088c4658143507f092b171ed60619715af461c332977ffe34666989d71dfb19",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-02T01:21:09.121Z",
+        "reviewed_at": "2026-11-02T01:21:09.121Z",
+        "status": "read",
+        "locator": "DRAMeXchange 首页「DRAM Contract Price」表的数据（NationalDramContract）· DDR4 8Gb 1Gx8 · Average，日期 2026-09-30。",
+        "excerpt": "\"show_name\": \"DDR4 8Gb 1Gx8\", \"show_day\": \"2026-09-30T17:00:00\", \"Apptype\": \"C\", \"show_hi\": 35.500000, \"show_lo\": 23.500000, \"show_avg\": 26.000000, \"show_avg_change\": 4.000000"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "c634fec626959918dc0feb2402be9f3d6a7e502482696af3af275f8e5f64fc34",
+    "id": "e-43bea2420d0bdb00f42ffae403ddb8668c6cf75441674751852150e9c5a73cc8"
+  },
+  "e-663e079aed3185b4fddf4a321f1a0fe22188860fc2d95fcd12af6b7734d6b288": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "DDR5 16Gb (2Gx8) 4800/5600 现货",
+    "values": {
+      "current": 61.5,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 61.5,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-10-30",
+        "locator": "DRAMeXchange DRAM Spot Price · DDR5 16Gb (2Gx8) 4800/5600 · Session Average",
+        "source_id": "dram_spot"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-11-02T01:22:00.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "dram_spot",
+        "url": "https://www.dramexchange.com/",
+        "sha256": "69ef104978da0dd518083876d6a0c3c38c48a103a7d80168a716aeba87b59fbd",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-02T01:21:08.759Z",
+        "reviewed_at": "2026-11-02T01:21:08.759Z",
+        "status": "read",
+        "locator": "DRAM Spot Price 表 · Last Update: Oct.30 2026 18:10 (GMT+8)",
+        "excerpt": "DDR5 16Gb (2Gx8) 4800/5600 | Daily High 73.00 | Daily Low 47.30 | Session High 73.00 | Session Low 47.30 | Session Average 61.500 | Session Change 0.27 %"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "1c4290c243a68cc7ece3699fb5249d704673846c0c03a0bddec3e5a18967d233",
+    "id": "e-663e079aed3185b4fddf4a321f1a0fe22188860fc2d95fcd12af6b7734d6b288"
+  },
+  "e-09055567538f940f76b0066b6fd151aacf2b24c3b0a5a2025e32c42179a2dc07": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "calendar_month",
+    "accounting_basis": "as_disclosed",
+    "scope": "DDR5 16Gb 合同价（韩国产业通商部出口发布所列固定价格）",
+    "values": {
+      "current": 50,
+      "previous": 48,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 50,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-10",
+        "locator": "产业通商部 10 月进出口动向 · 附件 PDF 第 1 页注释「메모리 고정가격 추이」(DDR5 16Gb, ‘26.6월→10월) · 2026 年 10 月。",
+        "source_id": "korea_trade"
+      },
+      {
+        "field": "previous",
+        "value": 48,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-09",
+        "locator": "产业通商部 10 月进出口动向 · 附件 PDF 第 1 页注释「메모리 고정가격 추이」(DDR5 16Gb, ‘26.6월→10월) · 2026 年 9 月。",
+        "source_id": "korea_trade"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-11-02T01:22:00.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "korea_trade",
+        "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172360/view",
+        "sha256": "694094369f110809211aeb838f6615c1f4a994970cc20c6a2ce68ff2c43bcb0b",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-11-02T01:21:09.492Z",
+        "reviewed_at": "2026-11-02T01:21:09.492Z",
+        "status": "read",
+        "locator": "Attachment PDF p.1 note, 메모리 고정가격 추이; p.7 주요 메모리 제품 고정가격",
+        "excerpt": "* 메모리 고정가격 추이($, ‘26.6월→7월→8월→9월→10월) : (DDR516Gb) 40.0→45.0→46.5→48.0→50.0"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "91090c352cbafd839b757dec29f711fede3f14b52546ae9de9cdfe1e78a6d3f1",
+    "id": "e-09055567538f940f76b0066b6fd151aacf2b24c3b0a5a2025e32c42179a2dc07"
+  },
+  "e-a9747940ee5bb6265a9f010b9ab0fca8280104fa86266418d7902dd462a1c097": {
+    "measurement": "supply",
+    "unit": "index",
+    "definition_version": 1,
+    "temporal_basis": "calendar_month",
+    "accounting_basis": "as_disclosed",
+    "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者出货指数（KSIC 26，季节调整，2020=100）",
+    "values": {
+      "current": 142.4,
+      "previous": 137.5,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 142.4,
+        "scale": 1,
+        "source_unit": "2020=100 index",
+        "period": "2026-09",
+        "locator": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 출하지수(계절조정) · 2026 年 9 月。",
+        "source_id": "kostat_shipment"
+      },
+      {
+        "field": "previous",
+        "value": 137.5,
+        "scale": 1,
+        "source_unit": "2020=100 index",
+        "period": "2026-08",
+        "locator": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 출하지수(계절조정) · 2026 年 8 月（修订值）。",
+        "source_id": "kostat_shipment"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-11-02T01:22:00.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "kostat_shipment",
+        "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202601/202610/I11ACQ/4",
+        "sha256": "468a94aedc60ff9881f5784dfe7729cbef8ce54da75c56237f97c29d30d02da4",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-02T01:21:09.861Z",
+        "reviewed_at": "2026-11-02T01:21:09.861Z",
+        "status": "read",
+        "locator": "ECOS 统计表 901Y032「산업별 생산/출하/재고 지수」· 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업（I11ACQ）· 출하지수(계절조정) · 2026-01 至 2026-09。",
+        "excerpt": "TIME 202608 DATA_VALUE 137.5; TIME 202609 DATA_VALUE 142.4"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "2943192c7c3a79244cc25880d05063d8bd20a2bfd505ac81688640af69cbe313",
+    "id": "e-a9747940ee5bb6265a9f010b9ab0fca8280104fa86266418d7902dd462a1c097"
+  },
+  "e-f1afbc58a9df41b78bd7e1375ac6554ce5dfd1a666776f35764af070a0d9b6af": {
+    "measurement": "supply",
+    "unit": "index",
+    "definition_version": 1,
+    "temporal_basis": "calendar_month",
+    "accounting_basis": "as_disclosed",
+    "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者库存指数（KSIC 26，季节调整，2020=100）",
+    "values": {
+      "current": 116.7,
+      "previous": 115.6,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 116.7,
+        "scale": 1,
+        "source_unit": "2020=100 index",
+        "period": "2026-09",
+        "locator": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 재고지수(계절조정) · 2026 年 9 月。",
+        "source_id": "kostat_inventory"
+      },
+      {
+        "field": "previous",
+        "value": 115.6,
+        "scale": 1,
+        "source_unit": "2020=100 index",
+        "period": "2026-08",
+        "locator": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 재고지수(계절조정) · 2026 年 8 月（修订值）。",
+        "source_id": "kostat_inventory"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-11-02T01:22:00.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "kostat_inventory",
+        "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202601/202610/I11ACQ/6",
+        "sha256": "c8904065571791868a52ebbb755a8b0600defe0ea7dc8c4184c5e0c6edc2de7c",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-02T01:21:10.226Z",
+        "reviewed_at": "2026-11-02T01:21:10.226Z",
+        "status": "read",
+        "locator": "ECOS 统计表 901Y032「산업별 생산/출하/재고 지수」· 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업（I11ACQ）· 재고지수(계절조정) · 2026-01 至 2026-09。",
+        "excerpt": "TIME 202608 DATA_VALUE 115.6; TIME 202609 DATA_VALUE 116.7"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "884407e37417e598d2d8ad9fcb7b1e3f7476e306d1d6923b5c9750b2da5085b3",
+    "id": "e-f1afbc58a9df41b78bd7e1375ac6554ce5dfd1a666776f35764af070a0d9b6af"
+  },
+  "e-f9074a52d47cd206c55b504f1837ba30fc331c317a51c2717e2abc775f5a3773": {
+    "measurement": "end_consumption_proxy",
+    "unit": "TWDb",
+    "definition_version": 1,
+    "temporal_basis": "calendar_month",
+    "accounting_basis": "as_disclosed",
+    "scope": "南亚科单月营收（与上月比较）",
+    "values": {
+      "current": 45.091089,
+      "previous": 44.690268,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 45091089,
+        "scale": 0.000001,
+        "source_unit": "TWD thousands",
+        "period": "2026-09",
+        "locator": "t187ap05_L · 2408 · 資料年月 11509 · 營業收入-當月營收",
+        "source_id": "nanya_twse"
+      },
+      {
+        "field": "previous",
+        "value": 44690268,
+        "scale": 0.000001,
+        "source_unit": "TWD thousands",
+        "period": "2026-08",
+        "locator": "t187ap05_L · 2408 · 資料年月 11509 · 營業收入-上月營收",
+        "source_id": "nanya_twse"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-11-02T01:22:00.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "nanya_twse",
+        "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+        "sha256": "a58c04b3bdc2b94632027018ca4f09f6ad053848addb7b9580b372626542fc17",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-02T01:21:10.580Z",
+        "reviewed_at": "2026-11-02T01:21:10.580Z",
+        "status": "read",
+        "locator": "证交所 OpenAPI t187ap05_L（上市公司每月營業收入彙總表）· 公司代號 2408",
+        "excerpt": "\"出表日期\": \"1151017\", \"資料年月\": \"11509\", \"公司代號\": \"2408\", \"營業收入-當月營收\": \"45091089\", \"營業收入-上月營收\": \"44690268\", \"營業收入-上月比較增減(%)\": \"0.8968865436206379\""
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "7a842c34c1af2283a7e3f7535cbee5317a14f73ec4b9e0192f56e7b8917ad7af",
+    "id": "e-f9074a52d47cd206c55b504f1837ba30fc331c317a51c2717e2abc775f5a3773"
+  },
+  "e-28deb9bc89808d1bdf481de3d00368a43d27939c9f762ce166f5264063fbb21a": {
+    "measurement": "end_consumption_proxy",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "calendar_month",
+    "accounting_basis": "as_disclosed",
+    "scope": "韩国半导体单月出口额（与上年同月比较）",
+    "values": {
+      "current": 56438,
+      "previous": 15701,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 56438,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026-10",
+        "locator": "PDF p.11 · 20대 주요 수출 품목 표 · 반도체 · ’26.10. 금액",
+        "source_id": "korea_trade"
+      },
+      {
+        "field": "previous",
+        "value": 15701,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2025-10",
+        "locator": "PDF p.11 · 20대 주요 수출 품목 표 · 반도체 · ’25.10. 금액",
+        "source_id": "korea_trade"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-11-02T01:22:00.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "korea_trade",
+        "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172360/view",
+        "sha256": "694094369f110809211aeb838f6615c1f4a994970cc20c6a2ce68ff2c43bcb0b",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-11-02T01:21:09.492Z",
+        "reviewed_at": "2026-11-02T01:21:09.492Z",
+        "status": "read",
+        "locator": "Attachment PDF p.11, 참고 20대 주요 수출 품목 규모 및 증감률 (단위: 백만 달러, %)",
+        "excerpt": "1 반도체 15,701 (25.2) 46,651 (209.0) 60,295 (262.8) 56,438 (259.4) — columns ’25.10., ‘26.8., ‘26.9., ‘26.10."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "0906c2674bc7da9d031d5aa4e6aba23caf6cd7f204178969f3bb0d72533377a3",
+    "id": "e-28deb9bc89808d1bdf481de3d00368a43d27939c9f762ce166f5264063fbb21a"
+  },
+  "e-77fb899a37f536b407e1db3c24be975e61d1172c6b406aa37cbc3374370aba85": {
+    "measurement": "end_consumption_proxy",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "calendar_month",
+    "accounting_basis": "as_disclosed",
+    "scope": "韩国存储芯片单月出口额（与上年同月比较）",
+    "values": {
+      "current": 50140,
+      "previous": 10890,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 501.4,
+        "scale": 100,
+        "source_unit": "USD 100 millions (억 달러)",
+        "period": "2026-10",
+        "locator": "PDF p.12 · 반도체 품목별 상세 · 메모리 수출액 (’26.10.)",
+        "source_id": "korea_trade"
+      },
+      {
+        "field": "previous",
+        "value": 108.9,
+        "scale": 100,
+        "source_unit": "USD 100 millions (억 달러)",
+        "period": "2025-10",
+        "locator": "PDF p.12 · 반도체 품목별 상세 · 메모리 수출액 (’25.10.)",
+        "source_id": "korea_trade"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-11-02T01:22:00.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "korea_trade",
+        "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172360/view",
+        "sha256": "694094369f110809211aeb838f6615c1f4a994970cc20c6a2ce68ff2c43bcb0b",
+        "access": "full",
+        "capture_format": "research_export",
+        "accessed_at": "2026-11-02T01:21:09.492Z",
+        "reviewed_at": "2026-11-02T01:21:09.492Z",
+        "status": "read",
+        "locator": "Attachment PDF p.12, 품목별 상세 수출 동향 · 반도체",
+        "excerpt": "* 반도체 수출액/증감률(억 달러) : (’25.10.) 157.0(+25.2%) → (’26.10.) 564.4(+259.4%) ↳ 메모리/시스템 반도체 수출액: 108.9 → 501.4(+360.5%) / 43.0 → 57.1(+32.6%)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "1acc271deadfed6b7c359c4ba8cd17cc4bab84a5a709f0e3fa1969f22e12228f",
+    "id": "e-77fb899a37f536b407e1db3c24be975e61d1172c6b406aa37cbc3374370aba85"
+  },
+  "e-27c4383a38d44fbb0c4ee2dc45603b21b196035231ea8e33240a5637ed2c8687": {
+    "measurement": "disclosure_calendar",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "dated_disclosure",
+    "accounting_basis": "not_applicable",
+    "scope": "calendar.nvidia_fy2027_q3",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-11-02T01:22:00.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "calendar_nvidia_20261117",
+        "url": "https://nvidianews.nvidia.com/news/nvidia-sets-conference-call-for-third-quarter-financial-results-6928873",
+        "sha256": "585ee3085e01af496ebfea1f82345e9a19301b0fa01ea26395ee2c4296fe0710",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-02T01:21:10.946Z",
+        "reviewed_at": "2026-11-02T01:21:10.946Z",
+        "status": "read",
+        "locator": "新闻稿正文第一段",
+        "excerpt": "NVIDIA will host a conference call on Tuesday, November 17, at 2 p.m. PT (5 p.m. ET) to discuss its financial results for the third quarter of fiscal year 2027, which ended October 25, 2026."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "eb1dcb583725b5c60f0cd50a4decddd230f8c5925dfdb35c40e3e32dc05c7082",
+    "id": "e-27c4383a38d44fbb0c4ee2dc45603b21b196035231ea8e33240a5637ed2c8687"
   }
 }

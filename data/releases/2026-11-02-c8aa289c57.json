@@ -1,0 +1,218 @@
+{
+  "version": 1,
+  "scope": "batch",
+  "base_commit": "94b85b13a856da0097d22d05c307c511b30f063f",
+  "base_revision": "2026-11-02-2f491b3680",
+  "base_sha256": "751dcf72219d085b6c1bd72770da51420301b3e3dc8be6073fd9deb3520cc3d0",
+  "catalog_sha256": "c1baaa4b2560b9d57407dd4a5cc201ec88c804bb4cf745b02ebdf2e0e3ab4ee3",
+  "created_at": "2026-11-02T01:29:36.498Z",
+  "completed_at": "2026-11-02T01:29:36.931Z",
+  "state": "verified",
+  "targets": [
+    "industry",
+    "calendar"
+  ],
+  "coverage": [
+    {
+      "key": "industry",
+      "status": "verified",
+      "evidence": [
+        "dram_spot",
+        "dram_contract",
+        "korea_trade",
+        "kostat_shipment",
+        "kostat_inventory",
+        "nanya_twse"
+      ],
+      "reviewed_at": "2026-11-02T01:22:00.000Z",
+      "latest_disclosure": {
+        "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172360/view",
+        "published_at": "2026-11-01"
+      },
+      "reason": "更新行业读数：韩国 10 月半导体出口 564.38 亿美元（同比 +259.4%，较 9 月 602.95 亿回落）、存储出口 501.4 亿美元（+360.5%）、DDR5 16Gb 固定价格 50.0 美元；DRAMeXchange DDR5 现货 10-30 Session Average 61.500，DDR4 8Gb 合同价 9 月均价 26.00；ECOS KSIC 26 九月出货指数 142.4、库存指数 116.7（8 月值修订为 137.5 / 115.6）；南亚科 9 月营收 450.91 亿新台币（证交所申报，官网表仍空白）。TrendForce 无新的现货周报，韩国央行 DRAM 出口价格指数仍为 9 月。"
+    },
+    {
+      "key": "calendar",
+      "status": "verified",
+      "evidence": [
+        "calendar_nvidia_20261117",
+        "calendar_index_micron_20261101",
+        "calendar_index_microsoft_20261101",
+        "calendar_index_amazon_20261101",
+        "calendar_index_oracle_20261101",
+        "calendar_index_meta_20261101",
+        "calendar_index_nvidia_20261101",
+        "calendar_index_samsung_20261101",
+        "calendar_index_skhynix_20261101"
+      ],
+      "reviewed_at": "2026-11-02T01:22:00.000Z",
+      "latest_disclosure": {
+        "url": "https://nvidianews.nvidia.com/news/nvidia-sets-conference-call-for-third-quarter-financial-results-6928873",
+        "published_at": "2026-10-28"
+      },
+      "reason": "NVIDIA 10-28 公告 FY2027 Q3 电话会定于 11-17 2 p.m. PT，登记为已确认日程。美光、Microsoft、Amazon、Oracle、Meta、三星与 SK 海力士官方日程入口均尚未公布下一财报日期，保持待确认。Alphabet（abc.xyz）与台积电 IR 对自动访问返回验证页（403），本次未能读取，保持待确认。"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "dram_spot",
+      "url": "https://www.dramexchange.com/",
+      "sha256": "69ef104978da0dd518083876d6a0c3c38c48a103a7d80168a716aeba87b59fbd",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-02T01:21:08.759Z",
+      "reviewed_at": "2026-11-02T01:21:08.759Z",
+      "status": "read"
+    },
+    {
+      "source_id": "dram_contract",
+      "url": "https://www.dramexchange.com/Home/HomePrice?Source=NationalDramContract",
+      "sha256": "3088c4658143507f092b171ed60619715af461c332977ffe34666989d71dfb19",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-02T01:21:09.121Z",
+      "reviewed_at": "2026-11-02T01:21:09.121Z",
+      "status": "read"
+    },
+    {
+      "source_id": "korea_trade",
+      "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172360/view",
+      "sha256": "694094369f110809211aeb838f6615c1f4a994970cc20c6a2ce68ff2c43bcb0b",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-11-02T01:21:09.492Z",
+      "reviewed_at": "2026-11-02T01:21:09.492Z",
+      "status": "read"
+    },
+    {
+      "source_id": "kostat_shipment",
+      "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202601/202610/I11ACQ/4",
+      "sha256": "468a94aedc60ff9881f5784dfe7729cbef8ce54da75c56237f97c29d30d02da4",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-02T01:21:09.861Z",
+      "reviewed_at": "2026-11-02T01:21:09.861Z",
+      "status": "read"
+    },
+    {
+      "source_id": "kostat_inventory",
+      "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202601/202610/I11ACQ/6",
+      "sha256": "c8904065571791868a52ebbb755a8b0600defe0ea7dc8c4184c5e0c6edc2de7c",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-02T01:21:10.226Z",
+      "reviewed_at": "2026-11-02T01:21:10.226Z",
+      "status": "read"
+    },
+    {
+      "source_id": "nanya_twse",
+      "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+      "sha256": "a58c04b3bdc2b94632027018ca4f09f6ad053848addb7b9580b372626542fc17",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-02T01:21:10.580Z",
+      "reviewed_at": "2026-11-02T01:21:10.580Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_nvidia_20261117",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-sets-conference-call-for-third-quarter-financial-results-6928873",
+      "sha256": "585ee3085e01af496ebfea1f82345e9a19301b0fa01ea26395ee2c4296fe0710",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-02T01:21:10.946Z",
+      "reviewed_at": "2026-11-02T01:21:10.946Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_micron_20261101",
+      "url": "https://investors.micron.com/feed/Event.svc/GetEventList?LanguageId=1&eventSelection=3&sortOperator=1&eventDateFilter=3&pageSize=5&pageNumber=0&year=-1",
+      "sha256": "db583abad534e999b2466e96b28eebcd15b8639bc7cbf613c977d0f8c7ef2d37",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-02T01:21:11.315Z",
+      "reviewed_at": "2026-11-02T01:21:11.315Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_microsoft_20261101",
+      "url": "https://www.microsoft.com/en-us/investor/default",
+      "sha256": "1388b5ddfdea2f4d9376e0871fb4d6198851a56433fd90c5332cca91d694f09a",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-02T01:21:11.692Z",
+      "reviewed_at": "2026-11-02T01:21:11.692Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_amazon_20261101",
+      "url": "https://ir.aboutamazon.com/feed/PressRelease.svc/GetPressReleaseList?LanguageId=1&bodyType=0&pressReleaseDateFilter=3&pageSize=12&pageNumber=0&year=-1",
+      "sha256": "9918c63862fabcfa6841bdb57f7d91da1ade1acf32d79564749bc286f15088f8",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-02T01:21:12.073Z",
+      "reviewed_at": "2026-11-02T01:21:12.073Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_oracle_20261101",
+      "url": "https://investor.oracle.com/feed/PressRelease.svc/GetPressReleaseList?LanguageId=1&bodyType=0&pressReleaseDateFilter=3&pageSize=12&pageNumber=0&year=-1",
+      "sha256": "b46e3eb91657f4b0d0ba299feb17c9c30be71799b9e82d7ce6ddf8139492ed3a",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-02T01:21:12.466Z",
+      "reviewed_at": "2026-11-02T01:21:12.466Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_meta_20261101",
+      "url": "https://investor.atmeta.com/feed/Event.svc/GetEventList?apiKey=F37D4FC40D0E4774887D6827E95013D5&eventSelection=0&eventDateFilter=0&includeFinancialReports=true&includePresentations=true&includePressReleases=true&sortOperator=1&pageSize=-1&tagList=&includeTags=true&year=-1&excludeSelection=0",
+      "sha256": "e1c153c01038f8118964444b34bb5d865cd98194428efce62cc2684e52a5c299",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-02T01:21:12.839Z",
+      "reviewed_at": "2026-11-02T01:21:12.839Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_nvidia_20261101",
+      "url": "https://investor.nvidia.com/feed/PressRelease.svc/GetPressReleaseList?LanguageId=1&bodyType=0&pressReleaseDateFilter=3&pageSize=12&pageNumber=0&year=-1",
+      "sha256": "ba7ef5a2ddec5ef68f594ba2aa7f91bb430d77182e8c13b16021eca9f57f54ab",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-02T01:21:13.206Z",
+      "reviewed_at": "2026-11-02T01:21:13.206Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_samsung_20261101",
+      "url": "https://www.samsung.com/global/ir/ir-events-presentations/events/",
+      "sha256": "687ef0a493dcda7eec75c6111d46c353252d0274e3b802bfe7d6852edd4be4bf",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-02T01:21:13.608Z",
+      "reviewed_at": "2026-11-02T01:21:13.608Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_skhynix_20261101",
+      "url": "https://news.skhynix.com/en/?s=earnings+conference+call",
+      "sha256": "3138fb5a654e6bbc1ff50a502fda35b41c7741fee54b5c690f852e3a54f30997",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-02T01:21:13.975Z",
+      "reviewed_at": "2026-11-02T01:21:13.975Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [],
+  "publication_corrections": [
+    "dram_spot",
+    "dram_contract"
+  ],
+  "technology_reviews": [],
+  "result": "success",
+  "artifact_sha256": "d5fd48541437f7d00412b8b51911e36c8bfc672daff6472d8066308741567356",
+  "ledger_sha256": "5fc0bf3231a2c510224fb9e7171e02dbfd596fe11e33041b9e1634e4a0bfeaf2",
+  "evidence_sha256": "09294280b57e88fdc6c08d0585fdb0d387de48f03656875ab041879e82513231"
+}
