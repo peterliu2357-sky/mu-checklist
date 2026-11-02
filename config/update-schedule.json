@@ -30,8 +30,14 @@
     "starts_at": "2026-09-23T03:29:13Z"
   },
   "earnings": {
-    "enabled": false,
-    "run_at": null,
-    "events": []
+    "enabled": true,
+    "run_at": "2026-11-18T22:00:00Z",
+    "events": [
+      {
+        "id": "nvidia_fy2027_q3",
+        "company_id": "nvidia",
+        "review_after": "2026-11-18T22:00:00Z"
+      }
+    ]
   }
 }

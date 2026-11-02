@@ -2,8 +2,8 @@
   "format_version": 1,
   "document": {
     "schema_version": 2,
-    "revision": "2026-11-02-2f491b3680",
-    "updated_at": "2026-11-02T01:19:27.103Z",
+    "revision": "2026-11-02-c8aa289c57",
+    "updated_at": "2026-11-02T01:29:36.931Z",
     "last_successful_check_at": "2026-09-20T23:50:00Z",
     "last_attempt_at": "2026-09-20T23:50:00Z",
     "financial_period": "FY2026 Q4",
@@ -1182,21 +1182,21 @@
       },
       "dram_spot": {
         "label": "DRAMeXchange DRAM 现货报价",
-        "short_label": "10-28 · DRAM 现货",
+        "short_label": "10-30 · DRAM 现货",
         "url": "https://www.dramexchange.com/",
-        "published_at": "2026-10-28",
-        "checked_at": "2026-10-29",
+        "published_at": "2026-10-30",
+        "checked_at": "2026-11-02",
         "type": "原始行业报价",
-        "locator": "DRAM Spot Price · Last Update Oct.28 2026 18:10 (GMT+8) · Session Average / Session Change。"
+        "locator": "DRAM Spot Price · Last Update Oct.30 2026 18:10 (GMT+8) · Session Average / Session Change。"
       },
       "korea_trade": {
-        "label": "韩国产业通商部 2026 年 9 月进出口动向",
-        "short_label": "10-01 · 韩国 9 月出口",
-        "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172254/view",
-        "published_at": "2026-10-01",
-        "checked_at": "2026-10-22",
+        "label": "韩国产业通商部 2026 年 10 月进出口动向",
+        "short_label": "11-01 · 韩国 10 月出口",
+        "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172360/view",
+        "published_at": "2026-11-01",
+        "checked_at": "2026-11-02",
         "type": "政府官方统计发布",
-        "locator": "附件 PDF 第 11 页「20대 주요 수출 품목」表（반도체）；第 12 页품목별 상세（메모리/시스템 반도체 수출액）。"
+        "locator": "附件 PDF 第 1 页注释「메모리 고정가격 추이」；第 11 页「20대 주요 수출 품목」表（반도체）；第 12 页품목별 상세（메모리/시스템 반도체 수출액）。"
       },
       "nanya_monthly": {
         "label": "南亚科月营收（官方 IR）",
@@ -1752,27 +1752,27 @@
         "short_label": "统计厅 · 电子零件业出货指数",
         "type": "官方统计数据接口",
         "published_at": null,
-        "locator": "ECOS 统计表 901Y032「산업별 생산/출하/재고 지수」· 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업（I11ACQ）· 출하지수(계절조정) · 2025-11 至 2026-08。",
-        "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/4",
-        "checked_at": "2026-10-22"
+        "locator": "ECOS 统计表 901Y032「산업별 생산/출하/재고 지수」· 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업（I11ACQ）· 출하지수(계절조정) · 2026-01 至 2026-09。",
+        "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202601/202610/I11ACQ/4",
+        "checked_at": "2026-11-02"
       },
       "kostat_inventory": {
         "label": "统计厅 生产者库存指数 · KSIC 26（经韩国央行 ECOS）",
         "short_label": "统计厅 · 电子零件业库存指数",
         "type": "官方统计数据接口",
         "published_at": null,
-        "locator": "ECOS 统计表 901Y032「산업별 생산/출하/재고 지수」· 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업（I11ACQ）· 재고지수(계절조정) · 2025-11 至 2026-08。",
-        "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202511/202608/I11ACQ/6",
-        "checked_at": "2026-10-22"
+        "locator": "ECOS 统计表 901Y032「산업별 생산/출하/재고 지수」· 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업（I11ACQ）· 재고지수(계절조정) · 2026-01 至 2026-09。",
+        "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202601/202610/I11ACQ/6",
+        "checked_at": "2026-11-02"
       },
       "dram_contract": {
         "label": "DRAMeXchange DRAM 合同价表",
         "short_label": "DRAMeXchange · DRAM 合同价",
         "type": "行业报价",
-        "published_at": "2026-08-31",
-        "locator": "DRAMeXchange 首页「DRAM Contract Price」表的数据（NationalDramContract）· DDR4 8Gb 1Gx8 · Average，日期 2026-08-31。",
+        "published_at": "2026-09-30",
+        "locator": "DRAMeXchange 首页「DRAM Contract Price」表的数据（NationalDramContract）· DDR4 8Gb 1Gx8 · Average，日期 2026-09-30。",
         "url": "https://www.dramexchange.com/Home/HomePrice?Source=NationalDramContract",
-        "checked_at": "2026-10-22"
+        "checked_at": "2026-11-02"
       },
       "index_tf_press_20261025": {
         "label": "TrendForce 新闻稿列表",
@@ -2241,6 +2241,96 @@
         "checked_at": "2026-11-02",
         "type": "公司官方入口",
         "locator": "10-28 3Q26 财报（已处理）之后为 10-30 日本合作伙伴日与技术专栏，无产品阶段变化。"
+      },
+      "nanya_twse": {
+        "label": "南亚科月营收（证交所申报）",
+        "short_label": "南亚科 9 月营收",
+        "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+        "published_at": "2026-10-17",
+        "checked_at": "2026-11-02",
+        "type": "官方申报数据接口",
+        "locator": "证交所上市公司每月营业收入汇总（t187ap05_L）· 公司代号 2408 · 资料年月 115/09（出表日期 115/10/17）· 当月营收与上月营收（千元新台币）。"
+      },
+      "calendar_nvidia_20261117": {
+        "label": "NVIDIA FY2027 Q3 电话会日期公告",
+        "short_label": "NVIDIA 财报日程",
+        "url": "https://nvidianews.nvidia.com/news/nvidia-sets-conference-call-for-third-quarter-financial-results-6928873",
+        "published_at": "2026-10-28",
+        "checked_at": "2026-11-02",
+        "type": "公司日程",
+        "locator": "公告正文：Tuesday, November 17, at 2 p.m. PT (5 p.m. ET) 召开 FY2027 Q3 业绩电话会，季度截至 2026-10-25。"
+      },
+      "calendar_index_micron_20261101": {
+        "published_at": null,
+        "checked_at": "2026-11-02",
+        "label": "美光 IR 活动",
+        "short_label": "Micron IR",
+        "url": "https://investors.micron.com/feed/Event.svc/GetEventList?LanguageId=1&eventSelection=3&sortOperator=1&eventDateFilter=3&pageSize=5&pageNumber=0&year=-1",
+        "type": "公司日程入口",
+        "locator": "最新活动仍为 10-21 技术研讨会，尚无 FY2027 Q1 财报日期。"
+      },
+      "calendar_index_microsoft_20261101": {
+        "published_at": null,
+        "checked_at": "2026-11-02",
+        "label": "Microsoft 投资者关系首页",
+        "short_label": "Microsoft IR",
+        "url": "https://www.microsoft.com/en-us/investor/default",
+        "type": "公司日程入口",
+        "locator": "页面写明下一次财报发布日期将很快公布（next earnings release date … announced soon），最新为 FY2027 Q1（10-28）。"
+      },
+      "calendar_index_amazon_20261101": {
+        "published_at": null,
+        "checked_at": "2026-11-02",
+        "label": "Amazon IR 新闻稿",
+        "short_label": "Amazon IR",
+        "url": "https://ir.aboutamazon.com/feed/PressRelease.svc/GetPressReleaseList?LanguageId=1&bodyType=0&pressReleaseDateFilter=3&pageSize=12&pageNumber=0&year=-1",
+        "type": "公司日程入口",
+        "locator": "最新为 10-29 Q3 财报与 10-15 Q3 电话会公告，尚无 Q4 日期。"
+      },
+      "calendar_index_oracle_20261101": {
+        "published_at": null,
+        "checked_at": "2026-11-02",
+        "label": "Oracle IR 新闻稿",
+        "short_label": "Oracle IR",
+        "url": "https://investor.oracle.com/feed/PressRelease.svc/GetPressReleaseList?LanguageId=1&bodyType=0&pressReleaseDateFilter=3&pageSize=12&pageNumber=0&year=-1",
+        "type": "公司日程入口",
+        "locator": "最新为 10-28 Investor Day 与 10-23 Investor Day 公告，尚无 FY2027 Q2 财报日期。"
+      },
+      "calendar_index_meta_20261101": {
+        "published_at": null,
+        "checked_at": "2026-11-02",
+        "label": "Meta IR 活动",
+        "short_label": "Meta IR",
+        "url": "https://investor.atmeta.com/feed/Event.svc/GetEventList?apiKey=F37D4FC40D0E4774887D6827E95013D5&eventSelection=0&eventDateFilter=0&includeFinancialReports=true&includePresentations=true&includePressReleases=true&sortOperator=1&pageSize=-1&tagList=&includeTags=true&year=-1&excludeSelection=0",
+        "type": "公司日程入口",
+        "locator": "最新活动为 10-21 Q3 2026 业绩电话会，尚无 Q4 日期。"
+      },
+      "calendar_index_nvidia_20261101": {
+        "published_at": null,
+        "checked_at": "2026-11-02",
+        "label": "NVIDIA IR 新闻稿",
+        "short_label": "NVIDIA IR",
+        "url": "https://investor.nvidia.com/feed/PressRelease.svc/GetPressReleaseList?LanguageId=1&bodyType=0&pressReleaseDateFilter=3&pageSize=12&pageNumber=0&year=-1",
+        "type": "公司日程入口",
+        "locator": "10-28 公告 FY2027 Q3 电话会定于 11-17 2 p.m. PT。"
+      },
+      "calendar_index_samsung_20261101": {
+        "published_at": null,
+        "checked_at": "2026-11-02",
+        "label": "三星 IR 活动",
+        "short_label": "Samsung IR",
+        "url": "https://www.samsung.com/global/ir/ir-events-presentations/events/",
+        "type": "公司日程入口",
+        "locator": "活动列表最新为 10-29 3Q26 电话会，尚无 4Q26 日期。"
+      },
+      "calendar_index_skhynix_20261101": {
+        "published_at": null,
+        "checked_at": "2026-11-02",
+        "label": "SK 海力士 Newsroom 搜索",
+        "short_label": "SK hynix Newsroom",
+        "url": "https://news.skhynix.com/en/?s=earnings+conference+call",
+        "type": "公司日程入口",
+        "locator": "最新为 10-28 3Q26 财报相关稿件，尚无 4Q26 电话会公告。"
       }
     },
     "metrics": [
@@ -2547,13 +2637,13 @@
             "record_ref": "20443dc5339d83a1a0f98a6b4cdb489174c91ed6f902e0995f65a172dfc914fb"
           },
           {
-            "record_ref": "e982ed0aeb825ae20d2884ac8d2e306ea49c7deb3c829a06d264bb76efe2b6df"
+            "record_ref": "c634fec626959918dc0feb2402be9f3d6a7e502482696af3af275f8e5f64fc34"
           },
           {
-            "record_ref": "12f953c69dec2df9c5396fbb30e9cea5e6b5d13502b4cd05588392faf5ed6a26"
+            "record_ref": "1c4290c243a68cc7ece3699fb5249d704673846c0c03a0bddec3e5a18967d233"
           },
           {
-            "record_ref": "158d5ba3d46f308218a5f6ea1271ed631831a095b369f1ebc6954a3bf0b6c1ea"
+            "record_ref": "91090c352cbafd839b757dec29f711fede3f14b52546ae9de9cdfe1e78a6d3f1"
           },
           {
             "record_ref": "c7ea625db99572b28bbbbf1daad5bf071840b095eaa1b3b538a3e4564925f36c"
@@ -2575,7 +2665,7 @@
           "现货报价按指定规格采样。4Q26 合同价区间来自 TrendForce 09-30 新闻稿；NAND 趋势行仍为 09-10 公开摘要。"
         ],
         "period": "DRAM 报价至 09-23；NAND 报价至 09-14；报告至 09-16",
-        "checked_at": "2026-10-29",
+        "checked_at": "2026-11-02",
         "next_review": "每周",
         "definition": "行业合同价预测与现货报价。",
         "interpretation": "TrendForce 09-30 预计 4Q26 普通型 DRAM 合同价仍上涨但涨幅较三季度收敛，NAND 合同价涨幅区间高于 DRAM。DDR4 现货周均价 10-27 较上周小幅上涨，06-23 以来整体上行；512Gb TLC 晶圆现货 8 月中以来连续回落，10-26 当周跌幅明显扩大。"
@@ -2595,17 +2685,17 @@
             "record_ref": "81ca2cf5e398b0cf07428075e058af001921b6d2d9e3c41e30f563d26f4f812d"
           },
           {
-            "record_ref": "166e1b710663f9f03f9622f6d2f665adfa4f57bfb358d2585d707faec072d173"
+            "record_ref": "2943192c7c3a79244cc25880d05063d8bd20a2bfd505ac81688640af69cbe313"
           },
           {
-            "record_ref": "a25216563448271ac7d5731e20750e4ccc4d8f96aaec432b472a586b174f964a"
+            "record_ref": "884407e37417e598d2d8ad9fcb7b1e3f7476e306d1d6923b5c9750b2da5085b3"
           }
         ],
         "limits": [
           "首批晶圆、产品出货和成熟产量属于不同阶段。"
         ],
         "period": "2026–2027 展望 · 披露至 09-16",
-        "checked_at": "2026-10-29",
+        "checked_at": "2026-11-02",
         "next_review": "新行业报告",
         "definition": "机构供需预测及公司产能计划。",
         "interpretation": "TrendForce 最新摘要预计 NAND 不同终端市场分化；企业 SSD 的需求展望不宜外推至全部消费级存储。"
@@ -2634,13 +2724,13 @@
             "record_ref": "0e33faa23504fb168d843f6ea27bdfec0b13293991f6b0ef720e6dca831ca074"
           },
           {
-            "record_ref": "99277b4e582878383d71c3556d293197b01a9c78f3ffbada2f961c82a3a62871"
+            "record_ref": "7a842c34c1af2283a7e3f7535cbee5317a14f73ec4b9e0192f56e7b8917ad7af"
           },
           {
-            "record_ref": "2834bffdd184f5ba244ff3245299b87d338ef7a70915657d7fa20dbac12ddb30"
+            "record_ref": "0906c2674bc7da9d031d5aa4e6aba23caf6cd7f204178969f3bb0d72533377a3"
           },
           {
-            "record_ref": "c3bbc6e6b0ac7ba7dbe7a73948d7bba2dadb0c6ba6f57ec547108878d225c19d"
+            "record_ref": "1acc271deadfed6b7c359c4ba8cd17cc4bab84a5a709f0e3fa1969f22e12228f"
           }
         ],
         "limits": [
@@ -2649,7 +2739,7 @@
           "韩国出口额与南亚科营收是售价与数量混合的间接指标，不是美光位元出货或客户库存。"
         ],
         "period": "行业资料至 09-21",
-        "checked_at": "2026-10-29",
+        "checked_at": "2026-11-02",
         "next_review": "每周",
         "definition": "用于观察终端需求的间接指标。",
         "interpretation": "企业 SSD 交付周期为 16 周，而 TrendForce 给出的均衡基准为 8 周，说明交付仍受约束。韩国 9 月存储芯片出口额大幅高于上年同月；南亚科 8 月营收较 7 月小幅增加（环比 +1.9%），维持在 7 月跳升后的高位。官方称出口增长来自出货量扩大、固定价格上涨及季末效应，价格与数量的作用不能拆分。这些都不是美光采购量，客户实际库存与消耗量仍待补充。"
@@ -2667,6 +2757,12 @@
       "产业链指引和管理层展望按原披露日期及目标期间记录，文字为中文摘要；同比由原始金额计算，百分点与百分比区分。"
     ],
     "check_log": [
+      {
+        "at": "2026-11-02T01:29:36.931Z",
+        "status": "success",
+        "scope": "batch",
+        "text": "核查范围：batch；完成 2 / 2 项。"
+      },
       {
         "at": "2026-11-02T01:19:27.103Z",
         "status": "success",
@@ -3512,7 +3608,7 @@
             "index_motir_20261101"
           ],
           "reason": "已检查行业入口：产业通商部 11-01 发布 10 月进出口动向；DRAMeXchange 10-30 收盘场有新的 DDR5 现货读数，合同价表更新至 2026-09；ECOS 有 KSIC 26 九月出货与库存指数；南亚科 9 月营收已在证交所申报（官网表仍空白）。TrendForce 10-28 之后无新的现货周报或内存价格新闻稿，韩国央行 DRAM 出口价格指数仍为 9 月。另行发布行业更新。",
-          "processed_at": null
+          "processed_at": "2026-11-02T01:29:36.931Z"
         },
         {
           "key": "technology:facilities",
@@ -3592,6 +3688,9 @@
         },
         {
           "record_ref": "0b233760266a1d99b4fbf012ef0b5d5581a809109ea3f32562dd0853ff4c3f54"
+        },
+        {
+          "record_ref": "eb1dcb583725b5c60f0cd50a4decddd230f8c5925dfdb35c40e3e32dc05c7082"
         }
       ]
     },
@@ -25954,6 +26053,373 @@
         "e-55b35d22287a3a38189f7e3f4545f3424a45d33b25b870a341706fd9adf5a531"
       ],
       "id": "7c2f0ae4e0dda20314fb861daeb7e4228f24e36dd2d65b8bbacb113da8b92b76"
+    },
+    "c634fec626959918dc0feb2402be9f3d6a7e502482696af3af275f8e5f64fc34": {
+      "metric_id": "mu.contract.ddr4_contract",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "DRAM 报价至 09-23；NAND 报价至 09-14；报告至 09-16",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "DDR4 8Gb (1Gx8) 合同价月均价",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "dram_contract",
+            "url": "https://www.dramexchange.com/Home/HomePrice?Source=NationalDramContract",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DDR4 8Gb (1Gx8) 合同价",
+        "current": 26,
+        "previous": null,
+        "unit": "USD",
+        "source_ids": [
+          "dram_contract"
+        ],
+        "kind": "行业报价",
+        "note": "DRAMeXchange 合同价表的均价（Average），与 DDR4 1Gx8 现货同规格芯片；不含模组价。",
+        "period": "2026 年 9 月",
+        "change": "较上期 +4.00%（DRAMeXchange 披露）",
+        "location": "DRAMeXchange · DRAM Contract Price · DDR4 8Gb 1Gx8 · Average 26.00（High 35.50 / Low 23.50），日期 2026-09-30。",
+        "evidence_type": "direct",
+        "id": "ddr4_contract",
+        "as_of": "2026-09"
+      },
+      "evidence_ids": [
+        "e-43bea2420d0bdb00f42ffae403ddb8668c6cf75441674751852150e9c5a73cc8"
+      ],
+      "id": "c634fec626959918dc0feb2402be9f3d6a7e502482696af3af275f8e5f64fc34"
+    },
+    "1c4290c243a68cc7ece3699fb5249d704673846c0c03a0bddec3e5a18967d233": {
+      "metric_id": "mu.contract.ddr5_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "DRAM 报价至 09-23；NAND 报价至 09-14；报告至 09-16",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "DDR5 16Gb (2Gx8) 4800/5600 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "dram_spot",
+            "url": "https://www.dramexchange.com/",
+            "published_at": "2026-10-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DDR5 16Gb (2Gx8) 4800/5600 现货",
+        "current": 61.5,
+        "previous": null,
+        "unit": "USD",
+        "source_ids": [
+          "dram_spot"
+        ],
+        "kind": "行业报价",
+        "note": "与 DDR4 1Gx8 现货是不同规格，不互相替代。",
+        "period": "截至 10-30",
+        "change": "日变动 +0.27%（DRAMeXchange 披露）",
+        "location": "DRAMeXchange · DRAM Spot Price · DDR5 16Gb (2Gx8) 4800/5600 · Session Average，Last Update Oct.30 2026 18:10 (GMT+8)。",
+        "evidence_type": "direct",
+        "id": "ddr5_spot",
+        "as_of": "2026-10-30"
+      },
+      "evidence_ids": [
+        "e-663e079aed3185b4fddf4a321f1a0fe22188860fc2d95fcd12af6b7734d6b288"
+      ],
+      "id": "1c4290c243a68cc7ece3699fb5249d704673846c0c03a0bddec3e5a18967d233"
+    },
+    "91090c352cbafd839b757dec29f711fede3f14b52546ae9de9cdfe1e78a6d3f1": {
+      "metric_id": "mu.contract.ddr5_contract",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "DRAM 报价至 09-23；NAND 报价至 09-14；报告至 09-16",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "DDR5 16Gb 合同价（韩国产业通商部出口发布所列固定价格）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "korea_trade",
+            "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172360/view",
+            "published_at": "2026-11-01"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DDR5 16Gb 合同价（固定价格）",
+        "current": 50,
+        "previous": 48,
+        "unit": "USD",
+        "source_ids": [
+          "korea_trade"
+        ],
+        "kind": "转引",
+        "note": "产业通商部出口发布所列月度固定价格，原文未注明出处；与 DDR5 16Gb 现货同规格容量，速度等级未注明。",
+        "period": "2026 年 10 月 vs 9 月",
+        "change": null,
+        "location": "产业通商部 10 月进出口动向 · 附件 PDF 第 1 页注释「메모리 고정가격 추이」(DDR5 16Gb, ‘26.6월→10월) · 2026 年 10 月。",
+        "evidence_type": "secondary",
+        "id": "ddr5_contract",
+        "as_of": "2026-10"
+      },
+      "evidence_ids": [
+        "e-09055567538f940f76b0066b6fd151aacf2b24c3b0a5a2025e32c42179a2dc07"
+      ],
+      "id": "91090c352cbafd839b757dec29f711fede3f14b52546ae9de9cdfe1e78a6d3f1"
+    },
+    "2943192c7c3a79244cc25880d05063d8bd20a2bfd505ac81688640af69cbe313": {
+      "metric_id": "mu.supply.korea_ic_shipment",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "2026–2027 展望 · 披露至 09-16",
+        "measurement": "supply",
+        "unit": "index",
+        "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者出货指数（KSIC 26，季节调整，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "kostat_shipment",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202601/202610/I11ACQ/4",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国电子零件·计算机·通信设备业出货指数（KSIC 26，季调）",
+        "current": 142.4,
+        "previous": 137.5,
+        "unit": "index",
+        "source_ids": [
+          "kostat_shipment"
+        ],
+        "kind": "官方统计",
+        "note": "统计厅生产者出货指数，季节调整，2020=100；KSIC 26 含半导体、显示与通信设备，半导体占比最大。8 月值已由统计厅修订（本次读取为 137.5），趋势线中的 8 月点保留当时读数。",
+        "period": "2026 年 9 月 vs 8 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 출하지수(계절조정) · 2026 年 9 月。",
+        "evidence_type": "direct",
+        "id": "korea_ic_shipment",
+        "as_of": "2026-09"
+      },
+      "evidence_ids": [
+        "e-a9747940ee5bb6265a9f010b9ab0fca8280104fa86266418d7902dd462a1c097"
+      ],
+      "id": "2943192c7c3a79244cc25880d05063d8bd20a2bfd505ac81688640af69cbe313"
+    },
+    "884407e37417e598d2d8ad9fcb7b1e3f7476e306d1d6923b5c9750b2da5085b3": {
+      "metric_id": "mu.supply.korea_ic_inventory",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "2026–2027 展望 · 披露至 09-16",
+        "measurement": "supply",
+        "unit": "index",
+        "scope": "韩国电子零件、计算机、影像音响及通信设备制造业生产者库存指数（KSIC 26，季节调整，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "kostat_inventory",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202601/202610/I11ACQ/6",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国电子零件·计算机·通信设备业库存指数（KSIC 26，季调）",
+        "current": 116.7,
+        "previous": 115.6,
+        "unit": "index",
+        "source_ids": [
+          "kostat_inventory"
+        ],
+        "kind": "官方统计",
+        "note": "统计厅生产者库存指数，季节调整，2020=100；与出货指数同口径，页面以两者之比观察库存累积。8 月值已由统计厅修订（本次读取为 115.6），趋势线中的 8 月点保留当时读数。",
+        "period": "2026 年 9 月 vs 8 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 8.3.1 산업별 생산/출하/재고 지수 · 전자부품, 컴퓨터, 영상 음향 및 통신장비 제조업 · 생산자제품 재고지수(계절조정) · 2026 年 9 月。",
+        "evidence_type": "direct",
+        "id": "korea_ic_inventory",
+        "as_of": "2026-09"
+      },
+      "evidence_ids": [
+        "e-f1afbc58a9df41b78bd7e1375ac6554ce5dfd1a666776f35764af070a0d9b6af"
+      ],
+      "id": "884407e37417e598d2d8ad9fcb7b1e3f7476e306d1d6923b5c9750b2da5085b3"
+    },
+    "7a842c34c1af2283a7e3f7535cbee5317a14f73ec4b9e0192f56e7b8917ad7af": {
+      "metric_id": "mu.demand.nanya_revenue",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "行业资料至 09-21",
+        "measurement": "end_consumption_proxy",
+        "unit": "TWDb",
+        "scope": "南亚科单月营收（与上月比较）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "nanya_twse",
+            "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+            "published_at": "2026-10-17"
+          }
+        ]
+      },
+      "payload": {
+        "label": "南亚科单月营收",
+        "current": 45.091089,
+        "previous": 44.690268,
+        "unit": "TWDb",
+        "source_ids": [
+          "nanya_twse"
+        ],
+        "kind": "公司披露",
+        "note": "商品型 DRAM 售价与需求的间接指标，不是美光数据；未经审计。",
+        "period": "2026 年 9 月 vs 8 月",
+        "change": "环比 +0.9%（证交所申报）",
+        "location": "证交所每月营业收入汇总 · 2408 南亚科 · 115 年 9 月 · 当月营收 / 上月营收（千元新台币）。",
+        "evidence_type": "proxy",
+        "id": "nanya_revenue",
+        "as_of": "2026-09"
+      },
+      "evidence_ids": [
+        "e-f9074a52d47cd206c55b504f1837ba30fc331c317a51c2717e2abc775f5a3773"
+      ],
+      "id": "7a842c34c1af2283a7e3f7535cbee5317a14f73ec4b9e0192f56e7b8917ad7af"
+    },
+    "0906c2674bc7da9d031d5aa4e6aba23caf6cd7f204178969f3bb0d72533377a3": {
+      "metric_id": "mu.demand.korea_semi_exports",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "行业资料至 09-21",
+        "measurement": "end_consumption_proxy",
+        "unit": "USDm",
+        "scope": "韩国半导体单月出口额（与上年同月比较）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "korea_trade",
+            "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172360/view",
+            "published_at": "2026-11-01"
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国半导体单月出口额",
+        "current": 56438,
+        "previous": 15701,
+        "unit": "USDm",
+        "source_ids": [
+          "korea_trade"
+        ],
+        "kind": "官方统计",
+        "note": "整月值（非海关 1–20 日初值）；受价格、数量和汇率共同影响，不是美光出货。",
+        "period": "2026 年 10 月 vs 2025 年 10 月",
+        "change": "同比 +259.4%（官方披露）",
+        "location": "产业通商部 10 月进出口动向 · 附件 PDF 第 11 页20 大品目表 · 반도체。",
+        "evidence_type": "proxy",
+        "id": "korea_semi_exports",
+        "as_of": "2026-10"
+      },
+      "evidence_ids": [
+        "e-28deb9bc89808d1bdf481de3d00368a43d27939c9f762ce166f5264063fbb21a"
+      ],
+      "id": "0906c2674bc7da9d031d5aa4e6aba23caf6cd7f204178969f3bb0d72533377a3"
+    },
+    "1acc271deadfed6b7c359c4ba8cd17cc4bab84a5a709f0e3fa1969f22e12228f": {
+      "metric_id": "mu.demand.korea_memory_exports",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "行业资料至 09-21",
+        "measurement": "end_consumption_proxy",
+        "unit": "USDm",
+        "scope": "韩国存储芯片单月出口额（与上年同月比较）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "korea_trade",
+            "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172360/view",
+            "published_at": "2026-11-01"
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国存储芯片单月出口额",
+        "current": 50140,
+        "previous": 10890,
+        "unit": "USDm",
+        "source_ids": [
+          "korea_trade"
+        ],
+        "kind": "官方统计",
+        "note": "原文以亿美元列示（501.4 / 108.9）；整月值。受价格与数量共同影响。约占同月半导体出口的九成（上年同月约七成），同期存储价格大幅上涨。",
+        "period": "2026 年 10 月 vs 2025 年 10 月",
+        "change": "同比 +360.5%（官方披露）",
+        "location": "产业通商部 10 月进出口动向 · 附件 PDF 第 12 页· 메모리/시스템 반도체 수출액。",
+        "evidence_type": "proxy",
+        "id": "korea_memory_exports",
+        "as_of": "2026-10"
+      },
+      "evidence_ids": [
+        "e-77fb899a37f536b407e1db3c24be975e61d1172c6b406aa37cbc3374370aba85"
+      ],
+      "id": "1acc271deadfed6b7c359c4ba8cd17cc4bab84a5a709f0e3fa1969f22e12228f"
+    },
+    "eb1dcb583725b5c60f0cd50a4decddd230f8c5925dfdb35c40e3e32dc05c7082": {
+      "metric_id": "calendar.nvidia_fy2027_q3",
+      "definition_version": 1,
+      "context": {
+        "entity": "nvidia",
+        "period": "FY2027 Q3",
+        "measurement": "disclosure_calendar",
+        "unit": "",
+        "scope": "calendar.nvidia_fy2027_q3",
+        "accounting_basis": "not_applicable",
+        "temporal_basis": "dated_disclosure",
+        "sources": [
+          {
+            "id": "calendar_nvidia_20261117",
+            "url": "https://nvidianews.nvidia.com/news/nvidia-sets-conference-call-for-third-quarter-financial-results-6928873",
+            "published_at": "2026-10-28"
+          }
+        ]
+      },
+      "payload": {
+        "id": "nvidia_fy2027_q3",
+        "company_id": "nvidia",
+        "title": "NVIDIA FY2027 Q3 财报",
+        "period": "FY2027 Q3",
+        "scheduled_at": "2026-11-17T14:00:00-08:00",
+        "review_after": "2026-11-18T22:00:00Z",
+        "confirmation": "confirmed",
+        "source_ids": [
+          "calendar_nvidia_20261117"
+        ],
+        "location": "公告：Tuesday, November 17, at 2 p.m. PT (5 p.m. ET) 召开 FY2027 Q3 业绩电话会（季度截至 2026-10-25）。",
+        "kind": "公司日程",
+        "evidence_type": "direct"
+      },
+      "evidence_ids": [
+        "e-27c4383a38d44fbb0c4ee2dc45603b21b196035231ea8e33240a5637ed2c8687"
+      ],
+      "id": "eb1dcb583725b5c60f0cd50a4decddd230f8c5925dfdb35c40e3e32dc05c7082"
     }
   },
   "supporting": {
@@ -26055,18 +26521,21 @@
       "2026-04": "2c61847e848fb9e035f3a7abba6ccc2a5275dddcd219bba2bc9e064977dec99d",
       "2026-05": "be67a005c8fefe38445542b85dbf66b5cacf216677398945bcc790d132dda749",
       "2026-06": "65f521f0a193e76ad65ef8a70276de2e3a76e2f8d08d3efc870c8bc156a067e8",
-      "2026-07": "b8307104dc5a3ca027dec112a093ee7090bf4170976c723fbd65fe0ec324c3aa"
+      "2026-07": "b8307104dc5a3ca027dec112a093ee7090bf4170976c723fbd65fe0ec324c3aa",
+      "2026-08": "99277b4e582878383d71c3556d293197b01a9c78f3ffbada2f961c82a3a62871"
     },
     "mu.demand.korea_semi_exports": {
       "2026-07": "809fdc9372eb2cec5f53e179fbd7765cc257786b9cc600f2b09d3ec74aa4ced9",
-      "2026-08": "553b9d6638de7eb3f1d8c1b786aaa3ceb29e6a09cf9bc8067eeaad452977673b"
+      "2026-08": "553b9d6638de7eb3f1d8c1b786aaa3ceb29e6a09cf9bc8067eeaad452977673b",
+      "2026-09": "2834bffdd184f5ba244ff3245299b87d338ef7a70915657d7fa20dbac12ddb30"
     },
     "mu.contract.ddr5_spot": {
       "2026-10-07": "3af90fff5340ed1edd7e2958d7dffed3efbd252703d69fbdfc8f1369fefd4d70",
       "2026-10-15": "3fb6c9754002c13fb9ab992c46cf6e3a07e17dcb9ea2afa289a197cfd6b97326",
       "2026-10-16": "2237f248fba62ec2917b5a32f54be9d0b132002ac55422fb7dc0c7e4fe061fbf",
       "2026-10-21": "f7d3c43dd5db83a848aa589a5df054955c59cb2f2420799b8281dabc5f88a7c9",
-      "2026-10-23": "5c5b3a8a7ef612a9f30d7c7e2c4911158b6a98765a5ad461b7ab525c0ea87d9a"
+      "2026-10-23": "5c5b3a8a7ef612a9f30d7c7e2c4911158b6a98765a5ad461b7ab525c0ea87d9a",
+      "2026-10-28": "12f953c69dec2df9c5396fbb30e9cea5e6b5d13502b4cd05588392faf5ed6a26"
     },
     "mu.contract.bok_dram_price": {
       "2025-06": "f4745d896b80abce92a617685ad131b5fc045387102ed85eaa5939aba4876a32",
@@ -26100,7 +26569,8 @@
       "2026-04": "0b1fcc751e6120d34a3d13aaae28f609c8c47ff23f0ac311915a852854243d20",
       "2026-05": "8944be3f378fd9f57a29d83359838aa7e1f4c0fb55f7cee10554c69b3f84f52b",
       "2026-06": "93664c60d1ae585e6a3c012fd5190529a0316a6702e8ae8161fea56138514084",
-      "2026-07": "2ae1bc31cfa38cb596f58c53c448c6a910fb81b39db52bab789079f43e05f650"
+      "2026-07": "2ae1bc31cfa38cb596f58c53c448c6a910fb81b39db52bab789079f43e05f650",
+      "2026-08": "166e1b710663f9f03f9622f6d2f665adfa4f57bfb358d2585d707faec072d173"
     },
     "mu.supply.korea_ic_inventory": {
       "2025-05": "6d76f684f1861fad5cfd575c9ab27e99849c4c32a00b564fc7243efc0058de18",
@@ -26117,13 +26587,21 @@
       "2026-04": "d086e10d3992da2123643a570535f2541329b57589dd9c4aae963056721b0269",
       "2026-05": "b35e4ca17c13ee35a64924de1538fb54a54d1a0300241ebc7edd3a846bd89837",
       "2026-06": "c07677c2d392d22b0467345681c951a2bde1003690d534bc487101c6c76eb8b6",
-      "2026-07": "afea99ea54694c02e404454532fd47914752b41cd6f7ad052e4ce56e3659771f"
+      "2026-07": "afea99ea54694c02e404454532fd47914752b41cd6f7ad052e4ce56e3659771f",
+      "2026-08": "a25216563448271ac7d5731e20750e4ccc4d8f96aaec432b472a586b174f964a"
     },
     "mu.contract.ddr5_contract": {
       "2026-05": "dea397c3bb614973f226c8b1b1a47f5a9c5c14521375dbb94fbb53d7ca896794",
       "2026-06": "adf4e5cd751b651889076af6f023ea8ad89ef7e1f825902e625b1259ef8cad99",
       "2026-07": "76f996555e4fe8b25ea7cf5c0731eef053fcbb75439ff8ff36fb21b7df04dd7d",
-      "2026-08": "fe7c51818085674fa595af0dc3525c9cbd554465447920f9c676caebb6e10ba8"
+      "2026-08": "fe7c51818085674fa595af0dc3525c9cbd554465447920f9c676caebb6e10ba8",
+      "2026-09": "158d5ba3d46f308218a5f6ea1271ed631831a095b369f1ebc6954a3bf0b6c1ea"
+    },
+    "mu.demand.korea_memory_exports": {
+      "2026-09": "c3bbc6e6b0ac7ba7dbe7a73948d7bba2dadb0c6ba6f57ec547108878d225c19d"
+    },
+    "mu.contract.ddr4_contract": {
+      "2026-08": "e982ed0aeb825ae20d2884ac8d2e306ea49c7deb3c829a06d264bb76efe2b6df"
     }
   }
 }
