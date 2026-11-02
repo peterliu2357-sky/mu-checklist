@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "revision": "2026-11-02-0ce368325f",
-  "updated_at": "2026-11-02T01:13:17.477Z",
+  "revision": "2026-11-02-2f491b3680",
+  "updated_at": "2026-11-02T01:19:27.103Z",
   "last_successful_check_at": "2026-09-20T23:50:00Z",
   "last_attempt_at": "2026-09-20T23:50:00Z",
   "financial_period": "FY2026 Q4",
@@ -2121,6 +2121,132 @@
       "checked_at": "2026-10-29",
       "locator": "第 14 页 Appendix 3：Inventories，30.Sep.25 / 30.Sep.26（十亿韩元）。",
       "type": "公司原始披露"
+    },
+    "index_tf_press_20261101": {
+      "label": "TrendForce 新闻稿列表",
+      "short_label": "TrendForce 新闻稿",
+      "url": "https://www.trendforce.com/presscenter/",
+      "published_at": null,
+      "checked_at": "2026-11-02",
+      "type": "行业官方入口",
+      "locator": "最新新闻稿为 10-29 OLED 笔电与 MLCC（AI 推理带动 CPU 与 DDR5 需求），列表中无内存价格预测新闻稿。"
+    },
+    "index_tf_insights_20261101": {
+      "label": "TrendForce Insights 列表",
+      "short_label": "TrendForce Insights",
+      "url": "https://insights.trendforce.com/api/v1/archive?sort=new&search=&offset=0&limit=12",
+      "published_at": null,
+      "checked_at": "2026-11-02",
+      "type": "行业官方入口",
+      "locator": "最新为 10-30 混合键合成本文章与 10-26 Weekly Radar 007（订阅），无新的内存价格文章。"
+    },
+    "index_tf_news_20261101": {
+      "label": "TrendForce News 列表",
+      "short_label": "TrendForce News",
+      "url": "https://www.trendforce.com/news/wp-json/wp/v2/posts?after=2026-10-28T00:00:00&per_page=80&_fields=id,date,link,title",
+      "published_at": null,
+      "checked_at": "2026-11-02",
+      "type": "行业官方入口",
+      "locator": "10-28 之后无新的 Memory Spot Price Update，最新一期仍为 10-28（DDR4 截至 10-27、512Gb TLC 截至 10-26）。"
+    },
+    "index_dramx_20261101": {
+      "label": "DRAMeXchange 首页报价",
+      "short_label": "DRAMeXchange",
+      "url": "https://www.dramexchange.com/",
+      "published_at": null,
+      "checked_at": "2026-11-02",
+      "type": "行业官方入口",
+      "locator": "DRAM Spot Price · Last Update Oct.30 2026 18:10 (GMT+8)。"
+    },
+    "index_dramx_contract_20261101": {
+      "label": "DRAMeXchange 合同价表",
+      "short_label": "DRAMeXchange 合同价",
+      "url": "https://www.dramexchange.com/Home/HomePrice?Source=NationalDramContract",
+      "published_at": null,
+      "checked_at": "2026-11-02",
+      "type": "行业官方入口",
+      "locator": "合同价表更新至 2026-09-30。"
+    },
+    "index_nanya_20261101": {
+      "label": "南亚科月营收表",
+      "short_label": "南亚科月营收",
+      "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
+      "published_at": null,
+      "checked_at": "2026-11-02",
+      "type": "公司官方入口",
+      "locator": "官网表 2026 年 9 月栏仍为空白，最新为 8 月；9 月营收已在证交所月营收开放数据申报。"
+    },
+    "index_ecos_bok_20261101": {
+      "label": "韩国央行 ECOS · 出口价格指数 DRAM",
+      "short_label": "ECOS 出口价格",
+      "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202601/202610/30911201AA/D",
+      "published_at": null,
+      "checked_at": "2026-11-02",
+      "type": "官方统计数据接口",
+      "locator": "402Y016 DRAM 项最新月份仍为 2026-09。"
+    },
+    "index_ecos_kostat_20261101": {
+      "label": "韩国央行 ECOS · KSIC 26 出货指数",
+      "short_label": "ECOS 出货指数",
+      "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202601/202610/I11ACQ/4",
+      "published_at": null,
+      "checked_at": "2026-11-02",
+      "type": "官方统计数据接口",
+      "locator": "901Y032 KSIC 26 出货指数新增 2026-09。"
+    },
+    "index_ecos_kostat_inv_20261101": {
+      "label": "韩国央行 ECOS · KSIC 26 库存指数",
+      "short_label": "ECOS 库存指数",
+      "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202601/202610/I11ACQ/6",
+      "published_at": null,
+      "checked_at": "2026-11-02",
+      "type": "官方统计数据接口",
+      "locator": "901Y032 KSIC 26 库存指数新增 2026-09。"
+    },
+    "index_motir_20261101": {
+      "label": "产业通商部 10 月进出口动向",
+      "short_label": "产业通商部出口",
+      "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172360/view",
+      "published_at": "2026-11-01",
+      "checked_at": "2026-11-02",
+      "type": "官方统计",
+      "locator": "11-01 发布 2026 年 10 月进出口动向（含半导体、存储出口及 DDR5 固定价格）。"
+    },
+    "index_micron_newsroom_20261101": {
+      "label": "美光 IR 新闻稿",
+      "short_label": "Micron IR 新闻",
+      "url": "https://investors.micron.com/news/default.aspx",
+      "published_at": null,
+      "checked_at": "2026-11-02",
+      "type": "公司官方入口",
+      "locator": "新闻稿列表（页面对自动访问返回验证页，经同站官方新闻稿接口读取）：最新为 10-27 爱达荷社区投资、10-20 Indium 关键矿物投资，之后无新稿。"
+    },
+    "index_micron_events_20261101": {
+      "label": "美光 IR 活动",
+      "short_label": "Micron IR 活动",
+      "url": "https://investors.micron.com/feed/Event.svc/GetEventList?LanguageId=1&eventSelection=3&sortOperator=1&eventDateFilter=3&pageSize=5&pageNumber=0&year=-1",
+      "published_at": null,
+      "checked_at": "2026-11-02",
+      "type": "公司官方入口",
+      "locator": "最新活动仍为 10-21 技术与产品研讨会，尚无 FY2027 Q1 财报日期。"
+    },
+    "index_samsung_news_20261101": {
+      "label": "三星 Newsroom",
+      "short_label": "Samsung Newsroom",
+      "url": "https://news.samsung.com/global/",
+      "published_at": null,
+      "checked_at": "2026-11-02",
+      "type": "公司官方入口",
+      "locator": "10-29 2026 Q3 财报（已处理）之后为奥运等非存储新闻，无 DDR5 RDIMM 或 HBM 新稿。"
+    },
+    "index_skhynix_news_20261101": {
+      "label": "SK 海力士 Newsroom",
+      "short_label": "SK hynix Newsroom",
+      "url": "https://news.skhynix.com/en/",
+      "published_at": null,
+      "checked_at": "2026-11-02",
+      "type": "公司官方入口",
+      "locator": "10-28 3Q26 财报（已处理）之后为 10-30 日本合作伙伴日与技术专栏，无产品阶段变化。"
     }
   },
   "metrics": [
@@ -3536,6 +3662,12 @@
     "产业链指引和管理层展望按原披露日期及目标期间记录，文字为中文摘要；同比由原始金额计算，百分点与百分比区分。"
   ],
   "check_log": [
+    {
+      "at": "2026-11-02T01:19:27.103Z",
+      "status": "success",
+      "scope": "discovery",
+      "text": "核查范围：discovery；完成 4 / 4 项。"
+    },
     {
       "at": "2026-11-02T01:13:17.477Z",
       "status": "success",
@@ -5234,57 +5366,57 @@
         "key": "industry",
         "status": "verified",
         "finding": "new_disclosure",
-        "checked_at": "2026-10-29T00:27:47.199Z",
-        "attempted_at": "2026-10-29T00:28:03.080Z",
+        "checked_at": "2026-11-02T01:19:14.000Z",
+        "attempted_at": "2026-11-02T01:19:27.103Z",
         "latest_disclosure": {
-          "url": "https://www.trendforce.com/news/2026/10/28/insights-memory-spot-price-update-nand-spot-price-cuts-accelerate-amid-china-phone-discounts-512gb-tlc-sink-9-19/",
-          "published_at": "2026-10-28"
+          "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172360/view",
+          "published_at": "2026-11-01"
         },
         "source_ids": [
-          "index_tf_press_20261028",
-          "index_tf_insights_20261028",
-          "index_tf_news_20261028",
-          "index_tf_spot_20261028",
-          "index_dramx_20261028",
-          "index_dramx_contract_20261028",
-          "index_nanya_20261028",
-          "index_ecos_bok_20261028",
-          "index_ecos_kostat_20261028",
-          "index_ecos_kostat_inv_20261028"
+          "index_tf_press_20261101",
+          "index_tf_insights_20261101",
+          "index_tf_news_20261101",
+          "index_dramx_20261101",
+          "index_dramx_contract_20261101",
+          "index_nanya_20261101",
+          "index_ecos_bok_20261101",
+          "index_ecos_kostat_20261101",
+          "index_ecos_kostat_inv_20261101",
+          "index_motir_20261101"
         ],
-        "reason": "已检查行业入口：TrendForce 10-28 发布新的现货周报（DDR4 截至 10-27、512Gb TLC 截至 10-26），DRAMeXchange 10-28 18:10 收盘场有新的 DDR5 现货读数，另行发布行业更新；合同价表仍为 08-31；TrendForce 新闻稿列表中无内存价格新闻稿，Insights 无新的公开 Weekly Radar；韩国央行 DRAM 出口价格指数最新仍为 9 月，KSIC 26 出货与库存指数最新仍为 8 月；南亚科 9 月营收仍未公布。",
-        "processed_at": "2026-10-29T00:50:42.150Z"
+        "reason": "已检查行业入口：产业通商部 11-01 发布 10 月进出口动向；DRAMeXchange 10-30 收盘场有新的 DDR5 现货读数，合同价表更新至 2026-09；ECOS 有 KSIC 26 九月出货与库存指数；南亚科 9 月营收已在证交所申报（官网表仍空白）。TrendForce 10-28 之后无新的现货周报或内存价格新闻稿，韩国央行 DRAM 出口价格指数仍为 9 月。另行发布行业更新。",
+        "processed_at": null
       },
       {
         "key": "technology:facilities",
         "status": "verified",
         "finding": "unchanged",
-        "checked_at": "2026-10-29T00:27:47.199Z",
-        "attempted_at": "2026-10-29T00:28:03.080Z",
+        "checked_at": "2026-11-02T01:19:14.000Z",
+        "attempted_at": "2026-11-02T01:19:27.103Z",
         "latest_disclosure": {
           "url": "https://investors.micron.com/news/press-release/2026/Micron-Announces-Over-67-Million-in-New-Idaho-Community-Investments-for-Transportation-Housing-and-Children/default.aspx",
           "published_at": "2026-10-27"
         },
         "source_ids": [
-          "index_micron_newsroom_20261029",
-          "index_micron_events_20261028"
+          "index_micron_newsroom_20261101",
+          "index_micron_events_20261101"
         ],
-        "reason": "Micron 官方新闻入口最新为 10-27 爱达荷社区投资（正文为交通、住房与儿童储蓄账户投入，未提 ID1 或其他工厂进度）与 10-20 Indium 关键矿物投资，活动列表最新为 10-21 技术研讨会（已处理），无追踪工厂的新里程碑。",
+        "reason": "美光官方新闻稿接口最新仍为 10-27 爱达荷社区投资与 10-20 Indium 投资，活动列表最新为 10-21 技术研讨会（已处理），无追踪工厂的新里程碑。",
         "processed_at": null
       },
       {
         "key": "technology:processes",
         "status": "verified",
         "finding": "unchanged",
-        "checked_at": "2026-10-29T00:27:47.199Z",
-        "attempted_at": "2026-10-29T00:28:03.080Z",
+        "checked_at": "2026-11-02T01:19:14.000Z",
+        "attempted_at": "2026-11-02T01:19:27.103Z",
         "latest_disclosure": {
           "url": "https://s25.q4cdn.com/621799436/files/doc_downloads/2026/10/MU-TP-Webinar.pdf",
           "published_at": "2026-10-21"
         },
         "source_ids": [
-          "index_micron_newsroom_20261029",
-          "index_micron_events_20261028"
+          "index_micron_newsroom_20261101",
+          "index_micron_events_20261101"
         ],
         "reason": "最新相关披露仍为美光 10-21 技术研讨会（已处理）；之后官方入口无新的制程节点、良率或爬坡披露。",
         "processed_at": null
@@ -5293,20 +5425,19 @@
         "key": "technology:products",
         "status": "verified",
         "finding": "unchanged",
-        "checked_at": "2026-10-29T00:27:47.199Z",
-        "attempted_at": "2026-10-29T00:28:03.080Z",
+        "checked_at": "2026-11-02T01:19:14.000Z",
+        "attempted_at": "2026-11-02T01:19:27.103Z",
         "latest_disclosure": {
-          "url": "https://news.skhynix.com/en/q3-2026-business-results/",
-          "published_at": "2026-10-28"
+          "url": "https://news.samsung.com/global/samsung-electronics-announces-third-quarter-2026-results",
+          "published_at": "2026-10-29"
         },
         "source_ids": [
-          "index_micron_newsroom_20261029",
-          "index_micron_events_20261028",
-          "index_samsung_news_20261028",
-          "index_skhynix_news_20261028",
-          "index_samsung_3q26_deck_20261029"
+          "index_micron_newsroom_20261101",
+          "index_micron_events_20261101",
+          "index_samsung_news_20261101",
+          "index_skhynix_news_20261101"
         ],
-        "reason": "SK 海力士 10-28 3Q26 财报中的 HBM4 进展已在上次更新处理；三星 Newsroom 与美光入口无新的 DDR5 RDIMM、HBM4/HBM4E 产品稿。三星 3Q26 业绩说明会资料中的产品进展随三星季报一并处理。",
+        "reason": "三星 10-29 与 SK 海力士 10-28 季报中的 HBM4 进展已随各自季报处理（三星称 HBM4 销售大幅扩大，未给容量、速度或认证新数据）；之后两家 Newsroom 与美光入口无新的 DDR5 RDIMM、HBM4/HBM4E 产品稿。",
         "processed_at": null
       }
     ],

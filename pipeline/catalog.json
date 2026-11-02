@@ -2957,6 +2957,24 @@
         "secondary"
       ]
     },
+    "calendar.nvidia_fy2027_q3": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "entity": "nvidia",
+      "measurement": "disclosure_calendar",
+      "unit": "",
+      "scope": "calendar.nvidia_fy2027_q3",
+      "accounting_basis": "not_applicable",
+      "temporal_basis": "dated_disclosure",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct",
+        "proxy",
+        "secondary"
+      ]
+    },
     "tech.sanand": {
       "version": 1,
       "active": true,
@@ -3647,6 +3665,9 @@
     "calendar_amazon_20261029": [
       "calendar.amazon_2026_q3"
     ],
+    "calendar_nvidia_20261117": [
+      "calendar.nvidia_fy2027_q3"
+    ],
     "calendar_microsoft_20261028": [
       "calendar.microsoft_fy2027_q1"
     ],
@@ -3721,6 +3742,9 @@
       "mu.contract.ddr4_spot"
     ],
     "nanya_monthly": [
+      "mu.demand.nanya_revenue"
+    ],
+    "nanya_twse": [
       "mu.demand.nanya_revenue"
     ],
     "korea_trade": [
