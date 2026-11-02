@@ -1,0 +1,238 @@
+{
+  "version": 1,
+  "scope": "discovery",
+  "base_commit": "2756a5aca34ac2a9bc6aff90683752486d233b2c",
+  "base_revision": "2026-11-02-0ce368325f",
+  "base_sha256": "87bcdd8624c56980c0d153dbd5441b8ad3477d1387c6b108edfb54790091c44f",
+  "catalog_sha256": "c1baaa4b2560b9d57407dd4a5cc201ec88c804bb4cf745b02ebdf2e0e3ab4ee3",
+  "created_at": "2026-11-02T01:19:26.570Z",
+  "completed_at": "2026-11-02T01:19:27.103Z",
+  "state": "verified",
+  "targets": [
+    "industry",
+    "technology:facilities",
+    "technology:processes",
+    "technology:products"
+  ],
+  "coverage": [
+    {
+      "key": "industry",
+      "status": "verified",
+      "evidence": [
+        "index_tf_press_20261101",
+        "index_tf_insights_20261101",
+        "index_tf_news_20261101",
+        "index_dramx_20261101",
+        "index_dramx_contract_20261101",
+        "index_nanya_20261101",
+        "index_ecos_bok_20261101",
+        "index_ecos_kostat_20261101",
+        "index_ecos_kostat_inv_20261101",
+        "index_motir_20261101"
+      ],
+      "reviewed_at": "2026-11-02T01:19:14.000Z",
+      "latest_disclosure": {
+        "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172360/view",
+        "published_at": "2026-11-01"
+      },
+      "reason": "已检查行业入口：产业通商部 11-01 发布 10 月进出口动向；DRAMeXchange 10-30 收盘场有新的 DDR5 现货读数，合同价表更新至 2026-09；ECOS 有 KSIC 26 九月出货与库存指数；南亚科 9 月营收已在证交所申报（官网表仍空白）。TrendForce 10-28 之后无新的现货周报或内存价格新闻稿，韩国央行 DRAM 出口价格指数仍为 9 月。另行发布行业更新。",
+      "finding": "new_disclosure"
+    },
+    {
+      "key": "technology:facilities",
+      "status": "verified",
+      "evidence": [
+        "index_micron_newsroom_20261101",
+        "index_micron_events_20261101"
+      ],
+      "reviewed_at": "2026-11-02T01:19:14.000Z",
+      "latest_disclosure": {
+        "url": "https://investors.micron.com/news/press-release/2026/Micron-Announces-Over-67-Million-in-New-Idaho-Community-Investments-for-Transportation-Housing-and-Children/default.aspx",
+        "published_at": "2026-10-27"
+      },
+      "reason": "美光官方新闻稿接口最新仍为 10-27 爱达荷社区投资与 10-20 Indium 投资，活动列表最新为 10-21 技术研讨会（已处理），无追踪工厂的新里程碑。",
+      "finding": "unchanged"
+    },
+    {
+      "key": "technology:processes",
+      "status": "verified",
+      "evidence": [
+        "index_micron_newsroom_20261101",
+        "index_micron_events_20261101"
+      ],
+      "reviewed_at": "2026-11-02T01:19:14.000Z",
+      "latest_disclosure": {
+        "url": "https://s25.q4cdn.com/621799436/files/doc_downloads/2026/10/MU-TP-Webinar.pdf",
+        "published_at": "2026-10-21"
+      },
+      "reason": "最新相关披露仍为美光 10-21 技术研讨会（已处理）；之后官方入口无新的制程节点、良率或爬坡披露。",
+      "finding": "unchanged"
+    },
+    {
+      "key": "technology:products",
+      "status": "verified",
+      "evidence": [
+        "index_micron_newsroom_20261101",
+        "index_micron_events_20261101",
+        "index_samsung_news_20261101",
+        "index_skhynix_news_20261101"
+      ],
+      "reviewed_at": "2026-11-02T01:19:14.000Z",
+      "latest_disclosure": {
+        "url": "https://news.samsung.com/global/samsung-electronics-announces-third-quarter-2026-results",
+        "published_at": "2026-10-29"
+      },
+      "reason": "三星 10-29 与 SK 海力士 10-28 季报中的 HBM4 进展已随各自季报处理（三星称 HBM4 销售大幅扩大，未给容量、速度或认证新数据）；之后两家 Newsroom 与美光入口无新的 DDR5 RDIMM、HBM4/HBM4E 产品稿。",
+      "finding": "unchanged"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "index_tf_press_20261101",
+      "url": "https://www.trendforce.com/presscenter/",
+      "sha256": "f9c322adc238e861c8b855c6165bcbc432c0acb2f2debe1ba1374051fb1f10a7",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-02T01:18:42.045Z",
+      "reviewed_at": "2026-11-02T01:18:42.045Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_tf_insights_20261101",
+      "url": "https://insights.trendforce.com/api/v1/archive?sort=new&search=&offset=0&limit=12",
+      "sha256": "c06661a036be28226d047abf045b32b39324ed76a9626cb5ec2ea81d8fd21d4b",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-02T01:18:42.545Z",
+      "reviewed_at": "2026-11-02T01:18:42.545Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_tf_news_20261101",
+      "url": "https://www.trendforce.com/news/wp-json/wp/v2/posts?after=2026-10-28T00:00:00&per_page=80&_fields=id,date,link,title",
+      "sha256": "b8ae0cacd7e4ae59d52f4d420e6fbef7a934460bebe7066c8f2b273965689db3",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-02T01:18:42.978Z",
+      "reviewed_at": "2026-11-02T01:18:42.978Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_dramx_20261101",
+      "url": "https://www.dramexchange.com/",
+      "sha256": "69ef104978da0dd518083876d6a0c3c38c48a103a7d80168a716aeba87b59fbd",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-02T01:18:43.453Z",
+      "reviewed_at": "2026-11-02T01:18:43.453Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_dramx_contract_20261101",
+      "url": "https://www.dramexchange.com/Home/HomePrice?Source=NationalDramContract",
+      "sha256": "3088c4658143507f092b171ed60619715af461c332977ffe34666989d71dfb19",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-02T01:18:43.962Z",
+      "reviewed_at": "2026-11-02T01:18:43.962Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_nanya_20261101",
+      "url": "https://www.nanya.com/en/IR/36/Monthly%20Revenue",
+      "sha256": "6e9f960a00d2f7075673973aa4eb6b253d3723aa57cf4ef4df5aed4d60cc5495",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-02T01:18:44.445Z",
+      "reviewed_at": "2026-11-02T01:18:44.445Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_ecos_bok_20261101",
+      "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202601/202610/30911201AA/D",
+      "sha256": "5712399e1b6a68a38958abcea449ff1baac08d9ea48db363a2b1ae70d9d0cca6",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-02T01:18:45.002Z",
+      "reviewed_at": "2026-11-02T01:18:45.002Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_ecos_kostat_20261101",
+      "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202601/202610/I11ACQ/4",
+      "sha256": "468a94aedc60ff9881f5784dfe7729cbef8ce54da75c56237f97c29d30d02da4",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-02T01:18:45.455Z",
+      "reviewed_at": "2026-11-02T01:18:45.455Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_ecos_kostat_inv_20261101",
+      "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202601/202610/I11ACQ/6",
+      "sha256": "c8904065571791868a52ebbb755a8b0600defe0ea7dc8c4184c5e0c6edc2de7c",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-02T01:18:45.914Z",
+      "reviewed_at": "2026-11-02T01:18:45.914Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_motir_20261101",
+      "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172360/view",
+      "sha256": "f2e6f619d1bf9cd8f9c13950b9697298b8026c53253921ea26f7399e29127538",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-02T01:18:46.317Z",
+      "reviewed_at": "2026-11-02T01:18:46.317Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_micron_events_20261101",
+      "url": "https://investors.micron.com/feed/Event.svc/GetEventList?LanguageId=1&eventSelection=3&sortOperator=1&eventDateFilter=3&pageSize=5&pageNumber=0&year=-1",
+      "sha256": "db583abad534e999b2466e96b28eebcd15b8639bc7cbf613c977d0f8c7ef2d37",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-02T01:18:47.156Z",
+      "reviewed_at": "2026-11-02T01:18:47.156Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_samsung_news_20261101",
+      "url": "https://news.samsung.com/global/",
+      "sha256": "309a886dc1be1c5047979f0b78a372b5cb26fbd37634a623c2eb149e1af04304",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-02T01:18:47.581Z",
+      "reviewed_at": "2026-11-02T01:18:47.581Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_skhynix_news_20261101",
+      "url": "https://news.skhynix.com/en/",
+      "sha256": "70fae1ffb4b86f9d094dbb3ea1ad064f9f9a11550fe1b79b5cb7b27c09c54a33",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-02T01:18:47.997Z",
+      "reviewed_at": "2026-11-02T01:18:47.997Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_micron_newsroom_20261101",
+      "url": "https://investors.micron.com/news/default.aspx",
+      "sha256": "2e6fd799688bcfd0b731bb12e7e5fbfe529e4ddc420c93202dd4d16494bcf884",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-11-02T01:19:09.210Z",
+      "reviewed_at": "2026-11-02T01:19:09.210Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [],
+  "publication_corrections": [],
+  "technology_reviews": [],
+  "result": "success",
+  "artifact_sha256": "751dcf72219d085b6c1bd72770da51420301b3e3dc8be6073fd9deb3520cc3d0",
+  "ledger_sha256": "0f3baefe966ab0b8fd9be090128b499b51c7f71f5c905aa1cbfe51a646d3c79b",
+  "evidence_sha256": "b5992d34b3ed70507f844fd1533b6e67e46fe934ff6e2524843d61c5914a4267"
+}
