@@ -149,7 +149,7 @@
           ]
         },
         {
-          "text": "韩国 2026 年十月半导体出口额 {{mu.demand.korea_semi_exports}}，{{mu.demand.korea_semi_exports|change}}，其中存储芯片{{mu.demand.korea_memory_exports|change}}；但低于九月的 {{series.mu.demand.korea_semi_exports@2026-09}}，出现环比回落。南亚科九月营收{{mu.demand.nanya_revenue|change}}，增速放缓。",
+          "text": "韩国十月半导体出口额 {{mu.demand.korea_semi_exports}}，{{mu.demand.korea_semi_exports|change}}，存储芯片为{{mu.demand.korea_memory_exports|change}}；但低于九月的 {{series.mu.demand.korea_semi_exports@2026-09}}，出现环比回落。南亚科九月营收{{mu.demand.nanya_revenue|change}}，与八月基本持平。",
           "refs": [
             "mu.demand.korea_semi_exports",
             "mu.demand.korea_memory_exports",
@@ -306,7 +306,7 @@
       ]
     }
   ],
-  "generated_at": "2026-11-02T01:29:38.156Z",
+  "generated_at": "2026-11-02T01:35:20.397Z",
   "data_revision": "2026-11-02-c8aa289c57",
   "financial_period": "FY2026 Q4",
   "cited": {
