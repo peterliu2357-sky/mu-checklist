@@ -1,0 +1,169 @@
+{
+  "version": 1,
+  "scope": "batch",
+  "base_commit": "a605a1fb315c54bc989740aa58c498be1feaef86",
+  "base_revision": "2026-11-09-2d99bec5bb",
+  "base_sha256": "958fc76309a6635b562cece4292007f36d442554177cc8652ea7019e4faac84e",
+  "catalog_sha256": "c1baaa4b2560b9d57407dd4a5cc201ec88c804bb4cf745b02ebdf2e0e3ab4ee3",
+  "created_at": "2026-11-09T01:17:52.488Z",
+  "completed_at": "2026-11-09T01:18:03.589Z",
+  "state": "verified",
+  "targets": [
+    "industry",
+    "calendar"
+  ],
+  "coverage": [
+    {
+      "key": "industry",
+      "status": "verified",
+      "evidence": [
+        "spot",
+        "dram_spot"
+      ],
+      "reviewed_at": "2026-11-09T01:17:53.000Z",
+      "latest_disclosure": {
+        "url": "https://www.dramexchange.com/",
+        "published_at": "2026-11-06"
+      },
+      "reason": "更新现货读数：TrendForce 11-04 现货周报 DDR4 1Gx8 3200 周均价 46.82 美元（11-03，周变动 −0.09%）、512Gb TLC 晶圆 16.152 美元（11-02，−4.33%）；DRAMeXchange 11-06 收盘场 DDR5 16Gb 现货 Session Average 60.167 美元（−0.82%）。合同价、南亚科、韩国出口与 ECOS 指数无新数据。"
+    },
+    {
+      "key": "calendar",
+      "status": "verified",
+      "evidence": [
+        "calendar_index_micron_20261108",
+        "calendar_index_microsoft_20261108",
+        "calendar_index_amazon_20261108",
+        "calendar_index_oracle_20261108",
+        "calendar_index_meta_20261108",
+        "calendar_index_samsung_20261108",
+        "calendar_index_skhynix_20261108",
+        "calendar_index_alphabet_20261108"
+      ],
+      "reviewed_at": "2026-11-09T01:17:53.000Z",
+      "latest_disclosure": {
+        "url": "https://nvidianews.nvidia.com/news/nvidia-sets-conference-call-for-third-quarter-financial-results-6928873",
+        "published_at": "2026-10-28"
+      },
+      "reason": "美光、Microsoft、Amazon、Oracle、Meta、三星与 SK 海力士官方日程入口均尚未公布下一财报日期，保持待确认；Alphabet 投资者页面静态内容未列出日期，保持待确认。台积电 IR 对自动访问返回 HTTP 403，本次未能读取，保持待确认。NVIDIA 11-17 日程不变。"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "spot",
+      "url": "https://www.trendforce.com/news/2026/11/04/insights-memory-spot-price-update-mainstream-ddr4-prices-dip-0-09-as-spot-premium-keeps-buyers-on-sidelines/",
+      "sha256": "f4e7c26f08d044e4fc24afcf8218ad76b7ff92121a0cd4ba9be1207b9950995b",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-09T01:13:07.398Z",
+      "reviewed_at": "2026-11-09T01:13:07.398Z",
+      "status": "read"
+    },
+    {
+      "source_id": "dram_spot",
+      "url": "https://www.dramexchange.com/",
+      "sha256": "e4905c232c16a2c4daaae8e14c2d6b7a494b4962d2a490eede3e0530073b34e7",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-09T01:13:07.767Z",
+      "reviewed_at": "2026-11-09T01:13:07.767Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_micron_20261108",
+      "url": "https://investors.micron.com/feed/Event.svc/GetEventList?LanguageId=1&eventSelection=3&sortOperator=1&eventDateFilter=3&pageSize=5&pageNumber=0&year=-1",
+      "sha256": "db583abad534e999b2466e96b28eebcd15b8639bc7cbf613c977d0f8c7ef2d37",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-09T01:13:08.127Z",
+      "reviewed_at": "2026-11-09T01:13:08.127Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_microsoft_20261108",
+      "url": "https://www.microsoft.com/en-us/investor/default",
+      "sha256": "80d284d84505f2235177a11e2b489b82dd1742920340b253fe620521b0ba56cb",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-09T01:13:08.531Z",
+      "reviewed_at": "2026-11-09T01:13:08.531Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_amazon_20261108",
+      "url": "https://ir.aboutamazon.com/feed/PressRelease.svc/GetPressReleaseList?LanguageId=1&bodyType=0&pressReleaseDateFilter=3&pageSize=12&pageNumber=0&year=-1",
+      "sha256": "9918c63862fabcfa6841bdb57f7d91da1ade1acf32d79564749bc286f15088f8",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-09T01:13:08.909Z",
+      "reviewed_at": "2026-11-09T01:13:08.909Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_oracle_20261108",
+      "url": "https://investor.oracle.com/feed/PressRelease.svc/GetPressReleaseList?LanguageId=1&bodyType=0&pressReleaseDateFilter=3&pageSize=12&pageNumber=0&year=-1",
+      "sha256": "a0f66788155ca6cf246cf32080daed26ef637c50de78ddca8f14ea7131a5fb1e",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-09T01:13:09.305Z",
+      "reviewed_at": "2026-11-09T01:13:09.305Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_meta_20261108",
+      "url": "https://investor.atmeta.com/feed/Event.svc/GetEventList?apiKey=F37D4FC40D0E4774887D6827E95013D5&eventSelection=0&eventDateFilter=0&includeFinancialReports=true&includePresentations=true&includePressReleases=true&sortOperator=1&pageSize=-1&tagList=&includeTags=true&year=-1&excludeSelection=0",
+      "sha256": "e1c153c01038f8118964444b34bb5d865cd98194428efce62cc2684e52a5c299",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-09T01:13:09.746Z",
+      "reviewed_at": "2026-11-09T01:13:09.746Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_samsung_20261108",
+      "url": "https://www.samsung.com/global/ir/ir-events-presentations/events/",
+      "sha256": "8644c8b052eb0855a559452ccf58e9d18e735434cc078da14b5df3cdb25247eb",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-09T01:13:10.169Z",
+      "reviewed_at": "2026-11-09T01:13:10.169Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_skhynix_20261108",
+      "url": "https://news.skhynix.com/en/?s=earnings+conference+call",
+      "sha256": "c4b7107bf20395084ce86bfc5ed22c2cc0de7339c6c3a4a6d4c350b70db7c9a6",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-09T01:13:10.524Z",
+      "reviewed_at": "2026-11-09T01:13:10.524Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_tsmc_20261108",
+      "url": "https://investor.tsmc.com/english/financial-calendar",
+      "status": "failed",
+      "attempted_at": "2026-11-09T01:13:11.531Z",
+      "error": "Source HTTP 403"
+    },
+    {
+      "source_id": "calendar_index_alphabet_20261108",
+      "url": "https://abc.xyz/investor/",
+      "sha256": "c889d3a0572a4e5e8dbd6b81f51b16fb196889f11396f7e04ac55352d65ba457",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-09T01:13:39.942Z",
+      "reviewed_at": "2026-11-09T01:13:39.942Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [],
+  "publication_corrections": [
+    "dram_spot"
+  ],
+  "technology_reviews": [],
+  "result": "success",
+  "artifact_sha256": "5523f13c61ce09823e4755b4c0d7f8050c676cb96440612c8a202fc24e623c21",
+  "ledger_sha256": "58af640af91f058379e1a3cbc2c1f8ac2fc8ef774b9d36397122b09144be766b",
+  "evidence_sha256": "f6505ae8c1e45c527f8a822bd4fc686d667fb6702a2bbd91986394ea47ee2de0"
+}

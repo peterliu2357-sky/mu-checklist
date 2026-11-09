@@ -18307,5 +18307,146 @@
     "mode": "verified",
     "record_hash": "5ab142434d146c445a983895379b5c047eeb4bcd2479b79e1a5af1af9c9052fe",
     "id": "e-54e868c2dcdcf9ea53e547b172f5f40539df167caef0c6e9ce088da80cb20a8a"
+  },
+  "e-dd5720b18a7a65bbe72508fe3b4c50ba018336b68f39a1148960e723357b1984": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "DDR4 1Gx8 3200 现货",
+    "values": {
+      "current": 46.82,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 46.82,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-11-03",
+        "locator": "TrendForce 11-04 Memory Spot Price Update · DRAM Spot Price",
+        "source_id": "spot"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-11-09T01:17:53.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "spot",
+        "url": "https://www.trendforce.com/news/2026/11/04/insights-memory-spot-price-update-mainstream-ddr4-prices-dip-0-09-as-spot-premium-keeps-buyers-on-sidelines/",
+        "sha256": "f4e7c26f08d044e4fc24afcf8218ad76b7ff92121a0cd4ba9be1207b9950995b",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-09T01:13:07.398Z",
+        "reviewed_at": "2026-11-09T01:13:07.398Z",
+        "status": "read",
+        "locator": "DRAM Spot Price 正文：this week (November 3)",
+        "excerpt": "The average spot price of the mainstream chips (i.e., DDR4 1Gx8 3200MT/s) slightly decreased by 0.09% from US$46.86 last week (October 28) to US$46.82 this week (November 3)."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "747b655fe27144e7f76b3a258c0eec8c6d0554be3595f8f0f2a0be1c93afa50b",
+    "id": "e-dd5720b18a7a65bbe72508fe3b4c50ba018336b68f39a1148960e723357b1984"
+  },
+  "e-aeedbff55aebb304f306ba1bd05e9b0e256dd243b3d2935b318a19e9ead45e8d": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "DDR5 16Gb (2Gx8) 4800/5600 现货",
+    "values": {
+      "current": 60.167,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 60.167,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-11-06",
+        "locator": "DRAMeXchange DRAM Spot Price · DDR5 16Gb (2Gx8) 4800/5600 · Session Average",
+        "source_id": "dram_spot"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-11-09T01:17:53.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "dram_spot",
+        "url": "https://www.dramexchange.com/",
+        "sha256": "e4905c232c16a2c4daaae8e14c2d6b7a494b4962d2a490eede3e0530073b34e7",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-09T01:13:07.767Z",
+        "reviewed_at": "2026-11-09T01:13:07.767Z",
+        "status": "read",
+        "locator": "DRAM Spot Price 表 · Last Update: Nov.6 2026 18:10 (GMT+8)",
+        "excerpt": "DDR5 16Gb (2Gx8) 4800/5600 | Daily High 73.00 | Daily Low 46.20 | Session High 73.00 | Session Low 46.20 | Session Average 60.167 | Session Change -0.82 %"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "a99a29a39fc9ce61fafc9c5dff2eae3e168b64cf1a3f56feaaa4da4d9895898b",
+    "id": "e-aeedbff55aebb304f306ba1bd05e9b0e256dd243b3d2935b318a19e9ead45e8d"
+  },
+  "e-8d15b8c5f694e3401b97b508cadfd93e047cc20e8594e98d27c06c511b346532": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "512Gb TLC 现货",
+    "values": {
+      "current": 16.152,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 16.152,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-11-02",
+        "locator": "TrendForce 11-04 Memory Spot Price Update · NAND Flash Spot Price",
+        "source_id": "spot"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-11-09T01:17:53.000Z"
+    },
+    "documents": [
+      {
+        "source_id": "spot",
+        "url": "https://www.trendforce.com/news/2026/11/04/insights-memory-spot-price-update-mainstream-ddr4-prices-dip-0-09-as-spot-premium-keeps-buyers-on-sidelines/",
+        "sha256": "f4e7c26f08d044e4fc24afcf8218ad76b7ff92121a0cd4ba9be1207b9950995b",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-09T01:13:07.398Z",
+        "reviewed_at": "2026-11-09T01:13:07.398Z",
+        "status": "read",
+        "locator": "NAND Flash Spot Price 正文：this week (November 2)",
+        "excerpt": "Spot prices of 512Gb TLC wafers dropped by 4.33% this week (November 2), with average quotations arriving at US$16.152."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "3db4b66697872a653f890413de758ff96ef4fca7adfe9ebb5b65f85a0a220288",
+    "id": "e-8d15b8c5f694e3401b97b508cadfd93e047cc20e8594e98d27c06c511b346532"
   }
 }
