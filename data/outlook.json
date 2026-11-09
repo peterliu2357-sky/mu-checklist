@@ -306,8 +306,8 @@
       ]
     }
   ],
-  "generated_at": "2026-11-02T01:35:20.397Z",
-  "data_revision": "2026-11-02-c8aa289c57",
+  "generated_at": "2026-11-09T01:11:35.698Z",
+  "data_revision": "2026-11-09-f5aad80ff9",
   "financial_period": "FY2026 Q4",
   "cited": {
     "mu.revenue.total": {
@@ -851,6 +851,15 @@
     },
     {
       "at": "2026-11-02",
+      "call": "slowing",
+      "text": "库存天数触发见顶预警；韩国半导体出口{{mu.demand.korea_semi_exports|change}}但环比回落；DRAM 价格指数仍升。",
+      "values": {
+        "mu.demand.korea_semi_exports|change": "同比 +259.4%（官方披露）"
+      },
+      "grade": null
+    },
+    {
+      "at": "2026-11-09",
       "call": "slowing",
       "text": "库存天数触发见顶预警；韩国半导体出口{{mu.demand.korea_semi_exports|change}}但环比回落；DRAM 价格指数仍升。",
       "values": {
