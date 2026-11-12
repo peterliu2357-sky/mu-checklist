@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "scope": "batch",
+  "base_commit": "684d5f2ae506a989e2fd25cbc6a355771b21b78f",
+  "base_revision": "2026-11-12-9fc26d906c",
+  "base_sha256": "57a09835e28b602a4dcc37118900ab1c6a904102280634f6de90cea9b3679492",
+  "catalog_sha256": "c1baaa4b2560b9d57407dd4a5cc201ec88c804bb4cf745b02ebdf2e0e3ab4ee3",
+  "created_at": "2026-11-12T01:27:15.786Z",
+  "completed_at": "2026-11-12T01:27:30.720Z",
+  "state": "verified",
+  "targets": [
+    "industry"
+  ],
+  "coverage": [
+    {
+      "key": "industry",
+      "status": "verified",
+      "evidence": [
+        "dram_spot",
+        "pc_dram_1111"
+      ],
+      "reviewed_at": "2026-11-12T01:27:17.000Z",
+      "latest_disclosure": {
+        "url": "https://www.trendforce.com/presscenter/news/20261111-13303.html",
+        "published_at": "2026-11-11"
+      },
+      "reason": "更新行业读数：TrendForce 11-11 称 PC 厂商 DRAM 库存周数自 3Q26 起上升、部分厂商计划调整 4Q26 乃至 1Q27 采购、PC DRAM 合同价涨幅较上季放缓，记入合同价卡片解读并引用该新闻稿（其 PC DRAM 涨幅区间未单列为数据行）；DRAMeXchange DDR5 现货 11-11 Session Average 60.233（+0.11%）。TrendForce 无新的现货周报，合同价表、南亚科 10 月营收、ECOS 与韩国进出口统计无新读数。",
+      "finding": "new_disclosure"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "dram_spot",
+      "url": "https://www.dramexchange.com/",
+      "sha256": "8810146f88f594a4914d88d667b647b8f7100b62563139a0a5e130d32e1246cb",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-12T01:21:49.024Z",
+      "reviewed_at": "2026-11-12T01:21:49.024Z",
+      "status": "read"
+    },
+    {
+      "source_id": "pc_dram_1111",
+      "url": "https://www.trendforce.com/presscenter/news/20261111-13303.html",
+      "sha256": "03d86142e3a1baf499eaae51a68706c1f97262577846f06d5fe5576a2333f17b",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-12T01:21:49.401Z",
+      "reviewed_at": "2026-11-12T01:21:49.401Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [],
+  "publication_corrections": [
+    "dram_spot"
+  ],
+  "technology_reviews": [],
+  "result": "success",
+  "artifact_sha256": "4fa60b91a771f4a2e36f579d16bf856d518d6d7d3a2ee8898671c56fb9732bf7",
+  "ledger_sha256": "7ce64065b100f8cf894f579515a237aff55e19da1e6bd6d9e8c6577b090dffb1",
+  "evidence_sha256": "5def26831d812da78f90f80e3cd5028ff601390ba613bfedfa7c1766e1e2e6cd"
+}
