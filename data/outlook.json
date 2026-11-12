@@ -213,7 +213,7 @@
           ]
         },
         {
-          "text": "售价仍在上涨，但涨幅在收窄：本站售价卡片的解读指出 DRAM、NAND 涨幅较 FQ3 收窄（FQ3 售价数值本站未列出），TrendForce 也预计 2026 Q4 普通型 DRAM 合同价为 {{mu.contract.dram_forecast}}，并称涨幅将较上季收敛（上季预测值本站未列出）；NAND 方面，2026 Q3 公开摘要曾称「{{mu.contract.nand_trend}}」，而 2026 Q4 预测为 {{mu.contract.nand_forecast}}。DRAM 现货仍处高位、走势分化：DDR4 {{mu.contract.ddr4_spot|change}}，最新 {{mu.contract.ddr4_spot}}，仍高于趋势线起点的 {{series.mu.contract.ddr4_spot@2026-06-23}}；DDR5 {{mu.contract.ddr5_spot|change}}，最新 {{mu.contract.ddr5_spot}}，略高于上一读数 {{series.mu.contract.ddr5_spot@2026-11-06}}。NAND 现货继续走弱：TLC 晶圆 {{mu.contract.tlc_spot|change}}，最新 {{mu.contract.tlc_spot}}，低于近期高点 {{series.mu.contract.tlc_spot@2026-08-17}}。",
+          "text": "售价仍在上涨，但涨幅在收窄：本站售价卡片的解读指出 DRAM、NAND 涨幅较 FQ3 收窄（FQ3 售价数值本站未列出），TrendForce 也预计 2026 Q4 普通型 DRAM 合同价为 {{mu.contract.dram_forecast}}，并称涨幅将较上季收敛（上季预测值本站未列出）；NAND 方面，2026 Q3 公开摘要曾称「{{mu.contract.nand_trend}}」，而 2026 Q4 预测为 {{mu.contract.nand_forecast}}。DRAM 现货仍处高位但小幅回落：DDR4 {{mu.contract.ddr4_spot|change}}，最新 {{mu.contract.ddr4_spot}}，仍高于趋势线起点的 {{series.mu.contract.ddr4_spot@2026-06-23}}；DDR5 {{mu.contract.ddr5_spot|change}}，最新 {{mu.contract.ddr5_spot}}，略低于上一读数 {{series.mu.contract.ddr5_spot@2026-10-30}}。NAND 现货继续走弱：TLC 晶圆 {{mu.contract.tlc_spot|change}}，最新 {{mu.contract.tlc_spot}}，低于近期高点 {{series.mu.contract.tlc_spot@2026-08-17}}。",
           "refs": [
             "mu.asp.dram",
             "mu.asp.nand",
@@ -225,7 +225,7 @@
             "mu.contract.tlc_spot",
             "series.mu.contract.ddr4_spot@2026-06-23",
             "series.mu.contract.tlc_spot@2026-08-17",
-            "series.mu.contract.ddr5_spot@2026-11-06"
+            "series.mu.contract.ddr5_spot@2026-10-30"
           ]
         },
         {
@@ -238,12 +238,11 @@
           ]
         },
         {
-          "text": "消费端偏弱：手机与客户端位元出货{{mu.volume.mobile_bits}}，手机客户方面{{mu.demand.mobile_inventory_proxy}}；TrendForce 的 NAND 展望为「{{mu.supply.nand_outlook}}」。TrendForce 另指出 PC 厂商成品与 DRAM 库存自三季度起上升，部分厂商正调整四季度乃至明年一季度的内存采购，PC DRAM 合同价涨幅随之放缓（见合同价卡片）。",
+          "text": "消费端偏弱：手机与客户端位元出货{{mu.volume.mobile_bits}}，手机客户方面{{mu.demand.mobile_inventory_proxy}}；TrendForce 的 NAND 展望为「{{mu.supply.nand_outlook}}」。",
           "refs": [
             "mu.volume.mobile_bits",
             "mu.demand.mobile_inventory_proxy",
-            "mu.supply.nand_outlook",
-            "mu.contract.dram_forecast"
+            "mu.supply.nand_outlook"
           ]
         },
         {
@@ -307,8 +306,8 @@
       ]
     }
   ],
-  "generated_at": "2026-11-12T01:22:27.002Z",
-  "data_revision": "2026-11-12-92c9564761",
+  "generated_at": "2026-11-12T01:18:15.832Z",
+  "data_revision": "2026-11-12-9fc26d906c",
   "financial_period": "FY2026 Q4",
   "cited": {
     "mu.revenue.total": {
@@ -723,9 +722,9 @@
       "change": "周变动 −0.09%（报告值）"
     },
     "mu.contract.ddr5_spot": {
-      "current": 60.233,
+      "current": 60.167,
       "previous": null,
-      "change": "日变动 +0.11%（DRAMeXchange 披露）"
+      "change": "日变动 −0.82%（DRAMeXchange 披露）"
     },
     "mu.contract.tlc_spot": {
       "current": 16.152,
@@ -740,8 +739,8 @@
       "current": 21.208,
       "previous": null
     },
-    "series.mu.contract.ddr5_spot@2026-11-06": {
-      "current": 60.167,
+    "series.mu.contract.ddr5_spot@2026-10-30": {
+      "current": 61.5,
       "previous": null
     },
     "guidance.margin_nongaap": {
