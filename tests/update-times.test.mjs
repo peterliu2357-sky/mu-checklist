@@ -47,12 +47,14 @@ test('invalid or missing timestamps cannot become an apparently successful updat
   assert.equal(times.view(d,null).last_at,null);
 });
 
-test('a close still unpublished overnight is flagged the next morning, not two hours after the planned start',()=>{
+test('a close still unpublished after the next-morning catch-up is flagged, not two hours after the planned start',()=>{
   const d=clone(published);d.check_log=[];d.monitoring={version:1,policy:{},checks:[],calendar:[]};d.quote.as_of='2026-11-11T21:00:00Z';
   const s={version:1,data_revision:d.revision,last_data_update_at:'2026-11-12T02:56:00Z',checks:{quote:{last_checked_at:'2026-11-12T02:56:00Z'}},schedule:{...schedule,earnings:{enabled:false,events:[]}}};
   const quoteWarning=now=>times.view(d,s,Date.parse(now)).rows.find(x=>x.key==='quote').warning;
   assert.equal(quoteWarning('2026-11-13T04:00:00Z'),'');
-  assert.match(quoteWarning('2026-11-13T12:30:00Z'),/尚无完成记录/);
+  assert.equal(quoteWarning('2026-11-13T15:00:00Z'),'');
+  assert.match(quoteWarning('2026-11-13T17:30:00Z'),/尚无完成记录/);
+  assert.equal(times.view(d,{...s,checks:{}},Date.parse('2026-11-13T04:00:00Z')).rows.find(x=>x.key==='industry').warning,'上次计划尚无完成记录；保留最近成功核查时间。');
   const strict={...s,schedule:{...s.schedule,quote:{...schedule.quote,completion_grace_minutes:undefined}}};
   assert.match(times.view(d,strict,Date.parse('2026-11-13T04:00:00Z')).rows.find(x=>x.key==='quote').warning,/尚无完成记录/);
   assert.equal(times.view(d,{...s,schedule:{...s.schedule,quote:{...schedule.quote,completion_grace_minutes:-1}}}).available,false);

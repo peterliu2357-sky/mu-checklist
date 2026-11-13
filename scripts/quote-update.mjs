@@ -26,9 +26,9 @@ try{
 }catch(error){
   // An access/parsing failure is never a new price. It becomes a published failure receipt only while a
   // completed session is still unpublished; with the stored close current, a failed re-check has nothing to report.
-  if(market.missedSessions(proposal.quote.as_of,Date.now())===0){console.log('Quote source failed with the stored close current; nothing recorded:',error.message);process.exit(0);}
   const r=payload?.chart?.result?.[0];
   if(r)console.error('Quote rejected:',error.message,JSON.stringify({now:new Date().toISOString(),regular:r.meta?.currentTradingPeriod?.regular,bars:(r.timestamp||[]).slice(-3).map((t,i,a)=>({at:new Date(t*1000).toISOString(),close:r.indicators?.quote?.[0]?.close?.[(r.timestamp.length-a.length)+i]}))}));
+  if(market.missedSessions(proposal.quote.as_of,Date.now())===0){console.error('Quote source failed with the stored close current; nothing recorded:',error.message);process.exit(0);}
   manifest.reads=[{source_id:sid,url:quoteURL,status:'failed',attempted_at:new Date().toISOString(),error:error.message}];
   manifest.coverage=[{key:'quote',status:'failed',evidence:[],reviewed_at:null,latest_disclosure:null,reason:error.message}];manifest.summary='常规收盘更新未完成，保留上次行情。';
 }

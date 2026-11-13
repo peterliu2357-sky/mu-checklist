@@ -2,8 +2,8 @@
 set -euo pipefail
 # The workflow's concurrency group runs these jobs one at a time, so a candidate PR still open when a
 # run starts was left by a run that failed after opening it. Close it and rebuild from current main;
-# leaving it open would hold an old close and block every later run.
-for stale in $(gh pr list --state open --json number,headRefName --jq '.[] | select(.headRefName | startswith("data/regular-close-")) | .number'); do
+# leaving it open would hold an old close and block every later run. Only this job's own PRs qualify.
+for stale in $(gh pr list --state open --json number,headRefName,author,isCrossRepository --jq '.[] | select((.headRefName | startswith("data/regular-close-")) and .author.is_bot and (.isCrossRepository | not)) | .number'); do
   gh pr close "$stale" --delete-branch --comment 'Superseded: an earlier run stopped before merging this candidate. A new run rebuilds it from current main.' || echo "Could not close stale candidate PR #$stale; continuing."
 done
 base_commit=$(git rev-parse HEAD)
