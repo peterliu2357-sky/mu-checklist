@@ -2,8 +2,8 @@
   "format_version": 1,
   "document": {
     "schema_version": 2,
-    "revision": "2026-11-13-13ec6384ef",
-    "updated_at": "2026-11-13T02:37:02.691Z",
+    "revision": "2026-11-13-8b7614c7df",
+    "updated_at": "2026-11-13T07:25:58.208Z",
     "last_successful_check_at": "2026-09-20T23:50:00Z",
     "last_attempt_at": "2026-09-20T23:50:00Z",
     "financial_period": "FY2026 Q4",
@@ -13,7 +13,7 @@
     "expected_report_review_by": null,
     "automation": {
       "enabled": true,
-      "cadence": "周日综合巡检 · 周三行业与动态",
+      "cadence": "周日综合巡检 · 周三行业与技术进展",
       "note": "财报按新披露更新；已确认财报日程安排单公司核查，也可按需更新。行情为标注交易日收盘。"
     },
     "quote": {
@@ -3084,6 +3084,12 @@
       "产业链指引和管理层展望按原披露日期及目标期间记录，文字为中文摘要；同比由原始金额计算，百分点与百分比区分。"
     ],
     "check_log": [
+      {
+        "at": "2026-11-13T07:25:58.208Z",
+        "status": "success",
+        "scope": "maintenance",
+        "text": "更新说明文字：持续核查安排改为“周三行业与技术进展”（AI 动态已下线）；数据与核查时间不变。"
+      },
       {
         "at": "2026-11-13T02:37:02.691Z",
         "status": "success",

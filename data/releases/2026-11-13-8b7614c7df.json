@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "scope": "maintenance",
+  "base_commit": "470eecfa01bdd49e087f68664c48fb7040487054",
+  "base_revision": "2026-11-13-13ec6384ef",
+  "base_sha256": "ac0029ea2bc4a2278362ac2ff681f073541fa1559172244c079b299752fe7aa3",
+  "catalog_sha256": "c1baaa4b2560b9d57407dd4a5cc201ec88c804bb4cf745b02ebdf2e0e3ab4ee3",
+  "created_at": "2026-11-13T07:25:57.871Z",
+  "completed_at": "2026-11-13T07:25:58.208Z",
+  "state": "verified",
+  "targets": null,
+  "coverage": [],
+  "reads": [],
+  "report_bundle": [],
+  "publication_corrections": [],
+  "technology_reviews": [],
+  "summary": "更新说明文字：持续核查安排改为“周三行业与技术进展”（AI 动态已下线）；数据与核查时间不变。",
+  "result": "success",
+  "artifact_sha256": "42a72abb5ae8618711ac417dcfc611dd8cbbe8bd20f5805a2be2768febdb3458",
+  "ledger_sha256": "f8eb0bac9c7e2b2b2e04b8d754eff1740568530c7a9a1add85f46ac6d509c1e3",
+  "evidence_sha256": "4b88319438b7805dea939eb4d09a1e69747165efe9f484349085c994df08f3d0"
+}
