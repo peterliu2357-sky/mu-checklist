@@ -69,3 +69,12 @@ test('targeted batch failures can produce a default run summary and preserve fin
 test('new runs cannot collect the retired news target',()=>{const d=materialize(ledger),base={document:d,catalog,at:d.updated_at,base_commit:'a'.repeat(40)};for(const opts of [{scope:'news'},{scope:'batch',targets:['news','calendar']},{scope:'discovery',targets:['news']}])assert.throws(()=>createManifest({...base,...opts}),/Retired target/);assert(!createManifest({...base,scope:'discovery'}).coverage.some(c=>c.key==='news'));});
 test('future news updates cannot manufacture freshness',()=>{const d=materialize(ledger);d.news.items[0].updated_at='2030-01-01';assert(validateUpdates(d,catalog).some(i=>i.code==='NEWS_DATE'));});
 test('a pending disclosure warning names the released report',()=>{const d=fresh();d.monitoring.calendar=[event];d.monitoring.checks=[{...check('company:micron','2026-10-01T21:00:00Z'),finding:'new_disclosure'}];assert.match(ui.warnings(d,Date.parse('2026-10-02'),'business')[0],/发现新披露：FY2026 Q4 财报（2026-09-30 发布）/);d.monitoring.calendar=[];assert.match(ui.warnings(d,Date.parse('2026-10-02'),'business')[0],/发现新披露：2026-06-24 发布的资料/);});
+test('the 2027 and 2028 calendars follow the published exchange schedule',()=>{
+  // Every weekday of the year, so a mistyped or missing date fails here.
+  const weekdays=(year,pick)=>{const out=[];for(let t=Date.UTC(year,0,1,12);new Date(t).getUTCFullYear()===year;t+=86400000){const date=new Date(t).toISOString().slice(0,10),day=new Date(t).getUTCDay();if(day!==0&&day!==6&&pick(date))out.push(date.slice(5));}return out;};
+  assert.deepEqual(weekdays(2027,d=>!ui.isSession(d)),['01-01','01-18','02-15','03-26','05-31','06-18','07-05','09-06','11-25','12-24']);
+  assert.deepEqual(weekdays(2028,d=>!ui.isSession(d)),['01-17','02-21','04-14','05-29','06-19','07-04','09-04','11-23','12-25']);
+  assert.deepEqual(weekdays(2027,d=>ui.closeHour(d)===13),['11-26']);
+  assert.deepEqual(weekdays(2028,d=>ui.closeHour(d)===13),['07-03','11-24']);
+  assert.equal(ui.missedSessions('2026-12-31T21:00:00Z',Date.parse('2027-01-04T23:30:00Z')),1);
+});

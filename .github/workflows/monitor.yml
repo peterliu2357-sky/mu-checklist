@@ -47,7 +47,7 @@ jobs:
         run: npm run test:ui
       - name: Keep interface screenshots for review
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: interface-screenshots
           path: test-results/**/*.png
