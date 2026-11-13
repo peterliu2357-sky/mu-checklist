@@ -32,5 +32,4 @@ jobs:
       - name: Prepare and publish through candidate checks
         env:
           GH_TOKEN: ${{ github.token }}
-          RUN_KIND: ${{ github.event_name }}
         run: bash scripts/publish-quote.sh

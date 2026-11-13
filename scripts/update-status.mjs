@@ -25,7 +25,7 @@ export function validateSchedule(schedule){
   if(schedule?.version!==1||schedule.display_timezone!=='America/Los_Angeles'||!instant(schedule.verified_at))throw new Error('Invalid public update schedule');
   for(const key of ['quote','research']){
     const p=schedule[key];
-    if(typeof p?.enabled!=='boolean'||!instant(p.starts_at)||!Array.isArray(p.weekdays)||!p.weekdays.length||p.weekdays.some(d=>!Number.isInteger(d)||d<0||d>6)||!Number.isInteger(p.hour)||p.hour<0||p.hour>23||!Number.isInteger(p.minute)||p.minute<0||p.minute>59)throw new Error('Invalid schedule: '+key);
+    if(typeof p?.enabled!=='boolean'||!instant(p.starts_at)||!Array.isArray(p.weekdays)||!p.weekdays.length||p.weekdays.some(d=>!Number.isInteger(d)||d<0||d>6)||!Number.isInteger(p.hour)||p.hour<0||p.hour>23||!Number.isInteger(p.minute)||p.minute<0||p.minute>59||p.completion_grace_minutes!==undefined&&!(Number.isFinite(p.completion_grace_minutes)&&p.completion_grace_minutes>=0))throw new Error('Invalid schedule: '+key);
     new Intl.DateTimeFormat('en',{timeZone:p.timezone}).format();
   }
   const e=schedule.earnings;

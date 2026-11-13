@@ -69,3 +69,9 @@ test('targeted batch failures can produce a default run summary and preserve fin
 test('new runs cannot collect the retired news target',()=>{const d=materialize(ledger),base={document:d,catalog,at:d.updated_at,base_commit:'a'.repeat(40)};for(const opts of [{scope:'news'},{scope:'batch',targets:['news','calendar']},{scope:'discovery',targets:['news']}])assert.throws(()=>createManifest({...base,...opts}),/Retired target/);assert(!createManifest({...base,scope:'discovery'}).coverage.some(c=>c.key==='news'));});
 test('future news updates cannot manufacture freshness',()=>{const d=materialize(ledger);d.news.items[0].updated_at='2030-01-01';assert(validateUpdates(d,catalog).some(i=>i.code==='NEWS_DATE'));});
 test('a pending disclosure warning names the released report',()=>{const d=fresh();d.monitoring.calendar=[event];d.monitoring.checks=[{...check('company:micron','2026-10-01T21:00:00Z'),finding:'new_disclosure'}];assert.match(ui.warnings(d,Date.parse('2026-10-02'),'business')[0],/发现新披露：FY2026 Q4 财报（2026-09-30 发布）/);d.monitoring.calendar=[];assert.match(ui.warnings(d,Date.parse('2026-10-02'),'business')[0],/发现新披露：2026-06-24 发布的资料/);});
+test('the 2027 and 2028 calendars follow the published exchange schedule',()=>{
+  for(const closed of ['2027-01-01','2027-06-18','2027-07-05','2027-12-24','2028-07-04','2028-12-25'])assert.equal(ui.isSession(closed),false,closed);
+  for(const open of ['2026-12-31','2027-01-04','2027-07-02','2027-12-31','2028-01-03'])assert.equal(ui.isSession(open),true,open);
+  assert.deepEqual(['2027-11-26','2027-12-23','2028-07-03','2028-11-24'].map(ui.closeHour),[13,16,13,13]);
+  assert.equal(ui.missedSessions('2026-12-31T21:00:00Z',Date.parse('2027-01-04T23:30:00Z')),1);
+});

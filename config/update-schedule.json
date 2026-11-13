@@ -27,7 +27,8 @@
     ],
     "hour": 18,
     "minute": 10,
-    "starts_at": "2026-09-23T03:29:13Z"
+    "starts_at": "2026-09-23T03:29:13Z",
+    "completion_grace_minutes": 720
   },
   "earnings": {
     "enabled": true,
