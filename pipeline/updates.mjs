@@ -1,5 +1,6 @@
 import {stable} from './model.mjs';
 import {technologyTargets} from './technology.mjs';
+import freshness from '../lib/freshness-core.js';
 
 export function coverageKeys(scope,catalog,targets) {
   if(scope==='batch') {
@@ -44,7 +45,9 @@ export function updatePlan(document,catalog,{mode='weekly',company,now=new Date(
   // Missing dates need calendar maintenance, not another read of unchanged reports.
   const calendarTargets=mode==='weekly'&&!company?targets.filter(k=>k.startsWith('company:')).map(k=>k.slice(8)).filter(id=>!events.some(e=>e.company_id===id&&e.confirmation==='confirmed'&&outstanding(e))):[];
   const related=id=>[...new Set(Object.values(catalog.technology?.items||{}).filter(i=>i.company_id===id).map(i=>'technology:'+({facility:'facilities',process:'processes',product:'products'})[i.type]))];
-  return {mode,as_of:now,discovery_targets:keys,calendar_targets:calendarTargets,financial_candidates:financial.map(id=>({company:id,scope:id==='micron'?'micron':'company:'+id,related_technology_targets:related(id),action:'Read newly published or revised documents; review tracked technology items; preserve old facts until the report bundle passes.'})),technology_candidates:newer.filter(c=>c.key.startsWith('technology:')).map(c=>({scope:c.key,latest_disclosure:c.latest_disclosure})),next_event_run_at:future[0]?.review_after||null,next_event_companies:future.filter(e=>e.review_after===future[0]?.review_after).map(e=>e.company_id)};
+  // Rows past their freshness limit: a routine run cannot publish until each is updated or checked (docs/CADENCE.md, "Row freshness").
+  const rowReviews=keys.includes('industry')?freshness.report(document,catalog.freshness,clock).filter(r=>r.state==='overdue'||r.state==='pending').map(({metric_id,label,state,date,age_days,limit_days})=>({metric_id,label,state,data_date:date,age_days,limit_days})):[];
+  return {mode,as_of:now,discovery_targets:keys,row_reviews:rowReviews,calendar_targets:calendarTargets,financial_candidates:financial.map(id=>({company:id,scope:id==='micron'?'micron':'company:'+id,related_technology_targets:related(id),action:'Read newly published or revised documents; review tracked technology items; preserve old facts until the report bundle passes.'})),technology_candidates:newer.filter(c=>c.key.startsWith('technology:')).map(c=>({scope:c.key,latest_disclosure:c.latest_disclosure})),next_event_run_at:future[0]?.review_after||null,next_event_companies:future.filter(e=>e.review_after===future[0]?.review_after).map(e=>e.company_id)};
 }
 
 export function validateUpdates(d,catalog,ledger) {
@@ -105,6 +108,55 @@ export function deriveDiscovery(previous,next,run,catalog){
     const entry={key:c.key,status:c.status,finding:successful?(unresolved?'new_disclosure':c.finding||'unchanged'):(old?.finding||'unconfirmed'),checked_at:successful?c.reviewed_at:old?.checked_at||null,attempted_at:run.completed_at,latest_disclosure:successful?c.latest_disclosure:old?.latest_disclosure||null,source_ids:successful?c.evidence:old?.source_ids||[],reason:c.reason||'',processed_at:!successful||sameDisclosure?old?.processed_at||null:null};
     next.monitoring.checks=next.monitoring.checks.filter(x=>x.key!==c.key);next.monitoring.checks.push(entry);
   }
+}
+
+const list=v=>Array.isArray(v)?v:[];
+// Row checks come from run receipts: earlier ones stay while the row still shows the reading they checked, and this run's are stamped with its completion time.
+export function deriveRowReviews(previous,next,run,catalog){
+  if(!next.monitoring)return;
+  const rows=new Map(freshness.tracked(next,catalog.freshness).map(t=>[t.metric_id,freshness.dataDate(t.row,next.sources)]));
+  const reviews=new Map((previous.monitoring?.row_reviews||[]).filter(r=>rows.get(r.metric_id)===r.data_date).map(r=>[r.metric_id,r]));
+  for(const r of list(run.row_reviews))if(rows.get(r?.metric_id))reviews.set(r.metric_id,{metric_id:r.metric_id,finding:r.finding,reviewed_at:run.completed_at,data_date:rows.get(r.metric_id),source_ids:list(r.source_ids),note:String(r.note||'')});
+  if(reviews.size)next.monitoring.row_reviews=[...reviews.values()].sort((a,b)=>a.metric_id<b.metric_id?-1:1);else delete next.monitoring.row_reviews;
+}
+
+const acceptedKeys=run=>new Set((run.coverage||[]).filter(c=>['verified','unchanged','gap'].includes(c.status)).map(c=>c.key));
+// A run that checked industry sources must leave no dated row silently old.
+export function validateRowFreshness(previous,next,run,catalog){
+  const issues=[],add=(code,path,message)=>issues.push({code,path,message});
+  const industry=acceptedKeys(run).has('industry'),tracked=new Set(freshness.tracked(next,catalog.freshness).map(t=>t.metric_id));
+  if(run.row_reviews!==undefined&&!Array.isArray(run.row_reviews))add('ROW_REVIEW','row_reviews','row_reviews is a list of {metric_id, finding, source_ids, note}');
+  const earlier=new Map((previous.monitoring?.row_reviews||[]).map(r=>[r.metric_id,r]));
+  for(const r of list(run.row_reviews)){
+    const id=r?.metric_id||'row_reviews';
+    if(!industry)add('ROW_REVIEW',id,'Row checks need completed industry coverage in the same run');
+    if(!tracked.has(r?.metric_id)||!['no_newer','newer_found'].includes(r.finding))add('ROW_REVIEW',id,'Check a published row that has a freshness limit, with finding no_newer or newer_found');
+    else if(typeof r.note!=='string'||!r.note.trim())add('ROW_REVIEW',id,'Say in note what was read and what it showed');
+    if(!list(r?.source_ids).length||list(r.source_ids).some(sid=>!next.sources[sid]||!run.reads?.some(x=>x.source_id===sid&&x.status==='read'&&x.reviewed_at&&x.sha256)))add('ROW_REVIEW',id,'A row check cites published sources actually read in this run');
+    // Newer data can be reported once; after that it has to be entered.
+    const before=earlier.get(r?.metric_id),now=(next.monitoring?.row_reviews||[]).find(x=>x.metric_id===r?.metric_id);
+    if(r?.finding==='newer_found'&&before?.finding==='newer_found'&&before.data_date===now?.data_date)add('ROW_FRESHNESS',id,'Newer data was already found in an earlier run; enter it in an industry run instead of reporting it again');
+  }
+  const expected=structuredClone(next);deriveRowReviews(previous,expected,run,catalog);
+  if(stable(expected.monitoring?.row_reviews||[])!==stable(next.monitoring?.row_reviews||[]))add('ROW_REVIEW','monitoring.row_reviews','Row checks are derived from run receipts and cannot be edited by hand');
+  if(!industry||!Number.isFinite(Date.parse(run.completed_at)))return issues;
+  const editable=run.scope!=='discovery';
+  for(const r of freshness.report(next,catalog.freshness,Date.parse(run.completed_at))){
+    const where=`${r.metric_id} (${r.label}): reading dated ${r.date}, limit ${r.limit_days} days`;
+    if(r.state==='overdue')add('ROW_FRESHNESS',r.metric_id,`${where}. ${editable?'Update the row, retire it, or add a row_reviews entry with finding no_newer':'Add a row_reviews entry: no_newer if the source has nothing newer, newer_found if it does'} after reading its source`);
+    else if(r.state==='pending'&&(editable||r.review.reviewed_at!==run.completed_at))add('ROW_FRESHNESS',r.metric_id,`${where}. Newer data was found${editable?'':' in an earlier run'}; enter it in an industry run before publishing`);
+  }
+  return issues;
+}
+
+// Card prose restates its rows, so changed rows need the prose rewritten or explicitly re-read.
+export function validateInterpretations(previous,next,run){
+  const issues=[];
+  for(const m of next.metrics){
+    const old=previous.metrics.find(x=>x.id===m.id);
+    if(old&&m.interpretation&&stable(old.rows)!==stable(m.rows)&&old.interpretation===m.interpretation&&!run.interpretation_reviewed?.includes(m.id))issues.push({code:'INTERPRETATION_STALE',path:m.id,message:'Rows on this card changed but its interpretation did not. Rewrite it, or list the card in manifest.interpretation_reviewed after re-reading it against the new rows'});
+  }
+  return issues;
 }
 
 export function validateUpdateTransition(previous,next,run,catalog){

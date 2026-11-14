@@ -22,7 +22,7 @@ npm run monitor -- plan --scope full --run .monitor/runs/review
 
 Scopes: `full`, `micron`, `industry`, `quote`, `ecosystem`, `source_audit`, `company:<id>`, `discovery`, `news`, `calendar`, `technology`, `technology:facilities`, `technology:processes`, `technology:products`, `batch`, `maintenance`. Routine work starts with `schedule` and targeted discovery; `full` is an explicit complete source audit. The `news` scope is retired and kept only so historical receipts still verify. See [cadence](CADENCE.md) for targets and event handling, and [manufacturing and technology](TECHNOLOGY.md) for technical fields, source coverage and report review gates. The command creates:
 
-- `manifest.json`: base commit/data/catalog hashes, coverage, source-read receipts, report-bundle declarations and resumable state.
+- `manifest.json`: base commit/data/catalog hashes, coverage, source-read receipts, report-bundle declarations and resumable state. Optional `row_reviews` and `interpretation_reviewed` record checks of rows past their freshness limit and cards whose prose was re-read ([cadence](CADENCE.md), "Row freshness").
 - `proposal.json`: editable candidate in the familiar schema-2 format, including stable IDs.
 - `supporting.json`: inputs used by formulas but not shown as separate UI rows.
 - `evidence.json`: initially empty; new or changed observations need reviewed source evidence.

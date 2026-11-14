@@ -13,6 +13,7 @@
 | `pipeline/updates.mjs` | Discovery targets (retired ones are never scheduled), company calendar, historical news references and scope transitions | Deterministic planning; no task-service or DOM dependency |
 | `lib/update-core.js` | Section freshness and trading sessions | Pure UI helpers; no collection |
 | `pipeline/quote-adapter.mjs` | Structured final daily OHLC parsing | Captured provider response in, validated quote out |
+| `lib/freshness-core.js` | Data date of a row, freshness state against its limit, card date range | Browser or Node; shared by pipeline, scheduler and renderer |
 | `lib/series-core.js` | Series point keys, date order and trend windows | Browser or Node; shared by pipeline and renderer |
 | `lib/monitor-core.js` | Pure comparisons and renderability compatibility | Browser or Node; no acquisition |
 | `assets/monitor.js` | DOM rendering, navigation, published JSON loading | No research or publication dependency |

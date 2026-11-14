@@ -3827,6 +3827,37 @@
       ]
     }
   },
+  "freshness": {
+    "description": "Days a reading may age, counted from the date it describes (its as_of, a month counting to its last day, else its newest source publication date), before a routine check must update the row or record that the source has nothing newer. Each limit is one publication cycle of the source plus a margin. A recorded check counts for review_valid_days; the page tags a row once it has stayed unresolved for page_grace_days.",
+    "review_valid_days": 6,
+    "page_grace_days": 5,
+    "rows": {
+      "mu.contract.ddr4_spot": 10,
+      "mu.contract.tlc_spot": 10,
+      "mu.contract.ddr5_spot": 4,
+      "mu.contract.ddr4_contract": 35,
+      "mu.contract.ddr5_contract": 35,
+      "mu.contract.bok_dram_price": 47,
+      "mu.contract.dram_forecast": 95,
+      "mu.contract.nand_forecast": 95,
+      "mu.contract.nand_trend": 95,
+      "mu.supply.dram_balance": 95,
+      "mu.supply.nand_outlook": 95,
+      "mu.supply.micron_outlook": 100,
+      "mu.supply.korea_ic_shipment": 65,
+      "mu.supply.korea_ic_inventory": 65,
+      "mu.demand.ssd_industry_revenue": 105,
+      "mu.demand.ssd_micron_revenue": 105,
+      "mu.demand.mobile_bits_proxy": 100,
+      "mu.demand.mobile_inventory_proxy": 95,
+      "mu.demand.essd_lead_time": 14,
+      "mu.demand.nanya_revenue": 45,
+      "mu.demand.korea_semi_exports": 35,
+      "mu.demand.korea_memory_exports": 35,
+      "mu.hbm.hbm4_revenue": 100,
+      "mu.hbm.revenue_share": 105
+    }
+  },
   "calculations": [
     {
       "target": "mu.inventory.receivables_revenue",

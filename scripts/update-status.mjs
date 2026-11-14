@@ -32,7 +32,7 @@ export function validateSchedule(schedule){
   if(typeof e?.enabled!=='boolean'||!Array.isArray(e.events)||e.enabled&&(!instant(e.run_at)||!e.events.length||e.events.some(x=>!x.id||!x.company_id||!instant(x.review_after)||Date.parse(e.run_at)<Date.parse(x.review_after))))throw new Error('Invalid earnings schedule');
   if(!Number.isFinite(schedule.completion_grace_minutes)||schedule.completion_grace_minutes<0)throw new Error('Invalid completion grace');
 }
-export function buildUpdateStatus(document,snapshots,receipts,schedule){
+export function buildUpdateStatus(document,snapshots,receipts,schedule,freshness){
   validateSchedule(schedule);
   const documents=new Map([...snapshots,document].map(d=>[d.revision,d]));
   const byArtifact=new Map(receipts.map(r=>[r.artifact_sha256,r]));
@@ -79,10 +79,11 @@ export function buildUpdateStatus(document,snapshots,receipts,schedule){
   }
   ensure('industry');
   if(document.technology)for(const topic of ['facilities','processes','products'])ensure('technology:'+topic);
-  return {version:1,data_revision:document.revision,data_sha256:hash(document),last_data_update_at:lastDataUpdateAt,last_data_keys:lastDataKeys,checks,schedule};
+  // The page reads row freshness limits from here; the catalog itself is not published.
+  return {version:1,data_revision:document.revision,data_sha256:hash(document),last_data_update_at:lastDataUpdateAt,last_data_keys:lastDataKeys,checks,schedule,...(freshness?{freshness:{review_valid_days:freshness.review_valid_days,page_grace_days:freshness.page_grace_days,rows:freshness.rows}}:{})};
 }
 export function readUpdateStatus(document,root='.'){
   const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
   const files=dir=>fs.readdirSync(path.join(root,dir)).filter(n=>n.endsWith('.json')).map(n=>read(dir+'/'+n));
-  return buildUpdateStatus(document,files('data/history'),files('data/releases'),read('config/update-schedule.json'));
+  return buildUpdateStatus(document,files('data/history'),files('data/releases'),read('config/update-schedule.json'),read('pipeline/catalog.json').freshness);
 }

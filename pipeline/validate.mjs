@@ -5,7 +5,8 @@ import {activeRecords,seriesRecords,entries,materialize,makeRecord,recordHash,ha
 import series from '../lib/series-core.js';
 import monitorCore from '../lib/monitor-core.js';
 const {isObservationDate,compareDates}=series;
-import {coverageKeys,validateUpdates,validateUpdateTransition} from './updates.mjs';
+import {coverageKeys,validateUpdates,validateUpdateTransition,validateRowFreshness,validateInterpretations} from './updates.mjs';
+import freshness from '../lib/freshness-core.js';
 import {validateTechnology,validateTechnologyTransition} from './technology.mjs';
 
 const schema=JSON.parse(fs.readFileSync(fileURLToPath(new URL('../schemas/monitor.schema.json',import.meta.url))));
@@ -53,6 +54,14 @@ export function validateDocument(document,catalog) {
     if(id.startsWith('mu.demand.')&&r.evidence_type!=='unavailable'&&r.evidence_type!=='proxy')add('PROXY',id,'Indirect end-consumption observations require a proxy label');
   }
   for(const [id,def]of Object.entries(catalog.definitions))if(def.active&&def.required&&!def.supporting&&!seen.has(id))add('COVERAGE',id,'Required metric missing');
+  // No dated reading may sit on the page without a limit on how old it can get.
+  const limits=catalog.freshness?.rows||{};
+  for(const id of Object.keys(limits))if(!catalog.definitions[id]?.active||!(Number.isInteger(limits[id])&&limits[id]>0))add('FRESHNESS_RULE',id,'Freshness limits belong to active metrics and are whole days');
+  for(const m of document.metrics)for(const r of m.rows){
+    const id=freshness.rowId(m,r);
+    if(freshness.needsLimit(document,m,r)&&limits[id]==null)add('FRESHNESS_RULE',id,'Register how many days this reading may age in catalog.freshness.rows');
+    else if(limits[id]!=null&&r.evidence_type!=='unavailable'&&!freshness.dataDate(r,document.sources))add('FRESHNESS_DATE',id,'A row with a freshness limit needs as_of or a dated source');
+  }
   const companyIds=document.ecosystem.companies.map(c=>c.id);
   for(const id of catalog.required_companies)if(!companyIds.includes(id))add('COMPANY_COVERAGE',id,'Required company missing');
   if(new Set(companyIds).size!==companyIds.length)add('DUPLICATE','ecosystem','Duplicate company');
@@ -206,6 +215,7 @@ export function validateTransition(previous,next,manifest,catalog) {
   if(manifest.scope==='source_audit'&&(next.last_successful_check_at!==previous.last_successful_check_at||next.quote.checked_at!==previous.quote.checked_at))add('AUDIT_SCOPE','dates','Source audit cannot advance full or quote checks');
   if(next.revision===previous.revision&&hash(next)!==hash(previous))add('REVISION','revision','Changed content must have a distinct revision');
   issues.push(...validateUpdateTransition(previous,next,manifest,catalog));
+  issues.push(...validateRowFreshness(previous,next,manifest,catalog),...validateInterpretations(previous,next,manifest));
   issues.push(...validateTechnologyTransition(previous,next,manifest,catalog));
   return issues;
 }
