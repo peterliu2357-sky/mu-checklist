@@ -7,7 +7,7 @@
   const updateCore=globalThis.MonitorUpdates;
   const updateTimes=globalThis.MonitorUpdateTimes;
   const technology=globalThis.TechnologyUI;
-  const agent=globalThis.MonitorOutlook,series=globalThis.MonitorSeries;
+  const agent=globalThis.MonitorOutlook,series=globalThis.MonitorSeries,fresh=globalThis.MonitorFreshness;
   let data,outlook=null,updateStatus,savedData=false,updatePanelState,ecosystemGroup='cloud';
   function updateTime(value,short=false){return value?`<time datetime="${esc(value)}">${esc(updateTimes.format(value,short))}</time>`:'暂无记录';}
   function renderUpdatePanel(){
@@ -59,16 +59,36 @@
     const kind=/预测|指引|计划/.test(row.kind)?'forecast':row.evidence_type==='unavailable'?'missing':'';
     return `<span class="kind ${kind}">${esc(row.kind)}</span>${row.evidence_type==='direct'?'':`<span class="basis ${esc(row.evidence_type)}">${provenance[row.evidence_type]}</span>`}`;
   }
-  function evidence(row,metric) {
-    const trend=metric?.category==='industry'?sparkline(trendPoints(metric,row),row.unit):'';
-    return `<div class="evidence-row ledger-row"><div class="ledger-label"><span class="row-label">${esc(row.label)}</span><span class="tag-group">${tags(row)}</span><p class="row-period">${esc(row.period)}</p></div><div class="ledger-value">${numberLine(row)}${trend}</div><div class="source-links">${row.source_ids.map(id=>sourceLink(id)).join('')}</div></div>`;
+  // A row past its freshness limit says so: newer data waiting, no update yet at the source, or simply not updated.
+  // Limits ship with the update status; without it the row shows as stored.
+  function rowAge(metric,row) {
+    const config=updateStatus?.freshness,limit_days=config?.rows?.[fresh.rowId(metric,row)];
+    if(limit_days==null||row.evidence_type==='unavailable') return {tag:'',note:''};
+    const s=fresh.status(row,{sources:data.sources,limit_days,review:data.monitoring?.row_reviews?.find(r=>r.metric_id===fresh.rowId(metric,row)),review_valid_days:config.review_valid_days,now:Date.now()});
+    if(s.state==='pending') return {tag:'<span class="basis stale">新资料待录入</span>',note:''};
+    if(s.state==='confirmed') return {tag:'',note:` · ${s.review.reviewed_at.slice(5,10)} 核查，来源暂无更新`};
+    if(s.state==='overdue'&&s.overdue_days>config.page_grace_days) return {tag:'<span class="basis stale">待更新</span>',note:' · 已超过预期更新周期'};
+    return {tag:'',note:''};
+  }
+  // Industry cards mix rows of different dates, so the header states the range found in the rows instead of a stored label.
+  function cardPeriod(metric) {
+    const limits=updateStatus?.freshness?.rows,readings=metric.rows.filter(r=>r.evidence_type!=='unavailable');
+    if(metric.category!=='industry'&&!(limits&&readings.length&&readings.every(r=>limits[fresh.rowId(metric,r)]!=null))) return metric.period;
+    const span=fresh.span(metric,data.sources);
+    if(!span) return metric.period;
+    const short=d=>span.from.slice(0,4)===span.to.slice(0,4)?d.slice(5):d;
+    return span.from===span.to?`资料日期 ${short(span.to)}`:`各行资料日期 ${short(span.from)} 至 ${short(span.to)}`;
+  }
+  function evidence(row,metric,owner=metric) {
+    const trend=metric?.category==='industry'?sparkline(trendPoints(metric,row),row.unit):'',age=owner?rowAge(owner,row):{tag:'',note:''};
+    return `<div class="evidence-row ledger-row"><div class="ledger-label"><span class="row-label">${esc(row.label)}</span><span class="tag-group">${tags(row)}${age.tag}</span><p class="row-period">${esc(row.period)}${esc(age.note)}</p></div><div class="ledger-value">${numberLine(row)}${trend}</div><div class="source-links">${row.source_ids.map(id=>sourceLink(id)).join('')}</div></div>`;
   }
   function rowBasis(row) {
     return `<li><b>${esc(row.label)}</b>${row.note?`<p class="row-note">${esc(row.note)}</p>`:''}<p class="source-location">定位：${esc(row.location)} · ${provenance[row.evidence_type]}</p></li>`;
   }
   function metricCard(metric,index,{skip=()=>false}={}) {
     metric={...metric,rows:metric.rows.filter(r=>!skip(metric,r))};
-    return `<article class="card metric" id="${esc(metric.id)}"><div class="metric-top"><div class="metric-heading"><h3><span class="metric-number">${String(index+1).padStart(2,'0')}</span>${esc(metric.title)}</h3></div><p class="micro">${esc(metric.period)}</p><p class="definition">${esc(metric.definition)}</p></div>${metric.rows.slice(0,4).map(r=>evidence(r,metric)).join('')}<details class="evidence-details"><summary>${metric.rows.length>4?`展开其余 ${metric.rows.length-4} 项数据与原文位置`:'口径与原文位置'}</summary>${metric.rows.slice(4).map(r=>evidence(r,metric)).join('')}<ul class="row-basis">${metric.rows.map(rowBasis).join('')}</ul><div class="review"><h4>口径与缺失数据</h4><ul>${metric.limits.map(s=>`<li>${esc(s)}</li>`).join('')}</ul><p class="micro">引用审校 ${esc(metric.checked_at)} UTC · 下次更新 ${esc(metric.next_review)}</p></div></details><div class="interpretation"><h4>简要解读</h4><p>${esc(metric.interpretation)}</p>${data.technology&&['supply','hbm'].includes(metric.id)?`<a class="detail-link" data-tech-link="${metric.id==='supply'?'manufacturing':'hbm-progress'}" href="#${metric.id==='supply'?'manufacturing':'hbm-progress'}">${metric.id==='supply'?'工厂产能与制程进展':'HBM 三家进度'} →</a>`:''}${metric.interpretation_sources?.length?`<div class="source-links">${metric.interpretation_sources.map(id=>sourceLink(id)).join('')}</div>`:''}</div></article>`;
+    return `<article class="card metric" id="${esc(metric.id)}"><div class="metric-top"><div class="metric-heading"><h3><span class="metric-number">${String(index+1).padStart(2,'0')}</span>${esc(metric.title)}</h3></div><p class="micro card-period">${esc(cardPeriod(metric))}</p><p class="definition">${esc(metric.definition)}</p></div>${metric.rows.slice(0,4).map(r=>evidence(r,metric)).join('')}<details class="evidence-details"><summary>${metric.rows.length>4?`展开其余 ${metric.rows.length-4} 项数据与原文位置`:'口径与原文位置'}</summary>${metric.rows.slice(4).map(r=>evidence(r,metric)).join('')}<ul class="row-basis">${metric.rows.map(rowBasis).join('')}</ul><div class="review"><h4>口径与缺失数据</h4><ul>${metric.limits.map(s=>`<li>${esc(s)}</li>`).join('')}</ul><p class="micro">引用审校 ${esc(metric.checked_at)} UTC · 下次更新 ${esc(metric.next_review)}</p></div></details><div class="interpretation"><h4>简要解读</h4><p>${esc(metric.interpretation)}</p>${data.technology&&['supply','hbm'].includes(metric.id)?`<a class="detail-link" data-tech-link="${metric.id==='supply'?'manufacturing':'hbm-progress'}" href="#${metric.id==='supply'?'manufacturing':'hbm-progress'}">${metric.id==='supply'?'工厂产能与制程进展':'HBM 三家进度'} →</a>`:''}${metric.interpretation_sources?.length?`<div class="source-links">${metric.interpretation_sources.map(id=>sourceLink(id)).join('')}</div>`:''}</div></article>`;
   }
   function factCard(card) {
     const metric=data.metrics.find(m=>m.id===card.metric_id),row=metric.rows.find(r=>card.row_id?r.id===card.row_id:r.label===card.row_label);
@@ -102,7 +122,7 @@
   function outlookCard() {
     const items=companyOutlook(data);
     if(!items.length) return '';
-    return `<section class="card metric company-outlook" id="company-outlook"><div class="metric-top"><h3>美光展望</h3><p class="definition">公司对行业供需的表述，属预测，不是实际数据。</p></div>${items.map(({row})=>evidence(row)).join('')}<details class="evidence-details"><summary>口径与原文位置</summary><ul class="row-basis">${items.map(({row})=>rowBasis(row)).join('')}</ul></details></section>`;
+    return `<section class="card metric company-outlook" id="company-outlook"><div class="metric-top"><h3>美光展望</h3><p class="definition">公司对行业供需的表述，属预测，不是实际数据。</p></div>${items.map(({metric,row})=>evidence(row,null,metric)).join('')}<details class="evidence-details"><summary>口径与原文位置</summary><ul class="row-basis">${items.map(({row})=>rowBasis(row)).join('')}</ul></details></section>`;
   }
   function trendPoints(metric,row) {
     return series.trend(data.series?.[`mu.${metric.id}.${row.id}`],{value:row.current,financial_period:data.financial_period,as_of:row.as_of});

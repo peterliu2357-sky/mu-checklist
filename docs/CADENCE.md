@@ -51,6 +51,23 @@ The initial calendar confirms Micron's FY2026 Q4 call. Other companies display �
 
 Micron's FY2026 Q4 earnings release and prepared remarks were imported on October 1, 2026; the FY2026 10-K supplement remains pending. Until it is resolved, Wednesday/Sunday maintenance also performs targeted `company:micron` discovery for the FY2026 10-K. The rows waiting on it are explicit `unavailable` gaps with the FQ3 prior column kept: finished goods, work in process, raw materials, trade receivables and their revenue ratio, quarter-end RPO and complete contract liabilities. A formula whose input is such a gap stays pending; a total disclosed before its components (balance-sheet inventories) is published while its reconciliation waits. Total receivables cannot substitute for trade receivables. Import the 10-K through a `micron` run that fills those rows; do not create another standalone retry or expand this supplement into an all-company financial sweep.
 
+## Row freshness
+
+Routine runs update the rows where they find new data. Nothing else used to look at the rows they did not touch, so a forecast from July or a company statement from June could sit on the page under a card checked last week. Every dated reading now has a limit, and a run cannot publish past it.
+
+- `catalog.freshness.rows` gives each reading the number of days it may age: one publication cycle of its source plus a margin. Age counts from the date the reading describes: `as_of` (a month counts to its last day), otherwise the newest publication date among the row's sources. Validation rejects a reading on an industry card that has no limit, and a company-card reading whose newest source predates the current Micron report. Quarterly Micron facts from the current report need none: they roll with the report bundle.
+- `schedule` returns `row_reviews`: the rows past their limit (`overdue`) and the rows where an earlier run found newer data that is not entered yet (`pending`).
+- For each listed row, read its source and do one of three things:
+  1. Newer data exists: enter it in an `industry` run. The discovery run that precedes it records `{"metric_id":"mu.contract.ddr4_spot","finding":"newer_found","source_ids":["index_tf_press_20260927"],"note":"…"}` under `row_reviews` in its `manifest.json`.
+  2. The source has nothing newer: record the same entry with `"finding":"no_newer"`. It covers the row for `review_valid_days`, so a source that stays silent is re-checked about once a week.
+  3. The source will not publish again, or another row supersedes it: retire the row. Remove it from the proposal, set its definition `active:false` and `required:false`, and delete its limit, before planning the run.
+- `source_ids` name published sources captured and reviewed in the same run. An `industry`-scope run may edit any row that has a limit, including the HBM rows on the company tab.
+- `build` and the CI release check (`verify --base`) report `ROW_FRESHNESS` when a run with completed `industry` coverage leaves a row overdue. A discovery run may leave a row `pending` only in the run that found the newer data; the next run of any kind must enter it. A run whose `industry` coverage failed is not held to this and publishes as a failed check.
+- The same check reports `INTERPRETATION_STALE` when a card's rows changed and its `interpretation` did not. Rewrite the text against the new rows. If it still holds word for word, list the card id under `interpretation_reviewed` in the manifest. Keep row values and dates out of the interpretation where a row already shows them.
+- New rows need a limit before they can be published. Pick it from the source's publication cycle, not from how often the row has been updated so far.
+
+The page reads the limits from `data/update-status.json`. A row that stays unresolved for `page_grace_days` shows 待更新; a pending row shows 新资料待录入; a row whose source was checked and has nothing newer shows the check date. An industry card's header is the date range of its rows. The stored `period` of an industry card is part of its rows' record identity and is no longer displayed, so leave it unchanged.
+
 ## Freshness shown to readers
 
 - The header's collapsed “last update” is the latest successful release that changed published facts or quotes. It is derived from the immutable release chain and content differences, never the JSON file write time or an unchanged discovery. The expanded times keep quote, industry, each technology topic and each company's last review separate.

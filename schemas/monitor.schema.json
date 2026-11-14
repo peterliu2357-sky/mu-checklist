@@ -1095,6 +1095,53 @@
             ],
             "additionalProperties": false
           }
+        },
+        "row_reviews": {
+          "type": "array",
+          "description": "Routine checks of rows past their freshness limit; derived from run receipts.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "metric_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "finding": {
+                "enum": [
+                  "no_newer",
+                  "newer_found"
+                ]
+              },
+              "reviewed_at": {
+                "type": "string",
+                "minLength": 1
+              },
+              "data_date": {
+                "type": "string",
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+              },
+              "source_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 1
+              },
+              "note": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "metric_id",
+              "finding",
+              "reviewed_at",
+              "data_date",
+              "source_ids",
+              "note"
+            ],
+            "additionalProperties": false
+          }
         }
       },
       "required": [

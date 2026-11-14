@@ -2,7 +2,7 @@ import {clone,hash,stable,materialize,recordDocument,makeRecord,activeRecords,ca
 import series from '../lib/series-core.js';
 const {isObservationDate,compareDates}=series;
 import {validateLedger,validateTransition} from './validate.mjs';
-import {coverageKeys,deriveDiscovery} from './updates.mjs';
+import {coverageKeys,deriveDiscovery,deriveRowReviews} from './updates.mjs';
 import {technologyTargets,technologyReviews} from './technology.mjs';
 
 export const scopeKeys=(scope,catalog,targets)=>scope==='maintenance'?[]:coverageKeys(scope,catalog,targets);
@@ -30,7 +30,7 @@ export function buildCandidate({previousLedger,previousEvidence,proposal,support
     const numeric=v=>{const out={};function walk(x,p){if(typeof x==='number')out[p]=x;else if(x&&typeof x==='object')for(const[k,item]of Object.entries(x))walk(item,p+'/'+k);}walk(v,'');return stable(out);};
     if(numeric(proposal)!==numeric(previous))add('AUDIT_SCOPE','proposal','A source-only audit cannot change numeric facts');
   }
-  const recordInScope=(scope,id)=>scope==='full'||scope==='source_audit'||(scope==='news'&&id.startsWith('news.'))||(scope==='calendar'&&id.startsWith('calendar.'))||(scope.startsWith('company:')&&["eco."+scope.slice(8)+".","outlook."+scope.slice(8)+"."].some(p=>id.startsWith(p)))||(scope==='ecosystem'&&(id.startsWith('eco.')||id.startsWith('outlook.')))||(scope==='quote'&&id==='quote.mu')||(scope==='industry'&&/^mu\.(contract|supply|demand)\./.test(id))||(scope==='micron'&&(!/^(eco|outlook|quote|news|calendar)\./.test(id)&&!/^mu\.(contract|supply|demand)\./.test(id)));
+  const recordInScope=(scope,id)=>scope==='full'||scope==='source_audit'||(scope==='news'&&id.startsWith('news.'))||(scope==='calendar'&&id.startsWith('calendar.'))||(scope.startsWith('company:')&&["eco."+scope.slice(8)+".","outlook."+scope.slice(8)+"."].some(p=>id.startsWith(p)))||(scope==='ecosystem'&&(id.startsWith('eco.')||id.startsWith('outlook.')))||(scope==='quote'&&id==='quote.mu')||(scope==='industry'&&(/^mu\.(contract|supply|demand)\./.test(id)||catalog.freshness?.rows[id]!=null))||(scope==='micron'&&(!/^(eco|outlook|quote|news|calendar)\./.test(id)&&!/^mu\.(contract|supply|demand)\./.test(id)));
   const scoped=(scope,id)=>id.startsWith('tech.')?scope==='full'||scope==='source_audit'||scope==='technology'||scope===catalog.definitions[id]?.monitoring_target:recordInScope(scope,id);
   const inScope=id=>run.scope==='batch'?run.targets.some(scope=>scoped(scope,id)):scoped(run.scope,id);
   const financialAccepted=run.scope==='discovery'?new Set():accepted;
@@ -44,6 +44,7 @@ export function buildCandidate({previousLedger,previousEvidence,proposal,support
   for(const c of next.ecosystem.companies){const old=previous.ecosystem.companies.find(x=>x.id===c.id);c.checked_at=financialAccepted.has('company:'+c.id)?at.slice(0,10):old?.checked_at||c.checked_at;}
   for(const m of next.metrics){const old=previous.metrics.find(x=>x.id===m.id),key=m.category==='industry'?'industry':'micron';m.checked_at=financialAccepted.has(key)?at.slice(0,10):old?.checked_at||m.checked_at;}
   deriveDiscovery(previous,next,run,catalog);
+  deriveRowReviews(previous,next,run,catalog);
   for(const [id,s]of Object.entries(next.sources)){
     const read=run.reads.find(r=>r.source_id===id&&r.status==='read'&&r.reviewed_at);
     s.checked_at=read?read.reviewed_at.slice(0,10):previous.sources[id]?.checked_at||s.checked_at;
