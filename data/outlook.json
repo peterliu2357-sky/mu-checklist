@@ -136,11 +136,12 @@
           ]
         },
         {
-          "text": "出口大幅高于上年同月，同业营收维持高位：韩国最新月度存储芯片出口额 {{mu.demand.korea_memory_exports}}，上年同月 {{mu.demand.korea_memory_exports|previous}}；半导体出口合计同比 {{mu.demand.korea_semi_exports|change}}。南亚科最新月营收 {{mu.demand.nanya_revenue}}，前月 {{mu.demand.nanya_revenue|previous}}，环比小幅增加。这些是售价与数量共同推动的间接指标，两者作用无法拆分，也不等于美光出货或终端消耗。",
+          "text": "出口大幅高于上年同月，同业营收维持高位：韩国最新月度存储芯片出口额 {{mu.demand.korea_memory_exports}}，上年同月 {{mu.demand.korea_memory_exports|previous}}；半导体出口合计同比 {{mu.demand.korea_semi_exports|change}}。十一月上旬的半导体出口初值{{mu.demand.korea_semi_exports_prelim|change}}，该期工作日多于上年同期。南亚科最新月营收 {{mu.demand.nanya_revenue}}，前月 {{mu.demand.nanya_revenue|previous}}，环比小幅增加。这些是售价与数量共同推动的间接指标，两者作用无法拆分，也不等于美光出货或终端消耗。",
           "refs": [
             "mu.demand.korea_memory_exports",
             "mu.demand.korea_semi_exports",
-            "mu.demand.nanya_revenue"
+            "mu.demand.nanya_revenue",
+            "mu.demand.korea_semi_exports_prelim"
           ]
         },
         {
@@ -159,12 +160,13 @@
       "title": "价格与供给",
       "points": [
         {
-          "text": "本季 DRAM 售价环比{{mu.asp.dram}}，NAND 售价环比{{mu.asp.nand}}；TrendForce 对 2026 Q4 的合同价预测为普通型 DRAM {{mu.contract.dram_forecast}}、NAND {{mu.contract.nand_forecast}}，仍是上涨，但 DRAM 涨幅预计较上季收敛。",
+          "text": "本季 DRAM 售价环比{{mu.asp.dram}}，NAND 售价环比{{mu.asp.nand}}；TrendForce 对 2026 Q4 的合同价预测为普通型 DRAM {{mu.contract.dram_forecast}}、NAND {{mu.contract.nand_forecast}}，仍是上涨，但 DRAM 涨幅预计较上季收敛。同业 SK 海力士七至九月当季 DRAM 售价环比{{mu.peers.skhynix_dram_asp}}，财季与美光不同，不能直接对比。",
           "refs": [
             "mu.asp.dram",
             "mu.asp.nand",
             "mu.contract.dram_forecast",
-            "mu.contract.nand_forecast"
+            "mu.contract.nand_forecast",
+            "mu.peers.skhynix_dram_asp"
           ]
         },
         {
@@ -207,7 +209,7 @@
           ]
         },
         {
-          "text": "售价仍在上涨，但涨幅在收窄：本站售价卡片的解读指出 DRAM、NAND 涨幅较 FQ3 收窄（FQ3 售价数值本站未列出），TrendForce 也预计 2026 Q4 普通型 DRAM 合同价为 {{mu.contract.dram_forecast}}，并称涨幅将较上季收敛（上季预测值本站未列出）；NAND 的 2026 Q4 预测为 {{mu.contract.nand_forecast}}。DRAM 现货仍处高位、走势分化：DDR4 {{mu.contract.ddr4_spot|change}}，最新 {{mu.contract.ddr4_spot}}，仍高于趋势线起点的 {{series.mu.contract.ddr4_spot@2026-06-23}}；DDR5 {{mu.contract.ddr5_spot|change}}，最新 {{mu.contract.ddr5_spot}}，略高于上一读数 {{series.mu.contract.ddr5_spot@2026-11-11}}。NAND 现货继续走弱：TLC 晶圆 {{mu.contract.tlc_spot|change}}，最新 {{mu.contract.tlc_spot}}，低于近期高点 {{series.mu.contract.tlc_spot@2026-08-17}}。",
+          "text": "售价仍在上涨，但涨幅在收窄：美光 DRAM 售价环比由上季的{{series.mu.asp.dram@FY2026 Q3}}收窄为本季的{{mu.asp.dram}}，NAND 由{{series.mu.asp.nand@FY2026 Q3}}收窄为{{mu.asp.nand}}，TrendForce 也预计 2026 Q4 普通型 DRAM 合同价为 {{mu.contract.dram_forecast}}，并称涨幅将较上季收敛（上季预测值本站未列出）；NAND 的 2026 Q4 预测为 {{mu.contract.nand_forecast}}。DRAM 现货仍处高位、走势分化：DDR4 {{mu.contract.ddr4_spot|change}}，最新 {{mu.contract.ddr4_spot}}，仍高于趋势线起点的 {{series.mu.contract.ddr4_spot@2026-06-23}}；DDR5 {{mu.contract.ddr5_spot|change}}，最新 {{mu.contract.ddr5_spot}}，略高于上一读数 {{series.mu.contract.ddr5_spot@2026-11-11}}。NAND 现货继续走弱：TLC 晶圆 {{mu.contract.tlc_spot|change}}，最新 {{mu.contract.tlc_spot}}，低于近期高点 {{series.mu.contract.tlc_spot@2026-08-17}}。",
           "refs": [
             "mu.asp.dram",
             "mu.asp.nand",
@@ -218,7 +220,9 @@
             "mu.contract.tlc_spot",
             "series.mu.contract.ddr4_spot@2026-06-23",
             "series.mu.contract.tlc_spot@2026-08-17",
-            "series.mu.contract.ddr5_spot@2026-11-11"
+            "series.mu.contract.ddr5_spot@2026-11-11",
+            "series.mu.asp.dram@FY2026 Q3",
+            "series.mu.asp.nand@FY2026 Q3"
           ]
         },
         {
@@ -231,21 +235,27 @@
           ]
         },
         {
-          "text": "消费端偏弱：手机与客户端位元出货{{mu.volume.mobile_bits}}，TrendForce 最新手机市场摘要称{{mu.demand.mobile_inventory_proxy}}；TrendForce 的 NAND 展望为「{{mu.supply.nand_outlook}}」。TrendForce 另指出 PC 厂商的 DRAM 库存周数自三季度起上升、成品库存逐步增加，部分厂商计划调整四季度乃至明年一季度的内存采购，PC DRAM 合同价涨幅随之放缓（见合同价卡片解读）。",
+          "text": "消费端偏弱：手机与客户端位元出货{{mu.volume.mobile_bits}}，TrendForce 最新手机市场摘要称{{mu.demand.mobile_inventory_proxy}}；TrendForce 的 NAND 展望为「{{mu.supply.nand_outlook}}」。IDC 统计的最近一季全球智能手机出货量{{mu.demand.smartphone_shipments|change}}，PC 出货量{{mu.demand.pc_shipments|change}}。TrendForce 另指出 PC 厂商的 DRAM 库存周数{{mu.demand.pc_oem_inventory}}、成品库存逐步增加，部分厂商计划调整四季度乃至明年一季度的内存采购，PC DRAM 合同价涨幅随之放缓（见合同价卡片解读）。",
           "refs": [
             "mu.volume.mobile_bits",
             "mu.demand.mobile_inventory_proxy",
-            "mu.supply.nand_outlook"
+            "mu.supply.nand_outlook",
+            "mu.demand.smartphone_shipments",
+            "mu.demand.pc_shipments",
+            "mu.demand.pc_oem_inventory"
           ]
         },
         {
-          "text": "供给在扩张：美光净资本开支 {{mu.capex.net}}，占收入 {{mu.capex.revenue_ratio}}，FY2027 计划{{mu.capex.next_year}}；SK 海力士称明年龙仁一期全面投产、投资将大幅增加，并已用长期协议锁定 2027 年和 2028 年过半产能，三星计划第四季扩大高速服务器 DDR5 与 QLC 供给，并进一步增加 HBM 销售。这些产能何时落地，是判断供需何时转松的关键。",
+          "text": "供给在扩张：美光净资本开支 {{mu.capex.net}}，占收入 {{mu.capex.revenue_ratio}}，FY2027 计划{{mu.capex.next_year}}；SK 海力士称明年龙仁一期全面投产、投资将大幅增加，并已用长期协议锁定 2027 年和 2028 年过半产能，三星计划第四季扩大高速服务器 DDR5 与 QLC 供给，并进一步增加 HBM 销售。SK 海力士最近一季现金资本开支同比 {{eco.skhynix.capex|change}}，并给出 2027 年可实现的需求位元增长：{{mu.peers.skhynix_demand_outlook}}。这些产能何时落地，是判断供需何时转松的关键。另外，长鑫存储前三季度营收{{mu.peers.cxmt_revenue|change}}，其中售价与出货量的作用无法拆分。",
           "refs": [
             "mu.capex.net",
             "mu.capex.revenue_ratio",
             "mu.capex.next_year",
             "outlook.skhynix.capacity",
-            "outlook.samsung.products"
+            "outlook.samsung.products",
+            "eco.skhynix.capex",
+            "mu.peers.skhynix_demand_outlook",
+            "mu.peers.cxmt_revenue"
           ]
         },
         {
@@ -299,8 +309,8 @@
       ]
     }
   ],
-  "generated_at": "2026-11-14T18:04:22.643Z",
-  "data_revision": "2026-11-14-15dd42103c",
+  "generated_at": "2026-11-14T21:43:46.505Z",
+  "data_revision": "2026-11-14-0aa8de9934",
   "financial_period": "FY2026 Q4",
   "cited": {
     "mu.revenue.total": {
@@ -613,6 +623,11 @@
       "previous": 45.091089,
       "change": "环比 +3.1%（证交所申报）"
     },
+    "mu.demand.korea_semi_exports_prelim": {
+      "current": 16632,
+      "previous": null,
+      "change": "同比 +331.2%（官方披露）"
+    },
     "series.mu.demand.korea_semi_exports@2026-09": {
       "current": 60295,
       "previous": null
@@ -627,6 +642,10 @@
     },
     "mu.contract.nand_forecast": {
       "current": "+15% 至 +20%",
+      "previous": null
+    },
+    "mu.peers.skhynix_dram_asp": {
+      "current": "二十几百分比高段增长",
       "previous": null
     },
     "mu.supply.micron_outlook": {
@@ -729,6 +748,14 @@
       "current": 60.233,
       "previous": null
     },
+    "series.mu.asp.dram@FY2026 Q3": {
+      "current": "六十几百分比低段增长",
+      "previous": null
+    },
+    "series.mu.asp.nand@FY2026 Q3": {
+      "current": "八十几百分比中段增长",
+      "previous": null
+    },
     "series.mu.margin.nongaap@FY2025 Q1": {
       "current": 39.5,
       "previous": null
@@ -743,6 +770,20 @@
     },
     "mu.supply.nand_outlook": {
       "current": "企业 SSD 偏强；消费级存储承压",
+      "previous": null
+    },
+    "mu.demand.smartphone_shipments": {
+      "current": 255.3,
+      "previous": 327.3,
+      "change": "同比 −22.0%（IDC 披露）"
+    },
+    "mu.demand.pc_shipments": {
+      "current": 62.7,
+      "previous": 78.5,
+      "change": "同比 −20.1%（IDC 披露）"
+    },
+    "mu.demand.pc_oem_inventory": {
+      "current": "自三季度起持续上升，预计四季度续增",
       "previous": null
     },
     "mu.capex.net": {
@@ -774,6 +815,20 @@
         "第四季进一步增加 HBM、服务器 DRAM 与 SSD 销售，扩大高速服务器 DDR5 与 QLC 供给；2027 年以长期合约建立稳定销售基础，并按 AI 应用需求及时备妥新品。",
         ""
       ]
+    },
+    "eco.skhynix.capex": {
+      "current": 12.67,
+      "previous": 5.033,
+      "change": "+151.7%"
+    },
+    "mu.peers.skhynix_demand_outlook": {
+      "current": "DRAM 二十几百分比中段；NAND 十几百分比高段",
+      "previous": null
+    },
+    "mu.peers.cxmt_revenue": {
+      "current": "2,690.2 亿元人民币",
+      "previous": null,
+      "change": "同比 +738.5%（媒体转引）"
     },
     "mu.hbm.revenue_share": {
       "current": 18,

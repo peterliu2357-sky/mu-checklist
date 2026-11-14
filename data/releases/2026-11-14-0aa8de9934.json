@@ -1,0 +1,310 @@
+{
+  "version": 1,
+  "scope": "batch",
+  "base_commit": "2105e87ed685268973023a501d1ffa34366a391b",
+  "base_revision": "2026-11-14-15dd42103c",
+  "base_sha256": "a27cf4d146a299a06adf61dcc8cc29636e0cde45e8b5516547cbd2d9bf4c57c0",
+  "catalog_sha256": "1bb1b9cfcd75c318cb87ef215b4fdef877826ceac1edf0c96b3a20102bcf0f54",
+  "created_at": "2026-11-14T21:43:41.890Z",
+  "completed_at": "2026-11-14T21:43:45.340Z",
+  "state": "verified",
+  "targets": [
+    "industry",
+    "micron",
+    "company:skhynix"
+  ],
+  "coverage": [
+    {
+      "key": "industry",
+      "status": "verified",
+      "evidence": [
+        "skhynix_deck",
+        "cxmt_results",
+        "pc_oem_inventory",
+        "korea_customs",
+        "idc_smartphone",
+        "idc_pc"
+      ],
+      "reviewed_at": "2026-11-14T21:43:45.017Z",
+      "latest_disclosure": {
+        "url": "https://www.trendforce.com/research/download/RP261112YI",
+        "published_at": "2026-11-12"
+      },
+      "reason": "新增同业与需求行：读取 SK 海力士三季度业绩材料、关税厅 11 月 1–10 日进出口现况、IDC 三季度手机与 PC 出货新闻稿、TrendForce 11-11 新闻稿及其 11-02 对长鑫存储三季报的转引；其余行业行沿用当日早前的逐行核对结果。",
+      "finding": "new_disclosure"
+    },
+    {
+      "key": "micron",
+      "status": "unchanged",
+      "evidence": [
+        "mu_fy2025_q1_remarks_p7",
+        "mu_fy2025_q2_remarks_p7",
+        "mu_fy2025_q3_remarks_p7",
+        "mu_fy2025_q4_remarks_p7",
+        "mu_fy2026_q1_remarks_p6",
+        "mu_fy2026_q2_remarks_p7",
+        "mu_fy2026_q3_remarks_p8"
+      ],
+      "reviewed_at": "2026-11-14T21:43:45.017Z",
+      "latest_disclosure": {
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm",
+        "published_at": "2026-10-09"
+      },
+      "reason": "补录 FY2025 Q1 至 FY2026 Q3 各季讲稿中的 DRAM / NAND 售价与位元出货环比表述，作为历史点；当前财季数据未变。"
+    },
+    {
+      "key": "company:skhynix",
+      "status": "verified",
+      "evidence": [
+        "eco_skhynix_statements",
+        "eco_skhynix_prior",
+        "skhynix_deck"
+      ],
+      "reviewed_at": "2026-11-14T21:43:45.017Z",
+      "latest_disclosure": {
+        "url": "https://news.skhynix.com/en/q3-2026-business-results/",
+        "published_at": "2026-10-28"
+      },
+      "reason": "从 2026 年第三季度业绩发布材料补录购置有形资产支出与期末存货（上年同期末存货取自 2025 年第三季度材料）；财报期间与其余数据未变。"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "skhynix_deck",
+      "url": "https://mis-prod-koce-homepage-cdn-01-blob-ep.azureedge.net/web/attach/21453379321009165.pdf",
+      "sha256": "df86f554d33cee25bb1ceac6b2cccde63c2ec58b637eb600928ff9d1e726e4cf",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-14T21:43:42.157Z",
+      "reviewed_at": "2026-11-14T21:43:42.157Z",
+      "status": "read"
+    },
+    {
+      "source_id": "cxmt_results",
+      "url": "https://www.trendforce.com/news/2026/11/02/news-beyond-cxmts-89-53-gross-margin-in-3q26-3-key-takeaways-on-ltas-4f%c2%b2-advancement-and-lpddr6/",
+      "sha256": "a7bc9587da9feaca078a27e2228c34c1698f4ac4167a10cc4985ca61e1d4bead",
+      "access": "secondary",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-14T21:43:42.375Z",
+      "reviewed_at": "2026-11-14T21:43:42.375Z",
+      "status": "read"
+    },
+    {
+      "source_id": "pc_oem_inventory",
+      "url": "https://www.trendforce.com/presscenter/news/20261111-13303.html",
+      "sha256": "d9ba88548a29716147b711b93cb2f4b6efab5b175f74ea9f5e60b1ef0d9be138",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-14T21:43:42.576Z",
+      "reviewed_at": "2026-11-14T21:43:42.576Z",
+      "status": "read"
+    },
+    {
+      "source_id": "korea_customs",
+      "url": "https://www.customs.go.kr/common/nttFileDownload.do?fileKey=315cfcb06b903fc9721e383c914b8874",
+      "sha256": "77a651db1b65323a1908867be7f48fce55dba2e98c1a146f1868b1b57ea9be11",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-14T21:43:42.769Z",
+      "reviewed_at": "2026-11-14T21:43:42.769Z",
+      "status": "read"
+    },
+    {
+      "source_id": "idc_smartphone",
+      "url": "https://www.idc.com/resource-center/press-releases/smartphone-shipments-decline-3q26/",
+      "sha256": "0d29fb765e2f0f4582ba7aef4587c68b682a940f2e3fa4518728dfc49119a557",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-14T21:43:42.973Z",
+      "reviewed_at": "2026-11-14T21:43:42.973Z",
+      "status": "read"
+    },
+    {
+      "source_id": "eco_skhynix_statements",
+      "url": "https://mis-prod-koce-homepage-cdn-01-blob-ep.azureedge.net/web/attach/21453379321009165.pdf#page=16",
+      "sha256": "df86f554d33cee25bb1ceac6b2cccde63c2ec58b637eb600928ff9d1e726e4cf",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-14T21:43:43.167Z",
+      "reviewed_at": "2026-11-14T21:43:43.167Z",
+      "status": "read"
+    },
+    {
+      "source_id": "eco_skhynix_prior",
+      "url": "https://mis-prod-koce-homepage-cdn-01-blob-ep.azureedge.net/web/attach/3127648149034921.pdf#page=17",
+      "sha256": "6a857d9ff35c9967dcd028fd438141599557e0f3671c99f3bd94227095ae892a",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-14T21:43:43.390Z",
+      "reviewed_at": "2026-11-14T21:43:43.390Z",
+      "status": "read"
+    },
+    {
+      "source_id": "idc_pc",
+      "url": "https://www.idc.com/resource-center/press-releases/idc-pc-tracker-3q26/",
+      "sha256": "0d8d37d4eac2b365a0eeb7d63290179b6ecf69c42f70d0b2fc11c89adfc14fff",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-14T21:43:43.587Z",
+      "reviewed_at": "2026-11-14T21:43:43.587Z",
+      "status": "read"
+    },
+    {
+      "source_id": "mu_fy2025_q1_remarks_p7",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q1/FY25-Q1-Prepared-Remarks.pdf#page=7",
+      "sha256": "655d4dbc5cdc77a09cef46efc11a62fbc85bd3909fc44f861e4a93fd05942cff",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-14T21:43:43.791Z",
+      "reviewed_at": "2026-11-14T21:43:43.791Z",
+      "status": "read"
+    },
+    {
+      "source_id": "mu_fy2025_q2_remarks_p7",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q2/Micron_FY25_Q2_Prepared_Remarks_2-1.pdf#page=7",
+      "sha256": "947e90d70dc160899267aa8f89335027d9de3e64ef6d5f7a0265c592e70c44a8",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-14T21:43:44.001Z",
+      "reviewed_at": "2026-11-14T21:43:44.001Z",
+      "status": "read"
+    },
+    {
+      "source_id": "mu_fy2025_q3_remarks_p7",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q3/Micron_FY25_Q3_Prepared_Remarks.pdf#page=7",
+      "sha256": "77931fd02fb266dddca1214867cbc57fbf6172c1dbd36d4845e9d1c1506e63db",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-14T21:43:44.199Z",
+      "reviewed_at": "2026-11-14T21:43:44.199Z",
+      "status": "read"
+    },
+    {
+      "source_id": "mu_fy2025_q4_remarks_p7",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q4/Q4-2025-Prepared-Remarks-1.pdf#page=7",
+      "sha256": "ba2c603b5458275df6faffb733748270b7146a50f790c1035dfbfa8acad2288a",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-14T21:43:44.400Z",
+      "reviewed_at": "2026-11-14T21:43:44.400Z",
+      "status": "read"
+    },
+    {
+      "source_id": "mu_fy2026_q1_remarks_p6",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q1/Micron_Q1-2026-Prepared-Remarks.pdf#page=6",
+      "sha256": "265dfb771eaff47b1951365ee96d6e92ddd2116ac2dcd581543c038991b96722",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-14T21:43:44.589Z",
+      "reviewed_at": "2026-11-14T21:43:44.589Z",
+      "status": "read"
+    },
+    {
+      "source_id": "mu_fy2026_q2_remarks_p7",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q2/Q2-2026-Prepared-Remarks.pdf#page=7",
+      "sha256": "084f27ab5a07aa33200e4e5709ccfab6127b6f28b139960f5dfee7d19df32db9",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-14T21:43:44.780Z",
+      "reviewed_at": "2026-11-14T21:43:44.780Z",
+      "status": "read"
+    },
+    {
+      "source_id": "mu_fy2026_q3_remarks_p8",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf#page=8",
+      "sha256": "a3ce62b84a059e35fae80c2bfd5c89f9af334193fd6aceff698fc3008e7d4c27",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-14T21:43:45.002Z",
+      "reviewed_at": "2026-11-14T21:43:45.002Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [],
+  "publication_corrections": [],
+  "technology_reviews": [
+    {
+      "id": "sanand",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "idaho_id1",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "tongluo",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "singapore_hbm",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "dram_1gamma",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "nand_g9",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "micron_rdimm512",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "micron_rdimm256",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "skhynix_rdimm256",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "micron_hbm4",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "skhynix_hbm4",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "micron_hbm4e",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    },
+    {
+      "id": "skhynix_hbm4e",
+      "status": "pending",
+      "evidence": [],
+      "reason": ""
+    }
+  ],
+  "summary": "新增同业（SK 海力士、长鑫存储）与需求行（PC 厂商库存、手机与 PC 出货、韩国出口月内初值），补录 SK 海力士资本开支与存货，以及美光七个财季的售价与位元出货环比表述。",
+  "result": "success",
+  "artifact_sha256": "f4e3b2093415bd2a9000b9f7d632c0babf74140c3553e12ea1fd8a7c35e9ca0d",
+  "ledger_sha256": "270f0a888a03d27da3edf1e46455d852f4eebe2c0bb3d37c8a2ee65c599e5d3a",
+  "evidence_sha256": "fc926a4a7fa0a676a5a1c714730e7fb4dd142c43668d8e3cd9e16f1f2fa385d9"
+}

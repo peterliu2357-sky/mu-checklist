@@ -19008,5 +19008,1620 @@
     "mode": "verified",
     "record_hash": "8ab8b72897f93c731c09ddf8982a4e3a569ae38d6e5c4cc6c4643bde26ff20b5",
     "id": "e-7ddf36310ec0d79c6b2e528bf1ec580ee501f4159f4c4054ab53a37193a73691"
+  },
+  "e-314277a4ad5485ccc5b1e28ca260cba3eaaecc653783d81001922b8c117a7c81": {
+    "measurement": "asp",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "DRAM 售价环比",
+    "values": {
+      "current": "高个位数百分比增长",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2025_q1_remarks_p7",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q1/FY25-Q1-Prepared-Remarks.pdf#page=7",
+        "sha256": "655d4dbc5cdc77a09cef46efc11a62fbc85bd3909fc44f861e4a93fd05942cff",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:43.791Z",
+        "reviewed_at": "2026-11-14T21:43:43.791Z",
+        "status": "read",
+        "locator": "第 7 页 · DRAM · Prices",
+        "excerpt": "prices increasing in the high-single-digit percentage range"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "6f68d69612ba1887af91463832c06edd8b44e59760d8194544ba51aefdceb84d",
+    "id": "e-314277a4ad5485ccc5b1e28ca260cba3eaaecc653783d81001922b8c117a7c81"
+  },
+  "e-84ad7b2f1821a18fa0799cc1a2faea8e1a1661d371ea376d990521a4f9a746aa": {
+    "measurement": "asp",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "DRAM 售价环比",
+    "values": {
+      "current": "中个位数百分比增长",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2025_q2_remarks_p7",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q2/Micron_FY25_Q2_Prepared_Remarks_2-1.pdf#page=7",
+        "sha256": "947e90d70dc160899267aa8f89335027d9de3e64ef6d5f7a0265c592e70c44a8",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:44.001Z",
+        "reviewed_at": "2026-11-14T21:43:44.001Z",
+        "status": "read",
+        "locator": "第 7 页 · DRAM · Prices",
+        "excerpt": "prices increasing in the mid-single-digit percentage range as a result of improving portfolio mix"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "3ff97aadb8dd3dda998b4162baf015307a445c7d85aa83aa08914984e4c00220",
+    "id": "e-84ad7b2f1821a18fa0799cc1a2faea8e1a1661d371ea376d990521a4f9a746aa"
+  },
+  "e-f40566bf0a553e5af422f48b6b0b0bb68f6cb09d927eadaba0053b6c6fd24140": {
+    "measurement": "asp",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "DRAM 售价环比",
+    "values": {
+      "current": "低个位数百分比下降",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2025_q3_remarks_p7",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q3/Micron_FY25_Q3_Prepared_Remarks.pdf#page=7",
+        "sha256": "77931fd02fb266dddca1214867cbc57fbf6172c1dbd36d4845e9d1c1506e63db",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:44.199Z",
+        "reviewed_at": "2026-11-14T21:43:44.199Z",
+        "status": "read",
+        "locator": "第 7 页 · DRAM · Prices",
+        "excerpt": "prices decreasing in the low single-digit percentage range, primarily due to a higher consumer-oriented revenue mix"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "7091931a19515be21859b40d3273996adf82c91bf777526fff5b252fd317a1fe",
+    "id": "e-f40566bf0a553e5af422f48b6b0b0bb68f6cb09d927eadaba0053b6c6fd24140"
+  },
+  "e-68cfb535be6ff1b2640baf416c62decb96bb3d08306724c368d9a3531690643c": {
+    "measurement": "asp",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "DRAM 售价环比",
+    "values": {
+      "current": "低两位数百分比增长",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2025_q4_remarks_p7",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q4/Q4-2025-Prepared-Remarks-1.pdf#page=7",
+        "sha256": "ba2c603b5458275df6faffb733748270b7146a50f790c1035dfbfa8acad2288a",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:44.400Z",
+        "reviewed_at": "2026-11-14T21:43:44.400Z",
+        "status": "read",
+        "locator": "第 7 页 · DRAM · Prices",
+        "excerpt": "Prices increased in the low-double-digit percentage range, driven by tight industry DRAM supply, pricing execution and favorable mix."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "8fbe96760239c79d18f28439b59943449d3879bae534a6815b57bdc7f2b770ac",
+    "id": "e-68cfb535be6ff1b2640baf416c62decb96bb3d08306724c368d9a3531690643c"
+  },
+  "e-9abe0565038f0f873fd99f2a4e61f04eca02d3ceb8529223d54dd817c2deacf4": {
+    "measurement": "asp",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "DRAM 售价环比",
+    "values": {
+      "current": "约 20% 增长",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2026_q1_remarks_p6",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q1/Micron_Q1-2026-Prepared-Remarks.pdf#page=6",
+        "sha256": "265dfb771eaff47b1951365ee96d6e92ddd2116ac2dcd581543c038991b96722",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:44.589Z",
+        "reviewed_at": "2026-11-14T21:43:44.589Z",
+        "status": "read",
+        "locator": "第 6 页 · DRAM · Prices",
+        "excerpt": "prices increased approximately 20%, driven by tight industry DRAM supply, pricing execution and favorable mix"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "2b416f309600e9e796e4c7bac0c752bbb96b7cc6097b54e5fa8817c5edbafe95",
+    "id": "e-9abe0565038f0f873fd99f2a4e61f04eca02d3ceb8529223d54dd817c2deacf4"
+  },
+  "e-24e126d7d7661fd6245a95bcb27a469fc6a2fab71669eb5a808e44077eeefd9f": {
+    "measurement": "asp",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "DRAM 售价环比",
+    "values": {
+      "current": "六十几百分比中段增长",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2026_q2_remarks_p7",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q2/Q2-2026-Prepared-Remarks.pdf#page=7",
+        "sha256": "084f27ab5a07aa33200e4e5709ccfab6127b6f28b139960f5dfee7d19df32db9",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:44.780Z",
+        "reviewed_at": "2026-11-14T21:43:44.780Z",
+        "status": "read",
+        "locator": "第 7 页 · DRAM · Prices",
+        "excerpt": "Prices increased in the mid-60s percentage range, driven by tight industry conditions and included favorable mix."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "ed60f80545b464a6664638eec4b8643285338a738d495ca5c504d2fab83e2f8a",
+    "id": "e-24e126d7d7661fd6245a95bcb27a469fc6a2fab71669eb5a808e44077eeefd9f"
+  },
+  "e-f76866612aef57e1ccbfd1dfb44f9da52345301ee8fbd60f8c92565dd15963f3": {
+    "measurement": "asp",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "DRAM 售价环比",
+    "values": {
+      "current": "六十几百分比低段增长",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2026_q3_remarks_p8",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf#page=8",
+        "sha256": "a3ce62b84a059e35fae80c2bfd5c89f9af334193fd6aceff698fc3008e7d4c27",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:45.002Z",
+        "reviewed_at": "2026-11-14T21:43:45.002Z",
+        "status": "read",
+        "locator": "第 8 页 · DRAM · Prices",
+        "excerpt": "Prices increased in the low-60s percentage range, driven by tight industry conditions and favorable mix."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "0d465878cc99f18b5c4637adf8eebffdc03d416c8d4d7aa8dd0bfc55ff80622a",
+    "id": "e-f76866612aef57e1ccbfd1dfb44f9da52345301ee8fbd60f8c92565dd15963f3"
+  },
+  "e-949683f0e168cb2038aa653134d8d2e1502aa8657444e046f6ae1ceb94001d98": {
+    "measurement": "bit_shipments",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "DRAM 位元出货环比",
+    "values": {
+      "current": "低两位数百分比增长",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2025_q1_remarks_p7",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q1/FY25-Q1-Prepared-Remarks.pdf#page=7",
+        "sha256": "655d4dbc5cdc77a09cef46efc11a62fbc85bd3909fc44f861e4a93fd05942cff",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:43.791Z",
+        "reviewed_at": "2026-11-14T21:43:43.791Z",
+        "status": "read",
+        "locator": "第 7 页 · DRAM · Bit shipments",
+        "excerpt": "bit shipments up in the low-double-digit percent range"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "e7ab936aca2a4549554b1cafa5f8fbcadf7aa3db3de44cc870016f7e33ad8ae3",
+    "id": "e-949683f0e168cb2038aa653134d8d2e1502aa8657444e046f6ae1ceb94001d98"
+  },
+  "e-e929193f367562a6ebc5a70f60d33a79bfa44b78a5f8b807c7ddb8b39b16bd3b": {
+    "measurement": "bit_shipments",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "DRAM 位元出货环比",
+    "values": {
+      "current": "高个位数百分比下降",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2025_q2_remarks_p7",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q2/Micron_FY25_Q2_Prepared_Remarks_2-1.pdf#page=7",
+        "sha256": "947e90d70dc160899267aa8f89335027d9de3e64ef6d5f7a0265c592e70c44a8",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:44.001Z",
+        "reviewed_at": "2026-11-14T21:43:44.001Z",
+        "status": "read",
+        "locator": "第 7 页 · DRAM · Bit shipments",
+        "excerpt": "bit shipments decreasing in the high-single-digit percentage range"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "d5ff1113394e8e6a74ef3ceb75a58d1d1f9a12d1ab4218fbd55c6a0711ed7068",
+    "id": "e-e929193f367562a6ebc5a70f60d33a79bfa44b78a5f8b807c7ddb8b39b16bd3b"
+  },
+  "e-734154de79c3e526c87b586b068a7203755d6b2847a5a1672ae3bbea4ede79a7": {
+    "measurement": "bit_shipments",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "DRAM 位元出货环比",
+    "values": {
+      "current": "增长超过 20%",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2025_q3_remarks_p7",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q3/Micron_FY25_Q3_Prepared_Remarks.pdf#page=7",
+        "sha256": "77931fd02fb266dddca1214867cbc57fbf6172c1dbd36d4845e9d1c1506e63db",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:44.199Z",
+        "reviewed_at": "2026-11-14T21:43:44.199Z",
+        "status": "read",
+        "locator": "第 7 页 · DRAM · Bit shipments",
+        "excerpt": "bit shipments increasing over 20%"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "70fce0b79fa46f2f44e03c9e023926f6fe15a7bac437980eb7c84c98860039b0",
+    "id": "e-734154de79c3e526c87b586b068a7203755d6b2847a5a1672ae3bbea4ede79a7"
+  },
+  "e-a19b5273fd599ea98e4f5ec468b6a431323ce6cb8ee86bc57beb207ed3f8d80e": {
+    "measurement": "bit_shipments",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "DRAM 位元出货环比",
+    "values": {
+      "current": "十几百分比低段增长",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2025_q4_remarks_p7",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q4/Q4-2025-Prepared-Remarks-1.pdf#page=7",
+        "sha256": "ba2c603b5458275df6faffb733748270b7146a50f790c1035dfbfa8acad2288a",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:44.400Z",
+        "reviewed_at": "2026-11-14T21:43:44.400Z",
+        "status": "read",
+        "locator": "第 7 页 · DRAM · Bit shipments",
+        "excerpt": "Bit shipments increased in the low-teens percent, driven by strong demand across all end markets."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "08b666e98ced49cecf7af4e0d01e3b387a91e8720dcf7d95fec355ee3b1a1a80",
+    "id": "e-a19b5273fd599ea98e4f5ec468b6a431323ce6cb8ee86bc57beb207ed3f8d80e"
+  },
+  "e-2d6e958fb354ebf5436875f5730f37d1ecda3777487b551edc63f2f75be1e81b": {
+    "measurement": "bit_shipments",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "DRAM 位元出货环比",
+    "values": {
+      "current": "小幅增长",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2026_q1_remarks_p6",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q1/Micron_Q1-2026-Prepared-Remarks.pdf#page=6",
+        "sha256": "265dfb771eaff47b1951365ee96d6e92ddd2116ac2dcd581543c038991b96722",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:44.589Z",
+        "reviewed_at": "2026-11-14T21:43:44.589Z",
+        "status": "read",
+        "locator": "第 6 页 · DRAM · Bit shipments",
+        "excerpt": "Bit shipments were up slightly"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "797eea0558853c3eca59c3f7e084cf9b01ea8eed0f56ef29c073178551bd0caa",
+    "id": "e-2d6e958fb354ebf5436875f5730f37d1ecda3777487b551edc63f2f75be1e81b"
+  },
+  "e-aaa5b9df43b100546e74f75fd7b1156a31b13e21039644025c4e72fb70e757b1": {
+    "measurement": "bit_shipments",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "DRAM 位元出货环比",
+    "values": {
+      "current": "中个位数增长",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2026_q2_remarks_p7",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q2/Q2-2026-Prepared-Remarks.pdf#page=7",
+        "sha256": "084f27ab5a07aa33200e4e5709ccfab6127b6f28b139960f5dfee7d19df32db9",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:44.780Z",
+        "reviewed_at": "2026-11-14T21:43:44.780Z",
+        "status": "read",
+        "locator": "第 7 页 · DRAM · Bit shipments",
+        "excerpt": "Bit shipments were up mid-single digits."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "992de9605052066f117af16135ee964e8d215c7230c3073b3a07e1e34ae67650",
+    "id": "e-aaa5b9df43b100546e74f75fd7b1156a31b13e21039644025c4e72fb70e757b1"
+  },
+  "e-5332fbc495401ad744432e5365157b9b3bc437007b2a0af2caca83baabb59977": {
+    "measurement": "bit_shipments",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "DRAM 位元出货环比",
+    "values": {
+      "current": "低个位数百分比增长",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2026_q3_remarks_p8",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf#page=8",
+        "sha256": "a3ce62b84a059e35fae80c2bfd5c89f9af334193fd6aceff698fc3008e7d4c27",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:45.002Z",
+        "reviewed_at": "2026-11-14T21:43:45.002Z",
+        "status": "read",
+        "locator": "第 8 页 · DRAM · Bit shipments",
+        "excerpt": "Bit shipments were up low-single-digit percentage range."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "5d7eeacbfb485a6051b557eabee3ffbc61e23f66a3ea9da707d9b160ec473900",
+    "id": "e-5332fbc495401ad744432e5365157b9b3bc437007b2a0af2caca83baabb59977"
+  },
+  "e-7a1d82397b892a50efafa086c74279093a2e5289110702be0ed015890f92fd8f": {
+    "measurement": "asp",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "NAND 售价环比",
+    "values": {
+      "current": "低个位数百分比下降",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2025_q1_remarks_p7",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q1/FY25-Q1-Prepared-Remarks.pdf#page=7",
+        "sha256": "655d4dbc5cdc77a09cef46efc11a62fbc85bd3909fc44f861e4a93fd05942cff",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:43.791Z",
+        "reviewed_at": "2026-11-14T21:43:43.791Z",
+        "status": "read",
+        "locator": "第 7 页 · NAND · Prices",
+        "excerpt": "bit shipments and prices both decreasing in the low-single-digit percentage range"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "5f947a78fd7b9a8e8510c34d0de6de181d2a894640c2b1a3860b43e3a6113636",
+    "id": "e-7a1d82397b892a50efafa086c74279093a2e5289110702be0ed015890f92fd8f"
+  },
+  "e-c882289abb937e42503ae03a9baa00e590f42f416d3fb72538baf7a721bd6aac": {
+    "measurement": "asp",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "NAND 售价环比",
+    "values": {
+      "current": "十几百分比高段下降",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2025_q2_remarks_p7",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q2/Micron_FY25_Q2_Prepared_Remarks_2-1.pdf#page=7",
+        "sha256": "947e90d70dc160899267aa8f89335027d9de3e64ef6d5f7a0265c592e70c44a8",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:44.001Z",
+        "reviewed_at": "2026-11-14T21:43:44.001Z",
+        "status": "read",
+        "locator": "第 7 页 · NAND · Prices",
+        "excerpt": "prices decreasing in the high-teens percentage range"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "e8368669b47f1f86573c6add0b967c34783e28f2ccf345332833902cbe032fa0",
+    "id": "e-c882289abb937e42503ae03a9baa00e590f42f416d3fb72538baf7a721bd6aac"
+  },
+  "e-01c7b6475c27aba241195deed17d5e110041c350e13149a0516ad4933a4b0f53": {
+    "measurement": "asp",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "NAND 售价环比",
+    "values": {
+      "current": "高个位数百分比下降",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2025_q3_remarks_p7",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q3/Micron_FY25_Q3_Prepared_Remarks.pdf#page=7",
+        "sha256": "77931fd02fb266dddca1214867cbc57fbf6172c1dbd36d4845e9d1c1506e63db",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:44.199Z",
+        "reviewed_at": "2026-11-14T21:43:44.199Z",
+        "status": "read",
+        "locator": "第 7 页 · NAND · Prices",
+        "excerpt": "prices decreasing in the high single-digit percentage range"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "2c636c3f933971b8b0c4b37826cd46ff5b5be1fb02cc0ee7edf613db70c1cb0b",
+    "id": "e-01c7b6475c27aba241195deed17d5e110041c350e13149a0516ad4933a4b0f53"
+  },
+  "e-70102a09e9348108aa8e43cfc217f0b7131664d1227c6430c2088b81930363e1": {
+    "measurement": "asp",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "NAND 售价环比",
+    "values": {
+      "current": "高个位数百分比增长",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2025_q4_remarks_p7",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q4/Q4-2025-Prepared-Remarks-1.pdf#page=7",
+        "sha256": "ba2c603b5458275df6faffb733748270b7146a50f790c1035dfbfa8acad2288a",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:44.400Z",
+        "reviewed_at": "2026-11-14T21:43:44.400Z",
+        "status": "read",
+        "locator": "第 7 页 · NAND · Prices",
+        "excerpt": "prices increased in the high single-digit percentage range due to favorable mix"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "69b6abf562891dea0d364e070a505afc15d0af90dd542ad7119e3b85e6edeb80",
+    "id": "e-70102a09e9348108aa8e43cfc217f0b7131664d1227c6430c2088b81930363e1"
+  },
+  "e-8eb1177ae579d283cdca90c3606860e0ebccf7e928f0fb2a6aa9acd52532772e": {
+    "measurement": "asp",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "NAND 售价环比",
+    "values": {
+      "current": "十几百分比中段增长",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2026_q1_remarks_p6",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q1/Micron_Q1-2026-Prepared-Remarks.pdf#page=6",
+        "sha256": "265dfb771eaff47b1951365ee96d6e92ddd2116ac2dcd581543c038991b96722",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:44.589Z",
+        "reviewed_at": "2026-11-14T21:43:44.589Z",
+        "status": "read",
+        "locator": "第 6 页 · NAND · Prices",
+        "excerpt": "prices increased in the mid-teens percentage range"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "9ee0352a1771e6c06c62f196bb2d97d0d443d6798635121f532d53d4860c4f34",
+    "id": "e-8eb1177ae579d283cdca90c3606860e0ebccf7e928f0fb2a6aa9acd52532772e"
+  },
+  "e-cf9de53edff046c7e04dc1ba8a2d84b3bd9342e03480dec6a1803e6b0a4eca31": {
+    "measurement": "asp",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "NAND 售价环比",
+    "values": {
+      "current": "七十几百分比高段增长",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2026_q2_remarks_p7",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q2/Q2-2026-Prepared-Remarks.pdf#page=7",
+        "sha256": "084f27ab5a07aa33200e4e5709ccfab6127b6f28b139960f5dfee7d19df32db9",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:44.780Z",
+        "reviewed_at": "2026-11-14T21:43:44.780Z",
+        "status": "read",
+        "locator": "第 7 页 · NAND · Prices",
+        "excerpt": "Prices increased in the high-70s percentage range driven by tight NAND industry conditions"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "3b82b3372a70b2077376d3bae80c4bfaf601686dd520313406863ee804efe48e",
+    "id": "e-cf9de53edff046c7e04dc1ba8a2d84b3bd9342e03480dec6a1803e6b0a4eca31"
+  },
+  "e-e3e587d95bf4454186dba095128d953e9e040f1a946547755cf403dcb3667e4b": {
+    "measurement": "asp",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "NAND 售价环比",
+    "values": {
+      "current": "八十几百分比中段增长",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2026_q3_remarks_p8",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf#page=8",
+        "sha256": "a3ce62b84a059e35fae80c2bfd5c89f9af334193fd6aceff698fc3008e7d4c27",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:45.002Z",
+        "reviewed_at": "2026-11-14T21:43:45.002Z",
+        "status": "read",
+        "locator": "第 8 页 · NAND · Prices",
+        "excerpt": "Prices increased in the mid-80s percentage range, driven by tight NAND industry conditions"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "50ef0e7e5b31553f6b2d6d530da2fb11aa45a69a40529ea904806f63e6914da8",
+    "id": "e-e3e587d95bf4454186dba095128d953e9e040f1a946547755cf403dcb3667e4b"
+  },
+  "e-88cee6ec3986517db0d9570a251be2c8162669cac520b938bad535b7cfe405fc": {
+    "measurement": "bit_shipments",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "NAND 位元出货环比",
+    "values": {
+      "current": "低个位数百分比下降",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2025_q1_remarks_p7",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q1/FY25-Q1-Prepared-Remarks.pdf#page=7",
+        "sha256": "655d4dbc5cdc77a09cef46efc11a62fbc85bd3909fc44f861e4a93fd05942cff",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:43.791Z",
+        "reviewed_at": "2026-11-14T21:43:43.791Z",
+        "status": "read",
+        "locator": "第 7 页 · NAND · Bit shipments",
+        "excerpt": "bit shipments and prices both decreasing in the low-single-digit percentage range"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "6a7d879459f075cac52b6dd2c2e035ab877a028fdbc666f2ed3f94a2687d4163",
+    "id": "e-88cee6ec3986517db0d9570a251be2c8162669cac520b938bad535b7cfe405fc"
+  },
+  "e-6c4e13b08efbfb630e31107eef5890e25375077d21e28dbf05368942451f6bf8": {
+    "measurement": "bit_shipments",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "NAND 位元出货环比",
+    "values": {
+      "current": "小幅增长",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2025_q2_remarks_p7",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q2/Micron_FY25_Q2_Prepared_Remarks_2-1.pdf#page=7",
+        "sha256": "947e90d70dc160899267aa8f89335027d9de3e64ef6d5f7a0265c592e70c44a8",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:44.001Z",
+        "reviewed_at": "2026-11-14T21:43:44.001Z",
+        "status": "read",
+        "locator": "第 7 页 · NAND · Bit shipments",
+        "excerpt": "with bit shipments modestly higher"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "4158dccc9d3751a25e516e8e288d5326caaee6c579bf966cac596fe1feaa06af",
+    "id": "e-6c4e13b08efbfb630e31107eef5890e25375077d21e28dbf05368942451f6bf8"
+  },
+  "e-7585590145930d95a717feb645103a376131d5ced2b4afb94f9ca4a03a16a659": {
+    "measurement": "bit_shipments",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "NAND 位元出货环比",
+    "values": {
+      "current": "二十几百分比中段增长",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2025_q3_remarks_p7",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q3/Micron_FY25_Q3_Prepared_Remarks.pdf#page=7",
+        "sha256": "77931fd02fb266dddca1214867cbc57fbf6172c1dbd36d4845e9d1c1506e63db",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:44.199Z",
+        "reviewed_at": "2026-11-14T21:43:44.199Z",
+        "status": "read",
+        "locator": "第 7 页 · NAND · Bit shipments",
+        "excerpt": "bit shipments increasing in the mid-20s percentage range"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "c4133584f4fb97535301142ba999fbec48ea753f97f97c84d378baee764f1201",
+    "id": "e-7585590145930d95a717feb645103a376131d5ced2b4afb94f9ca4a03a16a659"
+  },
+  "e-c77b954e93fbdc308b53d2897614b45f8b3b76ddaf39783595efab72ab6e10b9": {
+    "measurement": "bit_shipments",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "NAND 位元出货环比",
+    "values": {
+      "current": "中个位数百分比下降",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2025_q4_remarks_p7",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q4/Q4-2025-Prepared-Remarks-1.pdf#page=7",
+        "sha256": "ba2c603b5458275df6faffb733748270b7146a50f790c1035dfbfa8acad2288a",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:44.400Z",
+        "reviewed_at": "2026-11-14T21:43:44.400Z",
+        "status": "read",
+        "locator": "第 7 页 · NAND · Bit shipments",
+        "excerpt": "NAND bit shipments declined in the mid-single-digit percentage range"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "7fb16f5039c12f8635e00e398a3e13d5d9a14ca9e32f82ad597679ecf5b7ce72",
+    "id": "e-c77b954e93fbdc308b53d2897614b45f8b3b76ddaf39783595efab72ab6e10b9"
+  },
+  "e-724bd06b36a866ad4514857d8f6517005557fff79633d7a14d3b8724e9997862": {
+    "measurement": "bit_shipments",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "NAND 位元出货环比",
+    "values": {
+      "current": "中至高个位数百分比增长",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2026_q1_remarks_p6",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q1/Micron_Q1-2026-Prepared-Remarks.pdf#page=6",
+        "sha256": "265dfb771eaff47b1951365ee96d6e92ddd2116ac2dcd581543c038991b96722",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:44.589Z",
+        "reviewed_at": "2026-11-14T21:43:44.589Z",
+        "status": "read",
+        "locator": "第 6 页 · NAND · Bit shipments",
+        "excerpt": "NAND bit shipments increased in the mid- to-high-single-digit percentage range"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "b66ca7fc8f9ffc62c3abd696076d860233d72843cc4edebbaa7170f6d7c9ebd9",
+    "id": "e-724bd06b36a866ad4514857d8f6517005557fff79633d7a14d3b8724e9997862"
+  },
+  "e-f759ec3a044ebd8280dbe3df02e33bdf6c73cc91748e9ed0d5acf096093620c1": {
+    "measurement": "bit_shipments",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "NAND 位元出货环比",
+    "values": {
+      "current": "低个位数百分比增长",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2026_q2_remarks_p7",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q2/Q2-2026-Prepared-Remarks.pdf#page=7",
+        "sha256": "084f27ab5a07aa33200e4e5709ccfab6127b6f28b139960f5dfee7d19df32db9",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:44.780Z",
+        "reviewed_at": "2026-11-14T21:43:44.780Z",
+        "status": "read",
+        "locator": "第 7 页 · NAND · Bit shipments",
+        "excerpt": "NAND bit shipments increased in the low-single-digit percentage range."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "e7d6b69e1be5c3ec4cd2704a2a17e92a85ce3c581a5d77717d99207ab8831208",
+    "id": "e-f759ec3a044ebd8280dbe3df02e33bdf6c73cc91748e9ed0d5acf096093620c1"
+  },
+  "e-8129fb67fe4373c5db1ab47a2de450e7374d7d37639d313ce646846ae3268bb3": {
+    "measurement": "bit_shipments",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "NAND 位元出货环比",
+    "values": {
+      "current": "中个位数百分比增长",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "mu_fy2026_q3_remarks_p8",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf#page=8",
+        "sha256": "a3ce62b84a059e35fae80c2bfd5c89f9af334193fd6aceff698fc3008e7d4c27",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:45.002Z",
+        "reviewed_at": "2026-11-14T21:43:45.002Z",
+        "status": "read",
+        "locator": "第 8 页 · NAND · Bit shipments",
+        "excerpt": "Bit shipments increased in the mid-single-digit percentage range."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "ea3fed575e515a32fb613b187f6357457afd20b76886da0c57c2875bffb8f671",
+    "id": "e-8129fb67fe4373c5db1ab47a2de450e7374d7d37639d313ce646846ae3268bb3"
+  },
+  "e-af0c8bbeb19447e72fd78fca1544643b9a5f173325c6b93273f654bf4f57f658": {
+    "measurement": "asp",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "SK 海力士 DRAM 售价环比",
+    "values": {
+      "current": "二十几百分比高段增长",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "skhynix_deck",
+        "url": "https://mis-prod-koce-homepage-cdn-01-blob-ep.azureedge.net/web/attach/21453379321009165.pdf",
+        "sha256": "df86f554d33cee25bb1ceac6b2cccde63c2ec58b637eb600928ff9d1e726e4cf",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:42.157Z",
+        "reviewed_at": "2026-11-14T21:43:42.157Z",
+        "status": "read",
+        "locator": "p.4 Revenue Analysis · DRAM",
+        "excerpt": "DRAM B/G Approx. 10% ↑ QoQ ASP High-20% ↑ QoQ"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "21560c7a416d51aba35f7f8c48d82f559ecaa6183ade1226b994e32adf48114e",
+    "id": "e-af0c8bbeb19447e72fd78fca1544643b9a5f173325c6b93273f654bf4f57f658"
+  },
+  "e-a423dfba1d88676fbe6eb001878e90cdb8f110d3146da9c4fdaf801370967e8e": {
+    "measurement": "bit_shipments",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "SK 海力士 DRAM 位元出货环比",
+    "values": {
+      "current": "约 10% 增长",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "skhynix_deck",
+        "url": "https://mis-prod-koce-homepage-cdn-01-blob-ep.azureedge.net/web/attach/21453379321009165.pdf",
+        "sha256": "df86f554d33cee25bb1ceac6b2cccde63c2ec58b637eb600928ff9d1e726e4cf",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:42.157Z",
+        "reviewed_at": "2026-11-14T21:43:42.157Z",
+        "status": "read",
+        "locator": "p.4 Revenue Analysis · DRAM",
+        "excerpt": "DRAM B/G Approx. 10% ↑ QoQ ASP High-20% ↑ QoQ"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "ab1cce3bde1a758859cd693d463ac557be7c12fd48b5c783a54ecdc37f1db977",
+    "id": "e-a423dfba1d88676fbe6eb001878e90cdb8f110d3146da9c4fdaf801370967e8e"
+  },
+  "e-e4689cd80fc47bce9aa2bc8a828cac9530c1e93ef31505df9b49e8e46381f9e2": {
+    "measurement": "asp",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "SK 海力士 NAND 售价环比（含 Solidigm）",
+    "values": {
+      "current": "二十几百分比中段增长",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "skhynix_deck",
+        "url": "https://mis-prod-koce-homepage-cdn-01-blob-ep.azureedge.net/web/attach/21453379321009165.pdf",
+        "sha256": "df86f554d33cee25bb1ceac6b2cccde63c2ec58b637eb600928ff9d1e726e4cf",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:42.157Z",
+        "reviewed_at": "2026-11-14T21:43:42.157Z",
+        "status": "read",
+        "locator": "p.4 Revenue Analysis · NAND",
+        "excerpt": "NAND B/G Slight Decrease QoQ ASP Mid-20% ↑ QoQ — * Solidigm results are consolidated"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "481c5b6b6ba77120f9212aca4ded74b4a2295268fad477b876d374b960b3fe76",
+    "id": "e-e4689cd80fc47bce9aa2bc8a828cac9530c1e93ef31505df9b49e8e46381f9e2"
+  },
+  "e-a865d7d628415afa4286636a7156b05e5409494b8e86743b9e565e4ea8176990": {
+    "measurement": "bit_shipments",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "quarter_change",
+    "accounting_basis": "as_disclosed",
+    "scope": "SK 海力士 NAND 位元出货环比（含 Solidigm）",
+    "values": {
+      "current": "小幅减少",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "skhynix_deck",
+        "url": "https://mis-prod-koce-homepage-cdn-01-blob-ep.azureedge.net/web/attach/21453379321009165.pdf",
+        "sha256": "df86f554d33cee25bb1ceac6b2cccde63c2ec58b637eb600928ff9d1e726e4cf",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:42.157Z",
+        "reviewed_at": "2026-11-14T21:43:42.157Z",
+        "status": "read",
+        "locator": "p.4 Revenue Analysis · NAND",
+        "excerpt": "NAND B/G Slight Decrease QoQ ASP Mid-20% ↑ QoQ — * Solidigm results are consolidated"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "98055b0f901944310b4cc5ff6334d9cacc72da7b66cbb8d8fc13843743ad9db9",
+    "id": "e-a865d7d628415afa4286636a7156b05e5409494b8e86743b9e565e4ea8176990"
+  },
+  "e-f5ac5a9040a0e94713a68a22044b81853a8cc9d4189829b87fecc5f9aaf60249": {
+    "measurement": "bit_shipments",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "target_period",
+    "accounting_basis": "as_disclosed",
+    "scope": "SK 海力士下一季 DRAM / NAND 位元出货指引",
+    "values": {
+      "current": "DRAM 二十几百分比中段增长；NAND 中个位数增长",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "skhynix_deck",
+        "url": "https://mis-prod-koce-homepage-cdn-01-blob-ep.azureedge.net/web/attach/21453379321009165.pdf",
+        "sha256": "df86f554d33cee25bb1ceac6b2cccde63c2ec58b637eb600928ff9d1e726e4cf",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:42.157Z",
+        "reviewed_at": "2026-11-14T21:43:42.157Z",
+        "status": "read",
+        "locator": "p.10 DRAM / NAND",
+        "excerpt": "DRAM Q4 B/G : Mid-20% increase QoQ … NAND Q4 B/G : Mid-single% increase QoQ (including Solidigm)"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "39b0779632e29e9de67a0c236f42657c904ed3c4d6c5d0cf5480b5079a0548eb",
+    "id": "e-f5ac5a9040a0e94713a68a22044b81853a8cc9d4189829b87fecc5f9aaf60249"
+  },
+  "e-d1225034537f6243285ec332a5c27ba6dd18fbeb12b826da5e08536d2d2d5cd3": {
+    "measurement": "supply",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "target_period",
+    "accounting_basis": "as_disclosed",
+    "scope": "SK 海力士对次年 DRAM / NAND 需求位元增长的展望",
+    "values": {
+      "current": "DRAM 二十几百分比中段；NAND 十几百分比高段",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "skhynix_deck",
+        "url": "https://mis-prod-koce-homepage-cdn-01-blob-ep.azureedge.net/web/attach/21453379321009165.pdf",
+        "sha256": "df86f554d33cee25bb1ceac6b2cccde63c2ec58b637eb600928ff9d1e726e4cf",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:42.157Z",
+        "reviewed_at": "2026-11-14T21:43:42.157Z",
+        "status": "read",
+        "locator": "p.9 Market Outlook",
+        "excerpt": "Demand expected to outpace supply through 2030 … DRAM Achievable Demand B/G ’27 : +Mid-20% YoY; NAND Achievable Demand B/G ’27 : +High-Teen% YoY"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "51710c753e89e1845ff4785a6606ffd829b7c1abd013cf63c6ea830cc68a7943",
+    "id": "e-d1225034537f6243285ec332a5c27ba6dd18fbeb12b826da5e08536d2d2d5cd3"
+  },
+  "e-783a7157c816eab9cc879147ea743b544498807348f0ecc885e5d5331e6c9a1e": {
+    "measurement": "revenue",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "长鑫存储（CXMT）年初至今营收及同比",
+    "values": {
+      "current": "2,690.2 亿元人民币",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "cxmt_results",
+        "url": "https://www.trendforce.com/news/2026/11/02/news-beyond-cxmts-89-53-gross-margin-in-3q26-3-key-takeaways-on-ltas-4f%c2%b2-advancement-and-lpddr6/",
+        "sha256": "a7bc9587da9feaca078a27e2228c34c1698f4ac4167a10cc4985ca61e1d4bead",
+        "access": "secondary",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:42.375Z",
+        "reviewed_at": "2026-11-14T21:43:42.375Z",
+        "status": "read",
+        "locator": "Second paragraph, citing The Paper",
+        "excerpt": "CXMT’s revenue surged 738.51% YoY to CNY 269.02 billion in the first nine months of 2026, while net profit swung to CNY 132.04 billion from a year-earlier loss."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "0b911adad03606ec69eace2d04d9cc6a8ab411b8e8aadd8d0d152007242c7e57",
+    "id": "e-783a7157c816eab9cc879147ea743b544498807348f0ecc885e5d5331e6c9a1e"
+  },
+  "e-a7dea1ac9cabd7f247f5dd7e4e695a022eea2d6d8f4ca7c4346c4c2033e08151": {
+    "measurement": "end_consumption_proxy",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "PC 厂商 DRAM 库存周数走向",
+    "values": {
+      "current": "自三季度起持续上升，预计四季度续增",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "pc_oem_inventory",
+        "url": "https://www.trendforce.com/presscenter/news/20261111-13303.html",
+        "sha256": "d9ba88548a29716147b711b93cb2f4b6efab5b175f74ea9f5e60b1ef0d9be138",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:42.576Z",
+        "reviewed_at": "2026-11-14T21:43:42.576Z",
+        "status": "read",
+        "locator": "Paragraph beginning \"In the PC DRAM market\"",
+        "excerpt": "earlier rounds of steep price increases prompted some PC brands to place orders beyond their actual requirements. Overall, declining finished-product shipments have led to a steady increase in DRAM inventory weeks among OEMs since 3Q26, with inventories expected to build further in 4Q26. Some manufacturers have already begun renegotiating their product mix requirements for 2027 with memory suppliers."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "df2a977c4ba9d12ac1470ccd6023cc67adf771ccf542d432fc915e5d75b05114",
+    "id": "e-a7dea1ac9cabd7f247f5dd7e4e695a022eea2d6d8f4ca7c4346c4c2033e08151"
+  },
+  "e-1e7f8c196f519c322b37d8c216631ca4be92ac2f73e31f78a178b9b30a376e49": {
+    "measurement": "end_consumption_proxy",
+    "unit": "百万台",
+    "definition_version": 1,
+    "temporal_basis": "calendar_quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "全球智能手机季度出货量（IDC 初步值）",
+    "values": {
+      "current": 255.3,
+      "previous": 327.3,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 255.3,
+        "scale": 1,
+        "source_unit": "million units",
+        "period": "2026 Q3",
+        "locator": "Total row · 3Q26 Shipments",
+        "source_id": "idc_smartphone"
+      },
+      {
+        "field": "previous",
+        "value": 327.3,
+        "scale": 1,
+        "source_unit": "million units",
+        "period": "2025 Q3",
+        "locator": "Total row · 3Q25 Shipments",
+        "source_id": "idc_smartphone"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "idc_smartphone",
+        "url": "https://www.idc.com/resource-center/press-releases/smartphone-shipments-decline-3q26/",
+        "sha256": "0d29fb765e2f0f4582ba7aef4587c68b682a940f2e3fa4518728dfc49119a557",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:42.973Z",
+        "reviewed_at": "2026-11-14T21:43:42.973Z",
+        "status": "read",
+        "locator": "Top 5 Companies table, Total row (shipments in millions of units)",
+        "excerpt": "Total 255.3 100.0% 327.3 100.0% -22.0% — columns 3Q26 Shipments, 3Q26 Market Share, 3Q25 Shipments, 3Q25 Market Share, Year-Over-Year Change"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "468b345d3df6c9b5f02e4fd56f939d43fd39f5001a531619f995d3cdc4c90f18",
+    "id": "e-1e7f8c196f519c322b37d8c216631ca4be92ac2f73e31f78a178b9b30a376e49"
+  },
+  "e-63140b42ceffe43f1a77465527c33f2e08a49910809baf448dea11cd631deb41": {
+    "measurement": "end_consumption_proxy",
+    "unit": "百万台",
+    "definition_version": 1,
+    "temporal_basis": "calendar_quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "全球 PC 季度出货量（IDC 初步值）",
+    "values": {
+      "current": 62.7,
+      "previous": 78.5,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 62.7,
+        "scale": 1,
+        "source_unit": "million units",
+        "period": "2026 Q3",
+        "locator": "Total row · 3Q26 Shipments",
+        "source_id": "idc_pc"
+      },
+      {
+        "field": "previous",
+        "value": 78.5,
+        "scale": 1,
+        "source_unit": "million units",
+        "period": "2025 Q3",
+        "locator": "Total row · 3Q25 Shipments",
+        "source_id": "idc_pc"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "idc_pc",
+        "url": "https://www.idc.com/resource-center/press-releases/idc-pc-tracker-3q26/",
+        "sha256": "0d8d37d4eac2b365a0eeb7d63290179b6ecf69c42f70d0b2fc11c89adfc14fff",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:43.587Z",
+        "reviewed_at": "2026-11-14T21:43:43.587Z",
+        "status": "read",
+        "locator": "First paragraph and vendor table, Total row (millions of units)",
+        "excerpt": "Worldwide PC shipments fell 20.1% year over year in Q3 2026 to 62.7 million units … Total 62.7 100.0% 78.5 100.0%"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "232cba1d6c5050fedf2c02812682216863b1c1f0221e706a2d6f483b5086ea05",
+    "id": "e-63140b42ceffe43f1a77465527c33f2e08a49910809baf448dea11cd631deb41"
+  },
+  "e-97ee3428a80f8f212a90fb048c7cb65a7ac7af0cd5ea8f04ef718376e186aa8d": {
+    "measurement": "end_consumption_proxy",
+    "unit": "USDm",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "韩国半导体出口月内初值（关税厅 1–10 日或 1–20 日通关口径）",
+    "values": {
+      "current": 16632,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 16632,
+        "scale": 1,
+        "source_unit": "USD millions",
+        "period": "2026-11-01..2026-11-10",
+        "locator": "p.4 · 수출 · 반도체 · 금액",
+        "source_id": "korea_customs"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "korea_customs",
+        "url": "https://www.customs.go.kr/common/nttFileDownload.do?fileKey=315cfcb06b903fc9721e383c914b8874",
+        "sha256": "77a651db1b65323a1908867be7f48fce55dba2e98c1a146f1868b1b57ea9be11",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:42.769Z",
+        "reviewed_at": "2026-11-14T21:43:42.769Z",
+        "status": "read",
+        "locator": "PDF p.4 붙임 11.1~10일 수출입 통계 · 주요품목 (단위: 백만 달러, 전년동기대비 %)",
+        "excerpt": "반도체 16,632 331.2 — 수출(11.1.~10.) 금액, 증감률"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "33e832547389076ed3eba686ede5c449819c21f044f89a847d41c0ab988dbdc7",
+    "id": "e-97ee3428a80f8f212a90fb048c7cb65a7ac7af0cd5ea8f04ef718376e186aa8d"
+  },
+  "e-7a314bceb909a480d24ba093ef4235b92f580caadd2e17750c59b0e325dba9f5": {
+    "measurement": "capex",
+    "unit": "KRWt",
+    "definition_version": 1,
+    "temporal_basis": "quarter",
+    "accounting_basis": "as_disclosed",
+    "scope": "集团现金资本开支（购置有形资产）",
+    "values": {
+      "current": 12.67,
+      "previous": 5.033,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 12670,
+        "scale": 0.001,
+        "source_unit": "KRW billions",
+        "period": "2026 Q3",
+        "locator": "p.16 · Acquisition of PP&E · '26 Q3",
+        "source_id": "eco_skhynix_statements"
+      },
+      {
+        "field": "previous",
+        "value": 5033,
+        "scale": 0.001,
+        "source_unit": "KRW billions",
+        "period": "2025 Q3",
+        "locator": "p.16 · Acquisition of PP&E · '25 Q3",
+        "source_id": "eco_skhynix_statements"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_skhynix_statements",
+        "url": "https://mis-prod-koce-homepage-cdn-01-blob-ep.azureedge.net/web/attach/21453379321009165.pdf#page=16",
+        "sha256": "df86f554d33cee25bb1ceac6b2cccde63c2ec58b637eb600928ff9d1e726e4cf",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:43.167Z",
+        "reviewed_at": "2026-11-14T21:43:43.167Z",
+        "status": "read",
+        "locator": "p.16 Cash Flow (Unit: KRW Billion)",
+        "excerpt": "Acquisition of PP&E (12,670) (10,671) (5,033) — columns '26 Q3, '26 Q2, '25 Q3"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "5b29ff1637213a9eeb2924bce4d01a487de83c014c81cbfdbdd42ca3ced5f5d8",
+    "id": "e-7a314bceb909a480d24ba093ef4235b92f580caadd2e17750c59b0e325dba9f5"
+  },
+  "e-ddabf24f10445f97a44faaa7bff1a8d727d46b61ea51c6471109f2557e308f1a": {
+    "measurement": "inventory",
+    "unit": "KRWt",
+    "definition_version": 1,
+    "temporal_basis": "period_end",
+    "accounting_basis": "as_disclosed",
+    "scope": "集团期末存货",
+    "values": {
+      "current": 19.356,
+      "previous": 13.156,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 19356,
+        "scale": 0.001,
+        "source_unit": "KRW billions",
+        "period": "2026-09-30",
+        "locator": "p.19 · Inventories · Q3'26",
+        "source_id": "eco_skhynix_statements"
+      },
+      {
+        "field": "previous",
+        "value": 13156,
+        "scale": 0.001,
+        "source_unit": "KRW billions",
+        "period": "2025-09-30",
+        "locator": "p.17 · Inventories · Q3'25",
+        "source_id": "eco_skhynix_prior"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original document and matched value, unit, scale, period and column to the candidate row",
+      "at": "2026-11-14T21:43:45.017Z"
+    },
+    "documents": [
+      {
+        "source_id": "eco_skhynix_statements",
+        "url": "https://mis-prod-koce-homepage-cdn-01-blob-ep.azureedge.net/web/attach/21453379321009165.pdf#page=16",
+        "sha256": "df86f554d33cee25bb1ceac6b2cccde63c2ec58b637eb600928ff9d1e726e4cf",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:43.167Z",
+        "reviewed_at": "2026-11-14T21:43:43.167Z",
+        "status": "read",
+        "locator": "p.19 Statement of Financial Position, K-IFRS (KRW Billion)",
+        "excerpt": "Inventories 19,356 17,986 14,289 +1,370 +5,066 — columns Q3'26, Q2'26, Q4'25, QoQ, vs. Q4'25"
+      },
+      {
+        "source_id": "eco_skhynix_prior",
+        "url": "https://mis-prod-koce-homepage-cdn-01-blob-ep.azureedge.net/web/attach/3127648149034921.pdf#page=17",
+        "sha256": "6a857d9ff35c9967dcd028fd438141599557e0f3671c99f3bd94227095ae892a",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T21:43:43.390Z",
+        "reviewed_at": "2026-11-14T21:43:43.390Z",
+        "status": "read",
+        "locator": "p.17 Statement of Financial Position, K-IFRS (KRW Billion)",
+        "excerpt": "Inventories 13,156 13,408 13,314 -252 -158 — columns Q3'25, Q2'25, Q4'24, QoQ, vs. Q4'24"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "afc8f7562dff587e1ebcd29e91843e8ad088cc511cbd6b9dbd97b5705096dadc",
+    "id": "e-ddabf24f10445f97a44faaa7bff1a8d727d46b61ea51c6471109f2557e308f1a"
   }
 }
