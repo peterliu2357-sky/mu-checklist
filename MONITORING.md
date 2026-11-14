@@ -182,7 +182,7 @@ schema_version 仍为 2，新增必填 `ecosystem`；已有美光指标与财季
 - `mu.supply.korea_ic_shipment` / `mu.supply.korea_ic_inventory`：统计厅生产者出货指数与库存指数（ECOS 901Y032，KSIC 26 电子零件、计算机、影像音响及通信设备制造业，季节调整，2020=100）。来源 ID 分别为 `kostat_shipment`、`kostat_inventory`。回测用原指数的同比；页面趋势用季节调整值。两行 `as_of` 必须相同；页面计算 库存 ÷ 出货，不另存比值。半导体单独的指数在 KOSIS，需要 API 密钥，目前未接入。
 - `mu.peers.*`（周期 · 供给的“同业出货、售价与扩产”卡，`optional_sections` 中的 `peers`）：SK 海力士季度业绩发布材料中的 DRAM / NAND 位元出货与售价环比（区间表述，按原文译为中文，不换算成数值）、下一季位元出货指引、次年需求位元增长展望，来源 ID `skhynix_deck`；长鑫存储（CXMT）定期报告的营收，可用点名原报告的媒体转引并标 `secondary`，来源 ID `cxmt_results`。三星只在电话会上口头说明位元与售价变化，没有书面披露，不设行；长江存储未上市，不设行。这些行属 `industry` 范围：处理 SK 海力士财报时用 `batch --targets company:skhynix,industry` 一并更新。
 - `eco.skhynix.capex` / `eco.skhynix.inventory` 自 2026 Q3 起从同一份业绩发布材料录入：资本开支取现金流量表 Acquisition of PP&E 的本期与上年同期列；存货的上年同期末数值在上一年同季的材料里（来源 ID `eco_skhynix_prior`）。
-- 三家存储厂资本开支与存货：页面从 `mu.capex.net`（上年同期取自该指标的历史点）、`mu.inventory.total`、三星与 SK 海力士产业链卡的 `capex` / `inventory` 行并列显示，不存储、不相加；每行标明同比或环比。
+- 存储厂对照（资本开支与存货）：页面从 `mu.capex.net`（上年同期取自该指标的历史点）、`mu.inventory.total`、三星与 SK 海力士产业链卡的 `capex` / `inventory` 行并列显示，不存储、不相加；每行标明同比或环比。
 - `mu.demand.pc_oem_inventory`：TrendForce 新闻稿对 PC 厂商 DRAM 库存周数走向的表述（没有数值时保留文字），来源 ID `pc_oem_inventory`。
 - `mu.demand.smartphone_shipments` / `mu.demand.pc_shipments`：IDC 季度新闻稿的全球出货量初步值（百万台）与上年同期，来源 ID `idc_smartphone` / `idc_pc`；每季结束后第二周发布。
 - `mu.demand.korea_semi_exports_prelim`：韩国关税厅月内暂定值（1–10 日约 11 日发布，1–20 日约 21 日发布）附件 PDF 主要品目表的半导体出口额（百万美元）与同比，`as_of` 为区间最后一日，行名写明区间；来源 ID `korea_customs`。它是不完整月份的通关口径，与产业通商部整月行分开，也不画趋势线（1–10 日与 1–20 日不可比）。每次例行核查读取关税厅公告列表，有新一期就更新。

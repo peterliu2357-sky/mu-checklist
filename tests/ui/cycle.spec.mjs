@@ -97,9 +97,10 @@ for(const width of [320,860])test(`maker comparison and worded history fit at ${
   await page.route('**/data/monitor.json?*',r=>r.fulfill({json:d}));
   await page.goto('/#cycle');
   const makers=page.locator('#cycle-supply .makers');
-  await expect(makers).toContainText('三家存储厂');
+  await expect(makers).toContainText('存储厂对照');
   await expect(makers.locator('.group-parts li').first()).toContainText('美光');
-  await expect(makers).toContainText('同比');
+  await expect(makers.locator('.group-parts li',{hasText:'美光'}).first()).toContainText(/同比 [+−]/);
+  await expect(makers.locator('.group-parts li',{hasText:'美光'}).last()).toContainText(/环比 [+−]/);
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
   await makers.locator('a[data-metric="capex"]').click();
   await expect(page.locator('#panel-business')).toBeVisible();

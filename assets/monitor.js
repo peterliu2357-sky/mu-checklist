@@ -164,7 +164,7 @@
     const lines=makerLines(data),groups=[['capex','资本开支'],['inventory','期末存货']].map(([id,title])=>({title,lines:lines.filter(l=>l.group===id)})).filter(g=>g.lines.length>1);
     if(!groups.length) return '';
     const part=l=>`<li><a href="${esc(l.href)}"${l.id==='micron'?` data-metric="${esc(l.href.slice(1))}"`:` data-partner="${esc(l.id)}"`}>${esc(l.name.split(' / ')[0])}</a><span>${esc(l.scope)} · ${esc(l.period)}${l.change?` · ${esc(l.basis)} ${esc(l.change)}`:''}</span><strong>${partnerValue(l.current,l.unit,l.digits)}<small> ${esc(partnerUnits[l.unit])}</small></strong></li>`;
-    return `<article class="card group-total makers" aria-label="三家存储厂资本开支与存货"><div class="row-top"><h3>三家存储厂：资本开支与存货</h3><span class="tag-group"><span class="basis calculated">${provenance.calculated}</span></span></div>${groups.map(g=>`<h4 class="makers-group">${esc(g.title)}</h4><ul class="group-parts">${g.lines.map(part).join('')}</ul>`).join('')}<p class="row-note">各公司最近一个已披露财季，数值取自“公司”与“产业链”的同一条记录。口径不同，不相加：三星为集团合计（含手机、显示等业务）；每行标明对照上年同期（同比）还是上一季（环比）。</p></article>`;
+    return `<article class="card group-total makers" aria-label="存储厂资本开支与存货对照"><div class="row-top"><h3>存储厂对照：资本开支与存货</h3><span class="tag-group"><span class="basis calculated">${provenance.calculated}</span></span></div>${groups.map(g=>`<h4 class="makers-group">${esc(g.title)}</h4><ul class="group-parts">${g.lines.map(part).join('')}</ul>`).join('')}<p class="row-note">各公司最近一个已披露财季，数值取自“公司”与“产业链”的同一条记录。口径不同，不相加${lines.some(l=>l.id==='samsung')?'：三星为集团合计（含手机、显示等业务）':''}；每行标明对照上年同期（同比）还是上一季（环比）。</p></article>`;
   }
   function inventoryRatioCard() {
     const r=datedRatio(data,inventoryRatio.metric,inventoryRatio.numerator,inventoryRatio.denominator);

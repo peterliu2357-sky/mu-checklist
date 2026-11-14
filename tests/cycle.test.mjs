@@ -56,6 +56,8 @@ test('the three makers are listed side by side from rows stored elsewhere, each 
   assert.equal(find('inventory','samsung'),undefined);
   assert.deepEqual([find('capex','skhynix').href,find('capex','skhynix').change,find('inventory','skhynix').basis],['#partner-skhynix','+140.0%','同比']);
   assert.deepEqual(cycleLayout(d).find(s=>s.id==='supply').metrics.map(m=>m.id),['peers']);
+  // A stored change on a peer row is shown as stored, as on its partner card.
+  d.ecosystem.companies[0].metrics[0].change='+149%（报告值）';assert.equal(makerLines(d).find(l=>l.group==='capex'&&l.id==='samsung').change,'+149%（报告值）');
   // Without the year-ago series point Micron's capex is listed without a change rather than against the wrong quarter.
   delete d.series;assert.equal(makerLines(d).find(l=>l.group==='capex'&&l.id==='micron').change,'');
 });
