@@ -16,7 +16,7 @@ const root=fileURLToPath(new URL('../',import.meta.url));process.chdir(root);
 const args=process.argv.slice(2),command=args.shift()||'help',flag=(name,fallback)=>{const i=args.indexOf('--'+name);return i<0?fallback:args[i+1];};
 const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
 const write=(p,v)=>{fs.mkdirSync(path.dirname(p),{recursive:true});const temp=p+'.tmp';fs.writeFileSync(temp,JSON.stringify(v,null,2)+'\n');fs.renameSync(temp,p);};
-const git=(...args)=>execFileSync('git',args,{encoding:'utf8'}).trim();
+const git=(...args)=>execFileSync('git',args,{encoding:'utf8',maxBuffer:1<<28}).trim();
 const state=()=>({ledger:read('data/ledger.json'),evidence:read('data/evidence.json'),catalog:read('pipeline/catalog.json'),legacy:read('pipeline/legacy-baseline.json')});
 const report=issues=>{console.log(JSON.stringify({ok:issues.length===0,issues},null,2));if(issues.length)process.exitCode=1;};
 const historyFile=dir=>fs.existsSync(path.join(dir,'history.json'))?read(path.join(dir,'history.json')):{};

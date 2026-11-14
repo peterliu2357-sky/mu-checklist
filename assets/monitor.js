@@ -2,7 +2,7 @@
 (function () {
   'use strict';
   const esc = value => String(value ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const {rowChange,freshness,isRenderable:validate,guidanceActuals,guidanceComparison,partnerValue,partnerChange,groupTotal,cycleSignals,spotPremiums,datedRatio,inventoryRatio,cycleLayout,companyOutlook,isCompanyRow,provenance,partnerUnits}=globalThis.MonitorCore;
+  const {rowChange,freshness,isRenderable:validate,guidanceActuals,guidanceComparison,partnerValue,partnerChange,groupTotal,cycleSignals,spotPremiums,datedRatio,makerLines,wordedTrend,inventoryRatio,cycleLayout,companyOutlook,isCompanyRow,provenance,partnerUnits}=globalThis.MonitorCore;
   const num = (value,digits=2) => Number(value).toLocaleString('en-US',{minimumFractionDigits:digits,maximumFractionDigits:digits});
   const updateCore=globalThis.MonitorUpdates;
   const updateTimes=globalThis.MonitorUpdateTimes;
@@ -80,8 +80,13 @@
     return span.from===span.to?`资料日期 ${short(span.to)}`:`各行资料日期 ${short(span.from)} 至 ${short(span.to)}`;
   }
   function evidence(row,metric,owner=metric) {
-    const trend=metric?.category==='industry'?sparkline(trendPoints(metric,row),row.unit):'',age=owner?rowAge(owner,row):{tag:'',note:''};
+    const trend=metric?.category==='industry'?sparkline(trendPoints(metric,row),row.unit):metric?wordedHistory(metric,row):'',age=owner?rowAge(owner,row):{tag:'',note:''};
     return `<div class="evidence-row ledger-row"><div class="ledger-label"><span class="row-label">${esc(row.label)}</span><span class="tag-group">${tags(row)}${age.tag}</span><p class="row-period">${esc(row.period)}${esc(age.note)}</p></div><div class="ledger-value">${numberLine(row)}${trend}</div><div class="source-links">${row.source_ids.map(id=>sourceLink(id)).join('')}</div></div>`;
+  }
+  // Past quarters of a worded disclosure, listed because a range cannot be drawn as a line.
+  function wordedHistory(metric,row) {
+    const points=wordedTrend(data,metric,row);
+    return points.length<2?'':`<ol class="worded-trend" aria-label="${esc(row.label)}历季披露">${points.map((p,i)=>`<li${i===points.length-1?' class="last"':''}><span>${esc(p.period.replace(/^FY(\d{4}) /,'FY$1 F'))}</span><b>${esc(p.value)}</b></li>`).join('')}</ol>`;
   }
   function rowBasis(row) {
     return `<li><b>${esc(row.label)}</b>${row.note?`<p class="row-note">${esc(row.note)}</p>`:''}<p class="source-location">定位：${esc(row.location)} · ${provenance[row.evidence_type]}</p></li>`;
@@ -155,6 +160,12 @@
     const inputs=[...new Set(pairs.flatMap(p=>[p.spot.evidence_type,p.contract.evidence_type]).filter(t=>t!=='direct'&&provenance[t]))];
     return `<article class="card group-total spot-premium" aria-label="现货较合同价"><div class="row-top"><h3>现货较合同价</h3><span class="tag-group"><span class="basis calculated">${provenance.calculated}</span>${inputs.map(t=>`<span class="basis ${esc(t)}">含${provenance[t]}</span>`).join('')}</span></div>${pairs.map(p=>`<div class="premium-row"><span class="premium-label">${esc(p.label)}</span><strong class="premium-value">${sign(p.premium)}</strong><span class="row-period">现货 ${formatted(p.spot.current,p.spot.unit)} 美元（${esc(p.spot.as_of||p.spot.period)}）· 合同 ${formatted(p.contract.current,p.contract.unit)} 美元（${esc(p.contract.as_of||p.contract.period)}）</span></div>`).join('')}<p class="row-note">现货 ÷ 合同价 − 1，取同规格的最新读数，两者日期不同。现货高于合同价表示短期买盘更紧；本站从 2026 年 10 月起记录，历史不足以回测。</p></article>`;
   }
+  function makersCard() {
+    const lines=makerLines(data),groups=[['capex','资本开支'],['inventory','期末存货']].map(([id,title])=>({title,lines:lines.filter(l=>l.group===id)})).filter(g=>g.lines.length>1);
+    if(!groups.length) return '';
+    const part=l=>`<li><a href="${esc(l.href)}"${l.id==='micron'?` data-metric="${esc(l.href.slice(1))}"`:` data-partner="${esc(l.id)}"`}>${esc(l.name.split(' / ')[0])}</a><span>${esc(l.scope)} · ${esc(l.period)}${l.change?` · ${esc(l.basis)} ${esc(l.change)}`:''}</span><strong>${partnerValue(l.current,l.unit,l.digits)}<small> ${esc(partnerUnits[l.unit])}</small></strong></li>`;
+    return `<article class="card group-total makers" aria-label="存储厂资本开支与存货对照"><div class="row-top"><h3>存储厂对照：资本开支与存货</h3><span class="tag-group"><span class="basis calculated">${provenance.calculated}</span></span></div>${groups.map(g=>`<h4 class="makers-group">${esc(g.title)}</h4><ul class="group-parts">${g.lines.map(part).join('')}</ul>`).join('')}<p class="row-note">各公司最近一个已披露财季，数值取自“公司”与“产业链”的同一条记录。口径不同，不相加${lines.some(l=>l.id==='samsung')?'：三星为集团合计（含手机、显示等业务）':''}；每行标明对照上年同期（同比）还是上一季（环比）。</p></article>`;
+  }
   function inventoryRatioCard() {
     const r=datedRatio(data,inventoryRatio.metric,inventoryRatio.numerator,inventoryRatio.denominator);
     if(!r) return '';
@@ -164,7 +175,7 @@
   }
   function cycle() {
     const sections=cycleLayout(data);
-    return `<div class="data-heading"><h2>周期跟踪</h2></div><p class="section-intro">价格、供给与需求的行业资料。行业估计、报价与预测分别标识；美光自身财务见“公司”。</p>${cycleRead()}<div class="section-heading"><h2>周期信号</h2><span class="small">经 2018、2022 年两次见顶回测仍领先的指标 · 点击查看来源</span></div><div class="signal-grid">${cycleSignals(data).map(cycleSignal).join('')}</div><p class="signal-note">其他指标没有通过领先性回测或缺少可回测的历史，仍在下方各卡片中列示。<a href="https://github.com/peterliu2357-sky/mu-checklist/blob/main/docs/CYCLE-BACKTEST.md" target="_blank" rel="noopener noreferrer">回测方法与结果 ↗</a></p>${sections.map(s=>`<section class="cycle-section" id="cycle-${esc(s.id)}" aria-label="${esc(s.title)}"><div class="section-heading"><h2>${esc(s.title)}</h2></div>${s.metrics.map(m=>metricCard(m,data.metrics.indexOf(m),{skip:isCompanyRow})).join('')}${s.id==='price'?spotPremiumCard():''}${s.id==='supply'?inventoryRatioCard()+technology.hbmProgress(data):''}${s.id==='demand'?data.ecosystem.groups.map(groupCapex).join(''):''}</section>`).join('')}`;
+    return `<div class="data-heading"><h2>周期跟踪</h2></div><p class="section-intro">价格、供给与需求的行业资料。行业估计、报价与预测分别标识；美光自身财务见“公司”。</p>${cycleRead()}<div class="section-heading"><h2>周期信号</h2><span class="small">经 2018、2022 年两次见顶回测仍领先的指标 · 点击查看来源</span></div><div class="signal-grid">${cycleSignals(data).map(cycleSignal).join('')}</div><p class="signal-note">其他指标没有通过领先性回测或缺少可回测的历史，仍在下方各卡片中列示。<a href="https://github.com/peterliu2357-sky/mu-checklist/blob/main/docs/CYCLE-BACKTEST.md" target="_blank" rel="noopener noreferrer">回测方法与结果 ↗</a></p>${sections.map(s=>`<section class="cycle-section" id="cycle-${esc(s.id)}" aria-label="${esc(s.title)}"><div class="section-heading"><h2>${esc(s.title)}</h2></div>${s.metrics.map(m=>metricCard(m,data.metrics.indexOf(m),{skip:isCompanyRow})).join('')}${s.id==='price'?spotPremiumCard():''}${s.id==='supply'?makersCard()+inventoryRatioCard()+technology.hbmProgress(data):''}${s.id==='demand'?data.ecosystem.groups.map(groupCapex).join(''):''}</section>`).join('')}`;
   }
   function ecosystem() {
     const e=data.ecosystem;

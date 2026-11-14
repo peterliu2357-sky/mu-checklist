@@ -30,7 +30,7 @@ export function buildCandidate({previousLedger,previousEvidence,proposal,support
     const numeric=v=>{const out={};function walk(x,p){if(typeof x==='number')out[p]=x;else if(x&&typeof x==='object')for(const[k,item]of Object.entries(x))walk(item,p+'/'+k);}walk(v,'');return stable(out);};
     if(numeric(proposal)!==numeric(previous))add('AUDIT_SCOPE','proposal','A source-only audit cannot change numeric facts');
   }
-  const recordInScope=(scope,id)=>scope==='full'||scope==='source_audit'||(scope==='news'&&id.startsWith('news.'))||(scope==='calendar'&&id.startsWith('calendar.'))||(scope.startsWith('company:')&&["eco."+scope.slice(8)+".","outlook."+scope.slice(8)+"."].some(p=>id.startsWith(p)))||(scope==='ecosystem'&&(id.startsWith('eco.')||id.startsWith('outlook.')))||(scope==='quote'&&id==='quote.mu')||(scope==='industry'&&(/^mu\.(contract|supply|demand)\./.test(id)||catalog.freshness?.rows[id]!=null))||(scope==='micron'&&(!/^(eco|outlook|quote|news|calendar)\./.test(id)&&!/^mu\.(contract|supply|demand)\./.test(id)));
+  const recordInScope=(scope,id)=>scope==='full'||scope==='source_audit'||(scope==='news'&&id.startsWith('news.'))||(scope==='calendar'&&id.startsWith('calendar.'))||(scope.startsWith('company:')&&["eco."+scope.slice(8)+".","outlook."+scope.slice(8)+"."].some(p=>id.startsWith(p)))||(scope==='ecosystem'&&(id.startsWith('eco.')||id.startsWith('outlook.')))||(scope==='quote'&&id==='quote.mu')||(scope==='industry'&&(/^mu\.(contract|supply|demand|peers)\./.test(id)||catalog.freshness?.rows[id]!=null))||(scope==='micron'&&(!/^(eco|outlook|quote|news|calendar)\./.test(id)&&!/^mu\.(contract|supply|demand|peers)\./.test(id)));
   const scoped=(scope,id)=>id.startsWith('tech.')?scope==='full'||scope==='source_audit'||scope==='technology'||scope===catalog.definitions[id]?.monitoring_target:recordInScope(scope,id);
   const inScope=id=>run.scope==='batch'?run.targets.some(scope=>scoped(scope,id)):scoped(run.scope,id);
   const financialAccepted=run.scope==='discovery'?new Set():accepted;
@@ -58,11 +58,11 @@ export function buildCandidate({previousLedger,previousEvidence,proposal,support
     record.evidence_ids=previousLedger.records[record.id]?.evidence_ids||[];ledger.records[record.id]=record;ledger.supporting[id]=record.id;
   }
   const uncaptured=doc=>{const read=run.reads.find(r=>r.source_id===doc.source_id&&r.status==='read');return !read||read.sha256!==doc.sha256||read.url!==doc.url||read.access!==doc.access||read.accessed_at!==doc.accessed_at||!read.reviewed_at;};
-  const tracked=catalog.series?.metrics||[],observed=catalog.series?.observations?.metrics||[],setPoint=(metric_id,period,id)=>{ledger.series??={};(ledger.series[metric_id]??={})[period]=id;};
+  const worded=catalog.series?.text||[],tracked=[...(catalog.series?.metrics||[]),...worded],observed=catalog.series?.observations?.metrics||[],setPoint=(metric_id,period,id)=>{ledger.series??={};(ledger.series[metric_id]??={})[period]=id;};
   // A quarter rollover keeps the outgoing quarter's record as a past-quarter point, so trend lines grow without re-entry.
   if(next.financial_period!==previous.financial_period){
     const outgoing=new Map(activeRecords(previousLedger).map(r=>[r.metric_id,r]));
-    for(const metric_id of tracked){const r=outgoing.get(metric_id);if(r?.context.financial_period&&r.context.financial_period!==next.financial_period&&typeof r.payload.current==='number')setPoint(metric_id,r.context.financial_period,r.id);}
+    for(const metric_id of tracked){const r=outgoing.get(metric_id);if(r?.context.financial_period&&r.context.financial_period!==next.financial_period&&(worded.includes(metric_id)?typeof r.payload.current==='string'&&r.payload.current.trim()!=='':typeof r.payload.current==='number'))setPoint(metric_id,r.context.financial_period,r.id);}
   }
   // A newer industry reading keeps the one it replaces as a dated point; a same-date correction does not.
   {
