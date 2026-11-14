@@ -18775,5 +18775,238 @@
     "mode": "verified",
     "record_hash": "5dba47facf735af31783d871f1b00d2f6d021fdcc88e8ff125715782ae8636f0",
     "id": "e-0378dcf623b9efe18da309cde678e74e5e19a1ee3c81a129b742c193203fece3"
+  },
+  "e-bdafd8c4be37abe41a67c9c71aed8b641e31c352b62712f2d04ec7805fc50421": {
+    "measurement": "contract",
+    "unit": "USD",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "DDR5 16Gb (2Gx8) 4800/5600 现货",
+    "values": {
+      "current": 60.267,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 60.267,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-11-13",
+        "locator": "DRAMeXchange DRAM Spot Price · DDR5 16Gb (2Gx8) 4800/5600 · Session Average",
+        "source_id": "dram_spot"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-11-14T17:59:03.131Z"
+    },
+    "documents": [
+      {
+        "source_id": "dram_spot",
+        "url": "https://www.dramexchange.com/",
+        "sha256": "9ddef73bde0e4532fc93f5a081fdd5e9692f446ff75c6815cce37feae774c584",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T17:58:21.454Z",
+        "reviewed_at": "2026-11-14T17:58:21.454Z",
+        "status": "read",
+        "locator": "DRAM Spot Price 表 · Last Update: Nov.13 2026 18:10 (GMT+8)",
+        "excerpt": "DDR5 16Gb (2Gx8) 4800/5600 | Daily High 72.50 | Daily Low 45.50 | Session High 72.50 | Session Low 45.50 | Session Average 60.267 | Session Change 0.06 %"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "a177f006aa0d3e6a660f0e6b215db81c73bd77527038b5abee4294bee3b8bb94",
+    "id": "e-bdafd8c4be37abe41a67c9c71aed8b641e31c352b62712f2d04ec7805fc50421"
+  },
+  "e-dc04904f4c43d58baed2800a96902f9d009b00186b298d4233c9ccec2c1f2004": {
+    "measurement": "contract",
+    "unit": "index",
+    "definition_version": 1,
+    "temporal_basis": "calendar_month",
+    "accounting_basis": "as_disclosed",
+    "scope": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+    "values": {
+      "current": 309.97,
+      "previous": 289.16,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 309.97,
+        "scale": 1,
+        "source_unit": "2020=100 index",
+        "period": "2026-10",
+        "locator": "韩国央行 ECOS · 4.3.1.3 수출물가지수(품목별) · DRAM · 달러기준 · 2026 年 10 月。",
+        "source_id": "bok_export_price"
+      },
+      {
+        "field": "previous",
+        "value": 289.16,
+        "scale": 1,
+        "source_unit": "2020=100 index",
+        "period": "2026-09",
+        "locator": "韩国央行 ECOS · 4.3.1.3 수출물가지수(품목별) · DRAM · 달러기준 · 2026 年 9 月。",
+        "source_id": "bok_export_price"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-11-14T17:59:03.131Z"
+    },
+    "documents": [
+      {
+        "source_id": "bok_export_price",
+        "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202601/202610/30911201AA/D",
+        "sha256": "75dfc09d65a2912a278490f84edd50feac65219862701dbc71baf74b4fba05e1",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T17:58:22.210Z",
+        "reviewed_at": "2026-11-14T17:58:22.210Z",
+        "status": "read",
+        "locator": "ECOS 统计表 402Y016「수출물가지수(품목별)」· 品目 DRAM（30911201AA）· 달러기준 · 2026-01 至 2026-10 月度值（ECOS 公开示例接口，每次最多 10 个月）。",
+        "excerpt": "TIME 202609 DATA_VALUE 289.16; TIME 202610 DATA_VALUE 309.97"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "660ba054bf7dfd0fb9e30a25dd7298e03b41b39a10442881af585e57487e9f01",
+    "id": "e-dc04904f4c43d58baed2800a96902f9d009b00186b298d4233c9ccec2c1f2004"
+  },
+  "e-8e552e4a6dbe6d72c17409ab3efe0c87f1a98aeb42921465b29be2588e2c76a1": {
+    "measurement": "supply",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "美光对 DRAM / NAND 的展望",
+    "values": {
+      "current": "2027、2028 年供需比 2026 年紧得多；DRAM 看不到供需恢复平衡的时点",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-11-14T17:59:03.131Z"
+    },
+    "documents": [
+      {
+        "source_id": "market_outlook",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=5",
+        "sha256": "2821d4ccaae50b40dcd28cd4e766c69c509e73d666e4109d5907c7205a03b700",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T17:58:22.962Z",
+        "reviewed_at": "2026-11-14T17:58:22.962Z",
+        "status": "read",
+        "locator": "FQ4 FY2026 Prepared Remarks 第 5 页 · Market outlook",
+        "excerpt": "We expect memory and storage supply-demand conditions to be much tighter in calendar 2027 and 2028 than they were in 2026. […] Even with additional industry DRAM cleanroom space plans, with robust demand trends including new upside requests from customers, we do not have line of sight to when supply and demand will return to balance."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "d605451555c2856534959b72377298c07ec818be88124e30eb50fee54faeb70c",
+    "id": "e-8e552e4a6dbe6d72c17409ab3efe0c87f1a98aeb42921465b29be2588e2c76a1"
+  },
+  "e-7c6122f5de66841bbd1f7693f0c5cd5308238e525f5a53b3f197084c39f0f727": {
+    "measurement": "end_consumption_proxy",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "手机客户库存 / 提前采购",
+    "values": {
+      "current": "品牌库存偏高，内存采购放缓",
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-11-14T17:59:03.131Z"
+    },
+    "documents": [
+      {
+        "source_id": "mobile_inventory",
+        "url": "https://www.trendforce.com/research/download/RP261112YI",
+        "sha256": "da89f9ec364ffac01c943da216a875988b4c2a1ca6a63231a5e1bc7019e4139d",
+        "access": "abstract",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T17:58:23.758Z",
+        "reviewed_at": "2026-11-14T17:58:23.758Z",
+        "status": "read",
+        "locator": "TrendForce Smartphone Market Bulletin - Nov. 12, 2026（RP261112YI）· 公开摘要",
+        "excerpt": "Brands curb memory buying as smartphone inventories swell and sales stall. High inventories at consumer brands have stalled procurement, while channel players, under year-end inventory and cash-flow pressure, have begun cutting prices to offload stock. Growth in average memory content has also rarely stalled."
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "a5cd80f2c8b354a4e496ab176af77c0c3c17e56d6818187fe63ae830bfaa2bf5",
+    "id": "e-7c6122f5de66841bbd1f7693f0c5cd5308238e525f5a53b3f197084c39f0f727"
+  },
+  "e-7ddf36310ec0d79c6b2e528bf1ec580ee501f4159f4c4054ab53a37193a73691": {
+    "measurement": "end_consumption_proxy",
+    "unit": "TWDb",
+    "definition_version": 1,
+    "temporal_basis": "calendar_month",
+    "accounting_basis": "as_disclosed",
+    "scope": "南亚科单月营收（与上月比较）",
+    "values": {
+      "current": 46.476051,
+      "previous": 45.091089,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "current",
+        "value": 46476051,
+        "scale": 0.000001,
+        "source_unit": "TWD thousands",
+        "period": "2026-10",
+        "locator": "t187ap05_L · 2408 · 資料年月 11510 · 營業收入-當月營收",
+        "source_id": "nanya_twse"
+      },
+      {
+        "field": "previous",
+        "value": 45091089,
+        "scale": 0.000001,
+        "source_unit": "TWD thousands",
+        "period": "2026-09",
+        "locator": "t187ap05_L · 2408 · 資料年月 11510 · 營業收入-上月營收",
+        "source_id": "nanya_twse"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Read the captured original documents and matched value, unit, scale, period and column to the candidate",
+      "at": "2026-11-14T17:59:03.131Z"
+    },
+    "documents": [
+      {
+        "source_id": "nanya_twse",
+        "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+        "sha256": "1ee928b37a1d27b1182a56b8c5eac7ba272d286657eb39631d5be1418f9dbf0d",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-14T17:58:22.565Z",
+        "reviewed_at": "2026-11-14T17:58:22.565Z",
+        "status": "read",
+        "locator": "证交所 OpenAPI t187ap05_L（上市公司每月營業收入彙總表）· 公司代號 2408",
+        "excerpt": "\"出表日期\": \"1151113\", \"資料年月\": \"11510\", \"公司代號\": \"2408\", \"營業收入-當月營收\": \"46476051\", \"營業收入-上月營收\": \"45091089\", \"營業收入-上月比較增減(%)\": \"3.071476051509867\""
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "8ab8b72897f93c731c09ddf8982a4e3a569ae38d6e5c4cc6c4643bde26ff20b5",
+    "id": "e-7ddf36310ec0d79c6b2e528bf1ec580ee501f4159f4c4054ab53a37193a73691"
   }
 }

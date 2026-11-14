@@ -896,8 +896,8 @@
     },
     "mu.hbm.hbm4_revenue": {
       "version": 1,
-      "active": true,
-      "required": true,
+      "active": false,
+      "required": false,
       "supporting": false,
       "entity": "micron",
       "measurement": "revenue",
@@ -1044,8 +1044,8 @@
     },
     "mu.contract.nand_trend": {
       "version": 1,
-      "active": true,
-      "required": true,
+      "active": false,
+      "required": false,
       "supporting": false,
       "entity": "industry",
       "measurement": "contract",
@@ -1108,8 +1108,8 @@
     },
     "mu.supply.dram_balance": {
       "version": 1,
-      "active": true,
-      "required": true,
+      "active": false,
+      "required": false,
       "supporting": false,
       "entity": "industry",
       "measurement": "supply",
@@ -1239,8 +1239,8 @@
     },
     "mu.demand.mobile_bits_proxy": {
       "version": 1,
-      "active": true,
-      "required": true,
+      "active": false,
+      "required": false,
       "supporting": false,
       "entity": "industry",
       "measurement": "end_consumption_proxy",
@@ -1271,8 +1271,8 @@
     },
     "mu.demand.essd_lead_time": {
       "version": 1,
-      "active": true,
-      "required": true,
+      "active": false,
+      "required": false,
       "supporting": false,
       "entity": "industry",
       "measurement": "end_consumption_proxy",
@@ -3799,6 +3799,9 @@
     ],
     "kostat_inventory": [
       "mu.supply.korea_ic_inventory"
+    ],
+    "mobile_inventory": [
+      "mu.demand.mobile_inventory_proxy"
     ]
   },
   "series": {
@@ -3840,21 +3843,16 @@
       "mu.contract.bok_dram_price": 47,
       "mu.contract.dram_forecast": 95,
       "mu.contract.nand_forecast": 95,
-      "mu.contract.nand_trend": 95,
-      "mu.supply.dram_balance": 95,
       "mu.supply.nand_outlook": 95,
       "mu.supply.micron_outlook": 100,
       "mu.supply.korea_ic_shipment": 65,
       "mu.supply.korea_ic_inventory": 65,
       "mu.demand.ssd_industry_revenue": 105,
       "mu.demand.ssd_micron_revenue": 105,
-      "mu.demand.mobile_bits_proxy": 100,
       "mu.demand.mobile_inventory_proxy": 95,
-      "mu.demand.essd_lead_time": 14,
       "mu.demand.nanya_revenue": 45,
       "mu.demand.korea_semi_exports": 35,
       "mu.demand.korea_memory_exports": 35,
-      "mu.hbm.hbm4_revenue": 100,
       "mu.hbm.revenue_share": 105
     }
   },

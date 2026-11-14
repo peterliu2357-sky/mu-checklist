@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "scope": "industry",
+  "base_commit": "9e50455379f9157a8204cc1ca600bb1fba94c811",
+  "base_revision": "2026-11-14-2b9242eb15",
+  "base_sha256": "f8e648f7c064e9259cec1e78c249828cb046dee5a87046159a27922867b0dd6e",
+  "catalog_sha256": "5745d4ab1b98175b212f9694aefa7ffa8d03ba19f47d8266c11d06db3cf3058b",
+  "created_at": "2026-11-14T17:55:51.045Z",
+  "completed_at": "2026-11-14T18:04:12.798Z",
+  "state": "verified",
+  "targets": null,
+  "coverage": [
+    {
+      "key": "industry",
+      "status": "verified",
+      "finding": "new_disclosure",
+      "evidence": [
+        "dram_spot",
+        "dram_contract",
+        "bok_export_price",
+        "nanya_twse",
+        "market_outlook",
+        "index_tf_news_20261114",
+        "mobile_inventory"
+      ],
+      "reviewed_at": "2026-11-14T17:59:03.131Z",
+      "latest_disclosure": {
+        "url": "https://www.trendforce.com/research/download/RP261112YI",
+        "published_at": "2026-11-12"
+      },
+      "reason": "逐行核对周期页过期数据：更新 DDR5 现货、韩国央行 DRAM 出口价格指数、南亚科 10 月营收、美光展望和手机库存；下线五行没有可持续公开来源或已重复的数据。"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "dram_spot",
+      "url": "https://www.dramexchange.com/",
+      "sha256": "9ddef73bde0e4532fc93f5a081fdd5e9692f446ff75c6815cce37feae774c584",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-14T17:58:21.454Z",
+      "reviewed_at": "2026-11-14T17:58:21.454Z",
+      "status": "read"
+    },
+    {
+      "source_id": "dram_contract",
+      "url": "https://www.dramexchange.com/Home/HomePrice?Source=NationalDramContract",
+      "sha256": "3088c4658143507f092b171ed60619715af461c332977ffe34666989d71dfb19",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-14T17:58:21.778Z",
+      "reviewed_at": "2026-11-14T17:58:21.778Z",
+      "status": "read"
+    },
+    {
+      "source_id": "bok_export_price",
+      "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202601/202610/30911201AA/D",
+      "sha256": "75dfc09d65a2912a278490f84edd50feac65219862701dbc71baf74b4fba05e1",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-14T17:58:22.210Z",
+      "reviewed_at": "2026-11-14T17:58:22.210Z",
+      "status": "read"
+    },
+    {
+      "source_id": "nanya_twse",
+      "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+      "sha256": "1ee928b37a1d27b1182a56b8c5eac7ba272d286657eb39631d5be1418f9dbf0d",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-14T17:58:22.565Z",
+      "reviewed_at": "2026-11-14T17:58:22.565Z",
+      "status": "read"
+    },
+    {
+      "source_id": "market_outlook",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=5",
+      "sha256": "2821d4ccaae50b40dcd28cd4e766c69c509e73d666e4109d5907c7205a03b700",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-14T17:58:22.962Z",
+      "reviewed_at": "2026-11-14T17:58:22.962Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_tf_news_20261114",
+      "url": "https://www.trendforce.com/news/wp-json/wp/v2/posts?after=2026-11-04T00:00:00&per_page=80&_fields=id,date,link,title",
+      "sha256": "8cd76211ac8e231c82fccfeab0c21f2fe04447adcba8bc1ec4848f9833a136cf",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-14T17:58:23.368Z",
+      "reviewed_at": "2026-11-14T17:58:23.368Z",
+      "status": "read"
+    },
+    {
+      "source_id": "mobile_inventory",
+      "url": "https://www.trendforce.com/research/download/RP261112YI",
+      "sha256": "da89f9ec364ffac01c943da216a875988b4c2a1ca6a63231a5e1bc7019e4139d",
+      "access": "abstract",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-14T17:58:23.758Z",
+      "reviewed_at": "2026-11-14T17:58:23.758Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [],
+  "publication_corrections": [
+    "dram_spot",
+    "nanya_twse"
+  ],
+  "technology_reviews": [],
+  "row_reviews": [
+    {
+      "metric_id": "mu.contract.ddr4_spot",
+      "finding": "no_newer",
+      "source_ids": [
+        "index_tf_news_20261114"
+      ],
+      "note": "TrendForce 新闻列表截至 11-13，最新一期现货周报仍是 11-04。"
+    },
+    {
+      "metric_id": "mu.contract.tlc_spot",
+      "finding": "no_newer",
+      "source_ids": [
+        "index_tf_news_20261114"
+      ],
+      "note": "TrendForce 新闻列表截至 11-13，最新一期现货周报仍是 11-04。"
+    },
+    {
+      "metric_id": "mu.contract.ddr4_contract",
+      "finding": "no_newer",
+      "source_ids": [
+        "dram_contract"
+      ],
+      "note": "DRAMeXchange 公开合同价表仍停在 2026-09-30，10 月合同价仅对会员开放。"
+    }
+  ],
+  "summary": "周期页逐行核对：更新五行过期数据，下线五行无法持续更新或重复的数据，重写合约价、供给、需求、HBM 四张卡的解读。",
+  "result": "success",
+  "artifact_sha256": "a27cf4d146a299a06adf61dcc8cc29636e0cde45e8b5516547cbd2d9bf4c57c0",
+  "ledger_sha256": "8ecfc3c1e135d7516b7d6eccc95b425dc0ebe5b5bf626cebf8fbb3905b60037c",
+  "evidence_sha256": "703b2348af92dac12c4b967602548093b57eee7eb5cf39ce18a481a60356c0c9"
+}
