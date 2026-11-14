@@ -153,7 +153,7 @@ export function validateLedger(ledger,catalog,evidence,legacy) {
   {const {metric,numerator,denominator}=monitorCore.inventoryRatio,[a,b]=[numerator,denominator].map(row=>byMetric.get(`mu.${metric}.${row}`)?.payload.as_of);
     if(a!==undefined&&b!==undefined&&a!==b)add('OBSERVATION_DATE',`mu.${metric}.${numerator}`,`as_of must match mu.${metric}.${denominator}: the inventory ratio divides readings of the same month`);}
   // Past points: one sourced record per tracked metric and earlier quarter, or per industry metric and earlier reading.
-  const tracked=new Set(catalog.series?.metrics||[]),observed=new Set(catalog.series?.observations?.metrics||[]),ends=new Map();
+  const worded=new Set(catalog.series?.text||[]),tracked=new Set([...(catalog.series?.metrics||[]),...worded]),observed=new Set(catalog.series?.observations?.metrics||[]),ends=new Map();
   for(const {metric_id,key,record:r,id} of seriesRecords(ledger)) {
     const path=`series.${metric_id}.${key}`;
     if(!r){add('SERIES_RECORD',path,`Missing record ${id}`);continue;}
@@ -165,7 +165,7 @@ export function validateLedger(ledger,catalog,evidence,legacy) {
     }
     else if(r.context.entity!=='micron'||r.context.financial_period!==key||!date(r.context.period_end))add('SERIES_PERIOD',path,'Series record context must name its own quarter and period end');
     else if(key===document.financial_period||Date.parse(r.context.period_end)>=Date.parse(document.financial_as_of))add('SERIES_PERIOD',path,'The live quarter belongs in its metric row, not the series');
-    if(typeof r.payload.current!=='number')add('SERIES_VALUE',path,'Series points need a numeric current value');
+    if(worded.has(metric_id)?typeof r.payload.current!=='string'||!r.payload.current.trim():typeof r.payload.current!=='number')add('SERIES_VALUE',path,worded.has(metric_id)?'Worded series points keep the company wording as text':'Series points need a numeric current value');
     const end=r.context.period_end||r.payload.as_of,seen=ends.get(metric_id)||new Set();if(seen.has(end))add('SERIES_PERIOD',path,'Duplicate period in series');seen.add(end);ends.set(metric_id,seen);
     checkRecord(r,{series:true});
   }

@@ -14,7 +14,9 @@
     "supply",
     "demand"
   ],
-  "optional_sections": [],
+  "optional_sections": [
+    "peers"
+  ],
   "required_companies": [
     "microsoft",
     "amazon",
@@ -3326,6 +3328,183 @@
       "evidence_types": [
         "direct"
       ]
+    },
+    "mu.peers.skhynix_dram_bits": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "accounting_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "entity": "industry",
+      "measurement": "bit_shipments",
+      "unit": "",
+      "scope": "SK 海力士 DRAM 位元出货环比",
+      "temporal_basis": "quarter_change",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.peers.skhynix_dram_asp": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "accounting_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "entity": "industry",
+      "measurement": "asp",
+      "unit": "",
+      "scope": "SK 海力士 DRAM 售价环比",
+      "temporal_basis": "quarter_change",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.peers.skhynix_nand_bits": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "accounting_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "entity": "industry",
+      "measurement": "bit_shipments",
+      "unit": "",
+      "scope": "SK 海力士 NAND 位元出货环比（含 Solidigm）",
+      "temporal_basis": "quarter_change",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.peers.skhynix_nand_asp": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "accounting_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "entity": "industry",
+      "measurement": "asp",
+      "unit": "",
+      "scope": "SK 海力士 NAND 售价环比（含 Solidigm）",
+      "temporal_basis": "quarter_change",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.peers.skhynix_bit_guide": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "accounting_basis": "as_disclosed",
+      "nature": "forecast",
+      "entity": "industry",
+      "measurement": "bit_shipments",
+      "unit": "",
+      "scope": "SK 海力士下一季 DRAM / NAND 位元出货指引",
+      "temporal_basis": "target_period",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.peers.skhynix_demand_outlook": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "accounting_basis": "as_disclosed",
+      "nature": "forecast",
+      "entity": "industry",
+      "measurement": "supply",
+      "unit": "",
+      "scope": "SK 海力士对次年 DRAM / NAND 需求位元增长的展望",
+      "temporal_basis": "target_period",
+      "evidence_types": [
+        "direct"
+      ]
+    },
+    "mu.peers.cxmt_revenue": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "accounting_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "entity": "industry",
+      "measurement": "revenue",
+      "unit": "",
+      "scope": "长鑫存储（CXMT）年初至今营收及同比",
+      "temporal_basis": "as_disclosed",
+      "evidence_types": [
+        "secondary",
+        "direct"
+      ]
+    },
+    "mu.demand.pc_oem_inventory": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "accounting_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "entity": "industry",
+      "measurement": "end_consumption_proxy",
+      "unit": "",
+      "scope": "PC 厂商 DRAM 库存周数走向",
+      "temporal_basis": "as_disclosed",
+      "evidence_types": [
+        "proxy"
+      ]
+    },
+    "mu.demand.korea_semi_exports_prelim": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "accounting_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "entity": "industry",
+      "measurement": "end_consumption_proxy",
+      "unit": "USDm",
+      "scope": "韩国半导体出口月内初值（关税厅 1–10 日或 1–20 日通关口径）",
+      "temporal_basis": "as_disclosed",
+      "evidence_types": [
+        "proxy"
+      ]
+    },
+    "mu.demand.smartphone_shipments": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "accounting_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "entity": "industry",
+      "measurement": "end_consumption_proxy",
+      "unit": "百万台",
+      "scope": "全球智能手机季度出货量（IDC 初步值）",
+      "temporal_basis": "calendar_quarter",
+      "evidence_types": [
+        "proxy"
+      ]
+    },
+    "mu.demand.pc_shipments": {
+      "version": 1,
+      "active": true,
+      "required": false,
+      "supporting": false,
+      "accounting_basis": "as_disclosed",
+      "nature": "actual_or_observation",
+      "entity": "industry",
+      "measurement": "end_consumption_proxy",
+      "unit": "百万台",
+      "scope": "全球 PC 季度出货量（IDC 初步值）",
+      "temporal_basis": "calendar_quarter",
+      "evidence_types": [
+        "proxy"
+      ]
     }
   },
   "source_roles": {
@@ -3802,16 +3981,48 @@
     ],
     "mobile_inventory": [
       "mu.demand.mobile_inventory_proxy"
+    ],
+    "skhynix_deck": [
+      "mu.peers.skhynix_dram_bits",
+      "mu.peers.skhynix_dram_asp",
+      "mu.peers.skhynix_nand_bits",
+      "mu.peers.skhynix_nand_asp",
+      "mu.peers.skhynix_bit_guide",
+      "mu.peers.skhynix_demand_outlook"
+    ],
+    "cxmt_results": [
+      "mu.peers.cxmt_revenue"
+    ],
+    "pc_oem_inventory": [
+      "mu.demand.pc_oem_inventory"
+    ],
+    "korea_customs": [
+      "mu.demand.korea_semi_exports_prelim"
+    ],
+    "idc_smartphone": [
+      "mu.demand.smartphone_shipments"
+    ],
+    "idc_pc": [
+      "mu.demand.pc_shipments"
+    ],
+    "eco_skhynix_prior": [
+      "eco.skhynix.inventory"
     ]
   },
   "series": {
-    "description": "Micron quarterly metrics kept as past-quarter points for trend lines; the live quarter stays in its metric row.",
+    "description": "Micron quarterly metrics kept as past-quarter points; the live quarter stays in its metric row. Metrics under text hold the company wording (a range, not a number) and are listed on the page instead of drawn.",
     "metrics": [
       "mu.revenue.total",
       "mu.revenue.dram",
       "mu.margin.nongaap",
       "mu.inventory.days",
       "mu.capex.net"
+    ],
+    "text": [
+      "mu.asp.dram",
+      "mu.asp.nand",
+      "mu.volume.dram_bits",
+      "mu.volume.nand_bits"
     ],
     "observations": {
       "description": "Industry readings kept as dated points (as_of YYYY-MM-DD, or YYYY-MM for monthly data); the latest reading stays in its row and the one it replaces becomes a point.",
@@ -3853,7 +4064,18 @@
       "mu.demand.nanya_revenue": 45,
       "mu.demand.korea_semi_exports": 35,
       "mu.demand.korea_memory_exports": 35,
-      "mu.hbm.revenue_share": 105
+      "mu.hbm.revenue_share": 105,
+      "mu.peers.skhynix_dram_bits": 105,
+      "mu.peers.skhynix_dram_asp": 105,
+      "mu.peers.skhynix_nand_bits": 105,
+      "mu.peers.skhynix_nand_asp": 105,
+      "mu.peers.skhynix_bit_guide": 105,
+      "mu.peers.skhynix_demand_outlook": 105,
+      "mu.peers.cxmt_revenue": 200,
+      "mu.demand.pc_oem_inventory": 95,
+      "mu.demand.korea_semi_exports_prelim": 25,
+      "mu.demand.smartphone_shipments": 105,
+      "mu.demand.pc_shipments": 105
     }
   },
   "calculations": [
@@ -4121,7 +4343,9 @@
           "https://www.trendforce.com/presscenter/",
           "https://insights.trendforce.com/",
           "https://www.dramexchange.com/",
-          "https://ecos.bok.or.kr/"
+          "https://ecos.bok.or.kr/",
+          "https://www.customs.go.kr/kcs/na/ntt/selectNttList.do?mi=2891&bbsId=1362",
+          "https://www.idc.com/about/press"
         ]
       },
       "news": {
@@ -4255,6 +4479,26 @@
         "entry_url": "https://www.dramexchange.com/",
         "period_basis": "calendar_month",
         "note": "DRAMeXchange DRAM contract price table (DDR4 8Gb 1Gx8 average). Pair with the same-spec spot row; never mix with module prices."
+      },
+      "korea_customs": {
+        "entry_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttList.do?mi=2891&bbsId=1362",
+        "period_basis": "partial_month",
+        "note": "Korea Customs Service preliminary trade release for days 1–10 (about the 11th) and 1–20 (about the 21st): semiconductor exports and year-on-year change, from the attached PDF. A partial-month customs-clearance reading; never mix it with the MOTIE full-month row."
+      },
+      "idc_devices": {
+        "entry_url": "https://www.idc.com/about/press",
+        "period_basis": "calendar_quarter",
+        "note": "IDC preliminary worldwide PC and smartphone shipments, published in the second week after each quarter. Units and year-on-year change only; no vendor shares."
+      },
+      "skhynix_deck": {
+        "entry_url": "https://www.skhynix.com/ir/UI-FR-IR01/",
+        "period_basis": "calendar_quarter",
+        "note": "SK hynix quarterly earnings-release deck (IR > Earnings Release). Peers-card rows, entered in an industry-scope run when the company:skhynix report bundle is processed: DRAM and NAND bit growth and ASP change (Revenue Analysis page), next-quarter bit guidance and next-year demand bit growth. The same deck gives eco.skhynix.capex (cash flow, Acquisition of PP&E, with its year-ago column) and eco.skhynix.inventory (balance sheet; the year-ago quarter end is in the prior year's deck, source eco_skhynix_prior). Samsung gives bit and ASP changes only on its call, so no Samsung rows exist."
+      },
+      "cxmt_results": {
+        "entry_url": "https://www.trendforce.com/news/",
+        "period_basis": "as_disclosed",
+        "note": "CXMT periodic results (quarterly, half-year and annual reports on the Shanghai exchange). Secondary reports are acceptable when they name the filing; mark them secondary. YMTC is unlisted and has no regular disclosure, so it has no row."
       }
     }
   },

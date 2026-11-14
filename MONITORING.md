@@ -180,6 +180,12 @@ schema_version 仍为 2，新增必填 `ecosystem`；已有美光指标与财季
 - `mu.contract.ddr5_contract`：产业通商部月度出口发布中所列 DDR5 16Gb 固定价格（美元，`as_of` 为月份）。原文未注明出处，标 `secondary`（转引）。来源 ID `korea_trade`，与出口额同一份发布。
 - `mu.contract.bok_dram_price`：韩国央行出口价格指数（品目别，ECOS 402Y016）DRAM 项，美元基准（2020=100），单位 `index`。来源 ID `bok_export_price`。回测显示它与美光毛利率同步而非领先，用作价格基准和周期判断的评分依据。
 - `mu.supply.korea_ic_shipment` / `mu.supply.korea_ic_inventory`：统计厅生产者出货指数与库存指数（ECOS 901Y032，KSIC 26 电子零件、计算机、影像音响及通信设备制造业，季节调整，2020=100）。来源 ID 分别为 `kostat_shipment`、`kostat_inventory`。回测用原指数的同比；页面趋势用季节调整值。两行 `as_of` 必须相同；页面计算 库存 ÷ 出货，不另存比值。半导体单独的指数在 KOSIS，需要 API 密钥，目前未接入。
+- `mu.peers.*`（周期 · 供给的“同业出货、售价与扩产”卡，`optional_sections` 中的 `peers`）：SK 海力士季度业绩发布材料中的 DRAM / NAND 位元出货与售价环比（区间表述，按原文译为中文，不换算成数值）、下一季位元出货指引、次年需求位元增长展望，来源 ID `skhynix_deck`；长鑫存储（CXMT）定期报告的营收，可用点名原报告的媒体转引并标 `secondary`，来源 ID `cxmt_results`。三星只在电话会上口头说明位元与售价变化，没有书面披露，不设行；长江存储未上市，不设行。这些行属 `industry` 范围：处理 SK 海力士财报时用 `batch --targets company:skhynix,industry` 一并更新。
+- `eco.skhynix.capex` / `eco.skhynix.inventory` 自 2026 Q3 起从同一份业绩发布材料录入：资本开支取现金流量表 Acquisition of PP&E 的本期与上年同期列；存货的上年同期末数值在上一年同季的材料里（来源 ID `eco_skhynix_prior`）。
+- 三家存储厂资本开支与存货：页面从 `mu.capex.net`（上年同期取自该指标的历史点）、`mu.inventory.total`、三星与 SK 海力士产业链卡的 `capex` / `inventory` 行并列显示，不存储、不相加；每行标明同比或环比。
+- `mu.demand.pc_oem_inventory`：TrendForce 新闻稿对 PC 厂商 DRAM 库存周数走向的表述（没有数值时保留文字），来源 ID `pc_oem_inventory`。
+- `mu.demand.smartphone_shipments` / `mu.demand.pc_shipments`：IDC 季度新闻稿的全球出货量初步值（百万台）与上年同期，来源 ID `idc_smartphone` / `idc_pc`；每季结束后第二周发布。
+- `mu.demand.korea_semi_exports_prelim`：韩国关税厅月内暂定值（1–10 日约 11 日发布，1–20 日约 21 日发布）附件 PDF 主要品目表的半导体出口额（百万美元）与同比，`as_of` 为区间最后一日，行名写明区间；来源 ID `korea_customs`。它是不完整月份的通关口径，与产业通商部整月行分开，也不画趋势线（1–10 日与 1–20 日不可比）。每次例行核查读取关税厅公告列表，有新一期就更新。
 - 现货较合同价：页面用同规格的最新现货行与合同价行计算（现货 ÷ 合同价 − 1），不存储；两者日期不同，卡片同时显示两个日期。
 
 产业链公司的存货沿用该部分同比口径（本期末 vs 上年同期末）。月度指标保留自然月期间，不与季度合计混用。
@@ -203,6 +209,8 @@ schema_version 仍为 2，新增必填 `ecosystem`；已有美光指标与财季
 - 评分：判断的目标是作出判断后美光下一次公布的财季。该财季财报发布后，在对应记录填 `grade: {result: "hit"|"miss", graded_at: "YYYY-MM-DD", basis: "…"}`：上行、上行放缓——美光 DRAM 售价环比上升为应验；见顶迹象、下行——售价持平或下降、或下一财季下降为应验；见底迹象——之后两个财季内售价回升为应验。`basis` 写明所用的美光财报与韩国央行 DRAM 出口价格指数同期的变化方向；与其他判断文字一样不写数字（财季名称除外）。页面显示已评分条数与应验条数。
 
 ## 周期趋势点
+
+美光每季对售价与位元出货只给区间表述（如 mid-60s percentage range）。`catalog.series.text` 列出的四个指标（`mu.asp.dram`、`mu.asp.nand`、`mu.volume.dram_bits`、`mu.volume.nand_bits`）把历季表述按原文译成文字保存为历史点，公司页在该行下方逐季列出，不画线、不换算成数值。财季切换时旧季自动成为历史点；补录方法与数值指标相同（`micron` 范围 run 的 `history.json`）。
 
 `catalog.series.observations` 列出的行业指标（DDR4/DDR5/TLC 现货、南亚科月营收、韩国半导体与存储出口）在 周期 页画趋势线。每个数字仍只存一次：最新读数在行里，较早读数在 `ledger.series` 中按日期保存。
 

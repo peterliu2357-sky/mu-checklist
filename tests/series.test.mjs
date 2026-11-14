@@ -136,3 +136,21 @@ test('dated readings only compare within one date format',async()=>{
   assert.equal(s.compareDates('2026-10','2026-10-01'),null);
   assert.equal(s.compareDates('2026-13','2026-10'),null);
 });
+
+// Worded series: Micron states price and bit changes as ranges, so those points keep the wording instead of a number.
+const worded=(current,metric='mu.asp.dram')=>({period_end:'2024-08-29',sources:[{id:'mu_fy2024_q4_remarks',url:'https://example.com/fy2024-q4-remarks.pdf',published_at:'2024-09-25'}],payload:{label:'DRAM 售价环比',current,previous:null,unit:catalog.definitions[metric].unit,source_ids:['mu_fy2024_q4_remarks'],kind:'公司披露',period:'FQ4 环比',location:'Example locator',evidence_type:'direct',id:'dram'}});
+function wordedRun(metric,current){
+  const p=worded(current,metric),m=manifest('micron'),captured={source_id:'mu_fy2024_q4_remarks',url:p.sources[0].url,sha256:'b'.repeat(64),access:'full',accessed_at:at,reviewed_at:at,status:'read'};m.reads=[captured];
+  const def=catalog.definitions[metric],numeric=typeof current==='number';
+  const input={measurement:def.measurement,unit:def.unit,definition_version:def.version,temporal_basis:def.temporal_basis,accounting_basis:def.accounting_basis,scope:def.scope,values:{current,previous:null,value:null,summary:null},
+    raw_inputs:numeric?[{field:'current',value:current,scale:1,source_unit:def.unit,period:'FY2024 Q4',locator:'Example locator',source_id:'mu_fy2024_q4_remarks'}]:[],review:{confirmed:true,method:'fixture review',at},documents:[{...captured,locator:'Example locator',excerpt:'Synthetic test fixture, not a real filing.'}]};
+  return buildCandidate({previousLedger:ledger,previousEvidence:evidence,proposal:clone(d),supporting,history:{[metric]:{'FY2024 Q4':p}},evidenceInput:{[`${metric}@FY2024 Q4`]:input},manifest:m,catalog,legacy});
+}
+test('worded metrics keep the company wording as a past point; numeric metrics still need a number',()=>{
+  assert(catalog.series.text.includes('mu.asp.dram')&&!catalog.series.metrics.includes('mu.asp.dram'));
+  const ok=wordedRun('mu.asp.dram','合成的区间表述');
+  assert.deepEqual(ok.issues.filter(i=>i.path.includes('FY2024')||i.code.startsWith('SERIES')),[]);
+  assert.equal(ok.document.series['mu.asp.dram'].find(p=>p.financial_period==='FY2024 Q4').value,'合成的区间表述');
+  has(wordedRun('mu.asp.dram',12).issues,'SERIES_VALUE');
+  has(wordedRun('mu.inventory.days','合成的区间表述').issues,'SERIES_VALUE');
+});

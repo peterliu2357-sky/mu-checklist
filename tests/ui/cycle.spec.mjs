@@ -88,3 +88,24 @@ test('the cycle read, spot premium and inventory ratio render from stored rows',
   await expect(ratio.locator('.sparkline circle.dot')).toHaveCount(3);
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
 });
+for(const width of [320,860])test(`maker comparison and worded history fit at ${width}px`,async({page})=>{
+  const d=structuredClone(data),errors=[];page.on('pageerror',e=>errors.push(e.message));
+  // Synthetic wording for layout only.
+  const point=(financial_period,period_end,value)=>({financial_period,period_end,value,unit:'',sources:[{id:'x',url:'https://example.com/',published_at:period_end}],record_id:'a'.repeat(64)});
+  d.series={...d.series,'mu.asp.dram':[point('FY2026 Q2','2026-02-26','合成表述甲：一段较长的区间表述'),point('FY2026 Q3','2026-05-28','合成表述乙')]};
+  await page.setViewportSize({width,height:900});
+  await page.route('**/data/monitor.json?*',r=>r.fulfill({json:d}));
+  await page.goto('/#cycle');
+  const makers=page.locator('#cycle-supply .makers');
+  await expect(makers).toContainText('三家存储厂');
+  await expect(makers.locator('.group-parts li').first()).toContainText('美光');
+  await expect(makers).toContainText('同比');
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  await makers.locator('a[data-metric="capex"]').click();
+  await expect(page.locator('#panel-business')).toBeVisible();
+  const history=page.locator('#asp .worded-trend').first();
+  await expect(history.locator('li')).toHaveCount(3);
+  await expect(history.locator('li.last')).toContainText(d.metrics.find(m=>m.id==='asp').rows.find(r=>r.id==='dram').current);
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  expect(errors).toEqual([]);
+});

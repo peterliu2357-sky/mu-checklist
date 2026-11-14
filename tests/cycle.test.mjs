@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createRequire} from 'node:module';
 import fs from 'node:fs';
-const {cycleSignals,cycleSignalRefs,spotPremiums,datedRatio}=createRequire(import.meta.url)('../lib/monitor-core.js');
+const {cycleSignals,cycleSignalRefs,spotPremiums,datedRatio,makerLines,wordedTrend,cycleLayout}=createRequire(import.meta.url)('../lib/monitor-core.js');
 const row=(id,current,extra={})=>({id,label:id,current,previous:null,unit:'USD',source_ids:['x'],evidence_type:'direct',...extra});
 const doc=(metrics,series={})=>({metrics:metrics.map(([id,rows])=>({id,category:'industry',rows})),series});
 
@@ -40,4 +40,29 @@ test('every signal-row entry passed the saved back-test at both peaks under both
     for(const rule of ['gm','fresh_gm'])for(const turn of ['2018 峰','2022 峰'])
       assert(r[rule].find(e=>e.turn===turn).lead_months>=3,`${r.id} ${rule} ${turn}`);
   }
+});
+
+test('the three makers are listed side by side from rows stored elsewhere, each on its own comparison basis',()=>{
+  const point=(financial_period,value)=>({financial_period,period_end:'2025-08-28',value,unit:'USDm'});
+  const d={financial_period:'FY2026 Q4',series:{'mu.capex.net':[point('FY2025 Q4',4000),point('FY2026 Q3',7000)]},
+    metrics:[{id:'capex',category:'business',rows:[row('net',10000,{label:'净资本开支',previous:7000,unit:'USDm'})]},{id:'inventory',category:'business',rows:[row('total',10000,{label:'总库存',previous:8000,unit:'USDm'})]},
+      {id:'peers',category:'industry',rows:[row('skhynix_dram_asp','合成表述',{unit:''})]}],
+    ecosystem:{companies:[{id:'samsung',name:'三星 Samsung',period:'2026 Q3',metrics:[row('capex',27,{label:'集团现金资本开支',previous:10,unit:'KRWt'})]},{id:'skhynix',name:'SK 海力士',period:'2026 Q3',metrics:[row('capex',12,{label:'集团现金资本开支',previous:5,unit:'KRWt'}),row('inventory',19,{label:'集团期末存货',previous:13,unit:'KRWt'})]}]}};
+  const lines=makerLines(d),find=(group,id)=>lines.find(l=>l.group===group&&l.id===id);
+  // Micron's year-ago capex comes from the series point of the same quarter, not the row's prior quarter.
+  assert.deepEqual([find('capex','micron').previous,find('capex','micron').basis,find('capex','micron').change],[4000,'同比','+150.0%']);
+  assert.deepEqual([find('inventory','micron').basis,find('inventory','micron').change],['环比','+25.0%']);
+  assert.deepEqual([find('capex','samsung').href,find('capex','samsung').basis],['#partner-samsung','同比']);
+  assert.equal(find('inventory','samsung'),undefined);
+  assert.deepEqual([find('capex','skhynix').href,find('capex','skhynix').change,find('inventory','skhynix').basis],['#partner-skhynix','+140.0%','同比']);
+  assert.deepEqual(cycleLayout(d).find(s=>s.id==='supply').metrics.map(m=>m.id),['peers']);
+  // Without the year-ago series point Micron's capex is listed without a change rather than against the wrong quarter.
+  delete d.series;assert.equal(makerLines(d).find(l=>l.group==='capex'&&l.id==='micron').change,'');
+});
+test('worded history lists past quarters then the live wording, and stays empty for numeric rows',()=>{
+  const d={financial_period:'FY2026 Q4',series:{'mu.asp.dram':[{financial_period:'FY2026 Q2',value:'甲'},{financial_period:'FY2026 Q3',value:'乙'}],'mu.inventory.days':[{financial_period:'FY2026 Q3',value:120}]}};
+  assert.deepEqual(wordedTrend(d,{id:'asp'},{id:'dram',current:'丙'}),[{period:'FY2026 Q2',value:'甲'},{period:'FY2026 Q3',value:'乙'},{period:'FY2026 Q4',value:'丙'}]);
+  assert.deepEqual(wordedTrend(d,{id:'asp'},{id:'dram',current:'丙'},2).map(p=>p.value),['乙','丙']);
+  assert.deepEqual(wordedTrend(d,{id:'inventory'},{id:'days',current:129}),[]);
+  assert.deepEqual(wordedTrend(d,{id:'asp'},{id:'nand',current:'丙'}),[]);
 });
