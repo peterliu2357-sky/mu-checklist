@@ -17,7 +17,7 @@ async function open(page,{rows,reviews=[],width=390}) {
   await expect(page.locator('#contract')).toBeVisible();
 }
 const row=(page,label)=>page.locator('#contract .evidence-row',{hasText:label});
-const review=(id,finding,data_date)=>({metric_id:'mu.contract.'+id,finding,reviewed_at:'2026-11-19T01:00:00Z',data_date,source_ids:['spot'],note:''});
+const review=(id,finding,data_date)=>({metric_id:'mu.contract.'+id,finding,reviewed_at:'2026-11-19T01:00:00Z',data_date,source_ids:['spot'],note:'checked'});
 
 test('an industry card header gives the date range of its rows, not a stored label',async({page})=>{
   await open(page,{rows:{ddr4_spot:'2026-11-17',tlc_spot:'2026-11-16',ddr5_spot:'2026-11-19'}});

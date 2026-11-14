@@ -110,13 +110,14 @@ export function deriveDiscovery(previous,next,run,catalog){
   }
 }
 
+const list=v=>Array.isArray(v)?v:[];
 // Row checks come from run receipts: earlier ones stay while the row still shows the reading they checked, and this run's are stamped with its completion time.
 export function deriveRowReviews(previous,next,run,catalog){
   if(!next.monitoring)return;
   const rows=new Map(freshness.tracked(next,catalog.freshness).map(t=>[t.metric_id,freshness.dataDate(t.row,next.sources)]));
   const reviews=new Map((previous.monitoring?.row_reviews||[]).filter(r=>rows.get(r.metric_id)===r.data_date).map(r=>[r.metric_id,r]));
-  for(const r of run.row_reviews||[])if(rows.get(r.metric_id))reviews.set(r.metric_id,{metric_id:r.metric_id,finding:r.finding,reviewed_at:run.completed_at,data_date:rows.get(r.metric_id),source_ids:r.source_ids||[],note:r.note||''});
-  if(reviews.size)next.monitoring.row_reviews=[...reviews.values()].sort((a,b)=>a.metric_id.localeCompare(b.metric_id));else delete next.monitoring.row_reviews;
+  for(const r of list(run.row_reviews))if(rows.get(r?.metric_id))reviews.set(r.metric_id,{metric_id:r.metric_id,finding:r.finding,reviewed_at:run.completed_at,data_date:rows.get(r.metric_id),source_ids:list(r.source_ids),note:String(r.note||'')});
+  if(reviews.size)next.monitoring.row_reviews=[...reviews.values()].sort((a,b)=>a.metric_id<b.metric_id?-1:1);else delete next.monitoring.row_reviews;
 }
 
 const acceptedKeys=run=>new Set((run.coverage||[]).filter(c=>['verified','unchanged','gap'].includes(c.status)).map(c=>c.key));
@@ -124,10 +125,17 @@ const acceptedKeys=run=>new Set((run.coverage||[]).filter(c=>['verified','unchan
 export function validateRowFreshness(previous,next,run,catalog){
   const issues=[],add=(code,path,message)=>issues.push({code,path,message});
   const industry=acceptedKeys(run).has('industry'),tracked=new Set(freshness.tracked(next,catalog.freshness).map(t=>t.metric_id));
-  for(const r of run.row_reviews||[]){
-    if(!industry)add('ROW_REVIEW',r.metric_id,'Row checks need completed industry coverage in the same run');
-    if(!tracked.has(r.metric_id)||!['no_newer','newer_found'].includes(r.finding))add('ROW_REVIEW',r.metric_id,'Check a published row that has a freshness limit, with finding no_newer or newer_found');
-    if(!r.source_ids?.length||r.source_ids.some(id=>!next.sources[id]||!run.reads?.some(x=>x.source_id===id&&x.status==='read'&&x.reviewed_at&&x.sha256)))add('ROW_REVIEW',r.metric_id,'A row check cites published sources actually read in this run');
+  if(run.row_reviews!==undefined&&!Array.isArray(run.row_reviews))add('ROW_REVIEW','row_reviews','row_reviews is a list of {metric_id, finding, source_ids, note}');
+  const earlier=new Map((previous.monitoring?.row_reviews||[]).map(r=>[r.metric_id,r]));
+  for(const r of list(run.row_reviews)){
+    const id=r?.metric_id||'row_reviews';
+    if(!industry)add('ROW_REVIEW',id,'Row checks need completed industry coverage in the same run');
+    if(!tracked.has(r?.metric_id)||!['no_newer','newer_found'].includes(r.finding))add('ROW_REVIEW',id,'Check a published row that has a freshness limit, with finding no_newer or newer_found');
+    else if(typeof r.note!=='string'||!r.note.trim())add('ROW_REVIEW',id,'Say in note what was read and what it showed');
+    if(!list(r?.source_ids).length||list(r.source_ids).some(sid=>!next.sources[sid]||!run.reads?.some(x=>x.source_id===sid&&x.status==='read'&&x.reviewed_at&&x.sha256)))add('ROW_REVIEW',id,'A row check cites published sources actually read in this run');
+    // Newer data can be reported once; after that it has to be entered.
+    const before=earlier.get(r?.metric_id),now=(next.monitoring?.row_reviews||[]).find(x=>x.metric_id===r?.metric_id);
+    if(r?.finding==='newer_found'&&before?.finding==='newer_found'&&before.data_date===now?.data_date)add('ROW_FRESHNESS',id,'Newer data was already found in an earlier run; enter it in an industry run instead of reporting it again');
   }
   const expected=structuredClone(next);deriveRowReviews(previous,expected,run,catalog);
   if(stable(expected.monitoring?.row_reviews||[])!==stable(next.monitoring?.row_reviews||[]))add('ROW_REVIEW','monitoring.row_reviews','Row checks are derived from run receipts and cannot be edited by hand');

@@ -3834,7 +3834,7 @@
     "rows": {
       "mu.contract.ddr4_spot": 10,
       "mu.contract.tlc_spot": 10,
-      "mu.contract.ddr5_spot": 6,
+      "mu.contract.ddr5_spot": 4,
       "mu.contract.ddr4_contract": 35,
       "mu.contract.ddr5_contract": 35,
       "mu.contract.bok_dram_price": 47,
@@ -3850,7 +3850,7 @@
       "mu.demand.ssd_micron_revenue": 105,
       "mu.demand.mobile_bits_proxy": 100,
       "mu.demand.mobile_inventory_proxy": 95,
-      "mu.demand.essd_lead_time": 45,
+      "mu.demand.essd_lead_time": 14,
       "mu.demand.nanya_revenue": 45,
       "mu.demand.korea_semi_exports": 35,
       "mu.demand.korea_memory_exports": 35,

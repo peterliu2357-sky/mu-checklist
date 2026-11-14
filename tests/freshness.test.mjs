@@ -21,7 +21,7 @@ function doc(as_of='2026-11-01') {
 }
 const read_=(id,at)=>({source_id:id,status:'read',reviewed_at:at,sha256:'a'.repeat(64)});
 const run=(scope,completed_at,extra={})=>({scope,completed_at,coverage:[{key:'industry',status:'unchanged'}],reads:[read_('spot',completed_at)],...extra});
-const review=(finding,reviewed_at,data_date='2026-11-01')=>({metric_id:SPOT,finding,reviewed_at,data_date,source_ids:['spot'],note:''});
+const review=(finding,reviewed_at,data_date='2026-11-01')=>({metric_id:SPOT,finding,reviewed_at,data_date,source_ids:['spot'],note:'Read the weekly report index.'});
 const state=(d,now,c=config())=>freshness.report(d,c.freshness,at(now))[0].state;
 const codes=issues=>issues.map(i=>i.code);
 
@@ -76,9 +76,34 @@ test('a company-card reading older than the current report must have a limit',()
   assert(hit.includes('mu.revenue.total'));
 });
 
-test('a limit for an unknown or retired metric is rejected',()=>{
-  const c=clone(catalog);c.freshness.rows['mu.contract.typo']=10;
-  assert(validateDocument(live,c).some(i=>i.code==='FRESHNESS_RULE'&&i.path==='mu.contract.typo'));
+test('a limit for an unknown or retired metric, or one that is not whole days, is rejected',()=>{
+  const hit=c=>validateDocument(live,c).filter(i=>i.code==='FRESHNESS_RULE').map(i=>i.path);
+  let c=clone(catalog);c.freshness.rows['mu.contract.typo']=10;assert(hit(c).includes('mu.contract.typo'));
+  c=clone(catalog);c.definitions['mu.supply.tongluo'].active=false;c.freshness.rows['mu.supply.tongluo']=10;assert(hit(c).includes('mu.supply.tongluo'));
+  c=clone(catalog);c.freshness.rows[SPOT]=1.5;assert(hit(c).includes(SPOT));
+});
+
+test('newer data cannot be reported a second time instead of being entered',()=>{
+  const d=doc(),c=config();d.monitoring.row_reviews=[review('newer_found','2026-11-15T01:00:00Z')];
+  const r=run('discovery','2026-11-19T01:00:00Z',{row_reviews:[{metric_id:SPOT,finding:'newer_found',source_ids:['spot'],note:'Still there.'}]}),next=clone(d);
+  deriveRowReviews(d,next,r,c);
+  assert.deepEqual(codes(validateRowFreshness(d,next,r,c)),['ROW_FRESHNESS']);
+});
+
+test('a check without a note, or a malformed list of checks, is reported rather than crashing the build',()=>{
+  const d=doc(),c=config();
+  const blank=run('discovery','2026-11-15T01:00:00Z',{row_reviews:[{metric_id:SPOT,finding:'no_newer',source_ids:['spot'],note:' '}]}),a=clone(d);deriveRowReviews(d,a,blank,c);
+  assert(codes(validateRowFreshness(d,a,blank,c)).includes('ROW_REVIEW'));
+  for(const bad of [{[SPOT]:'no_newer'},[{metric_id:SPOT,finding:'no_newer',source_ids:'spot',note:'x'}],[null]]){
+    const r=run('discovery','2026-11-15T01:00:00Z',{row_reviews:bad}),b=clone(d);deriveRowReviews(d,b,r,c);
+    assert(codes(validateRowFreshness(d,b,r,c)).includes('ROW_REVIEW'));
+  }
+});
+
+test('a quote run carries earlier checks through unchanged',()=>{
+  const d=doc(),c=config();d.monitoring.row_reviews=[review('no_newer','2026-11-15T01:00:00Z')];
+  const next=clone(d);deriveRowReviews(d,next,{scope:'quote',completed_at:'2026-11-17T23:00:00Z',coverage:[{key:'quote',status:'verified'}],reads:[]},c);
+  assert.deepEqual(next.monitoring,d.monitoring);
 });
 
 test('a discovery run that covered industry cannot publish over an overdue row',()=>{
@@ -89,7 +114,7 @@ test('a discovery run that covered industry cannot publish over an overdue row',
 test('recording a check of the row lets the discovery run publish',()=>{
   const d=doc(),c=config();
   for(const finding of ['no_newer','newer_found']){
-    const r=run('discovery','2026-11-15T01:00:00Z',{row_reviews:[{metric_id:SPOT,finding,source_ids:['spot'],note:''}]}),next=clone(d);
+    const r=run('discovery','2026-11-15T01:00:00Z',{row_reviews:[{metric_id:SPOT,finding,source_ids:['spot'],note:'Read the weekly report index.'}]}),next=clone(d);
     deriveRowReviews(d,next,r,c);
     assert.deepEqual(next.monitoring.row_reviews,[review(finding,'2026-11-15T01:00:00Z')]);
     assert.deepEqual(validateRowFreshness(d,next,r,c),[]);
@@ -106,13 +131,13 @@ test('newer data found in an earlier run blocks later runs until the row is upda
 });
 
 test('an industry run cannot leave a row merely marked as having newer data',()=>{
-  const d=doc(),c=config(),r=run('industry','2026-11-15T01:00:00Z',{row_reviews:[{metric_id:SPOT,finding:'newer_found',source_ids:['spot'],note:''}]}),next=clone(d);
+  const d=doc(),c=config(),r=run('industry','2026-11-15T01:00:00Z',{row_reviews:[{metric_id:SPOT,finding:'newer_found',source_ids:['spot'],note:'Read the weekly report index.'}]}),next=clone(d);
   deriveRowReviews(d,next,r,c);
   assert.deepEqual(codes(validateRowFreshness(d,next,r,c)),['ROW_FRESHNESS']);
 });
 
 test('a row check needs a source read in the same run and completed industry coverage',()=>{
-  const d=doc(),c=config(),entry={metric_id:SPOT,finding:'no_newer',source_ids:['spot'],note:''};
+  const d=doc(),c=config(),entry={metric_id:SPOT,finding:'no_newer',source_ids:['spot'],note:'Read the weekly report index.'};
   const unread=run('discovery','2026-11-15T01:00:00Z',{row_reviews:[entry],reads:[]}),a=clone(d);deriveRowReviews(d,a,unread,c);
   assert(codes(validateRowFreshness(d,a,unread,c)).includes('ROW_REVIEW'));
   const failed={...run('discovery','2026-11-15T01:00:00Z',{row_reviews:[entry]}),coverage:[{key:'industry',status:'failed'}]},b=clone(d);deriveRowReviews(d,b,failed,c);

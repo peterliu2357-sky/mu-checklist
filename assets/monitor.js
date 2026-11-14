@@ -76,7 +76,7 @@
     if(metric.category!=='industry'&&!(limits&&readings.length&&readings.every(r=>limits[fresh.rowId(metric,r)]!=null))) return metric.period;
     const span=fresh.span(metric,data.sources);
     if(!span) return metric.period;
-    const short=d=>span.from.slice(0,4)===span.to.slice(0,4)?d.slice(5):d;
+    const year=String(new Date().getUTCFullYear()),short=d=>span.from.slice(0,4)===year&&span.to.slice(0,4)===year?d.slice(5):d;
     return span.from===span.to?`资料日期 ${short(span.to)}`:`各行资料日期 ${short(span.from)} 至 ${short(span.to)}`;
   }
   function evidence(row,metric,owner=metric) {
