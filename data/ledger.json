@@ -2,8 +2,8 @@
   "format_version": 1,
   "document": {
     "schema_version": 2,
-    "revision": "2026-11-14-2b9242eb15",
-    "updated_at": "2026-11-14T02:25:13.507Z",
+    "revision": "2026-11-14-15dd42103c",
+    "updated_at": "2026-11-14T18:04:12.798Z",
     "last_successful_check_at": "2026-09-20T23:50:00Z",
     "last_attempt_at": "2026-09-20T23:50:00Z",
     "financial_period": "FY2026 Q4",
@@ -551,12 +551,12 @@
         "type": "公司披露"
       },
       "market_outlook": {
-        "label": "美光行业供需展望",
-        "short_label": "公司展望 p16",
-        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Micron_Q3_26_Earnings_Deck.pdf#page=16",
-        "locator": "第 16 页 · Market outlook",
-        "published_at": "2026-06-24",
-        "checked_at": "2026-09-20",
+        "label": "美光行业供需展望（FQ4 业绩讲稿）",
+        "short_label": "公司展望 p5",
+        "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=5",
+        "locator": "第 5 页 · Market outlook",
+        "published_at": "2026-09-30",
+        "checked_at": "2026-11-14",
         "type": "公司披露"
       },
       "inventory_days": {
@@ -1182,12 +1182,12 @@
       },
       "dram_spot": {
         "label": "DRAMeXchange DRAM 现货报价",
-        "short_label": "11-11 · DRAM 现货",
+        "short_label": "11-13 · DRAM 现货",
         "url": "https://www.dramexchange.com/",
-        "published_at": "2026-11-11",
-        "checked_at": "2026-11-12",
+        "published_at": "2026-11-13",
+        "checked_at": "2026-11-14",
         "type": "原始行业报价",
-        "locator": "DRAM Spot Price · Last Update Nov.11 2026 18:10 (GMT+8) · Session Average / Session Change。"
+        "locator": "DRAM Spot Price · Last Update Nov.13 2026 18:10 (GMT+8) · Session Average / Session Change。"
       },
       "korea_trade": {
         "label": "韩国产业通商部 2026 年 10 月进出口动向",
@@ -1743,9 +1743,9 @@
         "short_label": "韩国央行 · DRAM 出口价格指数",
         "type": "官方统计数据接口",
         "published_at": null,
-        "locator": "ECOS 统计表 402Y016「수출물가지수(품목별)」· 品目 DRAM（30911201AA）· 달러기준 · 2025-12 至 2026-09 月度值（ECOS 公开示例接口，每次最多 10 个月）。",
-        "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202512/202609/30911201AA/D",
-        "checked_at": "2026-10-22"
+        "locator": "ECOS 统计表 402Y016「수출물가지수(품목별)」· 品目 DRAM（30911201AA）· 달러기준 · 2026-01 至 2026-10 月度值（ECOS 公开示例接口，每次最多 10 个月）。",
+        "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202601/202610/30911201AA/D",
+        "checked_at": "2026-11-14"
       },
       "kostat_shipment": {
         "label": "统计厅 生产者出货指数 · KSIC 26（经韩国央行 ECOS）",
@@ -1770,9 +1770,9 @@
         "short_label": "DRAMeXchange · DRAM 合同价",
         "type": "行业报价",
         "published_at": "2026-09-30",
-        "locator": "DRAMeXchange 首页「DRAM Contract Price」表的数据（NationalDramContract）· DDR4 8Gb 1Gx8 · Average，日期 2026-09-30。",
+        "locator": "DRAMeXchange 首页「DRAM Contract Price」表的数据（NationalDramContract）· DDR4 8Gb 1Gx8 · Average，日期 2026-09-30；10 月合同价仅对付费会员公布。",
         "url": "https://www.dramexchange.com/Home/HomePrice?Source=NationalDramContract",
-        "checked_at": "2026-11-02"
+        "checked_at": "2026-11-14"
       },
       "index_tf_press_20261025": {
         "label": "TrendForce 新闻稿列表",
@@ -2244,12 +2244,12 @@
       },
       "nanya_twse": {
         "label": "南亚科月营收（证交所申报）",
-        "short_label": "南亚科 9 月营收",
+        "short_label": "南亚科 10 月营收",
         "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
-        "published_at": "2026-10-17",
-        "checked_at": "2026-11-02",
+        "published_at": "2026-11-13",
+        "checked_at": "2026-11-14",
         "type": "官方申报数据接口",
-        "locator": "证交所上市公司每月营业收入汇总（t187ap05_L）· 公司代号 2408 · 资料年月 115/09（出表日期 115/10/17）· 当月营收与上月营收（千元新台币）。"
+        "locator": "证交所上市公司每月营业收入汇总（t187ap05_L）· 公司代号 2408 · 资料年月 115/10（出表日期 115/11/13）· 当月营收与上月营收（千元新台币）。"
       },
       "calendar_nvidia_20261117": {
         "label": "NVIDIA FY2027 Q3 电话会日期公告",
@@ -2655,6 +2655,24 @@
         "type": "原始公开新闻稿",
         "short_label": "11-11 · PC DRAM 合同价",
         "locator": "小标题「PC DRAM contract prices forecast to rise 13–18% QoQ in 4Q26」所在段落：4Q26 PC DRAM 合同价环比及 OEM DRAM 库存周数。"
+      },
+      "mobile_inventory": {
+        "label": "TrendForce · 手机市场双周报公开摘要 · 11-12",
+        "short_label": "TrendForce · 11-12 公开摘要",
+        "url": "https://www.trendforce.com/research/download/RP261112YI",
+        "published_at": "2026-11-12",
+        "checked_at": "2026-11-14",
+        "type": "研究摘要",
+        "locator": "公开摘要 / Key Highlights；未读取付费全文"
+      },
+      "index_tf_news_20261114": {
+        "label": "TrendForce News 列表",
+        "short_label": "TrendForce News",
+        "url": "https://www.trendforce.com/news/wp-json/wp/v2/posts?after=2026-11-04T00:00:00&per_page=80&_fields=id,date,link,title",
+        "published_at": null,
+        "checked_at": "2026-11-14",
+        "type": "行业官方入口",
+        "locator": "11-04 至 11-13 的稿件中，现货周报仍只有 11-04「[Insights] Memory Spot Price Update」一期。"
       }
     },
     "metrics": [
@@ -2934,9 +2952,6 @@
         "category": "business",
         "rows": [
           {
-            "record_ref": "d5e3179a0fe0858e236fb3c0de907e12cf998d4a3860f14bbcf059d9b628b7e2"
-          },
-          {
             "record_ref": "3171f05f540c674120365b73dd5563bb5939e67de8d3ff3abbb73e235c1ffc82"
           },
           {
@@ -2948,9 +2963,9 @@
         ],
         "period": "HBM 披露 06-24；份额转引 09-03；DDR5 进展 09-15",
         "checked_at": "2026-10-15",
-        "next_review": "2026-09-30",
+        "next_review": "新的 HBM 份额披露",
         "definition": "HBM 收入、交付阶段与服务器内存产品进度。",
-        "interpretation": "HBM4 已进入商业交付；512GB DDR5 RDIMM 仍处于验证阶段，量产时间为公司计划。"
+        "interpretation": "营收份额为媒体转引的 2026 年二季度数据，三季度 HBM 分厂商份额尚未见公开来源；各家 HBM4 的量产与出货进度见“周期 · 供给”的 HBM 三家进度。"
       },
       {
         "id": "contract",
@@ -2964,13 +2979,13 @@
             "record_ref": "c634fec626959918dc0feb2402be9f3d6a7e502482696af3af275f8e5f64fc34"
           },
           {
-            "record_ref": "8753d1e5df4ba2f5264146811e0c347e72314aba16a2aabb44bf2c2a5cd3c8d4"
+            "record_ref": "a177f006aa0d3e6a660f0e6b215db81c73bd77527038b5abee4294bee3b8bb94"
           },
           {
             "record_ref": "91090c352cbafd839b757dec29f711fede3f14b52546ae9de9cdfe1e78a6d3f1"
           },
           {
-            "record_ref": "c7ea625db99572b28bbbbf1daad5bf071840b095eaa1b3b538a3e4564925f36c"
+            "record_ref": "660ba054bf7dfd0fb9e30a25dd7298e03b41b39a10442881af585e57487e9f01"
           },
           {
             "record_ref": "3db4b66697872a653f890413de758ff96ef4fca7adfe9ebb5b65f85a0a220288"
@@ -2980,19 +2995,17 @@
           },
           {
             "record_ref": "8e4ed3b79e1ea73a6c59975f506106b38710e733f1c881386f1a17b65592316e"
-          },
-          {
-            "record_ref": "40de271190fdbaefbc39b029976f71b8a847bb4fb536ea4479c3126f3bf38a72"
           }
         ],
         "limits": [
-          "现货报价按指定规格采样。4Q26 普通型 DRAM 与 NAND 合同价区间来自 TrendForce 09-30 新闻稿；解读中 PC 厂商库存、采购调整与 PC DRAM 合同价涨幅放缓来自 11-11 新闻稿；NAND 趋势行仍为 09-10 公开摘要。"
+          "现货报价按指定规格采样。4Q26 普通型 DRAM 与 NAND 合同价区间来自 TrendForce 09-30 新闻稿；解读中 PC 厂商库存、采购调整与 PC DRAM 合同价涨幅放缓来自 11-11 新闻稿。",
+          "DDR4 合同价公开表自 2026-09-30 后未更新。"
         ],
         "period": "DRAM 报价至 09-23；NAND 报价至 09-14；报告至 09-16",
-        "checked_at": "2026-11-12",
+        "checked_at": "2026-11-14",
         "next_review": "每周",
         "definition": "行业合同价预测与现货报价。",
-        "interpretation": "TrendForce 09-30 预计 4Q26 普通型 DRAM 合同价仍上涨但涨幅较三季度收敛，NAND 合同价涨幅区间高于 DRAM；11-11 称 PC 厂商 DRAM 库存周数自 3Q26 起上升、成品库存逐步增加，部分厂商计划调整 4Q26 乃至 1Q27 的内存采购，PC DRAM 合同价涨幅较上季放缓。TrendForce 11-04 称 DDR4 现货高于原厂报价、需求疲弱，买方观望，周均价 11-03 小幅回落，06-23 以来整体仍上行；DDR5 现货 11-11 收盘场小幅回升；512Gb TLC 晶圆现货 8 月中以来连续回落。",
+        "interpretation": "TrendForce 09-30 预计 4Q26 普通型 DRAM 合同价仍上涨但涨幅较三季度收敛，NAND 合同价涨幅区间高于 DRAM；11-11 称 PC 厂商 DRAM 库存周数自 3Q26 起上升、成品库存逐步增加，部分厂商计划调整 4Q26 乃至 1Q27 的内存采购，PC DRAM 合同价涨幅较上季放缓。已公布的合同价读数仍在上行：韩国央行 DRAM 出口价格指数与 DDR5 固定价格最新一月均高于前月。现货方面，TrendForce 最近一期周报称 DDR4 现货高于原厂报价、需求疲弱、买方观望，周均价小幅回落；DDR5 现货大致持平；512Gb TLC 晶圆现货 8 月中以来连续回落。DRAMeXchange 公开的 DDR4 合同价表停在 9 月，之后月份仅对付费会员公布。",
         "interpretation_sources": [
           "pc_dram_1111"
         ]
@@ -3003,13 +3016,10 @@
         "category": "industry",
         "rows": [
           {
-            "record_ref": "024fa47fab18553136b96b3818129502a11ef681b94acaa4759868737846e637"
-          },
-          {
             "record_ref": "9702a61108fde216e97fb76223ea8be8e1f7bb7bd6580abb7d5ba5af5ed78856"
           },
           {
-            "record_ref": "81ca2cf5e398b0cf07428075e058af001921b6d2d9e3c41e30f563d26f4f812d"
+            "record_ref": "d605451555c2856534959b72377298c07ec818be88124e30eb50fee54faeb70c"
           },
           {
             "record_ref": "2943192c7c3a79244cc25880d05063d8bd20a2bfd505ac81688640af69cbe313"
@@ -3022,10 +3032,10 @@
           "首批晶圆、产品出货和成熟产量属于不同阶段。"
         ],
         "period": "2026–2027 展望 · 披露至 09-16",
-        "checked_at": "2026-11-12",
+        "checked_at": "2026-11-14",
         "next_review": "新行业报告",
         "definition": "机构供需预测及公司产能计划。",
-        "interpretation": "TrendForce 最新摘要预计 NAND 不同终端市场分化；企业 SSD 的需求展望不宜外推至全部消费级存储。"
+        "interpretation": "TrendForce 的摘要预计 2027 年 NAND 不同终端市场分化；企业 SSD 的需求展望不宜外推至全部消费级存储。韩国电子零件业出货指数最新一月的环比升幅大于库存指数。美光自身对行业供需的展望列在“公司”页。"
       },
       {
         "id": "demand",
@@ -3039,19 +3049,13 @@
             "record_ref": "d5994a5ee5b84ef4ddac00a943f46d4fbcce9564fbadbd4123ccf0873a969abd"
           },
           {
-            "record_ref": "f8f5cb058cf58407fef023a307713ec226c3c91f3bbc9aa47f1d147f41347316"
-          },
-          {
-            "record_ref": "f5466b5716f3f284a328f314d3f8b801b5625c3ee26291ca47598ac4438fc3fa"
-          },
-          {
-            "record_ref": "13ade29612de6812e944d29296071b7967a848b0616df7f32e684063c1b603f0"
+            "record_ref": "a5cd80f2c8b354a4e496ab176af77c0c3c17e56d6818187fe63ae830bfaa2bf5"
           },
           {
             "record_ref": "0e33faa23504fb168d843f6ea27bdfec0b13293991f6b0ef720e6dca831ca074"
           },
           {
-            "record_ref": "7a842c34c1af2283a7e3f7535cbee5317a14f73ec4b9e0192f56e7b8917ad7af"
+            "record_ref": "8ab8b72897f93c731c09ddf8982a4e3a569ae38d6e5c4cc6c4643bde26ff20b5"
           },
           {
             "record_ref": "0906c2674bc7da9d031d5aa4e6aba23caf6cd7f204178969f3bb0d72533377a3"
@@ -3061,15 +3065,16 @@
           }
         ],
         "limits": [
-          "行业自然年 Q2 与美光 FQ3 的覆盖期间不同。",
+          "行业自然季度与美光财季的覆盖期间不同。",
           "手机报告采用公开摘要，缺少统一口径的客户库存天数和消耗量。",
-          "韩国出口额与南亚科营收是售价与数量混合的间接指标，不是美光位元出货或客户库存。"
+          "韩国出口额与南亚科营收是售价与数量混合的间接指标，不是美光位元出货或客户库存。",
+          "企业 SSD 交付周期一行已下线：TrendForce 周度雷达 10-12 之后的各期不再公开该读数。"
         ],
         "period": "行业资料至 09-21",
-        "checked_at": "2026-11-12",
+        "checked_at": "2026-11-14",
         "next_review": "每周",
         "definition": "用于观察终端需求的间接指标。",
-        "interpretation": "企业 SSD 交付周期为 16 周，而 TrendForce 给出的均衡基准为 8 周，说明交付仍受约束。韩国 9 月存储芯片出口额大幅高于上年同月；南亚科 8 月营收较 7 月小幅增加（环比 +1.9%），维持在 7 月跳升后的高位。官方称出口增长来自出货量扩大、固定价格上涨及季末效应，价格与数量的作用不能拆分。这些都不是美光采购量，客户实际库存与消耗量仍待补充。"
+        "interpretation": "韩国存储芯片出口额大幅高于上年同月；南亚科月营收较前月小幅增加，维持在 7 月跳升后的高位。出口额与营收同时受价格和数量影响，两者的作用不能拆分。TrendForce 最新手机市场摘要称品牌库存偏高、内存采购放缓，与 9 月摘要所述的提前采购方向相反。这些都不是美光采购量，客户实际库存与消耗量仍待补充。"
       }
     ],
     "methodology": [
@@ -3084,6 +3089,12 @@
       "产业链指引和管理层展望按原披露日期及目标期间记录，文字为中文摘要；同比由原始金额计算，百分点与百分比区分。"
     ],
     "check_log": [
+      {
+        "at": "2026-11-14T18:04:12.798Z",
+        "status": "success",
+        "scope": "industry",
+        "text": "周期页逐行核对：更新五行过期数据，下线五行无法持续更新或重复的数据，重写合约价、供给、需求、HBM 四张卡的解读。"
+      },
       {
         "at": "2026-11-14T02:25:13.507Z",
         "status": "success",
@@ -4108,6 +4119,38 @@
         },
         {
           "record_ref": "eb1dcb583725b5c60f0cd50a4decddd230f8c5925dfdb35c40e3e32dc05c7082"
+        }
+      ],
+      "row_reviews": [
+        {
+          "metric_id": "mu.contract.ddr4_contract",
+          "finding": "no_newer",
+          "reviewed_at": "2026-11-14T18:04:12.798Z",
+          "data_date": "2026-09-30",
+          "source_ids": [
+            "dram_contract"
+          ],
+          "note": "DRAMeXchange 公开合同价表仍停在 2026-09-30，10 月合同价仅对会员开放。"
+        },
+        {
+          "metric_id": "mu.contract.ddr4_spot",
+          "finding": "no_newer",
+          "reviewed_at": "2026-11-14T18:04:12.798Z",
+          "data_date": "2026-11-03",
+          "source_ids": [
+            "index_tf_news_20261114"
+          ],
+          "note": "TrendForce 新闻列表截至 11-13，最新一期现货周报仍是 11-04。"
+        },
+        {
+          "metric_id": "mu.contract.tlc_spot",
+          "finding": "no_newer",
+          "reviewed_at": "2026-11-14T18:04:12.798Z",
+          "data_date": "2026-11-02",
+          "source_ids": [
+            "index_tf_news_20261114"
+          ],
+          "note": "TrendForce 新闻列表截至 11-13，最新一期现货周报仍是 11-04。"
         }
       ]
     },
@@ -27321,6 +27364,209 @@
         "e-0378dcf623b9efe18da309cde678e74e5e19a1ee3c81a129b742c193203fece3"
       ],
       "id": "5dba47facf735af31783d871f1b00d2f6d021fdcc88e8ff125715782ae8636f0"
+    },
+    "a177f006aa0d3e6a660f0e6b215db81c73bd77527038b5abee4294bee3b8bb94": {
+      "metric_id": "mu.contract.ddr5_spot",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "DRAM 报价至 09-23；NAND 报价至 09-14；报告至 09-16",
+        "measurement": "contract",
+        "unit": "USD",
+        "scope": "DDR5 16Gb (2Gx8) 4800/5600 现货",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "dram_spot",
+            "url": "https://www.dramexchange.com/",
+            "published_at": "2026-11-13"
+          }
+        ]
+      },
+      "payload": {
+        "label": "DDR5 16Gb (2Gx8) 4800/5600 现货",
+        "current": 60.267,
+        "previous": null,
+        "unit": "USD",
+        "source_ids": [
+          "dram_spot"
+        ],
+        "kind": "行业报价",
+        "note": "与 DDR4 1Gx8 现货是不同规格，不互相替代。",
+        "period": "截至 11-13",
+        "change": "日变动 +0.06%（DRAMeXchange 披露）",
+        "location": "DRAMeXchange · DRAM Spot Price · DDR5 16Gb (2Gx8) 4800/5600 · Session Average，Last Update Nov.13 2026 18:10 (GMT+8)。",
+        "evidence_type": "direct",
+        "id": "ddr5_spot",
+        "as_of": "2026-11-13"
+      },
+      "evidence_ids": [
+        "e-bdafd8c4be37abe41a67c9c71aed8b641e31c352b62712f2d04ec7805fc50421"
+      ],
+      "id": "a177f006aa0d3e6a660f0e6b215db81c73bd77527038b5abee4294bee3b8bb94"
+    },
+    "660ba054bf7dfd0fb9e30a25dd7298e03b41b39a10442881af585e57487e9f01": {
+      "metric_id": "mu.contract.bok_dram_price",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "DRAM 报价至 09-23；NAND 报价至 09-14；报告至 09-16",
+        "measurement": "contract",
+        "unit": "index",
+        "scope": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "bok_export_price",
+            "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202601/202610/30911201AA/D",
+            "published_at": null
+          }
+        ]
+      },
+      "payload": {
+        "label": "韩国央行 DRAM 出口价格指数（美元基准，2020=100）",
+        "current": 309.97,
+        "previous": 289.16,
+        "unit": "index",
+        "source_ids": [
+          "bok_export_price"
+        ],
+        "kind": "官方统计",
+        "note": "韩国出口 DRAM 的合同价格变动（美元计价），比现货平稳；回测中与美光毛利率同步，用作价格基准。",
+        "period": "2026 年 10 月 vs 9 月",
+        "change": null,
+        "location": "韩国央行 ECOS · 4.3.1.3 수출물가지수(품목별) · DRAM · 달러기준 · 2026 年 10 月。",
+        "evidence_type": "direct",
+        "id": "bok_dram_price",
+        "as_of": "2026-10"
+      },
+      "evidence_ids": [
+        "e-dc04904f4c43d58baed2800a96902f9d009b00186b298d4233c9ccec2c1f2004"
+      ],
+      "id": "660ba054bf7dfd0fb9e30a25dd7298e03b41b39a10442881af585e57487e9f01"
+    },
+    "d605451555c2856534959b72377298c07ec818be88124e30eb50fee54faeb70c": {
+      "metric_id": "mu.supply.micron_outlook",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "2026–2027 展望 · 披露至 09-16",
+        "measurement": "supply",
+        "unit": "",
+        "scope": "美光对 DRAM / NAND 的展望",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "market_outlook",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf#page=5",
+            "published_at": "2026-09-30"
+          }
+        ]
+      },
+      "payload": {
+        "label": "美光对 DRAM / NAND 的展望",
+        "current": "2027、2028 年供需比 2026 年紧得多；DRAM 看不到供需恢复平衡的时点",
+        "previous": null,
+        "unit": "",
+        "source_ids": [
+          "market_outlook"
+        ],
+        "kind": "公司预测",
+        "note": "公司预计 2027、2028 自然年行业 DRAM 位元出货增长约 20% 出头、NAND 约 20% 中段，两年均受供给约束。",
+        "period": "美光 09-30 展望",
+        "change": null,
+        "location": "FQ4 业绩讲稿第 5 页 · Market outlook。",
+        "evidence_type": "direct",
+        "id": "micron_outlook"
+      },
+      "evidence_ids": [
+        "e-8e552e4a6dbe6d72c17409ab3efe0c87f1a98aeb42921465b29be2588e2c76a1"
+      ],
+      "id": "d605451555c2856534959b72377298c07ec818be88124e30eb50fee54faeb70c"
+    },
+    "a5cd80f2c8b354a4e496ab176af77c0c3c17e56d6818187fe63ae830bfaa2bf5": {
+      "metric_id": "mu.demand.mobile_inventory_proxy",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "行业资料至 09-21",
+        "measurement": "end_consumption_proxy",
+        "unit": "",
+        "scope": "手机客户库存 / 提前采购",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "as_disclosed",
+        "sources": [
+          {
+            "id": "mobile_inventory",
+            "url": "https://www.trendforce.com/research/download/RP261112YI",
+            "published_at": "2026-11-12"
+          }
+        ]
+      },
+      "payload": {
+        "label": "手机品牌库存 / 内存采购",
+        "current": "品牌库存偏高，内存采购放缓",
+        "previous": null,
+        "unit": "",
+        "source_ids": [
+          "mobile_inventory"
+        ],
+        "kind": "研究摘要",
+        "note": "公开摘要未给出客户库存数值；此前 09-09 摘要为库存增加与提前采购。",
+        "period": "11-12 报告",
+        "change": null,
+        "evidence_type": "proxy",
+        "location": "公开摘要及 Key Highlights。",
+        "id": "mobile_inventory_proxy"
+      },
+      "evidence_ids": [
+        "e-7c6122f5de66841bbd1f7693f0c5cd5308238e525f5a53b3f197084c39f0f727"
+      ],
+      "id": "a5cd80f2c8b354a4e496ab176af77c0c3c17e56d6818187fe63ae830bfaa2bf5"
+    },
+    "8ab8b72897f93c731c09ddf8982a4e3a569ae38d6e5c4cc6c4643bde26ff20b5": {
+      "metric_id": "mu.demand.nanya_revenue",
+      "definition_version": 1,
+      "context": {
+        "entity": "industry",
+        "period": "行业资料至 09-21",
+        "measurement": "end_consumption_proxy",
+        "unit": "TWDb",
+        "scope": "南亚科单月营收（与上月比较）",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "calendar_month",
+        "sources": [
+          {
+            "id": "nanya_twse",
+            "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+            "published_at": "2026-11-13"
+          }
+        ]
+      },
+      "payload": {
+        "label": "南亚科单月营收",
+        "current": 46.476051,
+        "previous": 45.091089,
+        "unit": "TWDb",
+        "source_ids": [
+          "nanya_twse"
+        ],
+        "kind": "公司披露",
+        "note": "商品型 DRAM 售价与需求的间接指标，不是美光数据；未经审计。",
+        "period": "2026 年 10 月 vs 9 月",
+        "change": "环比 +3.1%（证交所申报）",
+        "location": "证交所每月营业收入汇总 · 2408 南亚科 · 115 年 10 月 · 当月营收 / 上月营收（千元新台币）。",
+        "evidence_type": "proxy",
+        "id": "nanya_revenue",
+        "as_of": "2026-10"
+      },
+      "evidence_ids": [
+        "e-7ddf36310ec0d79c6b2e528bf1ec580ee501f4159f4c4054ab53a37193a73691"
+      ],
+      "id": "8ab8b72897f93c731c09ddf8982a4e3a569ae38d6e5c4cc6c4643bde26ff20b5"
     }
   },
   "supporting": {
@@ -27425,7 +27671,8 @@
       "2026-05": "be67a005c8fefe38445542b85dbf66b5cacf216677398945bcc790d132dda749",
       "2026-06": "65f521f0a193e76ad65ef8a70276de2e3a76e2f8d08d3efc870c8bc156a067e8",
       "2026-07": "b8307104dc5a3ca027dec112a093ee7090bf4170976c723fbd65fe0ec324c3aa",
-      "2026-08": "99277b4e582878383d71c3556d293197b01a9c78f3ffbada2f961c82a3a62871"
+      "2026-08": "99277b4e582878383d71c3556d293197b01a9c78f3ffbada2f961c82a3a62871",
+      "2026-09": "7a842c34c1af2283a7e3f7535cbee5317a14f73ec4b9e0192f56e7b8917ad7af"
     },
     "mu.demand.korea_semi_exports": {
       "2026-07": "809fdc9372eb2cec5f53e179fbd7765cc257786b9cc600f2b09d3ec74aa4ced9",
@@ -27440,7 +27687,8 @@
       "2026-10-23": "5c5b3a8a7ef612a9f30d7c7e2c4911158b6a98765a5ad461b7ab525c0ea87d9a",
       "2026-10-28": "12f953c69dec2df9c5396fbb30e9cea5e6b5d13502b4cd05588392faf5ed6a26",
       "2026-10-30": "1c4290c243a68cc7ece3699fb5249d704673846c0c03a0bddec3e5a18967d233",
-      "2026-11-06": "a99a29a39fc9ce61fafc9c5dff2eae3e168b64cf1a3f56feaaa4da4d9895898b"
+      "2026-11-06": "a99a29a39fc9ce61fafc9c5dff2eae3e168b64cf1a3f56feaaa4da4d9895898b",
+      "2026-11-11": "8753d1e5df4ba2f5264146811e0c347e72314aba16a2aabb44bf2c2a5cd3c8d4"
     },
     "mu.contract.bok_dram_price": {
       "2025-06": "f4745d896b80abce92a617685ad131b5fc045387102ed85eaa5939aba4876a32",
@@ -27457,7 +27705,8 @@
       "2026-05": "ff727bd4c369c31522f19f4176bc46c6ac4da41f15763282dadf5ba004738a50",
       "2026-06": "3b0abd10c87a13c908c2b93cb4b13c3aaf6cedf5751296cbc3b01a462cb7a5b9",
       "2026-07": "bf6e2c576c2049760b43c93c900b1d8997c007f93a77e4d8c95adfa5d467792c",
-      "2026-08": "a0e8014c33e9ca3c8ae7826fb5ea193614d760b6b691032f561a1297a5adce5e"
+      "2026-08": "a0e8014c33e9ca3c8ae7826fb5ea193614d760b6b691032f561a1297a5adce5e",
+      "2026-09": "c7ea625db99572b28bbbbf1daad5bf071840b095eaa1b3b538a3e4564925f36c"
     },
     "mu.supply.korea_ic_shipment": {
       "2025-05": "d82b0796b42389857af999274283ddf1dcd6cc3ad9101103a41d9d7f1d0a4c76",
