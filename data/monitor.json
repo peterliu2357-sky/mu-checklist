@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "revision": "2026-11-14-15dd42103c",
-  "updated_at": "2026-11-14T18:04:12.798Z",
+  "revision": "2026-11-14-0aa8de9934",
+  "updated_at": "2026-11-14T21:43:45.340Z",
   "last_successful_check_at": "2026-09-20T23:50:00Z",
   "last_attempt_at": "2026-09-20T23:50:00Z",
   "financial_period": "FY2026 Q4",
@@ -2679,6 +2679,78 @@
       "checked_at": "2026-11-14",
       "type": "行业官方入口",
       "locator": "11-04 至 11-13 的稿件中，现货周报仍只有 11-04「[Insights] Memory Spot Price Update」一期。"
+    },
+    "skhynix_deck": {
+      "label": "SK 海力士 2026 年第三季度业绩发布材料",
+      "short_label": "SK 海力士 · Q3 业绩材料",
+      "url": "https://mis-prod-koce-homepage-cdn-01-blob-ep.azureedge.net/web/attach/21453379321009165.pdf",
+      "published_at": "2026-10-28",
+      "type": "公司披露",
+      "locator": "第 4 页 Revenue Analysis；第 9 页 Market Outlook；第 10 页 Q4 B/G；第 16 页 Cash Flow · Acquisition of PP&E；第 19 页 Balance Sheet · Inventories。",
+      "checked_at": "2026-11-14"
+    },
+    "cxmt_results": {
+      "label": "TrendForce 新闻 · 长鑫存储 2026 年三季报要点（转引）",
+      "short_label": "11-02 · 长鑫存储三季报（转引）",
+      "url": "https://www.trendforce.com/news/2026/11/02/news-beyond-cxmts-89-53-gross-margin-in-3q26-3-key-takeaways-on-ltas-4f%c2%b2-advancement-and-lpddr6/",
+      "published_at": "2026-11-02",
+      "type": "媒体转引",
+      "locator": "首两段：三季度毛利率；前三季度营收及同比（转引澎湃新闻、21 世纪经济报道）。",
+      "checked_at": "2026-11-14"
+    },
+    "pc_oem_inventory": {
+      "label": "TrendForce 11-11 新闻稿 · PC 厂商成品库存与 DRAM 库存周数",
+      "short_label": "11-11 · PC 厂商库存",
+      "url": "https://www.trendforce.com/presscenter/news/20261111-13303.html",
+      "published_at": "2026-11-11",
+      "type": "原始公开新闻稿",
+      "locator": "“In the PC DRAM market”一段：OEM DRAM 库存周数自 3Q26 起上升。",
+      "checked_at": "2026-11-14"
+    },
+    "korea_customs": {
+      "label": "韩国关税厅 2026 年 11 月 1–10 日进出口现况（暂定值）",
+      "short_label": "11-11 · 关税厅 1–10 日",
+      "url": "https://www.customs.go.kr/common/nttFileDownload.do?fileKey=315cfcb06b903fc9721e383c914b8874",
+      "published_at": "2026-11-11",
+      "type": "政府官方统计发布",
+      "locator": "附件 PDF 第 4 页「붙임 11.1~10일 수출입 통계」主要品目表 · 반도체 금액 / 증감률。",
+      "checked_at": "2026-11-14"
+    },
+    "idc_smartphone": {
+      "label": "IDC 新闻稿 · 2026 年第三季度全球智能手机出货量（初步值）",
+      "short_label": "IDC · 3Q26 手机出货",
+      "url": "https://www.idc.com/resource-center/press-releases/smartphone-shipments-decline-3q26/",
+      "published_at": "2026-10-14",
+      "type": "研究机构新闻稿",
+      "locator": "首段及 Top 5 Companies 表 Total 行：3Q26 / 3Q25 Shipments、Year-Over-Year Change。",
+      "checked_at": "2026-11-14"
+    },
+    "eco_skhynix_statements": {
+      "label": "SK 海力士 2026 年第三季度业绩发布材料 · 现金流量与财务状况表",
+      "short_label": "SK 海力士 · Q3 财务报表",
+      "url": "https://mis-prod-koce-homepage-cdn-01-blob-ep.azureedge.net/web/attach/21453379321009165.pdf#page=16",
+      "published_at": "2026-10-28",
+      "type": "公司披露",
+      "locator": "第 16 页 Cash Flow · Acquisition of PP&E；第 19 页 Statement of Financial Position · Inventories。",
+      "checked_at": "2026-11-14"
+    },
+    "eco_skhynix_prior": {
+      "label": "SK 海力士 2025 年第三季度业绩发布材料 · 财务状况表",
+      "short_label": "SK 海力士 · 2025 Q3 财务报表",
+      "url": "https://mis-prod-koce-homepage-cdn-01-blob-ep.azureedge.net/web/attach/3127648149034921.pdf#page=17",
+      "published_at": "2025-10-29",
+      "type": "公司披露",
+      "locator": "第 17 页 Statement of Financial Position · Inventories · Q3'25。",
+      "checked_at": "2026-11-14"
+    },
+    "idc_pc": {
+      "label": "IDC 新闻稿 · 2026 年第三季度全球 PC 出货量（初步值）",
+      "short_label": "IDC · 3Q26 PC 出货",
+      "url": "https://www.idc.com/resource-center/press-releases/idc-pc-tracker-3q26/",
+      "published_at": "2026-10-08",
+      "type": "研究机构新闻稿",
+      "locator": "首段及厂商表 Total 行：3Q26 / 3Q25 Shipments。",
+      "checked_at": "2026-11-14"
     }
   },
   "metrics": [
@@ -2724,7 +2796,7 @@
         "公司未披露精确 ASP 点值及同规格价格序列。"
       ],
       "period": "FY2026 Q4 · 截至 09-03",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-11-14",
       "next_review": "FY2027 Q1 财报（日期待公布）",
       "definition": "公司披露的当季实现售价环比变化。",
       "interpretation": "DRAM 与 NAND 售价继续环比上涨，NAND 涨幅更大；涨幅较 FQ3 收窄。"
@@ -2787,7 +2859,7 @@
         "公司披露定性环比增幅，未公布精确百分比和绝对位元数。"
       ],
       "period": "FY2026 Q4 · 截至 09-03",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-11-14",
       "next_review": "FY2027 Q1 财报（日期待公布）",
       "definition": "按位元计量的存储容量出货。",
       "interpretation": "DRAM、NAND 交付容量环比增加，NAND 增幅更大；手机与客户端部门位元出货减少。"
@@ -2921,7 +2993,7 @@
         "FQ4 产成品、在制品、原材料与贸易应收只在 FY2026 10-K 附注披露；新闻稿资产负债表的应收合计含其他应收，不能替代。"
       ],
       "period": "FY2026 Q4 · 截至 09-03",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-11-14",
       "next_review": "FY2027 Q1 财报（日期待公布）",
       "definition": "库存为期末账面价值；应收为贸易应收款，不含补助等其他应收。",
       "interpretation": "期末库存账面值增加，库存天数升至 129 天；公司称增加含节点停产前备货及计入库存的制造激励薪酬。10-K 附注显示增量主要在在制品，产成品增幅较快但基数小；贸易应收占当季收入比例较上季下降。"
@@ -3099,7 +3171,7 @@
         "公司财季与行业自然季度的覆盖期间不同。"
       ],
       "period": "FY2026 Q4 · 截至 09-03",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-11-14",
       "next_review": "FY2027 Q1 财报（日期待公布）",
       "definition": "收入、业务构成与每股盈利。",
       "interpretation": "四个部门收入均创新高，数据中心两部门占比升至 63%。收入变化同时反映售价、交付容量与产品组合。"
@@ -3210,7 +3282,7 @@
         "同组合每位元成本的可比数据尚未披露。"
       ],
       "period": "FY2026 Q4 · 截至 09-03",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-11-14",
       "next_review": "FY2027 Q1 财报（日期待公布）",
       "definition": "GAAP 和非 GAAP 分列。",
       "interpretation": "两种口径的毛利率均提高。管理层将改善主要归因于售价和执行，产品组合部分抵消。",
@@ -3342,7 +3414,7 @@
         "经营现金流受应收、应付及其他营运资金变化影响。"
       ],
       "period": "FY2026 Q4 · 截至 09-03",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-11-14",
       "next_review": "FY2027 Q1 财报（日期待公布）",
       "definition": "单个财季的现金流。",
       "interpretation": "经营现金流和调整后自由现金流增加；政府补助减少。客户保证金计入筹资活动，不进入自由现金流。"
@@ -3454,7 +3526,7 @@
         "净资本开支已扣除政府补助和资产出售收入。"
       ],
       "period": "FY2026 Q4 · 截至 09-03",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-11-14",
       "next_review": "FY2027 Q1 财报（日期待公布）",
       "definition": "资本开支、现金流覆盖与净现金。",
       "interpretation": "净资本开支增加，当季经营现金流对净开支的覆盖倍数也提高；公司计划 FY2027 资本开支高于原计划。"
@@ -3587,7 +3659,7 @@
         "FQ4 季末 RPO 与完整合同负债在 FY2026 10-K 附注披露。"
       ],
       "period": "合同截至 09-30；财务期末 09-03",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-11-14",
       "next_review": "FY2027 Q1 财报（日期待公布）",
       "definition": "战略客户协议、待履约金额与保证金。",
       "interpretation": "已签战略协议增至 26 份，含季后协议的 RPO 约 1,500 亿美元。10-K 披露财季末 RPO 约 1,340 亿美元，其中约 130 亿美元已确认为合同负债，主要为客户保证金。"
@@ -3634,7 +3706,7 @@
         "份额采用媒体转引，Counterpoint 原始表格待核实。"
       ],
       "period": "HBM 披露 06-24；份额转引 09-03；DDR5 进展 09-15",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-11-14",
       "next_review": "新的 HBM 份额披露",
       "definition": "HBM 收入、交付阶段与服务器内存产品进度。",
       "interpretation": "营收份额为媒体转引的 2026 年二季度数据，三季度 HBM 分厂商份额尚未见公开来源；各家 HBM4 的量产与出货进度见“周期 · 供给”的 HBM 三家进度。"
@@ -3874,10 +3946,271 @@
       "interpretation": "TrendForce 的摘要预计 2027 年 NAND 不同终端市场分化；企业 SSD 的需求展望不宜外推至全部消费级存储。韩国电子零件业出货指数最新一月的环比升幅大于库存指数。美光自身对行业供需的展望列在“公司”页。"
     },
     {
+      "id": "peers",
+      "title": "同业出货、售价与扩产",
+      "category": "industry",
+      "rows": [
+        {
+          "label": "SK 海力士 DRAM 售价环比",
+          "current": "二十几百分比高段增长",
+          "previous": null,
+          "unit": "",
+          "source_ids": [
+            "skhynix_deck"
+          ],
+          "kind": "公司披露",
+          "note": "原文：ASP High-20% ↑ QoQ。",
+          "period": "2026 Q3 环比",
+          "change": null,
+          "location": "业绩材料第 4 页 · Revenue Analysis · DRAM。",
+          "evidence_type": "direct",
+          "id": "skhynix_dram_asp"
+        },
+        {
+          "label": "SK 海力士 DRAM 位元出货环比",
+          "current": "约 10% 增长",
+          "previous": null,
+          "unit": "",
+          "source_ids": [
+            "skhynix_deck"
+          ],
+          "kind": "公司披露",
+          "note": "原文：B/G Approx. 10% ↑ QoQ。",
+          "period": "2026 Q3 环比",
+          "change": null,
+          "location": "业绩材料第 4 页 · Revenue Analysis · DRAM。",
+          "evidence_type": "direct",
+          "id": "skhynix_dram_bits"
+        },
+        {
+          "label": "SK 海力士 NAND 售价环比",
+          "current": "二十几百分比中段增长",
+          "previous": null,
+          "unit": "",
+          "source_ids": [
+            "skhynix_deck"
+          ],
+          "kind": "公司披露",
+          "note": "含 Solidigm。原文：ASP Mid-20% ↑ QoQ。",
+          "period": "2026 Q3 环比",
+          "change": null,
+          "location": "业绩材料第 4 页 · Revenue Analysis · NAND。",
+          "evidence_type": "direct",
+          "id": "skhynix_nand_asp"
+        },
+        {
+          "label": "SK 海力士 NAND 位元出货环比",
+          "current": "小幅减少",
+          "previous": null,
+          "unit": "",
+          "source_ids": [
+            "skhynix_deck"
+          ],
+          "kind": "公司披露",
+          "note": "含 Solidigm。原文：B/G Slight Decrease QoQ。",
+          "period": "2026 Q3 环比",
+          "change": null,
+          "location": "业绩材料第 4 页 · Revenue Analysis · NAND。",
+          "evidence_type": "direct",
+          "id": "skhynix_nand_bits"
+        },
+        {
+          "label": "SK 海力士下季位元出货指引",
+          "current": "DRAM 二十几百分比中段增长；NAND 中个位数增长",
+          "previous": null,
+          "unit": "",
+          "source_ids": [
+            "skhynix_deck"
+          ],
+          "kind": "公司指引",
+          "note": "NAND 含 Solidigm。原文：DRAM Q4 B/G Mid-20% increase QoQ；NAND Q4 B/G Mid-single% increase QoQ。",
+          "period": "2026 Q4 环比",
+          "change": null,
+          "location": "业绩材料第 10 页 · DRAM / NAND · Q4 B/G。",
+          "evidence_type": "direct",
+          "id": "skhynix_bit_guide"
+        },
+        {
+          "label": "SK 海力士对 2027 年需求位元增长的展望",
+          "current": "DRAM 二十几百分比中段；NAND 十几百分比高段",
+          "previous": null,
+          "unit": "",
+          "source_ids": [
+            "skhynix_deck"
+          ],
+          "kind": "公司预测",
+          "note": "公司口径为“可实现的需求位元增长”（Achievable Demand B/G），原文未进一步定义；公司另称需求超过供给的状态预计持续到 2030 年。",
+          "period": "2027 年同比",
+          "change": null,
+          "location": "业绩材料第 9 页 · Market Outlook · DRAM / NAND Achievable Demand B/G。",
+          "evidence_type": "direct",
+          "id": "skhynix_demand_outlook"
+        },
+        {
+          "label": "长鑫存储（CXMT）前三季度营收",
+          "current": "2,690.2 亿元人民币",
+          "previous": null,
+          "unit": "",
+          "source_ids": [
+            "cxmt_results"
+          ],
+          "kind": "公司财报（转引）",
+          "note": "TrendForce 新闻转引澎湃新闻对长鑫存储三季报的报道，本站未读取交易所原文。长江存储（YMTC）未上市、没有定期披露，未设行。",
+          "period": "2026 年前三季度",
+          "change": "同比 +738.5%（媒体转引）",
+          "location": "第二段：revenue surged 738.51% YoY to CNY 269.02 billion in the first nine months of 2026。",
+          "evidence_type": "secondary",
+          "id": "cxmt_revenue"
+        }
+      ],
+      "limits": [
+        "三星只在业绩电话会上口头说明位元出货与售价的环比变化，没有可逐项核对的书面披露，未设行；三星的集团存货与资本开支见“产业链”。",
+        "SK 海力士的位元与售价为区间表述，不是精确数值；NAND 含 Solidigm。",
+        "长鑫存储一行为媒体转引的营收，不是产能或位元出货；中国厂商的产能数字没有定期公开来源。"
+      ],
+      "period": "同业季度披露",
+      "checked_at": "2026-11-14",
+      "next_review": "各公司季度财报",
+      "definition": "其他存储厂披露的出货、售价、存货与资本开支，用来对照美光并观察供给扩张。",
+      "interpretation": "SK 海力士当季 DRAM 售价与位元出货均环比增长，NAND 售价上涨而位元出货小幅减少；公司指引下季两类产品位元出货继续增长，并给出 2027 年“可实现的需求位元增长”（Achievable Demand B/G），同时称需求超过供给的状态将持续到 2030 年。三家的存货与资本开支对照见下方卡片。长鑫存储营收同比大幅增长，其中售价与出货量的作用无法拆分，不等于产能或位元出货。美光同季的售价与出货变化见“公司”。"
+    },
+    {
       "id": "demand",
       "title": "终端需求的间接指标",
       "category": "industry",
       "rows": [
+        {
+          "label": "手机品牌库存 / 内存采购",
+          "current": "品牌库存偏高，内存采购放缓",
+          "previous": null,
+          "unit": "",
+          "source_ids": [
+            "mobile_inventory"
+          ],
+          "kind": "研究摘要",
+          "note": "公开摘要未给出客户库存数值；此前 09-09 摘要为库存增加与提前采购。",
+          "period": "11-12 报告",
+          "change": null,
+          "evidence_type": "proxy",
+          "location": "公开摘要及 Key Highlights。",
+          "id": "mobile_inventory_proxy"
+        },
+        {
+          "label": "PC 厂商 DRAM 库存周数",
+          "current": "自三季度起持续上升，预计四季度续增",
+          "previous": null,
+          "unit": "",
+          "kind": "行业观察",
+          "note": "TrendForce 未给出周数数值；并称此前涨价使部分品牌超额下单，部分厂商已开始与内存供应商重谈 2027 年的产品组合。",
+          "period": "11-11 新闻稿",
+          "change": null,
+          "location": "“In the PC DRAM market”一段：steady increase in DRAM inventory weeks among OEMs since 3Q26。",
+          "evidence_type": "proxy",
+          "source_ids": [
+            "pc_oem_inventory"
+          ],
+          "id": "pc_oem_inventory"
+        },
+        {
+          "label": "全球智能手机出货量",
+          "current": 255.3,
+          "previous": 327.3,
+          "unit": "百万台",
+          "kind": "行业估计",
+          "note": "IDC 初步值。IDC 称内存成本上涨推高售价、压低出货，为其统计以来最大的单季同比降幅。",
+          "period": "2026 Q3 vs 2025 Q3",
+          "change": "同比 −22.0%（IDC 披露）",
+          "location": "Top 5 Companies 表 · Total 行 · 3Q26 Shipments / 3Q25 Shipments / Year-Over-Year Change。",
+          "evidence_type": "proxy",
+          "source_ids": [
+            "idc_smartphone"
+          ],
+          "id": "smartphone_shipments"
+        },
+        {
+          "label": "全球 PC 出货量",
+          "current": 62.7,
+          "previous": 78.5,
+          "unit": "百万台",
+          "kind": "行业估计",
+          "note": "IDC 初步值。IDC 称上半年厂商与渠道赶在涨价前备货，透支了下半年需求，渠道担心库存偏高。",
+          "period": "2026 Q3 vs 2025 Q3",
+          "change": "同比 −20.1%（IDC 披露）",
+          "location": "首段及厂商表 Total 行 · 3Q26 Shipments / 3Q25 Shipments。",
+          "evidence_type": "proxy",
+          "source_ids": [
+            "idc_pc"
+          ],
+          "id": "pc_shipments"
+        },
+        {
+          "label": "韩国半导体单月出口额",
+          "current": 56438,
+          "previous": 15701,
+          "unit": "USDm",
+          "source_ids": [
+            "korea_trade"
+          ],
+          "kind": "官方统计",
+          "note": "整月值（非海关 1–20 日初值）；受价格、数量和汇率共同影响，不是美光出货。",
+          "period": "2026 年 10 月 vs 2025 年 10 月",
+          "change": "同比 +259.4%（官方披露）",
+          "location": "产业通商部 10 月进出口动向 · 附件 PDF 第 11 页20 大品目表 · 반도체。",
+          "evidence_type": "proxy",
+          "id": "korea_semi_exports",
+          "as_of": "2026-10"
+        },
+        {
+          "label": "韩国半导体出口月内初值（1–10 日）",
+          "current": 16632,
+          "previous": null,
+          "unit": "USDm",
+          "kind": "官方统计",
+          "note": "关税厅通关口径的月内暂定值：每月 11 日前后公布 1–10 日，21 日前后公布 1–20 日。受工作日数影响（本期 7.5 日，上年同期 7.0 日），不能与整月值直接相比。",
+          "period": "2026 年 11 月 1–10 日",
+          "change": "同比 +331.2%（官方披露）",
+          "location": "附件 PDF 第 3 页「붙임」主要品目表 · 수출 · 반도체 · 금액（百万美元）/ 증감률。",
+          "evidence_type": "proxy",
+          "source_ids": [
+            "korea_customs"
+          ],
+          "as_of": "2026-11-10",
+          "id": "korea_semi_exports_prelim"
+        },
+        {
+          "label": "韩国存储芯片单月出口额",
+          "current": 50140,
+          "previous": 10890,
+          "unit": "USDm",
+          "source_ids": [
+            "korea_trade"
+          ],
+          "kind": "官方统计",
+          "note": "原文以亿美元列示（501.4 / 108.9）；整月值。受价格与数量共同影响。约占同月半导体出口的九成（上年同月约七成），同期存储价格大幅上涨。",
+          "period": "2026 年 10 月 vs 2025 年 10 月",
+          "change": "同比 +360.5%（官方披露）",
+          "location": "产业通商部 10 月进出口动向 · 附件 PDF 第 12 页· 메모리/시스템 반도체 수출액。",
+          "evidence_type": "proxy",
+          "id": "korea_memory_exports",
+          "as_of": "2026-10"
+        },
+        {
+          "label": "南亚科单月营收",
+          "current": 46.476051,
+          "previous": 45.091089,
+          "unit": "TWDb",
+          "source_ids": [
+            "nanya_twse"
+          ],
+          "kind": "公司披露",
+          "note": "商品型 DRAM 售价与需求的间接指标，不是美光数据；未经审计。",
+          "period": "2026 年 10 月 vs 9 月",
+          "change": "环比 +3.1%（证交所申报）",
+          "location": "证交所每月营业收入汇总 · 2408 南亚科 · 115 年 10 月 · 当月营收 / 上月营收（千元新台币）。",
+          "evidence_type": "proxy",
+          "id": "nanya_revenue",
+          "as_of": "2026-10"
+        },
         {
           "label": "五大企业 SSD 厂商收入",
           "current": "约 375.9 亿美元",
@@ -3911,22 +4244,6 @@
           "id": "ssd_micron_revenue"
         },
         {
-          "label": "手机品牌库存 / 内存采购",
-          "current": "品牌库存偏高，内存采购放缓",
-          "previous": null,
-          "unit": "",
-          "source_ids": [
-            "mobile_inventory"
-          ],
-          "kind": "研究摘要",
-          "note": "公开摘要未给出客户库存数值；此前 09-09 摘要为库存增加与提前采购。",
-          "period": "11-12 报告",
-          "change": null,
-          "evidence_type": "proxy",
-          "location": "公开摘要及 Key Highlights。",
-          "id": "mobile_inventory_proxy"
-        },
-        {
           "label": "客户实际内存库存天数",
           "current": null,
           "previous": null,
@@ -3941,70 +4258,20 @@
           "location": "公开摘要没有客户实际库存天数。",
           "evidence_type": "unavailable",
           "id": "customer_inventory"
-        },
-        {
-          "label": "南亚科单月营收",
-          "current": 46.476051,
-          "previous": 45.091089,
-          "unit": "TWDb",
-          "source_ids": [
-            "nanya_twse"
-          ],
-          "kind": "公司披露",
-          "note": "商品型 DRAM 售价与需求的间接指标，不是美光数据；未经审计。",
-          "period": "2026 年 10 月 vs 9 月",
-          "change": "环比 +3.1%（证交所申报）",
-          "location": "证交所每月营业收入汇总 · 2408 南亚科 · 115 年 10 月 · 当月营收 / 上月营收（千元新台币）。",
-          "evidence_type": "proxy",
-          "id": "nanya_revenue",
-          "as_of": "2026-10"
-        },
-        {
-          "label": "韩国半导体单月出口额",
-          "current": 56438,
-          "previous": 15701,
-          "unit": "USDm",
-          "source_ids": [
-            "korea_trade"
-          ],
-          "kind": "官方统计",
-          "note": "整月值（非海关 1–20 日初值）；受价格、数量和汇率共同影响，不是美光出货。",
-          "period": "2026 年 10 月 vs 2025 年 10 月",
-          "change": "同比 +259.4%（官方披露）",
-          "location": "产业通商部 10 月进出口动向 · 附件 PDF 第 11 页20 大品目表 · 반도체。",
-          "evidence_type": "proxy",
-          "id": "korea_semi_exports",
-          "as_of": "2026-10"
-        },
-        {
-          "label": "韩国存储芯片单月出口额",
-          "current": 50140,
-          "previous": 10890,
-          "unit": "USDm",
-          "source_ids": [
-            "korea_trade"
-          ],
-          "kind": "官方统计",
-          "note": "原文以亿美元列示（501.4 / 108.9）；整月值。受价格与数量共同影响。约占同月半导体出口的九成（上年同月约七成），同期存储价格大幅上涨。",
-          "period": "2026 年 10 月 vs 2025 年 10 月",
-          "change": "同比 +360.5%（官方披露）",
-          "location": "产业通商部 10 月进出口动向 · 附件 PDF 第 12 页· 메모리/시스템 반도체 수출액。",
-          "evidence_type": "proxy",
-          "id": "korea_memory_exports",
-          "as_of": "2026-10"
         }
       ],
       "limits": [
         "行业自然季度与美光财季的覆盖期间不同。",
         "手机报告采用公开摘要，缺少统一口径的客户库存天数和消耗量。",
         "韩国出口额与南亚科营收是售价与数量混合的间接指标，不是美光位元出货或客户库存。",
-        "企业 SSD 交付周期一行已下线：TrendForce 周度雷达 10-12 之后的各期不再公开该读数。"
+        "企业 SSD 交付周期一行已下线：TrendForce 周度雷达 10-12 之后的各期不再公开该读数。",
+        "IDC 出货量为初步值，后续可能修订；关税厅月内初值只覆盖当月前 10 日或前 20 日。"
       ],
       "period": "行业资料至 09-21",
       "checked_at": "2026-11-14",
       "next_review": "每周",
       "definition": "用于观察终端需求的间接指标。",
-      "interpretation": "韩国存储芯片出口额大幅高于上年同月；南亚科月营收较前月小幅增加，维持在 7 月跳升后的高位。出口额与营收同时受价格和数量影响，两者的作用不能拆分。TrendForce 最新手机市场摘要称品牌库存偏高、内存采购放缓，与 9 月摘要所述的提前采购方向相反。这些都不是美光采购量，客户实际库存与消耗量仍待补充。"
+      "interpretation": "消费电子一侧转弱：IDC 的手机与 PC 季度出货量同比均明显下滑，TrendForce 称 PC 厂商的 DRAM 库存周数上升、手机品牌库存偏高且内存采购放缓。出口额与同业营收类指标仍强：韩国半导体出口的整月值与月内初值都大幅高于上年同期，南亚科月营收维持高位。出口额与营收同时受价格和数量影响，两者的作用不能拆分。这些都不是美光采购量，客户实际库存与消耗量仍待补充。"
     }
   ],
   "methodology": [
@@ -4019,6 +4286,12 @@
     "产业链指引和管理层展望按原披露日期及目标期间记录，文字为中文摘要；同比由原始金额计算，百分点与百分比区分。"
   ],
   "check_log": [
+    {
+      "at": "2026-11-14T21:43:45.340Z",
+      "status": "success",
+      "scope": "batch",
+      "text": "新增同业（SK 海力士、长鑫存储）与需求行（PC 厂商库存、手机与 PC 出货、韩国出口月内初值），补录 SK 海力士资本开支与存货，以及美光七个财季的售价与位元出货环比表述。"
+    },
     {
       "at": "2026-11-14T18:04:12.798Z",
       "status": "success",
@@ -5642,7 +5915,7 @@
         "previous_period": "2025 Q3",
         "period_end": "2026-09-30",
         "published_at": "2026-10-28",
-        "checked_at": "2026-10-29",
+        "checked_at": "2026-11-14",
         "scope": "集团存储业务，财报采用 K-IFRS。",
         "metrics": [
           {
@@ -5684,6 +5957,33 @@
             "note": "",
             "evidence_type": "direct",
             "digits": 0
+          },
+          {
+            "id": "capex",
+            "label": "集团现金资本开支",
+            "current": 12.67,
+            "previous": 5.033,
+            "unit": "KRWt",
+            "source_ids": [
+              "eco_skhynix_statements"
+            ],
+            "location": "业绩材料第 16 页 · Cash Flow · Acquisition of PP&E，'26 Q3 / '25 Q3；十亿韩元除以 1,000。",
+            "note": "现金流量表中购置有形资产的单季支出。",
+            "evidence_type": "direct"
+          },
+          {
+            "id": "inventory",
+            "label": "集团期末存货",
+            "current": 19.356,
+            "previous": 13.156,
+            "unit": "KRWt",
+            "source_ids": [
+              "eco_skhynix_statements",
+              "eco_skhynix_prior"
+            ],
+            "location": "本期：2026 Q3 业绩材料第 19 页 · Inventories · Q3'26；上年同期：2025 Q3 业绩材料第 17 页 · Inventories · Q3'25；十亿韩元除以 1,000。",
+            "note": "集团合并口径，含 Solidigm。",
+            "evidence_type": "direct"
           }
         ],
         "outlook": [
@@ -5740,7 +6040,8 @@
           }
         ],
         "notes": [
-          "本次读取的财报新闻稿未提供可逐项核对的季度资本开支及经营现金流，保留数据缺口。"
+          "资本开支与存货取自业绩发布材料的现金流量表与财务状况表；上年同期末存货取自 2025 年第三季度材料。",
+          "业绩发布材料未单列经营现金流的同比口径，保留该缺口。"
         ]
       }
     ]
@@ -5801,7 +6102,7 @@
           "index_mu_sec_20261015"
         ],
         "reason": "已读取 SEC 申报目录：Micron 于 10-09 提交 FY2026 10-K（期末 2026-09-03）。待 10-K 的存货构成、贸易应收、RPO 与合同负债行另行发布公司更新。",
-        "processed_at": "2026-10-15T11:35:03.370Z"
+        "processed_at": "2026-11-14T21:43:45.340Z"
       },
       {
         "key": "company:samsung",
@@ -13314,6 +13615,406 @@
           }
         ],
         "record_id": "e982ed0aeb825ae20d2884ac8d2e306ea49c7deb3c829a06d264bb76efe2b6df"
+      }
+    ],
+    "mu.asp.dram": [
+      {
+        "financial_period": "FY2025 Q1",
+        "period_end": "2024-11-28",
+        "value": "高个位数百分比增长",
+        "unit": "",
+        "sources": [
+          {
+            "id": "mu_fy2025_q1_remarks_p7",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q1/FY25-Q1-Prepared-Remarks.pdf#page=7",
+            "published_at": "2024-12-18"
+          }
+        ],
+        "record_id": "6f68d69612ba1887af91463832c06edd8b44e59760d8194544ba51aefdceb84d"
+      },
+      {
+        "financial_period": "FY2025 Q2",
+        "period_end": "2025-02-27",
+        "value": "中个位数百分比增长",
+        "unit": "",
+        "sources": [
+          {
+            "id": "mu_fy2025_q2_remarks_p7",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q2/Micron_FY25_Q2_Prepared_Remarks_2-1.pdf#page=7",
+            "published_at": "2025-03-20"
+          }
+        ],
+        "record_id": "3ff97aadb8dd3dda998b4162baf015307a445c7d85aa83aa08914984e4c00220"
+      },
+      {
+        "financial_period": "FY2025 Q3",
+        "period_end": "2025-05-29",
+        "value": "低个位数百分比下降",
+        "unit": "",
+        "sources": [
+          {
+            "id": "mu_fy2025_q3_remarks_p7",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q3/Micron_FY25_Q3_Prepared_Remarks.pdf#page=7",
+            "published_at": "2025-06-25"
+          }
+        ],
+        "record_id": "7091931a19515be21859b40d3273996adf82c91bf777526fff5b252fd317a1fe"
+      },
+      {
+        "financial_period": "FY2025 Q4",
+        "period_end": "2025-08-28",
+        "value": "低两位数百分比增长",
+        "unit": "",
+        "sources": [
+          {
+            "id": "mu_fy2025_q4_remarks_p7",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q4/Q4-2025-Prepared-Remarks-1.pdf#page=7",
+            "published_at": "2025-09-23"
+          }
+        ],
+        "record_id": "8fbe96760239c79d18f28439b59943449d3879bae534a6815b57bdc7f2b770ac"
+      },
+      {
+        "financial_period": "FY2026 Q1",
+        "period_end": "2025-11-27",
+        "value": "约 20% 增长",
+        "unit": "",
+        "sources": [
+          {
+            "id": "mu_fy2026_q1_remarks_p6",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q1/Micron_Q1-2026-Prepared-Remarks.pdf#page=6",
+            "published_at": "2025-12-17"
+          }
+        ],
+        "record_id": "2b416f309600e9e796e4c7bac0c752bbb96b7cc6097b54e5fa8817c5edbafe95"
+      },
+      {
+        "financial_period": "FY2026 Q2",
+        "period_end": "2026-02-26",
+        "value": "六十几百分比中段增长",
+        "unit": "",
+        "sources": [
+          {
+            "id": "mu_fy2026_q2_remarks_p7",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q2/Q2-2026-Prepared-Remarks.pdf#page=7",
+            "published_at": "2026-03-18"
+          }
+        ],
+        "record_id": "ed60f80545b464a6664638eec4b8643285338a738d495ca5c504d2fab83e2f8a"
+      },
+      {
+        "financial_period": "FY2026 Q3",
+        "period_end": "2026-05-28",
+        "value": "六十几百分比低段增长",
+        "unit": "",
+        "sources": [
+          {
+            "id": "mu_fy2026_q3_remarks_p8",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf#page=8",
+            "published_at": "2026-06-24"
+          }
+        ],
+        "record_id": "0d465878cc99f18b5c4637adf8eebffdc03d416c8d4d7aa8dd0bfc55ff80622a"
+      }
+    ],
+    "mu.volume.dram_bits": [
+      {
+        "financial_period": "FY2025 Q1",
+        "period_end": "2024-11-28",
+        "value": "低两位数百分比增长",
+        "unit": "",
+        "sources": [
+          {
+            "id": "mu_fy2025_q1_remarks_p7",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q1/FY25-Q1-Prepared-Remarks.pdf#page=7",
+            "published_at": "2024-12-18"
+          }
+        ],
+        "record_id": "e7ab936aca2a4549554b1cafa5f8fbcadf7aa3db3de44cc870016f7e33ad8ae3"
+      },
+      {
+        "financial_period": "FY2025 Q2",
+        "period_end": "2025-02-27",
+        "value": "高个位数百分比下降",
+        "unit": "",
+        "sources": [
+          {
+            "id": "mu_fy2025_q2_remarks_p7",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q2/Micron_FY25_Q2_Prepared_Remarks_2-1.pdf#page=7",
+            "published_at": "2025-03-20"
+          }
+        ],
+        "record_id": "d5ff1113394e8e6a74ef3ceb75a58d1d1f9a12d1ab4218fbd55c6a0711ed7068"
+      },
+      {
+        "financial_period": "FY2025 Q3",
+        "period_end": "2025-05-29",
+        "value": "增长超过 20%",
+        "unit": "",
+        "sources": [
+          {
+            "id": "mu_fy2025_q3_remarks_p7",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q3/Micron_FY25_Q3_Prepared_Remarks.pdf#page=7",
+            "published_at": "2025-06-25"
+          }
+        ],
+        "record_id": "70fce0b79fa46f2f44e03c9e023926f6fe15a7bac437980eb7c84c98860039b0"
+      },
+      {
+        "financial_period": "FY2025 Q4",
+        "period_end": "2025-08-28",
+        "value": "十几百分比低段增长",
+        "unit": "",
+        "sources": [
+          {
+            "id": "mu_fy2025_q4_remarks_p7",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q4/Q4-2025-Prepared-Remarks-1.pdf#page=7",
+            "published_at": "2025-09-23"
+          }
+        ],
+        "record_id": "08b666e98ced49cecf7af4e0d01e3b387a91e8720dcf7d95fec355ee3b1a1a80"
+      },
+      {
+        "financial_period": "FY2026 Q1",
+        "period_end": "2025-11-27",
+        "value": "小幅增长",
+        "unit": "",
+        "sources": [
+          {
+            "id": "mu_fy2026_q1_remarks_p6",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q1/Micron_Q1-2026-Prepared-Remarks.pdf#page=6",
+            "published_at": "2025-12-17"
+          }
+        ],
+        "record_id": "797eea0558853c3eca59c3f7e084cf9b01ea8eed0f56ef29c073178551bd0caa"
+      },
+      {
+        "financial_period": "FY2026 Q2",
+        "period_end": "2026-02-26",
+        "value": "中个位数增长",
+        "unit": "",
+        "sources": [
+          {
+            "id": "mu_fy2026_q2_remarks_p7",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q2/Q2-2026-Prepared-Remarks.pdf#page=7",
+            "published_at": "2026-03-18"
+          }
+        ],
+        "record_id": "992de9605052066f117af16135ee964e8d215c7230c3073b3a07e1e34ae67650"
+      },
+      {
+        "financial_period": "FY2026 Q3",
+        "period_end": "2026-05-28",
+        "value": "低个位数百分比增长",
+        "unit": "",
+        "sources": [
+          {
+            "id": "mu_fy2026_q3_remarks_p8",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf#page=8",
+            "published_at": "2026-06-24"
+          }
+        ],
+        "record_id": "5d7eeacbfb485a6051b557eabee3ffbc61e23f66a3ea9da707d9b160ec473900"
+      }
+    ],
+    "mu.asp.nand": [
+      {
+        "financial_period": "FY2025 Q1",
+        "period_end": "2024-11-28",
+        "value": "低个位数百分比下降",
+        "unit": "",
+        "sources": [
+          {
+            "id": "mu_fy2025_q1_remarks_p7",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q1/FY25-Q1-Prepared-Remarks.pdf#page=7",
+            "published_at": "2024-12-18"
+          }
+        ],
+        "record_id": "5f947a78fd7b9a8e8510c34d0de6de181d2a894640c2b1a3860b43e3a6113636"
+      },
+      {
+        "financial_period": "FY2025 Q2",
+        "period_end": "2025-02-27",
+        "value": "十几百分比高段下降",
+        "unit": "",
+        "sources": [
+          {
+            "id": "mu_fy2025_q2_remarks_p7",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q2/Micron_FY25_Q2_Prepared_Remarks_2-1.pdf#page=7",
+            "published_at": "2025-03-20"
+          }
+        ],
+        "record_id": "e8368669b47f1f86573c6add0b967c34783e28f2ccf345332833902cbe032fa0"
+      },
+      {
+        "financial_period": "FY2025 Q3",
+        "period_end": "2025-05-29",
+        "value": "高个位数百分比下降",
+        "unit": "",
+        "sources": [
+          {
+            "id": "mu_fy2025_q3_remarks_p7",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q3/Micron_FY25_Q3_Prepared_Remarks.pdf#page=7",
+            "published_at": "2025-06-25"
+          }
+        ],
+        "record_id": "2c636c3f933971b8b0c4b37826cd46ff5b5be1fb02cc0ee7edf613db70c1cb0b"
+      },
+      {
+        "financial_period": "FY2025 Q4",
+        "period_end": "2025-08-28",
+        "value": "高个位数百分比增长",
+        "unit": "",
+        "sources": [
+          {
+            "id": "mu_fy2025_q4_remarks_p7",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q4/Q4-2025-Prepared-Remarks-1.pdf#page=7",
+            "published_at": "2025-09-23"
+          }
+        ],
+        "record_id": "69b6abf562891dea0d364e070a505afc15d0af90dd542ad7119e3b85e6edeb80"
+      },
+      {
+        "financial_period": "FY2026 Q1",
+        "period_end": "2025-11-27",
+        "value": "十几百分比中段增长",
+        "unit": "",
+        "sources": [
+          {
+            "id": "mu_fy2026_q1_remarks_p6",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q1/Micron_Q1-2026-Prepared-Remarks.pdf#page=6",
+            "published_at": "2025-12-17"
+          }
+        ],
+        "record_id": "9ee0352a1771e6c06c62f196bb2d97d0d443d6798635121f532d53d4860c4f34"
+      },
+      {
+        "financial_period": "FY2026 Q2",
+        "period_end": "2026-02-26",
+        "value": "七十几百分比高段增长",
+        "unit": "",
+        "sources": [
+          {
+            "id": "mu_fy2026_q2_remarks_p7",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q2/Q2-2026-Prepared-Remarks.pdf#page=7",
+            "published_at": "2026-03-18"
+          }
+        ],
+        "record_id": "3b82b3372a70b2077376d3bae80c4bfaf601686dd520313406863ee804efe48e"
+      },
+      {
+        "financial_period": "FY2026 Q3",
+        "period_end": "2026-05-28",
+        "value": "八十几百分比中段增长",
+        "unit": "",
+        "sources": [
+          {
+            "id": "mu_fy2026_q3_remarks_p8",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf#page=8",
+            "published_at": "2026-06-24"
+          }
+        ],
+        "record_id": "50ef0e7e5b31553f6b2d6d530da2fb11aa45a69a40529ea904806f63e6914da8"
+      }
+    ],
+    "mu.volume.nand_bits": [
+      {
+        "financial_period": "FY2025 Q1",
+        "period_end": "2024-11-28",
+        "value": "低个位数百分比下降",
+        "unit": "",
+        "sources": [
+          {
+            "id": "mu_fy2025_q1_remarks_p7",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q1/FY25-Q1-Prepared-Remarks.pdf#page=7",
+            "published_at": "2024-12-18"
+          }
+        ],
+        "record_id": "6a7d879459f075cac52b6dd2c2e035ab877a028fdbc666f2ed3f94a2687d4163"
+      },
+      {
+        "financial_period": "FY2025 Q2",
+        "period_end": "2025-02-27",
+        "value": "小幅增长",
+        "unit": "",
+        "sources": [
+          {
+            "id": "mu_fy2025_q2_remarks_p7",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q2/Micron_FY25_Q2_Prepared_Remarks_2-1.pdf#page=7",
+            "published_at": "2025-03-20"
+          }
+        ],
+        "record_id": "4158dccc9d3751a25e516e8e288d5326caaee6c579bf966cac596fe1feaa06af"
+      },
+      {
+        "financial_period": "FY2025 Q3",
+        "period_end": "2025-05-29",
+        "value": "二十几百分比中段增长",
+        "unit": "",
+        "sources": [
+          {
+            "id": "mu_fy2025_q3_remarks_p7",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q3/Micron_FY25_Q3_Prepared_Remarks.pdf#page=7",
+            "published_at": "2025-06-25"
+          }
+        ],
+        "record_id": "c4133584f4fb97535301142ba999fbec48ea753f97f97c84d378baee764f1201"
+      },
+      {
+        "financial_period": "FY2025 Q4",
+        "period_end": "2025-08-28",
+        "value": "中个位数百分比下降",
+        "unit": "",
+        "sources": [
+          {
+            "id": "mu_fy2025_q4_remarks_p7",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q4/Q4-2025-Prepared-Remarks-1.pdf#page=7",
+            "published_at": "2025-09-23"
+          }
+        ],
+        "record_id": "7fb16f5039c12f8635e00e398a3e13d5d9a14ca9e32f82ad597679ecf5b7ce72"
+      },
+      {
+        "financial_period": "FY2026 Q1",
+        "period_end": "2025-11-27",
+        "value": "中至高个位数百分比增长",
+        "unit": "",
+        "sources": [
+          {
+            "id": "mu_fy2026_q1_remarks_p6",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q1/Micron_Q1-2026-Prepared-Remarks.pdf#page=6",
+            "published_at": "2025-12-17"
+          }
+        ],
+        "record_id": "b66ca7fc8f9ffc62c3abd696076d860233d72843cc4edebbaa7170f6d7c9ebd9"
+      },
+      {
+        "financial_period": "FY2026 Q2",
+        "period_end": "2026-02-26",
+        "value": "低个位数百分比增长",
+        "unit": "",
+        "sources": [
+          {
+            "id": "mu_fy2026_q2_remarks_p7",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q2/Q2-2026-Prepared-Remarks.pdf#page=7",
+            "published_at": "2026-03-18"
+          }
+        ],
+        "record_id": "e7d6b69e1be5c3ec4cd2704a2a17e92a85ce3c581a5d77717d99207ab8831208"
+      },
+      {
+        "financial_period": "FY2026 Q3",
+        "period_end": "2026-05-28",
+        "value": "中个位数百分比增长",
+        "unit": "",
+        "sources": [
+          {
+            "id": "mu_fy2026_q3_remarks_p8",
+            "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf#page=8",
+            "published_at": "2026-06-24"
+          }
+        ],
+        "record_id": "ea3fed575e515a32fb613b187f6357457afd20b76886da0c57c2875bffb8f671"
       }
     ]
   }
