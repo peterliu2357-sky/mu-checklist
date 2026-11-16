@@ -2,8 +2,8 @@
   "format_version": 1,
   "document": {
     "schema_version": 2,
-    "revision": "2026-11-14-0aa8de9934",
-    "updated_at": "2026-11-14T21:43:45.340Z",
+    "revision": "2026-11-16-b183f6f58a",
+    "updated_at": "2026-11-16T01:12:37.896Z",
     "last_successful_check_at": "2026-09-20T23:50:00Z",
     "last_attempt_at": "2026-09-20T23:50:00Z",
     "financial_period": "FY2026 Q4",
@@ -2745,6 +2745,204 @@
         "type": "研究机构新闻稿",
         "locator": "首段及厂商表 Total 行：3Q26 / 3Q25 Shipments。",
         "checked_at": "2026-11-14"
+      },
+      "index_ecos_kostat_20261115": {
+        "label": "韩国央行 ECOS · KSIC 26 出货指数",
+        "short_label": "ECOS 出货指数",
+        "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202601/202611/I11ACQ/4",
+        "published_at": null,
+        "checked_at": "2026-11-16",
+        "type": "官方统计数据接口",
+        "locator": "901Y032 KSIC 26 出货指数最新月份仍为 2026-09。"
+      },
+      "index_ecos_kostat_inv_20261115": {
+        "label": "韩国央行 ECOS · KSIC 26 库存指数",
+        "short_label": "ECOS 库存指数",
+        "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202601/202611/I11ACQ/6",
+        "published_at": null,
+        "checked_at": "2026-11-16",
+        "type": "官方统计数据接口",
+        "locator": "901Y032 KSIC 26 库存指数最新月份仍为 2026-09。"
+      },
+      "index_ecos_bok_20261115": {
+        "label": "韩国央行 ECOS · 出口价格指数 DRAM",
+        "short_label": "ECOS 出口价格",
+        "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202601/202611/30911201AA/D",
+        "published_at": null,
+        "checked_at": "2026-11-16",
+        "type": "官方统计数据接口",
+        "locator": "402Y016 DRAM 项最新月份为 2026-10（已录入）。"
+      },
+      "calendar_index_alphabet_20261115": {
+        "label": "Alphabet 投资者关系",
+        "short_label": "Alphabet IR",
+        "url": "https://abc.xyz/investor/",
+        "published_at": null,
+        "checked_at": "2026-11-16",
+        "type": "公司官方入口",
+        "locator": "页面静态内容未列下一次财报日期。"
+      },
+      "calendar_index_tsmc_20261115": {
+        "label": "台积电财务日程",
+        "short_label": "TSMC 财务日程",
+        "url": "https://investor.tsmc.com/english/financial-calendar",
+        "published_at": null,
+        "checked_at": "2026-11-16",
+        "type": "公司官方入口",
+        "locator": "Upcoming Events 仅列 12-10 与 2027-01-08 月营收发布，尚无 4Q'26 法说会日期。"
+      },
+      "index_tf_press_20261115": {
+        "label": "TrendForce 新闻稿列表",
+        "short_label": "TrendForce 新闻稿",
+        "url": "https://www.trendforce.com/presscenter/",
+        "published_at": null,
+        "checked_at": "2026-11-16",
+        "type": "行业官方入口",
+        "locator": "半导体类最新新闻稿仍为 11-11「Mounting Finished-Goods Inventories Prompt Some PC OEMs to Adjust Memory Procurement Plans for 2027, Says TrendForce」（已录入）。"
+      },
+      "index_tf_news_20261115": {
+        "label": "TrendForce News 列表",
+        "short_label": "TrendForce News",
+        "url": "https://www.trendforce.com/news/wp-json/wp/v2/posts?after=2026-11-11T00:00:00&per_page=80&_fields=id,date,link,title",
+        "published_at": null,
+        "checked_at": "2026-11-16",
+        "type": "行业官方入口",
+        "locator": "11-11 至 11-13 的稿件中无内存现货价格周报；内存相关稿件为新闻转引，如 11-12「[News] Memory Makers Reportedly Plan New Price Hikes While AI Demand Widens Enterprise-Consumer Divide」。"
+      },
+      "index_dramx_20261115": {
+        "label": "DRAMeXchange 首页报价",
+        "short_label": "DRAMeXchange",
+        "url": "https://www.dramexchange.com/",
+        "published_at": null,
+        "checked_at": "2026-11-16",
+        "type": "行业官方入口",
+        "locator": "DRAM Spot Price · Last Update Nov.13 2026 18:10 (GMT+8)；DDR5 16Gb (2Gx8) 4800/5600 Session Average 60.267（已录入）。"
+      },
+      "index_dramx_contract_20261115": {
+        "label": "DRAMeXchange 合同价表",
+        "short_label": "DRAMeXchange 合同价",
+        "url": "https://www.dramexchange.com/Home/HomePrice?Source=NationalDramContract",
+        "published_at": null,
+        "checked_at": "2026-11-16",
+        "type": "行业官方入口",
+        "locator": "合同价表仍更新至 2026-09-30。"
+      },
+      "index_motir_20261115": {
+        "label": "产业通商部报道资料列表",
+        "short_label": "产业通商部",
+        "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c",
+        "published_at": null,
+        "checked_at": "2026-11-16",
+        "type": "行业官方入口",
+        "locator": "报道资料列表所示 11-13 至 11-16 新稿含 11-16「2026년 10월 정보통신산업(ICT) 수출입 동향」，无新的月度进出口统计。"
+      },
+      "index_customs_20261115": {
+        "label": "韩国关税厅报道资料列表",
+        "short_label": "关税厅",
+        "url": "https://www.customs.go.kr/kcs/na/ntt/selectNttList.do?mi=2891&bbsId=1362",
+        "published_at": null,
+        "checked_at": "2026-11-16",
+        "type": "行业官方入口",
+        "locator": "最新月内暂定值仍为 11-11「2026년 11월 1일 ~ 11월 10일 수출입 현황 [잠정치]」（已录入）；11-16 另有「2026년 10월 월간 수출입 현황 [확정치]」。"
+      },
+      "index_micron_newsroom_20261115": {
+        "label": "美光 IR 新闻稿",
+        "short_label": "Micron IR 新闻",
+        "url": "https://investors.micron.com/news/default.aspx",
+        "published_at": null,
+        "checked_at": "2026-11-16",
+        "type": "公司官方入口",
+        "locator": "经同站官方新闻稿接口读取：最新为 11-12「Micron Announces Participation in Investor Events」，此前为 11-05 董事退休公告，无工厂、制程或产品新稿。"
+      },
+      "index_micron_events_20261115": {
+        "label": "美光 IR 活动",
+        "short_label": "Micron IR 活动",
+        "url": "https://investors.micron.com/feed/Event.svc/GetEventList?LanguageId=1&eventSelection=3&sortOperator=1&eventDateFilter=3&pageSize=5&pageNumber=0&year=-1",
+        "published_at": null,
+        "checked_at": "2026-11-16",
+        "type": "公司官方入口",
+        "locator": "活动列表为 12-01「30th Annual UBS Global Technology and AI Conference」、11-18「TomorrowX Summit」与 10-21「Technology and product webinar」，尚无 FY2027 Q1 财报日期。"
+      },
+      "index_samsung_news_20261115": {
+        "label": "三星 Newsroom",
+        "short_label": "Samsung Newsroom",
+        "url": "https://news.samsung.com/global/",
+        "published_at": null,
+        "checked_at": "2026-11-16",
+        "type": "公司官方入口",
+        "locator": "11-12 至 11-16 新稿为智能眼镜、CES 2027 奖项、电视选购指南与奥运，无 DDR5 RDIMM 或 HBM 新稿。"
+      },
+      "index_skhynix_news_20261115": {
+        "label": "SK 海力士 Newsroom",
+        "short_label": "SK hynix Newsroom",
+        "url": "https://news.skhynix.com/en/",
+        "published_at": null,
+        "checked_at": "2026-11-16",
+        "type": "公司官方入口",
+        "locator": "最新仍为 11-11「Safeguarding against system failures and cyber threats」功能安全专题，无产品阶段变化。"
+      },
+      "calendar_index_micron_20261115": {
+        "label": "美光 IR 活动",
+        "short_label": "Micron IR 活动",
+        "url": "https://investors.micron.com/feed/Event.svc/GetEventList?LanguageId=1&eventSelection=3&sortOperator=1&eventDateFilter=3&pageSize=5&pageNumber=0&year=-1",
+        "published_at": null,
+        "checked_at": "2026-11-16",
+        "type": "公司官方入口",
+        "locator": "活动列表最新为 12-01「30th Annual UBS Global Technology and AI Conference」与 11-18「TomorrowX Summit」，尚无 FY2027 Q1 财报日期。"
+      },
+      "calendar_index_microsoft_20261115": {
+        "label": "Microsoft 投资者关系",
+        "short_label": "Microsoft IR",
+        "url": "https://www.microsoft.com/en-us/investor/default",
+        "published_at": null,
+        "checked_at": "2026-11-16",
+        "type": "公司官方入口",
+        "locator": "Know the next earnings release date：The next earnings release will be announced soon。"
+      },
+      "calendar_index_amazon_20261115": {
+        "label": "Amazon 投资者新闻稿",
+        "short_label": "Amazon IR",
+        "url": "https://ir.aboutamazon.com/feed/PressRelease.svc/GetPressReleaseList?LanguageId=1&bodyType=0&pressReleaseDateFilter=3&pageSize=12&pageNumber=0&year=-1",
+        "published_at": null,
+        "checked_at": "2026-11-16",
+        "type": "公司官方入口",
+        "locator": "新闻稿最新为 10-29「Amazon.com Announces Third Quarter Results」，尚无 Q4 电话会公告。"
+      },
+      "calendar_index_oracle_20261115": {
+        "label": "Oracle 投资者新闻稿",
+        "short_label": "Oracle IR",
+        "url": "https://investor.oracle.com/feed/PressRelease.svc/GetPressReleaseList?LanguageId=1&bodyType=0&pressReleaseDateFilter=3&pageSize=12&pageNumber=0&year=-1",
+        "published_at": null,
+        "checked_at": "2026-11-16",
+        "type": "公司官方入口",
+        "locator": "新闻稿最新为 11-06「Oracle's Annual Meeting of Stockholders to be held November 18, 2026」（非财报），尚无 FY2027 Q2 财报日期。"
+      },
+      "calendar_index_meta_20261115": {
+        "label": "Meta 投资者活动",
+        "short_label": "Meta IR",
+        "url": "https://investor.atmeta.com/feed/Event.svc/GetEventList?apiKey=F37D4FC40D0E4774887D6827E95013D5&eventSelection=0&eventDateFilter=0&includeFinancialReports=true&includePresentations=true&includePressReleases=true&sortOperator=1&pageSize=-1&tagList=&includeTags=true&year=-1&excludeSelection=0",
+        "published_at": null,
+        "checked_at": "2026-11-16",
+        "type": "公司官方入口",
+        "locator": "活动列表最新为 10-21「Q3 2026 Earnings Call」，尚无 Q4 日期。"
+      },
+      "calendar_index_samsung_20261115": {
+        "label": "三星 IR 活动",
+        "short_label": "Samsung IR",
+        "url": "https://www.samsung.com/global/ir/ir-events-presentations/events/",
+        "published_at": null,
+        "checked_at": "2026-11-16",
+        "type": "公司官方入口",
+        "locator": "Upcoming Events 为 JP Morgan APAC Tech Conference（11-16 至 11-18）与 Morgan Stanley Asia Pacific Summit（11-18 至 11-19），无 4Q26 电话会。"
+      },
+      "calendar_index_skhynix_20261115": {
+        "label": "SK 海力士 Newsroom 检索",
+        "short_label": "SK hynix Newsroom",
+        "url": "https://news.skhynix.com/en/?s=earnings+conference+call",
+        "published_at": null,
+        "checked_at": "2026-11-16",
+        "type": "公司官方入口",
+        "locator": "检索结果最新为「Q3 2026 Earnings Conference Call Access Details」，尚无 Q4 2026 电话会公告。"
       }
     },
     "metrics": [
@@ -3074,7 +3272,7 @@
           "DDR4 合同价公开表自 2026-09-30 后未更新。"
         ],
         "period": "DRAM 报价至 09-23；NAND 报价至 09-14；报告至 09-16",
-        "checked_at": "2026-11-14",
+        "checked_at": "2026-11-16",
         "next_review": "每周",
         "definition": "行业合同价预测与现货报价。",
         "interpretation": "TrendForce 09-30 预计 4Q26 普通型 DRAM 合同价仍上涨但涨幅较三季度收敛，NAND 合同价涨幅区间高于 DRAM；11-11 称 PC 厂商 DRAM 库存周数自 3Q26 起上升、成品库存逐步增加，部分厂商计划调整 4Q26 乃至 1Q27 的内存采购，PC DRAM 合同价涨幅较上季放缓。已公布的合同价读数仍在上行：韩国央行 DRAM 出口价格指数与 DDR5 固定价格最新一月均高于前月。现货方面，TrendForce 最近一期周报称 DDR4 现货高于原厂报价、需求疲弱、买方观望，周均价小幅回落；DDR5 现货大致持平；512Gb TLC 晶圆现货 8 月中以来连续回落。DRAMeXchange 公开的 DDR4 合同价表停在 9 月，之后月份仅对付费会员公布。",
@@ -3104,7 +3302,7 @@
           "首批晶圆、产品出货和成熟产量属于不同阶段。"
         ],
         "period": "2026–2027 展望 · 披露至 09-16",
-        "checked_at": "2026-11-14",
+        "checked_at": "2026-11-16",
         "next_review": "新行业报告",
         "definition": "机构供需预测及公司产能计划。",
         "interpretation": "TrendForce 的摘要预计 2027 年 NAND 不同终端市场分化；企业 SSD 的需求展望不宜外推至全部消费级存储。韩国电子零件业出货指数最新一月的环比升幅大于库存指数。美光自身对行业供需的展望列在“公司”页。"
@@ -3142,7 +3340,7 @@
           "长鑫存储一行为媒体转引的营收，不是产能或位元出货；中国厂商的产能数字没有定期公开来源。"
         ],
         "period": "同业季度披露",
-        "checked_at": "2026-11-14",
+        "checked_at": "2026-11-16",
         "next_review": "各公司季度财报",
         "definition": "其他存储厂披露的出货、售价、存货与资本开支，用来对照美光并观察供给扩张。",
         "interpretation": "SK 海力士当季 DRAM 售价与位元出货均环比增长，NAND 售价上涨而位元出货小幅减少；公司指引下季两类产品位元出货继续增长，并给出 2027 年“可实现的需求位元增长”（Achievable Demand B/G），同时称需求超过供给的状态将持续到 2030 年。三家的存货与资本开支对照见下方卡片。长鑫存储营收同比大幅增长，其中售价与出货量的作用无法拆分，不等于产能或位元出货。美光同季的售价与出货变化见“公司”。"
@@ -3194,7 +3392,7 @@
           "IDC 出货量为初步值，后续可能修订；关税厅月内初值只覆盖当月前 10 日或前 20 日。"
         ],
         "period": "行业资料至 09-21",
-        "checked_at": "2026-11-14",
+        "checked_at": "2026-11-16",
         "next_review": "每周",
         "definition": "用于观察终端需求的间接指标。",
         "interpretation": "消费电子一侧转弱：IDC 的手机与 PC 季度出货量同比均明显下滑，TrendForce 称 PC 厂商的 DRAM 库存周数上升、手机品牌库存偏高且内存采购放缓。出口额与同业营收类指标仍强：韩国半导体出口的整月值与月内初值都大幅高于上年同期，南亚科月营收维持高位。出口额与营收同时受价格和数量影响，两者的作用不能拆分。这些都不是美光采购量，客户实际库存与消耗量仍待补充。"
@@ -3212,6 +3410,12 @@
       "产业链指引和管理层展望按原披露日期及目标期间记录，文字为中文摘要；同比由原始金额计算，百分点与百分比区分。"
     ],
     "check_log": [
+      {
+        "at": "2026-11-16T01:12:37.896Z",
+        "status": "success",
+        "scope": "batch",
+        "text": "核查范围：batch；完成 5 / 5 项。"
+      },
       {
         "at": "2026-11-14T21:43:45.340Z",
         "status": "success",
