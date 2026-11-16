@@ -1,0 +1,340 @@
+{
+  "version": 1,
+  "scope": "batch",
+  "base_commit": "4dc03ec5965d96ae921debd390d8160498999812",
+  "base_revision": "2026-11-14-0aa8de9934",
+  "base_sha256": "f4e3b2093415bd2a9000b9f7d632c0babf74140c3553e12ea1fd8a7c35e9ca0d",
+  "catalog_sha256": "1bb1b9cfcd75c318cb87ef215b4fdef877826ceac1edf0c96b3a20102bcf0f54",
+  "created_at": "2026-11-16T01:10:51.835Z",
+  "completed_at": "2026-11-16T01:12:37.896Z",
+  "state": "verified",
+  "targets": [
+    "industry",
+    "calendar",
+    "technology:facilities",
+    "technology:processes",
+    "technology:products"
+  ],
+  "coverage": [
+    {
+      "key": "industry",
+      "status": "verified",
+      "evidence": [
+        "index_tf_press_20261115",
+        "index_tf_news_20261115",
+        "index_dramx_20261115",
+        "index_dramx_contract_20261115",
+        "index_ecos_bok_20261115",
+        "index_ecos_kostat_20261115",
+        "index_ecos_kostat_inv_20261115",
+        "index_motir_20261115",
+        "index_customs_20261115"
+      ],
+      "reviewed_at": "2026-11-16T01:12:38.000Z",
+      "latest_disclosure": {
+        "url": "https://www.dramexchange.com/",
+        "published_at": "2026-11-13"
+      },
+      "reason": "已检查行业入口：DRAMeXchange 最新为 11-13 收盘场（已录入）；TrendForce 11-04 之后无新一期现货周报，新闻稿最新仍为 11-11（已录入）；合同价表仍至 2026-09；ECOS 出口价格最新为 10 月（已录入），KSIC 26 指数仍至 9 月；关税厅月内暂定值最新仍为 11 月 1–10 日（已录入）；产业通商部无新的月度进出口统计。无新读数需录入。",
+      "finding": "unchanged"
+    },
+    {
+      "key": "calendar",
+      "status": "verified",
+      "evidence": [
+        "calendar_index_micron_20261115",
+        "calendar_index_microsoft_20261115",
+        "calendar_index_amazon_20261115",
+        "calendar_index_alphabet_20261115",
+        "calendar_index_oracle_20261115",
+        "calendar_index_meta_20261115",
+        "calendar_index_tsmc_20261115",
+        "calendar_index_samsung_20261115",
+        "calendar_index_skhynix_20261115"
+      ],
+      "reviewed_at": "2026-11-16T01:12:38.000Z",
+      "latest_disclosure": {
+        "url": "https://nvidianews.nvidia.com/news/nvidia-sets-conference-call-for-third-quarter-financial-results-6928873",
+        "published_at": "2026-10-28"
+      },
+      "reason": "美光、Microsoft、Amazon、Alphabet、Oracle、Meta、台积电、三星与 SK 海力士官方日程入口均尚未公布下一财报日期，保持待确认；NVIDIA FY2027 Q3 电话会仍为 11-17 2 p.m. PT。",
+      "finding": "unchanged"
+    },
+    {
+      "key": "technology:facilities",
+      "status": "verified",
+      "evidence": [
+        "index_micron_newsroom_20261115",
+        "index_micron_events_20261115"
+      ],
+      "reviewed_at": "2026-11-16T01:12:38.000Z",
+      "latest_disclosure": {
+        "url": "https://investors.micron.com/news/press-release/2026/Micron-Announces-Participation-in-Investor-Events/default.aspx",
+        "published_at": "2026-11-12"
+      },
+      "reason": "美光官方新闻稿接口最新为 11-12 投资者活动参会公告，活动列表新增 11-18 与 12-01 两场会议，无追踪工厂的新里程碑。",
+      "finding": "unchanged"
+    },
+    {
+      "key": "technology:processes",
+      "status": "verified",
+      "evidence": [
+        "index_micron_newsroom_20261115",
+        "index_micron_events_20261115"
+      ],
+      "reviewed_at": "2026-11-16T01:12:38.000Z",
+      "latest_disclosure": {
+        "url": "https://s25.q4cdn.com/621799436/files/doc_downloads/2026/10/MU-TP-Webinar.pdf",
+        "published_at": "2026-10-21"
+      },
+      "reason": "最新相关披露仍为美光 10-21 技术研讨会资料（已处理）；之后官方入口无新的制程节点、良率或爬坡披露。",
+      "finding": "unchanged"
+    },
+    {
+      "key": "technology:products",
+      "status": "verified",
+      "evidence": [
+        "index_micron_newsroom_20261115",
+        "index_micron_events_20261115",
+        "index_samsung_news_20261115",
+        "index_skhynix_news_20261115"
+      ],
+      "reviewed_at": "2026-11-16T01:12:38.000Z",
+      "latest_disclosure": {
+        "url": "https://news.samsung.com/global/samsung-electronics-announces-third-quarter-2026-results",
+        "published_at": "2026-10-29"
+      },
+      "reason": "美光、三星与 SK 海力士官方入口自 11-11 核查以来无新的 DDR5 RDIMM、HBM4/HBM4E 产品稿。",
+      "finding": "unchanged"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "index_tf_press_20261115",
+      "url": "https://www.trendforce.com/presscenter/",
+      "sha256": "9fb0ac6449f9ebb035e7c53b13139bd906819c3d63c00299983706e86f894c7c",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-16T01:12:09.191Z",
+      "reviewed_at": "2026-11-16T01:12:09.191Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_tf_news_20261115",
+      "url": "https://www.trendforce.com/news/wp-json/wp/v2/posts?after=2026-11-11T00:00:00&per_page=80&_fields=id,date,link,title",
+      "sha256": "9cc5a41f06a07bf8ba75dd0489ec510c532b1369c3a0ea4c4a6a32f3fcfe27c1",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-16T01:12:09.583Z",
+      "reviewed_at": "2026-11-16T01:12:09.583Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_dramx_20261115",
+      "url": "https://www.dramexchange.com/",
+      "sha256": "e2748297fea4c81c8f88bcea42bf2b62429085aa38f7378908a4f2de64a4c710",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-16T01:12:09.876Z",
+      "reviewed_at": "2026-11-16T01:12:09.876Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_dramx_contract_20261115",
+      "url": "https://www.dramexchange.com/Home/HomePrice?Source=NationalDramContract",
+      "sha256": "3088c4658143507f092b171ed60619715af461c332977ffe34666989d71dfb19",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-16T01:12:10.205Z",
+      "reviewed_at": "2026-11-16T01:12:10.205Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_motir_20261115",
+      "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c",
+      "sha256": "409b5c5aef3c8dff360df9cf0685f748d01e566fea7c1ef75d4c275f0ec6329e",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-16T01:12:10.588Z",
+      "reviewed_at": "2026-11-16T01:12:10.588Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_customs_20261115",
+      "url": "https://www.customs.go.kr/kcs/na/ntt/selectNttList.do?mi=2891&bbsId=1362",
+      "sha256": "8043c8cc19949cd0a80dffa24a7dbc1ffc756ca97117ba6042485c48ac051a5e",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-16T01:12:10.981Z",
+      "reviewed_at": "2026-11-16T01:12:10.981Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_micron_events_20261115",
+      "url": "https://investors.micron.com/feed/Event.svc/GetEventList?LanguageId=1&eventSelection=3&sortOperator=1&eventDateFilter=3&pageSize=5&pageNumber=0&year=-1",
+      "sha256": "4ad61fff15e376b65f62213e977770af916aa94f0c5aa3feff669a0b21145509",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-16T01:12:11.379Z",
+      "reviewed_at": "2026-11-16T01:12:11.379Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_samsung_news_20261115",
+      "url": "https://news.samsung.com/global/",
+      "sha256": "e11068220d7c817d6fb498321d8526115fb62008e1717f6f66e981f07855ffef",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-16T01:12:11.749Z",
+      "reviewed_at": "2026-11-16T01:12:11.749Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_skhynix_news_20261115",
+      "url": "https://news.skhynix.com/en/",
+      "sha256": "b0f5bd84bbbe13fe89f3daca385b5718ad2010def4ed6c383386cf5ac1b561a3",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-16T01:12:12.100Z",
+      "reviewed_at": "2026-11-16T01:12:12.100Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_micron_newsroom_20261115",
+      "url": "https://investors.micron.com/news/default.aspx",
+      "sha256": "c57614aa96c24db824fc994e93b48ecfe7fb9b01aacc2f0e7cdedd503eb6b6f0",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-11-16T01:12:12.461Z",
+      "reviewed_at": "2026-11-16T01:12:12.461Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_micron_20261115",
+      "url": "https://investors.micron.com/feed/Event.svc/GetEventList?LanguageId=1&eventSelection=3&sortOperator=1&eventDateFilter=3&pageSize=5&pageNumber=0&year=-1",
+      "sha256": "4ad61fff15e376b65f62213e977770af916aa94f0c5aa3feff669a0b21145509",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-16T01:12:12.831Z",
+      "reviewed_at": "2026-11-16T01:12:12.831Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_microsoft_20261115",
+      "url": "https://www.microsoft.com/en-us/investor/default",
+      "sha256": "61d3591b6e5e0d49c94dbf7fe578e50db79df96210b1f825bbd24df6fa1fd492",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-16T01:12:13.186Z",
+      "reviewed_at": "2026-11-16T01:12:13.186Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_amazon_20261115",
+      "url": "https://ir.aboutamazon.com/feed/PressRelease.svc/GetPressReleaseList?LanguageId=1&bodyType=0&pressReleaseDateFilter=3&pageSize=12&pageNumber=0&year=-1",
+      "sha256": "9918c63862fabcfa6841bdb57f7d91da1ade1acf32d79564749bc286f15088f8",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-16T01:12:13.553Z",
+      "reviewed_at": "2026-11-16T01:12:13.553Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_oracle_20261115",
+      "url": "https://investor.oracle.com/feed/PressRelease.svc/GetPressReleaseList?LanguageId=1&bodyType=0&pressReleaseDateFilter=3&pageSize=12&pageNumber=0&year=-1",
+      "sha256": "a0f66788155ca6cf246cf32080daed26ef637c50de78ddca8f14ea7131a5fb1e",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-16T01:12:13.900Z",
+      "reviewed_at": "2026-11-16T01:12:13.900Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_meta_20261115",
+      "url": "https://investor.atmeta.com/feed/Event.svc/GetEventList?apiKey=F37D4FC40D0E4774887D6827E95013D5&eventSelection=0&eventDateFilter=0&includeFinancialReports=true&includePresentations=true&includePressReleases=true&sortOperator=1&pageSize=-1&tagList=&includeTags=true&year=-1&excludeSelection=0",
+      "sha256": "e1c153c01038f8118964444b34bb5d865cd98194428efce62cc2684e52a5c299",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-16T01:12:14.269Z",
+      "reviewed_at": "2026-11-16T01:12:14.269Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_samsung_20261115",
+      "url": "https://www.samsung.com/global/ir/ir-events-presentations/events/",
+      "sha256": "c5c305b41e60fbfd6a3abd491c3adcd0e5c4493fe3acc52295c2868f21268580",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-16T01:12:14.662Z",
+      "reviewed_at": "2026-11-16T01:12:14.662Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_skhynix_20261115",
+      "url": "https://news.skhynix.com/en/?s=earnings+conference+call",
+      "sha256": "c4b7107bf20395084ce86bfc5ed22c2cc0de7339c6c3a4a6d4c350b70db7c9a6",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-16T01:12:15.065Z",
+      "reviewed_at": "2026-11-16T01:12:15.065Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_ecos_kostat_20261115",
+      "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202601/202611/I11ACQ/4",
+      "sha256": "468a94aedc60ff9881f5784dfe7729cbef8ce54da75c56237f97c29d30d02da4",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-16T01:12:15.495Z",
+      "reviewed_at": "2026-11-16T01:12:15.495Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_ecos_kostat_inv_20261115",
+      "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202601/202611/I11ACQ/6",
+      "sha256": "c8904065571791868a52ebbb755a8b0600defe0ea7dc8c4184c5e0c6edc2de7c",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-16T01:12:15.904Z",
+      "reviewed_at": "2026-11-16T01:12:15.904Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_ecos_bok_20261115",
+      "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202601/202611/30911201AA/D",
+      "sha256": "75dfc09d65a2912a278490f84edd50feac65219862701dbc71baf74b4fba05e1",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-16T01:12:16.261Z",
+      "reviewed_at": "2026-11-16T01:12:16.261Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_alphabet_20261115",
+      "url": "https://abc.xyz/investor/",
+      "sha256": "c415e793dcb40d65e821ac6fb4c830f313f214d8f7ce64e1d1d930617ccd44b1",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-16T01:12:16.676Z",
+      "reviewed_at": "2026-11-16T01:12:16.676Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_tsmc_20261115",
+      "url": "https://investor.tsmc.com/english/financial-calendar",
+      "sha256": "51902ce83c08d6baca9a9fbf9f92ac9ee354526327a86ba73bde54e48575f15c",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-16T01:12:17.080Z",
+      "reviewed_at": "2026-11-16T01:12:17.080Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [],
+  "publication_corrections": [],
+  "technology_reviews": [],
+  "result": "success",
+  "artifact_sha256": "3654ba1a535c9cff1ad8ffdd65579b66da3b790921c891c295a8996a9ce48648",
+  "ledger_sha256": "660edd27fab75191936c88381720032fc07b190435f23b4dc16dc1d37393a222",
+  "evidence_sha256": "fc926a4a7fa0a676a5a1c714730e7fb4dd142c43668d8e3cd9e16f1f2fa385d9"
+}
