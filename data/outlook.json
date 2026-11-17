@@ -56,7 +56,7 @@
           ]
         },
         {
-          "text": "现金创造强：经营现金流 {{mu.cash.operating}}，相当于 GAAP 净利润的 {{mu.cash.profit_conversion}}；调整后自由现金流 {{mu.cash.adjusted_fcf}}，净现金升至 {{mu.capex.net_cash}}，其中包含长约客户支付的保证金（期末合同负债 {{mu.orders.contract_liability}}），这部分不属于经营所得。经营现金流是净资本开支的 {{mu.capex.coverage}}，扩产目前靠自身现金即可覆盖。",
+          "text": "现金创造强：经营现金流 {{mu.cash.operating}}，相当于 GAAP 净利润的 {{mu.cash.profit_conversion}}；调整后自由现金流 {{mu.cash.adjusted_fcf}}，净现金升至 {{mu.capex.net_cash}}，其中包含长约客户支付的保证金（期末合同负债 {{mu.orders.contract_liability}}，主要为保证金），这部分不属于经营所得。经营现金流是净资本开支的 {{mu.capex.coverage}}，扩产目前靠自身现金即可覆盖。",
           "refs": [
             "mu.cash.operating",
             "mu.cash.profit_conversion",
@@ -130,7 +130,7 @@
           ]
         },
         {
-          "text": "月度指标仍处高位，环比有涨有跌：韩国最新整月（十月）半导体出口 {{mu.demand.korea_semi_exports}}，{{mu.demand.korea_semi_exports|change}}，但低于九月的 {{series.mu.demand.korea_semi_exports@2026-09}}；存储芯片出口 {{mu.demand.korea_memory_exports}}，同样低于九月的 {{series.mu.demand.korea_memory_exports@2026-09}}。九月是季末月，单月环比回落还不等于回测所用的同比转弱。十一月上旬的出口初值{{mu.demand.korea_semi_exports_prelim|change}}，该期工作日多于上年同期。南亚科最新月营收{{mu.demand.nanya_revenue|change}}。这些指标同时受售价和数量影响，两者无法拆分，也不等于美光出货。",
+          "text": "月度指标仍处高位，环比有涨有跌：韩国最新整月（十月）半导体出口 {{mu.demand.korea_semi_exports}}，{{mu.demand.korea_semi_exports|change}}，但低于九月的 {{series.mu.demand.korea_semi_exports@2026-09}}；存储芯片出口 {{mu.demand.korea_memory_exports}}，同样低于九月的 {{series.mu.demand.korea_memory_exports@2026-09}}。回测看的是三个月均值的同比变化是否连续回落，单月环比回落不构成该信号。十一月上旬的出口初值{{mu.demand.korea_semi_exports_prelim|change}}，该期工作日多于上年同期。南亚科最新月营收{{mu.demand.nanya_revenue|change}}。这些指标同时受售价和数量影响，两者无法拆分，也不等于美光出货。",
           "refs": [
             "mu.demand.korea_semi_exports",
             "series.mu.demand.korea_semi_exports@2026-09",
@@ -147,7 +147,7 @@
       "title": "价格与供给",
       "points": [
         {
-          "text": "已实现的合同价还在上涨，而且最新一月加快：韩国央行 DRAM 出口价格指数由九月的 {{mu.contract.bok_dram_price|previous}} 升至 {{mu.contract.bok_dram_price}}，环比 {{mu.contract.bok_dram_price|change}}，涨幅大于前一月（八月为 {{series.mu.contract.bok_dram_price@2026-08}}），但仍远小于年初的单月涨幅（去年十二月 {{series.mu.contract.bok_dram_price@2025-12}}，今年一月 {{series.mu.contract.bok_dram_price@2026-01}}）。DDR5 合同价由 {{mu.contract.ddr5_contract|previous}} 升至 {{mu.contract.ddr5_contract}}。该指数在回测中与美光毛利率同步，是本站的价格基准。",
+          "text": "已实现的合同价还在上涨，而且最新一月加快：韩国央行 DRAM 出口价格指数由九月的 {{mu.contract.bok_dram_price|previous}} 升至 {{mu.contract.bok_dram_price}}，环比 {{mu.contract.bok_dram_price|change}}，涨幅大于前一月（八月为 {{series.mu.contract.bok_dram_price@2026-08}}），但仍远小于今年一月的单月涨幅（去年十二月 {{series.mu.contract.bok_dram_price@2025-12}}，今年一月 {{series.mu.contract.bok_dram_price@2026-01}}）。DDR5 合同价由 {{mu.contract.ddr5_contract|previous}} 升至 {{mu.contract.ddr5_contract}}。该指数在回测中与美光毛利率同步，是本站的价格基准。",
           "refs": [
             "mu.contract.bok_dram_price",
             "series.mu.contract.bok_dram_price@2026-08",
@@ -157,7 +157,7 @@
           ]
         },
         {
-          "text": "现货仍高于合同价（本站口径：现货高于合同价表示短期买盘更紧）：DDR5 现货 {{mu.contract.ddr5_spot}}，合同价 {{mu.contract.ddr5_contract}}；DDR4 现货 {{mu.contract.ddr4_spot}}，最近公布的合同价 {{mu.contract.ddr4_contract}}。但现货涨势已停：DDR5 低于十月底的 {{series.mu.contract.ddr5_spot@2026-10-30}}，此后大致持平；DDR4 {{mu.contract.ddr4_spot|change}}，TrendForce 称买方观望。DDR4 合同价的公开数据停在九月，两类读数日期不同，只能看方向。",
+          "text": "现货仍高于合同价（本站口径：现货高于合同价表示短期买盘更紧）：DDR5 现货 {{mu.contract.ddr5_spot}}，合同价 {{mu.contract.ddr5_contract}}；DDR4 现货 {{mu.contract.ddr4_spot}}，最近公布的合同价 {{mu.contract.ddr4_contract}}。但现货涨势已停：DDR5 低于十月底的 {{series.mu.contract.ddr5_spot@2026-10-30}}，十一月初回落后大致持平；DDR4 {{mu.contract.ddr4_spot|change}}，TrendForce 称买方观望。DDR4 合同价的公开数据停在九月，两类读数日期不同，只能看方向。",
           "refs": [
             "mu.contract.ddr5_spot",
             "mu.contract.ddr5_contract",
@@ -241,16 +241,16 @@
           ]
         },
         {
-          "text": "NAND 现货在走弱，与合同价方向相反：TLC 晶圆现货最新 {{mu.contract.tlc_spot}}，{{mu.contract.tlc_spot|change}}，明显低于八月高点 {{series.mu.contract.tlc_spot@2026-08-17}}；TrendForce 对 2027 年 NAND 的展望是「{{mu.supply.nand_outlook}}」。NAND 收入 {{mu.revenue.nand}}，DRAM 收入 {{mu.revenue.dram}}，NAND 占比较小，且美光本季 NAND 售价涨幅仍高于 DRAM，但它是目前跌幅最明显的价格读数。",
+          "text": "NAND 现货在走弱，与 TrendForce 对合同价的预测（{{mu.contract.nand_forecast}}）方向相反：TLC 晶圆现货最新 {{mu.contract.tlc_spot}}，{{mu.contract.tlc_spot|change}}，明显低于八月高点 {{series.mu.contract.tlc_spot@2026-08-17}}；TrendForce 对 2027 年 NAND 的展望是「{{mu.supply.nand_outlook}}」。NAND 收入 {{mu.revenue.nand}}，DRAM 收入 {{mu.revenue.dram}}，NAND 占比较小，且美光本季 NAND 售价涨幅仍高于 DRAM；但 TLC 现货是目前跌幅最明显的价格读数。",
           "refs": [
+            "mu.contract.nand_forecast",
             "mu.contract.tlc_spot",
             "series.mu.contract.tlc_spot@2026-08-17",
             "mu.supply.nand_outlook",
             "mu.revenue.nand",
             "mu.revenue.dram",
             "mu.asp.nand",
-            "mu.asp.dram",
-            "mu.contract.nand_forecast"
+            "mu.asp.dram"
           ]
         },
         {
@@ -350,7 +350,7 @@
       ]
     }
   ],
-  "generated_at": "2026-11-17T07:19:53.624Z",
+  "generated_at": "2026-11-17T07:22:41.128Z",
   "data_revision": "2026-11-16-0fb0a77293",
   "financial_period": "FY2026 Q4",
   "cited": {
@@ -952,7 +952,7 @@
   },
   "cycle_read": {
     "call": "slowing",
-    "text": "库存天数触发见顶预警；韩国半导体出口环比回落、同比仍高；DRAM 价格指数环比{{mu.contract.bok_dram_price|change}}，仍升。",
+    "text": "库存天数触发见顶预警；韩国半导体出口环比回落、同比仍增；DRAM 价格指数环比{{mu.contract.bok_dram_price|change}}，仍升。",
     "refs": [
       "mu.contract.bok_dram_price",
       "mu.inventory.days",
@@ -1036,7 +1036,7 @@
     {
       "at": "2026-11-17",
       "call": "slowing",
-      "text": "库存天数触发见顶预警；韩国半导体出口环比回落、同比仍高；DRAM 价格指数环比{{mu.contract.bok_dram_price|change}}，仍升。",
+      "text": "库存天数触发见顶预警；韩国半导体出口环比回落、同比仍增；DRAM 价格指数环比{{mu.contract.bok_dram_price|change}}，仍升。",
       "values": {
         "mu.contract.bok_dram_price|change": "+7.2%"
       },
