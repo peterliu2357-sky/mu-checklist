@@ -14,15 +14,15 @@ test('the published analysis cites only facts on the site, with current values',
   for(const ref of Object.keys(outlook.cited))assert(cited.has(ref),ref);
 });
 test('numbers in prose are rejected; they must come from cited tokens',()=>{
-  has(validateOutlook(stampOutlook(withPoint('收入增长 30%。',['mu.revenue.total']),d,d.updated_at),d),'OUTLOOK_NUMBER');
-  has(validateOutlook(stampOutlook(withPoint('库存约 129 天。',['mu.inventory.days']),d,d.updated_at),d),'OUTLOOK_NUMBER');
-  assert.deepEqual(validateOutlook(stampOutlook(withPoint('FY2026 Q4 库存 {{mu.inventory.days}}，HBM4 与 DDR5 进展见 2026 年报。',['mu.inventory.days']),d,d.updated_at),d),[]);
+  has(validateOutlook(stampOutlook(withPoint('收入增长 30%。',['mu.revenue.total']),d,outlook.generated_at),d),'OUTLOOK_NUMBER');
+  has(validateOutlook(stampOutlook(withPoint('库存约 129 天。',['mu.inventory.days']),d,outlook.generated_at),d),'OUTLOOK_NUMBER');
+  assert.deepEqual(validateOutlook(stampOutlook(withPoint('FY2026 Q4 库存 {{mu.inventory.days}}，HBM4 与 DDR5 进展见 2026 年报。',['mu.inventory.days']),d,outlook.generated_at),d),[]);
 });
 test('every claim cites a published metric, and tokens must be listed as citations',()=>{
-  has(validateOutlook(stampOutlook(withPoint('需求很强。',[]),d,d.updated_at),d),'OUTLOOK_CITATION');
-  has(validateOutlook(stampOutlook(withPoint('收入 {{mu.revenue.total}}。',['mu.margin.nongaap']),d,d.updated_at),d),'OUTLOOK_CITATION');
-  has(validateOutlook(stampOutlook(withPoint('外部数据。',['mu.revenue.made_up']),d,d.updated_at),d),'OUTLOOK_REFERENCE');
-  has(validateOutlook(stampOutlook(withPoint('过去。',['series.mu.revenue.total@FY2019 Q1']),d,d.updated_at),d),'OUTLOOK_REFERENCE');
+  has(validateOutlook(stampOutlook(withPoint('需求很强。',[]),d,outlook.generated_at),d),'OUTLOOK_CITATION');
+  has(validateOutlook(stampOutlook(withPoint('收入 {{mu.revenue.total}}。',['mu.margin.nongaap']),d,outlook.generated_at),d),'OUTLOOK_CITATION');
+  has(validateOutlook(stampOutlook(withPoint('外部数据。',['mu.revenue.made_up']),d,outlook.generated_at),d),'OUTLOOK_REFERENCE');
+  has(validateOutlook(stampOutlook(withPoint('过去。',['series.mu.revenue.total@FY2019 Q1']),d,outlook.generated_at),d),'OUTLOOK_REFERENCE');
 });
 test('a changed cited value or a new quarter makes the analysis stale until it is rewritten',()=>{
   const next=clone(d);next.metrics.find(m=>m.id==='inventory').rows.find(r=>r.id==='days').current=140;
@@ -34,14 +34,14 @@ test('a changed cited value or a new quarter makes the analysis stale until it i
 });
 test('stance is limited and trading language is rejected',()=>{
   has(validateOutlook({...outlook,stance:'buy'},d),'OUTLOOK_STANCE');
-  has(validateOutlook(stampOutlook(withPoint('建议买入。',['mu.revenue.total']),d,d.updated_at),d),'OUTLOOK_ADVICE');
+  has(validateOutlook(stampOutlook(withPoint('建议买入。',['mu.revenue.total']),d,outlook.generated_at),d),'OUTLOOK_ADVICE');
 });
 test('titles, unusual digits, malformed tokens and empty fields are rejected',()=>{
   const titled=clone(outlook);titled.sections[0].title='目标价 美元';has(validateOutlook(titled,d),'OUTLOOK_TITLE');
-  for(const text of ['增长 ٣٠ 倍。','增长 𝟑𝟎%。','增长 ³⁰%。','公元 1500 年。'])has(validateOutlook(stampOutlook(withPoint(text,['mu.revenue.total']),d,d.updated_at),d),'OUTLOOK_NUMBER');
-  has(validateOutlook(stampOutlook(withPoint('收入 {{mu.revenue.total|Change}}。',['mu.revenue.total']),d,d.updated_at),d),'OUTLOOK_TOKEN');
-  has(validateOutlook(stampOutlook(withPoint('指引 {{guidance.revenue|change}}。',['guidance.revenue']),d,d.updated_at),d),'OUTLOOK_TOKEN');
-  has(validateOutlook(stampOutlook(withPoint('库存 {{mu.inventory.days|previous}}。',['mu.inventory.days']),d,d.updated_at),d),'OUTLOOK_TOKEN');
+  for(const text of ['增长 ٣٠ 倍。','增长 𝟑𝟎%。','增长 ³⁰%。','公元 1500 年。'])has(validateOutlook(stampOutlook(withPoint(text,['mu.revenue.total']),d,outlook.generated_at),d),'OUTLOOK_NUMBER');
+  has(validateOutlook(stampOutlook(withPoint('收入 {{mu.revenue.total|Change}}。',['mu.revenue.total']),d,outlook.generated_at),d),'OUTLOOK_TOKEN');
+  has(validateOutlook(stampOutlook(withPoint('指引 {{guidance.revenue|change}}。',['guidance.revenue']),d,outlook.generated_at),d),'OUTLOOK_TOKEN');
+  has(validateOutlook(stampOutlook(withPoint('库存 {{mu.inventory.days|previous}}。',['mu.inventory.days']),d,outlook.generated_at),d),'OUTLOOK_TOKEN');
 });
 test('a changed prior guidance or reported change also makes the analysis stale',()=>{
   const next=clone(d);next.ecosystem.companies.find(c=>c.id==='alphabet').outlook.find(o=>o.id==='capex').prior_guidance='2,100 亿美元';
@@ -66,9 +66,9 @@ test('a cycle read is one cited line with a fixed call, logged once per day by t
   assert.equal(stampOutlook(nextRun,later,'2026-10-28T01:00:00Z').cycle_log[0].values['mu.inventory.days|current'],'129 天');
 });
 test('a cycle read follows the prose rules, and its log cannot be edited loosely',()=>{
-  has(validateOutlook(stampOutlook(withRead('buy','上行。',['mu.revenue.total']),d,d.updated_at),d),'OUTLOOK_CYCLE');
-  has(validateOutlook(stampOutlook(withRead('rising','库存约 129 天。',['mu.inventory.days']),d,d.updated_at),d),'OUTLOOK_NUMBER');
-  has(validateOutlook(stampOutlook(withRead('rising','收入上升。',[]),d,d.updated_at),d),'OUTLOOK_CITATION');
+  has(validateOutlook(stampOutlook(withRead('buy','上行。',['mu.revenue.total']),d,outlook.generated_at),d),'OUTLOOK_CYCLE');
+  has(validateOutlook(stampOutlook(withRead('rising','库存约 129 天。',['mu.inventory.days']),d,outlook.generated_at),d),'OUTLOOK_NUMBER');
+  has(validateOutlook(stampOutlook(withRead('rising','收入上升。',[]),d,outlook.generated_at),d),'OUTLOOK_CITATION');
   const ok=stampOutlook(withRead('rising','收入上升。',['mu.revenue.total']),d,'2026-10-22T01:00:00Z');
   has(validateOutlook({...ok,cycle_log:[{...ok.cycle_log[0],grade:{result:'maybe'}}]},d),'OUTLOOK_CYCLE');
   has(validateOutlook({...ok,cycle_log:[...ok.cycle_log,{...ok.cycle_log[0]}]},d),'OUTLOOK_CYCLE');
