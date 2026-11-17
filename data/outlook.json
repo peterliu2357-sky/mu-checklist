@@ -20,7 +20,7 @@
       "title": "收入与利润",
       "points": [
         {
-          "text": "FY2026 Q4 总收入 {{mu.revenue.total}}，环比 {{mu.revenue.total|change}}；一年前的 FY2025 Q4 为 {{series.mu.revenue.total@FY2025 Q4}}。增长主要靠涨价，不靠出货：DRAM 售价环比{{mu.asp.dram}}，位元出货只有{{mu.volume.dram_bits}}；NAND 售价环比{{mu.asp.nand}}，位元出货{{mu.volume.nand_bits}}。",
+          "text": "FY2026 Q4 总收入 {{mu.revenue.total}}，环比 {{mu.revenue.total|change}}；一年前的 FY2025 Q4 为 {{series.mu.revenue.total@FY2025 Q4}}。增长主要靠涨价，出货贡献较小：DRAM 售价环比{{mu.asp.dram}}，位元出货只有{{mu.volume.dram_bits}}；NAND 售价环比{{mu.asp.nand}}，位元出货{{mu.volume.nand_bits}}。",
           "refs": [
             "mu.revenue.total",
             "series.mu.revenue.total@FY2025 Q4",
@@ -31,7 +31,7 @@
           ]
         },
         {
-          "text": "非 GAAP 毛利率 {{mu.margin.nongaap}}，自 FY2025 Q2 的 {{series.mu.margin.nongaap@FY2025 Q2}} 起逐季上升。本季销售成本环比 {{mu.margin.cogs|change}}，收入环比 {{mu.revenue.total|change}}，利润扩张几乎全部来自售价。毛利率已在高位，继续上升的空间有限，往后主要取决于售价方向。",
+          "text": "非 GAAP 毛利率 {{mu.margin.nongaap}}，自 FY2025 Q2 的 {{series.mu.margin.nongaap@FY2025 Q2}} 起逐季上升。本季 GAAP 销售成本环比 {{mu.margin.cogs|change}}，收入环比 {{mu.revenue.total|change}}，利润扩张主要来自售价。毛利率已在高位，继续上升的空间有限，往后主要取决于售价方向。",
           "refs": [
             "mu.margin.nongaap",
             "series.mu.margin.nongaap@FY2025 Q2",
@@ -56,12 +56,13 @@
           ]
         },
         {
-          "text": "现金创造强：经营现金流 {{mu.cash.operating}}，相当于 GAAP 净利润的 {{mu.cash.profit_conversion}}；调整后自由现金流 {{mu.cash.adjusted_fcf}}，净现金升至 {{mu.capex.net_cash}}。经营现金流是净资本开支的 {{mu.capex.coverage}}，扩产目前靠自身现金即可覆盖。",
+          "text": "现金创造强：经营现金流 {{mu.cash.operating}}，相当于 GAAP 净利润的 {{mu.cash.profit_conversion}}；调整后自由现金流 {{mu.cash.adjusted_fcf}}，净现金升至 {{mu.capex.net_cash}}，其中包含长约客户支付的保证金（期末合同负债 {{mu.orders.contract_liability}}），这部分不属于经营所得。经营现金流是净资本开支的 {{mu.capex.coverage}}，扩产目前靠自身现金即可覆盖。",
           "refs": [
             "mu.cash.operating",
             "mu.cash.profit_conversion",
             "mu.cash.adjusted_fcf",
             "mu.capex.net_cash",
+            "mu.orders.contract_liability",
             "mu.capex.coverage"
           ]
         }
@@ -72,7 +73,7 @@
       "title": "需求与订单",
       "points": [
         {
-          "text": "增长集中在数据中心：CMBU 与 CDBU 两个部门合计占收入 {{mu.revenue.datacenter_share}}，CDBU 环比 {{mu.revenue.cdbu|change}}，在四个部门中最快；手机与客户端部门 MCBU 最慢，环比 {{mu.revenue.mcbu|change}}。",
+          "text": "增长集中在数据中心：云内存 CMBU 与核心数据中心 CDBU 两个部门合计占收入 {{mu.revenue.datacenter_share}}，CDBU 环比 {{mu.revenue.cdbu|change}}，在四个部门中最快；手机与客户端部门 MCBU 最慢，环比 {{mu.revenue.mcbu|change}}。",
           "refs": [
             "mu.revenue.datacenter_share",
             "mu.revenue.cdbu",
@@ -82,7 +83,7 @@
           ]
         },
         {
-          "text": "长约把一部分需求变成了合同义务：已签战略协议由 {{mu.orders.agreements|previous}} 增至 {{mu.orders.agreements}}，{{mu.orders.terms}}。财季末 RPO 约 {{mu.orders.rpo_quarter_end}}，含季后协议约 {{mu.orders.rpo_post_quarter}}；协议收入覆盖{{mu.orders.coverage}}。这降低了出货量下滑的风险。价格风险仍在：有定价框架的协议多数设的是价格上下限，其余按市场价定期协商。",
+          "text": "长约把一部分需求变成了合同义务：已签战略协议由 {{mu.orders.agreements|previous}} 增至 {{mu.orders.agreements}}，{{mu.orders.terms}}（take-or-pay 即照付不议）。财季末剩余履约义务 RPO 约 {{mu.orders.rpo_quarter_end}}，含季后协议约 {{mu.orders.rpo_post_quarter}}；协议收入覆盖{{mu.orders.coverage}}。这降低了出货量下滑的风险。价格风险仍在：有定价框架的协议多数设的是价格上下限，没有定价框架的协议按市场价定期协商。",
           "refs": [
             "mu.orders.agreements",
             "mu.orders.terms",
@@ -108,7 +109,7 @@
           ]
         },
         {
-          "text": "算力一侧多家公司都说供给跟不上需求：Oracle 称 AI 需求增长快于供给，台积电称 AI 需求高于其供给能力，Alphabet 称供给受限并开始使用第三方算力。英伟达数据中心收入同比 {{eco.nvidia.datacenter|change}}，下季收入指引 {{outlook.nvidia.revenue}}；它的下一份财报是最近的一个检验点。",
+          "text": "算力一侧多家公司都说供给跟不上需求：Oracle 称 AI 需求增长快于供给，台积电称 AI 需求高于其供给能力，Alphabet 称供给受限并开始使用第三方算力。英伟达 FY2027 Q2 数据中心收入同比 {{eco.nvidia.datacenter|change}}，下季收入指引 {{outlook.nvidia.revenue}}；其下一份财报可以检验这一点。",
           "refs": [
             "eco.nvidia.datacenter",
             "outlook.nvidia.revenue",
@@ -129,7 +130,7 @@
           ]
         },
         {
-          "text": "月度指标仍处高位，但环比不再加速：韩国最新整月半导体出口 {{mu.demand.korea_semi_exports}}，{{mu.demand.korea_semi_exports|change}}，低于九月的 {{series.mu.demand.korea_semi_exports@2026-09}}；存储芯片出口 {{mu.demand.korea_memory_exports}}，同样低于九月的 {{series.mu.demand.korea_memory_exports@2026-09}}。十一月上旬的出口初值{{mu.demand.korea_semi_exports_prelim|change}}，该期工作日多于上年同期。南亚科最新月营收{{mu.demand.nanya_revenue|change}}。这些指标同时受售价和数量影响，两者无法拆分，也不等于美光出货。",
+          "text": "月度指标仍处高位，环比有涨有跌：韩国最新整月（十月）半导体出口 {{mu.demand.korea_semi_exports}}，{{mu.demand.korea_semi_exports|change}}，但低于九月的 {{series.mu.demand.korea_semi_exports@2026-09}}；存储芯片出口 {{mu.demand.korea_memory_exports}}，同样低于九月的 {{series.mu.demand.korea_memory_exports@2026-09}}。九月是季末月，单月环比回落还不等于回测所用的同比转弱。十一月上旬的出口初值{{mu.demand.korea_semi_exports_prelim|change}}，该期工作日多于上年同期。南亚科最新月营收{{mu.demand.nanya_revenue|change}}。这些指标同时受售价和数量影响，两者无法拆分，也不等于美光出货。",
           "refs": [
             "mu.demand.korea_semi_exports",
             "series.mu.demand.korea_semi_exports@2026-09",
@@ -146,15 +147,17 @@
       "title": "价格与供给",
       "points": [
         {
-          "text": "已实现的合同价还在上涨，而且最新一月加快：韩国央行 DRAM 出口价格指数由九月的 {{mu.contract.bok_dram_price|previous}} 升至 {{mu.contract.bok_dram_price}}，环比 {{mu.contract.bok_dram_price|change}}，涨幅大于前一月（八月为 {{series.mu.contract.bok_dram_price@2026-08}}）。DDR5 合同价由 {{mu.contract.ddr5_contract|previous}} 升至 {{mu.contract.ddr5_contract}}。该指数在回测中与美光毛利率同步，是本站的价格基准。",
+          "text": "已实现的合同价还在上涨，而且最新一月加快：韩国央行 DRAM 出口价格指数由九月的 {{mu.contract.bok_dram_price|previous}} 升至 {{mu.contract.bok_dram_price}}，环比 {{mu.contract.bok_dram_price|change}}，涨幅大于前一月（八月为 {{series.mu.contract.bok_dram_price@2026-08}}），但仍远小于年初的单月涨幅（去年十二月 {{series.mu.contract.bok_dram_price@2025-12}}，今年一月 {{series.mu.contract.bok_dram_price@2026-01}}）。DDR5 合同价由 {{mu.contract.ddr5_contract|previous}} 升至 {{mu.contract.ddr5_contract}}。该指数在回测中与美光毛利率同步，是本站的价格基准。",
           "refs": [
             "mu.contract.bok_dram_price",
             "series.mu.contract.bok_dram_price@2026-08",
+            "series.mu.contract.bok_dram_price@2025-12",
+            "series.mu.contract.bok_dram_price@2026-01",
             "mu.contract.ddr5_contract"
           ]
         },
         {
-          "text": "现货仍高于合同价，按本站口径表示短期买盘仍紧：DDR5 现货 {{mu.contract.ddr5_spot}}，合同价 {{mu.contract.ddr5_contract}}；DDR4 现货 {{mu.contract.ddr4_spot}}，最近公布的合同价 {{mu.contract.ddr4_contract}}。但现货已不再上涨：DDR5 低于十月底的 {{series.mu.contract.ddr5_spot@2026-10-30}}，DDR4 {{mu.contract.ddr4_spot|change}}。两类读数日期不同，只能看方向。",
+          "text": "现货仍高于合同价（本站口径：现货高于合同价表示短期买盘更紧）：DDR5 现货 {{mu.contract.ddr5_spot}}，合同价 {{mu.contract.ddr5_contract}}；DDR4 现货 {{mu.contract.ddr4_spot}}，最近公布的合同价 {{mu.contract.ddr4_contract}}。但现货涨势已停：DDR5 低于十月底的 {{series.mu.contract.ddr5_spot@2026-10-30}}，此后大致持平；DDR4 {{mu.contract.ddr4_spot|change}}，TrendForce 称买方观望。DDR4 合同价的公开数据停在九月，两类读数日期不同，只能看方向。",
           "refs": [
             "mu.contract.ddr5_spot",
             "mu.contract.ddr5_contract",
@@ -164,7 +167,7 @@
           ]
         },
         {
-          "text": "TrendForce 对 2026 Q4 合同价的预测仍是上涨：普通型 DRAM {{mu.contract.dram_forecast}}，NAND {{mu.contract.nand_forecast}}，其中 DRAM 涨幅预计较上季收敛。同业 SK 海力士七至九月当季 DRAM 售价环比{{mu.peers.skhynix_dram_asp}}、NAND {{mu.peers.skhynix_nand_asp}}；其财季比美光晚约一个月，不能直接对比。",
+          "text": "TrendForce 九月底对 2026 Q4 合同价的预测是上涨：普通型 DRAM {{mu.contract.dram_forecast}}，NAND {{mu.contract.nand_forecast}}，其中 DRAM 涨幅预计较上季收敛；其十一月的新闻稿称 PC DRAM 合同价涨幅较上季放缓。同业 SK 海力士七至九月当季 DRAM 售价环比{{mu.peers.skhynix_dram_asp}}、NAND {{mu.peers.skhynix_nand_asp}}；其财季比美光晚约一个月，不能直接对比。",
           "refs": [
             "mu.contract.dram_forecast",
             "mu.contract.nand_forecast",
@@ -194,7 +197,7 @@
       "title": "需要紧盯的转折信号",
       "points": [
         {
-          "text": "库存天数由 FY2026 Q3 的 {{series.mu.inventory.days@FY2026 Q3}} 回升至 {{mu.inventory.days}}，按本站回测规则已发出见顶预警；回测中这一预警在 2018 年和 2022 年都早于美光毛利率见顶。有缓和因素：增量主要在在制品（{{mu.inventory.work_in_process|previous}} 增至 {{mu.inventory.work_in_process}}），公司称含节点停产前备货；贸易应收占季收入由 {{mu.inventory.receivables_revenue|previous}} 降至 {{mu.inventory.receivables_revenue}}，没有靠放宽账期推高出货的迹象。但产成品环比 {{mu.inventory.finished_goods|change}}，是各类库存中最快的；下季若继续快速增加，上述解释就不够用了。",
+          "text": "库存天数由 FY2026 Q3 的 {{series.mu.inventory.days@FY2026 Q3}} 回升至 {{mu.inventory.days}}，按本站回测规则已发出见顶预警；回测中这一预警在 2018 年和 2022 年都早于美光毛利率见顶。有缓和因素：增量主要在在制品（{{mu.inventory.work_in_process|previous}} 增至 {{mu.inventory.work_in_process}}），公司称含节点停产前备货；贸易应收占季收入由 {{mu.inventory.receivables_revenue|previous}} 降至 {{mu.inventory.receivables_revenue}}，没有靠放宽账期推高出货的迹象。但产成品环比 {{mu.inventory.finished_goods|change}}，是各类库存中最快的，不过基数小（{{mu.inventory.finished_goods}}，总库存 {{mu.inventory.total}}）；下季若继续快速增加，上述解释就不够用了。",
           "refs": [
             "series.mu.inventory.days@FY2026 Q3",
             "mu.inventory.days",
@@ -218,7 +221,7 @@
           ]
         },
         {
-          "text": "下季毛利率指引 {{guidance.margin_nongaap}}，低于本季的 {{mu.margin.nongaap}}。若兑现，将是 FY2025 Q2 以来首次环比下降。本站回测以美光毛利率作为周期的标尺，所以这是最直接的一条。",
+          "text": "下季毛利率指引 {{guidance.margin_nongaap}}，低于本季的 {{mu.margin.nongaap}}。若兑现，将是 FY2025 Q2 以来首次环比下降。本站回测以美光（GAAP）毛利率作为周期的标尺，所以这是最直接的一条。",
           "refs": [
             "guidance.margin_nongaap",
             "mu.margin.nongaap",
@@ -227,7 +230,7 @@
           ]
         },
         {
-          "text": "消费端走弱，涨价开始抑制需求：IDC 统计的最近一季全球智能手机出货量{{mu.demand.smartphone_shipments|change}}，PC 出货量{{mu.demand.pc_shipments|change}}；美光手机与客户端位元出货{{mu.volume.mobile_bits}}。TrendForce 称手机{{mu.demand.mobile_inventory_proxy}}，PC 厂商的 DRAM 库存周数{{mu.demand.pc_oem_inventory}}，此前涨价使部分品牌超额下单，部分厂商已开始调整采购。台积电也提到消费及价格敏感市场受零部件涨价影响。目前数据中心的增长盖过了这一块。",
+          "text": "消费端走弱，涨价开始抑制需求：IDC 统计的最近一季全球智能手机出货量{{mu.demand.smartphone_shipments|change}}，PC 出货量{{mu.demand.pc_shipments|change}}；美光手机与客户端位元出货{{mu.volume.mobile_bits}}。TrendForce 称手机{{mu.demand.mobile_inventory_proxy}}，PC 厂商的 DRAM 库存周数{{mu.demand.pc_oem_inventory}}，此前涨价使部分品牌超额下单，部分厂商计划调整采购。台积电也提到消费及价格敏感市场受零部件涨价影响。目前数据中心的增长盖过了这一块。",
           "refs": [
             "mu.demand.smartphone_shipments",
             "mu.demand.pc_shipments",
@@ -238,17 +241,20 @@
           ]
         },
         {
-          "text": "NAND 弱于 DRAM：TLC 晶圆现货最新 {{mu.contract.tlc_spot}}，{{mu.contract.tlc_spot|change}}，明显低于八月高点 {{series.mu.contract.tlc_spot@2026-08-17}}；TrendForce 对 2027 年 NAND 的展望是「{{mu.supply.nand_outlook}}」。NAND 收入 {{mu.revenue.nand}}，DRAM 收入 {{mu.revenue.dram}}，NAND 占比较小，但它是目前跌幅最明显的价格读数。",
+          "text": "NAND 现货在走弱，与合同价方向相反：TLC 晶圆现货最新 {{mu.contract.tlc_spot}}，{{mu.contract.tlc_spot|change}}，明显低于八月高点 {{series.mu.contract.tlc_spot@2026-08-17}}；TrendForce 对 2027 年 NAND 的展望是「{{mu.supply.nand_outlook}}」。NAND 收入 {{mu.revenue.nand}}，DRAM 收入 {{mu.revenue.dram}}，NAND 占比较小，且美光本季 NAND 售价涨幅仍高于 DRAM，但它是目前跌幅最明显的价格读数。",
           "refs": [
             "mu.contract.tlc_spot",
             "series.mu.contract.tlc_spot@2026-08-17",
             "mu.supply.nand_outlook",
             "mu.revenue.nand",
-            "mu.revenue.dram"
+            "mu.revenue.dram",
+            "mu.asp.nand",
+            "mu.asp.dram",
+            "mu.contract.nand_forecast"
           ]
         },
         {
-          "text": "供给在加速扩张：美光净资本开支 {{mu.capex.net}}，占收入 {{mu.capex.revenue_ratio}}，下季指引 {{mu.capex.guidance}}，FY2027 计划{{mu.capex.next_year}}。最近一季现金资本开支同比，SK 海力士 {{eco.skhynix.capex|change}}，三星集团 {{eco.samsung.capex|change}}；SK 海力士称明年龙仁一期全面投产、投资大幅增加。长鑫存储前三季度营收{{mu.peers.cxmt_revenue|change}}，其中量价无法拆分。这些产能何时形成出货，决定供需何时转松。",
+          "text": "扩产投入在加速：美光净资本开支 {{mu.capex.net}}，占收入 {{mu.capex.revenue_ratio}}，下季指引 {{mu.capex.guidance}}，FY2027 计划{{mu.capex.next_year}}。最近一季现金资本开支同比，SK 海力士 {{eco.skhynix.capex|change}}，三星集团 {{eco.samsung.capex|change}}；SK 海力士称明年龙仁一期全面投产、投资大幅增加。长鑫存储前三季度营收{{mu.peers.cxmt_revenue|change}}，其中量价无法拆分。这些产能何时形成出货，决定供需何时转松。",
           "refs": [
             "mu.capex.net",
             "mu.capex.revenue_ratio",
@@ -261,7 +267,7 @@
           ]
         },
         {
-          "text": "同业存货也在增加：SK 海力士期末存货同比 {{eco.skhynix.inventory|change}}，低于其收入增速 {{eco.skhynix.revenue|change}}；三星集团合并存货同比 {{eco.samsung.inventory|change}}，该数含非存储业务。存货增长慢于收入时问题不大，需要看的是两者差距是否收窄。",
+          "text": "同业存货也在增加：SK 海力士期末存货同比 {{eco.skhynix.inventory|change}}，低于其收入增速 {{eco.skhynix.revenue|change}}；三星集团合并存货同比 {{eco.samsung.inventory|change}}，该数含非存储业务。收入增速主要来自涨价，存货按成本计，两者不完全可比；需要看的是存货增速是否继续抬升。",
           "refs": [
             "eco.skhynix.inventory",
             "eco.skhynix.revenue",
@@ -344,7 +350,7 @@
       ]
     }
   ],
-  "generated_at": "2026-11-17T07:11:29.262Z",
+  "generated_at": "2026-11-17T07:19:53.624Z",
   "data_revision": "2026-11-16-0fb0a77293",
   "financial_period": "FY2026 Q4",
   "cited": {
@@ -484,6 +490,11 @@
       "current": 68274,
       "previous": 24406,
       "change": "+179.7%"
+    },
+    "mu.orders.contract_liability": {
+      "current": 13000,
+      "previous": 422,
+      "change": "+2,980.6%"
     },
     "mu.capex.coverage": {
       "current": 4.081399665862261,
@@ -698,6 +709,14 @@
     },
     "series.mu.contract.bok_dram_price@2026-08": {
       "current": 282.77,
+      "previous": null
+    },
+    "series.mu.contract.bok_dram_price@2025-12": {
+      "current": 111.22,
+      "previous": null
+    },
+    "series.mu.contract.bok_dram_price@2026-01": {
+      "current": 147.44,
       "previous": null
     },
     "mu.contract.ddr5_contract": {
@@ -933,7 +952,7 @@
   },
   "cycle_read": {
     "call": "slowing",
-    "text": "库存天数已触发见顶预警，韩国半导体出口低于九月；DRAM 价格指数环比{{mu.contract.bok_dram_price|change}}，仍在上涨。",
+    "text": "库存天数触发见顶预警；韩国半导体出口环比回落、同比仍高；DRAM 价格指数环比{{mu.contract.bok_dram_price|change}}，仍升。",
     "refs": [
       "mu.contract.bok_dram_price",
       "mu.inventory.days",
@@ -1017,7 +1036,7 @@
     {
       "at": "2026-11-17",
       "call": "slowing",
-      "text": "库存天数已触发见顶预警，韩国半导体出口低于九月；DRAM 价格指数环比{{mu.contract.bok_dram_price|change}}，仍在上涨。",
+      "text": "库存天数触发见顶预警；韩国半导体出口环比回落、同比仍高；DRAM 价格指数环比{{mu.contract.bok_dram_price|change}}，仍升。",
       "values": {
         "mu.contract.bok_dram_price|change": "+7.2%"
       },
