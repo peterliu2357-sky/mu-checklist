@@ -31,14 +31,8 @@
     "completion_grace_minutes": 1080
   },
   "earnings": {
-    "enabled": true,
-    "run_at": "2026-11-18T22:00:00Z",
-    "events": [
-      {
-        "id": "nvidia_fy2027_q3",
-        "company_id": "nvidia",
-        "review_after": "2026-11-18T22:00:00Z"
-      }
-    ]
+    "enabled": false,
+    "run_at": null,
+    "events": []
   }
 }

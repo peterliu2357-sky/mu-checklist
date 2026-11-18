@@ -109,14 +109,18 @@
           ]
         },
         {
-          "text": "算力一侧多家公司都说供给跟不上需求：Oracle 称 AI 需求增长快于供给，台积电称 AI 需求高于其供给能力，Alphabet 称供给受限并开始使用第三方算力。英伟达 FY2027 Q2 数据中心收入同比 {{eco.nvidia.datacenter|change}}，下季收入指引 {{outlook.nvidia.revenue}}；其下一份财报可以检验这一点。",
+          "text": "算力一侧多家公司都说供给跟不上需求：Oracle 称 AI 需求增长快于供给，台积电称 AI 需求高于其供给能力，Alphabet 称供给受限并开始使用第三方算力。英伟达 FY2027 Q3 的数据显示需求仍强：数据中心收入同比 {{eco.nvidia.datacenter|change}}，下季收入指引 {{outlook.nvidia.revenue}}（该季多一周），高于本季的 {{eco.nvidia.revenue}}。下季毛利率指引 {{outlook.nvidia.margin}}，低于本季的 {{eco.nvidia.margin}}，公司未说明原因。与内存直接相关的是，其供应与产能承诺升至 {{outlook.nvidia.supply}}，公司称增加主要来自多年期内存供应采购；该总额涵盖各类部件，未单列内存金额或供应商，不代表美光订单。",
           "refs": [
             "eco.nvidia.datacenter",
             "outlook.nvidia.revenue",
+            "eco.nvidia.revenue",
+            "outlook.nvidia.margin",
+            "eco.nvidia.margin",
+            "outlook.nvidia.supply",
+            "outlook.nvidia.demand",
             "outlook.oracle.demand",
             "outlook.tsmc.demand",
-            "outlook.alphabet.capacity",
-            "outlook.nvidia.demand"
+            "outlook.alphabet.capacity"
           ]
         },
         {
@@ -350,8 +354,8 @@
       ]
     }
   ],
-  "generated_at": "2026-11-17T07:22:41.128Z",
-  "data_revision": "2026-11-16-0fb0a77293",
+  "generated_at": "2026-11-18T22:12:16.862Z",
+  "data_revision": "2026-11-18-ab4ffbb913",
   "financial_period": "FY2026 Q4",
   "cited": {
     "mu.revenue.total": {
@@ -613,15 +617,49 @@
       ]
     },
     "eco.nvidia.datacenter": {
-      "current": 89000,
-      "previous": 41100,
-      "change": "+117%（报告值）"
+      "current": 107600,
+      "previous": 51200,
+      "change": "+110%（报告值）"
     },
     "outlook.nvidia.revenue": {
-      "current": "1,080 亿美元 ±2%",
+      "current": "1,300 亿美元 ±3%",
       "previous": null,
       "detail": [
-        "指引未计入中国数据中心计算收入。",
+        "FY2027 Q4 含额外一周；指引未计入中国数据中心计算收入。",
+        ""
+      ]
+    },
+    "eco.nvidia.revenue": {
+      "current": 115844,
+      "previous": 57006,
+      "change": "+103.2%"
+    },
+    "outlook.nvidia.margin": {
+      "current": "71.0%–72.0%",
+      "previous": null,
+      "detail": [
+        "",
+        ""
+      ]
+    },
+    "eco.nvidia.margin": {
+      "current": 74.8,
+      "previous": 73.4,
+      "change": "+1.4 个百分点"
+    },
+    "outlook.nvidia.supply": {
+      "current": "3,900 亿美元",
+      "previous": null,
+      "detail": [
+        "上季为 2,790 亿美元；公司称增加主要来自多年期内存供应采购。总额涵盖各类供应与产能承诺，未单列内存金额或供应商，不代表美光订单。按财年分布：FY2027 剩余期间 690 亿、FY2028 2,030 亿、FY2029 920 亿美元，其后合计 260 亿美元。",
+        ""
+      ]
+    },
+    "outlook.nvidia.demand": {
+      "current": "CFO 评述称数据中心的两类平台（超大规模与 AI 云；工业与企业）均大幅增长，由 Rubin 基础设施（公司史上最快的架构爬坡）、独立销售的 Vera CPU 与 Blackwell Ultra 的持续增长带动；财报称 Vera Rubin NVL72 已量产出货。",
+      "previous": null,
+      "detail": [
+        "CFO 评述称数据中心的两类平台（超大规模与 AI 云；工业与企业）均大幅增长，由 Rubin 基础设施（公司史上最快的架构爬坡）、独立销售的 Vera CPU 与 Blackwell Ultra 的持续增长带动；财报称 Vera Rubin NVL72 已量产出货。",
         ""
       ]
     },
@@ -646,14 +684,6 @@
       "previous": null,
       "detail": [
         "供给受限，第三季末开始使用第三方算力，第四季加大使用；预计近期云业务利润率承压。",
-        ""
-      ]
-    },
-    "outlook.nvidia.demand": {
-      "current": "管理层称需求加速，新增 AI 实验室、开放模型与物理 AI 扩大了建设需求来源。",
-      "previous": null,
-      "detail": [
-        "管理层称需求加速，新增 AI 实验室、开放模型与物理 AI 扩大了建设需求来源。",
         ""
       ]
     },
@@ -1035,6 +1065,15 @@
     },
     {
       "at": "2026-11-17",
+      "call": "slowing",
+      "text": "库存天数触发见顶预警；韩国半导体出口环比回落、同比仍增；DRAM 价格指数环比{{mu.contract.bok_dram_price|change}}，仍升。",
+      "values": {
+        "mu.contract.bok_dram_price|change": "+7.2%"
+      },
+      "grade": null
+    },
+    {
+      "at": "2026-11-18",
       "call": "slowing",
       "text": "库存天数触发见顶预警；韩国半导体出口环比回落、同比仍增；DRAM 价格指数环比{{mu.contract.bok_dram_price|change}}，仍升。",
       "values": {
