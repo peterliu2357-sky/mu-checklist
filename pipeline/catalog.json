@@ -2135,6 +2135,22 @@
         "direct"
       ]
     },
+    "outlook.nvidia.supply": {
+      "version": 1,
+      "active": true,
+      "required": true,
+      "supporting": false,
+      "entity": "nvidia",
+      "measurement": "outlook",
+      "unit": "",
+      "scope": "供应与产能承诺",
+      "accounting_basis": "as_disclosed",
+      "temporal_basis": "target_period",
+      "nature": "actual_or_observation",
+      "evidence_types": [
+        "direct"
+      ]
+    },
     "eco.tsmc.revenue": {
       "version": 1,
       "active": true,
@@ -3735,6 +3751,10 @@
     ],
     "eco_nvidia_prior": [
       "eco.nvidia.datacenter"
+    ],
+    "eco_nvidia_cfo": [
+      "outlook.nvidia.supply",
+      "outlook.nvidia.demand"
     ],
     "eco_tsmc_guide": [
       "eco.tsmc.revenue",
