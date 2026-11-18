@@ -2,8 +2,8 @@
   "format_version": 1,
   "document": {
     "schema_version": 2,
-    "revision": "2026-11-18-d1bbb1ec0b",
-    "updated_at": "2026-11-18T03:42:33.135Z",
+    "revision": "2026-11-18-ddf35ebc01",
+    "updated_at": "2026-11-18T22:05:45.225Z",
     "last_successful_check_at": "2026-09-20T23:50:00Z",
     "last_attempt_at": "2026-09-20T23:50:00Z",
     "financial_period": "FY2026 Q4",
@@ -659,21 +659,21 @@
         "type": "公司原始披露"
       },
       "eco_nvidia": {
-        "label": "NVIDIA FY2027 Q2 财报与指引",
+        "label": "NVIDIA FY2027 Q3 财报与指引",
         "short_label": "NVIDIA 财报",
-        "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Second-Quarter-Fiscal-2027/default.aspx",
-        "published_at": "2026-08-26",
-        "checked_at": "2026-09-20",
-        "locator": "Q2 Fiscal 2027 Summary（GAAP）、Data Center、Outlook。",
+        "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027",
+        "published_at": "2026-11-17",
+        "checked_at": "2026-11-18",
+        "locator": "Q3 Fiscal 2027 Summary（GAAP）、Outlook、Data Center、Statements of Income、Statements of Cash Flows。",
         "type": "公司原始披露"
       },
       "eco_nvidia_prior": {
-        "label": "NVIDIA FY2026 Q2 财报",
+        "label": "NVIDIA FY2026 Q3 财报",
         "short_label": "NVIDIA 上年同期",
-        "url": "https://investor.nvidia.com/news/press-release-details/2025/NVIDIA-Announces-Financial-Results-for-Second-Quarter-Fiscal-2026/default.aspx",
-        "published_at": "2025-08-27",
-        "checked_at": "2026-09-20",
-        "locator": "Data Center：FY2026 Q2 收入 411 亿美元。",
+        "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2026",
+        "published_at": "2025-11-19",
+        "checked_at": "2026-11-18",
+        "locator": "Data Center：FY2026 Q3 收入 512 亿美元。",
         "type": "公司原始披露"
       },
       "eco_tsmc": {
@@ -2943,6 +2943,15 @@
         "checked_at": "2026-11-16",
         "type": "公司官方入口",
         "locator": "检索结果最新为「Q3 2026 Earnings Conference Call Access Details」，尚无 Q4 2026 电话会公告。"
+      },
+      "eco_nvidia_cfo": {
+        "label": "NVIDIA FY2027 Q3 CFO 评述",
+        "short_label": "NVIDIA CFO 评述",
+        "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2027/Q327/Q3FY27-CFO-Commentary.pdf",
+        "published_at": "2026-11-17",
+        "checked_at": "2026-11-18",
+        "locator": "Revenue（Edge Computing）、Commitments（supply commitments）。",
+        "type": "公司原始披露"
       }
     },
     "metrics": [
@@ -3410,6 +3419,12 @@
       "产业链指引和管理层展望按原披露日期及目标期间记录，文字为中文摘要；同比由原始金额计算，百分点与百分比区分。"
     ],
     "check_log": [
+      {
+        "at": "2026-11-18T22:05:45.225Z",
+        "status": "success",
+        "scope": "batch",
+        "text": "核查范围：batch；完成 1 / 1 项。"
+      },
       {
         "at": "2026-11-18T03:42:33.135Z",
         "status": "success",
@@ -4120,41 +4135,44 @@
           "ticker": "NVDA",
           "group": "chips",
           "role": "AI 加速器",
-          "period": "FY2027 Q2",
-          "previous_period": "FY2026 Q2",
-          "period_end": "2026-07-26",
-          "published_at": "2026-08-26",
-          "checked_at": "2026-09-20",
+          "period": "FY2027 Q3",
+          "previous_period": "FY2026 Q3",
+          "period_end": "2026-10-25",
+          "published_at": "2026-11-17",
+          "checked_at": "2026-11-18",
           "scope": "数据中心平台交付与下一季收入指引。",
           "metrics": [
             {
-              "record_ref": "5af440888a707c553624feb63a2ef7ba3fb8d51a10dd806f2ada80729293483e"
+              "record_ref": "96d852e5b1496bc5fe4ae246bb74e687fd1402ea4fefd456029ddd26136ff559"
             },
             {
-              "record_ref": "6efbc9256cf00bbfbd56a6c855875df07f347fa8ffd6bba1e36872b0d3297671"
+              "record_ref": "f6b82e58c6c82df35fdcc957d7d008fe93551835f284cb7610592a6787304f6f"
             },
             {
-              "record_ref": "97fd0c5a5008a5eca12f91bb3dc554372ed6333f7ecb0c4bdc39b30c66417664"
+              "record_ref": "be51ff21d37093ae3ebe5558ef10e05caa76db77ae5f0af9cb1b6b54b189c31d"
             },
             {
-              "record_ref": "82d8c578bd6b7fce9f6bbafee506e48000864c3a1d7702cdd260a802b3a5966e"
+              "record_ref": "ce3eaa57113106070a2c43db8206c2dc54a40954c929a47aa121f2458e516f69"
             },
             {
-              "record_ref": "43ec5eddbd93ad0a1ebcb1afbc3213c08548037ac76076c6f9a0772f8ab9eb19"
+              "record_ref": "50736ca63c2a7378a034b5eabd6252ddb93bb79e4dc936c1575f83df2f366f04"
             },
             {
-              "record_ref": "60316c1d394a61028d9b239280fd1bd161c89fa77355471853cebf6c4d2729d6"
+              "record_ref": "4aa66a11f790a3e1618588162ef165d4d93b993d78b605710695f5d585322ec2"
             }
           ],
           "outlook": [
             {
-              "record_ref": "93de459d196d886971dbbffe6ae7d43814bb12e83f12b2e3f406c0be130a4d96"
+              "record_ref": "c54d9407773e77cb64ad4b15e0a8035e9126e70a913a24735c97144a985efdb5"
             },
             {
-              "record_ref": "5cdce846e0f7826bc1a9dfd606067817535d04bd2aed718be982256705c0049c"
+              "record_ref": "79fcbb98e5d9eb03afa5be725fc4287403c82f77d2237946052d7c5b670e2bce"
             },
             {
-              "record_ref": "943eadc92e7d4870163ac01a56d224965878fceeed6e0ca15004c43320dff8ef"
+              "record_ref": "2d382cb1488d306fc1cc4cdcb9437331b6781ed0c78794242e46eff49f098726"
+            },
+            {
+              "record_ref": "e601c2e58d7990417856358302a44b51d352826f38f76b75ef9b694185b09278"
             }
           ],
           "notes": []
@@ -29658,6 +29676,436 @@
         "e-298ce3b2baa6f28c30d79f12a978f491c92a8ef22e37a1c7b20b7f05cfc753d7"
       ],
       "id": "f872d237b32903f4044d693a29f66ef39040958e11a8f92fc3b6fa5774550f53"
+    },
+    "96d852e5b1496bc5fe4ae246bb74e687fd1402ea4fefd456029ddd26136ff559": {
+      "metric_id": "eco.nvidia.revenue",
+      "definition_version": 1,
+      "context": {
+        "entity": "nvidia",
+        "period": "FY2027 Q3",
+        "previous_period": "FY2026 Q3",
+        "period_end": "2026-10-25",
+        "report_published_at": "2026-11-17",
+        "measurement": "revenue",
+        "unit": "USDm",
+        "scope": "集团收入",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "eco_nvidia",
+            "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027",
+            "published_at": "2026-11-17"
+          }
+        ]
+      },
+      "payload": {
+        "id": "revenue",
+        "label": "集团收入",
+        "current": 115844,
+        "previous": 57006,
+        "unit": "USDm",
+        "source_ids": [
+          "eco_nvidia"
+        ],
+        "location": "Condensed Consolidated Statements of Income · Revenue；Three Months Ended October 25, 2026 / October 26, 2025。",
+        "note": "",
+        "evidence_type": "direct"
+      },
+      "evidence_ids": [
+        "e-6db6675589a43d5af9dbe94aa545336a9f8a8cda97b2e5c4cd01ae3579475c07"
+      ],
+      "id": "96d852e5b1496bc5fe4ae246bb74e687fd1402ea4fefd456029ddd26136ff559"
+    },
+    "f6b82e58c6c82df35fdcc957d7d008fe93551835f284cb7610592a6787304f6f": {
+      "metric_id": "eco.nvidia.datacenter",
+      "definition_version": 1,
+      "context": {
+        "entity": "nvidia",
+        "period": "FY2027 Q3",
+        "previous_period": "FY2026 Q3",
+        "period_end": "2026-10-25",
+        "report_published_at": "2026-11-17",
+        "measurement": "datacenter",
+        "unit": "USDm",
+        "scope": "数据中心收入",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "eco_nvidia",
+            "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027",
+            "published_at": "2026-11-17"
+          },
+          {
+            "id": "eco_nvidia_prior",
+            "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2026",
+            "published_at": "2025-11-19"
+          }
+        ]
+      },
+      "payload": {
+        "id": "datacenter",
+        "label": "数据中心收入",
+        "current": 107600,
+        "previous": 51200,
+        "unit": "USDm",
+        "source_ids": [
+          "eco_nvidia",
+          "eco_nvidia_prior"
+        ],
+        "location": "两份财报 · Data Center highlights（Third-quarter revenue）。",
+        "note": "采用财报摘要披露精度；同比为本期财报报告值。",
+        "evidence_type": "direct",
+        "digits": 0,
+        "change": "+110%（报告值）"
+      },
+      "evidence_ids": [
+        "e-c3c3d1b9892d72585947fe4f41202780eb118fb2b0ead44378e652a552c3ae48"
+      ],
+      "id": "f6b82e58c6c82df35fdcc957d7d008fe93551835f284cb7610592a6787304f6f"
+    },
+    "be51ff21d37093ae3ebe5558ef10e05caa76db77ae5f0af9cb1b6b54b189c31d": {
+      "metric_id": "eco.nvidia.profit",
+      "definition_version": 1,
+      "context": {
+        "entity": "nvidia",
+        "period": "FY2027 Q3",
+        "previous_period": "FY2026 Q3",
+        "period_end": "2026-10-25",
+        "report_published_at": "2026-11-17",
+        "measurement": "operating_profit",
+        "unit": "USDm",
+        "scope": "集团 GAAP 营业利润",
+        "accounting_basis": "gaap",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "eco_nvidia",
+            "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027",
+            "published_at": "2026-11-17"
+          }
+        ]
+      },
+      "payload": {
+        "id": "profit",
+        "label": "集团 GAAP 营业利润",
+        "current": 77520,
+        "previous": 36010,
+        "unit": "USDm",
+        "source_ids": [
+          "eco_nvidia"
+        ],
+        "location": "Condensed Consolidated Statements of Income · Operating income；Three Months Ended October 25, 2026 / October 26, 2025。",
+        "note": "",
+        "evidence_type": "direct"
+      },
+      "evidence_ids": [
+        "e-d75edb4ab0a1a0f78c229ddb02f347725152b57b9b873c5407f623a6a217ee60"
+      ],
+      "id": "be51ff21d37093ae3ebe5558ef10e05caa76db77ae5f0af9cb1b6b54b189c31d"
+    },
+    "ce3eaa57113106070a2c43db8206c2dc54a40954c929a47aa121f2458e516f69": {
+      "metric_id": "eco.nvidia.margin",
+      "definition_version": 1,
+      "context": {
+        "entity": "nvidia",
+        "period": "FY2027 Q3",
+        "previous_period": "FY2026 Q3",
+        "period_end": "2026-10-25",
+        "report_published_at": "2026-11-17",
+        "measurement": "margin",
+        "unit": "pct",
+        "scope": "集团 GAAP 毛利率",
+        "accounting_basis": "gaap",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "eco_nvidia",
+            "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027",
+            "published_at": "2026-11-17"
+          }
+        ]
+      },
+      "payload": {
+        "id": "margin",
+        "label": "集团 GAAP 毛利率",
+        "current": 74.8,
+        "previous": 73.4,
+        "unit": "pct",
+        "source_ids": [
+          "eco_nvidia"
+        ],
+        "location": "Q3 Fiscal 2027 Summary · GAAP Gross margin；Q3 FY27 / Q3 FY26。",
+        "note": "",
+        "evidence_type": "direct"
+      },
+      "evidence_ids": [
+        "e-8f5cc6c4d39eac96972435428d7ae740da49217a3d27e37d668454a171e2245d"
+      ],
+      "id": "ce3eaa57113106070a2c43db8206c2dc54a40954c929a47aa121f2458e516f69"
+    },
+    "50736ca63c2a7378a034b5eabd6252ddb93bb79e4dc936c1575f83df2f366f04": {
+      "metric_id": "eco.nvidia.capex",
+      "definition_version": 1,
+      "context": {
+        "entity": "nvidia",
+        "period": "FY2027 Q3",
+        "previous_period": "FY2026 Q3",
+        "period_end": "2026-10-25",
+        "report_published_at": "2026-11-17",
+        "measurement": "capex",
+        "unit": "USDm",
+        "scope": "集团现金购置固定及无形资产",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "eco_nvidia",
+            "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027",
+            "published_at": "2026-11-17"
+          }
+        ]
+      },
+      "payload": {
+        "id": "capex",
+        "label": "集团现金购置固定及无形资产",
+        "current": 4422,
+        "previous": 1637,
+        "unit": "USDm",
+        "source_ids": [
+          "eco_nvidia"
+        ],
+        "location": "Statements of Cash Flows · Purchases related to property and equipment and intangible assets；Three Months Ended October 25, 2026 / October 26, 2025。",
+        "note": "包含无形资产购置。",
+        "evidence_type": "direct"
+      },
+      "evidence_ids": [
+        "e-689b025d193f64b610150b1881091b1b1047514a17dac28f37c5bc304c10ff24"
+      ],
+      "id": "50736ca63c2a7378a034b5eabd6252ddb93bb79e4dc936c1575f83df2f366f04"
+    },
+    "4aa66a11f790a3e1618588162ef165d4d93b993d78b605710695f5d585322ec2": {
+      "metric_id": "eco.nvidia.ocf",
+      "definition_version": 1,
+      "context": {
+        "entity": "nvidia",
+        "period": "FY2027 Q3",
+        "previous_period": "FY2026 Q3",
+        "period_end": "2026-10-25",
+        "report_published_at": "2026-11-17",
+        "measurement": "ocf",
+        "unit": "USDm",
+        "scope": "集团经营现金流",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "quarter",
+        "sources": [
+          {
+            "id": "eco_nvidia",
+            "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027",
+            "published_at": "2026-11-17"
+          }
+        ]
+      },
+      "payload": {
+        "id": "ocf",
+        "label": "集团经营现金流",
+        "current": 48253,
+        "previous": 23750,
+        "unit": "USDm",
+        "source_ids": [
+          "eco_nvidia"
+        ],
+        "location": "Statements of Cash Flows · Net cash provided by operating activities；Three Months Ended October 25, 2026 / October 26, 2025。",
+        "note": "",
+        "evidence_type": "direct"
+      },
+      "evidence_ids": [
+        "e-0750285b637ad54c8070cd0500d8e3aa3157688db5f14ca0bac7315e1d0183c9"
+      ],
+      "id": "4aa66a11f790a3e1618588162ef165d4d93b993d78b605710695f5d585322ec2"
+    },
+    "c54d9407773e77cb64ad4b15e0a8035e9126e70a913a24735c97144a985efdb5": {
+      "metric_id": "outlook.nvidia.revenue",
+      "definition_version": 1,
+      "context": {
+        "entity": "nvidia",
+        "period": "FY2027 Q3",
+        "previous_period": "FY2026 Q3",
+        "period_end": "2026-10-25",
+        "report_published_at": "2026-11-17",
+        "measurement": "revenue",
+        "unit": "",
+        "scope": "集团收入",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "target_period",
+        "sources": [
+          {
+            "id": "eco_nvidia",
+            "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027",
+            "published_at": "2026-11-17"
+          }
+        ]
+      },
+      "payload": {
+        "id": "revenue",
+        "label": "集团收入",
+        "type": "numeric",
+        "value": "1,300 亿美元 ±3%",
+        "summary": "FY2027 Q4 含额外一周；指引未计入中国数据中心计算收入。",
+        "prior_guidance": "",
+        "period": "FY2027 Q4",
+        "issued_at": "2026-11-17",
+        "speaker": "NVIDIA 管理层",
+        "kind": "公司指引",
+        "evidence_type": "direct",
+        "source_ids": [
+          "eco_nvidia"
+        ],
+        "location": "Outlook · Revenue。"
+      },
+      "evidence_ids": [
+        "e-17047f5e041fc6304861b0a020e82d8b7c2221326a9a2c6938fe758992122fa5"
+      ],
+      "id": "c54d9407773e77cb64ad4b15e0a8035e9126e70a913a24735c97144a985efdb5"
+    },
+    "79fcbb98e5d9eb03afa5be725fc4287403c82f77d2237946052d7c5b670e2bce": {
+      "metric_id": "outlook.nvidia.margin",
+      "definition_version": 1,
+      "context": {
+        "entity": "nvidia",
+        "period": "FY2027 Q3",
+        "previous_period": "FY2026 Q3",
+        "period_end": "2026-10-25",
+        "report_published_at": "2026-11-17",
+        "measurement": "outlook",
+        "unit": "",
+        "scope": "GAAP / 非 GAAP 毛利率",
+        "accounting_basis": "non_gaap",
+        "temporal_basis": "target_period",
+        "sources": [
+          {
+            "id": "eco_nvidia",
+            "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027",
+            "published_at": "2026-11-17"
+          }
+        ]
+      },
+      "payload": {
+        "id": "margin",
+        "label": "GAAP / 非 GAAP 毛利率",
+        "type": "numeric",
+        "value": "71.0%–72.0%",
+        "summary": "",
+        "prior_guidance": "",
+        "period": "FY2027 Q4",
+        "issued_at": "2026-11-17",
+        "speaker": "NVIDIA 管理层",
+        "kind": "公司指引",
+        "evidence_type": "direct",
+        "source_ids": [
+          "eco_nvidia"
+        ],
+        "location": "Outlook · Gross margins。"
+      },
+      "evidence_ids": [
+        "e-9654e54430e67dd8d70a4c0be3d0628298a4a3e9949bba07ecfba65267f176bc"
+      ],
+      "id": "79fcbb98e5d9eb03afa5be725fc4287403c82f77d2237946052d7c5b670e2bce"
+    },
+    "2d382cb1488d306fc1cc4cdcb9437331b6781ed0c78794242e46eff49f098726": {
+      "metric_id": "outlook.nvidia.demand",
+      "definition_version": 1,
+      "context": {
+        "entity": "nvidia",
+        "period": "FY2027 Q3",
+        "previous_period": "FY2026 Q3",
+        "period_end": "2026-10-25",
+        "report_published_at": "2026-11-17",
+        "measurement": "outlook",
+        "unit": "",
+        "scope": "AI 需求",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "target_period",
+        "sources": [
+          {
+            "id": "eco_nvidia",
+            "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027",
+            "published_at": "2026-11-17"
+          },
+          {
+            "id": "eco_nvidia_cfo",
+            "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2027/Q327/Q3FY27-CFO-Commentary.pdf",
+            "published_at": "2026-11-17"
+          }
+        ]
+      },
+      "payload": {
+        "id": "demand",
+        "label": "AI 需求",
+        "type": "text",
+        "value": null,
+        "summary": "公司称 Vera Rubin NVL72 已量产出货，是公司史上最快的产品爬坡；CFO 评述称较高的内存与整机价格继续影响消费级 PC 需求。",
+        "prior_guidance": "",
+        "period": "截至 2026-11-17",
+        "issued_at": "2026-11-17",
+        "speaker": "NVIDIA 管理层",
+        "kind": "管理层观察",
+        "evidence_type": "direct",
+        "source_ids": [
+          "eco_nvidia",
+          "eco_nvidia_cfo"
+        ],
+        "location": "财报 Data Center highlights（Vera Rubin NVL72）；CFO 评述 · Revenue · Edge Computing。"
+      },
+      "evidence_ids": [
+        "e-bcf963558f5a8c94ce0c38892bfb7b4e0a60c4e9f81810b4df0f570bf4320ad2"
+      ],
+      "id": "2d382cb1488d306fc1cc4cdcb9437331b6781ed0c78794242e46eff49f098726"
+    },
+    "e601c2e58d7990417856358302a44b51d352826f38f76b75ef9b694185b09278": {
+      "metric_id": "outlook.nvidia.supply",
+      "definition_version": 1,
+      "context": {
+        "entity": "nvidia",
+        "period": "FY2027 Q3",
+        "previous_period": "FY2026 Q3",
+        "period_end": "2026-10-25",
+        "report_published_at": "2026-11-17",
+        "measurement": "outlook",
+        "unit": "",
+        "scope": "供应承诺",
+        "accounting_basis": "as_disclosed",
+        "temporal_basis": "target_period",
+        "sources": [
+          {
+            "id": "eco_nvidia_cfo",
+            "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2027/Q327/Q3FY27-CFO-Commentary.pdf",
+            "published_at": "2026-11-17"
+          }
+        ]
+      },
+      "payload": {
+        "id": "supply",
+        "label": "供应承诺",
+        "type": "numeric",
+        "value": "3,900 亿美元",
+        "summary": "上季为 2,790 亿美元；公司称增加主要来自多年期内存供应采购，用于锁定未来数年所需的关键部件。",
+        "prior_guidance": "",
+        "period": "截至 2026-10-25",
+        "issued_at": "2026-11-17",
+        "speaker": "临时 CEO 兼 CFO Colette Kress",
+        "kind": "管理层观察",
+        "evidence_type": "direct",
+        "source_ids": [
+          "eco_nvidia_cfo"
+        ],
+        "location": "CFO 评述 · Commitments · supply commitments。"
+      },
+      "evidence_ids": [
+        "e-cf0a737cf1a450aac60e270f338a972b0bdc196a8aedacd9c1cbf78fdfb19a04"
+      ],
+      "id": "e601c2e58d7990417856358302a44b51d352826f38f76b75ef9b694185b09278"
     }
   },
   "supporting": {
