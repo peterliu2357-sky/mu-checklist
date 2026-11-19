@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "scope": "quote",
+  "base_commit": "794fd02ee673ba41474d9ea95f53aaad14556883",
+  "base_revision": "2026-11-19-03b32aee61",
+  "base_sha256": "85c563c996f94a2787edd85e62244ecbb04c19614407d579ab976a6bc698c51d",
+  "catalog_sha256": "fee4850889d2288f13b98a309fc2f493fd42df19c57e3097222d36ee0efab5f0",
+  "created_at": "2026-11-19T03:22:40.071Z",
+  "completed_at": "2026-11-19T03:22:40.373Z",
+  "state": "verified",
+  "targets": null,
+  "coverage": [
+    {
+      "key": "quote",
+      "status": "verified",
+      "evidence": [
+        "price_auto"
+      ],
+      "reviewed_at": "2026-11-19T03:22:40.215Z",
+      "latest_disclosure": {
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/MU?range=1mo&interval=1d&events=splits",
+        "published_at": "2026-11-18"
+      },
+      "reason": "Validated final regular-session daily OHLC data."
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "price_auto",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/MU?range=1mo&interval=1d&events=splits",
+      "sha256": "ee3ca9444facbf2ae13c1c9526152c29cf875d3c492d1b8a0d182a64e0da1e82",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-19T03:22:40.215Z",
+      "reviewed_at": "2026-11-19T03:22:40.215Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [],
+  "publication_corrections": [
+    "price_auto"
+  ],
+  "technology_reviews": [],
+  "summary": "更新 MU 2026-11-18 常规收盘；财报与新闻核查时间保持不变。",
+  "result": "success",
+  "artifact_sha256": "502af649fce8a254d8621ea3aa77b759737a38b97b385f3dae7b46b7e61f4e9a",
+  "ledger_sha256": "04195b194ff326b048d979b470185e12b90234366f7de71ae76384f86097cfdd",
+  "evidence_sha256": "85540c0839067d2ef89edadaa0743c35f14888252e27c385534eb825d5e4f25f"
+}
