@@ -161,13 +161,14 @@
           ]
         },
         {
-          "text": "现货仍高于合同价（本站口径：现货高于合同价表示短期买盘更紧）：DDR5 现货 {{mu.contract.ddr5_spot}}，合同价 {{mu.contract.ddr5_contract}}；DDR4 现货 {{mu.contract.ddr4_spot}}，最近公布的合同价 {{mu.contract.ddr4_contract}}。但现货涨势已停：DDR5 低于十月底的 {{series.mu.contract.ddr5_spot@2026-10-30}}，十一月初回落后大致持平；DDR4 {{mu.contract.ddr4_spot|change}}，TrendForce 称买方观望。DDR4 合同价的公开数据停在九月，两类读数日期不同，只能看方向。",
+          "text": "现货仍高于合同价（本站口径：现货高于合同价表示短期买盘更紧）：DDR5 现货 {{mu.contract.ddr5_spot}}，合同价 {{mu.contract.ddr5_contract}}；DDR4 现货 {{mu.contract.ddr4_spot}}，最近公布的合同价 {{mu.contract.ddr4_contract}}。但现货已不再上涨：DDR5 低于十月底的 {{series.mu.contract.ddr5_spot@2026-10-30}}，十一月初回落后大致持平；DDR4 由十一月初的 {{series.mu.contract.ddr4_spot@2026-11-03}} 降至 {{mu.contract.ddr4_spot}}，TrendForce 称下游需求疲弱，部分供应商愿意降价出货，买方更趋观望。DDR4 合同价的公开数据停在九月，两类读数日期不同，只能看方向。",
           "refs": [
             "mu.contract.ddr5_spot",
             "mu.contract.ddr5_contract",
             "mu.contract.ddr4_spot",
             "mu.contract.ddr4_contract",
-            "series.mu.contract.ddr5_spot@2026-10-30"
+            "series.mu.contract.ddr5_spot@2026-10-30",
+            "series.mu.contract.ddr4_spot@2026-11-03"
           ]
         },
         {
@@ -245,10 +246,11 @@
           ]
         },
         {
-          "text": "NAND 现货在走弱，与 TrendForce 对合同价的预测（{{mu.contract.nand_forecast}}）方向相反：TLC 晶圆现货最新 {{mu.contract.tlc_spot}}，{{mu.contract.tlc_spot|change}}，明显低于八月高点 {{series.mu.contract.tlc_spot@2026-08-17}}；TrendForce 对 2027 年 NAND 的展望是「{{mu.supply.nand_outlook}}」。NAND 收入 {{mu.revenue.nand}}，DRAM 收入 {{mu.revenue.dram}}，NAND 占比较小，且美光本季 NAND 售价涨幅仍高于 DRAM；但 TLC 现货是目前跌幅最明显的价格读数。",
+          "text": "NAND 现货继续走弱，与 TrendForce 对合同价的预测（{{mu.contract.nand_forecast}}）方向相反：TLC 晶圆现货由十一月初的 {{series.mu.contract.tlc_spot@2026-11-02}} 降至 {{mu.contract.tlc_spot}}，明显低于八月高点 {{series.mu.contract.tlc_spot@2026-08-17}}。TrendForce 最新周报称渠道面临库存去化压力、卖方降价出货，NAND 现货价已低于合同价两成以上，并制约合同价谈判；其对 2027 年 NAND 的展望是「{{mu.supply.nand_outlook}}」。NAND 收入 {{mu.revenue.nand}}，DRAM 收入 {{mu.revenue.dram}}，NAND 占比较小，且美光本季 NAND 售价涨幅仍高于 DRAM；但这是目前唯一出现现货低于合同价的品类，也是跌幅最明显的价格读数。",
           "refs": [
             "mu.contract.nand_forecast",
             "mu.contract.tlc_spot",
+            "series.mu.contract.tlc_spot@2026-11-02",
             "series.mu.contract.tlc_spot@2026-08-17",
             "mu.supply.nand_outlook",
             "mu.revenue.nand",
@@ -354,8 +356,8 @@
       ]
     }
   ],
-  "generated_at": "2026-11-18T22:14:51.892Z",
-  "data_revision": "2026-11-18-249ff47cbc",
+  "generated_at": "2026-11-19T01:12:06.968Z",
+  "data_revision": "2026-11-19-03b32aee61",
   "financial_period": "FY2026 Q4",
   "cited": {
     "mu.revenue.total": {
@@ -755,14 +757,14 @@
       "change": "+4.2%"
     },
     "mu.contract.ddr5_spot": {
-      "current": 60.267,
+      "current": 60.5,
       "previous": null,
-      "change": "日变动 +0.06%（DRAMeXchange 披露）"
+      "change": "日变动 +0.28%（DRAMeXchange 披露）"
     },
     "mu.contract.ddr4_spot": {
-      "current": 46.82,
+      "current": 44.25,
       "previous": null,
-      "change": "周变动 −0.09%（报告值）"
+      "change": "周变动 −1.43%（报告值）"
     },
     "mu.contract.ddr4_contract": {
       "current": 26,
@@ -771,6 +773,10 @@
     },
     "series.mu.contract.ddr5_spot@2026-10-30": {
       "current": 61.5,
+      "previous": null
+    },
+    "series.mu.contract.ddr4_spot@2026-11-03": {
+      "current": 46.82,
       "previous": null
     },
     "mu.contract.dram_forecast": {
@@ -873,9 +879,13 @@
       "previous": null
     },
     "mu.contract.tlc_spot": {
-      "current": 16.152,
+      "current": 14.238,
       "previous": null,
-      "change": "周变动 −4.33%（报告值）"
+      "change": "周变动 −0.20%（报告值）"
+    },
+    "series.mu.contract.tlc_spot@2026-11-02": {
+      "current": 16.152,
+      "previous": null
     },
     "series.mu.contract.tlc_spot@2026-08-17": {
       "current": 21.208,
@@ -1074,6 +1084,15 @@
     },
     {
       "at": "2026-11-18",
+      "call": "slowing",
+      "text": "库存天数触发见顶预警；韩国半导体出口环比回落、同比仍增；DRAM 价格指数环比{{mu.contract.bok_dram_price|change}}，仍升。",
+      "values": {
+        "mu.contract.bok_dram_price|change": "+7.2%"
+      },
+      "grade": null
+    },
+    {
+      "at": "2026-11-19",
       "call": "slowing",
       "text": "库存天数触发见顶预警；韩国半导体出口环比回落、同比仍增；DRAM 价格指数环比{{mu.contract.bok_dram_price|change}}，仍升。",
       "values": {
