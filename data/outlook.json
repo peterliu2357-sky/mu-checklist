@@ -161,7 +161,7 @@
           ]
         },
         {
-          "text": "现货仍高于合同价（本站口径：现货高于合同价表示短期买盘更紧）：DDR5 现货 {{mu.contract.ddr5_spot}}，合同价 {{mu.contract.ddr5_contract}}；DDR4 现货 {{mu.contract.ddr4_spot}}，最近公布的合同价 {{mu.contract.ddr4_contract}}。但现货已不再上涨：DDR5 低于十月底的 {{series.mu.contract.ddr5_spot@2026-10-30}}，十一月初回落后大致持平；DDR4 由十一月初的 {{series.mu.contract.ddr4_spot@2026-11-03}} 降至 {{mu.contract.ddr4_spot}}，TrendForce 称下游需求疲弱，部分供应商愿意降价出货，买方更趋观望。DDR4 合同价的公开数据停在九月，两类读数日期不同，只能看方向。",
+          "text": "DRAM 现货仍高于合同价（本站口径：现货高于合同价表示短期买盘更紧）：DDR5 现货 {{mu.contract.ddr5_spot}}，合同价 {{mu.contract.ddr5_contract}}；DDR4 现货 {{mu.contract.ddr4_spot}}，最近公布的合同价 {{mu.contract.ddr4_contract}}。但现货已不再上涨：DDR5 低于十月底的 {{series.mu.contract.ddr5_spot@2026-10-30}}，十一月初回落后大致持平；DDR4 由十一月初的 {{series.mu.contract.ddr4_spot@2026-11-03}} 降至 {{mu.contract.ddr4_spot}}，TrendForce 称下游需求疲弱，部分供应商愿意降价出货，买方更趋观望。DDR4 合同价的公开数据停在九月，两类读数日期不同，只能看方向。",
           "refs": [
             "mu.contract.ddr5_spot",
             "mu.contract.ddr5_contract",
@@ -246,7 +246,7 @@
           ]
         },
         {
-          "text": "NAND 现货继续走弱，与 TrendForce 对合同价的预测（{{mu.contract.nand_forecast}}）方向相反：TLC 晶圆现货由十一月初的 {{series.mu.contract.tlc_spot@2026-11-02}} 降至 {{mu.contract.tlc_spot}}，明显低于八月高点 {{series.mu.contract.tlc_spot@2026-08-17}}。TrendForce 最新周报称渠道面临库存去化压力、卖方降价出货，NAND 现货价已低于合同价两成以上，并制约合同价谈判；其对 2027 年 NAND 的展望是「{{mu.supply.nand_outlook}}」。NAND 收入 {{mu.revenue.nand}}，DRAM 收入 {{mu.revenue.dram}}，NAND 占比较小，且美光本季 NAND 售价涨幅仍高于 DRAM；但这是目前唯一出现现货低于合同价的品类，也是跌幅最明显的价格读数。",
+          "text": "NAND 现货继续走弱，与 TrendForce 对合同价的预测（{{mu.contract.nand_forecast}}）方向相反：TLC 晶圆现货由十一月初的 {{series.mu.contract.tlc_spot@2026-11-02}} 降至 {{mu.contract.tlc_spot}}，明显低于八月高点 {{series.mu.contract.tlc_spot@2026-08-17}}。TrendForce 最新周报称渠道面临库存去化压力、卖方降价出货，NAND 现货价与合同价的差距扩大到两成以上，并制约合同价谈判；其对 2027 年 NAND 的展望是「{{mu.supply.nand_outlook}}」。NAND 收入 {{mu.revenue.nand}}，DRAM 收入 {{mu.revenue.dram}}，NAND 占比较小，且美光本季 NAND 售价涨幅仍高于 DRAM；但 TLC 现货是目前跌幅最明显的价格读数。",
           "refs": [
             "mu.contract.nand_forecast",
             "mu.contract.tlc_spot",
@@ -356,7 +356,7 @@
       ]
     }
   ],
-  "generated_at": "2026-11-19T01:12:06.968Z",
+  "generated_at": "2026-11-19T01:18:18.540Z",
   "data_revision": "2026-11-19-03b32aee61",
   "financial_period": "FY2026 Q4",
   "cited": {
