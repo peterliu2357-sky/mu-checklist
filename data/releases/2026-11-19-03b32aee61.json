@@ -1,0 +1,251 @@
+{
+  "version": 1,
+  "scope": "batch",
+  "base_commit": "ec8a50436d1e984124cb7a5ec0c113a7ad32a301",
+  "base_revision": "2026-11-18-249ff47cbc",
+  "base_sha256": "0f2cbcd50d7f67dca896ee33d057e6b45fa1ef9efc983d1d3fc24050bed900c9",
+  "catalog_sha256": "fee4850889d2288f13b98a309fc2f493fd42df19c57e3097222d36ee0efab5f0",
+  "created_at": "2026-11-19T01:07:10.727Z",
+  "completed_at": "2026-11-19T01:11:34.918Z",
+  "state": "verified",
+  "targets": [
+    "industry",
+    "technology:facilities",
+    "technology:processes",
+    "technology:products"
+  ],
+  "coverage": [
+    {
+      "key": "industry",
+      "status": "verified",
+      "evidence": [
+        "index_tf_press_20261118",
+        "index_tf_news_20261118",
+        "index_dramx_20261118",
+        "index_dramx_contract_20261118",
+        "index_ecos_bok_20261118",
+        "index_ecos_kostat_20261118",
+        "index_ecos_kostat_inv_20261118",
+        "index_motir_20261118",
+        "index_customs_20261118",
+        "spot",
+        "dram_spot"
+      ],
+      "reviewed_at": "2026-11-19T01:11:34.678Z",
+      "latest_disclosure": {
+        "url": "https://www.trendforce.com/news/2026/11/18/insights-memory-spot-price-update-nand-spot-contract-price-gap-exceeds-20-amid-weak-demand/",
+        "published_at": "2026-11-18"
+      },
+      "reason": "已检查行业入口：TrendForce 11-18 发布新一期现货周报，DDR4 1Gx8 3200 周均价 44.25 美元（11-17，周变动 −1.43%），512Gb TLC 晶圆 14.238 美元（周变动 −0.20%；原文日期写作 11 月 9 日，按周序记为 11-16），并称 NAND 现货与合同价差距超过两成；DRAMeXchange 11-18 收盘场 DDR5 16Gb 现货 60.500 美元（+0.28%）；均已录入。TrendForce 新闻稿最新仍为 11-11（已录入）；合同价表仍至 2026-09；ECOS 出口价格最新为 10 月（已录入），KSIC 26 指数仍至 9 月；关税厅月内暂定值最新仍为 11 月 1–10 日（已录入）；产业通商部无新的月度进出口统计。DRAMeXchange 两个页面对流水线抓取返回 503，改以同一标识直接下载原始字节后登记。",
+      "finding": "new_disclosure"
+    },
+    {
+      "key": "technology:facilities",
+      "status": "verified",
+      "evidence": [
+        "index_micron_newsroom_20261118",
+        "index_micron_events_20261118"
+      ],
+      "reviewed_at": "2026-11-19T01:11:34.678Z",
+      "latest_disclosure": {
+        "url": "https://investors.micron.com/news/press-release/2026/Micron-Announces-Participation-in-Investor-Events/default.aspx",
+        "published_at": "2026-11-12"
+      },
+      "reason": "美光官方新闻稿接口最新仍为 11-12 投资者活动参会公告；活动列表所列 11-18 TomorrowX Summit 尚无可读材料，无追踪工厂的新里程碑。",
+      "finding": "unchanged"
+    },
+    {
+      "key": "technology:processes",
+      "status": "verified",
+      "evidence": [
+        "index_micron_newsroom_20261118",
+        "index_micron_events_20261118"
+      ],
+      "reviewed_at": "2026-11-19T01:11:34.678Z",
+      "latest_disclosure": {
+        "url": "https://s25.q4cdn.com/621799436/files/doc_downloads/2026/10/MU-TP-Webinar.pdf",
+        "published_at": "2026-10-21"
+      },
+      "reason": "最新相关披露仍为美光 10-21 技术研讨会资料（已处理）；之后官方入口无新的制程节点、良率或爬坡披露。",
+      "finding": "unchanged"
+    },
+    {
+      "key": "technology:products",
+      "status": "verified",
+      "evidence": [
+        "index_micron_newsroom_20261118",
+        "index_micron_events_20261118",
+        "index_samsung_news_20261118",
+        "index_skhynix_news_20261118"
+      ],
+      "reviewed_at": "2026-11-19T01:11:34.678Z",
+      "latest_disclosure": {
+        "url": "https://news.samsung.com/global/samsung-electronics-announces-third-quarter-2026-results",
+        "published_at": "2026-10-29"
+      },
+      "reason": "美光、三星与 SK 海力士官方入口自 11-15 核查以来无新的 DDR5 RDIMM、HBM4/HBM4E 产品稿。",
+      "finding": "unchanged"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "index_dramx_20261118",
+      "url": "https://www.dramexchange.com/",
+      "sha256": "c7f0504d33cb607d302ae13516e651b51d80649ebd55f7e20a1c99595bb28c92",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-19T01:11:11.133Z",
+      "reviewed_at": "2026-11-19T01:11:11.133Z",
+      "status": "read"
+    },
+    {
+      "source_id": "dram_spot",
+      "url": "https://www.dramexchange.com/",
+      "sha256": "c7f0504d33cb607d302ae13516e651b51d80649ebd55f7e20a1c99595bb28c92",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-19T01:11:11.338Z",
+      "reviewed_at": "2026-11-19T01:11:11.338Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_dramx_contract_20261118",
+      "url": "https://www.dramexchange.com/Home/HomePrice?Source=NationalDramContract",
+      "sha256": "3088c4658143507f092b171ed60619715af461c332977ffe34666989d71dfb19",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-19T01:11:11.543Z",
+      "reviewed_at": "2026-11-19T01:11:11.543Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_micron_newsroom_20261118",
+      "url": "https://investors.micron.com/news/default.aspx",
+      "sha256": "cbc799a6e0a720ce40921829694cdc010ccbccb671247c4d534602eeecaf5050",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-11-19T01:11:11.749Z",
+      "reviewed_at": "2026-11-19T01:11:11.749Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_ecos_kostat_20261118",
+      "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202601/202611/I11ACQ/4",
+      "sha256": "468a94aedc60ff9881f5784dfe7729cbef8ce54da75c56237f97c29d30d02da4",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-19T01:11:11.986Z",
+      "reviewed_at": "2026-11-19T01:11:11.986Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_ecos_kostat_inv_20261118",
+      "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202601/202611/I11ACQ/6",
+      "sha256": "c8904065571791868a52ebbb755a8b0600defe0ea7dc8c4184c5e0c6edc2de7c",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-19T01:11:12.196Z",
+      "reviewed_at": "2026-11-19T01:11:12.196Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_ecos_bok_20261118",
+      "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202601/202611/30911201AA/D",
+      "sha256": "75dfc09d65a2912a278490f84edd50feac65219862701dbc71baf74b4fba05e1",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-19T01:11:12.405Z",
+      "reviewed_at": "2026-11-19T01:11:12.405Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_tf_news_20261118",
+      "url": "https://www.trendforce.com/news/wp-json/wp/v2/posts?after=2026-11-13T00:00:00&per_page=80&_fields=id,date,link,title",
+      "sha256": "10d8b63bac5906437976fce5ef14a83604bef411cbbca1079b553451f91133cf",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-19T01:11:12.616Z",
+      "reviewed_at": "2026-11-19T01:11:12.616Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_motir_20261118",
+      "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c",
+      "sha256": "dfd740aa3f82d297260edeab2ae33bbdbf00b643e2a18f33b629c49c85c66911",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-19T01:11:12.824Z",
+      "reviewed_at": "2026-11-19T01:11:12.824Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_customs_20261118",
+      "url": "https://www.customs.go.kr/kcs/na/ntt/selectNttList.do?mi=2891&bbsId=1362",
+      "sha256": "3dc2af9db91625af33b1a6cbdd4f0adc8fa93d35d4762da021452f0a5b5246fc",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-19T01:11:13.032Z",
+      "reviewed_at": "2026-11-19T01:11:13.032Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_micron_events_20261118",
+      "url": "https://investors.micron.com/feed/Event.svc/GetEventList?LanguageId=1&eventSelection=3&sortOperator=1&eventDateFilter=3&pageSize=5&pageNumber=0&year=-1",
+      "sha256": "01b3a776830003fef86fdf1ccd603cd685266fb292f2358e9035d8c35aebec15",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-19T01:11:13.240Z",
+      "reviewed_at": "2026-11-19T01:11:13.240Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_samsung_news_20261118",
+      "url": "https://news.samsung.com/global/",
+      "sha256": "af2cebbb1342c319fbadd48b50b72b25d7ca4c2e4385f9a9406ca83e982feea2",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-19T01:11:13.453Z",
+      "reviewed_at": "2026-11-19T01:11:13.453Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_skhynix_news_20261118",
+      "url": "https://news.skhynix.com/en/",
+      "sha256": "de0430bf0991203a70a8e1c155e14753ffc22bbb7b4eb3e608dd2570a928e37b",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-19T01:11:13.670Z",
+      "reviewed_at": "2026-11-19T01:11:13.670Z",
+      "status": "read"
+    },
+    {
+      "source_id": "spot",
+      "url": "https://www.trendforce.com/news/2026/11/18/insights-memory-spot-price-update-nand-spot-contract-price-gap-exceeds-20-amid-weak-demand/",
+      "sha256": "18f92881fb94bc963295e9874aad5e76ae77099c670ad2dc3a8736ceaa076559",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-19T01:11:13.876Z",
+      "reviewed_at": "2026-11-19T01:11:13.876Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_tf_press_20261118",
+      "url": "https://www.trendforce.com/presscenter",
+      "sha256": "a892886fb395538410aa119a16bdd7773a3330ff8ae154edb2c5b101c7106f85",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-19T01:11:14.093Z",
+      "reviewed_at": "2026-11-19T01:11:14.093Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [],
+  "publication_corrections": [
+    "dram_spot"
+  ],
+  "technology_reviews": [],
+  "result": "success",
+  "artifact_sha256": "85c563c996f94a2787edd85e62244ecbb04c19614407d579ab976a6bc698c51d",
+  "ledger_sha256": "07810cbc08cfbbbe689909eadd5ee14f08833e745ea9799b8ec4c94642dca502",
+  "evidence_sha256": "419411560b2fcbb01844b37707b110465631897400e19b31db404e75a678665c"
+}
