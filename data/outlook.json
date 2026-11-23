@@ -1,7 +1,7 @@
 {
   "format_version": 1,
   "stance": "positive",
-  "summary": "基本面整体向好：收入与下季收入指引继续上升，长约和云厂商投入支撑需求。但涨价最快的阶段已过：下季毛利率指引略低于本季，库存天数回升并触发回测预警，消费端需求走弱，TrendForce 预计 NAND 合同价明年一季度起转跌。",
+  "summary": "基本面整体向好：收入与下季收入指引继续上升，长约和云厂商投入支撑需求。但涨价最快的阶段已过：下季毛利率指引略低于本季，库存天数回升并触发回测预警，消费端需求走弱。",
   "summary_refs": [
     "mu.revenue.total",
     "guidance.revenue",
@@ -12,8 +12,7 @@
     "mu.margin.nongaap",
     "mu.inventory.days",
     "mu.demand.smartphone_shipments",
-    "mu.demand.pc_shipments",
-    "mu.supply.nand_outlook"
+    "mu.demand.pc_shipments"
   ],
   "sections": [
     {
@@ -135,7 +134,7 @@
           ]
         },
         {
-          "text": "月度指标仍处高位，环比有涨有跌：韩国最新整月（十月）半导体出口 {{mu.demand.korea_semi_exports}}，{{mu.demand.korea_semi_exports|change}}，但低于九月的 {{series.mu.demand.korea_semi_exports@2026-09}}；存储芯片出口 {{mu.demand.korea_memory_exports}}，同样低于九月的 {{series.mu.demand.korea_memory_exports@2026-09}}。回测看的是三个月均值的同比变化是否连续回落，单月环比回落不构成该信号。十一月前二十天的出口初值{{mu.demand.korea_semi_exports_prelim|change}}，该期工作日略多于上年同期。南亚科最新月营收{{mu.demand.nanya_revenue|change}}。这些指标同时受售价和数量影响，两者无法拆分，也不等于美光出货。",
+          "text": "月度指标仍处高位，环比有涨有跌：韩国最新整月（十月）半导体出口 {{mu.demand.korea_semi_exports}}，{{mu.demand.korea_semi_exports|change}}，但低于九月的 {{series.mu.demand.korea_semi_exports@2026-09}}；存储芯片出口 {{mu.demand.korea_memory_exports}}，同样低于九月的 {{series.mu.demand.korea_memory_exports@2026-09}}。回测看的是三个月均值的同比变化是否连续回落，单月环比回落不构成该信号。十一月上旬的出口初值{{mu.demand.korea_semi_exports_prelim|change}}，该期工作日多于上年同期。南亚科最新月营收{{mu.demand.nanya_revenue|change}}。这些指标同时受售价和数量影响，两者无法拆分，也不等于美光出货。",
           "refs": [
             "mu.demand.korea_semi_exports",
             "series.mu.demand.korea_semi_exports@2026-09",
@@ -173,7 +172,7 @@
           ]
         },
         {
-          "text": "TrendForce 对 2026 Q4 合同价的预测仍是上涨，但 NAND 的涨幅已被下修：普通型 DRAM {{mu.contract.dram_forecast}}，是九月底的预测，涨幅预计较上季收敛；NAND {{mu.contract.nand_forecast}}，是十一月下修后的预测，理由是消费电子出货预期持续下调、中国云厂商削减企业 SSD 订单。其十一月的另一份新闻稿称 PC DRAM 合同价涨幅较上季放缓。同业 SK 海力士七至九月当季 DRAM 售价环比{{mu.peers.skhynix_dram_asp}}、NAND {{mu.peers.skhynix_nand_asp}}；其财季比美光晚约一个月，不能直接对比。",
+          "text": "TrendForce 九月底对 2026 Q4 合同价的预测是上涨：普通型 DRAM {{mu.contract.dram_forecast}}，NAND {{mu.contract.nand_forecast}}，其中 DRAM 涨幅预计较上季收敛；其十一月的新闻稿称 PC DRAM 合同价涨幅较上季放缓。同业 SK 海力士七至九月当季 DRAM 售价环比{{mu.peers.skhynix_dram_asp}}、NAND {{mu.peers.skhynix_nand_asp}}；其财季比美光晚约一个月，不能直接对比。",
           "refs": [
             "mu.contract.dram_forecast",
             "mu.contract.nand_forecast",
@@ -182,7 +181,7 @@
           ]
         },
         {
-          "text": "厂商对供需的表述一致偏紧。美光的展望是：{{mu.supply.micron_outlook}}。SK 海力士预计 2027 年需求位元增长为{{mu.peers.skhynix_demand_outlook}}。这些都是卖方自己的预测，尚未实现；第三方机构 TrendForce 对 NAND 的看法已经不同，见下文转折信号。",
+          "text": "厂商对供需的表述一致偏紧。美光的展望是：{{mu.supply.micron_outlook}}。SK 海力士预计 2027 年需求位元增长为{{mu.peers.skhynix_demand_outlook}}。这些都是卖方自己的预测，尚未实现。",
           "refs": [
             "mu.supply.micron_outlook",
             "mu.peers.skhynix_demand_outlook",
@@ -247,16 +246,17 @@
           ]
         },
         {
-          "text": "NAND 是目前最明确的转弱信号。TrendForce 十一月的新闻稿对 2027 年 NAND 的展望是「{{mu.supply.nand_outlook}}」：供给增长明显快于需求，中国云厂商削减企业 SSD 订单的幅度超过北美云厂商上调的需求；同一稿把 2026 Q4 NAND 合同价涨幅预测下修为 {{mu.contract.nand_forecast}}。现货已先走弱：TLC 晶圆现货由十一月初的 {{series.mu.contract.tlc_spot@2026-11-02}} 降至 {{mu.contract.tlc_spot}}，明显低于八月高点 {{series.mu.contract.tlc_spot@2026-08-17}}，TrendForce 周报称 NAND 现货价与合同价的差距扩大到两成以上。这份预测只针对 NAND，没有涉及 DRAM。NAND 收入 {{mu.revenue.nand}}，DRAM 收入 {{mu.revenue.dram}}，NAND 占比较小；美光本季 NAND 售价仍在上涨（环比{{mu.asp.nand}}），预测是否兑现要看之后的财报。",
+          "text": "NAND 现货继续走弱，与 TrendForce 对合同价的预测（{{mu.contract.nand_forecast}}）方向相反：TLC 晶圆现货由十一月初的 {{series.mu.contract.tlc_spot@2026-11-02}} 降至 {{mu.contract.tlc_spot}}，明显低于八月高点 {{series.mu.contract.tlc_spot@2026-08-17}}。TrendForce 最新周报称渠道面临库存去化压力、卖方降价出货，NAND 现货价与合同价的差距扩大到两成以上，并制约合同价谈判；其对 2027 年 NAND 的展望是「{{mu.supply.nand_outlook}}」。NAND 收入 {{mu.revenue.nand}}，DRAM 收入 {{mu.revenue.dram}}，NAND 占比较小，且美光本季 NAND 售价涨幅仍高于 DRAM；但 TLC 现货是目前跌幅最明显的价格读数。",
           "refs": [
-            "mu.supply.nand_outlook",
             "mu.contract.nand_forecast",
             "mu.contract.tlc_spot",
             "series.mu.contract.tlc_spot@2026-11-02",
             "series.mu.contract.tlc_spot@2026-08-17",
+            "mu.supply.nand_outlook",
             "mu.revenue.nand",
             "mu.revenue.dram",
-            "mu.asp.nand"
+            "mu.asp.nand",
+            "mu.asp.dram"
           ]
         },
         {
@@ -319,7 +319,7 @@
       "title": "什么会改变判断",
       "points": [
         {
-          "text": "转向「待更多数据」：FY2027 Q1 库存天数继续上升或产成品继续快速增加；DRAM 售价环比涨幅收窄到接近持平；DDR5 现货跌破合同价；DRAM 合同价预测也转为持平或下跌（NAND 合同价已被预测自明年一季度起下跌）；客户库存数据显示备货偏高。",
+          "text": "转向「待更多数据」：FY2027 Q1 库存天数继续上升或产成品继续快速增加；DRAM 售价环比涨幅收窄到接近持平；DDR5 现货跌破合同价；合同价预测转为持平或下跌；客户库存数据显示备货偏高。",
           "refs": [
             "mu.inventory.days",
             "mu.inventory.finished_goods",
@@ -327,8 +327,7 @@
             "mu.contract.ddr5_spot",
             "mu.contract.ddr5_contract",
             "mu.contract.dram_forecast",
-            "mu.demand.customer_inventory",
-            "mu.supply.nand_outlook"
+            "mu.demand.customer_inventory"
           ]
         },
         {
@@ -357,8 +356,8 @@
       ]
     }
   ],
-  "generated_at": "2026-11-23T01:15:20.764Z",
-  "data_revision": "2026-11-23-e90f3ccd7f",
+  "generated_at": "2026-11-19T01:18:18.540Z",
+  "data_revision": "2026-11-19-03b32aee61",
   "financial_period": "FY2026 Q4",
   "cited": {
     "mu.revenue.total": {
@@ -408,10 +407,6 @@
       "current": 62.7,
       "previous": 78.5,
       "change": "同比 −20.1%（IDC 披露）"
-    },
-    "mu.supply.nand_outlook": {
-      "current": "供过于求加剧；合同价 1Q27 起下跌",
-      "previous": null
     },
     "mu.contract.bok_dram_price": {
       "current": 309.97,
@@ -735,9 +730,9 @@
       "previous": null
     },
     "mu.demand.korea_semi_exports_prelim": {
-      "current": 38466,
+      "current": 16632,
       "previous": null,
-      "change": "同比 +294.4%（官方披露）"
+      "change": "同比 +331.2%（官方披露）"
     },
     "mu.demand.nanya_revenue": {
       "current": 46.476051,
@@ -762,9 +757,9 @@
       "change": "+4.2%"
     },
     "mu.contract.ddr5_spot": {
-      "current": 60.667,
+      "current": 60.5,
       "previous": null,
-      "change": "日变动 0.00%（DRAMeXchange 披露）"
+      "change": "日变动 +0.28%（DRAMeXchange 披露）"
     },
     "mu.contract.ddr4_spot": {
       "current": 44.25,
@@ -789,7 +784,7 @@
       "previous": null
     },
     "mu.contract.nand_forecast": {
-      "current": "+8% 至 +13%",
+      "current": "+15% 至 +20%",
       "previous": null
     },
     "mu.peers.skhynix_dram_asp": {
@@ -896,6 +891,10 @@
       "current": 21.208,
       "previous": null
     },
+    "mu.supply.nand_outlook": {
+      "current": "企业 SSD 偏强；消费级存储承压",
+      "previous": null
+    },
     "mu.revenue.nand": {
       "current": 14100,
       "previous": 9943,
@@ -993,13 +992,12 @@
   },
   "cycle_read": {
     "call": "slowing",
-    "text": "库存天数预警；韩国出口环比回落；DRAM 价格指数环比{{mu.contract.bok_dram_price|change}}；NAND 合同价预测明年转跌。",
+    "text": "库存天数触发见顶预警；韩国半导体出口环比回落、同比仍增；DRAM 价格指数环比{{mu.contract.bok_dram_price|change}}，仍升。",
     "refs": [
       "mu.contract.bok_dram_price",
       "mu.inventory.days",
       "mu.demand.korea_semi_exports",
-      "series.mu.demand.korea_semi_exports@2026-09",
-      "mu.supply.nand_outlook"
+      "series.mu.demand.korea_semi_exports@2026-09"
     ]
   },
   "cycle_log": [
@@ -1097,15 +1095,6 @@
       "at": "2026-11-19",
       "call": "slowing",
       "text": "库存天数触发见顶预警；韩国半导体出口环比回落、同比仍增；DRAM 价格指数环比{{mu.contract.bok_dram_price|change}}，仍升。",
-      "values": {
-        "mu.contract.bok_dram_price|change": "+7.2%"
-      },
-      "grade": null
-    },
-    {
-      "at": "2026-11-23",
-      "call": "slowing",
-      "text": "库存天数预警；韩国出口环比回落；DRAM 价格指数环比{{mu.contract.bok_dram_price|change}}；NAND 合同价预测明年转跌。",
       "values": {
         "mu.contract.bok_dram_price|change": "+7.2%"
       },

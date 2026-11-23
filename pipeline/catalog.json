@@ -2993,24 +2993,6 @@
         "secondary"
       ]
     },
-    "calendar.micron_fy2027_q1": {
-      "version": 1,
-      "active": true,
-      "required": false,
-      "supporting": false,
-      "entity": "micron",
-      "measurement": "disclosure_calendar",
-      "unit": "",
-      "scope": "calendar.micron_fy2027_q1",
-      "accounting_basis": "not_applicable",
-      "temporal_basis": "dated_disclosure",
-      "nature": "actual_or_observation",
-      "evidence_types": [
-        "direct",
-        "proxy",
-        "secondary"
-      ]
-    },
     "tech.sanand": {
       "version": 1,
       "active": true,
@@ -3881,13 +3863,6 @@
     ],
     "calendar_amazon_20261029": [
       "calendar.amazon_2026_q3"
-    ],
-    "calendar_mu_20261217": [
-      "calendar.micron_fy2027_q1"
-    ],
-    "nand_1119": [
-      "mu.contract.nand_forecast",
-      "mu.supply.nand_outlook"
     ],
     "calendar_nvidia_20261117": [
       "calendar.nvidia_fy2027_q3"
