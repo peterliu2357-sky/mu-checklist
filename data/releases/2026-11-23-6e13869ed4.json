@@ -1,0 +1,411 @@
+{
+  "version": 1,
+  "scope": "batch",
+  "base_commit": "e59a50662ff15a18a932dc1ab9f1f0678241466f",
+  "base_revision": "2026-11-21-001a5ccc68",
+  "base_sha256": "ce9bc6f3a08f3a0431ed786edadeaac33b91645d8bb06a7edede902fdf9475e2",
+  "catalog_sha256": "eeb0cbdc2305c647d32e73a320b2e8bef40190ec4496899f05dfd4cdd6f82a4a",
+  "created_at": "2026-11-23T01:19:27.585Z",
+  "completed_at": "2026-11-23T01:21:33.636Z",
+  "state": "verified",
+  "targets": [
+    "industry",
+    "calendar",
+    "technology:facilities",
+    "technology:processes",
+    "technology:products"
+  ],
+  "coverage": [
+    {
+      "key": "industry",
+      "status": "verified",
+      "evidence": [
+        "index_tf_press_20261122",
+        "index_tf_news_20261122",
+        "index_dramx_20261122",
+        "index_dramx_contract_20261122",
+        "index_ecos_bok_20261122",
+        "index_ecos_kostat_20261122",
+        "index_ecos_kostat_inv_20261122",
+        "index_motir_20261122",
+        "index_customs_20261122",
+        "nand_1119",
+        "dram_spot",
+        "korea_customs"
+      ],
+      "reviewed_at": "2026-11-23T01:22:36.569Z",
+      "latest_disclosure": {
+        "url": "https://www.customs.go.kr/common/nttFileDownload.do?fileKey=fa00a25831d63c24e0802fc340a638b6",
+        "published_at": "2026-11-23"
+      },
+      "reason": "已检查行业入口：TrendForce 11-19 新闻稿把 4Q26 NAND 合同价涨幅预测下修至 +8% 至 +13%，并预计 NAND 合同价 1Q27 环比下跌 0–5%、2Q27 起各品类全部下行（已录入合同价预测与 2027 NAND 展望两行）；韩国关税厅 11-23 公布 11 月 1–20 日半导体出口 384.66 亿美元、同比 +294.4%（已录入）；DRAMeXchange 11-20 收盘场 DDR5 16Gb 现货 60.667 美元（日变动 0.00%，已录入）。11-18 之后 TrendForce 没有新的现货周报，DDR4 与 512Gb TLC 现货读数不变；DRAMeXchange 晶圆现货表头为 11-16，与已录入的 512Gb TLC 读数日期一致。合同价表仍至 2026-09；ECOS 出口价格最新为 10 月（已录入），KSIC 26 指数仍至 9 月；产业通商部无新的月度进出口统计。DRAMeXchange 两个页面对流水线抓取返回 503，改以同一标识直接下载原始字节后登记。",
+      "finding": "new_disclosure"
+    },
+    {
+      "key": "calendar",
+      "status": "verified",
+      "evidence": [
+        "calendar_index_alphabet_20261122",
+        "calendar_index_tsmc_20261122",
+        "calendar_index_micron_20261122",
+        "calendar_index_microsoft_20261122",
+        "calendar_index_amazon_20261122",
+        "calendar_index_oracle_20261122",
+        "calendar_index_meta_20261122",
+        "calendar_index_samsung_20261122",
+        "calendar_index_skhynix_20261122",
+        "calendar_index_nvidia_20261122",
+        "calendar_mu_20261217"
+      ],
+      "reviewed_at": "2026-11-23T01:22:36.569Z",
+      "latest_disclosure": {
+        "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-to-Report-Fiscal-First-Quarter-Results-on-December-17-2026/default.aspx",
+        "published_at": "2026-11-19"
+      },
+      "reason": "美光 11-19 公告将于 2026-12-17 下午 2:30（山地时间）召开 FY2027 Q1 业绩电话会，已录入日程。台积电、三星、SK 海力士、NVIDIA、微软、亚马逊、Alphabet、Oracle 与 Meta 的官方入口均未公布下一次财报日期。",
+      "finding": "new_disclosure"
+    },
+    {
+      "key": "technology:facilities",
+      "status": "verified",
+      "evidence": [
+        "index_micron_newsroom_20261122",
+        "index_micron_events_20261122"
+      ],
+      "reviewed_at": "2026-11-23T01:22:36.569Z",
+      "latest_disclosure": {
+        "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-to-Report-Fiscal-First-Quarter-Results-on-December-17-2026/default.aspx",
+        "published_at": "2026-11-19"
+      },
+      "reason": "美光官方新闻稿接口最新为 11-19 财报电话会日期公告，不涉及工厂；官方入口无追踪工厂的新里程碑。",
+      "finding": "unchanged"
+    },
+    {
+      "key": "technology:processes",
+      "status": "verified",
+      "evidence": [
+        "index_micron_newsroom_20261122",
+        "index_micron_events_20261122"
+      ],
+      "reviewed_at": "2026-11-23T01:22:36.569Z",
+      "latest_disclosure": {
+        "url": "https://s25.q4cdn.com/621799436/files/doc_downloads/2026/10/MU-TP-Webinar.pdf",
+        "published_at": "2026-10-21"
+      },
+      "reason": "最新相关披露仍为美光 10-21 技术研讨会资料（已处理）；之后官方入口无新的制程节点、良率或爬坡披露。",
+      "finding": "unchanged"
+    },
+    {
+      "key": "technology:products",
+      "status": "verified",
+      "evidence": [
+        "index_micron_newsroom_20261122",
+        "index_micron_events_20261122",
+        "index_samsung_news_20261122",
+        "index_skhynix_news_20261122"
+      ],
+      "reviewed_at": "2026-11-23T01:22:36.569Z",
+      "latest_disclosure": {
+        "url": "https://news.samsung.com/global/samsung-electronics-announces-third-quarter-2026-results",
+        "published_at": "2026-10-29"
+      },
+      "reason": "美光、三星与 SK 海力士官方入口自 11-18 核查以来无新的 DDR5 RDIMM、HBM4/HBM4E 产品稿。",
+      "finding": "unchanged"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "calendar_index_alphabet_20261122",
+      "url": "https://abc.xyz/investor/",
+      "sha256": "7d940908a369e83e0b1b54b843a7372c3cd3d1f80bb8352929be082930cf903c",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-23T01:21:23.615Z",
+      "reviewed_at": "2026-11-23T01:21:23.615Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_micron_20261122",
+      "url": "https://investors.micron.com/feed/Event.svc/GetEventList?LanguageId=1&eventSelection=3&sortOperator=1&eventDateFilter=3&pageSize=5&pageNumber=0&year=-1",
+      "sha256": "01b3a776830003fef86fdf1ccd603cd685266fb292f2358e9035d8c35aebec15",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-23T01:21:24.343Z",
+      "reviewed_at": "2026-11-23T01:21:24.343Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_amazon_20261122",
+      "url": "https://ir.aboutamazon.com/feed/PressRelease.svc/GetPressReleaseList?LanguageId=1&bodyType=0&pressReleaseDateFilter=3&pageSize=12&pageNumber=0&year=-1",
+      "sha256": "9918c63862fabcfa6841bdb57f7d91da1ade1acf32d79564749bc286f15088f8",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-23T01:21:25.001Z",
+      "reviewed_at": "2026-11-23T01:21:25.001Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_oracle_20261122",
+      "url": "https://investor.oracle.com/feed/PressRelease.svc/GetPressReleaseList?LanguageId=1&bodyType=0&pressReleaseDateFilter=3&pageSize=12&pageNumber=0&year=-1",
+      "sha256": "a0f66788155ca6cf246cf32080daed26ef637c50de78ddca8f14ea7131a5fb1e",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-23T01:21:25.368Z",
+      "reviewed_at": "2026-11-23T01:21:25.368Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_meta_20261122",
+      "url": "https://investor.atmeta.com/feed/Event.svc/GetEventList?apiKey=F37D4FC40D0E4774887D6827E95013D5&eventSelection=0&eventDateFilter=0&includeFinancialReports=true&includePresentations=true&includePressReleases=true&sortOperator=1&pageSize=-1&tagList=&includeTags=true&year=-1&excludeSelection=0",
+      "sha256": "e1c153c01038f8118964444b34bb5d865cd98194428efce62cc2684e52a5c299",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-23T01:21:25.734Z",
+      "reviewed_at": "2026-11-23T01:21:25.734Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_skhynix_20261122",
+      "url": "https://news.skhynix.com/en/wp-json/wp/v2/posts?search=earnings%20conference%20call&per_page=5&_fields=id,date,link,title",
+      "sha256": "8a4112171a743480a72e6f879816be1e3ea3e65004a68b24601c2699040d5ce0",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-23T01:21:26.304Z",
+      "reviewed_at": "2026-11-23T01:21:26.304Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_ecos_kostat_20261122",
+      "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202601/202611/I11ACQ/4",
+      "sha256": "468a94aedc60ff9881f5784dfe7729cbef8ce54da75c56237f97c29d30d02da4",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-23T01:21:26.601Z",
+      "reviewed_at": "2026-11-23T01:21:26.601Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_ecos_kostat_inv_20261122",
+      "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202601/202611/I11ACQ/6",
+      "sha256": "c8904065571791868a52ebbb755a8b0600defe0ea7dc8c4184c5e0c6edc2de7c",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-23T01:21:26.946Z",
+      "reviewed_at": "2026-11-23T01:21:26.946Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_ecos_bok_20261122",
+      "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202601/202611/30911201AA/D",
+      "sha256": "75dfc09d65a2912a278490f84edd50feac65219862701dbc71baf74b4fba05e1",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-23T01:21:27.261Z",
+      "reviewed_at": "2026-11-23T01:21:27.261Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_micron_events_20261122",
+      "url": "https://investors.micron.com/feed/Event.svc/GetEventList?LanguageId=1&eventSelection=3&sortOperator=1&eventDateFilter=3&pageSize=5&pageNumber=0&year=-1",
+      "sha256": "01b3a776830003fef86fdf1ccd603cd685266fb292f2358e9035d8c35aebec15",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-23T01:21:28.994Z",
+      "reviewed_at": "2026-11-23T01:21:28.994Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_skhynix_news_20261122",
+      "url": "https://news.skhynix.com/en/",
+      "sha256": "63560352ddf0ab5f3c049bd9ed7064f8742ce8857cdc4984230c7240b59352b8",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-23T01:21:29.672Z",
+      "reviewed_at": "2026-11-23T01:21:29.672Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_nvidia_20261122",
+      "url": "https://investor.nvidia.com/feed/PressRelease.svc/GetPressReleaseList?LanguageId=1&bodyType=0&pressReleaseDateFilter=3&pageSize=12&pageNumber=0&year=-1",
+      "sha256": "8c2a3546d64c9514ebaf62a69ac90b6eb0717de54e7d186cba4aa8c861126116",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-23T01:21:29.988Z",
+      "reviewed_at": "2026-11-23T01:21:29.988Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_mu_20261217",
+      "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-to-Report-Fiscal-First-Quarter-Results-on-December-17-2026/default.aspx",
+      "sha256": "e9143636fa9c8c0aab6eacbdc29b27219d5e16757b9507ec05b30ea158233d44",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-23T01:21:30.526Z",
+      "reviewed_at": "2026-11-23T01:21:30.526Z",
+      "status": "read"
+    },
+    {
+      "source_id": "korea_customs",
+      "url": "https://www.customs.go.kr/common/nttFileDownload.do?fileKey=fa00a25831d63c24e0802fc340a638b6",
+      "sha256": "13ca420f1a7ac1af79faa4de498d23022cab606f38bd6353d43a371e45e81aef",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-23T01:21:30.799Z",
+      "reviewed_at": "2026-11-23T01:21:30.799Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_dramx_20261122",
+      "url": "https://www.dramexchange.com/",
+      "sha256": "6d3ffe74669c86cfeb30df27b12e8a17ae46a86ae715965384a1ee6245ceb435",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-23T01:21:31.063Z",
+      "reviewed_at": "2026-11-23T01:21:31.063Z",
+      "status": "read"
+    },
+    {
+      "source_id": "dram_spot",
+      "url": "https://www.dramexchange.com/",
+      "sha256": "6d3ffe74669c86cfeb30df27b12e8a17ae46a86ae715965384a1ee6245ceb435",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-23T01:21:31.350Z",
+      "reviewed_at": "2026-11-23T01:21:31.350Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_dramx_contract_20261122",
+      "url": "https://www.dramexchange.com/Home/HomePrice?Source=NationalDramContract",
+      "sha256": "3088c4658143507f092b171ed60619715af461c332977ffe34666989d71dfb19",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-23T01:21:31.606Z",
+      "reviewed_at": "2026-11-23T01:21:31.606Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_micron_newsroom_20261122",
+      "url": "https://investors.micron.com/news/default.aspx",
+      "sha256": "4128f71e9c0c782a79840bd8a2d52b5c990b385cbfdbb89ae52c5400e7ba70d8",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-11-23T01:21:31.908Z",
+      "reviewed_at": "2026-11-23T01:21:31.908Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_microsoft_20261122",
+      "url": "https://www.microsoft.com/en-us/investor/default",
+      "sha256": "f47e87203344bbda0b5e03669a280fa877d18a6ab98b85f4f3b938892e31eca3",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-23T01:22:27.372Z",
+      "reviewed_at": "2026-11-23T01:22:27.372Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_samsung_20261122",
+      "url": "https://www.samsung.com/global/ir/ir-events-presentations/events/",
+      "sha256": "37d659f052dcc5f312990de901cc50d4e4d9a9a28e7495b9d888e3baa8a5fb9f",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-23T01:22:27.657Z",
+      "reviewed_at": "2026-11-23T01:22:27.657Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_tf_press_20261122",
+      "url": "https://www.trendforce.com/presscenter",
+      "sha256": "0d59f2bd375b1481d362a2a5f919803b0af67e885dbb53737e76636ef46a799c",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-23T01:22:27.958Z",
+      "reviewed_at": "2026-11-23T01:22:27.958Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_tf_news_20261122",
+      "url": "https://www.trendforce.com/news/wp-json/wp/v2/posts?after=2026-11-18T00:00:00&per_page=80&_fields=id,date,link,title",
+      "sha256": "998295b59aac4efcf765fe313cdc0ba1353416f60dd8bf32b6067c88bf46cc95",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-23T01:22:28.239Z",
+      "reviewed_at": "2026-11-23T01:22:28.239Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_motir_20261122",
+      "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c",
+      "sha256": "c61c15940b71b42a18afd0b6dc1fe495b3f1267aaa605d92b708c79aa18dd020",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-23T01:22:28.558Z",
+      "reviewed_at": "2026-11-23T01:22:28.558Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_samsung_news_20261122",
+      "url": "https://news.samsung.com/global/",
+      "sha256": "c48a2e992baf35d1f2c67db51a50be8b513ba7d6a974c669c568f37bfb20d565",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-23T01:22:28.812Z",
+      "reviewed_at": "2026-11-23T01:22:28.812Z",
+      "status": "read"
+    },
+    {
+      "source_id": "nand_1119",
+      "url": "https://www.trendforce.com/presscenter/news/20261119-13314.html",
+      "sha256": "eaa38d9cdecb0414ec384dbc136bb0b4d3a899f7985de2d76d8393decec33fd9",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-23T01:22:29.102Z",
+      "reviewed_at": "2026-11-23T01:22:29.102Z",
+      "status": "read"
+    },
+    {
+      "source_id": "calendar_index_tsmc_20261122",
+      "url": "https://investor.tsmc.com/english/financial-calendar",
+      "sha256": "d778534bd43463b6df19b1bb9581b0a2e52db742eaf24b6af7cae280c89dafa0",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-23T01:22:29.407Z",
+      "reviewed_at": "2026-11-23T01:22:29.407Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_customs_20261122",
+      "url": "https://www.customs.go.kr/kcs/na/ntt/selectNttList.do?mi=2891&bbsId=1362",
+      "sha256": "7c78b909fcea2312545c38576894f2f9f3ec2c7d746010661b986d82412a3527",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-23T01:22:29.665Z",
+      "reviewed_at": "2026-11-23T01:22:29.665Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [],
+  "publication_corrections": [
+    "dram_spot",
+    "korea_customs"
+  ],
+  "technology_reviews": [],
+  "row_reviews": [
+    {
+      "metric_id": "mu.contract.ddr4_contract",
+      "finding": "no_newer",
+      "source_ids": [
+        "index_dramx_contract_20261122"
+      ],
+      "note": "DRAMeXchange 公开合同价表仍停在 2026-09-30，之后月份的合同价仅对会员开放。"
+    }
+  ],
+  "interpretation_reviewed": [
+    "demand"
+  ],
+  "result": "success",
+  "artifact_sha256": "d8a98953c294d468910eadcd72fbdcf61fc7cfb9e4e3208a9069f248bf3c36f4",
+  "ledger_sha256": "5175bd9b3617dd547e5bde9e93c224db770cb5b089ea7f2ecadea0a994d03766",
+  "evidence_sha256": "bf0854567fefc22ddac1c91691f7add0c54791a3eca382a5e317b565b41d9258"
+}
