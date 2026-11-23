@@ -31,8 +31,14 @@
     "completion_grace_minutes": 1080
   },
   "earnings": {
-    "enabled": false,
-    "run_at": null,
-    "events": []
+    "enabled": true,
+    "run_at": "2026-12-18T21:30:00Z",
+    "events": [
+      {
+        "id": "micron_fy2027_q1",
+        "company_id": "micron",
+        "review_after": "2026-12-18T21:30:00Z"
+      }
+    ]
   }
 }
