@@ -21869,5 +21869,61 @@
     "mode": "verified",
     "record_hash": "4c167a12b0385bce6b66732ddd9880ca3a1432e8105a582dcf5721a6e7a8991e",
     "id": "e-0fc87cba399498b25d0b4427140ed2834e21029c050168a78e9982f62750d0db"
+  },
+  "e-a7c560e102b86a9d19691e6bb1e367254a403fa94a220310640e90e3a7b6f782": {
+    "measurement": "regular_close",
+    "unit": "",
+    "definition_version": 1,
+    "temporal_basis": "as_disclosed",
+    "accounting_basis": "as_disclosed",
+    "scope": "quote.mu",
+    "values": {
+      "current": null,
+      "previous": null,
+      "value": null,
+      "summary": null
+    },
+    "raw_inputs": [
+      {
+        "field": "price",
+        "value": 601.25,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-11-25",
+        "locator": "indicators.quote[0].close · latest completed daily timestamp",
+        "source_id": "price_auto"
+      },
+      {
+        "field": "previous_close",
+        "value": 629.7899780273438,
+        "scale": 1,
+        "source_unit": "USD",
+        "period": "2026-11-24",
+        "locator": "indicators.quote[0].close · previous daily timestamp",
+        "source_id": "price_auto"
+      }
+    ],
+    "review": {
+      "confirmed": true,
+      "method": "Tested structured OHLC adapter: identity, currency, completed session, previous bar and split checks",
+      "at": "2026-11-25T22:16:12.235Z"
+    },
+    "documents": [
+      {
+        "source_id": "price_auto",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/MU?range=1mo&interval=1d&events=splits",
+        "sha256": "a1451dac28d06b5edfbd20d44c236b75faf822088a01fee935ba5907da2b4702",
+        "access": "full",
+        "capture_format": "source_bytes",
+        "accessed_at": "2026-11-25T22:16:12.235Z",
+        "reviewed_at": "2026-11-25T22:16:12.235Z",
+        "status": "read",
+        "locator": "chart.result[0] · timestamp / indicators.quote[0].close；最近两个已完成交易日。",
+        "excerpt": "{\"symbol\":\"MU\",\"date\":\"2026-11-25\",\"close\":601.25,\"previous_date\":\"2026-11-24\",\"previous_close\":629.7899780273438}"
+      }
+    ],
+    "mode": "verified",
+    "record_hash": "7c8ea6f50b7293a0cb4a538e5f26323af8aea806137191203fe55fa808c82fa4",
+    "id": "e-a7c560e102b86a9d19691e6bb1e367254a403fa94a220310640e90e3a7b6f782"
   }
 }
