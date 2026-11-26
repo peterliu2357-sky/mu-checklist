@@ -1,0 +1,262 @@
+{
+  "version": 1,
+  "scope": "batch",
+  "base_commit": "bc867f6caa93ff97e9b955db237753b7023289b2",
+  "base_revision": "2026-11-25-8111d748e6",
+  "base_sha256": "4e0500ed8e8c92b611f6f1482b6e7221afa22c21079137916e869bd24a2a1755",
+  "catalog_sha256": "eeb0cbdc2305c647d32e73a320b2e8bef40190ec4496899f05dfd4cdd6f82a4a",
+  "created_at": "2026-11-26T01:12:53.790Z",
+  "completed_at": "2026-11-26T01:13:17.718Z",
+  "state": "verified",
+  "targets": [
+    "industry",
+    "technology:facilities",
+    "technology:processes",
+    "technology:products"
+  ],
+  "coverage": [
+    {
+      "key": "industry",
+      "status": "verified",
+      "evidence": [
+        "index_tf_press_20261125",
+        "index_tf_news_20261125",
+        "index_dramx_20261125",
+        "index_dramx_contract_20261125",
+        "index_ecos_bok_20261125",
+        "index_ecos_kostat_20261125",
+        "index_ecos_kostat_inv_20261125",
+        "index_motir_20261125",
+        "index_customs_20261125",
+        "spot",
+        "dram_spot",
+        "mem_2027_1125"
+      ],
+      "reviewed_at": "2026-11-26T01:13:17.353Z",
+      "latest_disclosure": {
+        "url": "https://www.trendforce.com/presscenter/news/20261125-13321.html",
+        "published_at": "2026-11-25"
+      },
+      "reason": "已检查行业入口：TrendForce 11-25 发布新一期现货周报，DDR4 1Gx8 3200 周均价 43.32 美元（11-24，周变动 −1.61%），512Gb TLC 晶圆 13.786 美元（周变动 −3.18%；原文日期写作 11 月 16 日，按周序记为 11-23）；DRAMeXchange 11-25 收盘场 DDR5 16Gb 现货 60.767 美元（−0.11%）；均已录入。TrendForce 11-25 新闻稿称 2027 年 DRAM 仍供不应求、合同价季度涨幅逐季收窄且下半年可能持平，已写入合同价卡解读；该稿的 2027 年营收预测不对应站内指标，未录入。合同价表仍至 2026-09；ECOS 出口价格最新为 10 月（已录入），KSIC 26 指数仍至 9 月；关税厅月内暂定值最新仍为 11 月 1–20 日（已录入）；产业通商部无新的月度进出口统计。DRAMeXchange 两个页面对流水线抓取返回 503，改以同一标识直接下载原始字节后登记。",
+      "finding": "new_disclosure"
+    },
+    {
+      "key": "technology:facilities",
+      "status": "verified",
+      "evidence": [
+        "index_micron_newsroom_20261125",
+        "index_micron_events_20261125"
+      ],
+      "reviewed_at": "2026-11-26T01:13:17.353Z",
+      "latest_disclosure": {
+        "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-to-Report-Fiscal-First-Quarter-Results-on-December-17-2026/default.aspx",
+        "published_at": "2026-11-19"
+      },
+      "reason": "美光官方新闻稿接口最新仍为 11-19 财报电话会日期公告，不涉及工厂；官方入口无追踪工厂的新里程碑。",
+      "finding": "unchanged"
+    },
+    {
+      "key": "technology:processes",
+      "status": "verified",
+      "evidence": [
+        "index_micron_newsroom_20261125",
+        "index_micron_events_20261125"
+      ],
+      "reviewed_at": "2026-11-26T01:13:17.353Z",
+      "latest_disclosure": {
+        "url": "https://s25.q4cdn.com/621799436/files/doc_downloads/2026/10/MU-TP-Webinar.pdf",
+        "published_at": "2026-10-21"
+      },
+      "reason": "最新相关披露仍为美光 10-21 技术研讨会资料（已处理）；之后官方入口无新的制程节点、良率或爬坡披露。",
+      "finding": "unchanged"
+    },
+    {
+      "key": "technology:products",
+      "status": "verified",
+      "evidence": [
+        "index_micron_newsroom_20261125",
+        "index_micron_events_20261125",
+        "index_samsung_news_20261125",
+        "index_skhynix_news_20261125"
+      ],
+      "reviewed_at": "2026-11-26T01:13:17.353Z",
+      "latest_disclosure": {
+        "url": "https://news.samsung.com/global/samsung-electronics-announces-third-quarter-2026-results",
+        "published_at": "2026-10-29"
+      },
+      "reason": "美光、三星与 SK 海力士官方入口自 11-22 核查以来无新的 DDR5 RDIMM、HBM4/HBM4E 产品稿。",
+      "finding": "unchanged"
+    }
+  ],
+  "reads": [
+    {
+      "source_id": "index_ecos_kostat_20261125",
+      "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202601/202611/I11ACQ/4",
+      "sha256": "468a94aedc60ff9881f5784dfe7729cbef8ce54da75c56237f97c29d30d02da4",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-26T01:13:10.650Z",
+      "reviewed_at": "2026-11-26T01:13:10.650Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_ecos_kostat_inv_20261125",
+      "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y032/M/202601/202611/I11ACQ/6",
+      "sha256": "c8904065571791868a52ebbb755a8b0600defe0ea7dc8c4184c5e0c6edc2de7c",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-26T01:13:11.004Z",
+      "reviewed_at": "2026-11-26T01:13:11.004Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_ecos_bok_20261125",
+      "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/402Y016/M/202601/202611/30911201AA/D",
+      "sha256": "75dfc09d65a2912a278490f84edd50feac65219862701dbc71baf74b4fba05e1",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-26T01:13:11.353Z",
+      "reviewed_at": "2026-11-26T01:13:11.353Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_tf_press_20261125",
+      "url": "https://www.trendforce.com/presscenter",
+      "sha256": "b4871aa8afa7457ee15a3fed2a6ab0f004e3a6a4ea60a91848f0583d2f501d40",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-26T01:13:11.709Z",
+      "reviewed_at": "2026-11-26T01:13:11.709Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_tf_news_20261125",
+      "url": "https://www.trendforce.com/news/wp-json/wp/v2/posts?after=2026-11-22T00:00:00&per_page=80&_fields=id,date,link,title",
+      "sha256": "5dc9dd299a7b1aa644493aebd9056d29f5d84975f5fa6c5a3436a5edb6699067",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-26T01:13:12.056Z",
+      "reviewed_at": "2026-11-26T01:13:12.056Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_motir_20261125",
+      "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c",
+      "sha256": "f5eaadcc9ad8b0cef38334e4ba54c7256e864ac512806fff536b6b1f21e7921e",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-26T01:13:12.404Z",
+      "reviewed_at": "2026-11-26T01:13:12.404Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_customs_20261125",
+      "url": "https://www.customs.go.kr/kcs/na/ntt/selectNttList.do?mi=2891&bbsId=1362",
+      "sha256": "e542b8c4b6bc7a95468c90025f998f2a150307910b9e6b6dd2a96c00ab4ff0aa",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-26T01:13:12.758Z",
+      "reviewed_at": "2026-11-26T01:13:12.758Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_micron_events_20261125",
+      "url": "https://investors.micron.com/feed/Event.svc/GetEventList?LanguageId=1&eventSelection=3&sortOperator=1&eventDateFilter=3&pageSize=5&pageNumber=0&year=-1",
+      "sha256": "01b3a776830003fef86fdf1ccd603cd685266fb292f2358e9035d8c35aebec15",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-26T01:13:13.117Z",
+      "reviewed_at": "2026-11-26T01:13:13.117Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_samsung_news_20261125",
+      "url": "https://news.samsung.com/global/",
+      "sha256": "64fcf41abed010664d6b3b3a996f4abe258c8694567d1649e0a6f593a971d862",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-26T01:13:13.476Z",
+      "reviewed_at": "2026-11-26T01:13:13.476Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_skhynix_news_20261125",
+      "url": "https://news.skhynix.com/en/",
+      "sha256": "f8468ee0c9419cd4e29d9449ef9f99e7ac9126d927a20199e9e5f0784b1fdb82",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-26T01:13:13.833Z",
+      "reviewed_at": "2026-11-26T01:13:13.833Z",
+      "status": "read"
+    },
+    {
+      "source_id": "spot",
+      "url": "https://www.trendforce.com/news/2026/11/25/insights-memory-spot-price-update-ddr4-ddr3-bear-the-brunt-of-weak-consumer-demand-mainstream-ddr4-down-1-61/",
+      "sha256": "214001e210d08233c7ea06b85a2293994806bcfcabae3f9c4d6d94a13fe8b7fa",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-26T01:13:14.181Z",
+      "reviewed_at": "2026-11-26T01:13:14.181Z",
+      "status": "read"
+    },
+    {
+      "source_id": "mem_2027_1125",
+      "url": "https://www.trendforce.com/presscenter/news/20261125-13321.html",
+      "sha256": "e0530bc591df1af1a85073456ec943be2b5e3080841b860e8c1bc60075dc68fd",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-26T01:13:14.527Z",
+      "reviewed_at": "2026-11-26T01:13:14.527Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_dramx_20261125",
+      "url": "https://www.dramexchange.com/",
+      "sha256": "a0ee802a6ab6ac300af5138aac979d99e6ac6cd2a0691671c7b5acf612976bbd",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-26T01:13:14.915Z",
+      "reviewed_at": "2026-11-26T01:13:14.915Z",
+      "status": "read"
+    },
+    {
+      "source_id": "dram_spot",
+      "url": "https://www.dramexchange.com/",
+      "sha256": "a0ee802a6ab6ac300af5138aac979d99e6ac6cd2a0691671c7b5acf612976bbd",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-26T01:13:15.288Z",
+      "reviewed_at": "2026-11-26T01:13:15.288Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_dramx_contract_20261125",
+      "url": "https://www.dramexchange.com/Home/HomePrice?Source=NationalDramContract",
+      "sha256": "3088c4658143507f092b171ed60619715af461c332977ffe34666989d71dfb19",
+      "access": "full",
+      "capture_format": "source_bytes",
+      "accessed_at": "2026-11-26T01:13:15.676Z",
+      "reviewed_at": "2026-11-26T01:13:15.676Z",
+      "status": "read"
+    },
+    {
+      "source_id": "index_micron_newsroom_20261125",
+      "url": "https://investors.micron.com/news/default.aspx",
+      "sha256": "4128f71e9c0c782a79840bd8a2d52b5c990b385cbfdbb89ae52c5400e7ba70d8",
+      "access": "full",
+      "capture_format": "research_export",
+      "accessed_at": "2026-11-26T01:13:16.121Z",
+      "reviewed_at": "2026-11-26T01:13:16.121Z",
+      "status": "read"
+    }
+  ],
+  "report_bundle": [],
+  "publication_corrections": [
+    "dram_spot"
+  ],
+  "technology_reviews": [],
+  "result": "success",
+  "artifact_sha256": "95e446dec8f0b1647d01ea558b0dafc65cda4f6e615b59ee66e58504c060056e",
+  "ledger_sha256": "8458c2d2e20429c9c1533ba92f4db40b6419039e9c7f86e1c96f17f3946d95b3",
+  "evidence_sha256": "eece38872d03028f6a1304b16a4817b2df6326a522a2368887b9b1f89379e610"
+}
