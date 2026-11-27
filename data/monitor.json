@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "revision": "2026-11-26-67c933520d",
-  "updated_at": "2026-11-26T01:13:17.718Z",
+  "revision": "2026-11-27-e8b9799a52",
+  "updated_at": "2026-11-27T21:52:12.044Z",
   "last_successful_check_at": "2026-09-20T23:50:00Z",
   "last_attempt_at": "2026-09-20T23:50:00Z",
   "financial_period": "FY2026 Q4",
@@ -15,12 +15,12 @@
     "note": "财报按新披露更新；已确认财报日程安排单公司核查，也可按需更新。行情为标注交易日收盘。"
   },
   "quote": {
-    "price": 601.25,
-    "previous_close": 629.7899780273438,
-    "as_of": "2026-11-25T21:00:00.000Z",
+    "price": 646.9500122070312,
+    "previous_close": 601.25,
+    "as_of": "2026-11-27T18:00:00.000Z",
     "session": "regular_close",
     "source_id": "price_auto",
-    "checked_at": "2026-11-25T22:16:12.391Z"
+    "checked_at": "2026-11-27T21:52:12.044Z"
   },
   "overview": {
     "fact_cards": [
@@ -1371,8 +1371,8 @@
       "short_label": "MU 历史行情",
       "url": "https://query1.finance.yahoo.com/v8/finance/chart/MU?range=1mo&interval=1d&events=splits",
       "locator": "chart.result[0] · timestamp / indicators.quote[0].close；最近两个已完成交易日。",
-      "published_at": "2026-11-25",
-      "checked_at": "2026-11-25",
+      "published_at": "2026-11-27",
+      "checked_at": "2026-11-27",
       "type": "行情供应商结构化数据"
     },
     "index_tf_press_20261015": {
@@ -4965,6 +4965,12 @@
     "产业链指引和管理层展望按原披露日期及目标期间记录，文字为中文摘要；同比由原始金额计算，百分点与百分比区分。"
   ],
   "check_log": [
+    {
+      "at": "2026-11-27T21:52:12.044Z",
+      "status": "success",
+      "scope": "quote",
+      "text": "更新 MU 2026-11-27 常规收盘；财报与新闻核查时间保持不变。"
+    },
     {
       "at": "2026-11-26T01:13:17.718Z",
       "status": "success",
